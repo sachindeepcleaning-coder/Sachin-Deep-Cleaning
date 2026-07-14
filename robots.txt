@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you.html
+Disallow: /README.md
+
+Sitemap: https://sachin-deep-cleaning.netlify.app/sitemap.xml
