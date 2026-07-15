@@ -122,7 +122,9 @@
       })
         .then(function (res) {
           if (res.ok) {
-            window.location.href = '/thank-you.html';
+            // Relative path so the redirect works on GitHub Pages (subfolder),
+            // custom domains, and any other host without hardcoding the repo name.
+            window.location.href = 'thank-you.html';
             return;
           }
           return res.json().catch(function () { return {}; }).then(function (body) {
