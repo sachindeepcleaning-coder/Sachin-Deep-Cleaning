@@ -10,8 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4KVBGRK');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KVBGRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!-- Header / Nav -->
   <header class="header" id="header">
     <div class="container nav">
@@ -43,6 +53,22 @@
           <a href="https://wa.me/919267905943" target="_blank" rel="noopener" class="btn btn-whatsapp">Book on WhatsApp</a>
           <a href="tel:+919267905943" class="btn btn-outline">Call +91 9267905943</a>
         </div>
+        <form data-formspree-id="xdaqkbwa" name="lead-hero" class="lead-form hero-form">
+          <input type="hidden" name="form-name" value="lead-hero" />
+          <input type="hidden" name="source" value="Homepage Hero" />          <p class="hero-form-title">Get a free quote in seconds</p>
+          <div class="hero-form-row">
+            <div>
+              <label for="hero-name">Your Name</label>
+              <input type="text" id="hero-name" name="name" placeholder="e.g. Rahul Sharma" required />
+            </div>
+            <div>
+              <label for="hero-phone">Phone Number</label>
+              <input type="tel" id="hero-phone" name="phone" placeholder="+91 9267905943" pattern="[0-9+ ]{8,15}" required />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-whatsapp">Get Free Quote</button>
+          <p class="lead-note">Prefer to talk? Call us at <a href="tel:+919267905943">+91 9267905943</a></p>
+        </form>
         <div class="hero-stats">
           <div><strong>500+</strong><span>Homes Cleaned</span></div>
           <div><strong>4.9★</strong><span>Avg Rating</span></div>
@@ -172,10 +198,8 @@
         <p>📞 <a href="tel:+919267905943">+91 9267905943</a></p>
         <p>📍 Serving all areas of Gurgaon, Haryana</p>
       </div>
-      <form name="lead-home" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="lead-form" style="max-width:460px;margin:30px auto 0;background:#fff;padding:24px;border-radius:16px;">
-        <input type="hidden" name="form-name" value="lead-home" />
-        <p style="display:none;"><label>Don't fill this: <input name="bot-field" /></label></p>
-        <div>
+      <form data-formspree-id="xdaqkbwa" name="lead-home" class="lead-form" style="max-width:460px;margin:30px auto 0;background:#fff;padding:24px;border-radius:16px;">
+        <input type="hidden" name="form-name" value="lead-home" />        <div>
           <label for="name" style="color:var(--dark);">Your Name *</label>
           <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required />
         </div>

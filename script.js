@@ -90,4 +90,64 @@
     }, { threshold: 0.12 });
     els.forEach(function (e) { io.observe(e); });
   }
+
+  /* ---------- Formspree form handler ----------
+     Sends any <form data-formspree-id="..."> to Formspree and
+     redirects to /thank-you.html on success. Works on any host. */
+  function getFormspreeId(form) {
+    return form.getAttribute('data-formspree-id');
+  }
+
+  document.querySelectorAll('form[data-formspree-id]').forEach(function (form) {
+    var id = getFormspreeId(form);
+    if (!id) return;
+    var endpoint = 'https://formspree.io/f/' + id;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var btn = form.querySelector('button[type="submit"]');
+      var originalLabel = btn ? btn.textContent : '';
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+      }
+
+      var data = new FormData(form);
+
+      fetch(endpoint, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            window.location.href = '/thank-you.html';
+            return;
+          }
+          return res.json().catch(function () { return {}; }).then(function (body) {
+            var msg = (body && body.errors && body.errors[0] && body.errors[0].message) ||
+                      'Something went wrong. Please try again or call us.';
+            throw new Error(msg);
+          });
+        })
+        .catch(function (err) {
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = originalLabel;
+          }
+          var note = form.querySelector('.lead-note');
+          var errEl = form.querySelector('.form-error');
+          if (!errEl) {
+            errEl = document.createElement('p');
+            errEl.className = 'form-error';
+            errEl.style.color = '#dc2626';
+            errEl.style.marginTop = '12px';
+            if (note) form.insertBefore(errEl, note);
+            else form.appendChild(errEl);
+          }
+          errEl.textContent = err.message || 'Something went wrong. Please try again or call us.';
+        });
+    });
+  });
 })();

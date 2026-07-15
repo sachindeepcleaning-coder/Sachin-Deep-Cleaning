@@ -304,6 +304,11 @@ img { max-width: 100%; }
 .lead-note { font-size: 13px; color: var(--muted); text-align: center; }
 .form-success { background: var(--primary-soft); border: 1px solid var(--primary); color: var(--primary-darker); padding: 16px; border-radius: var(--radius-sm); text-align: center; font-weight: 600; }
 
+/* Hero lead form (above the fold, conversion-focused) */
+.hero-form { margin-top: 28px; max-width: 520px; }
+.hero-form-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; color: var(--dark); margin: 0 0 14px; }
+.hero-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
 /* Override inline white form backgrounds so dark mode works */
 [data-theme="dark"] .lead-form { background: var(--card) !important; }
 [data-theme="dark"] .cta .lead-form { background: var(--card) !important; }
@@ -368,6 +373,8 @@ img { max-width: 100%; }
   .cards, .features, .steps { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .hero-stats { gap: 22px; }
+  .hero-form { margin-top: 22px; }
+  .hero-form-row { grid-template-columns: 1fr; }
   .inner-hero h1 { font-size: 28px; }
   .section { padding: 60px 0; }
   .hero { padding: 50px 0 64px; }
