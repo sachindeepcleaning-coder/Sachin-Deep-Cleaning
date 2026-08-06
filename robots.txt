@@ -4,4 +4,4 @@ Allow: /
 Disallow: /thank-you.html
 Disallow: /README.md
 
-Sitemap: https://sachin-deep-cleaning.netlify.app/sitemap.xml
+Sitemap: https://sachindeepcleaning.shop/sitemap.xml
