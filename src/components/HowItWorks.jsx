@@ -1,0 +1,24 @@
+import { HOW_IT_WORKS } from '../lib/landing.js';
+
+export default function HowItWorks() {
+  return (
+    <section className="section section-alt">
+      <div className="section-inner">
+        <div style={{ textAlign: 'center' }} className="fade-up">
+          <div className="section-tag">How It Works</div>
+          <h2 className="section-title">Book in 3 Simple Steps</h2>
+          <p className="section-sub" style={{ margin: '0 auto' }}>No complicated process. From call to spotless home in hours.</p>
+        </div>
+        <div className="hiw-wrap">
+          {HOW_IT_WORKS.map(([num, title, desc]) => (
+            <div key={num} className="hiw-step fade-up">
+              <div className="hiw-num">{num}</div>
+              <div className="hiw-title">{title}</div>
+              <div className="hiw-desc">{desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

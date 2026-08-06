@@ -1,23 +1,20 @@
-import SkipLink from './SkipLink.jsx';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
-import { WHATSAPP, PHONE_TEL } from '../lib/site.js';
+import UrgencyBar from './UrgencyBar.jsx';
+import StickyMobileBar from './StickyMobileBar.jsx';
+import SocialProofPopup from './SocialProofPopup.jsx';
+import WaNudge from './WaNudge.jsx';
 
 export default function Layout({ children }) {
   return (
     <>
-      <SkipLink />
+      <UrgencyBar />
       <Nav />
       <main id="main">{children}</main>
       <Footer />
-      <div className="mobile-bar">
-        <a href={PHONE_TEL} className="mb-btn mb-call" aria-label="Call Sachin Deep Cleaning">
-          <span className="mb-icon">📞</span><span>Call</span>
-        </a>
-        <a href={WHATSAPP} target="_blank" rel="noopener" className="mb-btn mb-wa" aria-label="Chat on WhatsApp">
-          <span className="mb-icon">💬</span><span>WhatsApp</span>
-        </a>
-      </div>
+      <StickyMobileBar />
+      <SocialProofPopup />
+      <WaNudge />
     </>
   );
 }
