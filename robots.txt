@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you.html
+Disallow: /README.md
+
+Sitemap: https://sachindeepcleaning.shop/sitemap.xml
