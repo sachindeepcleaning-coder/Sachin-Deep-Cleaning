@@ -1,7 +1,7 @@
 // Central site + analytics config for Sachin Deep Cleaning.
 // Single source of truth shared across all React components.
 
-export const SITE_URL = 'https://sachindeepcleaning-coder.github.io/Sachin-Deep-Cleaning';
+export const SITE_URL = 'https://sachindeepcleaning.shop';
 export const SITE_NAME = 'Sachin Deep Cleaning';
 
 export const PHONE = '+91 92679-05943';

@@ -4,7 +4,7 @@
 
 // Canonical base used for <link rel="canonical"> and OG url.
 // Swap to your custom domain (e.g. https://sachindeepcleaning.com) when ready.
-export const SITE_URL = 'https://sachindeepcleaning-coder.github.io/Sachin-Deep-Cleaning';
+export const SITE_URL = 'https://sachindeepcleaning.shop';
 export const SITE_NAME = 'Sachin Deep Cleaning';
 export const OG_IMAGE = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80';
 
@@ -88,5 +88,10 @@ export const pages = [
     file: 'move-in-move-out-cleaning-gurgaon', page: 'service', serviceKey: 'move',
     title: 'Move-In / Move-Out Cleaning in Gurgaon | Sachin Deep Cleaning',
     description: 'Move-in & move-out deep cleaning in Gurgaon. Leave or enter a spotless home. End-to-end service.',
+  },
+  {
+    file: 'residential-cleaners-near-me', page: 'residential',
+    title: 'Residential Cleaners Near Me in Gurgaon | Local, Verified, Same-Day | Sachin Deep Cleaning',
+    description: 'Looking for residential cleaners near me in Gurgaon? Sachin Deep Cleaning sends a police-verified local team to your door. Pay after the job is done. Same-day slots.',
   },
 ];
