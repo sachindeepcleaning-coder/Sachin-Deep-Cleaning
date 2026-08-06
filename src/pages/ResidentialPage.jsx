@@ -7,6 +7,7 @@ import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
 import { SITE_URL } from '../lib/site.js';
+import { useEffect } from 'react';
 
 const NEAR_ME = [
   ['📍', 'Closest Available Team', 'We route your request to the cleaning crew already working nearest to your sector — not a team crossing the whole city.'],
@@ -39,6 +40,14 @@ const STATS = [
 
 export default function ResidentialPage() {
   const url = typeof window !== 'undefined' ? window.location.href : SITE_URL + '/residential-cleaners-near-me.html';
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = '//www.instagram.com/embed.js';
+    document.body.appendChild(script);
+    return () => { script.parentNode?.removeChild(script); };
+  }, []);
 
   return (
     <>
@@ -106,6 +115,28 @@ export default function ResidentialPage() {
       <PricingSection />
 
       <ReviewsSection />
+
+      <section className="section section-alt">
+        <div className="section-inner" style={{ textAlign: 'center' }}>
+          <div className="fade-up">
+            <div className="section-tag">Real Work</div>
+            <h2 className="section-title">See a Real Deep Cleaning in Action</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Watch a residential deep-cleaning job done by our team in Gurgaon.</p>
+          </div>
+          <div className="video-embed" style={{ margin: '32px auto 0' }}>
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/cleaning_service_in_gurgaon/reel/DbtA_gdz5zA/"
+              data-instgrm-version="14"
+              style={{ background: '#FFF', border: '0', borderRadius: '16px', margin: '0 auto', maxWidth: '400px', minWidth: '280px', padding: '0', width: '100%' }}
+            >
+            </blockquote>
+          </div>
+          <p style={{ marginTop: '16px', fontSize: '.84rem', color: 'var(--muted)' }}>
+            Can't see the reel? <a href="https://www.instagram.com/reel/DbtA_gdz5zA/" target="_blank" rel="noopener" style={{ color: 'var(--green)', fontWeight: 700 }}>View on Instagram →</a>
+          </p>
+        </div>
+      </section>
 
       <AreasSection />
 
