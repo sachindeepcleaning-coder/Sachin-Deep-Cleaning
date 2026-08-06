@@ -1,5 +1,5 @@
 import { PHONE_TEL, waMsg } from '../lib/site.js';
-import { track } from '../lib/landing.js';
+import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 export default function FinalCta() {
   return (
@@ -11,7 +11,7 @@ export default function FinalCta() {
           <a
             href={PHONE_TEL}
             className="fcta-call"
-            onClick={() => track('call_final', { event_category: 'Lead', event_label: 'Final CTA Call' })}
+            onClick={phoneCallClick}
           >
             📞 Call: +91 92679-05943
           </a>
@@ -19,7 +19,7 @@ export default function FinalCta() {
             href={waMsg('Hi I want to book deep cleaning in Gurgaon. Please send me a quote.')}
             target="_blank" rel="noopener"
             className="fcta-wa"
-            onClick={() => track('wa_final', { event_category: 'Lead', event_label: 'Final CTA WhatsApp' })}
+            onClick={whatsappClick}
           >
             💬 WhatsApp Us Now
           </a>

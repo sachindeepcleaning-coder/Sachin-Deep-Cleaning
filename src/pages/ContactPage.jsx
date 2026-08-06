@@ -3,8 +3,8 @@ import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import { JsonLd, localBusinessSchema } from '../lib/schema.jsx';
-import { SITE_URL } from '../lib/site.js';
-import { waMsg } from '../lib/site.js';
+import { SITE_URL, waMsg } from '../lib/site.js';
+import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const FAQS = [
   ['How quickly can you start?', 'Often within 24 hours. WhatsApp us and we\u2019ll confirm a slot.'],
@@ -39,10 +39,10 @@ export default function ContactPage() {
               <span className="pill"><span className="pi">✓</span> No Advance Pay</span>
             </div>
             <div style={{ marginTop: '26px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <a href={waMsg('Hi, I would like to get a quote for cleaning in Gurgaon.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ margin: 0 }}>
+              <a href={waMsg('Hi, I would like to get a quote for cleaning in Gurgaon.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ margin: 0 }} onClick={whatsappClick}>
                 💬 WhatsApp Us Now — Instant Reply
               </a>
-              <a href="tel:+919267905943" className="fcta-call" style={{ margin: 0, textAlign: 'center' }}>
+              <a href="tel:+919267905943" className="fcta-call" style={{ margin: 0, textAlign: 'center' }} onClick={phoneCallClick}>
                 📞 Call: +91 92679-05943
               </a>
             </div>

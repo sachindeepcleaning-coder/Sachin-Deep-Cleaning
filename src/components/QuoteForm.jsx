@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { NETLIFY_FORM_NAME, FORMSPREE_ID, PHONE_TEL, waMsg } from '../lib/site.js';
-import { track } from '../lib/landing.js';
+import { track, whatsappClick } from '../lib/landing.js';
 
 // Hero quote form card.
 // Primary: Netlify Forms (works when deployed to Netlify).
@@ -38,8 +38,9 @@ export default function QuoteForm() {
     const success = () => {
       setStatus('success');
       track('generate_lead', { event_category: 'Lead', event_label: 'Quote Form' });
-      // nudge popup
-      window.dispatchEvent(new CustomEvent('wa-nudge', { detail: { name: n, phone: p } }));
+      // Give GTM a beat to read the dataLayer, then redirect to the thank-you
+      // page so the "GA4 Form submission" tag (page path /thank-you.html) fires.
+      window.setTimeout(() => { window.location.href = '/thank-you.html'; }, 250);
     };
 
     try {
@@ -80,7 +81,7 @@ export default function QuoteForm() {
           <h3>Quote Request Sent!</h3>
           <p>We&rsquo;ll call <strong>+91{phone}</strong> within 5 minutes.<br />Want a faster reply? Chat with us on WhatsApp below ↓</p>
         </div>
-        <a href={waMsg('Hi! I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ marginTop: '16px' }}>
+        <a href={waMsg('Hi! I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ marginTop: '16px' }} onClick={whatsappClick}>
           💬 WhatsApp Us Now — Instant Reply
         </a>
       </div>
@@ -134,7 +135,7 @@ export default function QuoteForm() {
 
       <div className="or-divider">or connect instantly</div>
 
-      <a href={waMsg('Hi I want to get a free quote for deep cleaning in Gurgaon.')} target="_blank" rel="noopener" className="btn-wa-form">
+      <a href={waMsg('Hi I want to get a free quote for deep cleaning in Gurgaon.')} target="_blank" rel="noopener" className="btn-wa-form" onClick={whatsappClick}>
         WhatsApp Us Now — Instant Reply
       </a>
 

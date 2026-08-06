@@ -1,6 +1,5 @@
-import { PRICING } from '../lib/landing.js';
+import { PRICING, phoneCallClick } from '../lib/landing.js';
 import { PHONE_TEL } from '../lib/site.js';
-import { track } from '../lib/landing.js';
 
 export default function PricingSection() {
   return (
@@ -21,7 +20,7 @@ export default function PricingSection() {
               <ul className="pc-items">
                 {p.items.map((it) => <li key={it}>{it}</li>)}
               </ul>
-              <a href={PHONE_TEL} className="btn-pc" onClick={() => track('call_pricing', { event_category: 'Lead', event_label: `Pricing ${p.size}` })}>
+              <a href={PHONE_TEL} className="btn-pc" onClick={phoneCallClick}>
                 Book Now →
               </a>
             </div>

@@ -1,5 +1,5 @@
 import { waMsg } from '../lib/site.js';
-import { track } from '../lib/landing.js';
+import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 export default function ThankYouPage() {
   return (
@@ -12,10 +12,10 @@ export default function ThankYouPage() {
           We’ve received your request and a member of our team will call you within <strong>5 minutes</strong> to confirm your booking. For an even faster reply, chat with us on WhatsApp.
         </p>
         <div className="final-cta-btns" style={{ justifyContent: 'center' }}>
-          <a href={waMsg('Hi, I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="fcta-wa" onClick={() => track('wa_thankyou', { event_category: 'Lead', event_label: 'Thank You WhatsApp' })}>
+          <a href={waMsg('Hi, I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="fcta-wa" onClick={whatsappClick}>
             💬 WhatsApp Us Now
           </a>
-          <a href="tel:+919267905943" className="fcta-call" onClick={() => track('call_thankyou', { event_category: 'Lead', event_label: 'Thank You Call' })}>
+          <a href="tel:+919267905943" className="fcta-call" onClick={phoneCallClick}>
             📞 Call: +91 92679-05943
           </a>
         </div>

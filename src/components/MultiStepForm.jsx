@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FORMSPREE_ID } from '../lib/site.js';
+import { track } from '../lib/landing.js';
 
 const STEPS = [{ title: 'Your Details' }, { title: 'Service' }, { title: 'Schedule' }];
 const STORAGE_KEY = 'sdc_lead';
@@ -43,7 +44,8 @@ export default function MultiStepForm() {
       });
       if (res.ok) {
         try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-        window.location.href = 'thank-you.html';
+        track('generate_lead', { event_category: 'Lead', event_label: 'Multi-Step Form' });
+        window.setTimeout(() => { window.location.href = '/thank-you.html'; }, 250);
         return;
       }
       const b = await res.json().catch(() => ({}));

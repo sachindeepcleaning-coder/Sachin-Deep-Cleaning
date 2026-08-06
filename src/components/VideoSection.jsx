@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { track } from '../lib/landing.js';
+import { track, whatsappClick } from '../lib/landing.js';
 import { waMsg } from '../lib/site.js';
 
 const VIDEOS = ['cleaning-1.mp4', 'cleaning-2.mp4', 'cleaning-3.mp4', 'cleaning-4.mp4'];
@@ -60,7 +60,7 @@ export default function VideoSection() {
 <div className="vp-hint">
                   Our before &amp; after cleaning videos will appear here as soon as they're added to the <code>videos/</code> folder.
                 </div>
-                <a href={waMsg('Hi, please share a video of your cleaning work.')} target="_blank" rel="noopener" className="vp-link">
+                <a href={waMsg('Hi, please share a video of your cleaning work.')} target="_blank" rel="noopener" className="vp-link" onClick={whatsappClick}>
                   💬 Request Video on WhatsApp
                 </a>
               </div>

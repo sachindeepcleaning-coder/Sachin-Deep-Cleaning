@@ -15,10 +15,8 @@ export function waMsg(msg) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
-// Analytics — Google Tag Manager + GA4 measurement id.
-// GTM is the project's original container; GA4 measurement id shared.
+// Analytics — Google Tag Manager only (GA4 removed; old project had GTM only).
 export const GTM_ID = 'GTM-P4KVBGRK';
-export const GA_ID = 'G-BQBB8LFYEY';
 
 // Netlify Forms handles lead capture (works when deployed to Netlify).
 export const NETLIFY_FORM_NAME = 'lead-quote';

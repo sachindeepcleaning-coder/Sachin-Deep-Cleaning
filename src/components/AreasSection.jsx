@@ -1,4 +1,4 @@
-import { AREAS_SERVED } from '../lib/landing.js';
+import { AREAS_SERVED, phoneCallClick } from '../lib/landing.js';
 import { PHONE_TEL } from '../lib/site.js';
 
 export default function AreasSection() {
@@ -14,7 +14,7 @@ export default function AreasSection() {
           {AREAS_SERVED.map((a) => <span key={a} className="area-tag">{a}</span>)}
         </div>
         <p style={{ marginTop: '18px', fontSize: '.84rem', color: 'var(--muted)' }}>
-          Not sure if we serve your area? <a href={PHONE_TEL} style={{ color: 'var(--green)', fontWeight: 700 }}>Just call us →</a>
+          Not sure if we serve your area? <a href={PHONE_TEL} style={{ color: 'var(--green)', fontWeight: 700 }} onClick={phoneCallClick}>Just call us →</a>
         </p>
       </div>
     </section>

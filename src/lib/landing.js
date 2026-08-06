@@ -1,4 +1,4 @@
-import { GTM_ID, GA_ID, WHATSAPP_NUMBER, waMsg, AREAS } from './site.js';
+import { GTM_ID, WHATSAPP_NUMBER, waMsg, AREAS } from './site.js';
 
 // ---- Analytics: single gtag wrapper that no-ops safely ----
 export function gtag(...args) {
@@ -13,7 +13,23 @@ export function track(event, params = {}) {
   gtag('event', event, params);
 }
 
-export const ANALYTICS = { GTM_ID, GA_ID };
+// Phone click → GA4 "phone_call_click" event (matches GTM trigger).
+export function phoneCallClick() {
+  track('phone_call_click', {
+    phone_number: '+91 9267905943',
+    page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+  });
+}
+
+// WhatsApp click → GA4 "whatsapp_click" event (matches GTM trigger).
+export function whatsappClick() {
+  track('whatsapp_click', {
+    phone_number: '+919267905943',
+    page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+  });
+}
+
+export const ANALYTICS = { GTM_ID };
 
 // ---- WhatsApp nudge ----
 export function waNudgeLink(name, phone) {

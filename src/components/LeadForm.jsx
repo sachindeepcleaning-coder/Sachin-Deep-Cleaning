@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FORMSPREE_ID } from '../lib/site.js';
+import { track } from '../lib/landing.js';
 
 // Simple lead form posting to Formspree, then redirecting to thank-you.html.
 export default function LeadForm({ formName = 'lead', source = 'Website', compact = false }) {
@@ -18,7 +19,8 @@ export default function LeadForm({ formName = 'lead', source = 'Website', compac
         headers: { Accept: 'application/json' },
       });
       if (res.ok) {
-        window.location.href = 'thank-you.html';
+        track('generate_lead', { event_category: 'Lead', event_label: 'Lead Form' });
+        window.setTimeout(() => { window.location.href = '/thank-you.html'; }, 250);
         return;
       }
       const body = await res.json().catch(() => ({}));
