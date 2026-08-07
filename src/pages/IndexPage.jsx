@@ -1,6 +1,6 @@
 import Hero from '../components/Hero.jsx';
 import TrustBar from '../components/TrustBar.jsx';
-import VideoSection from '../components/VideoSection.jsx';
+import ReelSection from '../components/ReelSection.jsx';
 import CountdownStrip from '../components/CountdownStrip.jsx';
 import ServiceSection from '../components/ServiceSection.jsx';
 import ChecklistSection from '../components/ChecklistSection.jsx';
@@ -24,7 +24,7 @@ export default function IndexPage() {
 
       <Hero />
       <TrustBar />
-      <VideoSection />
+      <ReelSection />
       <CountdownStrip />
       <ServiceSection />
       <ChecklistSection />
