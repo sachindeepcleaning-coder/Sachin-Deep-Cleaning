@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage.jsx';
 import ServicePage from './pages/ServicePage.jsx';
 import ThankYouPage from './pages/ThankYouPage.jsx';
 import ResidentialPage from './pages/ResidentialPage.jsx';
+import AllPagesPage from './pages/AllPagesPage.jsx';
 
 // Read which page to mount from the data-page / data-service attributes
 // set by each generated HTML entry shell (see scripts/gen-entries.mjs).
@@ -21,6 +22,7 @@ if (page === 'index') Page = IndexPage;
 else if (page === 'contact') Page = ContactPage;
 else if (page === 'thank-you') Page = ThankYouPage;
 else if (page === 'residential') Page = ResidentialPage;
+else if (page === 'allpages') Page = AllPagesPage;
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>

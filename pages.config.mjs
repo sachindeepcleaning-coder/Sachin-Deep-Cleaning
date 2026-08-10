@@ -94,4 +94,9 @@ export const pages = [
     title: 'Residential Cleaners Near Me in Gurgaon | Local, Verified, Same-Day | Sachin Deep Cleaning',
     description: 'Looking for residential cleaners near me in Gurgaon? Sachin Deep Cleaning sends a police-verified local team to your door. Pay after the job is done. Same-day slots.',
   },
+  {
+    file: 'all-pages', page: 'allpages',
+    title: 'All Pages — Sachin Deep Cleaning in Gurgaon',
+    description: 'Browse every page on Sachin Deep Cleaning: all deep cleaning services, BHK packages, office & kitchen cleaning, contact and more.',
+  },
 ];

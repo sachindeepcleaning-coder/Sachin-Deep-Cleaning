@@ -6,6 +6,7 @@ import ReviewsSection from '../components/ReviewsSection.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
+import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema.jsx';
 import { getService } from '../lib/services.js';
 import { SITE_URL } from '../lib/site.js';
@@ -77,7 +78,7 @@ export default function ServicePage({ serviceKey, bhk }) {
 
       <ReviewsSection />
 
-      <ReelSection />
+      {serviceKey === 'office' ? <OfficeReelSection /> : <ReelSection />}
 
       <GuaranteeSection />
 

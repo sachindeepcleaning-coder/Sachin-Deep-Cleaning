@@ -1644,3 +1644,21 @@ img { max-width: 100%; display: block; }
 @media(max-width:900px) {
   .reel-showcase { grid-template-columns: 1fr; }
 }
+
+/* ── OfficeReelSection: portrait 9:16 Instagram iframe reels ── */
+.sdc-reel-sec{background:var(--surface,#F4F7FB)}
+.sdc-reel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,320px));gap:32px;justify-content:center;align-items:start;margin:36px auto 0}
+@media(max-width:1080px){.sdc-reel-grid{grid-template-columns:repeat(2,minmax(0,320px))}}
+@media(max-width:720px){.sdc-reel-grid{grid-template-columns:minmax(0,320px)}}
+.sdc-reel-item{display:flex;flex-direction:column;align-items:center;gap:12px}
+.sdc-reel-label{font-size:.74rem;font-weight:700;color:var(--muted,#5A6A85);text-transform:uppercase;letter-spacing:1px}
+.sdc-ig-card{width:320px;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(6,15,30,.16);background:#000;border:1px solid var(--border,#e0eaf2);position:relative}
+.ig-reel-frame{position:relative;width:320px;height:569px;overflow:hidden;border-radius:18px}
+.ig-reel-frame iframe{position:absolute;top:0;left:0;width:320px;height:569px;border:none;display:block}
+.sdc-reel-caption-row{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--body,#41566b);text-align:center;max-width:340px}
+.sdc-reel-caption-row a{color:var(--green,#0D9448);text-decoration:none;font-weight:700}
+.sdc-reel-caption-row a:hover{text-decoration:underline}
+.sdc-reel-followcta{text-align:center;margin-top:40px}
+.sdc-reel-followbtn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff;text-decoration:none;padding:12px 22px;border-radius:12px;font-family:'Syne',sans-serif;font-weight:800;font-size:.9rem;box-shadow:0 8px 24px rgba(204,35,102,.3)}
+.sdc-reel-followbtn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(204,35,102,.45)}
+@media(max-width:480px){.sdc-reel-grid{grid-template-columns:minmax(0,280px)}.sdc-ig-card{width:280px}.ig-reel-frame{width:280px;height:498px}}
