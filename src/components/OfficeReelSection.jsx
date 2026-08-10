@@ -1,3 +1,5 @@
+import YtShortsSection from './YtShortsSection.jsx';
+
 // Portrait 9:16 Instagram reel embeds (direct iframes) for the office service page.
 // Direct iframe embeds (rather than Instagram's oEmbed blockquote) keep the reel
 // tall and full-bleed — no letterboxed rectangle, no extra embed.js dependency.
@@ -27,7 +29,8 @@ export default function OfficeReelSection() {
   };
 
   return (
-    <section className="section section-alt sdc-reel-sec">
+    <>
+      <section className="section section-alt sdc-reel-sec">
       <div className="section-inner">
         <div style={{ textAlign: 'center' }} className="fade-up">
           <div className="section-tag">Real Work · Instagram</div>
@@ -83,5 +86,7 @@ export default function OfficeReelSection() {
         </div>
       </div>
     </section>
+    <YtShortsSection />
+    </>
   );
 }

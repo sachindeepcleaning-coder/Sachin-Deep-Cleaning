@@ -1661,4 +1661,7 @@ img { max-width: 100%; display: block; }
 .sdc-reel-followcta{text-align:center;margin-top:40px}
 .sdc-reel-followbtn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff;text-decoration:none;padding:12px 22px;border-radius:12px;font-family:'Syne',sans-serif;font-weight:800;font-size:.9rem;box-shadow:0 8px 24px rgba(204,35,102,.3)}
 .sdc-reel-followbtn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(204,35,102,.45)}
+.sdc-social-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.sdc-yt-btn{background:#ff0000;box-shadow:0 8px 24px rgba(255,0,0,.28)}
+.sdc-yt-btn:hover{box-shadow:0 10px 30px rgba(255,0,0,.42)}
 @media(max-width:480px){.sdc-reel-grid{grid-template-columns:minmax(0,280px)}.sdc-ig-card{width:280px}.ig-reel-frame{width:280px;height:498px}}

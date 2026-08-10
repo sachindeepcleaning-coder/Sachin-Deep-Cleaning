@@ -6,6 +6,7 @@ import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import ReelEmbed from '../components/ReelEmbed.jsx';
+import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
 import { SITE_URL } from '../lib/site.js';
 import { useEffect } from 'react';
@@ -144,6 +145,8 @@ export default function ResidentialPage() {
           </p>
         </div>
       </section>
+
+      <YtShortsSection />
 
       <AreasSection />
 

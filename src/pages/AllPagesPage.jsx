@@ -1,5 +1,6 @@
 import FinalCta from '../components/FinalCta.jsx';
 import QuoteForm from '../components/QuoteForm.jsx';
+import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { SITE_URL, WA_BOOK, waMsg, WHATSAPP } from '../lib/site.js';
 
@@ -127,6 +128,8 @@ export default function AllPagesPage() {
           </div>
         </div>
       </section>
+
+      <YtShortsSection />
 
       <FinalCta />
     </>

@@ -1,4 +1,5 @@
 import ReelEmbed from './ReelEmbed.jsx';
+import YtShortsSection from './YtShortsSection.jsx';
 
 export default function ReelSection() {
   return (
@@ -13,6 +14,7 @@ export default function ReelSection() {
           <ReelEmbed />
         </div>
       </div>
+      <YtShortsSection />
     </section>
   );
 }
