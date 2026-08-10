@@ -1,32 +1,100 @@
 # Sachin Deep Cleaning — Website
 
-A simple, modern, mobile-friendly static website for **Sachin Deep Cleaning**, a home deep cleaning service based in Gurgaon, Haryana.
+A modern, mobile-friendly marketing site for **Sachin Deep Cleaning**, a home deep cleaning service in Gurgaon, Haryana. Built with **Vite + React 18 (MPA)**.
 
-## 📁 Files
+- **Live URL:** https://sachindeepcleaning.shop (custom domain via CNAME)
+- **Repo:** `sachindeepcleaning-coder/Sachin-Deep-Cleaning` (GitHub)
+- **Hosting:** GitHub Pages (deploys from the **`gh-pages`** branch)
 
-| File | Description |
-|------|-------------|
-| `index.html` | Main website page (content + structure) |
-| `styles.css` | Styling (colors, layout, responsive design) |
-| `script.js` | Small interactivity (mobile menu, footer year, FAQ accordion) |
+---
 
-### SEO Service Pages (14)
-| File | Target Keyword |
-|------|----------------|
-| `deep-cleaning-services-in-gurgaon.html` | Deep cleaning services in Gurgaon |
-| `house-cleaning-services-in-gurgaon.html` | House cleaning services in Gurgaon |
-| `full-home-deep-cleaning-1bhk-gurgaon.html` | 1 BHK full home deep cleaning in Gurgaon |
-| `full-home-deep-cleaning-2bhk-gurgaon.html` | 2 BHK full home deep cleaning in Gurgaon |
-| `full-home-deep-cleaning-3bhk-gurgaon.html` | 3 BHK full home deep cleaning in Gurgaon |
-| `full-home-deep-cleaning-4bhk-gurgaon.html` | 4 BHK full home deep cleaning in Gurgaon |
-| `full-home-deep-cleaning-5bhk-gurgaon.html` | 5 BHK full home deep cleaning in Gurgaon |
-| `kitchen-deep-cleaning-gurgaon.html` | Kitchen deep cleaning in Gurgaon |
-| `bathroom-deep-cleaning-gurgaon.html` | Bathroom deep cleaning in Gurgaon |
-| `sofa-shampoo-cleaning-gurgaon.html` | Sofa shampoo cleaning in Gurgaon |
-| `carpet-shampoo-cleaning-gurgaon.html` | Carpet shampoo cleaning in Gurgaon |
-| `office-deep-cleaning-gurgaon.html` | Office deep cleaning in Gurgaon |
-| `move-in-move-out-cleaning-gurgaon.html` | Move-in / move-out deep cleaning in Gurgaon |
-| `contact.html` | Contact page |
+## 🚀 DEPLOY TO GITHUB PAGES — READ THIS FIRST
+
+### How the site deploys (IMPORTANT)
+
+- This is a **Vite + React 18 MPA**. Source code lives on the **`main`** branch.
+- GitHub Pages is configured to serve from the **`gh-pages` branch** (built output), **NOT** `main`.
+- **Pushing to `main` alone does NOT update the live site.** You must build and push the fresh `dist/` to `gh-pages`.
+- There is **no GitHub Actions workflow**. Auto-deploy was attempted once and skipped (the local `gh` token lacks the `workflow` scope, so pushing `.github/workflows/` files is rejected). Do not re-add a workflow unless the token has `workflow` scope, and remember to switch the Pages source back to `workflow` in that case.
+- The `gh-pages` branch contains only build output + deploy files (`CNAME`, `robots.txt`, `.nojekyll`, `dist/` contents).
+
+### Full deploy steps
+
+```bash
+# 1. Build (regenerate entry shells first if pages.config.mjs changed)
+npm run gen
+npm run build                     # outputs to dist/
+
+# 2. Clone the gh-pages branch into a scratch dir
+rm -rf /tmp/opencode/ghp
+git clone -b gh-pages --single-branch . /tmp/opencode/ghp
+
+# 3. Replace contents with the fresh build
+rm -rf /tmp/opencode/ghp/*
+touch /tmp/opencode/ghp/.nojekyll
+cp -r dist/* /tmp/opencode/ghp/
+
+# 4. Restore deploy-only files that vite does NOT emit (CNAME, robots.txt)
+cd /tmp/opencode/ghp
+git checkout origin/gh-pages -- CNAME robots.txt .nojekyll
+
+# 5. Commit + push to the REAL remote
+#    (the clone's origin points to the local repo — fix it first!)
+git remote set-url origin https://github.com/sachindeepcleaning-coder/Sachin-Deep-Cleaning
+git add -A
+git config user.name "vegeta" && git config user.email "vegeta@localhost"   # if not inherited
+git commit -m "Deploy fresh build"
+git push --force origin gh-pages     # force push is fine: gh-pages is a deploy branch
+```
+
+### Gotchas
+
+- The local `gh-pages` branch may lag behind `origin/gh-pages`. Always clone fresh (step 2) instead of reusing the local branch.
+- `git clone ... .` (step 2) sets the clone's `origin` to the local repo path — **fix the remote URL (step 5)** before pushing, or you'll push nowhere.
+- If the push is rejected with "tip behind", you cloned from a stale local branch → `git push --force` after confirming the working tree has the full build (all `*.html`, `assets/`, `videos/`, `sitemap.xml`, `CNAME`, `robots.txt`, `.nojekyll`).
+- Verify live: `curl -sI https://sachindeepcleaning.shop/<page>.html` → expect `HTTP/2 200`.
+
+### Just push source (no deploy)
+
+```bash
+git add -A && git commit -m "message" && git push origin main
+```
+
+This only updates source. The live site is unchanged until you also do the `gh-pages` deploy above.
+
+---
+
+## 🧱 Tech Stack & Structure
+
+| File/Dir | Purpose |
+|----------|---------|
+| `pages.config.mjs` | Single source of truth for every MPA page (file, page type, title, description) |
+| `scripts/gen-entries.mjs` | Generates HTML entry shells from `pages.config.mjs` (run `npm run gen` after editing it) |
+| `src/bootstrap.jsx` | Mounts the right React page component per `data-page` attribute |
+| `src/pages/*.jsx` | Page components (ServicePage, ResidentialPage, AllPagesPage, ContactPage, ...) |
+| `src/components/*.jsx` | Nav, Footer, Hero, QuoteForm, FaqSection, ReviewsSection, ReelSection, ... |
+| `src/lib/services.js` | Service data (name, tagline, includes, process, faqs, price) |
+| `src/lib/site.js` | Phone, WhatsApp, social links, URLs |
+| `src/lib/schema.jsx` | JSON-LD builders (localBusiness, service, faq, breadcrumb) |
+| `src/styles/global.css` | Global styles / design tokens |
+| `public/sitemap.xml` | SEO sitemap (remember to add new pages here) |
+| `public/robots.txt` | Crawler rules (must be restored in gh-pages deploy) |
+| `public/CNAME` | Custom domain `sachindeepcleaning.shop` (must be restored in gh-pages deploy) |
+
+## 🔧 Development
+
+```bash
+npm install
+npm run dev        # local dev server http://localhost:5173
+npm run build      # production build → dist/
+npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
+```
+
+## ⚙️ Config
+
+- **Build:** `npm run build` (vite). No Tailwind here.
+- **Leads:** Netlify Forms (`lead-quote`) + `FORMSPREE_ID = 'xdaqkbwa'` fallback via `QuoteForm.jsx`; redirect to `thank-you.html`.
+- **Reels:** office page uses portrait 9:16 Instagram iframes (`OfficeReelSection.jsx`); other pages use local mp4s (`ReelSection.jsx`).
 
 ## 📞 Business Details
 
@@ -37,45 +105,6 @@ A simple, modern, mobile-friendly static website for **Sachin Deep Cleaning**, a
 - **Instagram:** https://www.instagram.com/cleaning_service_in_gurgaon
 - **WhatsApp:** https://wa.me/919267905943
 
-## 🚀 Deploy to Netlify (Free)
-
-You have two easy options:
-
-### Option A — Drag & Drop (Fastest, no account needed to start)
-1. Go to https://app.netlify.com/drop
-2. Drag the whole folder containing `index.html`, `styles.css`, and `script.js` into the page.
-3. Netlify gives you a live URL instantly (e.g. `https://random-name.netlify.app`).
-4. To claim it / set a custom name, sign up and click **"Claim"** on your site.
-
-### Option B — Deploy from GitHub
-1. Create a GitHub repository and upload these 3 files.
-2. Go to https://app.netlify.com → **Add new site** → **Import an existing project** → connect GitHub.
-3. Select your repository.
-4. Build settings: **Build command:** (leave empty) · **Publish directory:** `.` (or `/`)
-5. Click **Deploy site**.
-
-### Set a Custom Domain (Optional)
-In the Netlify dashboard: **Site settings → Domain management → Add custom domain**.
-
-## 📋 Lead Capture Forms (Netlify Forms)
-
-Two lead forms are included (homepage + contact page) that capture **Name** and **Phone Number**:
-- `index.html` → form `name="lead-home"`
-- `contact.html` → form `name="lead-contact"`
-
-They use `data-netlify="true"` so Netlify **auto-detects and enables them** when you deploy from Git — no backend needed.
-
-**To view submissions:**
-1. Netlify dashboard → your site → **Forms**
-2. Submissions appear under each form name.
-3. Optional: add email notifications under **Site settings → Forms → Form notifications**.
-
-> Note: Netlify Forms only works when the site is built/deployed by Netlify (Git or drag-drop). The `netlify-honeypot` field helps block spam bots.
-
-## ✏️ How to Edit
-- Change text/services: edit `index.html`.
-- Change colors: edit the `:root` variables at the top of `styles.css` (e.g. `--primary` for the main brand color).
-- Update phone/social links: search for `919267905943` and the social URLs in `index.html`.
-
 ---
+
 © Sachin Deep Cleaning. All rights reserved.
