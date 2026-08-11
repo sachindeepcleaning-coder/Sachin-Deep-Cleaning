@@ -1,0 +1,21 @@
+# robots.txt — sachindeepcleaning.shop
+# Updated: August 2026
+
+User-agent: *
+Disallow: /thank-you.html
+Disallow: /google4bc4a68e1ff9b7f5.html
+
+# Allow important crawlers explicitly
+User-agent: Googlebot
+Allow: /
+Disallow: /thank-you.html
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://sachindeepcleaning.shop/sitemap.xml
+Sitemap: https://sachindeepcleaning.shop/sitemap-images.xml

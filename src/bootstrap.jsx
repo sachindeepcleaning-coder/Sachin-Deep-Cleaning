@@ -1,33 +1,22 @@
-import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from './lib/theme.jsx';
-import Layout from './components/Layout.jsx';
-import IndexPage from './pages/IndexPage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import ServicePage from './pages/ServicePage.jsx';
-import ThankYouPage from './pages/ThankYouPage.jsx';
-import ResidentialPage from './pages/ResidentialPage.jsx';
-import AllPagesPage from './pages/AllPagesPage.jsx';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import App from './app.jsx';
 
 // Read which page to mount from the data-page / data-service attributes
 // set by each generated HTML entry shell (see scripts/gen-entries.mjs).
 const el = document.documentElement;
-const page = el.dataset.page;
 const props = {
+  page: el.dataset.page,
+  file: el.dataset.file,
   serviceKey: el.dataset.service,
   bhk: el.dataset.bhk ? Number(el.dataset.bhk) : undefined,
 };
 
-let Page = ServicePage;
-if (page === 'index') Page = IndexPage;
-else if (page === 'contact') Page = ContactPage;
-else if (page === 'thank-you') Page = ThankYouPage;
-else if (page === 'residential') Page = ResidentialPage;
-else if (page === 'allpages') Page = AllPagesPage;
+const root = document.getElementById('root');
 
-createRoot(document.getElementById('root')).render(
-  <ThemeProvider>
-    <Layout>
-      <Page {...props} />
-    </Layout>
-  </ThemeProvider>
-);
+if (root && root.childNodes.length > 0) {
+  // Static HTML was pre-rendered at build time → hydrate (fast, no flash).
+  hydrateRoot(root, <App {...props} />);
+} else {
+  // Dev mode / no prerender → normal client render.
+  createRoot(root).render(<App {...props} />);
+}

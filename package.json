@@ -6,7 +6,7 @@
   "description": "Sachin Deep Cleaning — production-grade marketing site (Vite + React MPA)",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/gen-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "gen": "node scripts/gen-entries.mjs"
   },

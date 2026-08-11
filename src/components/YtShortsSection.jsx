@@ -1,6 +1,9 @@
 // Portrait 9:16 YouTube Shorts embeds shown on every page of the site.
-// Direct iframe embeds (rather than the shorts autoplay URL) keep the clips
-// tall and full-bleed, matching the Instagram reel section styling.
+// Each card is click-to-play: a lightweight thumbnail + play button, and the
+// real iframe only loads when tapped. This avoids YouTube's "Video unavailable"
+// overlay on embeds and removes 3 iframes from every page load (big speed win).
+import { useState } from 'react';
+
 const SHORTS = [
   {
     id: 'p-ArftUay5I',
@@ -22,6 +25,58 @@ const SHORTS = [
 export const YT_CHANNEL = 'https://www.youtube.com/@Cleaning_service_in_Gurgaon';
 export const IG_PAGE = 'https://www.instagram.com/cleaning_service_in_gurgaon/';
 
+function ShortCard({ id, label, caption, onTrack }) {
+  const [play, setPlay] = useState(false);
+
+  return (
+    <div className="sdc-reel-item fade-up">
+      <span className="sdc-reel-label">{label}</span>
+      <div className="sdc-ig-card">
+        <div className="ig-reel-frame">
+          {play ? (
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
+              title={`YouTube Short — ${caption}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          ) : (
+            <button
+              type="button"
+              className="yt-thumb"
+              onClick={() => {
+                setPlay(true);
+                onTrack(`Short ${id}`);
+              }}
+              aria-label={`Play video: ${caption}`}
+            >
+              <img
+                src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+                alt={`${caption} — watch on YouTube`}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="yt-play-btn">▶</span>
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="sdc-reel-caption-row">
+        {caption} ·
+        <a
+          href={`https://www.youtube.com/shorts/${id}`}
+          target="_blank"
+          rel="noopener"
+          onClick={() => onTrack(`Short ${id}`)}
+        >
+          Watch on YouTube ↗
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export default function YtShortsSection() {
   const track = (label) => {
     if (typeof window.gtag === 'function') {
@@ -42,32 +97,7 @@ export default function YtShortsSection() {
 
         <div className="sdc-reel-grid">
           {SHORTS.map((s) => (
-            <div key={s.id} className="sdc-reel-item fade-up">
-              <span className="sdc-reel-label">{s.label}</span>
-              <div className="sdc-ig-card">
-                <div className="ig-reel-frame">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${s.id}`}
-                    title={`YouTube Short — ${s.caption}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                  />
-                </div>
-              </div>
-              <div className="sdc-reel-caption-row">
-                {s.caption} ·
-                <a
-                  href={`https://www.youtube.com/shorts/${s.id}`}
-                  target="_blank"
-                  rel="noopener"
-                  onClick={() => track(`Short ${s.id}`)}
-                >
-                  Watch on YouTube ↗
-                </a>
-              </div>
-            </div>
+            <ShortCard key={s.id} {...s} onTrack={track} />
           ))}
         </div>
 

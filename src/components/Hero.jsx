@@ -12,7 +12,7 @@ const STATS = [
   ['5,000', '+', 'Homes Cleaned'],
   ['4.9', '★', 'Average Rating'],
   ['98', '%', 'Happy Customers'],
-  ['₹999', '+', 'Starting Price'],
+  ['₹2,000', '+', 'Starting Price'],
 ];
 
 export default function Hero() {

@@ -23,7 +23,7 @@ A modern, mobile-friendly marketing site for **Sachin Deep Cleaning**, a home de
 ```bash
 # 1. Build (regenerate entry shells first if pages.config.mjs changed)
 npm run gen
-npm run build                     # outputs to dist/
+npm run build                     # = sitemap gen + vite build + prerender → dist/
 
 # 2. Clone the gh-pages branch into a scratch dir
 rm -rf /tmp/opencode/ghp
@@ -34,9 +34,9 @@ rm -rf /tmp/opencode/ghp/*
 touch /tmp/opencode/ghp/.nojekyll
 cp -r dist/* /tmp/opencode/ghp/
 
-# 4. Restore deploy-only files that vite does NOT emit (CNAME, robots.txt)
+# 4. Restore deploy-only files that vite does NOT emit (.nojekyll only — CNAME & robots.txt are now in public/ and copied by vite)
 cd /tmp/opencode/ghp
-git checkout origin/gh-pages -- CNAME robots.txt .nojekyll
+git checkout origin/gh-pages -- .nojekyll
 
 # 5. Commit + push to the REAL remote
 #    (the clone's origin points to the local repo — fix it first!)
@@ -70,7 +70,11 @@ This only updates source. The live site is unchanged until you also do the `gh-p
 |----------|---------|
 | `pages.config.mjs` | Single source of truth for every MPA page (file, page type, title, description) |
 | `scripts/gen-entries.mjs` | Generates HTML entry shells from `pages.config.mjs` (run `npm run gen` after editing it) |
-| `src/bootstrap.jsx` | Mounts the right React page component per `data-page` attribute |
+| `scripts/gen-sitemap.mjs` | Regenerates `public/sitemap.xml` with fresh `lastmod` (runs automatically on `npm run build`) |
+| `scripts/prerender.mjs` | Renders every page to static HTML with `ReactDOMServer` and injects it into `dist/` (SEO: Google/Bing see content + JSON-LD without JS) |
+| `src/app.jsx` | Shared app tree used by both the browser entry and the prerender script |
+| `src/prerender-entry.jsx` | SSR entry (`renderToString`) for `scripts/prerender.mjs` |
+| `src/bootstrap.jsx` | Hydrates the pre-rendered HTML (or renders normally in dev) based on `data-page` |
 | `src/pages/*.jsx` | Page components (ServicePage, ResidentialPage, AllPagesPage, ContactPage, ...) |
 | `src/components/*.jsx` | Nav, Footer, Hero, QuoteForm, FaqSection, ReviewsSection, ReelSection, ... |
 | `src/lib/services.js` | Service data (name, tagline, includes, process, faqs, price) |

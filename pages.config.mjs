@@ -1,102 +1,152 @@
-// Single source of truth for all 16 pages (MPA entries).
+// Single source of truth for all pages (MPA entries).
 // `page` tells src/bootstrap.jsx which React component to mount.
 // `serviceKey` (for page === 'service') maps to content in src/lib/services.js.
+// `noindex` pages get <meta name="robots" content="noindex, nofollow">.
+//
+// Based on the FINAL SEO package (pages-config-updates.mjs) with the fixes:
+//   1. INDEX title differentiated from the deep-cleaning page (was identical)
+//   2. Titles under 60 characters, descriptions enriched with prices
+//   3. Blog article entries + a blog index page
+//   4. thank-you flagged noindex
 
-// Canonical base used for <link rel="canonical"> and OG url.
-// Swap to your custom domain (e.g. https://sachindeepcleaning.com) when ready.
 export const SITE_URL = 'https://sachindeepcleaning.shop';
 export const SITE_NAME = 'Sachin Deep Cleaning';
-export const OG_IMAGE = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80';
+export const OG_IMAGE = 'https://sachindeepcleaning.shop/images/cleaning-1.jpg';
 
 export const pages = [
   {
     file: 'index', page: 'index',
-    title: 'Sachin Deep Cleaning — Home Deep Cleaning Services in Gurgaon',
-    description: 'Professional home deep cleaning in Gurgaon: sofas, bathrooms, kitchens & full-house makeovers. Trained staff, eco-friendly products, 100% satisfaction. Book on WhatsApp.',
+    title: 'Sachin Deep Cleaning — Home Cleaning Services in Gurgaon',
+    description: 'Trusted deep cleaning in Gurgaon since 2024. Full-home, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9267905943.',
   },
   {
     file: 'contact', page: 'contact',
-    title: 'Contact Sachin Deep Cleaning — Book Deep Cleaning in Gurgaon',
-    description: 'Get a free quote for home deep cleaning in Gurgaon. Call or WhatsApp +91 9267905943. Serving all sectors across Gurgaon, Haryana.',
+    title: 'Book a Deep Clean in Gurgaon | Sachin Deep Cleaning',
+    description: 'Get a free quote for home deep cleaning in Gurgaon. Call or WhatsApp +91 9267905943. All sectors served. Same-day slots available.',
   },
   {
     file: 'thank-you', page: 'thank-you',
-    title: 'Thank You — Sachin Deep Cleaning',
-    description: 'Thanks for contacting Sachin Deep Cleaning. We will call you back shortly to confirm your booking.',
+    title: 'Booking Confirmed — Sachin Deep Cleaning',
+    description: 'Thank you for booking Sachin Deep Cleaning. We will call you back within 30 minutes to confirm your slot.',
+    noindex: true,
   },
+
+  // ── Service pages ─────────────────────────────────────────────────────────
   {
     file: 'deep-cleaning-services-in-gurgaon', page: 'service', serviceKey: 'deep',
-    title: 'Deep Cleaning Services in Gurgaon | Sachin Deep Cleaning',
-    description: 'Comprehensive deep cleaning services across Gurgaon — floors, walls, furniture, sanitization. Trusted local professionals. Book via WhatsApp.',
+    title: 'Deep Cleaning Services in Gurgaon — Prices & Process',
+    description: 'Top-to-bottom deep cleaning in Gurgaon from ₹2,000. Floors, walls, fixtures & furniture. Trained team, eco-friendly products. Book via WhatsApp.',
   },
   {
     file: 'house-cleaning-services-in-gurgaon', page: 'service', serviceKey: 'house',
-    title: 'House Cleaning Services in Gurgaon | Sachin Deep Cleaning',
-    description: 'Regular & deep house cleaning services in Gurgaon. Reliable, affordable, eco-friendly. Get a free estimate on WhatsApp.',
+    title: 'House Cleaning Services in Gurgaon | From ₹499',
+    description: 'Regular & one-time house cleaning in Gurgaon from ₹499. Weekly, bi-weekly or monthly plans. Police-verified team, eco-friendly products. Book now.',
   },
   {
     file: 'full-home-deep-cleaning-1bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 1,
-    title: '1 BHK Full Home Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: '1 BHK full-home deep cleaning in Gurgaon — every room, floor to ceiling. Transparent pricing, trained cleaners. Book now.',
+    title: '1 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
+    description: '1 BHK full home deep cleaning in Gurgaon. Every room floor to ceiling — kitchen, bathroom, bedroom. Transparent pricing. Book on WhatsApp.',
   },
   {
     file: 'full-home-deep-cleaning-2bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 2,
-    title: '2 BHK Full Home Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: '2 BHK full-home deep cleaning in Gurgaon — kitchens, bathrooms, bedrooms & living areas. Book via WhatsApp.',
+    title: '2 BHK Deep Cleaning Gurgaon | Price & Booking',
+    description: '2 BHK full home deep cleaning in Gurgaon. Both bedrooms, kitchen, 2 bathrooms & living area. Trained cleaners, eco-friendly. Book via WhatsApp.',
   },
   {
     file: 'full-home-deep-cleaning-3bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 3,
-    title: '3 BHK Full Home Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: '3 BHK full-home deep cleaning in Gurgaon. Thorough, eco-friendly, on-time. Get a free quote today.',
+    title: '3 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
+    description: '3 BHK full home deep cleaning in Gurgaon. Thorough, room-by-room service. Eco-friendly products, pay after satisfaction. Get a free quote today.',
   },
   {
     file: 'full-home-deep-cleaning-4bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 4,
-    title: '4 BHK Full Home Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: '4 BHK full-home deep cleaning in Gurgaon. Big homes, spotless results. Trained team, satisfaction guarantee.',
+    title: '4 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
+    description: '4 BHK full home deep cleaning in Gurgaon. Large homes, spotless results. Full team deployed, satisfaction guaranteed. Book on WhatsApp.',
   },
   {
     file: 'full-home-deep-cleaning-5bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 5,
-    title: '5 BHK Full Home Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: '5 BHK full-home deep cleaning in Gurgaon. Comprehensive service for large homes. Book on WhatsApp.',
+    title: '5 BHK Deep Cleaning Gurgaon | Premium Full-Home',
+    description: '5 BHK full home deep cleaning in Gurgaon. Comprehensive luxury home service. Full professional team. Book on WhatsApp or call +91 9267905943.',
   },
   {
     file: 'kitchen-deep-cleaning-gurgaon', page: 'service', serviceKey: 'kitchen',
-    title: 'Kitchen Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Kitchen deep cleaning in Gurgaon — chimney degreasing, cabinets, countertops & appliances. Hygienic cooking space.',
+    title: 'Kitchen Deep Cleaning Gurgaon | Chimney & Hob',
+    description: 'Kitchen deep cleaning in Gurgaon — chimney filter degreasing, hob scrub, cabinets & tiles. Food-safe products. Takes 3–4 hrs. Book via WhatsApp.',
   },
   {
     file: 'bathroom-deep-cleaning-gurgaon', page: 'service', serviceKey: 'bathroom',
-    title: 'Bathroom Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Bathroom deep cleaning in Gurgaon — descaling tiles, faucets, commodes & exhaust fans. Germ-free, sparkling.',
+    title: 'Bathroom Deep Cleaning Gurgaon | Descaling & Tiles',
+    description: 'Remove hard-water stains in Gurgaon bathrooms. Tile descaling, commode sanitization, limescale removal. 1.5–2 hrs per bathroom. Book now.',
   },
   {
     file: 'sofa-shampoo-cleaning-gurgaon', page: 'service', serviceKey: 'sofa',
-    title: 'Sofa Shampoo Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Sofa & upholstery shampoo cleaning in Gurgaon. Stain removal, odor control, fabric-safe. Book via WhatsApp.',
+    title: 'Sofa Shampoo Cleaning Gurgaon | ₹499/seat',
+    description: 'Sofa shampoo cleaning in Gurgaon from ₹499 per seat. Stain removal, dust-mite extraction, odor neutralization. Fabric-safe. Book via WhatsApp.',
   },
   {
     file: 'carpet-shampoo-cleaning-gurgaon', page: 'service', serviceKey: 'carpet',
-    title: 'Carpet Shampoo Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Carpet shampoo cleaning in Gurgaon — deep stain & dust-mite removal. Revive your carpets today.',
+    title: 'Carpet Cleaning Gurgaon | ₹15/sq ft Shampoo',
+    description: 'Carpet shampoo cleaning in Gurgaon from ₹15/sq ft. Hot-water extraction, stain removal, allergen treatment. Wall-to-wall & rugs. Book now.',
   },
   {
     file: 'office-deep-cleaning-gurgaon', page: 'service', serviceKey: 'office',
-    title: 'Office Deep Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Office & commercial deep cleaning in Gurgaon. Cabins, pantries, washrooms & floors. Minimal business disruption.',
+    title: 'Office Deep Cleaning Gurgaon | Commercial Cleaning',
+    description: 'Office deep cleaning in Gurgaon — workstations, pantries, washrooms, carpets & glass. Scheduled around business hours. Book a free site visit.',
   },
   {
     file: 'move-in-move-out-cleaning-gurgaon', page: 'service', serviceKey: 'move',
-    title: 'Move-In / Move-Out Cleaning in Gurgaon | Sachin Deep Cleaning',
-    description: 'Move-in & move-out deep cleaning in Gurgaon. Leave or enter a spotless home. End-to-end service.',
+    title: 'Move-In Move-Out Cleaning Gurgaon | Empty Flat',
+    description: 'Move-in & move-out deep cleaning in Gurgaon. Leave your old flat spotless or enter a fresh one. End-to-end handover cleaning. Book via WhatsApp.',
   },
   {
     file: 'residential-cleaners-near-me', page: 'residential',
-    title: 'Residential Cleaners Near Me in Gurgaon | Local, Verified, Same-Day | Sachin Deep Cleaning',
-    description: 'Looking for residential cleaners near me in Gurgaon? Sachin Deep Cleaning sends a police-verified local team to your door. Pay after the job is done. Same-day slots.',
+    title: 'Residential Cleaners Near Me — Gurgaon | Same-Day',
+    description: 'Local residential cleaners in Gurgaon. Police-verified, same-day slots, pay after job is done. Serving DLF, Sohna Rd, Golf Course Rd & all sectors.',
   },
   {
     file: 'all-pages', page: 'allpages',
-    title: 'All Pages — Sachin Deep Cleaning in Gurgaon',
-    description: 'Browse every page on Sachin Deep Cleaning: all deep cleaning services, BHK packages, office & kitchen cleaning, contact and more.',
+    title: 'All Services — Sachin Deep Cleaning Gurgaon',
+    description: 'Browse all deep cleaning services in Gurgaon: full home, kitchen, bathroom, sofa, carpet, office and move-in/out cleaning by Sachin Deep Cleaning.',
+  },
+
+  // ── Blog ──────────────────────────────────────────────────────────────────
+  {
+    file: 'blog', page: 'blog',
+    title: 'Blog — Cleaning Guides & Tips | Sachin Deep Cleaning',
+    description: 'Deep cleaning guides for Gurgaon homes: costs by BHK, cleaning frequency, kitchen chimney care, hard water removal and sofa maintenance. Expert tips.',
+  },
+  {
+    file: 'blog/deep-cleaning-cost-gurgaon-2026', page: 'article',
+    title: 'Deep Cleaning Cost in Gurgaon 2026 — Full Price Guide',
+    description: 'How much does deep cleaning cost in Gurgaon in 2026? Full price breakdown by BHK, service type and what\'s included. Updated August 2026.',
+  },
+  {
+    file: 'blog/how-often-deep-clean-home-india', page: 'article',
+    title: 'How Often Should You Deep Clean Your Home in India?',
+    description: 'Expert guide on deep cleaning frequency for Indian homes. Seasonal schedules, pre-Diwali tips and signs your home needs a deep clean now.',
+  },
+  {
+    file: 'blog/kitchen-chimney-cleaning-guide', page: 'article',
+    title: 'Kitchen Chimney Cleaning Guide — DIY vs Professional',
+    description: 'When to clean your kitchen chimney filter, how professionals do it, and why Gurgaon kitchens need it more often. Full guide with pricing.',
+  },
+  {
+    file: 'blog/hard-water-bathroom-stains-gurgaon', page: 'article',
+    title: 'How to Remove Hard Water Stains in Gurgaon Bathrooms',
+    description: 'Gurgaon\'s hard water leaves limescale and stains fast. How to remove them from tiles, faucets and glass — DIY tips and when to call professionals.',
+  },
+  {
+    file: 'blog/sofa-cleaning-gurgaon-guide', page: 'article',
+    title: 'Sofa Shampoo Cleaning in Gurgaon — Complete Guide 2026',
+    description: 'Everything about sofa cleaning in Gurgaon: shampoo vs dry clean, price per seat, drying time and how to maintain upholstery between cleans.',
+  },
+  {
+    file: 'blog/kitchen-vs-regular-cleaning', page: 'article',
+    title: 'Kitchen Deep Cleaning vs Regular Cleaning — What\'s the Difference?',
+    description: 'The clear difference between regular kitchen cleaning and professional kitchen deep cleaning — and why daily wiping alone is not enough in Gurgaon.',
+  },
+  {
+    file: 'blog/move-in-move-out-cleaning-checklist-gurgaon', page: 'article',
+    title: 'Move-In / Move-Out Cleaning Checklist for Gurgaon Apartments',
+    description: 'The complete move-in / move-out cleaning checklist for Gurgaon flats: kitchen, bathrooms, bedrooms and everything landlords inspect for the deposit.',
   },
 ];

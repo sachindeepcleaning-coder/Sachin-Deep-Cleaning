@@ -7,21 +7,27 @@ import HowItWorks from '../components/HowItWorks.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import OfficeReelSection from '../components/OfficeReelSection.jsx';
-import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema.jsx';
+import RelatedServices from '../components/RelatedServices.jsx';
+import RelatedGuides from '../components/RelatedGuides.jsx';
+import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema, howToSchema, reviewsSchema, HOW_TO_CONFIGS } from '../lib/schema.jsx';
 import { getService } from '../lib/services.js';
-import { SITE_URL } from '../lib/site.js';
+import { pageUrl } from '../lib/site.js';
 
-export default function ServicePage({ serviceKey, bhk }) {
+export default function ServicePage({ serviceKey, bhk, url = '' }) {
   const s = getService(serviceKey, bhk);
-  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const howTo = HOW_TO_CONFIGS[serviceKey];
 
   return (
     <>
-      <JsonLd data={serviceSchema({ name: s.name, description: s.intro, url })} />
+      <JsonLd data={serviceSchema({ name: s.name, description: s.intro, url, price: s.price, image: s.image })} />
       <JsonLd data={faqSchema(s.faqs)} />
+      <JsonLd data={reviewsSchema(s.reviews, s.name)} />
+      {howTo && (
+        <JsonLd data={howToSchema({ ...howTo, steps: s.process, image: s.image })} />
+      )}
       <JsonLd
         data={breadcrumbSchema([
-          { name: 'Home', url: SITE_URL + '/index.html' },
+          { name: 'Home', url: pageUrl('index') },
           { name: s.name, url },
         ])}
       />
@@ -37,7 +43,7 @@ export default function ServicePage({ serviceKey, bhk }) {
             <h1>
               <span className="hl">{s.name}</span>
             </h1>
-            <p className="hero-sub">{s.intro} <strong>{s.price.amount} onwards.</strong></p>
+            <p className="hero-sub">{s.intro} {s.price.amount !== 'request' && <strong>{s.price.amount} onwards.</strong>}</p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Same-Day Service</span>
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
@@ -50,6 +56,32 @@ export default function ServicePage({ serviceKey, bhk }) {
       </section>
 
       <TrustBar />
+
+      <section className="section">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto' }} className="fade-up">
+            <div className="section-tag">Why It Matters</div>
+            <h2 className="section-title">About {s.name}</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Here's what a proper deep clean actually involves — and why it matters for your Gurgaon home.</p>
+          </div>
+          <div className="about-wrap fade-up" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', alignItems: 'center', marginTop: '32px' }}>
+            <div style={{ flex: '1 1 300px', minWidth: 0 }}>
+              {s.detail.split('\n\n').map((p, i) => (
+                <p key={i} style={{ margin: '0 0 16px', lineHeight: 1.75, color: 'var(--muted)' }}>{p}</p>
+              ))}
+            </div>
+            <div style={{ flex: '1 1 300px', minWidth: 0 }}>
+              <img
+                src={s.image}
+                alt={s.imageAlt}
+                loading="lazy"
+                width="600"
+                height="400"
+                style={{ width: '100%', height: 'auto', borderRadius: '14px', display: 'block' }}
+              />
+            </div>          </div>
+        </div>
+      </section>
 
       <section className="section section-alt">
         <div className="section-inner">
@@ -74,9 +106,9 @@ export default function ServicePage({ serviceKey, bhk }) {
 
       <HowItWorks />
 
-      <PricingSection />
+      {!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />}
 
-      <ReviewsSection />
+      <ReviewsSection reviews={s.reviews} />
 
       {serviceKey === 'office' ? <OfficeReelSection /> : <ReelSection />}
 
@@ -87,6 +119,9 @@ export default function ServicePage({ serviceKey, bhk }) {
           <FaqSection faqs={s.faqs.map((f) => [f.q, f.a])} />
         </div>
       </section>
+
+      <RelatedGuides serviceKey={serviceKey} />
+      <RelatedServices currentHref={url.split('/').pop()} />
     </>
   );
 }

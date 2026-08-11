@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 const DATA = [
-  { bhk: '1 BHK', time: '3 hr', price: '₹2,499' },
-  { bhk: '2 BHK', time: '4 hr', price: '₹3,499' },
-  { bhk: '3 BHK', time: '5 hr', price: '₹4,499' },
-  { bhk: '4 BHK', time: '6 hr', price: '₹5,499' },
-  { bhk: '5 BHK', time: '7 hr', price: '₹6,499' },
+  { bhk: '1 BHK', time: '5-6 hr', price: '₹2,500' },
+  { bhk: '2 BHK', time: '7-8 hr', price: '₹4,500' },
+  { bhk: '3 BHK', time: '9-10 hr', price: '₹5,500' },
+  { bhk: '4 BHK', time: '11-12 hr', price: '₹6,500' },
+  { bhk: '5 BHK', time: '13-14 hr', price: '₹9,000' },
 ];
 
 // Interactive service comparison + live price quote.

@@ -14,12 +14,11 @@ import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { JsonLd, localBusinessSchema, faqSchema } from '../lib/schema.jsx';
 import { FAQS } from '../lib/landing.js';
-import { SITE_URL } from '../lib/site.js';
 
-export default function IndexPage() {
+export default function IndexPage({ url }) {
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url: SITE_URL + '/index.html' })} />
+      <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
 
       <Hero />

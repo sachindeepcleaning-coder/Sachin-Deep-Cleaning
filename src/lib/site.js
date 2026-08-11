@@ -4,6 +4,11 @@
 export const SITE_URL = 'https://sachindeepcleaning.shop';
 export const SITE_NAME = 'Sachin Deep Cleaning';
 
+// Canonical URL for a page. The homepage is served from the root path.
+export function pageUrl(file = 'index') {
+  return file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${file}.html`;
+}
+
 export const PHONE = '+91 92679-05943';
 export const PHONE_TEL = 'tel:+919267905943';
 export const WHATSAPP_NUMBER = '919267905943';
@@ -25,7 +30,7 @@ export const NETLIFY_FORM_NAME = 'lead-quote';
 // Legacy Formspree (kept for older pages accepting leads until migrated).
 export const FORMSPREE_ID = 'xdaqkbwa';
 
-export const STARTING_PRICE = '₹1,999';
+export const STARTING_PRICE = '₹2,000';
 export const PHONE_HREF = PHONE_TEL;
 export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 export const SOCIAL = {

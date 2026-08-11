@@ -45,7 +45,7 @@ export const SERVICES = [
     icon: '🏠',
     name: 'Full Home Deep Cleaning',
     desc: 'Expert cleaning of every room, every corner. Bedrooms, living area, kitchen, bathrooms, halls, floors, walls, windows & more.',
-    price: 'Starting ₹1,999',
+    price: 'Starting ₹2,000',
   },
 ];
 
@@ -85,26 +85,26 @@ export const WHY_US = [
 export const PRICING = [
   {
     size: '1 BHK Deep Clean',
-    price: '2,999',
-    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~3 hours · 2 cleaners'],
+    price: '2,500',
+    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~5-6 hours · 3 cleaners'],
     pop: false,
   },
   {
     size: '2 BHK Deep Clean',
-    price: '4,499',
-    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~5 hours · 3 cleaners'],
+    price: '4,500',
+    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~7-8 hours · 4 cleaners'],
     pop: true,
   },
   {
     size: '3 BHK Deep Clean',
-    price: '5,499',
-    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~7 hours · 4 cleaners'],
+    price: '5,500',
+    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~9-10 hours · 5 cleaners'],
     pop: false,
   },
 ];
 
 export const FAQS = [
-  ['How long does a full home deep clean take?', 'Typically 3–7 hours depending on home size. 1BHK: ~3 hrs, 2BHK: ~5 hrs, 3BHK+: ~7 hrs. We\u2019ll give you an accurate estimate on the confirmation call.'],
+  ['How long does a full home deep clean take?', 'Typically 5–10 hours depending on home size. 1BHK: ~5-6 hrs, 2BHK: ~7-8 hrs, 3BHK: ~9-10 hrs. We\u2019ll give you an accurate estimate on the confirmation call.'],
   ['Do I need to arrange equipment or cleaning supplies?', 'No — we bring everything. Professional machines, high-grade tools, and eco-friendly cleaning products are all included in the price. You don\u2019t need to arrange anything.'],
   ['Do I really pay only after the cleaning?', 'Absolutely. We confirm the booking on call, arrive at your scheduled time, complete the cleaning, and you pay only after inspecting the results to your satisfaction. Zero advance payment — ever.'],
   ['Can I book same-day service?', 'Yes! We offer same-day service based on slot availability. Call or fill the form now and we\u2019ll confirm a same-day slot if available. Book before noon for best availability.'],

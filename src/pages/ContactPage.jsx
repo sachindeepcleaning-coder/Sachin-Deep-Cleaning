@@ -4,7 +4,7 @@ import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import { JsonLd, localBusinessSchema } from '../lib/schema.jsx';
-import { SITE_URL, waMsg } from '../lib/site.js';
+import { waMsg } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const FAQS = [
@@ -13,10 +13,10 @@ const FAQS = [
   ['What does it cost?', 'Transparent pricing; free estimate on WhatsApp or via the form.'],
 ];
 
-export default function ContactPage() {
+export default function ContactPage({ url }) {
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url: SITE_URL + '/contact.html' })} />
+      <JsonLd data={localBusinessSchema({ url })} />
 
       <section className="hero">
         <div className="hero-grid"></div>

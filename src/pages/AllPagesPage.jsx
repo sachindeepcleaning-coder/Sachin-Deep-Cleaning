@@ -2,7 +2,7 @@ import FinalCta from '../components/FinalCta.jsx';
 import QuoteForm from '../components/QuoteForm.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
-import { SITE_URL, WA_BOOK, waMsg, WHATSAPP } from '../lib/site.js';
+import { pageUrl, WA_BOOK, waMsg } from '../lib/site.js';
 
 const GROUPS = [
   {
@@ -30,6 +30,19 @@ const GROUPS = [
     ],
   },
   {
+    label: 'Blog & Guides',
+    items: [
+      { icon: '📖', title: 'All Cleaning Guides', text: 'Every article in the blog.', href: 'blog.html' },
+      { icon: '💰', title: 'Deep Cleaning Cost in Gurgaon 2026', text: 'Full price guide by BHK and service.', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
+      { icon: '🗓️', title: 'How Often to Deep Clean Your Home', text: 'Recommended schedule for Indian homes.', href: 'blog/how-often-deep-clean-home-india.html' },
+      { icon: '🔧', title: 'Kitchen Chimney Cleaning Guide', text: 'DIY vs professional chimney cleaning.', href: 'blog/kitchen-chimney-cleaning-guide.html' },
+      { icon: '🚿', title: 'Remove Hard Water Stains in Bathrooms', text: 'Gurgaon hard-water limescale guide.', href: 'blog/hard-water-bathroom-stains-gurgaon.html' },
+      { icon: '🛋️', title: 'Sofa Shampoo Cleaning Guide 2026', text: 'Methods, prices and drying times.', href: 'blog/sofa-cleaning-gurgaon-guide.html' },
+      { icon: '🍳', title: 'Kitchen Deep Clean vs Regular', text: 'Why daily wiping isn\'t enough.', href: 'blog/kitchen-vs-regular-cleaning.html' },
+      { icon: '📦', title: 'Move-In / Move-Out Checklist', text: 'Complete handover cleaning checklist.', href: 'blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
+    ],
+  },
+  {
     label: 'Main & Utility Pages',
     items: [
       { icon: '🏠', title: 'Home', text: 'Sachin Deep Cleaning — home page.', href: 'index.html' },
@@ -40,13 +53,11 @@ const GROUPS = [
   },
 ];
 
-export default function AllPagesPage() {
-  const url = typeof window !== 'undefined' ? window.location.href : SITE_URL + '/all-pages.html';
-
+export default function AllPagesPage({ url }) {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: 'Home', url: SITE_URL + '/index.html' },
+        { name: 'Home', url: pageUrl('index') },
         { name: 'All Pages', url },
       ])} />
 
@@ -68,6 +79,7 @@ export default function AllPagesPage() {
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 9 Services</span>
               <span className="pill"><span className="pi">✓</span> 5 BHK Packages</span>
+              <span className="pill"><span className="pi">✓</span> 7 Guides</span>
               <span className="pill"><span className="pi">✓</span> Same-Day Available</span>
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
             </div>

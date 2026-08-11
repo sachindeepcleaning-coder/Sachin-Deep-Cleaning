@@ -1,6 +1,6 @@
 import { REVIEWS } from '../lib/landing.js';
 
-export default function ReviewsSection() {
+export default function ReviewsSection({ reviews = REVIEWS }) {
   return (
     <section className="section">
       <div className="section-inner">
@@ -16,7 +16,7 @@ export default function ReviewsSection() {
           </div>
         </div>
         <div className="reviews-grid">
-          {REVIEWS.map(([initials, name, loc, text]) => (
+          {reviews.map(([initials, name, loc, text]) => (
             <div key={initials + name} className="review-card fade-up">
               <div className="review-stars">⭐⭐⭐⭐⭐</div>
               <p className="review-text">&ldquo;{text}&rdquo;</p>
