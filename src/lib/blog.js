@@ -18,6 +18,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Deep cleaning services in Gurgaon — price guide for every BHK',
+    cta: { title: 'Get a fixed deep cleaning quote for your home', href: 'deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
     lead: 'Deep cleaning in Gurgaon costs ₹2,000–₹14,500 for a full home, depending on home size. Individual services like bathroom cleaning start at ₹800 and sofa cleaning from ₹499 per seat.',
     faqs: [
       { q: 'How much does deep cleaning cost for a 2 BHK in Gurgaon?', a: 'A 2 BHK full home deep cleaning in Gurgaon costs approximately ₹5,000–₹7,500 with Sachin Deep Cleaning, depending on the number of bathrooms and overall condition.' },
@@ -118,6 +119,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/house-cleaning.jpg',
     imageAlt: 'How often to deep clean your home — schedule guide for Indian homes',
+    cta: { title: 'Book a full home deep cleaning', href: 'full-home-deep-cleaning-1bhk-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
     lead: 'Most Indian homes need a thorough deep clean every 3–6 months. Gurgaon homes, due to high construction dust and hard water, are best served by deep cleaning every 3–4 months, with specific areas like kitchens and bathrooms needing attention more frequently.',
     faqs: [
       { q: 'Is deep cleaning once a year enough for Indian homes?', a: 'For most Indian homes, once a year is the minimum, but it\'s rarely sufficient. Gurgaon\'s dust levels, hard water and cooking habits make 2–3 times per year more realistic for maintaining a genuinely clean home.' },
@@ -211,6 +213,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/kitchen-deep-cleaning.webp',
     imageAlt: 'Kitchen chimney cleaning guide — filter degreasing DIY vs professional',
+    cta: { title: 'Let professionals degrease your kitchen', href: 'kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
     lead: 'A kitchen chimney filter should be cleaned every 1–3 months, depending on your cooking frequency. The full chimney unit — including internal parts, grease cup and motor housing — needs a professional deep clean every 6–12 months.',
     faqs: [
       { q: 'How often should I clean my kitchen chimney filter in India?', a: 'For daily home cooking in India, clean the filter every 1–2 months. The full unit (body and motor housing) should be professionally deep cleaned every 6–12 months.' },
@@ -302,6 +305,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/bathroom-deep-cleaning.jpg',
     imageAlt: 'Remove hard water stains from bathroom tiles and taps in Gurgaon',
+    cta: { title: 'Get bathrooms descaled by experts', href: 'bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning in Gurgaon →' },
     lead: 'Gurgaon\'s water has a TDS (Total Dissolved Solids) level of 500–1000+ mg/L in many areas — well above the WHO safe limit of 300 mg/L. This means limescale and hard-water stains build up on bathroom surfaces 3–4 times faster than in softer-water cities.',
     faqs: [
       { q: 'Why does Gurgaon have such hard water?', a: 'Gurgaon\'s water supply is drawn from deep borewells and the Yamuna river system. The region\'s underlying geology is calcium and magnesium-rich, and the high TDS in Gurgaon\'s groundwater (often 800–1,200 mg/L) is among the highest in any Indian metro. This is why hard water stains appear faster in Gurgaon than in cities like Bangalore or Hyderabad.' },
@@ -380,6 +384,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/sofa-shampoo-cleaning.jpg',
     imageAlt: 'Sofa shampoo cleaning in Gurgaon — complete price and method guide',
+    cta: { title: 'Refresh your sofa with professional shampooing', href: 'sofa-shampoo-cleaning-gurgaon.html', label: 'Sofa Shampoo Cleaning in Gurgaon →' },
     lead: 'Sofa cleaning in Gurgaon costs ₹499–₹599 per seat. A standard 3-seater runs ₹1,500–₹1,800. Hot-water extraction (shampoo method) is recommended over dry cleaning for embedded stains, allergens or odors.',
     faqs: [
       { q: 'How much does sofa cleaning cost in Gurgaon in 2026?', a: 'Sofa cleaning in Gurgaon costs ₹499 per seat for dry cleaning and ₹599 per seat for shampoo extraction. A standard 3-seater sofa costs ₹1,497–₹1,797 at Sachin Deep Cleaning.' },
@@ -480,6 +485,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/kitchen-deep-cleaning.webp',
     imageAlt: 'Kitchen deep cleaning vs regular cleaning comparison for Gurgaon homes',
+    cta: { title: 'Give your kitchen the deep clean it needs', href: 'kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
     lead: 'Many homeowners in Gurgaon think their daily or weekly kitchen cleaning is enough. It is not. Here is the clear difference between regular kitchen cleaning and professional kitchen deep cleaning.',
     faqs: [],
     blocks: [
@@ -536,6 +542,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Move-in move-out cleaning checklist for Gurgaon apartments',
+    cta: { title: 'Hand over (or move into) a spotless flat', href: 'move-in-move-out-cleaning-gurgaon.html', label: 'Move-In / Move-Out Cleaning in Gurgaon →' },
     lead: 'Whether you are handing over keys to a landlord or moving into a new flat in Gurgaon, a proper deep clean is essential. Here is the complete move-in / move-out cleaning checklist used by Sachin Deep Cleaning.',
     faqs: [],
     blocks: [

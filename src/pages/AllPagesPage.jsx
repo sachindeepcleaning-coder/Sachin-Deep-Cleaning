@@ -46,6 +46,7 @@ const GROUPS = [
     label: 'Main & Utility Pages',
     items: [
       { icon: '🏠', title: 'Home', text: 'Sachin Deep Cleaning — home page.', href: 'index.html' },
+      { icon: '👨‍🔧', title: 'About Us', text: 'Our team, process, areas & transparent pricing.', href: 'about.html' },
       { icon: '📞', title: 'Contact Us', text: 'Get a free quote — call or WhatsApp.', href: 'contact.html' },
       { icon: '✅', title: 'Thank You', text: 'Confirmation page after lead submission.', href: 'thank-you.html' },
       { icon: '🗺️', title: 'Site Map', text: 'XML sitemap for search engines.', href: 'sitemap.xml' },

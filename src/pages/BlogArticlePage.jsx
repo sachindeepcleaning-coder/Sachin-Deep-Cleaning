@@ -103,6 +103,15 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
           <article>
             {article.blocks.map((b, i) => renderBlock(b, `${b.t}-${i}`))}
           </article>
+          {article.cta && (
+            <div className="blog-cta">
+              <h2 className="blog-h2" style={{ marginTop: 0 }}>{article.cta.title}</h2>
+              <p>
+                <strong>{article.title}</strong>? Our police-verified team in Gurgaon handles it for you — with a fixed quote before we start and pay-after-satisfaction. Same-day slots are often available if you book before noon.
+              </p>
+              <a href={article.cta.href} className="blog-cta-btn">{article.cta.label}</a>
+            </div>
+          )}
           {faqs.length > 0 && (
             <div className="blog-faq">
               <FaqSection faqs={faqs.map((f) => [f.q, f.a])} />

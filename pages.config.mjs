@@ -30,6 +30,11 @@ export const pages = [
     description: 'Thank you for booking Sachin Deep Cleaning. We will call you back within 30 minutes to confirm your slot.',
     noindex: true,
   },
+  {
+    file: 'about', page: 'about',
+    title: 'About Sachin Deep Cleaning | Trusted Team in Gurgaon',
+    description: 'Meet the police-verified, eco-friendly deep cleaning team serving Gurgaon since 2024. Transparent pricing, pay after satisfaction, same-day service across DLF, Sohna Road & all sectors.',
+  },
 
   // ── Service pages ─────────────────────────────────────────────────────────
   {

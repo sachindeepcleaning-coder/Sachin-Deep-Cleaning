@@ -6,6 +6,7 @@ import ServicePage from './pages/ServicePage.jsx';
 import ThankYouPage from './pages/ThankYouPage.jsx';
 import ResidentialPage from './pages/ResidentialPage.jsx';
 import AllPagesPage from './pages/AllPagesPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 import BlogArticlePage from './pages/BlogArticlePage.jsx';
 import BlogIndexPage from './pages/BlogIndexPage.jsx';
 import { pageUrl } from './lib/site.js';
@@ -20,6 +21,7 @@ export default function App({ page = 'index', file = 'index', serviceKey, bhk })
   else if (page === 'thank-you') Page = ThankYouPage;
   else if (page === 'residential') Page = ResidentialPage;
   else if (page === 'allpages') Page = AllPagesPage;
+  else if (page === 'about') Page = AboutPage;
   else if (page === 'blog') Page = BlogIndexPage;
   else if (page === 'article') Page = BlogArticlePage;
 
