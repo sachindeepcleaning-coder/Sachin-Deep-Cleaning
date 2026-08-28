@@ -113,6 +113,11 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
                 <strong>{article.title}</strong>? Our police-verified team in Gurgaon handles it for you — with a fixed quote before we start and pay-after-satisfaction. Same-day slots are often available if you book before noon.
               </p>
               <a href={article.cta.href} className="blog-cta-btn">{article.cta.label}</a>
+              <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center' }}>
+                <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>Deep Cleaning Services in Gurgaon →</a>
+                <a href="/house-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>House Cleaning Services in Gurgaon →</a>
+                <a href="/kitchen-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>Kitchen Deep Cleaning Gurgaon →</a>
+              </div>
             </div>
           )}
           {faqs.length > 0 && (

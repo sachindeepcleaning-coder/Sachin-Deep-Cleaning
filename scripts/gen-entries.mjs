@@ -39,15 +39,15 @@ const netlifyForm = `<form name="${NETLIFY_FORM_NAME}" method="POST" data-netlif
 
 // Hero image per service key for above-fold preload (LCP).
 const HERO_IMAGES = {
-  deep: '/images/full-home-deep-cleaning.jpg',
-  house: '/images/house-cleaning.jpg',
-  fullhome: '/images/full-home-deep-cleaning.jpg',
+  deep: '/images/full-home-deep-cleaning.webp',
+  house: '/images/house-cleaning.webp',
+  fullhome: '/images/full-home-deep-cleaning.webp',
   kitchen: '/images/kitchen-deep-cleaning.webp',
-  bathroom: '/images/bathroom-deep-cleaning.jpg',
-  sofa: '/images/sofa-shampoo-cleaning.jpg',
-  carpet: '/images/carpet-shampoo-cleaning.jpg',
+  bathroom: '/images/bathroom-deep-cleaning.webp',
+  sofa: '/images/sofa-shampoo-cleaning.webp',
+  carpet: '/images/carpet-shampoo-cleaning.webp',
   office: '/images/office-deep-cleaning.jpg',
-  move: '/images/full-home-deep-cleaning.jpg',
+  move: '/images/full-home-deep-cleaning.webp',
 };
 
 for (const p of pages) {

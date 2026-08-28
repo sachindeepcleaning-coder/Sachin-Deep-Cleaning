@@ -9,7 +9,7 @@ const base = {
       'Our deep cleaning service goes far beyond routine sweeping — we scrub, descale, sanitize and detail every surface so your home feels genuinely new.',
     detail:
       'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive.\n\nOur trained team works top-to-bottom and room-by-room with professional machines and eco-friendly products. We shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.\n\nGurgaon’s hard water leaves calcium and magnesium deposits on taps, shower heads and tile grout that normal wiping cannot remove — our descaling treatment handles this properly. Construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road corridors embeds in sofa fibres, AC filters and chimney interiors even in well-sealed homes.\n\nPre-Diwali (Oct–Nov) and post-monsoon are the busiest periods — we recommend booking early for those slots. Our service also covers move-in / move-out empty-flat resets and post-construction removal of cement dust, paint drips and adhesive residue, all at the same verified-team, pay-after-satisfaction standard.',
-    image: '/images/full-home-deep-cleaning.jpg',
+    image: '/images/full-home-deep-cleaning.webp',
     imageAlt: 'Deep cleaning services in Gurgaon — trained team scrubbing floors, tiles and furniture top to bottom',
     includes: [
       'Floor & tile scrubbing and polishing',
@@ -67,7 +67,7 @@ const base = {
       'From quick refreshes to scheduled deep cleans, our house cleaning plans keep your Gurgaon home consistently spotless.',
     detail:
       'Life in Gurgaon leaves little time for keeping up with dusting, mopping and tidying — and that is exactly what our house cleaning service is built for. We offer one-time cleans for a fresh start, plus weekly and bi-weekly plans so your home stays consistently clean without you lifting a finger.\n\nEach visit includes dusting, vacuuming, mopping, kitchen and bathroom upkeep, bin emptying and surface sanitation. Our plans are tailored to your home size — from compact studio apartments and 1 BHK flats in sectors like DLF Phase 1–5 and Sohna Road to large 4 BHK villas. Prices start at ₹499 per visit for a studio and scale by size. Every cleaner is police-verified, brings eco-friendly supplies, and you pay only after you walk through and approve the work.',
-    image: '/images/house-cleaning.jpg',
+    image: '/images/house-cleaning.webp',
     imageAlt: 'Residential house cleaning service in Gurgaon by police-verified team from Sachin Deep Cleaning',
     includes: ['Full dusting & vacuuming', 'Mopping & floor care', 'Kitchen & bathroom upkeep', 'Bin emptying & liner change', 'Surface wiping & sanitation', 'Bed-making & tidying (optional)', 'Weekly / bi-weekly / monthly plans', 'Eco-friendly products'],
     process: [
@@ -134,7 +134,7 @@ const base = {
       'Descaling tiles, faucets, commodes and exhaust fans — we leave your bathroom hygienic and fresh.',
     detail:
       'Gurgaon’s hard water is brutal on bathrooms. It leaves white limescale on faucets, taps, shower heads and mirrors, yellows the grout between tiles, and stains the corners of the commode and bath. Left alone, moisture also invites mould and soap scum in hidden corners that a routine mop never touches.\n\nOur bathroom deep cleaning service removes limescale and hard-water stains from tiles, faucets, shower heads and glass, scrubs grout lines, fully sanitizes the commode inside and out, cleans the basin, exhaust fan and mirror, and finishes with the floor and wall tiles. We use disinfectants and rinse-safe products so the bathroom is safe for kids. A single bathroom typically takes 1.5–2 hours with one expert cleaner.',
-    image: '/images/bathroom-deep-cleaning.jpg',
+    image: '/images/bathroom-deep-cleaning.webp',
     imageAlt: 'Bathroom deep cleaning removing hard water stains from tiles and taps in a Gurgaon home',
     includes: ['Tile & grout descaling', 'Faucet, shower & tap de-scaling', 'Commode sanitization inside & out', 'Basin & mirror polishing', 'Exhaust fan cleaning', 'Mould & soap scum removal', 'Glass & shower panel cleaning', 'Floor scrub & disinfection'],
     process: [
@@ -168,7 +168,7 @@ const base = {
       'Steam and shampoo cleaning removes stains, dust mites and odors from sofas, mattresses and cushions.',
     detail:
       'Your sofa takes a daily beating — drinks spilled, kids climbing, pets curling up, and fine Gurgaon dust settling deep into the fabric. Over time, that invisible buildup turns fabric dull, triggers allergies, and traps odors that air fresheners simply mask.\n\nOur sofa shampoo cleaning uses a hot-water extraction and low-moisture method to flush out embedded dirt, dust mites and allergens, lift stains and neutralize odors. We first assess the fabric — cotton, linen, jacquard, velvet or leather — and choose the right treatment. Leather sofas receive a gentle conditioner-safe clean instead of shampoo. Prices start at ₹499 per seat for dry cleaning and ₹599 per seat for shampoo extraction. A 3-seater usually takes 1.5–2 hours and dries in 4–6 hours, ready for the evening.',
-    image: '/images/sofa-shampoo-cleaning.jpg',
+    image: '/images/sofa-shampoo-cleaning.webp',
     imageAlt: 'Sofa shampoo cleaning in Gurgaon — stain removal and fabric-safe extraction by Sachin Deep Cleaning',
     includes: ['Deep vacuum before treatment', 'Stain pre-treatment & removal', 'Fabric-safe shampoo & extraction', 'Dust-mite & allergen removal', 'Odor neutralization', 'Leather-safe conditioning option', 'Cushion & pillow cover care', 'Quick-dry low-moisture finish'],
     process: [
@@ -202,7 +202,7 @@ const base = {
       'We extract embedded dirt, stains and allergens so your carpets look and feel new.',
     detail:
       'Carpets are dust magnets — especially in Gurgaon, where fine particulate and construction dust settle straight into the pile. Everyday vacuuming only lifts the surface; the deep dirt, pet hair, dust mites and spilled stains stay trapped below, dulling colours and triggering allergies.\n\nOur carpet shampoo cleaning uses hot-water extraction to flush out deep-seated dirt and allergens, pre-treats stubborn stains and neutralizes odours, leaving your carpet visibly brighter and fresher. We clean wall-to-wall carpets, area rugs and runners, and assess the fibre — wool, nylon, polyester — before choosing the right treatment. Pricing is by area: from ₹15 per square foot for dry cleaning and ₹18 per square foot for shampoo extraction. A large living-room carpet typically dries within 4–6 hours.',
-    image: '/images/carpet-shampoo-cleaning.jpg',
+    image: '/images/carpet-shampoo-cleaning.webp',
     imageAlt: 'Carpet shampoo cleaning Gurgaon — deep extraction of dirt, stains and allergens',
     includes: ['Deep pre-vacuum', 'Stain pre-treatment', 'Hot-water shampoo extraction', 'Allergen & dust-mite removal', 'Odor neutralization', 'Wall-to-wall & area rugs', 'Fibre-safe treatment', 'Quick-dry finish'],
     process: [
@@ -279,7 +279,7 @@ const base = {
       'End-to-end cleaning for tenants and owners: every room detailed so you hand over or settle in with confidence.',
     detail:
       'Moving is stressful enough without adding cleaning to the pile. Whether you are a tenant trying to get your full security deposit back or a new owner walking into a space that has seen years of someone else’s use, our move-in / move-out cleaning takes care of every corner.\n\nFor move-outs, we work to landlord checklists so nothing is left to argue about — kitchen degreased, bathrooms descaled, windows washed, walls spot-cleaned, floors scrubbed and cabinets emptied. For move-ins, we make the space hygienic and ready: sanitizing kitchens and bathrooms, wiping cabinet interiors, cleaning windows and giving the floors a deep scrub before your furniture arrives. We cover apartments and villas across Gurgaon and can work around your handover date, even same-day in many sectors.',
-    image: '/images/full-home-deep-cleaning.jpg',
+    image: '/images/full-home-deep-cleaning.webp',
     imageAlt: 'Move-in move-out deep cleaning checklist complete — spotless empty apartment in Gurgaon',
     includes: ['Full empty-home deep clean', 'Kitchen degreasing & sanitization', 'Bathroom descaling & disinfection', 'Cabinet & cupboard interior wipe', 'Windows, sills & glass cleaning', 'Wall spot-cleaning & cobweb removal', 'Floor & tile deep scrub', 'Landlord checklist sign-off'],
     process: [
@@ -311,7 +311,7 @@ const base = {
       'A complete deep cleaning of your entire home — bedrooms, living areas, kitchen and bathrooms.',
     detail:
       'A full home deep cleaning is the flagship service — every room, every corner, cleaned in one coordinated visit. Our team of 3–5 professional cleaners works through bedrooms, living areas, kitchen, bathrooms, balconies and hallways, so the whole home is restored at once.\n\nWe price by home size and setup. Non-furnished homes (1 RK from ₹2,000, 1 BHK from ₹2,500, 2 BHK from ₹4,500) are the fastest to clean. Furnished homes cost a little more because every piece of furniture, upholstery and wardrobe needs careful detailing. The team brings all machines, eco-friendly products and equipment — you do not lift a finger. On the confirmation call we lock the exact price for your BHK, so there are no surprises on the day.',
-    image: '/images/full-home-deep-cleaning.jpg',
+    image: '/images/full-home-deep-cleaning.webp',
     imageAlt: 'Full home deep cleaning in Gurgaon — every room cleaned floor to ceiling by Sachin Deep Cleaning team',
     includes: ['All bedrooms & living areas', 'Kitchen deep cleaning', 'All bathrooms sanitized', 'Balconies & hallways', 'Furniture & fixture care', 'Window & glass cleaning', 'Sanitization of touch points', 'Eco-friendly products & equipment'],
     process: [
@@ -345,7 +345,7 @@ export function getService(serviceKey, bhk) {
     out.price = { label: 'Starting from', amount: s.priceByBhk?.[bhk] || '₹2,500' };
     out.intro = `Complete deep cleaning of your ${bhk} BHK home — bedrooms, living areas, kitchen and bathrooms, done top to bottom.`;
     out.detail = `${bhk} BHK ${bhk >= 4 ? 'homes' : 'apartments'} across Gurgaon get the full deep-cleaning treatment from our team: every bedroom, the living area, kitchen, bathrooms, balconies and hallways. We price by size, so a ${bhk} BHK is a fixed, confirmed price with no surprises.\n\nOur ${bhk} BHK deep clean package covers floors and tiles, walls and ceilings, kitchen degreasing, bathroom descaling, furniture and wardrobe detailing, windows, and sanitization of high-touch surfaces. The team brings all equipment and eco-friendly products. Whether your home is furnished or non-furnished, we tailor the effort to the surfaces inside — and you pay only after you walk through and approve the result.`;
-    out.image = bhk === 1 ? '/images/full-home-deep-cleaning.jpg' : bhk === 2 ? '/images/full-home-2bhk-deep-cleaning.jpg' : '/images/full-home-3bhk-deep-cleaning.jpg';
+    out.image = bhk === 1 ? '/images/full-home-deep-cleaning.webp' : bhk === 2 ? '/images/full-home-2bhk-deep-cleaning.webp' : '/images/full-home-3bhk-deep-cleaning.webp';
     out.imageAlt = `${bhk} BHK full home deep cleaning in Gurgaon`;
   }
   return out;
