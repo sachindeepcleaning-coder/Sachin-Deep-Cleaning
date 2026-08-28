@@ -3,6 +3,7 @@ import TrustBar from '../components/TrustBar.jsx';
 import PricingSection from '../components/PricingSection.jsx';
 import PricingTable from '../components/PricingTable.jsx';
 import WhyUsSection from '../components/WhyUsSection.jsx';
+import BeforeAfter from '../components/BeforeAfter.jsx';
 import GuaranteeSection from '../components/GuaranteeSection.jsx';
 import ReviewsSection from '../components/ReviewsSection.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
@@ -135,6 +136,53 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
       {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
       {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
+
+      {/* Safaiwale-inspired sqft pricing + Before/After proof (fullhome & deep) */}
+      {(serviceKey === 'fullhome' || serviceKey === 'deep') && s.sqftByBhk && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Pricing by Area</div>
+              <h2 className="section-title">Price by BHK & Sq Ft — No Guesswork</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Safaiwale shows Studio 400 sq ft → Villa 3000 sq ft. We match that transparency — every BHK’s sq ft range is fixed before the team arrives.</p>
+            </div>
+            <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+                <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>BHK</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Area</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Price</th></tr></thead>
+                <tbody>
+                  {[1,2,3,4,5].map((n) => (
+                    <tr key={n} style={{ background: n % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                      <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{n} BHK</td>
+                      <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{s.sqftByBhk[n]}</td>
+                      <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', color: 'var(--primary)', fontWeight: 700 }}>{s.priceByBhk[n]}</td>
+                    </tr>
+                  ))}
+                  <tr style={{ background: 'var(--card)' }}><td style={{ padding: '13px 20px' }}>1 RK / Studio</td><td style={{ padding: '13px 20px' }}>Up to 400 sq ft</td><td style={{ padding: '13px 20px', color: 'var(--primary)', fontWeight: 700 }}>₹2,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Before/After — Safaiwale 6-image proof, we show 3 sliders */}
+      {(serviceKey === 'deep' || serviceKey === 'fullhome') && (
+        <section className="section">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Real Results</div>
+              <h2 className="section-title">From Dusty to Dazzling — Before & After</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Drag the slider — real Gurgaon homes, not stock. Same 8-hour process you’ll get.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20, marginTop: 32 }}>
+              <div className="fade-up"><BeforeAfter before="/images/bathroom-deep-cleaning.jpg" after="/images/full-home-deep-cleaning.jpg" beforeLabel="Before — Hard-water scale" afterLabel="After — Descaled" /></div>
+              <div className="fade-up"><BeforeAfter before="/images/sofa-shampoo-cleaning.jpg" after="/images/carpet-shampoo-cleaning.jpg" beforeLabel="Before — Dusty" afterLabel="After — Extracted" /></div>
+              <div className="fade-up"><BeforeAfter before="/images/house-cleaning.jpg" after="/images/kitchen-deep-cleaning.webp" beforeLabel="Before — Greasy" afterLabel="After — Degreased" /></div>
+            </div>
+            <p style={{ textAlign: 'center', marginTop: 16, fontSize: '.82rem', color: 'var(--muted)' }}>Images use your actual service photos from <code>public/images</code> — replace with your phone’s before/after when you have them. No Safaiwale stock.</p>
+          </div>
+        </section>
+      )}
 
       <ReviewsSection reviews={s.reviews} />
 

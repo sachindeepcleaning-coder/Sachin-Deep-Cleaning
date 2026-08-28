@@ -333,6 +333,7 @@ const base = {
       ['VS', 'Vikram Sharma', 'MG Road', "We have tried 3 other cleaning services before. None come close. Bathroom tiles look like they did when we first moved in. Just brilliant."],
     ],
     priceByBhk: { 1: '₹2,500', 2: '₹4,500', 3: '₹5,500', 4: '₹6,500', 5: '₹9,000' },
+    sqftByBhk: { 1: '400–600 sq ft', 2: '601–1,000 sq ft', 3: '1,001–1,500 sq ft', 4: '1,501–2,100 sq ft', 5: '2,500–3,000 sq ft' },
   },
 };
 
