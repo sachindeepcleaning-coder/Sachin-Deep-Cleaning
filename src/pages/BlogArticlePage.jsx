@@ -57,7 +57,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
       <section className="section">
         <div className="section-inner" style={{ textAlign: 'center' }}>
           <h1>Article not found</h1>
-          <p style={{ color: 'var(--muted)' }}>This guide does not exist. <a href="blog.html" style={{ color: 'var(--primary)' }}>Browse all guides</a>.</p>
+          <p style={{ color: 'var(--muted)' }}>This guide does not exist. <a href="/blog.html" style={{ color: 'var(--primary)' }}>Browse all guides</a>.</p>
         </div>
       </section>
     );
@@ -81,7 +81,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
       <section className="blog-hero">
         <div className="section-inner">
           <div className="blog-meta">
-            <a href="blog.html" className="blog-back">← All guides</a>
+            <a href="/blog.html" className="blog-back">← All guides</a>
             <span>Updated {article.dateModified}</span>
             <span>·</span>
             <span>{mins} min read</span>
@@ -118,7 +118,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
             </div>
           )}
           <p className="blog-end" style={{ textAlign: 'center', marginTop: '40px' }}>
-            <a href="blog.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>More cleaning guides for Gurgaon homes →</a>
+            <a href="/blog.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>More cleaning guides for Gurgaon homes →</a>
           </p>
         </div>
       </section>

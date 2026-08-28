@@ -20,7 +20,7 @@ export default function ThankYouPage() {
           </a>
         </div>
         <p style={{ marginTop: '28px' }}>
-          <a href="index.html" style={{ color: '#8FA4BE', textDecoration: 'none', fontWeight: 600 }}>← Back to home</a>
+          <a href="/index.html" style={{ color: '#8FA4BE', textDecoration: 'none', fontWeight: 600 }}>← Back to home</a>
         </p>
       </div>
     </section>

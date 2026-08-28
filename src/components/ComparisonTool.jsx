@@ -40,7 +40,7 @@ export default function ComparisonTool() {
               <td>{r.time}</td>
               <td>{r.price}</td>
               <td>
-                <a className="btn btn-secondary" href="contact.html" style={{ padding: '6px 14px', fontSize: 13 }}>
+                <a className="btn btn-secondary" href="/contact.html" style={{ padding: '6px 14px', fontSize: 13 }}>
                   Book
                 </a>
               </td>
