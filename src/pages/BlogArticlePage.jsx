@@ -11,12 +11,15 @@ function Rich({ text }) {
   return parts.map((p, i) => (i % 2 === 1 ? <strong key={i}>{p}</strong> : p));
 }
 
+function slugId(text) {
+  return String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60);
+}
 function renderBlock(b, key) {
   switch (b.t) {
     case 'p': return <p key={key} className="blog-p"><Rich text={b.x} /></p>;
     case 'lead': return <p key={key} className="blog-lead"><Rich text={b.x} /></p>;
-    case 'h2': return <h2 key={key} className="blog-h2">{b.x}</h2>;
-    case 'h3': return <h3 key={key} className="blog-h3">{b.x}</h3>;
+    case 'h2': return <h2 key={key} id={slugId(b.x)} className="blog-h2">{b.x}</h2>;
+    case 'h3': return <h3 key={key} id={slugId(b.x)} className="blog-h3">{b.x}</h3>;
     case 'table':
       return (
         <div key={key} className="blog-table-wrap">

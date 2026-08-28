@@ -26,6 +26,8 @@ export const ARTICLES = [
       { q: 'Is deep cleaning worth it in Gurgaon?', a: 'Yes, especially given Gurgaon\'s fine dust, hard water and active construction zones. Most residents benefit from a full deep clean every 3–6 months, maintaining it with regular weekly cleaning in between.' },
       { q: 'Do you charge extra for large homes?', a: 'The price scales with size, as shown in the table above. There\'s no hidden surcharge for large homes — you get an itemized quote before we begin.' },
       { q: 'How do I book a deep cleaning in Gurgaon?', a: 'WhatsApp or call Sachin Deep Cleaning at +91 9267905943. We confirm your slot within 30 minutes and give you a fixed price before we start.' },
+      { q: 'Sasta deep cleaning Gurgaon me kitne ka padta hai? (How much does cheap deep cleaning cost in Gurgaon?)', a: 'Sasta deep cleaning Gurgaon me 2 BHK ke liye ₹2,999–₹3,499 se shuru hota hai, lekin usmein aksar machines aur proper descaling shamil nahi hota. Sachin Deep Cleaning ka genuine deep clean 2 BHK ke liye ₹4,500 se shuru hota hai — verified team, machines aur pay-after-satisfaction ke saath. Sasta = dobara bulana pad sakta hai.' },
+      { q: 'Gurgaon me 1 BHK deep cleaning ka price kya hai?', a: '1 BHK full home deep cleaning Gurgaon me ₹2,500–₹3,500 tak hota hai. Non-furnished ghar thoda sasta padta hai (₹2,500), furnished me wardrobe aur sofa detailing ke karan ₹3,000–₹3,500 lagta hai. WhatsApp +91 9267905943 par BHK bhejein, fixed price turant milega.' },
     ],
     blocks: [
       { t: 'p', x: "If you've been searching for what deep cleaning actually costs in Gurgaon — without vague \"call for quote\" answers — this guide gives you real numbers from Sachin Deep Cleaning, a local service that's been cleaning homes across Gurgaon since 2024." },
@@ -759,6 +761,11 @@ export const ARTICLES = [
       { q: 'What is the cost of deep cleaning near me in Gurgaon?', a: 'From ₹2,000 (1 RK) to ₹9,000 (5 BHK). 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500. Same prices across all Gurgaon sectors — no travel surcharge.' },
       { q: 'Are the cleaners near me police-verified?', a: 'Yes — every cleaner is police-verified and skill-assessed before their first booking. You get the same trusted team regardless of sector.' },
       { q: 'How do I book cleaning services near me?', a: 'Call +91 9267905943 or WhatsApp. Share your sector, BHK and preferred date — we lock the price and slot on the call.' },
+      { q: 'Deep cleaning near me Gurgaon me kaise book karu? (How to book near me?)', a: 'Google par “deep cleaning near me” search karke Sachin Deep Cleaning par aayein, sector aur BHK WhatsApp karein +91 9267905943. Hum 30 minute me nearest team ka slot aur fixed price confirm kar dete hain — DLF ho ya Sohna Road.' },
+      { q: 'Gurgaon me cleaning services near me ka price kya hai?', a: 'Cleaning services near me Gurgaon me ₹499/visit (house cleaning) se shuru, deep cleaning ₹2,500 (1 BHK) se. Aapka sector chahe DLF Phase 2 ho ya Sector 83, price same rehta hai.' },
+      { q: 'What is the difference between “near me” with 5-star rating and cheap near me?', a: '5-star near me means verified, pay-after-satisfaction and 3-day guarantee. Cheap “near me” often means no machines, no verification and advance payment. Our 4.9/247 with ₹10k damage insurance is the verified option.' },
+      { q: 'Do you serve near me in Old Gurgaon (Sector 14, Palam Vihar)?', a: 'Yes — Palam Vihar, Sector 14, 15, 22 and all Old Gurgaon sectors are our West zone — same-day, same price. Many “near me” searches from these sectors land on us because we list them explicitly.' },
+      { q: 'How fast can “near me” team reach Golf Course Road?', a: 'Golf Course Road & Extension are our core zone — team reaches in 90–120 minutes from confirmation if booked before 2 PM. Sectors 82–92 take 2–4 hours.' },
     ],
     blocks: [
       { t: 'p', x: "Google shows **near me** results based on your location and the provider’s local relevance. This page makes it explicit — we list every Gurgaon sector we serve, how to book the nearest team, and what you pay (fixed, pre-confirmed, same across sectors)." },
