@@ -44,7 +44,7 @@ export default function AboutPage({ url }) {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Sachin Kumar',
+    name: 'Sachin Deep Cleaning',
     jobTitle: 'Founder & Lead Cleaning Specialist',
     url: `${SITE_URL}/about.html#sachin-kumar`,
     image: `${SITE_URL}/images/cleaning-1.webp`,
@@ -189,12 +189,12 @@ export default function AboutPage({ url }) {
         <div className="section-inner">
           <div className="fade-up" style={{ textAlign: 'center' }}>
             <div className="section-tag">Meet the Founder</div>
-            <h2 className="section-title">Sachin Kumar — Hands-On in Every Gurgaon Home</h2>
+            <h2 className="section-title">Sachin Deep Cleaning — Hands-On in Every Gurgaon Home</h2>
           </div>
           <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', marginTop: 32, maxWidth: 800, marginInline: 'auto' }} className="fade-up">
-            <img src="/images/cleaning-1.webp" alt="Sachin Kumar, founder of Sachin Deep Cleaning, Gurgaon — police-verified lead specialist" width="180" height="180" style={{ borderRadius: '50%', width: 140, height: 140, objectFit: 'cover', border: '3px solid var(--primary)' }} loading="lazy" />
+            <img src="/images/cleaning-1.webp" alt="Sachin Deep Cleaning team in Gurgaon — police-verified lead specialists" width="180" height="180" style={{ borderRadius: '50%', width: 140, height: 140, objectFit: 'cover', border: '3px solid var(--primary)' }} loading="lazy" />
             <div style={{ flex: 1, minWidth: 260 }}>
-              <h3 style={{ fontFamily: 'Syne', fontWeight: 800, marginBottom: 8 }}>Sachin Kumar — Founder & Lead Specialist</h3>
+              <h3 style={{ fontFamily: 'Syne', fontWeight: 800, marginBottom: 8 }}>Sachin Deep Cleaning — Founder & Lead Specialist</h3>
               <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>5+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, 247 verified reviews. Trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Facebook →</a>

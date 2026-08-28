@@ -219,7 +219,7 @@ export function articleSchema({ title, description, url, datePublished, dateModi
     dateModified: dateModified || datePublished,
     author: {
       '@type': 'Person',
-      name: 'Sachin Kumar',
+      name: 'Sachin Deep Cleaning',
       url: `${SITE_URL}/about.html`,
       sameAs: [SOCIAL.facebook, SOCIAL.instagram],
     },

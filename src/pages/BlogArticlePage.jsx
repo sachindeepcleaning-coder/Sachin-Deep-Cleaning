@@ -89,7 +89,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
             <span>·</span>
             <span>{mins} min read</span>
             <span>·</span>
-            <span>By <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sachin Kumar</a>, Founder</span>
+            <span>By <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sachin Deep Cleaning</a>, Founder</span>
           </div>
           <h1>{article.title}</h1>
           <img
