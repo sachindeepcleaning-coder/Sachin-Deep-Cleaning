@@ -96,7 +96,7 @@ export default function QuoteForm() {
           <div className="form-offer-main">₹200 OFF + FREE Bathroom Clean</div>
           <div className="form-offer-sub">For new customers booking today</div>
         </div>
-        <div className="form-offer-slots" id="slotsForm" data-slots>5 left</div>
+        <div className="form-offer-slots" id="slotsForm" data-slots></div>
       </div>
 
       <div className="form-title">Get Your FREE Quote — 30 Seconds</div>

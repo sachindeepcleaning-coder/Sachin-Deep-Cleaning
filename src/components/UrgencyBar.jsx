@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react';
-import { slotsLeft, randomCallbackTime } from '../lib/landing.js';
+import { randomCallbackTime } from '../lib/landing.js';
 
-// Top red urgency bar with shimmer + live slot count.
+// Top urgency bar. Real benefits, no fake scarcity. Callback time is a real
+// target (5-minute response) and rotates copy for variety, not to lie.
 export default function UrgencyBar() {
-  const [slots, setSlots] = useState(5);
+  const [cb, setCb] = useState('5 min callback');
+  const [date, setDate] = useState('');
 
   useEffect(() => {
-    const s = slotsLeft();
-    setSlots(s);
-    const el = document.getElementById('slotsForm') || document.querySelector('[data-slots]');
-    if (el) el.textContent = s + ' left';
-    const cb = document.getElementById('callbackTime');
-    if (cb) cb.textContent = randomCallbackTime();
+    setCb(randomCallbackTime());
+    const d = new Date();
+    const opts = { weekday: 'long', day: 'numeric', month: 'short' };
+    setDate(d.toLocaleDateString('en-IN', opts));
+    const el = document.getElementById('callbackTime');
+    if (el) el.textContent = 'under 5 min';
   }, []);
 
   return (
     <div className="urgency-bar">
-      <span className="ub-live"><span className="ub-dot"></span>LIVE</span>
-      🏠 Full Home Deep Cleaning in Gurgaon &nbsp;·&nbsp; Only <span className="ub-hl">{slots}</span> same-day slots left &nbsp;·&nbsp; 🎁 <span className="ub-hl">₹200 OFF</span> today
+      <span className="ub-live"><span className="ub-dot"></span>OPEN TODAY</span>
+      🏠 Full Home Deep Cleaning in Gurgaon &nbsp;·&nbsp; <span className="ub-hl">{cb}</span> &nbsp;·&nbsp; 🎁 <span className="ub-hl">₹200 OFF</span> for new customers
     </div>
   );
 }
