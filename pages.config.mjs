@@ -209,4 +209,19 @@ export const pages = [
     title: 'Deep Cleaning in Every Sector of Gurgaon — Full Guide 2026',
     description: 'Deep cleaning in every sector of Gurgaon — DLF 1–5, Sohna Road, Golf Course, Palam Vihar, Sectors 14–92, South City, Manesar. Area-wise guide. Updated Aug 2026.',
   },
+  {
+    file: 'blog/commercial-cleaning-services-gurgaon', page: 'article',
+    title: 'Commercial Cleaning Services in Gurgaon — Office & Shops',
+    description: 'Commercial cleaning in Gurgaon — offices, shops, clinics & showrooms. Price ₹3–11/sq ft, checklist & after-hours. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/best-home-cleaning-services-gurgaon', page: 'article',
+    title: 'Best Home Cleaning Services in Gurgaon — Top 5 Compared',
+    description: 'Best home cleaning services in Gurgaon compared — Urban, Safaiwale, NoBroker vs Sachin. Price, verification & guarantee. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/full-house-cleaning-checklist-gurgaon', page: 'article',
+    title: 'Full House Cleaning Checklist for Gurgaon Homes — 2026',
+    description: 'Full house cleaning checklist for Gurgaon — room, kitchen, bathroom, balcony & windows. Printable list. Updated Aug 2026.',
+  },
 ];
