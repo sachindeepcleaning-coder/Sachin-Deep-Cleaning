@@ -3,6 +3,8 @@ import QuoteForm from '../components/QuoteForm.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { pageUrl, WA_BOOK, waMsg } from '../lib/site.js';
+import { whatsappClick } from '../lib/landing.js';
+import { ARTICLES } from '../lib/blog.js';
 
 const GROUPS = [
   {
@@ -33,13 +35,12 @@ const GROUPS = [
     label: 'Blog & Guides',
     items: [
       { icon: '📖', title: 'All Cleaning Guides', text: 'Every article in the blog.', href: 'blog.html' },
-      { icon: '💰', title: 'Deep Cleaning Cost in Gurgaon 2026', text: 'Full price guide by BHK and service.', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
-      { icon: '🗓️', title: 'How Often to Deep Clean Your Home', text: 'Recommended schedule for Indian homes.', href: 'blog/how-often-deep-clean-home-india.html' },
-      { icon: '🔧', title: 'Kitchen Chimney Cleaning Guide', text: 'DIY vs professional chimney cleaning.', href: 'blog/kitchen-chimney-cleaning-guide.html' },
-      { icon: '🚿', title: 'Remove Hard Water Stains in Bathrooms', text: 'Gurgaon hard-water limescale guide.', href: 'blog/hard-water-bathroom-stains-gurgaon.html' },
-      { icon: '🛋️', title: 'Sofa Shampoo Cleaning Guide 2026', text: 'Methods, prices and drying times.', href: 'blog/sofa-cleaning-gurgaon-guide.html' },
-      { icon: '🍳', title: 'Kitchen Deep Clean vs Regular', text: 'Why daily wiping isn\'t enough.', href: 'blog/kitchen-vs-regular-cleaning.html' },
-      { icon: '📦', title: 'Move-In / Move-Out Checklist', text: 'Complete handover cleaning checklist.', href: 'blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
+      ...ARTICLES.map((a) => ({
+        icon: '📖',
+        title: a.title,
+        text: a.description,
+        href: `${a.file}.html`,
+      })),
     ],
   },
   {
@@ -80,7 +81,7 @@ export default function AllPagesPage({ url }) {
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 9 Services</span>
               <span className="pill"><span className="pi">✓</span> 5 BHK Packages</span>
-              <span className="pill"><span className="pi">✓</span> 7 Guides</span>
+              <span className="pill"><span className="pi">✓</span> {ARTICLES.length} Guides</span>
               <span className="pill"><span className="pi">✓</span> Same-Day Available</span>
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
             </div>
@@ -127,6 +128,7 @@ export default function AllPagesPage({ url }) {
                 href={waMsg('Hi, I need help choosing the right cleaning service in Gurgaon. Please advise.')}
                 target="_blank" rel="noopener"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 28px', background: '#25D366', color: '#fff', borderRadius: '12px', textDecoration: 'none', fontWeight: 800, fontSize: '.95rem' }}
+                onClick={whatsappClick}
               >
                 💬 WhatsApp Us
               </a>
@@ -134,6 +136,7 @@ export default function AllPagesPage({ url }) {
                 href={WA_BOOK}
                 target="_blank" rel="noopener"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 28px', background: 'var(--green)', color: '#fff', borderRadius: '12px', textDecoration: 'none', fontWeight: 800, fontSize: '.95rem' }}
+                onClick={whatsappClick}
               >
                 🧹 Book Now
               </a>

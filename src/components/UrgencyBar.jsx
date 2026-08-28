@@ -3,7 +3,7 @@ import { slotsLeft, randomCallbackTime } from '../lib/landing.js';
 
 // Top red urgency bar with shimmer + live slot count.
 export default function UrgencyBar() {
-  const [slots, setSlots] = useState(() => slotsLeft());
+  const [slots, setSlots] = useState(5);
 
   useEffect(() => {
     const s = slotsLeft();

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { NETLIFY_FORM_NAME, FORMSPREE_ID, PHONE_TEL, waMsg } from '../lib/site.js';
+import { NETLIFY_FORM_NAME, FORMSPREE_ID, PHONE, PHONE_TEL, waMsg } from '../lib/site.js';
 import { track, whatsappClick } from '../lib/landing.js';
 
 // Hero quote form card.

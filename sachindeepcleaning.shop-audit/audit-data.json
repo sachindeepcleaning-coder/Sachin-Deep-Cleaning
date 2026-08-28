@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "health_score": 69,
+    "business_type": "Local Service Area Business (SAB) — Home Deep Cleaning, Gurgaon",
+    "top_findings": [
+      "Prerender fix unblocks indexing — 40 URLs crawlable vs empty CSR previously",
+      "Missing llms.txt / AI crawler optimization — GEO score 45/100",
+      "414KB bootstrap.js (includes three.js) + 4 autoplay videos hurt mobile LCP",
+      "No verifiable GBP / map embed — local pack ceiling despite strong LocalBusiness schema",
+      "Full-home 1-5 BHK pages risk cannibalization — 61% duplicate chrome remaining"
+    ],
+    "quick_wins": [
+      "Add llms.txt + llms-full.txt and fix sitemap-images priority",
+      "Convert JPG to WebP/AVIF + srcset and defer three.js",
+      "Switch homepage title to keyword-first and make OG images page-specific",
+      "Embed GBP map + add visible NAP with postalCode and review link",
+      "Add BlogPosting + Author schema to 20 blog articles"
+    ]
+  },
+  "categories": [
+    {"name":"Technical SEO","score":78,"what_works":["Prerendered static HTML in dist/*.html","Canonicals correct ( / not /index.html)","robots.txt + dual sitemap.xml valid","40 URLs in live sitemap with fresh lastmod"],"findings":[{"title":"No security headers on GitHub Pages","severity":"Medium","description":"curl -I shows no HSTS, CSP, X-Frame-Options, X-Content-Type-Options. GitHub Pages serves max-age=600 only.","recommendation":"Enable HSTS via Cloudflare proxy or add _headers via Netlify; increase cache-control for assets to 1y immutable."}]},
+    {"name":"Content Quality","score":70,"what_works":["De-duplicated service copy (120-150w unique About)","6-9 unique FAQs + 3 reviews per service","20 blog guides covering cost, BHK, checklist, sector"],"findings":[{"title":"BHK page cannibalization","severity":"High","description":"1BHK-5BHK pages share 61% chrome and near-identical intent; titles differ only by BHK number.","recommendation":"Keep 1 canonical Full Home guide + BHK as anchors or add substantial unique proof/photos per BHK."}]},
+    {"name":"On-Page SEO","score":75,"what_works":["Title 41-58ch, desc 129-149ch optimal","H1 present with keyword, OG/Twitter complete","geo.region + ICBM tags"],"findings":[{"title":"Homepage title brand-first","severity":"Medium","description":"Sachin Deep Cleaning — Home... 56ch brand first vs keyword-first Deep Cleaning Services...","recommendation":"Change index.html:12 to Deep Cleaning Services in Gurgaon | Sachin Deep Cleaning"}]},
+    {"name":"Schema / Structured Data","score":72,"what_works":["LocalBusiness aggregateRating 4.9/247 with areaServed 25 zones","Service + FAQPage + HowTo + Breadcrumb + Review ItemList per service"],"findings":[{"title":"BlogPosting schema missing","severity":"High","description":"blog/*.html only emits BreadcrumbList — no Article/BlogPosting, author, datePublished","recommendation":"Add BlogPosting JSON-LD with author Person, dateModified 2026-08-28, image"}]},
+    {"name":"Performance (CWV)","score":60,"what_works":["Fonts media=print non-blocking","Videos 72% compressed 15.6→4.3MB","CSS 58KB modest"],"findings":[{"title":"414KB JS includes three.js unused","severity":"High","description":"dist/assets/bootstrap-CtDAvBzZ.js 414KB decode cost delays INP on mobile; 4 autoplay videos inflate LCP.","recommendation":"Code-split three/drei, lazy-load videos, defer GT M, serve WebP with srcset."}]},
+    {"name":"AI Search Readiness","score":45,"what_works":["FAQPage schema helps citability","Strong Gurgaon topical coverage"],"findings":[{"title":"llms.txt 404","severity":"High","description":"GET /llms.txt returns 404 GitHub Pages. AI crawlers (GPTBot, Perplexity, Claude) lack allowlist.","recommendation":"Add public/llms.txt with site map + markdown and allow AI bots in robots.txt"}]},
+    {"name":"Images","score":65,"what_works":["Alt text keyword-rich, 0 missing alt","sitemap-images.xml with 7 entries","lazy loading present"],"findings":[{"title":"Only 1 WebP among 9 images","severity":"Medium","description":"sofa 172KB JPG, house 166KB JPG — no AVIF/WebP, no srcset.","recommendation":"Convert all to WebP+AVIF, add srcset/sizes, preload LCP."}]}
+  ],
+  "action_plan": {
+    "phases": [
+      {"name":"Phase 1: Critical Fixes","timeframe":"Week 1","items":["Deploy llms.txt + update robots.txt to allow GPTBot/ClaudeBot","Add BlogPosting schema to 20 blogs","Fix homepage title + page-specific OG images","Strip three.js from cleaning pages (code-split)"]},
+      {"name":"Phase 2: High-Impact Improvements","timeframe":"Weeks 2-3","items":["HSTS via Cloudflare + cache-control 1y for assets","WebP/AVIF + srcset + lazy above-fold audit","Consolidate or differentiate 1-5 BHK pages with unique photos/checklists","Embed Google Map + visible NAP + GBP review link in footer"]},
+      {"name":"Phase 3: Content & Authority","timeframe":"Month 2","items":["Add author bio pages (E-E-A-T) + publish dates","Build citations JustDial/IndiaMART/Sulekha with identical NAP","Internal link blog -> service with keyword-rich anchors (not View Details)","Create comparison page: Best Home Cleaning Services in Gurgaon"]},
+      {"name":"Phase 4: Monitoring & Iteration","timeframe":"Ongoing","items":["Submit updated sitemap in GSC + request indexing for 40 URLs","Weekly CrUX via PageSpeed Insights, track LCP/INP","Drift baseline via SEO drift skill before next deploy","Collect 10+ real Google reviews to justify aggregateRating 247"]}
+    ]
+  },
+  "artifacts": {"findings_dir":"findings/","screenshots_dir":"screenshots/"}
+}

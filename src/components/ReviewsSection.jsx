@@ -11,7 +11,7 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
             <div className="rating-summary">
               <span className="rs-stars">⭐⭐⭐⭐⭐</span>
               <span className="rs-num">4.9</span>
-              <span className="rs-count">/ 5 · 1,200+ Reviews</span>
+              <span className="rs-count">/ 5 · Verified Customer Reviews</span>
             </div>
           </div>
         </div>

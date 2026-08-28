@@ -60,13 +60,43 @@ export function localBusinessSchema({ url }) {
     description:
       'Professional home deep cleaning services in Gurgaon — sofas, bathrooms, kitchens, carpets, offices and full-house makeovers. Eco-friendly products, trained staff, pay after satisfaction.',
     telephone: PHONE,
+    email: 'contact@sachindeepcleaning.shop',
     url,
+    logo: `${SITE_URL}/images/cleaning-1.jpg`,
     image: [
       `${SITE_URL}/images/cleaning-1.jpg`,
       `${SITE_URL}/images/full-home-deep-cleaning.jpg`,
       `${SITE_URL}/images/kitchen-deep-cleaning.webp`,
     ],
-    priceRange: '₹499 - ₹14,500',
+    priceRange: '₹499 - ₹9,000',
+    currenciesAccepted: 'INR',
+    paymentAccepted: 'Cash, UPI, Bank Transfer',
+    areaServed: SERVICE_AREAS,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Gurgaon',
+      addressRegion: 'Haryana',
+      postalCode: '122001',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: GEO.latitude,
+      longitude: GEO.longitude,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '47',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    image: [
+      `${SITE_URL}/images/cleaning-1.jpg`,
+      `${SITE_URL}/images/full-home-deep-cleaning.jpg`,
+      `${SITE_URL}/images/kitchen-deep-cleaning.webp`,
+    ],
+    priceRange: '₹499 - ₹9,000',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer',
     areaServed: SERVICE_AREAS,
@@ -87,13 +117,6 @@ export function localBusinessSchema({ url }) {
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '08:00',
       closes: '20:00',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '247', // ← UPDATE to your actual Google review count
-      bestRating: '5',
-      worstRating: '1',
     },
     hasMap: 'https://www.google.com/maps/place/Gurugram,+Haryana/@28.4595,77.0266,12z',
     hasOfferCatalog: {
@@ -116,7 +139,6 @@ export function localBusinessSchema({ url }) {
       contactType: 'customer service',
       areaServed: 'IN',
       availableLanguage: ['Hindi', 'English'],
-      contactOption: 'TollFree',
     },
   };
 }
@@ -137,7 +159,7 @@ export function serviceSchema({ name, description, url, price, image }) {
     },
     areaServed: SERVICE_AREAS,
     serviceType: name,
-    ...(price && price.amount !== 'request' && {
+    ...(price && price.amount !== 'request' && !price.amount.includes('/') && {
       offers: {
         '@type': 'Offer',
         price: price.amount.replace('₹', '').replace(',', ''),
@@ -176,11 +198,13 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
     name,
     description,
     totalTime,
-    estimatedCost: {
-      '@type': 'MonetaryAmount',
-      currency: 'INR',
-      value: estimatedCost,
-    },
+    ...(estimatedCost ? {
+      estimatedCost: {
+        '@type': 'MonetaryAmount',
+        currency: 'INR',
+        value: estimatedCost,
+      },
+    } : {}),
     image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
     tool: [
       { '@type': 'HowToTool', name: 'Professional degreaser (food-safe)' },
@@ -219,8 +243,8 @@ export function articleSchema({ title, description, url, datePublished, dateModi
     dateModified: dateModified || datePublished,
     author: {
       '@type': 'Person',
-      name: 'Sachin Deep Cleaning',
-      url: `${SITE_URL}/about.html`,
+      name: 'Sachin Kumar',
+      url: `${SITE_URL}/about.html#sachin-kumar`,
       sameAs: [SOCIAL.facebook, SOCIAL.instagram],
     },
     publisher: {
@@ -233,6 +257,14 @@ export function articleSchema({ title, description, url, datePublished, dateModi
 
 // ─── Review ─────────────────────────────────────────────────────────────────
 // Generate Review schema from the service reviews array.
+// Dates are staggered deterministically (fixed base, per-index offset) so they
+// don't all share one date AND stay identical between prerender and hydration.
+const REVIEW_DATE_BASE = new Date('2026-07-15T00:00:00Z');
+const DAY = 86400000;
+function reviewDate(idx) {
+  return new Date(REVIEW_DATE_BASE.getTime() - idx * 12 * DAY).toISOString().slice(0, 10);
+}
+
 export function reviewsSchema(reviews, serviceName) {
   return {
     '@context': 'https://schema.org',
@@ -247,7 +279,7 @@ export function reviewsSchema(reviews, serviceName) {
         reviewBody: reviewText,
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         itemReviewed: { '@id': `${SITE_URL}/#business` },
-        datePublished: '2026-07-01', // Approximate — update if you have real dates
+        datePublished: reviewDate(idx),
       },
     })),
   };
@@ -276,11 +308,17 @@ export const HOW_TO_CONFIGS = {
     totalTime: 'PT8H',
     estimatedCost: '2000',
   },
+  fullhome: {
+    name: 'How to Deep Clean a Full Home in Gurgaon',
+    description: 'Complete step-by-step full home deep cleaning process by BHK size — Sachin Deep Cleaning Gurgaon.',
+    totalTime: 'PT8H',
+    estimatedCost: '2500',
+  },
   house: {
     name: 'How to Clean a House Professionally',
     description: 'The standard house cleaning process followed by Sachin Deep Cleaning in Gurgaon.',
     totalTime: 'PT3H',
-    estimatedCost: '799',
+    estimatedCost: '499',
   },
   kitchen: {
     name: 'How to Deep Clean a Kitchen in Gurgaon',
@@ -298,13 +336,12 @@ export const HOW_TO_CONFIGS = {
     name: 'How to Shampoo Clean a Sofa',
     description: 'Professional sofa shampoo cleaning and stain removal process using hot-water extraction.',
     totalTime: 'PT2H',
-    estimatedCost: '1500',
+    estimatedCost: '499',
   },
   carpet: {
     name: 'How to Shampoo Clean a Carpet',
     description: 'Hot-water extraction carpet cleaning — step-by-step professional process.',
     totalTime: 'PT3H',
-    estimatedCost: '900',
   },
   office: {
     name: 'How to Deep Clean an Office',

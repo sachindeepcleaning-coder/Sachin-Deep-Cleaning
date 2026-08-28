@@ -5,6 +5,10 @@ const ThemeContext = createContext({ theme: 'light', toggle: () => {} });
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     if (typeof document !== 'undefined') {
+      try {
+        return localStorage.getItem('theme') ||
+               document.documentElement.getAttribute('data-theme') || 'light';
+      } catch (e) {}
       return document.documentElement.getAttribute('data-theme') || 'light';
     }
     return 'light';

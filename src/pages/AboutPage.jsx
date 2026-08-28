@@ -23,9 +23,12 @@ const PRICING = [
   ['1 BHK full home deep clean', 'from ₹2,500'],
   ['2 BHK full home deep clean', 'from ₹4,500'],
   ['3 BHK full home deep clean', 'from ₹5,500'],
-  ['Kitchen deep clean', 'from ₹1,499'],
-  ['Bathroom deep clean', 'from ₹999'],
-  ['Sofa shampoo cleaning', 'from ₹150 per seat'],
+  ['4 BHK full home deep clean', 'from ₹6,500'],
+  ['5 BHK full home deep clean', 'from ₹9,000'],
+  ['Move-in / move-out cleaning', 'from ₹1,999'],
+  ['Kitchen deep clean', 'from ₹1,500'],
+  ['Bathroom deep clean', 'from ₹800'],
+  ['Sofa shampoo cleaning', 'from ₹499 per seat'],
 ];
 
 export default function AboutPage({ url }) {
@@ -44,7 +47,7 @@ export default function AboutPage({ url }) {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Sachin Deep Cleaning',
+    name: 'Sachin Kumar',
     jobTitle: 'Founder & Lead Cleaning Specialist',
     url: `${SITE_URL}/about.html#sachin-kumar`,
     image: `${SITE_URL}/images/cleaning-1.webp`,

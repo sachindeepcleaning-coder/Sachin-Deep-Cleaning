@@ -5,7 +5,7 @@ import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 export default function Nav() {
   return (
     <nav className="nav" id="mainNav">
-      <a href="/index.html" className="logo">
+      <a href="/" className="logo">
         <div className="logo-icon">🧹</div>
         <span className="logo-text">Sachin Deep Cleaning</span>
       </a>

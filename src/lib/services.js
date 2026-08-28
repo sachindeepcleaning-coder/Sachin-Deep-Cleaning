@@ -6,7 +6,7 @@ const base = {
     name: 'Deep Cleaning Services in Gurgaon',
     tagline: 'A top-to-bottom refresh for every corner of your home.',
     intro:
-      'Our deep cleaning service goes far beyond routine sweeping — we scrub, descale, sanitize and detail every surface so your home feels genuinely new.',
+      'Understand what makes a true deep clean different from regular cleaning in Gurgaon’s dusty, hard-water environment — and when it’s worth booking.',
     detail:
       'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive.\n\nOur trained team works top-to-bottom and room-by-room with professional machines and eco-friendly products. We shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.\n\nGurgaon’s hard water leaves calcium and magnesium deposits on taps, shower heads and tile grout that normal wiping cannot remove — our descaling treatment handles this properly. Construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road corridors embeds in sofa fibres, AC filters and chimney interiors even in well-sealed homes.\n\nPre-Diwali (Oct–Nov) and post-monsoon are the busiest periods — we recommend booking early for those slots. Our service also covers move-in / move-out empty-flat resets and post-construction removal of cement dust, paint drips and adhesive residue, all at the same verified-team, pay-after-satisfaction standard.',
     image: '/images/full-home-deep-cleaning.webp',
@@ -34,10 +34,12 @@ const base = {
       { q: 'Do you move furniture?', a: 'Light furniture is shifted to clean behind and under it. Heavy items like wardrobes can be moved on request, and we place everything back exactly as it was.' },
       { q: 'What is the difference between regular and deep cleaning?', a: 'Regular cleaning dusts and mops visible surfaces. Deep cleaning scrubs grout, descales taps, degreases kitchens, shampoos sofas and cleans areas that daily cleaning cannot reach.' },
       { q: 'Is deep cleaning safe for kids and pets?', a: 'Yes — we use non-toxic, eco-friendly, ISO-certified cleaning solutions that are safe for children, elderly and pets, with no harsh chemical residue.' },
-      { q: 'How much does deep cleaning cost in Gurgaon?', a: 'Deep cleaning in Gurgaon starts from ₹2,000 for a 1 RK or studio and goes up to ₹14,500 for a 5 BHK. The exact price depends on your home size, number of bathrooms and condition.' },
+      { q: 'How much does deep cleaning cost in Gurgaon?', a: 'Deep cleaning in Gurgaon starts from ₹2,000 for a 1 RK or studio and goes up to ₹9,000 for a 5 BHK. The exact price depends on your home size, number of bathrooms and condition.' },
       { q: 'What areas do you serve in Gurgaon?', a: 'We serve all sectors in Gurgaon — DLF Phase 1–5, Sohna Road, Golf Course Road, MG Road, Palam Vihar, Sushant Lok, South City, Golf Course Extension and all residential societies across Gurugram.' },
       { q: 'Do I need to be present during the deep cleaning?', a: 'You should be present at the start for a walkthrough and at the end for sign-off. Many customers step out during the clean itself — we are happy to work with access instructions and share a progress update.' },
       { q: 'What if I am not satisfied with the cleaning?', a: 'You only pay after you have walked through and approved the work. If any area is missed or unsatisfactory, we re-clean it on the spot before you pay.' },
+      { q: 'Gurgaon me deep cleaning kitne din me karwani chahiye?', a: 'Gurgaon ki dhool aur construction ki wajah se har 3–6 mahine me ek baar deep cleaning karwana behtar hai. Diwali se pehle ya baad me karwana sabse common hai.' },
+      { q: 'Deep cleaning me kya kya saaf hota hai?', a: 'Kitchen, bathroom, sofa, wardrobes, windows, grout, chimney aur high-touch surfaces tak saaf kiya jata hai — jo roz ke safai me nahi hota.' },
     ],
     reviews: [
       ['SR', 'Sunita Rao', 'DLF Phase 2', "Booked a full home deep clean before Diwali. The team scrubbed grout I'd given up on and the kitchen looked brand new. Worth every rupee."],
@@ -66,14 +68,15 @@ const base = {
     intro:
       'From quick refreshes to scheduled deep cleans, our house cleaning plans keep your Gurgaon home consistently spotless.',
     detail:
-      'Life in Gurgaon leaves little time for keeping up with dusting, mopping and tidying — and that is exactly what our house cleaning service is built for. We offer one-time cleans for a fresh start, plus weekly and bi-weekly plans so your home stays consistently clean without you lifting a finger.\n\nEach visit includes dusting, vacuuming, mopping, kitchen and bathroom upkeep, bin emptying and surface sanitation. Our plans are tailored to your home size — from compact studio apartments and 1 BHK flats in sectors like DLF Phase 1–5 and Sohna Road to large 4 BHK villas. Prices start at ₹499 per visit for a studio and scale by size. Every cleaner is police-verified, brings eco-friendly supplies, and you pay only after you walk through and approve the work.',
+      'Life in Gurgaon leaves little time for keeping up with dusting, mopping and tidying — and that is exactly what our house cleaning service is built for. With construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road constantly settling, homes need regular maintenance just to stay comfortable. We offer one-time cleans for a fresh start, plus weekly and bi-weekly plans so your home stays consistently clean without you lifting a finger.\n\nEach visit includes full dusting and vacuuming, mopping and floor care, kitchen and bathroom surface upkeep, bin emptying and liner change, and sanitization of high-touch surfaces. We work around your schedule in DLF Phase 1–5, Sushant Lok, South City, Palam Vihar, MG Road, Sector 45/46/57 and all Huda sectors. The checklist is tailored to your home size — from compact studio apartments and 1 BHK flats to 3–4 BHK villas.\n\nGurgaon’s hard water and cooking-heavy kitchens mean surface film builds up fast. Regular house cleaning prevents that buildup from becoming a deep-clean problem. Prices start at ₹499 per visit for a studio and scale by size. Every cleaner is police-verified, brings eco-friendly supplies, and you pay only after you walk through and approve the work. Weekly plans get the same trusted team each visit, so they learn your preferences and clean faster over time.',
     image: '/images/house-cleaning.webp',
     imageAlt: 'Residential house cleaning service in Gurgaon by police-verified team from Sachin Deep Cleaning',
     includes: ['Full dusting & vacuuming', 'Mopping & floor care', 'Kitchen & bathroom upkeep', 'Bin emptying & liner change', 'Surface wiping & sanitation', 'Bed-making & tidying (optional)', 'Weekly / bi-weekly / monthly plans', 'Eco-friendly products'],
     process: [
       { step: 1, title: 'Book a Slot', desc: 'Pick one-time or a recurring plan that suits your routine.' },
-      { step: 2, title: 'Clean', desc: 'Our team cleans thoroughly using your approved checklist.' },
-      { step: 3, title: 'Inspect & Relax', desc: 'Walk through the home, approve the work, then enjoy a fresh space.' },
+      { step: 2, title: 'Confirm Checklist', desc: 'We confirm rooms, add-ons and the exact price on the call.' },
+      { step: 3, title: 'Clean', desc: 'Our team cleans thoroughly using your approved checklist.' },
+      { step: 4, title: 'Inspect & Relax', desc: 'Walk through the home, approve the work, then enjoy a fresh space.' },
     ],
     faqs: [
       { q: 'How much does house cleaning cost in Gurgaon?', a: 'House cleaning starts at ₹499 per visit for a studio apartment. A 1 BHK is around ₹799, a 2 BHK ₹1,199 and a 3 BHK ₹1,699. Weekly plans work out cheaper per visit.' },
@@ -85,6 +88,8 @@ const base = {
       { q: 'How long does a house cleaning visit take?', a: 'A 1 BHK takes approximately 1.5–2 hours. A 2 BHK takes 2–3 hours. A 3 BHK takes 3–4 hours. The exact time depends on the current state of the home.' },
       { q: 'Is house cleaning different from deep cleaning?', a: 'Yes. House cleaning covers regular visible surfaces — sweeping, mopping, wiping and bathroom upkeep. Deep cleaning is a thorough one-time or quarterly service that reaches behind furniture, inside cabinets, grout lines and every surface including those cleaning routinely misses.' },
       { q: 'Can I get the same cleaner every time?', a: 'On weekly and bi-weekly plans, we assign the same team to your home so they know your preferences and you build familiarity. Occasional cancellations may require a substitute — we always inform you in advance.' },
+      { q: 'Gurgaon me house cleaning ka kharcha kya hai?', a: 'House cleaning ₹499 (studio) se shuru hoti hai. 1 BHK ₹799, 2 BHK ₹1,199, 3 BHK ₹1,699 per visit. Weekly plan me per-visit cost kam ho jati hai.' },
+      { q: 'Kya weekly house cleaning plan lena fayde-mand hai?', a: 'Haan — weekly plan me same team aati hai aur dust buildup kam rehta hai, jisse deep cleaning ki zarurat bhi kam padti hai. Cost per visit bhi kam hoti hai.' },
     ],
     reviews: [
       ['NV', 'Nisha Verma', 'Sector 56', 'Weekly house cleaning plan — the same two cleaners every time, and the flat is always spotless when I come home.'],
@@ -119,13 +124,15 @@ const base = {
       { q: 'Do you clean inside kitchen cabinets?', a: 'Yes — inside and outside of all cabinets and drawers are cleaned as part of the kitchen deep clean package. Expired items you want removed should be cleared before the team arrives.' },
       { q: 'Can you clean a modular kitchen?', a: 'Yes — we have experience with modular kitchens including tall units, pull-out drawers, basket inserts and built-in chimneys. We clean carefully without disturbing fittings or mechanisms.' },
       { q: 'Is kitchen deep cleaning the same as chimney servicing?', a: 'No. Kitchen deep cleaning includes a thorough chimney filter clean and body wipe-down, but does not include motor servicing or warranty-covered repair work. For motor or electrical issues, contact your chimney brand\'s service center.' },
+      { q: 'Gurgaon me kitchen deep cleaning kitne ka hai?', a: 'Standard kitchen deep cleaning ₹1,500–₹2,500 ke beech me hoti hai. Chimney filter cleaning isme shamil hai. WhatsApp par fixed quote milta hai.' },
+      { q: 'Chimney filter kitni baar saaf karna chahiye?', a: 'Roz cooking hone par har 1–2 mahine me filter saaf karna chahiye. Pura chimney deep clean har 6–12 mahine me karwaye.' },
     ],
     reviews: [
       ['PK', 'Pooja Khurana', 'Sohna Road', 'The chimney filter looked like new after they were done. My kitchen finally smells clean, not of old cooking oil.'],
       ['SM', 'Shalini Mehra', 'DLF Phase 4', 'They took apart the exhaust fan and hob and degreased everything. Grease I thought was permanent is completely gone.'],
       ['RJ', 'Ritika Jain', 'Sector 49', 'Very thorough — even the cabinet interiors and the top of the chimney were cleaned. Worth booking every quarter.'],
     ],
-    price: { label: 'Custom quote', amount: 'request' },
+    price: { label: 'Starting from', amount: '₹1,500' },
   },
   bathroom: {
     name: 'Bathroom Deep Cleaning in Gurgaon',
@@ -153,13 +160,15 @@ const base = {
       { q: 'Why do bathroom tiles get stained so fast in Gurgaon?', a: 'Gurgaon\'s water supply has a very high TDS (Total Dissolved Solids) level — often 800–1,200 mg/L. Every drop of water that evaporates leaves mineral deposits behind. This is why tiles, faucets and shower glass in Gurgaon show hard water stains faster than in most other Indian cities.' },
       { q: 'Do you clean the inside of the commode tank?', a: 'The standard bathroom deep clean covers the commode bowl, rim, base and seat. The inside of the water tank is available as an add-on — request it when booking.' },
       { q: 'How long after bathroom cleaning can I use it?', a: 'Usually 30–60 minutes after cleaning is complete. We use rinse-safe products and always do a final water rinse, so the bathroom is safe to use immediately once surfaces are dry.' },
+      { q: 'Gurgaon me ek bathroom deep cleaning ka kharcha kya hai?', a: 'Ek bathroom ki deep cleaning ₹800 se ₹1,200 tak hoti hai. Full home package me ye price shamil ho jati hai.' },
+      { q: 'Hard water ke daag kaise hatate hain?', a: 'Hum professional descaler use karte hain jo Gurgaon ke hard water ke lime scale ko tap, shower aur glass se hata deta hai.' },
     ],
     reviews: [
       ['AS', 'Anita Sharma', 'Sector 45', 'Hard water stains on our shower glass were driving me crazy. They came off completely. Bathroom looks brand new.'],
       ['DP', 'Deepak Puri', 'MG Road', 'Very impressed with the commode sanitization and tile scrubbing. Thorough and hygienic, no shortcuts.'],
       ['SG', 'Sneha Gupta', 'Golf Course Extension', 'They even cleaned the exhaust fan and ceiling corners. The bathroom smells fresh days later. Great service.'],
     ],
-    price: { label: 'Custom quote', amount: 'request' },
+    price: { label: 'Starting from', amount: '₹800' },
   },
   sofa: {
     name: 'Sofa Shampoo Cleaning in Gurgaon',
@@ -187,13 +196,15 @@ const base = {
       { q: 'Can you clean a leather sofa?', a: 'Yes — leather sofas are cleaned with a leather-safe conditioner cleaner, not shampoo or water. The process removes surface dirt, conditions the leather and helps prevent cracking. Please mention leather when booking.' },
       { q: 'Do you clean mattresses too?', a: 'Yes — mattress steam cleaning removes dust mites, allergens and bacteria. It is available as an add-on to sofa cleaning. Booking both together on the same visit is the most cost-effective option.' },
       { q: 'How often should I get my sofa professionally cleaned in Gurgaon?', a: 'Once a year for households without pets or children. Every 6 months for families with children or pets. Every 3–4 months for high-allergy households or homes with multiple pets.' },
+      { q: 'Gurgaon me sofa cleaning ka kharcha kya hai?', a: 'Sofa cleaning ₹499 per seat (dry) aur ₹599 per seat (shampoo extraction) se shuru hoti hai. 3-seater sofa ke liye ₹1,500–₹1,800 lagta hai.' },
+      { q: 'Sofa cleaning ke baad kitni der tak use nahi karna?', a: '4–6 ghante — hum low-moisture extraction use karte hain, isliye sofa usi shaam tak sukh jata hai aur ready ho jata hai.' },
     ],
     reviews: [
       ['VK', 'Vikas Khandelwal', 'Sushant Lok 1', 'Three-year-old sofas came back looking new. The water after extraction was black — clearly years of dust. Great value.'],
       ['MR', 'Meghna Rao', 'Sector 66', 'My cream fabric sofa had a stubborn coffee stain that other services said was permanent. They got most of it out. Impressed.'],
       ['NA', 'Nikhil Arora', 'Palam Vihar', 'Pet odor is gone completely. They were careful with the fabric and it dried the same evening.'],
     ],
-    price: { label: 'Custom quote', amount: 'request' },
+    price: { label: 'Starting from', amount: '₹499' },
   },
   carpet: {
     name: 'Carpet Shampoo Cleaning in Gurgaon',
@@ -221,13 +232,15 @@ const base = {
       { q: 'Can you clean Kashmiri or Persian carpets?', a: 'High-value handmade carpets like Kashmiri, Persian or silk rugs require specialist care. We assess the fibre and dye stability before cleaning. For very valuable rugs, we recommend professional rug washers who specialize in antique pieces.' },
       { q: 'How do you prevent colour bleeding during carpet cleaning?', a: 'We test for colour bleeding on a small hidden area before treating the full carpet. For carpets with vibrant or dark colours, we use a pH-neutral, colour-safe extraction solution.' },
       { q: 'How often should carpets be professionally cleaned in Gurgaon?', a: 'Every 6–12 months for regularly vacuumed carpets. Every 4–6 months for homes with pets or young children. After any significant soiling event (flood, spill, construction dust) — immediately.' },
+      { q: 'Gurgaon me carpet cleaning ka rate kya hai?', a: 'Carpet cleaning ₹15 per sq ft (dry) aur ₹18 per sq ft (shampoo extraction) se hoti hai. 10×12 ft carpet ke liye ₹1,800–₹2,160 lagta hai.' },
+      { q: 'Carpet cleaning ke baad kitna time drying me lagta hai?', a: '4–6 ghante — extraction se paani nikala jata hai, isliye zyada moisture nahi rehta. Achhi ventilation me theek se sukh jata hai.' },
     ],
     reviews: [
       ['KB', 'Kavita Bhatia', 'Sector 15', 'Our living room carpet was dull and musty. After the shampoo extraction it looks brighter and the room smells clean.'],
       ['SA', 'Sanjay Arora', 'DLF Phase 3', 'Fair per-sq-ft pricing and they measured honestly. Deep stains from the kids came out nicely.'],
       ['PR', 'Priyanka Reddy', 'Sohna Road', 'They cleaned our wall-to-wall carpet after renovation dust settled in. The amount of dirt extracted was shocking.'],
     ],
-    price: { label: 'Custom quote', amount: 'request' },
+    price: { label: 'Per square foot (shampoo extraction)', amount: '₹18' },
   },
   office: {
     name: 'Office Deep Cleaning in Gurgaon',
@@ -270,7 +283,7 @@ const base = {
       ['LS', 'Lata Srivastava', 'Startup Office, Udyog Vihar', 'NDA signed, team professional, and the pantry grease was finally gone. Booked them again for the quarterly clean.'],
       ['AC', 'Anuj Chawla', 'Clinic, Sector 44', 'For a medical setup hygiene is everything. Their sanitization of our waiting area and washrooms was thorough and documented.'],
     ],
-    price: { label: 'Quote on', amount: 'request' },
+    price: { label: 'Small office from', amount: '₹5,000' },
   },
   move: {
     name: 'Move-In / Move-Out Cleaning in Gurgaon',
@@ -296,6 +309,8 @@ const base = {
       { q: 'What does move-in cleaning include?', a: 'Move-in cleaning covers the full flat: kitchen (chimney, cabinets, hob, sink, tiles), all bathrooms (tile descaling, commode sanitization), all rooms (floor to ceiling dusting, mopping), balconies, windows and all fixtures. We leave the flat genuinely clean before your belongings arrive.' },
       { q: 'Can you clean a flat that has been vacant for a long time?', a: 'Yes — long-vacant flats with accumulated dust, pest evidence or water damage are assessed first. We advise on scope and provide a full quote. This may require more time and specialized treatment for certain areas.' },
       { q: 'Do you offer same-day move-in cleaning in Gurgaon?', a: 'Yes — same-day slots are available subject to team availability. For move-in cleaning where timing is tight, WhatsApp +91 9267905943 first thing in the morning for the best chance of a same-day slot.' },
+      { q: 'Gurgaon me move-in move-out cleaning ka kharcha kya hai?', a: 'Move-in/out cleaning ₹1,999 se shuru hoti hai. 2 BHK empty flat ke liye ₹4,000–₹5,500 lagta hai. Flat size ke hisaab se price fix ho jati hai.' },
+      { q: 'Move-out cleaning se security deposit wapas milega kya?', a: 'Haan — professional move-out clean se full deposit wapas milne ke chances badh jaate hain. Landlord kitchen, bathroom, floor aur walls check karte hain, jo hum thoroughly saaf karte hain.' },
     ],
     reviews: [
       ['RV', 'Rohan Vashist', 'Rented out 2 BHK, Sector 70', 'Got my full security deposit back thanks to their checklist-driven clean. Landlord even complimented the handover.'],
@@ -308,7 +323,7 @@ const base = {
     name: 'Full Home Deep Cleaning',
     tagline: 'Every room, floor to ceiling.',
     intro:
-      'A complete deep cleaning of your entire home — bedrooms, living areas, kitchen and bathrooms.',
+      'Book a complete deep cleaning of your entire home now with fixed prices for 1 BHK to 5 BHK in Gurgaon and same-day slots available.',
     detail:
       'A full home deep cleaning is the flagship service — every room, every corner, cleaned in one coordinated visit. Our team of 3–5 professional cleaners works through bedrooms, living areas, kitchen, bathrooms, balconies and hallways, so the whole home is restored at once.\n\nWe price by home size and setup. Non-furnished homes (1 RK from ₹2,000, 1 BHK from ₹2,500, 2 BHK from ₹4,500) are the fastest to clean. Furnished homes cost a little more because every piece of furniture, upholstery and wardrobe needs careful detailing. The team brings all machines, eco-friendly products and equipment — you do not lift a finger. On the confirmation call we lock the exact price for your BHK, so there are no surprises on the day.',
     image: '/images/full-home-deep-cleaning.webp',
@@ -326,12 +341,15 @@ const base = {
       { q: 'Do you move furniture?', a: 'Light furniture is shifted to clean under and behind it; heavy items on request.' },
       { q: 'What is the difference between furnished and non-furnished pricing?', a: 'Furnished homes include careful cleaning of every sofa, wardrobe, shelf and fixture, which takes more time — hence a slightly higher price than a non-furnished home of the same size.' },
       { q: 'Do I need to be home during the cleaning?', a: 'Not for the whole visit — many customers leave access instructions. We do a final walkthrough together when you return.' },
+      // Per-BHK Hindi FAQ is injected in getService() below — keeps the visible BHK consistent.
+      { q: 'Full home cleaning me payment kab karna hota hai?', a: 'Payment walkthrough ke baad, satisfaction ke saath hoti hai. Advance nahi liya jata.' },
     ],
     reviews: [
       ['PM', 'Priya Mehta', 'DLF Phase 3', 'Called them at 9 AM for same-day service. They arrived by 1 PM sharp and the house looked brand new. Kitchen deep clean was absolutely incredible.'],
       ['RG', 'Rohit Gupta', 'Sohna Road', 'Best value for money I have found in Gurgaon. Transparent pricing, no hidden charges, and the whole 2 BHK was done in one visit.'],
       ['VS', 'Vikram Sharma', 'MG Road', "We have tried 3 other cleaning services before. None come close. Bathroom tiles look like they did when we first moved in. Just brilliant."],
     ],
+    price: { label: 'Starting from', amount: '₹2,500' },
     priceByBhk: { 1: '₹2,500', 2: '₹4,500', 3: '₹5,500', 4: '₹6,500', 5: '₹9,000' },
     sqftByBhk: { 1: '400–600 sq ft', 2: '601–1,000 sq ft', 3: '1,001–1,500 sq ft', 4: '1,501–2,100 sq ft', 5: '2,500–3,000 sq ft' },
   },
@@ -345,8 +363,14 @@ export function getService(serviceKey, bhk) {
     out.price = { label: 'Starting from', amount: s.priceByBhk?.[bhk] || '₹2,500' };
     out.intro = `Complete deep cleaning of your ${bhk} BHK home — bedrooms, living areas, kitchen and bathrooms, done top to bottom.`;
     out.detail = `${bhk} BHK ${bhk >= 4 ? 'homes' : 'apartments'} across Gurgaon get the full deep-cleaning treatment from our team: every bedroom, the living area, kitchen, bathrooms, balconies and hallways. We price by size, so a ${bhk} BHK is a fixed, confirmed price with no surprises.\n\nOur ${bhk} BHK deep clean package covers floors and tiles, walls and ceilings, kitchen degreasing, bathroom descaling, furniture and wardrobe detailing, windows, and sanitization of high-touch surfaces. The team brings all equipment and eco-friendly products. Whether your home is furnished or non-furnished, we tailor the effort to the surfaces inside — and you pay only after you walk through and approve the result.\n\n${bhk === 1 ? 'Perfect for compact 400–600 sq ft apartments in DLF Phase 1 or Sohna Road — 1 bedroom + living + kitchen + 1 bath, done in 5–6 hours with 3 cleaners.' : bhk === 2 ? 'Ideal for 601–1,000 sq ft families in Sushant Lok or Golf Course Extension — 2 beds + 2 baths + balcony, 7–8 hours with 4 cleaners.' : bhk === 3 ? 'Most booked in Gurgaon: 1,001–1,500 sq ft across South City or Nirvana Country — 3 beds + 2–3 baths, 9–10 hours with 5 cleaners, sofa vacuum included.' : bhk === 4 ? 'Large 1,501–2,100 sq ft villas in DLF Phase 5 or Nirvana Country — 4 beds + 3–4 baths, full day with 5–6 cleaners, terrace included.' : 'Luxury 2,500–3,000 sq ft villas/penthouses in Emaar Emerald Hills or DLF Magnolias — 5 beds + 4+ baths, full day+ with 6 cleaners, premium detailing.'}`;
-    out.image = bhk === 1 ? '/images/full-home-deep-cleaning.webp' : bhk === 2 ? '/images/full-home-2bhk-deep-cleaning.webp' : bhk === 3 ? '/images/full-home-3bhk-deep-cleaning.webp' : bhk === 4 ? '/images/full-home-2bhk-deep-cleaning.webp' : '/images/full-home-3bhk-deep-cleaning.webp';
+    out.image = bhk === 1 ? '/images/full-home-deep-cleaning.webp' : bhk === 2 ? '/images/full-home-2bhk-deep-cleaning.webp' : bhk === 3 ? '/images/full-home-3bhk-deep-cleaning.webp' : bhk === 4 ? '/images/full-home-4bhk-deep-cleaning.webp' : '/images/full-home-5bhk-deep-cleaning.webp';
     out.imageAlt = `${bhk} BHK full home deep cleaning in Gurgaon — ${out.sqftByBhk?.[bhk] || ''} expert team`;
+    // Per-BHK Hindi FAQ so it matches the visible BHK (was hardcoded "1 BHK" on every page)
+    out.faqs = [
+      ...out.faqs,
+      { q: `Gurgaon me ${bhk} BHK full home deep cleaning ka rate kya hai?`, a: `${bhk} BHK full home deep cleaning Gurgaon me ${s.priceByBhk?.[bhk] || '₹4,500'} se shuru hoti hai, furnished ghar ke liye thoda zyada. Price call par lock ho jati hai.` },
+      { q: `${bhk} BHK ki deep cleaning me kitna time lagta hai?`, a: `${bhk} BHK deep cleaning me ${bhk === 1 ? '5–6' : bhk === 2 ? '7–8' : bhk === 3 ? '9–10' : '10–12'} ghante lagte hain ${bhk + 1 === 2 ? '' : `${bhk >= 3 ? bhk : 2} cleaners`} ke saath.` },
+    ];
     // Unique reviews per BHK to reduce 61% duplicate chrome
     const bhkReviews = {
       1: [['AK', 'Amit Kumar', 'Sector 46, 1 BHK', 'Compact 1 BHK done perfectly in 5 hours — kitchen and bathroom look new. Great for Sohna Road apartments.'], ['NS', 'Neha Singh', 'DLF Phase 1, 1 BHK', '1 BHK non-furnished was spotless, price locked at ₹2,500 as promised.'], ['SR', 'Sunil Rao', 'Palam Vihar, 1 BHK', 'Same-day 1 BHK clean, team shifted my single bed and cleaned behind it. Worth it.'] ],

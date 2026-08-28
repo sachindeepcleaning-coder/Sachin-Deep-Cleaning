@@ -94,10 +94,14 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
           <h1>{article.title}</h1>
           <img
             src={article.image}
+            srcSet={`${article.image.replace(/\.(jpg|webp)$/, '-400w.webp')} 400w, ${article.image.replace(/\.(jpg|webp)$/, '-800w.webp')} 800w, ${article.image.replace(/\.jpg$/, '.webp')} 1200w`}
+            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
             alt={article.imageAlt}
             width="1200"
             height="675"
             className="blog-hero-img"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </section>

@@ -34,6 +34,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           { name: s.name, url },
         ])}
       />
+      {serviceKey === 'deep' && (
       <JsonLd
         data={{
           '@context': 'https://schema.org',
@@ -47,6 +48,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           embedUrl: 'https://www.youtube.com/shorts/p-ArftUay5I',
         }}
       />
+      )}
 
       <section className="hero">
         <div className="hero-grid"></div>
@@ -59,7 +61,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             <h1>
               <span className="hl">{s.name}</span>
             </h1>
-            <p className="hero-sub">{s.intro} {s.price.amount !== 'request' && <strong>{s.price.amount} onwards.</strong>}</p>
+            <p className="hero-sub">{s.intro} {s.price?.amount && s.price.amount !== 'request' && <strong>{s.price.amount} onwards.</strong>}</p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Same-Day Service</span>
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
@@ -83,7 +85,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
               <p className="section-sub" style={{ margin: '0 auto' }}>8 specialised services, each with a confirmed upfront price — no surprises on the day.</p>
             </div>
             <div className="services-grid" style={{ marginTop: 32 }}>
-              <a className="service-card" href="/full-home-deep-cleaning-3bhk-gurgaon.html"><div className="sc-icon">🏠</div><div className="sc-name">Full Home Cleaning</div><div className="sc-desc">Every room top to bottom</div><div className="sc-price">From ₹2,000</div></a>
+              <a className="service-card" href="/full-home-deep-cleaning-3bhk-gurgaon.html"><div className="sc-icon">🏠</div><div className="sc-name">Full Home Cleaning</div><div className="sc-desc">Every room top to bottom</div><div className="sc-price">From ₹2,500</div></a>
               <a className="service-card" href="/office-deep-cleaning-gurgaon.html"><div className="sc-icon">🏢</div><div className="sc-name">Office &amp; Shop Cleaning</div><div className="sc-desc">Workstations & washrooms</div><div className="sc-price">On request</div></a>
               <a className="service-card" href="/kitchen-deep-cleaning-gurgaon.html"><div className="sc-icon">🍳</div><div className="sc-name">Kitchen Deep Cleaning</div><div className="sc-desc">Chimney & hob degreasing</div><div className="sc-price">On request</div></a>
               <a className="service-card" href="/bathroom-deep-cleaning-gurgaon.html"><div className="sc-icon">🚿</div><div className="sc-name">Bathroom Cleaning</div><div className="sc-desc">Descaling & sanitization</div><div className="sc-price">On request</div></a>
@@ -112,6 +114,8 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             <div style={{ flex: '1 1 300px', minWidth: 0 }}>
               <img
                 src={s.image}
+                srcSet={`${s.image.replace(/\.(jpg|webp)$/, '-400w.webp')} 400w, ${s.image.replace(/\.(jpg|webp)$/, '-800w.webp')} 800w, ${s.image.replace(/\.jpg$/, '.webp')} 1200w`}
+                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
                 alt={s.imageAlt}
                 loading="lazy"
                 width="600"
@@ -143,21 +147,40 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
         </div>
       </section>
 
-      <HowItWorks />
+      {s.process && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">How It Works</div>
+              <h2 className="section-title">{s.name} — Step by Step</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Here&apos;s exactly what our team does on the day.</p>
+            </div>
+            <div className="hiw-wrap">
+              {s.process.map((p) => (
+                <div key={p.step} className="hiw-step fade-up">
+                  <div className="hiw-num">{p.step}</div>
+                  <div className="hiw-title">{p.title}</div>
+                  <div className="hiw-desc">{p.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <WhyUsSection />
 
       {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
       {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
 
-      {/* Safaiwale-inspired sqft pricing + Before/After proof (fullhome & deep) */}
+      {/* Sqft pricing + BHK/sqft table — fixed prices before team arrives */}
       {(serviceKey === 'fullhome' || serviceKey === 'deep') && s.sqftByBhk && (
         <section className="section section-alt">
           <div className="section-inner">
             <div style={{ textAlign: 'center' }} className="fade-up">
               <div className="section-tag">Pricing by Area</div>
               <h2 className="section-title">Price by BHK & Sq Ft — No Guesswork</h2>
-              <p className="section-sub" style={{ margin: '0 auto' }}>Safaiwale shows Studio 400 sq ft → Villa 3000 sq ft. We match that transparency — every BHK’s sq ft range is fixed before the team arrives.</p>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Every BHK&apos;s sq ft range is fixed before the team arrives — no hidden charges, no surprises on the day.</p>
             </div>
             <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
@@ -192,7 +215,6 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
               <div className="fade-up"><BeforeAfter before="/images/sofa-shampoo-cleaning.jpg" after="/images/carpet-shampoo-cleaning.jpg" beforeLabel="Before — Dusty" afterLabel="After — Extracted" /></div>
               <div className="fade-up"><BeforeAfter before="/images/house-cleaning.jpg" after="/images/kitchen-deep-cleaning.webp" beforeLabel="Before — Greasy" afterLabel="After — Degreased" /></div>
             </div>
-            <p style={{ textAlign: 'center', marginTop: 16, fontSize: '.82rem', color: 'var(--muted)' }}>Images use your actual service photos from <code>public/images</code> — replace with your phone’s before/after when you have them. No Safaiwale stock.</p>
           </div>
         </section>
       )}
