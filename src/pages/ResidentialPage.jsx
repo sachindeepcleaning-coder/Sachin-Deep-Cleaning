@@ -34,7 +34,7 @@ const PILLS = [
 
 const STATS = [
   ['5,000', '+', 'Homes Cleaned'],
-  ['4.9', '★', 'Average Rating'],
+  ['4.5', '★', 'Average Rating'],
   ['30', '+', 'Sectors Covered'],
   ['₹2,000', '+', 'Starting Price'],
 ];
@@ -66,7 +66,7 @@ export default function ResidentialPage({ url }) {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-              Local Team · Gurgaon · 4.9★ Rated
+              Local Team · Gurugram · 4.5★ Rated
             </div>
             <h1>
               <span className="hl">Residential Cleaners Near Me?</span><br />

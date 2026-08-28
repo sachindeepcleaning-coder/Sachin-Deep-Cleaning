@@ -17,8 +17,8 @@ export function JsonLd({ data }) {
   );
 }
 
-// Gurgaon (Gurugram) coordinates.
-const GEO = { latitude: 28.4595, longitude: 77.0266 };
+// GBP-verified coordinates (A one deep cleaning — Google Maps place 0x390d1918a4b66c09:0xd7f8d0265ff60bef).
+const GEO = { latitude: 28.4612679, longitude: 77.0786716 };
 
 // Expanded list of Gurgaon service sectors — improves local pack matching.
 const SERVICE_AREAS = [
@@ -74,9 +74,10 @@ export function localBusinessSchema({ url }) {
     areaServed: SERVICE_AREAS,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Gurgaon',
+      streetAddress: 'Sushant Lok Rd, Block C, Sushant Lok Phase I, Kanahi',
+      addressLocality: 'Gurugram',
       addressRegion: 'Haryana',
-      postalCode: '122001',
+      postalCode: '122009',
       addressCountry: 'IN',
     },
     geo: {
@@ -86,8 +87,8 @@ export function localBusinessSchema({ url }) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '47',
+      ratingValue: '4.5',
+      reviewCount: '148',
       bestRating: '5',
       worstRating: '1',
     },
@@ -97,7 +98,7 @@ export function localBusinessSchema({ url }) {
       opens: '08:00',
       closes: '20:00',
     },
-    hasMap: 'https://www.google.com/maps/place/Gurugram,+Haryana/@28.4595,77.0266,12z',
+    hasMap: 'https://www.google.com/maps/place/A+one+deep+cleaning/@28.4612679,77.0786716,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1918a4b66c09:0xd7f8d0265ff60bef!8m2!3d28.4612679!4d77.0786716!16s%2Fg%2F11t6y63gvk',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Deep Cleaning Services',

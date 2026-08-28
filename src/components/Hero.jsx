@@ -10,7 +10,7 @@ const PILLS = [
 
 const STATS = [
   ['5,000', '+', 'Homes Cleaned'],
-  ['4.9', '★', 'Average Rating'],
+  ['4.5', '★', 'Average Rating'],
   ['98', '%', 'Happy Customers'],
   ['₹2,000', '+', 'Starting Price'],
 ];
@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-            Gurgaon's #1 Deep Cleaning Service · 4.9★ Rated
+            Gurgaon's Trusted Deep Cleaning Service · 4.5★ Rated by 148 Customers
           </div>
           <h1>
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>

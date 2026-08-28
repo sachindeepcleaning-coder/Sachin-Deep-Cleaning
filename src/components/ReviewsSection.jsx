@@ -10,8 +10,8 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
           <div style={{ marginTop: '14px' }}>
             <div className="rating-summary">
               <span className="rs-stars">⭐⭐⭐⭐⭐</span>
-              <span className="rs-num">4.9</span>
-              <span className="rs-count">/ 5 · Verified Customer Reviews</span>
+              <span className="rs-num">4.5</span>
+              <span className="rs-count">/ 5 · 148 Reviews</span>
             </div>
           </div>
         </div>

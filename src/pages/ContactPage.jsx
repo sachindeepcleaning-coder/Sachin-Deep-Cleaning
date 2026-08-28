@@ -92,8 +92,8 @@ export default function ContactPage({ url }) {
           </div>
           <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)', height: 360 }} className="fade-up">
             <iframe
-              title="Sachin Deep Cleaning — Gurgaon service area"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112173.022785!2d77.0266!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e96c9e92ab!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1753660000000"
+              title="Sachin Deep Cleaning — A one deep cleaning, Sushant Lok Phase I, Gurugram"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5!2d77.0786716!3d28.4612679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1918a4b66c09%3A0xd7f8d0265ff60bef!2sA%20one%20deep%20cleaning!5e0!3m2!1sen!2sin"
               width="100%"
               height="360"
               style={{ border: 0 }}
@@ -103,7 +103,7 @@ export default function ContactPage({ url }) {
             />
           </div>
           <div style={{ textAlign: 'center', marginTop: 16, fontSize: '.92rem', color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--dark)' }}>Sachin Deep Cleaning</strong> — Serving all areas of Gurgaon, Haryana &nbsp;|&nbsp; <a href="tel:+919267905943" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 92679-05943</a>
+            <strong style={{ color: 'var(--dark)' }}>Sachin Deep Cleaning</strong> — Sushant Lok Phase I, Gurugram, Haryana 122009 &nbsp;|&nbsp; <a href="tel:+919267905943" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 92679-05943</a>
           </div>
         </div>
       </section>
