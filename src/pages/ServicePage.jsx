@@ -1,6 +1,8 @@
 import QuoteForm from '../components/QuoteForm.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import PricingSection from '../components/PricingSection.jsx';
+import PricingTable from '../components/PricingTable.jsx';
+import WhyUsSection from '../components/WhyUsSection.jsx';
 import GuaranteeSection from '../components/GuaranteeSection.jsx';
 import ReviewsSection from '../components/ReviewsSection.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
@@ -57,6 +59,29 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
       <TrustBar />
 
+      {/* Competitor-inspired: 8-service grid on deep page — improves topical clustering & internal linking */}
+      {serviceKey === 'deep' && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Our services</div>
+              <h2 className="section-title">Deep Cleaning Sub-Services in Gurgaon</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>8 specialised services, each with a confirmed upfront price — no surprises on the day.</p>
+            </div>
+            <div className="services-grid" style={{ marginTop: 32 }}>
+              <a className="service-card" href="/full-home-deep-cleaning-3bhk-gurgaon.html"><div className="sc-icon">🏠</div><div className="sc-name">Full Home Cleaning</div><div className="sc-desc">Every room top to bottom</div><div className="sc-price">From ₹2,000</div></a>
+              <a className="service-card" href="/office-deep-cleaning-gurgaon.html"><div className="sc-icon">🏢</div><div className="sc-name">Office &amp; Shop Cleaning</div><div className="sc-desc">Workstations & washrooms</div><div className="sc-price">On request</div></a>
+              <a className="service-card" href="/kitchen-deep-cleaning-gurgaon.html"><div className="sc-icon">🍳</div><div className="sc-name">Kitchen Deep Cleaning</div><div className="sc-desc">Chimney & hob degreasing</div><div className="sc-price">On request</div></a>
+              <a className="service-card" href="/bathroom-deep-cleaning-gurgaon.html"><div className="sc-icon">🚿</div><div className="sc-name">Bathroom Cleaning</div><div className="sc-desc">Descaling & sanitization</div><div className="sc-price">On request</div></a>
+              <a className="service-card" href="/sofa-shampoo-cleaning-gurgaon.html"><div className="sc-icon">🛋️</div><div className="sc-name">Sofa Cleaning</div><div className="sc-desc">Shampoo & extraction</div><div className="sc-price">From ₹499/seat</div></a>
+              <a className="service-card" href="/carpet-shampoo-cleaning-gurgaon.html"><div className="sc-icon">🧶</div><div className="sc-name">Carpet Cleaning</div><div className="sc-desc">Hot-water extraction</div><div className="sc-price">From ₹15/sq ft</div></a>
+              <a className="service-card" href="/house-cleaning-services-in-gurgaon.html"><div className="sc-icon">✨</div><div className="sc-name">House Cleaning</div><div className="sc-desc">Regular upkeep plans</div><div className="sc-price">From ₹499</div></a>
+              <a className="service-card" href="/move-in-move-out-cleaning-gurgaon.html"><div className="sc-icon">📦</div><div className="sc-name">Move-In / Move-Out</div><div className="sc-desc">Empty-flat handover</div><div className="sc-price">From ₹1,999</div></a>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="section-inner">
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto' }} className="fade-up">
@@ -106,7 +131,10 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
       <HowItWorks />
 
-      {!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />}
+      <WhyUsSection />
+
+      {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
+      {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
 
       <ReviewsSection reviews={s.reviews} />
 

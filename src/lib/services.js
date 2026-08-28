@@ -8,7 +8,7 @@ const base = {
     intro:
       'Our deep cleaning service goes far beyond routine sweeping — we scrub, descale, sanitize and detail every surface so your home feels genuinely new.',
     detail:
-      'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive.\n\nOur trained team works top-to-bottom and room-by-room with professional machines and eco-friendly products. We shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.',
+      'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive.\n\nOur trained team works top-to-bottom and room-by-room with professional machines and eco-friendly products. We shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.\n\nGurgaon’s hard water leaves calcium and magnesium deposits on taps, shower heads and tile grout that normal wiping cannot remove — our descaling treatment handles this properly. Construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road corridors embeds in sofa fibres, AC filters and chimney interiors even in well-sealed homes.\n\nPre-Diwali (Oct–Nov) and post-monsoon are the busiest periods — we recommend booking early for those slots. Our service also covers move-in / move-out empty-flat resets and post-construction removal of cement dust, paint drips and adhesive residue, all at the same verified-team, pay-after-satisfaction standard.',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Deep cleaning services in Gurgaon — trained team scrubbing floors, tiles and furniture top to bottom',
     includes: [
@@ -45,6 +45,20 @@ const base = {
       ['MK', 'Meera Kapoor', 'Golf Course Road', 'Pay-after-cleaning gave me full confidence. The house smelled fresh and the team was respectful and on time. Highly recommend.'],
     ],
     price: { label: 'Starting from', amount: '₹2,000' },
+    pricingTable: [
+      { service: 'Full home deep cleaning — 1 BHK', price: 'From ₹2,500' },
+      { service: 'Full home deep cleaning — 2 BHK', price: 'From ₹4,500' },
+      { service: 'Full home deep cleaning — 3 BHK', price: 'From ₹5,500' },
+      { service: 'Full home deep cleaning — 4 BHK', price: 'From ₹6,500' },
+      { service: 'Full home deep cleaning — 5 BHK', price: 'From ₹9,000' },
+      { service: 'Kitchen deep cleaning', price: 'On request' },
+      { service: 'Bathroom deep cleaning', price: 'On request' },
+      { service: 'Sofa shampoo cleaning', price: 'From ₹499 / seat' },
+      { service: 'Carpet shampoo cleaning', price: 'From ₹15 / sq ft' },
+      { service: 'House cleaning (regular)', price: 'From ₹499 / visit' },
+      { service: 'Office deep cleaning', price: 'On request' },
+      { service: 'Move-in / move-out cleaning', price: 'From ₹1,999' },
+    ],
   },
   house: {
     name: 'House Cleaning Services in Gurgaon',

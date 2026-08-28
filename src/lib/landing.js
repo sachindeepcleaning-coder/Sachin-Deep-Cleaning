@@ -59,9 +59,10 @@ export const CHECKLIST = [
 ];
 
 export const HOW_IT_WORKS = [
-  ['1', 'Call or Fill the Form', "Share your name & number. Our team calls back in under 5 minutes to confirm your slot — no advance payment needed."],
-  ['2', 'We Arrive On Time', "Our trained, verified cleaners arrive with professional equipment & eco-friendly supplies — everything included."],
-  ['3', "Pay After You're Happy", "Inspect every corner. Pay only when you're 100% satisfied. Not happy? We'll re-clean for free."],
+  ['1', 'Choose your service', 'Pick from 8 deep cleaning services — full home, kitchen, bathroom, sofa, carpet and more.'],
+  ['2', 'Confirm your slot', 'Share your name, number and preferred date. Price is locked in before booking is confirmed.'],
+  ['3', 'Get a verified pro', 'Matched with a police-verified, skill-assessed professional near you.'],
+  ['4', "Pay after service", 'UPI, cards or wallets — pay only after the job is complete to your satisfaction.'],
 ];
 
 export const REVIEWS = [

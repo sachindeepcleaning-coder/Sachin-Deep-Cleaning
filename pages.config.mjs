@@ -154,4 +154,29 @@ export const pages = [
     title: 'Move-In / Move-Out Cleaning Checklist for Gurgaon Apartments',
     description: 'The complete move-in / move-out cleaning checklist for Gurgaon flats: kitchen, bathrooms, bedrooms and everything landlords inspect for the deposit.',
   },
+  {
+    file: 'blog/full-home-deep-cleaning-gurgaon-guide', page: 'article',
+    title: 'Full Home Deep Cleaning in Gurgaon — Cost & Checklist 2026',
+    description: 'Full home deep cleaning cost in Gurgaon from ₹2,500 (1BHK) to ₹9,000 (5BHK). Checklist, time & what’s included. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/house-cleaning-services-gurgaon-guide', page: 'article',
+    title: 'House Cleaning Services in Gurgaon — Price & Booking Guide',
+    description: 'House cleaning in Gurgaon from ₹499/visit. Weekly & one-time plans, what’s included & how to choose. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/deep-cleaning-near-me-gurgaon', page: 'article',
+    title: 'Deep Cleaning Near Me in Gurgaon — Sector-Wise Guide',
+    description: 'Find deep cleaning near you in Gurgaon — DLF, Sohna Road, Golf Course, Palam Vihar, all sectors. Same-day slots, fixed prices. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/kitchen-deep-cleaning-cost-gurgaon', page: 'article',
+    title: 'Kitchen Deep Cleaning Cost in Gurgaon — What’s Included',
+    description: 'Kitchen deep cleaning in Gurgaon — chimney, hob, cabinets & tiles. Price ₹1,500-₹2,500, what’s included & how often. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/office-deep-cleaning-gurgaon-guide', page: 'article',
+    title: 'Office Deep Cleaning in Gurgaon — Prices & Checklist 2026',
+    description: 'Office deep cleaning in Gurgaon from ₹3/sq ft. Workstations, pantry, washrooms & floors. Price list & booking guide. Updated Aug 2026.',
+  },
 ];
