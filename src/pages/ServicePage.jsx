@@ -26,11 +26,18 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
       <JsonLd data={faqSchema(s.faqs)} />
       <JsonLd data={reviewsSchema(s.reviews, s.name)} />
       {howTo && (
-        <JsonLd data={howToSchema({ ...howTo, steps: s.process, image: s.image })} />
+        <JsonLd data={howToSchema({ ...howTo, steps: s.process, image: s.image, serviceKey })} />
       )}
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
+          ...(serviceKey === 'fullhome' && bhk
+            ? [{ name: 'Full Home Deep Cleaning', url: pageUrl('full-home-deep-cleaning-1bhk-gurgaon') }]
+            : serviceKey === 'fullhome'
+              ? []
+              : serviceKey !== 'index'
+                ? [{ name: 'Services', url: pageUrl('deep-cleaning-services-in-gurgaon') }]
+                : []),
           { name: s.name, url },
         ])}
       />
@@ -86,11 +93,11 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             </div>
             <div className="services-grid" style={{ marginTop: 32 }}>
               <a className="service-card" href="/full-home-deep-cleaning-3bhk-gurgaon.html"><div className="sc-icon">🏠</div><div className="sc-name">Full Home Cleaning</div><div className="sc-desc">Every room top to bottom</div><div className="sc-price">From ₹2,500</div></a>
-              <a className="service-card" href="/office-deep-cleaning-gurgaon.html"><div className="sc-icon">🏢</div><div className="sc-name">Office &amp; Shop Cleaning</div><div className="sc-desc">Workstations & washrooms</div><div className="sc-price">On request</div></a>
-              <a className="service-card" href="/kitchen-deep-cleaning-gurgaon.html"><div className="sc-icon">🍳</div><div className="sc-name">Kitchen Deep Cleaning</div><div className="sc-desc">Chimney & hob degreasing</div><div className="sc-price">On request</div></a>
-              <a className="service-card" href="/bathroom-deep-cleaning-gurgaon.html"><div className="sc-icon">🚿</div><div className="sc-name">Bathroom Cleaning</div><div className="sc-desc">Descaling & sanitization</div><div className="sc-price">On request</div></a>
+              <a className="service-card" href="/office-deep-cleaning-gurgaon.html"><div className="sc-icon">🏢</div><div className="sc-name">Office &amp; Shop Cleaning</div><div className="sc-desc">Workstations & washrooms</div><div className="sc-price">From ₹5,000</div></a>
+              <a className="service-card" href="/kitchen-deep-cleaning-gurgaon.html"><div className="sc-icon">🍳</div><div className="sc-name">Kitchen Deep Cleaning</div><div className="sc-desc">Chimney & hob degreasing</div><div className="sc-price">From ₹1,500</div></a>
+              <a className="service-card" href="/bathroom-deep-cleaning-gurgaon.html"><div className="sc-icon">🚿</div><div className="sc-name">Bathroom Cleaning</div><div className="sc-desc">Descaling & sanitization</div><div className="sc-price">From ₹800</div></a>
               <a className="service-card" href="/sofa-shampoo-cleaning-gurgaon.html"><div className="sc-icon">🛋️</div><div className="sc-name">Sofa Cleaning</div><div className="sc-desc">Shampoo & extraction</div><div className="sc-price">From ₹499/seat</div></a>
-              <a className="service-card" href="/carpet-shampoo-cleaning-gurgaon.html"><div className="sc-icon">🧶</div><div className="sc-name">Carpet Cleaning</div><div className="sc-desc">Hot-water extraction</div><div className="sc-price">From ₹15/sq ft</div></a>
+              <a className="service-card" href="/carpet-shampoo-cleaning-gurgaon.html"><div className="sc-icon">🧶</div><div className="sc-name">Carpet Cleaning</div><div className="sc-desc">Hot-water extraction</div><div className="sc-price">From ₹18/sq ft</div></a>
               <a className="service-card" href="/house-cleaning-services-in-gurgaon.html"><div className="sc-icon">✨</div><div className="sc-name">House Cleaning</div><div className="sc-desc">Regular upkeep plans</div><div className="sc-price">From ₹499</div></a>
               <a className="service-card" href="/move-in-move-out-cleaning-gurgaon.html"><div className="sc-icon">📦</div><div className="sc-name">Move-In / Move-Out</div><div className="sc-desc">Empty-flat handover</div><div className="sc-price">From ₹1,999</div></a>
             </div>

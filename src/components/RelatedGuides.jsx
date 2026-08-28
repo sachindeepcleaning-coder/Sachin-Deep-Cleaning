@@ -1,21 +1,21 @@
 // Internal links from each service page to the most relevant blog guides.
 // Helps Google crawl the articles and builds topical authority (service → guide).
 const GUIDES = [
-  { serviceKey: 'deep', title: 'Deep Cleaning Cost in Gurgaon 2026', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
-  { serviceKey: 'deep', title: 'How Often Should You Deep Clean Your Home?', href: 'blog/how-often-deep-clean-home-india.html' },
-  { serviceKey: 'house', title: 'How Often Should You Deep Clean Your Home?', href: 'blog/how-often-deep-clean-home-india.html' },
-  { serviceKey: 'house', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: 'blog/kitchen-vs-regular-cleaning.html' },
-  { serviceKey: 'fullhome', title: 'Deep Cleaning Cost in Gurgaon 2026', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
-  { serviceKey: 'fullhome', title: 'Move-In / Move-Out Cleaning Checklist', href: 'blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
-  { serviceKey: 'kitchen', title: 'Kitchen Chimney Cleaning Guide', href: 'blog/kitchen-chimney-cleaning-guide.html' },
-  { serviceKey: 'kitchen', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: 'blog/kitchen-vs-regular-cleaning.html' },
-  { serviceKey: 'bathroom', title: 'How to Remove Hard Water Stains in Gurgaon Bathrooms', href: 'blog/hard-water-bathroom-stains-gurgaon.html' },
-  { serviceKey: 'sofa', title: 'Sofa Shampoo Cleaning in Gurgaon — Complete Guide', href: 'blog/sofa-cleaning-gurgaon-guide.html' },
-  { serviceKey: 'carpet', title: 'Carpet Cleaning in Gurgaon — Price & Method', href: 'blog/carpet-cleaning-gurgaon-guide.html' },
-  { serviceKey: 'office', title: 'Office Deep Cleaning in Gurgaon — Prices & Checklist', href: 'blog/office-deep-cleaning-gurgaon-guide.html' },
-  { serviceKey: 'office', title: 'Deep Cleaning Cost in Gurgaon 2026', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
-  { serviceKey: 'move', title: 'Move-In / Move-Out Cleaning Checklist', href: 'blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
-  { serviceKey: 'move', title: 'Deep Cleaning Cost in Gurgaon 2026', href: 'blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'deep', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'deep', title: 'How Often Should You Deep Clean Your Home?', href: '/blog/how-often-deep-clean-home-india.html' },
+  { serviceKey: 'house', title: 'How Often Should You Deep Clean Your Home?', href: '/blog/how-often-deep-clean-home-india.html' },
+  { serviceKey: 'house', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },
+  { serviceKey: 'fullhome', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'fullhome', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
+  { serviceKey: 'kitchen', title: 'Kitchen Chimney Cleaning Guide', href: '/blog/kitchen-chimney-cleaning-guide.html' },
+  { serviceKey: 'kitchen', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },
+  { serviceKey: 'bathroom', title: 'How to Remove Hard Water Stains in Gurgaon Bathrooms', href: '/blog/hard-water-bathroom-stains-gurgaon.html' },
+  { serviceKey: 'sofa', title: 'Sofa Shampoo Cleaning in Gurgaon — Complete Guide', href: '/blog/sofa-cleaning-gurgaon-guide.html' },
+  { serviceKey: 'carpet', title: 'Carpet Cleaning in Gurgaon — Price & Method', href: '/blog/carpet-cleaning-gurgaon-guide.html' },
+  { serviceKey: 'office', title: 'Office Deep Cleaning in Gurgaon — Prices & Checklist', href: '/blog/office-deep-cleaning-gurgaon-guide.html' },
+  { serviceKey: 'office', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'move', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
+  { serviceKey: 'move', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
 ];
 
 export default function RelatedGuides({ serviceKey }) {

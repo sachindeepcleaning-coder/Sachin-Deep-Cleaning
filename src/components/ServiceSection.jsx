@@ -7,7 +7,7 @@ const SERVICES = [
   { icon: '🍳', name: 'Kitchen Deep Cleaning', url: '/kitchen-deep-cleaning-gurgaon.html', price: 'From ₹1,500', desc: 'Chimney, exhaust, hob, cabinets and tiles — fully degreased and hygienic.' },
   { icon: '🚿', name: 'Bathroom Deep Cleaning', url: '/bathroom-deep-cleaning-gurgaon.html', price: 'From ₹800', desc: 'Hard-water stains, grout and mould removed; fully sanitized and polished.' },
   { icon: '🛋️', name: 'Sofa Shampoo Cleaning', url: '/sofa-shampoo-cleaning-gurgaon.html', price: 'From ₹499/seat', desc: 'Stain, dust-mite and odor removal — dry or shampoo extraction per seat.' },
-  { icon: '🧼', name: 'Carpet Shampoo Cleaning', url: '/carpet-shampoo-cleaning-gurgaon.html', price: 'From ₹15/sq ft', desc: 'Deep extraction for carpets and rugs.' },
+  { icon: '🧼', name: 'Carpet Shampoo Cleaning', url: '/carpet-shampoo-cleaning-gurgaon.html', price: 'From ₹18/sq ft', desc: 'Deep extraction for carpets and rugs.' },
   { icon: '🏢', name: 'Office Deep Cleaning', url: '/office-deep-cleaning-gurgaon.html', price: 'From ₹5,000', desc: 'Workstations, pantries, washrooms and carpets — cleaned after hours.' },
   { icon: '📦', name: 'Move-In / Move-Out Cleaning', url: '/move-in-move-out-cleaning-gurgaon.html', price: 'From ₹1,999', desc: 'Spotless handovers and move-in ready homes — checklist sign-off included.' },
 ];

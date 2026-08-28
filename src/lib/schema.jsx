@@ -91,27 +91,6 @@ export function localBusinessSchema({ url }) {
       bestRating: '5',
       worstRating: '1',
     },
-    image: [
-      `${SITE_URL}/images/cleaning-1.jpg`,
-      `${SITE_URL}/images/full-home-deep-cleaning.jpg`,
-      `${SITE_URL}/images/kitchen-deep-cleaning.webp`,
-    ],
-    priceRange: '₹499 - ₹9,000',
-    currenciesAccepted: 'INR',
-    paymentAccepted: 'Cash, UPI, Bank Transfer',
-    areaServed: SERVICE_AREAS,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Gurgaon',
-      addressRegion: 'Haryana',
-      postalCode: '122001',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: GEO.latitude,
-      longitude: GEO.longitude,
-    },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -191,7 +170,19 @@ export function faqSchema(items) {
 // ─── HowTo ──────────────────────────────────────────────────────────────────
 // Use on: kitchen, bathroom, sofa, carpet, deep-cleaning service pages.
 // Each step maps directly to the service's `process` array.
-export function howToSchema({ name, description, steps, totalTime, estimatedCost, image }) {
+const HOW_TO_TOOLS = {
+  deep: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole &amp; duster', 'HEPA vacuum cleaner'],
+  fullhome: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole &amp; duster', 'HEPA vacuum cleaner'],
+  kitchen: ['Food-safe degreaser', 'Steam extraction machine', 'Microfiber cloths', 'Chimney dismantle tools'],
+  bathroom: ['Professional descaling solution', 'Grout brush', 'Microfiber cloths', 'Mould remover'],
+  sofa: ['Fabric-safe shampoo', 'Hot-water extraction machine', 'Stain pre-treatment spray', 'Low-moisture dryer'],
+  carpet: ['Fibre-safe shampoo', 'Hot-water extraction machine', 'Stain pre-treatment spray', 'Air movers for drying'],
+  house: ['Microfiber cloths', 'HEPA vacuum cleaner', 'Multi-surface mop', 'Eco-friendly spray bottles'],
+  office: ['Commercial vacuum', 'Glass cleaning kit', 'Disinfectant spray', 'Floor scrubber'],
+  move: ['Heavy-duty degreaser', 'Wall spot-cleaning kit', 'Floor scrubbing machine', 'Window cleaning kit'],
+};
+export function howToSchema({ name, description, steps, totalTime, estimatedCost, image, serviceKey }) {
+  const tools = (HOW_TO_TOOLS[serviceKey] || HOW_TO_TOOLS.deep).map((t) => ({ '@type': 'HowToTool', name: t }));
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -206,12 +197,7 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
       },
     } : {}),
     image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
-    tool: [
-      { '@type': 'HowToTool', name: 'Professional degreaser (food-safe)' },
-      { '@type': 'HowToTool', name: 'Steam extraction machine' },
-      { '@type': 'HowToTool', name: 'Microfiber cloths' },
-      { '@type': 'HowToTool', name: 'Descaling solution' },
-    ],
+    tool: tools,
     step: steps.map((s, idx) => ({
       '@type': 'HowToStep',
       position: idx + 1,
