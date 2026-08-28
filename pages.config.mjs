@@ -16,7 +16,7 @@ export const OG_IMAGE = 'https://sachindeepcleaning.shop/images/cleaning-1.jpg';
 export const pages = [
   {
     file: 'index', page: 'index',
-    title: 'Sachin Deep Cleaning — Home Cleaning Services in Gurgaon',
+    title: 'Deep Cleaning Services in Gurgaon | Sachin Deep Cleaning',
     description: 'Trusted deep cleaning in Gurgaon since 2024. Full-home, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9267905943.',
   },
   {

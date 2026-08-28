@@ -46,7 +46,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    rollupOptions: { input },
+    rollupOptions: {
+      input,
+      output: {
+        manualChunks(id) {
+          if (id.includes('three') || id.includes('@react-three')) return 'three';
+        },
+      },
+    },
     target: 'es2018',
   },
 });

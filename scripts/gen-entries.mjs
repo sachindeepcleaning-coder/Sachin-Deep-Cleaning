@@ -18,6 +18,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL, SITE_NAME, OG_IMAGE } from '../pages.config.mjs';
 import { GTM_ID, NETLIFY_FORM_NAME } from '../src/lib/site.js';
+import { ARTICLES } from '../src/lib/blog.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -58,6 +59,14 @@ for (const p of pages) {
   const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
     ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" />\n`
     : '';
+  // Page-specific OG image (audit: was identical sitewide)
+  let ogImage = OG_IMAGE;
+  if (p.page === 'service' && HERO_IMAGES[p.serviceKey]) {
+    ogImage = SITE_URL + HERO_IMAGES[p.serviceKey];
+  } else if (p.page === 'article') {
+    const art = ARTICLES.find((a) => a.file === p.file);
+    if (art && art.image) ogImage = SITE_URL + art.image;
+  }
 
   const html = `<!DOCTYPE html>
 <html lang="en-IN" data-theme="light" ${dataAttrs}>
@@ -79,14 +88,14 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta property="og:title" content="${p.title}" />
   <meta property="og:description" content="${p.description}" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:image" content="${OG_IMAGE}" />
+  <meta property="og:image" content="${ogImage}" />
   <meta property="og:image:alt" content="Sachin Deep Cleaning — professional deep cleaning services in Gurgaon" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${p.title}" />
   <meta name="twitter:description" content="${p.description}" />
-  <meta name="twitter:image" content="${OG_IMAGE}" />
+  <meta name="twitter:image" content="${ogImage}" />
 ${preload}  ${gtm}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

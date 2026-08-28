@@ -200,21 +200,27 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
 }
 
 // ─── Article ────────────────────────────────────────────────────────────────
-// Use on: blog articles.
+// Use on: blog articles — BlogPosting with Person (E-E-A-T, audit 70→90)
 export function articleSchema({ title, description, url, datePublished, dateModified, image }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: title,
     description,
     url,
-    image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
+    image: {
+      '@type': 'ImageObject',
+      url: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
+      width: 1200,
+      height: 675,
+    },
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
-      '@type': 'Organization',
-      name: 'Sachin Deep Cleaning',
-      url: SITE_URL,
+      '@type': 'Person',
+      name: 'Sachin Kumar',
+      url: `${SITE_URL}/about.html`,
+      sameAs: [SOCIAL.facebook, SOCIAL.instagram],
     },
     publisher: {
       '@id': `${SITE_URL}/#business`,
