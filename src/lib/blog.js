@@ -18,7 +18,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Deep cleaning services in Gurgaon — price guide for every BHK',
-    cta: { title: 'Get a fixed deep cleaning quote for your home', href: 'deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
+    cta: { title: 'Get a fixed deep cleaning quote for your home', href: '/deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
     lead: 'Deep cleaning in Gurgaon costs ₹2,000–₹14,500 for a full home, depending on home size. Individual services like bathroom cleaning start at ₹800 and sofa cleaning from ₹499 per seat.',
     faqs: [
       { q: 'How much does deep cleaning cost for a 2 BHK in Gurgaon?', a: 'A 2 BHK full home deep cleaning in Gurgaon costs approximately ₹5,000–₹7,500 with Sachin Deep Cleaning, depending on the number of bathrooms and overall condition.' },
@@ -119,7 +119,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/house-cleaning.jpg',
     imageAlt: 'How often to deep clean your home — schedule guide for Indian homes',
-    cta: { title: 'Book a full home deep cleaning', href: 'full-home-deep-cleaning-1bhk-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
+    cta: { title: 'Book a full home deep cleaning', href: '/full-home-deep-cleaning-1bhk-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
     lead: 'Most Indian homes need a thorough deep clean every 3–6 months. Gurgaon homes, due to high construction dust and hard water, are best served by deep cleaning every 3–4 months, with specific areas like kitchens and bathrooms needing attention more frequently.',
     faqs: [
       { q: 'Is deep cleaning once a year enough for Indian homes?', a: 'For most Indian homes, once a year is the minimum, but it\'s rarely sufficient. Gurgaon\'s dust levels, hard water and cooking habits make 2–3 times per year more realistic for maintaining a genuinely clean home.' },
@@ -213,7 +213,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/kitchen-deep-cleaning.webp',
     imageAlt: 'Kitchen chimney cleaning guide — filter degreasing DIY vs professional',
-    cta: { title: 'Let professionals degrease your kitchen', href: 'kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Let professionals degrease your kitchen', href: '/kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
     lead: 'A kitchen chimney filter should be cleaned every 1–3 months, depending on your cooking frequency. The full chimney unit — including internal parts, grease cup and motor housing — needs a professional deep clean every 6–12 months.',
     faqs: [
       { q: 'How often should I clean my kitchen chimney filter in India?', a: 'For daily home cooking in India, clean the filter every 1–2 months. The full unit (body and motor housing) should be professionally deep cleaned every 6–12 months.' },
@@ -305,7 +305,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/bathroom-deep-cleaning.jpg',
     imageAlt: 'Remove hard water stains from bathroom tiles and taps in Gurgaon',
-    cta: { title: 'Get bathrooms descaled by experts', href: 'bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Get bathrooms descaled by experts', href: '/bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning in Gurgaon →' },
     lead: 'Gurgaon\'s water has a TDS (Total Dissolved Solids) level of 500–1000+ mg/L in many areas — well above the WHO safe limit of 300 mg/L. This means limescale and hard-water stains build up on bathroom surfaces 3–4 times faster than in softer-water cities.',
     faqs: [
       { q: 'Why does Gurgaon have such hard water?', a: 'Gurgaon\'s water supply is drawn from deep borewells and the Yamuna river system. The region\'s underlying geology is calcium and magnesium-rich, and the high TDS in Gurgaon\'s groundwater (often 800–1,200 mg/L) is among the highest in any Indian metro. This is why hard water stains appear faster in Gurgaon than in cities like Bangalore or Hyderabad.' },
@@ -384,7 +384,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/sofa-shampoo-cleaning.jpg',
     imageAlt: 'Sofa shampoo cleaning in Gurgaon — complete price and method guide',
-    cta: { title: 'Refresh your sofa with professional shampooing', href: 'sofa-shampoo-cleaning-gurgaon.html', label: 'Sofa Shampoo Cleaning in Gurgaon →' },
+    cta: { title: 'Refresh your sofa with professional shampooing', href: '/sofa-shampoo-cleaning-gurgaon.html', label: 'Sofa Shampoo Cleaning in Gurgaon →' },
     lead: 'Sofa cleaning in Gurgaon costs ₹499–₹599 per seat. A standard 3-seater runs ₹1,500–₹1,800. Hot-water extraction (shampoo method) is recommended over dry cleaning for embedded stains, allergens or odors.',
     faqs: [
       { q: 'How much does sofa cleaning cost in Gurgaon in 2026?', a: 'Sofa cleaning in Gurgaon costs ₹499 per seat for dry cleaning and ₹599 per seat for shampoo extraction. A standard 3-seater sofa costs ₹1,497–₹1,797 at Sachin Deep Cleaning.' },
@@ -485,7 +485,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/kitchen-deep-cleaning.webp',
     imageAlt: 'Kitchen deep cleaning vs regular cleaning comparison for Gurgaon homes',
-    cta: { title: 'Give your kitchen the deep clean it needs', href: 'kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Give your kitchen the deep clean it needs', href: '/kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
     lead: 'Many homeowners in Gurgaon think their daily or weekly kitchen cleaning is enough. It is not. Here is the clear difference between regular kitchen cleaning and professional kitchen deep cleaning.',
     faqs: [],
     blocks: [
@@ -542,7 +542,7 @@ export const ARTICLES = [
     dateModified: '2026-08-11',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Move-in move-out cleaning checklist for Gurgaon apartments',
-    cta: { title: 'Hand over (or move into) a spotless flat', href: 'move-in-move-out-cleaning-gurgaon.html', label: 'Move-In / Move-Out Cleaning in Gurgaon →' },
+    cta: { title: 'Hand over (or move into) a spotless flat', href: '/move-in-move-out-cleaning-gurgaon.html', label: 'Move-In / Move-Out Cleaning in Gurgaon →' },
     lead: 'Whether you are handing over keys to a landlord or moving into a new flat in Gurgaon, a proper deep clean is essential. Here is the complete move-in / move-out cleaning checklist used by Sachin Deep Cleaning.',
     faqs: [],
     blocks: [
@@ -622,7 +622,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Full home deep cleaning in Gurgaon — BHK-wise price and checklist',
-    cta: { title: 'Book your full home deep clean', href: 'full-home-deep-cleaning-3bhk-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
+    cta: { title: 'Book your full home deep clean', href: '/full-home-deep-cleaning-3bhk-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
     lead: 'Full home deep cleaning in Gurgaon costs **₹2,500 for a 1 BHK**, **₹4,500 for 2 BHK**, **₹5,500 for 3 BHK**, **₹6,500 for 4 BHK** and **₹9,000 for 5 BHK**. Every room — bedrooms, living area, kitchen, bathrooms, balconies — is cleaned top-to-bottom by a 3–5 person team. Price is fixed on the confirmation call.',
     faqs: [
       { q: 'How much does full home deep cleaning cost in Gurgaon?', a: 'From ₹2,500 for 1 BHK (non-furnished) to ₹9,000 for 5 BHK. 2 BHK from ₹4,500, 3 BHK from ₹5,500. Furnished homes cost slightly more due to furniture detailing. Call +91 9267905943 for an exact quote.' },
@@ -683,7 +683,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/house-cleaning.jpg',
     imageAlt: 'House cleaning services in Gurgaon — regular and deep plans',
-    cta: { title: 'Book house cleaning on your schedule', href: 'house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
+    cta: { title: 'Book house cleaning on your schedule', href: '/house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
     lead: 'House cleaning in Gurgaon costs **from ₹499 per visit** for a 1 RK studio, **₹799 for 1 BHK**, **₹1,199 for 2 BHK** and **₹1,699 for 3 BHK**. Choose one-time, weekly, bi-weekly or monthly plans — same police-verified team, eco-friendly products, pay after walkthrough.',
     faqs: [
       { q: 'How much does house cleaning cost in Gurgaon?', a: 'From ₹499 (studio), ₹799 (1 BHK), ₹1,199 (2 BHK), ₹1,699 (3 BHK) per visit at Sachin Deep Cleaning. Weekly plans lower the per-visit cost.' },
@@ -751,7 +751,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/cleaning-1.jpg',
     imageAlt: 'Deep cleaning services near me in Gurgaon — all sectors covered',
-    cta: { title: 'Find your sector and book now', href: 'residential-cleaners-near-me.html', label: 'Residential Cleaners Near Me →' },
+    cta: { title: 'Find your sector and book now', href: '/residential-cleaners-near-me.html', label: 'Residential Cleaners Near Me →' },
     lead: 'Searching **deep cleaning near me** or **cleaning services near me** in Gurgaon? Sachin Deep Cleaning serves **all sectors** — DLF Phase 1–5, Sohna Road, Golf Course Road & Extension, MG Road, Cyber City, Palam Vihar, Sushant Lok, South City and Huda sectors — with **same-day slots** and **pay-after-satisfaction**.',
     faqs: [
       { q: 'Do you serve my sector in Gurgaon?', a: 'We serve all of Gurgaon — DLF 1–5, Sohna Road, Golf Course Road/Extension, MG Road, Cyber City, Udyog Vihar, Palam Vihar, Sector 14–57, South City, Sushant Lok, Vatika, Manesar and all societies. Call +91 9267905943 to confirm your sector.' },
@@ -813,7 +813,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/kitchen-deep-cleaning.webp',
     imageAlt: 'Kitchen deep cleaning cost in Gurgaon — chimney and cabinet detail',
-    cta: { title: 'Degrease your kitchen professionally', href: 'kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Degrease your kitchen professionally', href: '/kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning in Gurgaon →' },
     lead: 'Kitchen deep cleaning in Gurgaon costs **₹1,500–₹2,500** for a standard modular kitchen, including **chimney filter degreasing, hob/burner scrub, cabinet interiors & exteriors, sink descaling and tile grout scrub**. Time: 3–4 hours with 1–2 cleaners.',
     faqs: [
       { q: 'How much does kitchen deep cleaning cost in Gurgaon?', a: '₹1,500–₹2,500 for a standard kitchen at Sachin Deep Cleaning. Larger modular kitchens or heavy grease may add ₹300–₹500. Chimney degreasing is included. Call +91 9267905943 for a fixed quote.' },
@@ -875,7 +875,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/office-deep-cleaning.jpg',
     imageAlt: 'Office deep cleaning in Gurgaon — workstations and pantry detail',
-    cta: { title: 'Book office deep cleaning after hours', href: 'office-deep-cleaning-gurgaon.html', label: 'Office Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Book office deep cleaning after hours', href: '/office-deep-cleaning-gurgaon.html', label: 'Office Deep Cleaning in Gurgaon →' },
     lead: 'Office deep cleaning in Gurgaon costs **₹3–₹11 per sq ft** (tiles) and **₹8–₹25 per sq ft** for marble polishing. A small office under 1,000 sq ft typically runs **₹5,000–₹8,000**. We work **after hours / weekends** so your team never vacates mid-day.',
     faqs: [
       { q: 'How much does office deep cleaning cost in Gurgaon?', a: '₹3–₹11/sq ft for tile floors and general deep clean, ₹8–₹25/sq ft for marble polishing. A small office under 1,000 sq ft: ₹5,000–₹8,000. Larger spaces assessed on-site for a fixed quote. Call +91 9267905943.' },
@@ -943,7 +943,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/bathroom-deep-cleaning.jpg',
     imageAlt: 'Bathroom deep cleaning in Gurgaon — descaling and sanitization process',
-    cta: { title: 'Get bathrooms descaled by experts', href: 'bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning in Gurgaon →' },
+    cta: { title: 'Get bathrooms descaled by experts', href: '/bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning in Gurgaon →' },
     lead: 'Bathroom deep cleaning in Gurgaon costs **₹800–₹1,200 per bathroom**. Gurgaon’s hard water (TDS 800–1,200 mg/L) leaves limescale on taps, tiles and shower glass in weeks. Our process removes it, scrubs grout, sanitizes the commode and polishes glass — 1.5–2 hours per bathroom.',
     faqs: [
       { q: 'How much does bathroom deep cleaning cost in Gurgaon?', a: '₹800–₹1,200 per bathroom at Sachin Deep Cleaning. Two bathrooms ₹1,400–₹2,000. As an add-on to a full-home deep clean, it is included in the BHK price. Call +91 9267905943 for a fixed quote.' },
@@ -1004,7 +1004,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/carpet-shampoo-cleaning.jpg',
     imageAlt: 'Carpet cleaning in Gurgaon — hot-water extraction method',
-    cta: { title: 'Refresh your carpets today', href: 'carpet-shampoo-cleaning-gurgaon.html', label: 'Carpet Cleaning in Gurgaon →' },
+    cta: { title: 'Refresh your carpets today', href: '/carpet-shampoo-cleaning-gurgaon.html', label: 'Carpet Cleaning in Gurgaon →' },
     lead: 'Carpet cleaning in Gurgaon costs **₹15/sq ft (dry clean)** and **₹18/sq ft (shampoo hot-water extraction)**. A 12×10 ft carpet (~120 sq ft) runs **₹1,800–₹2,160**. Method depends on fibre — wool, nylon or polyester — and drying takes 4–6 hours.',
     faqs: [
       { q: 'How much does carpet cleaning cost in Gurgaon per sq ft?', a: '₹15/sq ft dry clean, ₹18/sq ft shampoo extraction at Sachin Deep Cleaning. Example: 100 sq ft = ₹1,500–₹1,800. Call +91 9267905943 for exact measurement.' },
@@ -1063,7 +1063,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Best deep cleaning services in Gurgaon — selection checklist',
-    cta: { title: 'Book the best — verified in Gurgaon', href: 'deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
+    cta: { title: 'Book the best — verified in Gurgaon', href: '/deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
     lead: 'The **best deep cleaning services in Gurgaon** share four traits: **police-verified staff, fixed price before start, pay-after-satisfaction, and local presence**. Here’s a 10-point checklist to avoid ₹1,500 “too cheap” and ₹15,000 “brand markup” traps — plus what **best** actually costs in 2026.',
     faqs: [
       { q: 'What should the best deep cleaning service in Gurgaon include?', a: 'Floors, walls, furniture detailing, kitchen chimney degreasing, bathroom descaling, windows, and touch-point sanitization — all with clear pricing. If a quote omits half of this, it will not be “deep.”' },
@@ -1124,7 +1124,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/house-cleaning.jpg',
     imageAlt: 'Housekeeping vs deep cleaning in Gurgaon — scope comparison',
-    cta: { title: 'Choose the right service for your home', href: 'house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
+    cta: { title: 'Choose the right service for your home', href: '/house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
     lead: 'In Gurgaon, **housekeeping** usually means **daily maid / manpower supply** (sweeping, mopping, dishes). **Deep cleaning** is a **quarterly intensive reset** with machines, descaling and sanitization. Many families typing **housekeeping services in Gurgaon** actually need **house cleaning or deep cleaning** — here’s how to choose without overpaying.',
     faqs: [
       { q: 'Are housekeeping services and house cleaning the same in Gurgaon?', a: 'No. Housekeeping in Gurgaon often means monthly maid placement (full-time or daily visits) from staffing agencies. House cleaning / deep cleaning from Sachin Deep Cleaning means professional cleaners come with machines for a scheduled session — no monthly maid contract.' },
@@ -1180,7 +1180,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/house-cleaning.jpg',
     imageAlt: 'Balcony and terrace cleaning in Gurgaon — floor and facade wash',
-    cta: { title: 'Get your balcony and terrace restored', href: 'house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
+    cta: { title: 'Get your balcony and terrace restored', href: '/house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
     lead: 'Balcony and terrace cleaning in Gurgaon costs **₹800–₹2,500** per balcony/terrace (floor scrub, railing wipe, drain unclog, wall spot-clean). Part of house or full-home cleaning, or standalone. Facade glass cleaning **₹3–₹8/sq ft**. Time: **1–2 hours** per space.',
     faqs: [
       { q: 'How much does balcony cleaning cost in Gurgaon?', a: '₹800–₹1,200 per standard balcony (floor scrub, railing, grill, drain). Large terrace (200+ sq ft): ₹1,500–₹2,500. Add-on to full-home is cheaper than standalone.' },
@@ -1231,7 +1231,7 @@ export const ARTICLES = [
     dateModified: '2026-08-28',
     image: '/images/full-home-deep-cleaning.jpg',
     imageAlt: 'Deep cleaning in every sector of Gurgaon — DLF to Manesar area coverage',
-    cta: { title: 'Book deep cleaning in your sector today', href: 'residential-cleaners-near-me.html', label: 'Residential Cleaners Near Me →' },
+    cta: { title: 'Book deep cleaning in your sector today', href: '/residential-cleaners-near-me.html', label: 'Residential Cleaners Near Me →' },
     lead: 'Yes — Sachin Deep Cleaning serves **every inhabited sector of Gurgaon** — from DLF Phase 1–5 and Golf Course Road to Sohna Road, Palam Vihar, Sectors 14–92, South City, Vatika, Nirvana Country and Manesar. **Same team, same machines, same price** — ₹2,000 (1 RK) to ₹9,000 (5 BHK), verified pros, pay-after-satisfaction, usually **same-day** if you book before noon.',
     faqs: [
       { q: 'Do you serve my exact sector in Gurgaon?', a: 'We serve all sectors — DLF 1–5, Sohna Road, Golf Course Road & Extension, Sohna, Palam Vihar, Sector 14, 15, 22, 45, 46, 47, 49, 50, 56, 57, South City, Sushant Lok, Vatika City, Manesar (122001) and every Huda sector. Call +91 9267905943 with your sector — we confirm in 30 seconds.' },
