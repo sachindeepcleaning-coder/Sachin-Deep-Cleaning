@@ -5,6 +5,7 @@ A modern, mobile-friendly marketing site for **Sachin Deep Cleaning**, a home de
 - **Live URL:** https://sachindeepcleaning.shop (custom domain via CNAME)
 - **Repo:** `sachindeepcleaning-coder/Sachin-Deep-Cleaning` (GitHub)
 - **Hosting:** GitHub Pages (deploys from the **`gh-pages`** branch)
+- **Branch sync rule:** **`main` and `gh-pages` MUST be kept in sync** — `gh-pages` is a snapshot of the latest `main` build, not a separate working branch. After every `main` push, redeploy to `gh-pages` (see below). The script in `scripts/sync-gh-pages.sh` automates the full sequence.
 
 ---
 
@@ -15,32 +16,52 @@ A modern, mobile-friendly marketing site for **Sachin Deep Cleaning**, a home de
 - This is a **Vite + React 18 MPA**. Source code lives on the **`main`** branch.
 - GitHub Pages is configured to serve from the **`gh-pages` branch** (built output), **NOT** `main`.
 - **Pushing to `main` alone does NOT update the live site.** You must build and push the fresh `dist/` to `gh-pages`.
+- **`main` and `gh-pages` must stay in sync.** Never commit source changes to `gh-pages`, never commit built artefacts to `main`. The script enforces this.
 - There is **no GitHub Actions workflow**. Auto-deploy was attempted once and skipped (the local `gh` token lacks the `workflow` scope, so pushing `.github/workflows/` files is rejected). Do not re-add a workflow unless the token has `workflow` scope, and remember to switch the Pages source back to `workflow` in that case.
 - The `gh-pages` branch contains only build output + deploy files (`CNAME`, `robots.txt`, `.nojekyll`, `dist/` contents).
 
-### Full deploy steps
+### One-command deploy (recommended)
+
+Use the bundled script — it runs `gen` → `build` → fresh-clone `gh-pages` → copy `dist` → restore `.nojekyll` → force-push to the real remote. Always run this from `main` and **only when `main` is the head you want live**.
+
+```bash
+./scripts/sync-gh-pages.sh
+```
+
+The script:
+
+1. Verifies you are on `main` (refuses to deploy from any other branch).
+2. Runs `npm run gen` (regenerates HTML entry shells if `pages.config.mjs` changed).
+3. Runs `npm run build` (sitemap → vite build → prerender → `dist/`).
+4. Clones the **remote** `gh-pages` branch fresh into `/tmp/opencode/ghp` (no stale local-branch reuse).
+5. Wipes the clone, restores `.nojekyll`, copies `dist/*` over.
+6. Sets the clone's `origin` to the **real** GitHub remote (the local `git clone ... .` defaults to the local repo path).
+7. Commits and `git push --force origin gh-pages` (force is safe — `gh-pages` is a deploy branch).
+8. Prints the new `gh-pages` HEAD commit so you can confirm what went live.
+
+### Manual deploy (if the script is unavailable)
 
 ```bash
 # 1. Build (regenerate entry shells first if pages.config.mjs changed)
+git checkout main
+git pull origin main
 npm run gen
 npm run build                     # = sitemap gen + vite build + prerender → dist/
 
-# 2. Clone the gh-pages branch into a scratch dir
+# 2. Clone the REMOTE gh-pages branch into a scratch dir (no stale local branch)
 rm -rf /tmp/opencode/ghp
-git clone -b gh-pages --single-branch . /tmp/opencode/ghp
+git clone -b gh-pages --single-branch https://github.com/sachindeepcleaning-coder/Sachin-Deep-Cleaning.git /tmp/opencode/ghp
 
 # 3. Replace contents with the fresh build
-rm -rf /tmp/opencode/ghp/*
-touch /tmp/opencode/ghp/.nojekyll
-cp -r dist/* /tmp/opencode/ghp/
+cd /tmp/opencode/ghp
+rm -rf ./*
+touch .nojekyll
+cp -r /home/vegeta/Music/website\ 2nd\ copy/dist/* .
 
 # 4. Restore deploy-only files that vite does NOT emit (.nojekyll only — CNAME & robots.txt are now in public/ and copied by vite)
-cd /tmp/opencode/ghp
 git checkout origin/gh-pages -- .nojekyll
 
-# 5. Commit + push to the REAL remote
-#    (the clone's origin points to the local repo — fix it first!)
-git remote set-url origin https://github.com/sachindeepcleaning-coder/Sachin-Deep-Cleaning
+# 5. Commit + push to the REAL remote (clone's origin already points to GitHub, no fix needed)
 git add -A
 git config user.name "vegeta" && git config user.email "vegeta@localhost"   # if not inherited
 git commit -m "Deploy fresh build"
@@ -49,18 +70,24 @@ git push --force origin gh-pages     # force push is fine: gh-pages is a deploy 
 
 ### Gotchas
 
-- The local `gh-pages` branch may lag behind `origin/gh-pages`. Always clone fresh (step 2) instead of reusing the local branch.
-- `git clone ... .` (step 2) sets the clone's `origin` to the local repo path — **fix the remote URL (step 5)** before pushing, or you'll push nowhere.
+- **`main` and `gh-pages` desync = live regressions.** If you fix something in `main` and forget to run the script, live keeps showing the old build. Add a post-commit hook or CI reminder if you ship often.
+- The local `gh-pages` branch may lag behind `origin/gh-pages`. Always clone fresh (the script does this) instead of reusing the local branch.
+- The script sets `origin` to the **real** GitHub remote. If you `git clone ... .` from inside the working tree, the clone's `origin` points to the local repo path — **fix the remote URL** before pushing, or you'll push nowhere.
 - If the push is rejected with "tip behind", you cloned from a stale local branch → `git push --force` after confirming the working tree has the full build (all `*.html`, `assets/`, `videos/`, `sitemap.xml`, `CNAME`, `robots.txt`, `.nojekyll`).
-- Verify live: `curl -sI https://sachindeepcleaning.shop/<page>.html` → expect `HTTP/2 200`.
+- Verify live: `curl -sI https://sachindeepcleaning.shop/<page>.html` → expect `HTTP/2 200`. The new `Last-Modified` header should reflect the time of your deploy.
+- **Source-only push (no deploy):** `git add -A && git commit -m "message" && git push origin main`. This updates `main` only — the live site is unchanged until you also deploy to `gh-pages`.
 
-### Just push source (no deploy)
+### Sync verification
+
+After every deploy, run:
 
 ```bash
-git add -A && git commit -m "message" && git push origin main
+git fetch origin gh-pages main --prune
+echo "main:    $(git rev-parse --short origin/main)"
+echo "gh-pages:$(git rev-parse --short origin/gh-pages)"
+# Should show main and gh-pages pointing to related commits.
+# gh-pages should always contain a built dist/ tree (not source).
 ```
-
-This only updates source. The live site is unchanged until you also do the `gh-pages` deploy above.
 
 ---
 
