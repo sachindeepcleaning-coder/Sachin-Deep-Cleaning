@@ -33,7 +33,7 @@ export const pages = [
   {
     file: 'about', page: 'about',
     title: 'About Sachin Deep Cleaning | Trusted Team in Gurgaon',
-    description: 'Meet the police-verified, eco-friendly deep cleaning team serving Gurgaon since 2024. Transparent pricing, pay after satisfaction, same-day service across DLF, Sohna Road & all sectors.',
+    description: 'Meet the police-verified deep cleaning team in Gurgaon since 2024. Eco-friendly, pay after satisfaction, same-day across DLF & Sohna Road.',
   },
 
   // ── Service pages ─────────────────────────────────────────────────────────
@@ -146,7 +146,7 @@ export const pages = [
   },
   {
     file: 'blog/kitchen-vs-regular-cleaning', page: 'article',
-    title: 'Kitchen Deep Cleaning vs Regular Cleaning — What\'s the Difference?',
+    title: 'Kitchen Deep Cleaning vs Regular Cleaning — Difference',
     description: 'The clear difference between regular kitchen cleaning and professional kitchen deep cleaning — and why daily wiping alone is not enough in Gurgaon.',
   },
   {
@@ -162,7 +162,7 @@ export const pages = [
   {
     file: 'blog/house-cleaning-services-gurgaon-guide', page: 'article',
     title: 'House Cleaning Services in Gurgaon — Price & Booking Guide',
-    description: 'House cleaning in Gurgaon from ₹499/visit. Weekly & one-time plans, what’s included & how to choose. Updated Aug 2026.',
+    description: 'House cleaning in Gurgaon from ₹499/visit. Weekly & one-time plans, what’s included & how to choose right. Updated Aug 2026.',
   },
   {
     file: 'blog/deep-cleaning-near-me-gurgaon', page: 'article',
@@ -187,7 +187,7 @@ export const pages = [
   {
     file: 'blog/carpet-cleaning-gurgaon-guide', page: 'article',
     title: 'Carpet Cleaning in Gurgaon — Price & Method Guide',
-    description: 'Carpet cleaning in Gurgaon from ₹15/sq ft. Shampoo vs dry clean, drying time & price per sq ft. Updated Aug 2026.',
+    description: 'Carpet cleaning in Gurgaon from ₹15/sq ft. Shampoo vs dry clean, drying time & price per sq ft for rugs. Updated Aug 2026.',
   },
   {
     file: 'blog/best-deep-cleaning-services-gurgaon', page: 'article',
