@@ -204,4 +204,9 @@ export const pages = [
     title: 'Balcony & Terrace Cleaning in Gurgaon — Price Guide',
     description: 'Balcony and terrace cleaning in Gurgaon — floor scrub, railing, drain & facade wash. Price & checklist. Updated Aug 2026.',
   },
+  {
+    file: 'blog/deep-cleaning-all-sectors-gurgaon', page: 'article',
+    title: 'Deep Cleaning in Every Sector of Gurgaon — Full Guide 2026',
+    description: 'Deep cleaning in every sector of Gurgaon — DLF 1–5, Sohna Road, Golf Course, Palam Vihar, Sectors 14–92, South City, Manesar. Area-wise guide. Updated Aug 2026.',
+  },
 ];
