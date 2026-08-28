@@ -108,7 +108,7 @@ export const pages = [
     description: 'Local residential cleaners in Gurgaon. Police-verified, same-day slots, pay after job is done. Serving DLF, Sohna Rd, Golf Course Rd & all sectors.',
   },
   {
-    file: 'all-pages', page: 'allpages',
+    file: 'all-pages', page: 'allpages', noindex: true,
     title: 'All Services — Sachin Deep Cleaning Gurgaon',
     description: 'Browse all deep cleaning services in Gurgaon: full home, kitchen, bathroom, sofa, carpet, office and move-in/out cleaning by Sachin Deep Cleaning.',
   },

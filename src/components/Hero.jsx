@@ -26,9 +26,7 @@ export default function Hero() {
             Gurgaon's #1 Deep Cleaning Service · 4.9★ Rated
           </div>
           <h1>
-            <span className="hl">Full Home Deep Cleaning</span><br />
-            in Gurgaon<br />
-            <span className="hl2">Pay Only After</span> We Finish
+            <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>
           </h1>
           <p className="hero-sub">
             Expert deep cleaning for your entire home — bedroom, living room, kitchen, bathrooms, floors, walls & more. Professional, police-verified team. <strong>₹200 OFF today.</strong> Same-day booking available in all Gurgaon areas.

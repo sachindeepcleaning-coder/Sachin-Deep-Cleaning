@@ -57,7 +57,7 @@ for (const p of pages) {
   const noindex = p.noindex ? '  <meta name="robots" content="noindex, nofollow" />\n' : '';
   const ogType = p.page === 'article' ? 'article' : 'website';
   const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
-    ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" />\n`
+    ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" fetchpriority="high" />\n`
     : '';
   // Page-specific OG image (audit: was identical sitewide)
   let ogImage = OG_IMAGE;

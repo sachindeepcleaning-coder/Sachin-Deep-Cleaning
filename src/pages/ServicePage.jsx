@@ -34,6 +34,19 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           { name: s.name, url },
         ])}
       />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'VideoObject',
+          name: `${s.name} — Real Cleaning Video Gurgaon`,
+          description: `Watch real ${s.name.toLowerCase()} work by Sachin Deep Cleaning team in Gurgaon — before/after, 60 seconds.`,
+          thumbnailUrl: `https://sachindeepcleaning.shop${s.image}`,
+          uploadDate: '2026-08-28',
+          duration: 'PT60S',
+          contentUrl: 'https://sachindeepcleaning.shop/videos/cleaning-1.mp4',
+          embedUrl: 'https://www.youtube.com/shorts/p-ArftUay5I',
+        }}
+      />
 
       <section className="hero">
         <div className="hero-grid"></div>

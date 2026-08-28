@@ -95,6 +95,7 @@ export function localBusinessSchema({ url }) {
       bestRating: '5',
       worstRating: '1',
     },
+    hasMap: 'https://www.google.com/maps/place/Gurugram,+Haryana/@28.4595,77.0266,12z',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Deep Cleaning Services',
