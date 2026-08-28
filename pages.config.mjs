@@ -179,4 +179,29 @@ export const pages = [
     title: 'Office Deep Cleaning in Gurgaon — Prices & Checklist 2026',
     description: 'Office deep cleaning in Gurgaon from ₹3/sq ft. Workstations, pantry, washrooms & floors. Price list & booking guide. Updated Aug 2026.',
   },
+  {
+    file: 'blog/bathroom-deep-cleaning-services-gurgaon-guide', page: 'article',
+    title: 'Bathroom Deep Cleaning in Gurgaon — Cost & Process',
+    description: 'Bathroom deep cleaning in Gurgaon from ₹800/bathroom. Descaling, grout, commode & glass. Price list & process. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/carpet-cleaning-gurgaon-guide', page: 'article',
+    title: 'Carpet Cleaning in Gurgaon — Price & Method Guide',
+    description: 'Carpet cleaning in Gurgaon from ₹15/sq ft. Shampoo vs dry clean, drying time & price per sq ft. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/best-deep-cleaning-services-gurgaon', page: 'article',
+    title: 'Best Deep Cleaning Services in Gurgaon — How to Choose',
+    description: 'Find the best deep cleaning services in Gurgaon. Checklist, pricing traps & what to verify before booking. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/housekeeping-vs-deep-cleaning-gurgaon', page: 'article',
+    title: 'Housekeeping vs Deep Cleaning in Gurgaon — What’s Better?',
+    description: 'Housekeeping vs deep cleaning in Gurgaon — daily maid vs quarterly deep clean. Cost, scope & when to choose. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/balcony-terrace-cleaning-gurgaon', page: 'article',
+    title: 'Balcony & Terrace Cleaning in Gurgaon — Price Guide',
+    description: 'Balcony and terrace cleaning in Gurgaon — floor scrub, railing, drain & facade wash. Price & checklist. Updated Aug 2026.',
+  },
 ];
