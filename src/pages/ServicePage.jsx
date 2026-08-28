@@ -129,6 +129,11 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
                 height="400"
                 style={{ width: '100%', height: 'auto', borderRadius: '14px', display: 'block' }}
               />
+              {serviceKey === 'move' && (
+                <p style={{ marginTop: '10px', fontSize: '.82rem', color: 'var(--muted)', fontStyle: 'italic' }}>
+                  Representative Gurgaon empty-flat handover photo. Your flat may differ — we adapt the checklist to your layout.
+                </p>
+              )}
             </div>          </div>
         </div>
       </section>
