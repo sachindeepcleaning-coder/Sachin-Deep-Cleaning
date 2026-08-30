@@ -62,7 +62,7 @@ export function localBusinessSchema({ url }) {
     telephone: PHONE,
     email: 'contact@sachindeepcleaning.shop',
     url,
-    logo: `${SITE_URL}/images/cleaning-1.jpg`,
+    logo: `${SITE_URL}/images/app_icon.png`,
     image: [
       `${SITE_URL}/images/cleaning-1.jpg`,
       `${SITE_URL}/images/full-home-deep-cleaning.jpg`,
