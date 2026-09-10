@@ -2,12 +2,17 @@
 // Helps Google crawl the articles and builds topical authority (service → guide).
 const GUIDES = [
   { serviceKey: 'deep', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
-  { serviceKey: 'deep', title: 'How Often Should You Deep Clean Your Home?', href: '/blog/how-often-deep-clean-home-india.html' },
+  { serviceKey: 'deep', title: 'What Is Deep Cleaning? Complete Guide', href: '/blog/what-is-deep-cleaning-guide.html' },
+  { serviceKey: 'deep', title: 'Deep Cleaners Near Me — Hire Verified Pros', href: '/blog/deep-cleaners-near-me-gurgaon.html' },
+  { serviceKey: 'house', title: 'Home Cleaning Services Near Me — Gurgaon Guide', href: '/blog/home-cleaning-services-near-me-gurgaon.html' },
   { serviceKey: 'house', title: 'How Often Should You Deep Clean Your Home?', href: '/blog/how-often-deep-clean-home-india.html' },
   { serviceKey: 'house', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },
   { serviceKey: 'fullhome', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'fullhome', title: 'Diwali Cleaning in Gurgaon — Price & Booking', href: '/blog/diwali-cleaning-gurgaon.html' },
+  { serviceKey: 'fullhome', title: 'Dussehra Cleaning — Beat Diwali Rush', href: '/blog/dussehra-cleaning-gurgaon.html' },
   { serviceKey: 'fullhome', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
   { serviceKey: 'kitchen', title: 'Kitchen Chimney Cleaning Guide', href: '/blog/kitchen-chimney-cleaning-guide.html' },
+  { serviceKey: 'kitchen', title: 'Navratri Cleaning — Pooja-Ready Homes', href: '/blog/navratri-cleaning-gurgaon.html' },
   { serviceKey: 'kitchen', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },
   { serviceKey: 'bathroom', title: 'How to Remove Hard Water Stains in Gurgaon Bathrooms', href: '/blog/hard-water-bathroom-stains-gurgaon.html' },
   { serviceKey: 'sofa', title: 'Sofa Shampoo Cleaning in Gurgaon — Complete Guide', href: '/blog/sofa-cleaning-gurgaon-guide.html' },

@@ -16,8 +16,8 @@ export const OG_IMAGE = 'https://sachindeepcleaning.shop/images/cleaning-1.jpg';
 export const pages = [
   {
     file: 'index', page: 'index',
-    title: 'Full Home Deep Cleaning Gurgaon | From ₹2,500 | Sachin Deep Cleaning',
-    description: 'Trusted deep cleaning in Gurgaon since 2024. Full-home from ₹2,500, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9267905943.',
+    title: 'Full Home Deep Cleaning Gurgaon | From ₹2,500',
+    description: 'Trusted deep cleaning in Gurgaon since 2015. Full-home from ₹2,500, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9267905943.',
   },
   {
     file: 'contact', page: 'contact',
@@ -33,7 +33,7 @@ export const pages = [
   {
     file: 'about', page: 'about',
     title: 'About Sachin Deep Cleaning | Trusted Team in Gurgaon',
-    description: 'Meet the police-verified deep cleaning team in Gurgaon since 2024. Eco-friendly, pay after satisfaction, same-day across DLF & Sohna Road.',
+    description: 'Meet the police-verified deep cleaning team in Gurgaon since 2015. Eco-friendly, pay after satisfaction, same-day across DLF & Sohna Road.',
   },
 
   // ── Service pages ─────────────────────────────────────────────────────────
@@ -223,5 +223,40 @@ export const pages = [
     file: 'blog/full-house-cleaning-checklist-gurgaon', page: 'article',
     title: 'Full House Cleaning Checklist for Gurgaon Homes — 2026',
     description: 'Full house cleaning checklist for Gurgaon — room, kitchen, bathroom, balcony & windows. Printable list. Updated Aug 2026.',
+  },
+  {
+    file: 'blog/deep-cleaners-near-me-gurgaon', page: 'article',
+    title: 'Deep Cleaners Near Me in Gurgaon — Hire Verified Pros',
+    description: 'Find deep cleaners near you in Gurgaon — verified pros, BHK prices, same-day slots. Home cleaners near me hiring guide. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/residential-cleaning-services-near-me-gurgaon', page: 'article',
+    title: 'Residential Cleaning Services Near Me — Gurgaon Guide',
+    description: 'Residential cleaning services near you in Gurgaon — flats, societies & villas. Scope, RWA entry, BHK prices & slots. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/home-cleaning-services-near-me-gurgaon', page: 'article',
+    title: 'Home Cleaning Services Near Me — Gurgaon Guide',
+    description: 'Home cleaning services near you in Gurgaon — same-day slots from ₹499/visit, weekly & one-time plans. Book now. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/what-is-deep-cleaning-guide', page: 'article',
+    title: 'What Is Deep Cleaning? Complete Guide 2026',
+    description: 'What is deep cleaning? Scope, machines, time & cost for Gurgaon homes. Deep cleaning vs regular with checklist. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/diwali-cleaning-gurgaon', page: 'article',
+    title: 'Diwali Cleaning in Gurgaon — Price & Booking 2026',
+    description: 'Diwali cleaning in Gurgaon — full-home deep clean prices, festive checklist & slot guide. Book 2–3 weeks early. Serving since 2015. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dussehra-cleaning-gurgaon', page: 'article',
+    title: 'Dussehra Cleaning in Gurgaon — Beat Diwali Rush',
+    description: 'Dussehra cleaning in Gurgaon (Dusshera) — post-monsoon deep clean before the Diwali rush. Prices, checklist & early slots. Since 2015. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/navratri-cleaning-gurgaon', page: 'article',
+    title: 'Navratri Cleaning in Gurgaon — Pooja-Ready Homes',
+    description: 'Navratri cleaning in Gurgaon — satvik kitchen, pooja room & guest-ready home. Prices, 9-day prep checklist & slots. Since 2015. Updated Sep 2026.',
   },
 ];

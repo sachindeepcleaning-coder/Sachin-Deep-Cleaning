@@ -1,6 +1,7 @@
 # Keyword Targeting — Sachin Deep Cleaning (sachindeepcleaning.shop)
 
 > Source: `Keyword Stats 2026-08-28 at 09_52_11.csv` (42-row Gurgaon plan) + `09_48_07.csv` (2426 rows broad) + GBP impressions (859 deep cleaning services gurgaon)
+> + `Search keyword report(1).csv` (9 Google Ads exact keywords, 2026-09-10 — see SEO-AUDIT.md §2026-09-10)
 > Build: 38 pages (20 service + 1 blog index + 18 articles), `sitemap.xml 37` URLs, live `92925d8`
 > Updated: 2026-08-28
 
@@ -59,3 +60,33 @@
 
 ## Next deploy
 Current live `gh-pages 92925d8` `37 URLs`. When you add new keyword, add 1 row to `pages.config.mjs` + 1 `ARTICLES` to `src/lib/blog.js` → `npm run gen && npm run build` → `sitemap.xml` auto.
+
+---
+
+## 2026-09-10 — Google Ads exact-keyword coverage (Search keyword report(1).csv)
+
+Owner = money page (exact-phrase holder). Blog = supporting guide (distinct angle, links to owner).
+
+| Exact keyword (Ads) | Owner (money page, primary) | Supporting blog (new) |
+|---|---|---|
+| `deep cleaners near me` | `residential-cleaners-near-me.html` (patched 5×) | `blog/deep-cleaners-near-me-gurgaon` — hire-a-cleaner angle, CTA → residential |
+| `residential cleaning services near me` | `residential-cleaners-near-me.html` (patched 5×) | `blog/residential-cleaning-services-near-me-gurgaon` — society/RWA angle, CTA → residential |
+| `home cleaning services` | `house-cleaning-services-in-gurgaon.html` (patched 9×, "House=Home" stated) | `blog/home-cleaning-services-near-me-gurgaon` — dispatch/plans angle, CTA → house |
+| `house cleaning services gurgaon` | `house-cleaning-services-in-gurgaon.html` (patched 3×) | same blog above (4× secondary) |
+| `deep cleaning services near me` | `deep-cleaning-services-in-gurgaon.html` (patched 3×) + existing `blog/deep-cleaning-near-me-gurgaon` | `blog/deep-cleaners-near-me-gurgaon` reinforces via internal links |
+| `home cleaners near me` | `residential-cleaners-near-me.html` (patched 5×) | `blog/deep-cleaners-near-me-gurgaon` (13× secondary, same hire intent) |
+| `deep cleaning` | `deep-cleaning-services-in-gurgaon.html` (definitional intro added) | `blog/what-is-deep-cleaning-guide` — definition pillar (56×), CTA → deep |
+| `deep cleaning services in gurgaon` | `deep-cleaning-services-in-gurgaon.html` (10×, unchanged owner) | `blog/what-is-deep-cleaning-guide` links up |
+| `home cleaning services near me` | `house-cleaning-services-in-gurgaon.html` (patched 5×) | `blog/home-cleaning-services-near-me-gurgaon` (14× primary) |
+
+Build after fix: 45 shells, `sitemap.xml` 44 URLs (25 articles). Full diagnosis in `SEO-AUDIT.md` §2026-09-10.
+
+## 2026-09-10 (pm) — Festive keywords (owner: since 2015, aligned site-wide)
+
+| Keyword | Blog (primary) | CTA owner |
+|---|---|---|
+| `diwali cleaning in gurgaon` (+ diwali deep cleaning) | `blog/diwali-cleaning-gurgaon` — festive price/checklist/timeline | deep page |
+| `dussehra cleaning in gurgaon` (+ `dusshera` variant) | `blog/dussehra-cleaning-gurgaon` — post-monsoon + early-bird | 3BHK page |
+| `navratri cleaning in gurgaon` (+ satvik/pooja) | `blog/navratri-cleaning-gurgaon` — kitchen + pooja angle | kitchen page |
+
+Build: 48 shells, sitemap 47 URLs (28 articles).

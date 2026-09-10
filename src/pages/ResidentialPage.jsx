@@ -18,6 +18,8 @@ const NEAR_ME = [
 ];
 
 const FAQS = [
+  ['What do residential cleaning services near me include in Gurgaon?', 'Everything a Gurgaon home needs: full-home deep clean (all rooms, kitchen chimney degreasing, bathroom descaling, windows, balconies) plus single services — sofa shampoo from ₹499/seat, carpet from ₹15/sq ft, and weekly house cleaning from ₹499/visit. Villas add terrace and facade wash.'],
+  ['Are you the same team for deep cleaners near me and home cleaners near me searches?', 'Yes — whether you search residential cleaning services near me, deep cleaners near me, home cleaners near me or deep cleaning services near me, you reach the same police-verified local team. The wording differs; the booking, machines and pay-after-satisfaction guarantee are identical.'],
   ['How do you decide which cleaning team is nearest to me?', 'We match your area or sector to the crew already working closest to it that day. This is why we ask for your area in the quote form — it directly affects your arrival time.'],
   ['Is a local team as reliable as a citywide company?', 'Yes — every cleaner, regardless of which zone they are dispatched from, goes through the same police verification, training, and satisfaction guarantee.'],
   ['Can I get same-day residential cleaning near me?', 'In most Gurgaon sectors, yes — especially if you book before noon. We will confirm exact same-day availability for your specific area on the callback.'],
@@ -74,7 +76,7 @@ export default function ResidentialPage({ url }) {
               <span className="hl2">Local, Verified Team</span>
             </h1>
             <p className="hero-sub">
-              No matter which sector or society you're in, our nearest available team can reach your home <strong>today</strong>. Police-verified residential cleaners, transparent pricing, and <strong>pay only after cleaning</strong>.
+              Searching residential cleaning services near me, deep cleaners near me, home cleaners near me or deep cleaning services near me? Our nearest verified team reaches your sector <strong>today</strong>. Police-verified residential cleaners, transparent pricing, and <strong>pay only after cleaning</strong>.
             </p>
             <div className="hero-pills">
               {PILLS.map((p) => (
