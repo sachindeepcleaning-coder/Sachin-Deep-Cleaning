@@ -1,25 +1,23 @@
 import { useEffect, useState } from 'react';
-import { randomCallbackTime } from '../lib/landing.js';
 
-// Top urgency bar. Real benefits, no fake scarcity. Callback time is a real
-// target (5-minute response) and rotates copy for variety, not to lie.
+// Top urgency bar. Fully static markup: React hydrates this identically on
+// server and client. (A previous version mutated #callbackTime — a node owned
+// by QuoteForm, which may not be hydrated yet when this effect fires —
+// causing hydration mismatch #425/#418 flakily on every page with a form.
+// Never touch another component's DOM from here.)
 export default function UrgencyBar() {
-  const [cb, setCb] = useState('5 min callback');
   const [date, setDate] = useState('');
 
   useEffect(() => {
-    setCb(randomCallbackTime());
     const d = new Date();
     const opts = { weekday: 'long', day: 'numeric', month: 'short' };
     setDate(d.toLocaleDateString('en-IN', opts));
-    const el = document.getElementById('callbackTime');
-    if (el) el.textContent = 'under 5 min';
   }, []);
 
   return (
     <div className="urgency-bar">
       <span className="ub-live"><span className="ub-dot"></span>OPEN TODAY</span>
-      🏠 Full Home Deep Cleaning in Gurgaon &nbsp;·&nbsp; <span className="ub-hl">{cb}</span> &nbsp;·&nbsp; 🎁 <span className="ub-hl">₹200 OFF</span> for new customers
+      🏠 Full Home Deep Cleaning in Gurgaon &nbsp;·&nbsp; <span className="ub-hl">under 5 min callback</span> &nbsp;·&nbsp; 🎁 <span className="ub-hl">₹200 OFF</span> for new customers
     </div>
   );
 }

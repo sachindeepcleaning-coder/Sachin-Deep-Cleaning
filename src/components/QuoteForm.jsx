@@ -20,12 +20,6 @@ export default function QuoteForm() {
     }
   }, []);
 
-  const setSlots = () => {
-    // scarcity number is set by UrgencyBar via global; we read it here
-    const s = document.getElementById('slotsForm');
-    return s;
-  };
-
   const onSubmit = async (e) => {
     e.preventDefault();
     setError('');

@@ -196,3 +196,10 @@ SERP dissected (user-provided): local pack MH 5.0/366, JK 4.8/154, Mr Deep 4.9/2
 # 2026-09-10 (schema) — Review-snippet critical errors → fixed
 
 GSC URL Inspection (live retest): Review snippets showed **3 invalid items × “Sachin Deep Cleaning / 1 critical issue”** on deep + office pages. Root cause: `reviewsSchema()` emitted `itemReviewed: { '@id' }` with no `@type`/`name` — Google rejects bare ID references. Fixed at source: `itemReviewed` now carries `@type: LocalBusiness` + `@id` + `name` (applies to all pages using reviews: index, residential, 14 service pages). Verified locally: **45/45 Review nodes valid** (author.name, ratingValue, reviewBody, itemReviewed.name). VideoObject “2 non-critical issues” (warnings only, eligibility intact): added `author` + `publisher` + `isFamilyFriendly` to resolve what's resolvable without fabricating view counts. Owner action: re-run TEST LIVE URL → Review snippets should flip to valid; stars eligibility follows Google's own thresholds, not ours.
+
+---
+
+# 2026-09-10 (console) — React hydration errors #425/#418/#422 on live site → fixed
+
+Playwright console audit (10 live pages, mobile viewport) found **14–21 React pageerrors per page**: #425 text-mismatch + #418 hydration-failed cascade + #422 Suspense fallback. Blog/all-pages/thank-you were clean, which misled component-level bisecting until repeat runs proved the bug **flaky (a race, not content)**.
+Root cause: `UrgencyBar`'s mount effect directly mutated `#callbackTime` — a DOM node owned by `QuoteForm`, which often had not hydrated yet when the effect fired (Layout hydrates before lazy page chunks arrive). React then saw SSR text (“under 3 min”) vs mutated DOM (“under 5 min”) → #425 → boundary hydration collapse on form pages. Fix: UrgencyBar is now fully static (no DOM writes outside its own tree; dead `setSlots` reader removed from QuoteForm). Verified **25/25 clean runs** locally across 6 pages × normal + delayed-chunk conditions. Rule going forward: never mutate another component's DOM; keep all render output SSR-identical.
