@@ -33,6 +33,14 @@ https://sachindeepcleaning.shop/
 | `https://sachindeepcleaning.shop/blog/deep-cleaning-cost-gurgaon-2026.html` | Forums, Quora answers, Reddit (value-first, link as source) |
 | `https://sachindeepcleaning.shop/` | Social bios, app listing |
 
+## Done without logins (2026-09-10, by agent)
+
+- [x] **GitHub repo metadata** — public repo About now points at `.shop` (was stale vercel.app), keyword description, 7 topics.
+- [x] **X profile discovered + verified live** (`x.com/sachindeepclean`) → added to `sameAs` (business + author, 36 pages) and README links.
+- [x] **YouTube channel in `sameAs`** (36 pages) + README link.
+- [x] **README links** — live URL + all 4 socials as markdown links (crawled citation).
+- [ ] Play Store app URL — **not found** in search; get the exact link from the Play Console owner before citing it anywhere.
+
 ## Tier 1 — Citations (NAP consistency; do all 6)
 
 - [ ] **Google Business Profile** — website field → `.shop` deep URL; categories: Deep Cleaning Service, House Cleaning Service, Home Cleaning; service areas = all Gurgaon; add 20+ real job photos; enable messaging.
