@@ -51,9 +51,10 @@ echo "==> cloning remote gh-pages into $SCRATCH"
 rm -rf "$SCRATCH"
 git clone -b gh-pages --single-branch "$REMOTE" "$SCRATCH" >/dev/null
 
-# 6. Wipe and replace with fresh dist/.
+# 6. Wipe and replace with fresh dist/ (preserve .git — the old
+# `rm -rf ./* ./.??*` glob matched ./.git and broke the scratch clone).
 cd "$SCRATCH"
-rm -rf ./* ./.??* 2>/dev/null || true
+find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
 touch .nojekyll
 cp -r "$REPO_ROOT/dist/." .
 
