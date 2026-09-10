@@ -112,7 +112,7 @@ export function localBusinessSchema({ url }) {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Move-In Move-Out Cleaning', description: 'Handover deep cleaning for empty flats' } },
       ],
     },
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, WHATSAPP],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, WHATSAPP],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,
@@ -232,7 +232,7 @@ export function articleSchema({ title, description, url, datePublished, dateModi
       '@type': 'Person',
       name: 'Sachin Kumar',
       url: `${SITE_URL}/about.html#sachin-kumar`,
-      sameAs: [SOCIAL.facebook, SOCIAL.instagram],
+      sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube],
     },
     publisher: {
       '@id': `${SITE_URL}/#business`,
