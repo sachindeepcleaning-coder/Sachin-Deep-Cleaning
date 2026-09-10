@@ -51,6 +51,13 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           thumbnailUrl: `https://sachindeepcleaning.shop${s.image}`,
           uploadDate: '2026-08-28',
           duration: 'PT60S',
+          isFamilyFriendly: true,
+          author: { '@type': 'Person', name: 'Sachin Kumar', url: 'https://sachindeepcleaning.shop/about.html#sachin-kumar' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://sachindeepcleaning.shop/#business',
+            name: 'Sachin Deep Cleaning',
+          },
           contentUrl: 'https://sachindeepcleaning.shop/videos/cleaning-1.mp4',
           embedUrl: 'https://www.youtube.com/shorts/p-ArftUay5I',
         }}

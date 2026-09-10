@@ -265,7 +265,13 @@ export function reviewsSchema(reviews, serviceName) {
         author: { '@type': 'Person', name },
         reviewBody: reviewText,
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        itemReviewed: { '@id': `${SITE_URL}/#business` },
+        // itemReviewed MUST carry @type + name inline: Google rejects bare
+        // @id references here ("1 critical issue" per Review in URL Inspection).
+        itemReviewed: {
+          '@type': 'LocalBusiness',
+          '@id': `${SITE_URL}/#business`,
+          name: 'Sachin Deep Cleaning',
+        },
         datePublished: reviewDate(idx),
       },
     })),

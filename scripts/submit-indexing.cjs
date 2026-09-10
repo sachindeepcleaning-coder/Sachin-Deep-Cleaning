@@ -15,6 +15,8 @@
  *   node scripts/submit-indexing.cjs --test     # submit exactly 1 URL (wiring check)
  *   node scripts/submit-indexing.cjs --limit N  # override cap
  *   node scripts/submit-indexing.cjs --reset    # clear progress and start over
+ *   node scripts/submit-indexing.cjs --url <u> [--url <u> ...]
+ *                                               # submit specific URLs only
  */
 
 const fs = require('fs');
@@ -42,6 +44,11 @@ const TEST_MODE = args.includes('--test');
 const RESET = args.includes('--reset');
 const limitIdx = args.indexOf('--limit');
 const DAILY_CAP = TEST_MODE ? 1 : limitIdx !== -1 && args[limitIdx + 1] ? parseInt(args[limitIdx + 1], 10) : 200;
+// --url <u> (repeatable): submit only these URLs, bypassing pending.
+const ONLY_URLS = [];
+for (let i = 0; i < args.length; i++) {
+  if (args[i] === '--url' && args[i + 1] && !args[i + 1].startsWith('--')) ONLY_URLS.push(args[i + 1]);
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -89,6 +96,12 @@ async function main() {
   const progress = loadProgress();
   const done = new Set([...progress.submitted, ...progress.failed]);
   let pending = allUrls.filter((u) => !done.has(u));
+  if (ONLY_URLS.length > 0) {
+    const known = new Set(allUrls);
+    pending = ONLY_URLS.filter((u) => known.has(u));
+    const unknown = ONLY_URLS.filter((u) => !known.has(u));
+    for (const u of unknown) console.error(`  SKIP (not in sitemap): ${u}`);
+  }
   console.log(`Already submitted: ${progress.submitted.length}, pending: ${pending.length}`);
   if (pending.length === 0) {
     console.log('Nothing to submit.');
@@ -133,6 +146,8 @@ async function main() {
   }
 
   progress.lastRun = new Date().toISOString();
+  progress.submitted = [...new Set(progress.submitted)];
+  progress.failed = [...new Set(progress.failed)];
   fs.writeFileSync(PROGRESS_FILE, JSON.stringify(progress, null, 2));
   console.log(`\nDone: ${success} submitted, ${failed} failed. Total: ${progress.submitted.length}/${allUrls.length}`);
 }

@@ -190,3 +190,9 @@ SERP dissected (user-provided): local pack MH 5.0/366, JK 4.8/154, Mr Deep 4.9/2
 - Cost guide → **~2,615+ words**: competitor price grid (UC/NoBroker/Safaiwale/ZoopGo/us, Sep-2026 dated), mini-task menu, exact `price list` query line, +4 FAQs.
 - Homepage hero now carries the exact keyword (internal anchor weight to money page).
 - Sitemap 52 URLs. Honest limit noted to owner: review-volume gap (148 vs 245–366) and UC domain authority need the GBP actions below — content is now best-in-class.
+
+---
+
+# 2026-09-10 (schema) — Review-snippet critical errors → fixed
+
+GSC URL Inspection (live retest): Review snippets showed **3 invalid items × “Sachin Deep Cleaning / 1 critical issue”** on deep + office pages. Root cause: `reviewsSchema()` emitted `itemReviewed: { '@id' }` with no `@type`/`name` — Google rejects bare ID references. Fixed at source: `itemReviewed` now carries `@type: LocalBusiness` + `@id` + `name` (applies to all pages using reviews: index, residential, 14 service pages). Verified locally: **45/45 Review nodes valid** (author.name, ratingValue, reviewBody, itemReviewed.name). VideoObject “2 non-critical issues” (warnings only, eligibility intact): added `author` + `publisher` + `isFamilyFriendly` to resolve what's resolvable without fabricating view counts. Owner action: re-run TEST LIVE URL → Review snippets should flip to valid; stars eligibility follows Google's own thresholds, not ours.
