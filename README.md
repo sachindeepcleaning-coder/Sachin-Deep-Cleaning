@@ -2,7 +2,7 @@
 
 A modern, mobile-friendly marketing site for **Sachin Deep Cleaning**, a home deep cleaning service in Gurgaon, Haryana. Built with **Vite + React 18 (MPA)**.
 
-- **Live URL:** https://sachindeepcleaning.shop (custom domain via CNAME)
+- **Live URL:** [https://sachindeepcleaning.shop](https://sachindeepcleaning.shop) (custom domain via CNAME)
 - **Repo:** `sachindeepcleaning-coder/Sachin-Deep-Cleaning` (GitHub)
 - **Hosting:** GitHub Pages (deploys from the **`gh-pages`** branch)
 - **Branch sync rule:** **`main` and `gh-pages` MUST be kept in sync** — `gh-pages` is a snapshot of the latest `main` build, not a separate working branch. After every `main` push, redeploy to `gh-pages` (see below). The script in `scripts/sync-gh-pages.sh` automates the full sequence.
@@ -132,8 +132,10 @@ npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
 - **Company:** Sachin Deep Cleaning
 - **Phone / WhatsApp:** +91 9267905943
 - **Location:** Gurgaon, Haryana
-- **Facebook:** https://www.facebook.com/profile.php?id=61577737535478
-- **Instagram:** https://www.instagram.com/cleaning_service_in_gurgaon
+- **Facebook:** [Sachin Deep Cleaning](https://www.facebook.com/profile.php?id=61577737535478)
+- **Instagram:** [@cleaning_service_in_gurgaon](https://www.instagram.com/cleaning_service_in_gurgaon)
+- **YouTube:** [@Cleaning_service_in_Gurgaon](https://www.youtube.com/@Cleaning_service_in_Gurgaon)
+- **X:** [@sachindeepclean](https://x.com/sachindeepclean)
 - **WhatsApp:** https://wa.me/919267905943
 
 ---
