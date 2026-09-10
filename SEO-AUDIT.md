@@ -171,3 +171,13 @@ Target: `office deep cleaning services in gurgaon` (GSC office cluster: 131 impr
 - Guide `blog/office-deep-cleaning-gurgaon-guide` 1,592 → **~2,263 words**: hub playbooks, sq-ft bands, 3 vertical checklists, compliance pack, +4 FAQs.
 - New `blog/best-office-deep-cleaning-services-gurgaon` (~1,663 words, T53/D146): fair top-5 (Balaji/Safaiwale/AYS Max/ZoopGo/us, verifiable-only, affiliation disclosed) for the “Best office…” PAA query; linked from office guides.
 - Zero-thin bar intact (53/53 ≥1,500). Sitemap 52 URLs.
+
+---
+
+# 2026-09-10 (final) — Money-keyword offensive: `deep cleaning services in gurgaon`
+
+SERP dissected (user-provided): local pack MH 5.0/366, JK 4.8/154, Mr Deep 4.9/245 (all out-review us: 148) + organic UC, NoBroker, JustDial, IG (our profile ranks #4!), Kleanhomz, TechSquad, ShineGlow, ZoopGo, Safaiwale. PAA: price / best / included / 24-hr maid. Related: price list, urban clap, pronto, bathroom, floor.
+- Money page 2,750 → **~3,745 words, exact keyword 17×**: price-honesty section with checkable public figures (UC/NoBroker/Safaiwale vs our fixed ₹4,500), methods + honest exclusions, +4 includes (12), +7 PAA FAQs (19 total: price, best, included, maid-cost, UC-alternative, minis, damage cover), NEW on-page public price-check table (rendered from `priceCheck` data).
+- Cost guide → **~2,615+ words**: competitor price grid (UC/NoBroker/Safaiwale/ZoopGo/us, Sep-2026 dated), mini-task menu, exact `price list` query line, +4 FAQs.
+- Homepage hero now carries the exact keyword (internal anchor weight to money page).
+- Sitemap 52 URLs. Honest limit noted to owner: review-volume gap (148 vs 245–366) and UC domain authority need the GBP actions below — content is now best-in-class.

@@ -185,6 +185,35 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
       {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
       {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
 
+      {/* Public price check — verified-figures comparison for the money keyword */}
+      {s.priceCheck && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Honest Pricing</div>
+              <h2 className="section-title">{s.priceCheck.title}</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>{s.priceCheck.note}</p>
+            </div>
+            <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+                <thead><tr style={{ background: 'var(--primary)' }}>{s.priceCheck.head.map((h) => (
+                  <th key={h} style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>{h}</th>
+                ))}</tr></thead>
+                <tbody>
+                  {s.priceCheck.rows.map((r, i) => (
+                    <tr key={i} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                      {r.map((c, j) => (
+                        <td key={j} style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', color: j === 1 ? 'var(--primary)' : 'inherit', fontWeight: j === 1 ? 700 : 400 }}>{c}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Sqft pricing + BHK/sqft table — fixed prices before team arrives */}
       {(serviceKey === 'fullhome' || serviceKey === 'deep') && s.sqftByBhk && (
         <section className="section section-alt">

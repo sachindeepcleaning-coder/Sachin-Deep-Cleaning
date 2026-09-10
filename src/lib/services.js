@@ -8,7 +8,7 @@ const base = {
     intro:
       'What is deep cleaning? A true deep cleaning reaches what regular cleaning misses — and our deep cleaning services in Gurgaon deliver it with machines. Searching deep cleaning services near me or deep cleaners near me lands you on the same verified team.',
     detail:
-      'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive. That is what deep cleaning means: every surface, including hidden ones, in one intensive visit.\n\nOur trained deep cleaners near you work top-to-bottom and room-by-room with professional machines and eco-friendly products. Whether you book deep cleaning services near me for a 1 BHK or a villa, we shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.\n\nGurgaon’s hard water leaves calcium and magnesium deposits on taps, shower heads and tile grout that normal wiping cannot remove — our descaling treatment handles this properly. Construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road corridors embeds in sofa fibres, AC filters and chimney interiors even in well-sealed homes.\n\nPre-Diwali (Oct–Nov) and post-monsoon are the busiest periods — we recommend booking early for those slots. Our deep cleaning services also cover move-in / move-out empty-flat resets and post-construction removal of cement dust, paint drips and adhesive residue, all at the same verified-team, pay-after-satisfaction standard.',
+      'Regular sweeping and mopping only reaches the surface. A genuine deep cleaning reaches everything else: grease-laden kitchen tiles, hard-water marks in bathrooms, dust hidden on ceiling fans, inside wardrobes, behind beds and under sofas. Gurgaon’s dusty, construction-heavy environment means fine particulate settles into carpets, mattresses and upholstery — which is exactly where dust mites and allergens thrive. That is what deep cleaning means: every surface, including hidden ones, in one intensive visit.\n\nOur trained deep cleaners near you work top-to-bottom and room-by-room with professional machines and eco-friendly products. Whether you book deep cleaning services near me for a 1 BHK or a villa, we shift light furniture, detail every fixture, wash windows and sanitize high-touch surfaces like switches and door handles. The result is a home that not only looks cleaner but actually breathes easier. Most Gurgaon families book a full deep clean every 3–6 months, and before or after the festive season, moving in or out, or post-renovation.\n\nGurgaon’s hard water leaves calcium and magnesium deposits on taps, shower heads and tile grout that normal wiping cannot remove — our descaling treatment handles this properly. Construction dust from Dwarka Expressway, Golf Course Extension and Sohna Road corridors embeds in sofa fibres, AC filters and chimney interiors even in well-sealed homes.\n\nPre-Diwali (Oct–Nov) and post-monsoon are the busiest periods — we recommend booking early for those slots. Our deep cleaning services also cover move-in / move-out empty-flat resets and post-construction removal of cement dust, paint drips and adhesive residue, all at the same verified-team, pay-after-satisfaction standard.\n\nPrice honesty, with figures you can check: Urban Company lists 2 BHK home deep cleaning from roughly ₹4,500 upward before the platform layer; NoBroker’s furnished-apartment premium tier sits near ₹3,759 for narrower scope; Safaiwale’s public rate card puts a 2 BHK at ₹5,000. Our 2 BHK deep cleaning services in Gurgaon are a fixed ₹4,500 — machines, products, travel and walkthrough included, locked on the call. Same city, same machines, no commission layer, no asterisk. Prices checked against public listings, September 2026 — re-check any provider before booking.\n\nMethod, not muscle: single-disc machine scrubbing for tile and vitrified floors, hot-water extraction for sofas and carpets, steam sanitization for kitchens and bathrooms, timed acid descaling for Gurgaon’s hard water, and pro-grade eco-safe chemistry throughout. Honest boundary, stated upfront: utensils, wall repainting, marble diamond polish, sealed appliance motors and rope-access facades sit outside deep cleaning everywhere — anyone bundling them into a headline price is hiding the real bill.',
     image: '/images/full-home-deep-cleaning.webp',
     imageAlt: 'Deep cleaning services in Gurgaon — trained team scrubbing floors, tiles and furniture top to bottom',
     includes: [
@@ -20,6 +20,10 @@ const base = {
       'Windows, sills and glass cleaning',
       'Anti-viral sanitization of touch points',
       'Cobweb removal and under-furniture vacuuming',
+      'Balcony & utility deep clean — scrub, railing, drains',
+      'Appliance exterior detailing — fridge, microwave, oven faces',
+      'Skirting & behind-furniture zones — edge lanes, under-bed, sides',
+      'Final walkthrough sign-off — ticked room sheets before payment',
     ],
     process: [
       { step: 1, title: 'Walkthrough & Quote', desc: 'We assess your home, note problem areas and lock the exact price on the confirmation call.' },
@@ -40,6 +44,13 @@ const base = {
       { q: 'What if I am not satisfied with the cleaning?', a: 'You only pay after you have walked through and approved the work. If any area is missed or unsatisfactory, we re-clean it on the spot before you pay.' },
       { q: 'Gurgaon me deep cleaning kitne din me karwani chahiye?', a: 'Gurgaon ki dhool aur construction ki wajah se har 3–6 mahine me ek baar deep cleaning karwana behtar hai. Diwali se pehle ya baad me karwana sabse common hai.' },
       { q: 'Deep cleaning me kya kya saaf hota hai?', a: 'Kitchen, bathroom, sofa, wardrobes, windows, grout, chimney aur high-touch surfaces tak saaf kiya jata hai — jo roz ke safai me nahi hota.' },
+      { q: 'What is the price of deep cleaning services in Gurgaon?', a: 'From ₹2,000 (1 RK) to ₹9,000 (5 BHK villa). The sweet spot: 1 BHK ₹2,500, 2 BHK ₹4,500, 3 BHK ₹5,500 — fixed on call, machines and products included. JustDial’s published market range (₹2,000–₹10,000) sits exactly around our card.' },
+      { q: 'What are the best deep cleaning services in Gurgaon?', a: 'Shortlist by proof, not ads: police verification shown on request, itemised written scope, fixed price before arrival, pay-after walkthrough, and sector-tagged reviews. On those five tests, compare Urban Company (scale), NoBroker (rescheduling), Safaiwale (process docs) and us (fixed local prices since 2015) — our best-services guide scores them openly.' },
+      { q: 'What is usually included in a deep clean?', a: 'Floors scrubbed, walls/ceiling dusted, furniture and wardrobes detailed, kitchen degreased (chimney dismantled), bathrooms descaled (grout, commode, glass), windows and balconies, sofa vacuumed, touch points sanitised — ending in a ticked walkthrough. Excluded everywhere: utensils, repainting, marble polish, sealed motors.' },
+      { q: 'How much does 24-hour maid service cost in Gurgaon?', a: 'Full-time live-in maids via agencies run roughly ₹12,000–₹18,000/month plus agency fee — and maids cannot descale, degrease chimneys or extract sofas. Most families pair part-time help for daily chores with our quarterly deep reset (₹4,500/2 BHK) instead.' },
+      { q: 'Urban Company vs local deep cleaning in Gurgaon?', a: 'Urban Company offers app-scale consistency (4.79, 853K+ reviews on its Gurgaon deep-cleaning page) with platform pricing from ~₹3,499–₹4,500+. Local verified teams like ours run the same machines at fixed BHK rates (2 BHK ₹4,500) with direct owner accountability and pay-after terms. Compare identical scopes line-by-line, not logos.' },
+      { q: 'Do you handle small single tasks (fan, fridge, windows)?', a: 'Yes — fan cleaning, fridge interiors (₹500 add-on), window detailing and similar mini-tasks book as add-ons to any visit or as room-rate jobs. NoBroker-style mini-menus exist because small jobs are real; we price ours on the same call.' },
+      { q: 'What protects me if something is damaged?', a: 'Three layers: trained, background-checked crew with a supervisor on every job; careful protection (corner guards, electronics-safe methods near devices); and our re-clean-or-make-right promise — any miss flagged at walkthrough is fixed on the spot before you pay a rupee.' },
     ],
     reviews: [
       ['SR', 'Sunita Rao', 'DLF Phase 2', "Booked a full home deep clean before Diwali. The team scrubbed grout I'd given up on and the kitchen looked brand new. Worth every rupee."],
@@ -47,6 +58,18 @@ const base = {
       ['MK', 'Meera Kapoor', 'Golf Course Road', 'Pay-after-cleaning gave me full confidence. The house smelled fresh and the team was respectful and on time. Highly recommend.'],
     ],
     price: { label: 'Starting from', amount: '₹2,000' },
+    priceCheck: {
+      title: 'Gurgaon 2 BHK Price Check — Us vs Public Listings',
+      note: 'Public listing figures, September 2026. Scopes differ — compare line items, not headlines. Re-check any provider before booking.',
+      head: ['Provider', '2 BHK Signal', 'Terms'],
+      rows: [
+        ['Urban Company', '~₹4,500+ (page starts ₹3,499)', 'Platform pricing, app booking'],
+        ['NoBroker', '₹3,200–₹4,600 (tiered packs)', 'Rescheduling included'],
+        ['Safaiwale', '₹5,000 (rate card)', 'Sq-ft based card'],
+        ['ZoopGo bands', '₹3,800–₹5,500', 'Aggregator bidding range'],
+        ['Sachin Deep Cleaning', '₹4,500 fixed', 'Locked on call, pay after walkthrough'],
+      ],
+    },
     pricingTable: [
       { service: 'Full home deep cleaning — 1 BHK', price: 'From ₹2,500' },
       { service: 'Full home deep cleaning — 2 BHK', price: 'From ₹4,500' },
