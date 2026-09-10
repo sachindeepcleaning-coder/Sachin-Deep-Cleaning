@@ -27,7 +27,7 @@ export const pages = [
   {
     file: 'thank-you', page: 'thank-you',
     title: 'Booking Confirmed — Sachin Deep Cleaning',
-    description: 'Thank you for booking Sachin Deep Cleaning. We will call you back within 30 minutes to confirm your slot.',
+    description: 'Thank you for booking Sachin Deep Cleaning in Gurgaon. We will call you back within 30 minutes to confirm your slot and fixed price.',
     noindex: true,
   },
   {
