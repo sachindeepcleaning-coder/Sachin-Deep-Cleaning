@@ -82,7 +82,7 @@ export default function AboutPage({ url }) {
               <span className="hl2">Gurgaon Trusts</span>
             </h1>
             <p className="hero-sub">
-              A professional home and office deep cleaning service based in Gurgaon, Haryana. Transparent pricing, pay after satisfaction, same-day service across DLF, Sohna Road and all sectors.
+              A professional home and office deep cleaning service based in Gurgaon, Haryana since 2015. Transparent pricing, pay after satisfaction, same-day service across DLF, Sohna Road and all sectors — from society flats and builder floors to villas, shops and clinics.
             </p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Pay After Satisfaction</span>
@@ -95,6 +95,33 @@ export default function AboutPage({ url }) {
       </section>
 
       <TrustBar />
+
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div className="fade-up" style={{ textAlign: 'center' }}>
+            <div className="section-tag">Milestones</div>
+            <h2 className="section-title">Ten Years, Same Rule</h2>
+          </div>
+          <div className="hiw-wrap" style={{ marginTop: '36px' }}>
+            {[
+              ['2015 — One team, one rule', 'Started in Gurgaon with a single crew: pay only after you approve the work. The rule has survived every festive season since.'],
+              ['2018 — Machines over mops', 'Added hot-water extraction, scrubbers and trade descalers as hard-water and construction-dust jobs demanded real equipment.'],
+              ['2021 — Society routes', 'Zone rosters across DLF, Sohna Road and Golf Course Road — nearest-team dispatch replacing cross-city travel.'],
+              ['2024 — 100+ verified reviews', 'Sector-tagged Google reviews crossed a century; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
+              ['2026 — 5,000+ homes', 'Studios to villas plus offices and clinics, with published BHK prices and owner-supervised 3 BHK+ jobs.'],
+            ].map(([title, desc], i) => (
+              <div key={title} className="hiw-step fade-up">
+                <div className="hiw-num">{i + 1}</div>
+                <div className="hiw-title">{title}</div>
+                <div className="hiw-desc">{desc}</div>
+              </div>
+            ))}
+          </div>
+          <p className="section-sub" style={{ margin: '28px auto 0', textAlign: 'center', fontStyle: 'italic' }}>
+            “Every home teaches something — a new stain, a new stone, a new society gate. Ten years in, we still walk every room with you before a rupee changes hands, and we still answer our own phone.” — Sachin, Founder
+          </p>
+        </div>
+      </section>
 
       <section className="section section-alt">
         <div className="section-inner">
@@ -183,8 +210,55 @@ export default function AboutPage({ url }) {
             ))}
           </div>
           <p className="section-sub" style={{ margin: '28px auto 0', textAlign: 'center' }}>
-            We treat your home with the same care we would give our own.
+            We treat your home with the same care we would give our own — every visit, every season, every room.
           </p>
+          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>
+            Season after season you will find our teams in DLF Magnolias and DLF Phase 1–5, Emaar Emerald Hills, Godrej Aria, Unitech South City, Ardee City, Vatika City, Nirvana Country, Sushant Lok, South City, Palam Vihar and Sectors 14–92 — the same societies, the same supervisors, the same walkthrough before payment.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-inner">
+          <div className="fade-up" style={{ textAlign: 'center' }}>
+            <div className="section-tag">Our Story</div>
+            <h2 className="section-title">Cleaning Gurgaon Homes Since 2015</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>
+              Sachin Deep Cleaning started in 2015 with one team, one scrubber and a simple rule that has never changed: <strong>you pay only after you walk through and approve the work</strong>. A decade later that rule still runs every job — across DLF Phase 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sushant Lok, South City and 30+ sectors, from compact 1 RK studios to 5 BHK villas, plus offices, shops and clinics after hours.
+            </p>
+            <p className="section-sub" style={{ margin: '16px auto 0' }}>
+              What changed in ten years is the craft: hot-water extraction for sofas and carpets, acid descaling tuned for Gurgaon’s hard water, food-safe degreasing for modular chimneys, and a supervisor walkthrough on every booking — plus festive rosters that have run eleven straight Diwali seasons without missing a single booked slot. What never changed is the accountability — the owner’s number (+91 92679-05943) is on every quote, and the same police-verified teams return to the same societies season after season.
+            </p>
+          </div>
+          <div className="hiw-wrap" style={{ marginTop: '36px' }}>
+            <div className="hiw-step fade-up">
+              <div className="hiw-num">10+</div>
+              <div className="hiw-title">Years in Gurgaon</div>
+              <div className="hiw-desc">Serving the same sectors since 2015 — festive seasons, move-ins, renovations and all.</div>
+            </div>
+            <div className="hiw-step fade-up">
+              <div className="hiw-num">5k+</div>
+              <div className="hiw-title">Homes Deep Cleaned</div>
+              <div className="hiw-desc">Studios to villas, plus offices and shops across Gurugram.</div>
+            </div>
+            <div className="hiw-step fade-up">
+              <div className="hiw-num">4.5★</div>
+              <div className="hiw-title">148 Google Reviews</div>
+              <div className="hiw-desc">Sector-tagged, verifiable — DLF, Sohna Road, Golf Course Road and beyond.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div className="fade-up" style={{ textAlign: 'center' }}>
+            <div className="section-tag">How We Train</div>
+            <h2 className="section-title">Verified First, Trained Always</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>
+              Every cleaner is police-verified and ID-checked before their first booking — then trained on our room-by-room process: descaling dilutions that remove limescale without etching chrome, degreaser dwell times for chimney filters, extraction passes for upholstery, and electronics-safe wiping for workstations. New members shadow senior leads across DLF, Sohna Road and Golf Course routes before leading jobs, and every 3 BHK+ booking is owner-supervised. Training never stops because Gurgaon’s dust, water and cooking load never stop changing it.
+            </p>
+          </div>
         </div>
       </section>
 

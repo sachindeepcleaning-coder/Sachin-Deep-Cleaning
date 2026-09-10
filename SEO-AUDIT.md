@@ -155,3 +155,9 @@ Top-3 audit (Urban Company, NoBroker, Safaiwale + ZoopGo/TechSquad/MyGate/KleanH
 - Titles 47–52 chars, descs 131–152, 1 H1, canonical, Article+FAQ+Breadcrumb JSON-LD, 1,100–1,400 words each.
 
 **Expansion (same eve):** all 4 grown to **~2,000–2,300 words, 11–13 H2s, 8–13 FAQs, 4–7 tables** — matching Safaiwale/KleanHomz depth (methods, maintenance 20/10 rule, exclusions, worked examples, methodology, landscape + benchmark tables, full 434-query long-tail woven in: company/agency/local variants, full-house/flat/new-home forms, bedroom/PG/nursery forms, best/cheap/same-day commercial forms).
+
+---
+
+# 2026-09-10 (night) — Zero-thin-content sweep (all 52 pages ≥1,500 words)
+
+Measured every `dist/` page (prerendered words). Found 23 pages <1,500 (thinnest: move-in checklist 694, contact 740, kitchen-vs-regular 757). Expanded all: 20 blogs (+400–1,100 words each — deposit logic, stain first-aid, scoring rubrics, TDS zones, seasonal calendars, AMC math, RWA playbooks, quote autopsies, day-of checklists + 60+ new FAQs incl. Hinglish), carpet service (+detail/FAQs), residential page (residence-type + dispatch sections, +3 FAQs), About (story/milestones/training/societies), Contact (minute-by-minute timeline, channel cards, 10 FAQs), blog index (intent-cluster intro). Result: **every page ≥1,500 words** (services all ≥2,000; median 1,691) except `thank-you.html` (noindex utility, intentionally thin). Also fixed 2 content bugs found en route: Python `% R` fragments leaked into 6 blog blocks (ReferenceError broke the build) and a duplicated housekeeping section — both repaired and verified (single occurrences, `node --check` clean, 52/52 prerendered).

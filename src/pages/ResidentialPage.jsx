@@ -25,6 +25,9 @@ const FAQS = [
   ['Can I get same-day residential cleaning near me?', 'In most Gurgaon sectors, yes — especially if you book before noon. We will confirm exact same-day availability for your specific area on the callback.'],
   ['Do you cover gated societies and RWAs?', 'Yes. Our teams regularly work across Gurgaon major societies and are used to standard visitor-entry and ID-verification processes.'],
   ['What if my exact locality is not listed?', 'Our listed areas are not exhaustive. Call us directly — we cover most of Gurgaon and can usually confirm coverage in under a minute.'],
+  ['How is pricing fixed for my specific home?', 'On the confirmation call we itemise your BHK, bathroom count, kitchen type and add-ons (sofa seats, carpet sq ft) and lock one figure. 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500 — same in every sector, no travel or gate-entry surcharge.'],
+  ['Do you clean villas and builder floors, not just flats?', 'Yes — villas and floors get larger teams (5–6 cleaners), terrace and facade wash, and stairwell detailing. 4–5 BHK villa packages run ₹6,500–₹9,000 with the same pay-after walkthrough.'],
+  ['Can I get the same team for repeat visits?', 'On weekly and bi-weekly plans, yes — the same crew learns your home, your RWA gate and your preferences. One-time and festive bookings get the nearest available verified team.'],
 ];
 
 const PILLS = [
@@ -120,6 +123,57 @@ export default function ResidentialPage({ url }) {
       </section>
 
       <PricingSection />
+
+      <section className="section">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }} className="fade-up">
+            <div className="section-tag">Who We Serve</div>
+            <h2 className="section-title">Every Kind of Gurgaon Residence</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Society flat, builder floor, villa or PG room — the nearest team carries the right checklist for your home type, not a one-size-fits-all wipe.</p>
+          </div>
+          <div className="whyus-grid">
+            {[
+              ['🏢', 'Society Flats (1–4 BHK)', 'Tower protocols, service lifts and quiet hours handled. DLF 1–5, Vatika City, Nirvana Country, Sushant Lok, South City and all Huda-sector societies.'],
+              ['🏠', 'Builder Floors & Villas', 'Stairwells, terraces, larger plates and facade wash. Golf Course Extension, Ardee City, Emaar Emerald Hills, Godrej Aria and Manesar villas.'],
+              ['🏚️', 'Old Gurgaon Houses', 'Palam Vihar, Sectors 14/15/22 and plotted houses with Kota stone, older fittings and heavy descaling needs.'],
+              ['🛏️', 'PG & Rental Rooms', 'Single-room details with quiet timing around flatmates. Sector 45/46/57, Cyber City and MG Road corridors.'],
+            ].map(([icon, title, desc]) => (
+              <div key={title} className="why-card fade-up">
+                <div className="why-icon">{icon}</div>
+                <div>
+                  <div className="why-title">{title}</div>
+                  <div className="why-desc">{desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }} className="fade-up">
+            <div className="section-tag">How Dispatch Works</div>
+            <h2 className="section-title">From Your Message to Our Team at Your Door</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Five zone rosters (DLF corridor, Golf Course, Sohna/South, West/Old Gurgaon, Cyber/Central) plus New Gurgaon and Manesar coverage — the crew already working nearest to you gets your job.</p>
+          </div>
+          <div className="hiw-wrap" style={{ marginTop: '36px' }}>
+            {[
+              ['Share sector + BHK', 'WhatsApp +91 9267905943 — society, tower and preferred date. Thirty seconds of typing.'],
+              ['Nearest roster checked', 'We match your zone, not a random citywide queue — travel stays under an hour.'],
+              ['Fixed quote on call', 'Rooms, baths, kitchen and add-ons itemised and locked. No travel fee, ever.'],
+              ['Team arrives equipped', 'Machines, descalers and eco-friendly products in hand; IDs ready for your gate.'],
+              ['Walkthrough, then pay', 'You inspect every room first. UPI, cash or bank transfer after approval.'],
+            ].map(([title, desc], i) => (
+              <div key={title} className="hiw-step fade-up">
+                <div className="hiw-num">{i + 1}</div>
+                <div className="hiw-title">{title}</div>
+                <div className="hiw-desc">{desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ReviewsSection />
 
