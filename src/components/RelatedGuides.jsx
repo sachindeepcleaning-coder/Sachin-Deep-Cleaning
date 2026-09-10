@@ -20,6 +20,7 @@ const GUIDES = [
   { serviceKey: 'sofa', title: 'Sofa Shampoo Cleaning in Gurgaon — Complete Guide', href: '/blog/sofa-cleaning-gurgaon-guide.html' },
   { serviceKey: 'carpet', title: 'Carpet Cleaning in Gurgaon — Price & Method', href: '/blog/carpet-cleaning-gurgaon-guide.html' },
   { serviceKey: 'office', title: 'Office Deep Cleaning in Gurgaon — Prices & Checklist', href: '/blog/office-deep-cleaning-gurgaon-guide.html' },
+  { serviceKey: 'office', title: 'Best Office Deep Cleaning — Top 5 Compared', href: '/blog/best-office-deep-cleaning-services-gurgaon.html' },
   { serviceKey: 'office', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
   { serviceKey: 'move', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
   { serviceKey: 'move', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },

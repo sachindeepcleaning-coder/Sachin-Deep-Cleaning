@@ -161,3 +161,13 @@ Top-3 audit (Urban Company, NoBroker, Safaiwale + ZoopGo/TechSquad/MyGate/KleanH
 # 2026-09-10 (night) — Zero-thin-content sweep (all 52 pages ≥1,500 words)
 
 Measured every `dist/` page (prerendered words). Found 23 pages <1,500 (thinnest: move-in checklist 694, contact 740, kitchen-vs-regular 757). Expanded all: 20 blogs (+400–1,100 words each — deposit logic, stain first-aid, scoring rubrics, TDS zones, seasonal calendars, AMC math, RWA playbooks, quote autopsies, day-of checklists + 60+ new FAQs incl. Hinglish), carpet service (+detail/FAQs), residential page (residence-type + dispatch sections, +3 FAQs), About (story/milestones/training/societies), Contact (minute-by-minute timeline, channel cards, 10 FAQs), blog index (intent-cluster intro). Result: **every page ≥1,500 words** (services all ≥2,000; median 1,691) except `thank-you.html` (noindex utility, intentionally thin). Also fixed 2 content bugs found en route: Python `% R` fragments leaked into 6 blog blocks (ReferenceError broke the build) and a duplicated housekeeping section — both repaired and verified (single occurrences, `node --check` clean, 52/52 prerendered).
+
+---
+
+# 2026-09-10 (late) — Office keyword offensive vs Balaji Cleaning
+
+Target: `office deep cleaning services in gurgaon` (GSC office cluster: 131 impr, 0 clicks). Incumbent dissected from user-provided page + SERP: **Balaji Cleaning** (200+ pros, govt licences, 20+ verticals, 50-sector footer, GST public, office testimonial) + Safaiwale office page, ZoopGo sq-ft bands + sector links, AYS Max (sq-ft rates ₹2,500–₹15,000, 18% GST note, hub-wise areas, 7 FAQs), ShineGlow/TechSquad/Eco-Cleaning.
+- Money page `office-deep-cleaning-gurgaon` 2,148 → **~2,993 words**: commercial verticals (IT/BPO/clinic/retail/restaurant), 7 business hubs (Cyber City → Manesar), sq-ft bands, compliance pack (GST/NDA/MSDS/photo-logs), +4 includes, +7 PAA FAQs (16 total).
+- Guide `blog/office-deep-cleaning-gurgaon-guide` 1,592 → **~2,263 words**: hub playbooks, sq-ft bands, 3 vertical checklists, compliance pack, +4 FAQs.
+- New `blog/best-office-deep-cleaning-services-gurgaon` (~1,663 words, T53/D146): fair top-5 (Balaji/Safaiwale/AYS Max/ZoopGo/us, verifiable-only, affiliation disclosed) for the “Best office…” PAA query; linked from office guides.
+- Zero-thin bar intact (53/53 ≥1,500). Sitemap 52 URLs.

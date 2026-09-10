@@ -279,4 +279,9 @@ export const pages = [
     title: 'Mr Deep Cleaning vs Sachin Deep Cleaning — Compared',
     description: 'Mr Deep Cleaning vs Sachin Deep Cleaning in Gurgaon — services, prices, verification & guarantee compared fairly. Updated Sep 2026.',
   },
+  {
+    file: 'blog/best-office-deep-cleaning-services-gurgaon', page: 'article',
+    title: 'Best Office Deep Cleaning Services in Gurgaon — Top 5',
+    description: 'Best office deep cleaning services in Gurgaon compared — Balaji, Safaiwale, AYS Max, ZoopGo vs Sachin. Prices, licences & proof. Updated Sep 2026.',
+  },
 ];
