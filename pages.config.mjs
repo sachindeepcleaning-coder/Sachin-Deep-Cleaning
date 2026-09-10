@@ -31,6 +31,12 @@ export const pages = [
     noindex: true,
   },
   {
+    file: '404', page: 'notfound',
+    title: 'Page Not Found — Sachin Deep Cleaning Gurgaon',
+    description: 'This page moved or never existed. Find deep cleaning services in Gurgaon — fixed prices, same-day slots, pay after satisfaction.',
+    noindex: true,
+  },
+  {
     file: 'about', page: 'about',
     title: 'About Sachin Deep Cleaning | Trusted Team in Gurgaon',
     description: 'Meet the police-verified deep cleaning team in Gurgaon since 2015. Eco-friendly, pay after satisfaction, same-day across DLF & Sohna Road.',

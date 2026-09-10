@@ -1,15 +1,22 @@
+import { lazy, Suspense } from 'react';
 import { ThemeProvider } from './lib/theme.jsx';
 import Layout from './components/Layout.jsx';
-import IndexPage from './pages/IndexPage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import ServicePage from './pages/ServicePage.jsx';
-import ThankYouPage from './pages/ThankYouPage.jsx';
-import ResidentialPage from './pages/ResidentialPage.jsx';
-import AllPagesPage from './pages/AllPagesPage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import BlogArticlePage from './pages/BlogArticlePage.jsx';
-import BlogIndexPage from './pages/BlogIndexPage.jsx';
 import { pageUrl } from './lib/site.js';
+
+// Route-split: each page hydrates from its own JS chunk instead of one
+// 600KB+ bundle. The prerendered HTML is identical, so there is no visual
+// flash — React just attaches interactivity per page (see prerender-entry,
+// which suspends until chunks resolve via renderToPipeableStream).
+const IndexPage = lazy(() => import('./pages/IndexPage.jsx'));
+const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
+const ServicePage = lazy(() => import('./pages/ServicePage.jsx'));
+const ThankYouPage = lazy(() => import('./pages/ThankYouPage.jsx'));
+const ResidentialPage = lazy(() => import('./pages/ResidentialPage.jsx'));
+const AllPagesPage = lazy(() => import('./pages/AllPagesPage.jsx'));
+const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
+const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage.jsx'));
+const BlogIndexPage = lazy(() => import('./pages/BlogIndexPage.jsx'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
 
 // Shared app tree used by BOTH the browser entry (src/bootstrap.jsx) and the
 // prerender script (src/prerender-entry.jsx). Keeping this in one place means
@@ -24,11 +31,14 @@ export default function App({ page = 'index', file = 'index', serviceKey, bhk })
   else if (page === 'about') Page = AboutPage;
   else if (page === 'blog') Page = BlogIndexPage;
   else if (page === 'article') Page = BlogArticlePage;
+  else if (page === 'notfound') Page = NotFoundPage;
 
   return (
     <ThemeProvider>
       <Layout>
-        <Page url={pageUrl(file)} file={file} serviceKey={serviceKey} bhk={bhk} />
+        <Suspense fallback={null}>
+          <Page url={pageUrl(file)} file={file} serviceKey={serviceKey} bhk={bhk} />
+        </Suspense>
       </Layout>
     </ThemeProvider>
   );

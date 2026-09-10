@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL, SITE_NAME, OG_IMAGE } from '../pages.config.mjs';
 import { GTM_ID, NETLIFY_FORM_NAME } from '../src/lib/site.js';
 import { ARTICLES } from '../src/lib/blog.js';
+import { getService } from '../src/lib/services.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -59,13 +60,20 @@ for (const p of pages) {
   const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
     ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" fetchpriority="high" />\n`
     : '';
-  // Page-specific OG image (audit: was identical sitewide)
+  // Page-specific OG image + alt (audit: alt was identical sitewide).
+  // Services use their service imageAlt; articles use their imageAlt.
   let ogImage = OG_IMAGE;
+  let ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
   if (p.page === 'service' && HERO_IMAGES[p.serviceKey]) {
     ogImage = SITE_URL + HERO_IMAGES[p.serviceKey];
+    try {
+      const svc = getService(p.serviceKey, p.bhk);
+      if (svc && svc.imageAlt) ogAlt = svc.imageAlt;
+    } catch {}
   } else if (p.page === 'article') {
     const art = ARTICLES.find((a) => a.file === p.file);
     if (art && art.image) ogImage = SITE_URL + art.image;
+    if (art && art.imageAlt) ogAlt = art.imageAlt;
   }
 
   const html = `<!DOCTYPE html>
@@ -83,6 +91,7 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta name="geo.position" content="28.4595;77.0266" />
   <meta name="ICBM" content="28.4595, 77.0266" />
   <link rel="canonical" href="${url}" />
+  <link rel="alternate" hreflang="x-default" href="${url}" />
   <link rel="alternate" hreflang="en-IN" href="${url}" />
   <link rel="alternate" hreflang="en" href="${url}" />
   <meta property="og:type" content="${ogType}" />
@@ -91,7 +100,7 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta property="og:description" content="${p.description}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${ogImage}" />
-  <meta property="og:image:alt" content="Sachin Deep Cleaning — professional deep cleaning services in Gurgaon" />
+  <meta property="og:image:alt" content="${ogAlt}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -99,10 +108,8 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta name="twitter:description" content="${p.description}" />
   <meta name="twitter:image" content="${ogImage}" />
 ${preload}  ${gtm}
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/dm-sans-400.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/syne-800.woff2" />
   <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>

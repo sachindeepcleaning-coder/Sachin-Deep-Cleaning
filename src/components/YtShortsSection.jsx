@@ -9,23 +9,26 @@ const SHORTS = [
     id: 'p-ArftUay5I',
     label: 'Deep Clean',
     caption: 'Real deep-clean, Gurgaon home',
+    poster: '/images/full-home-deep-cleaning.webp',
   },
   {
     id: 'W6L8qudgzvc',
     label: 'Kitchen & Bath',
     caption: 'Kitchen & bathroom deep clean',
+    poster: '/images/kitchen-deep-cleaning.webp',
   },
   {
     id: 'cdjlmvP-hM4',
     label: 'Full Home',
     caption: 'Full home walkthrough',
+    poster: '/images/house-cleaning.webp',
   },
 ];
 
 export const YT_CHANNEL = 'https://www.youtube.com/@Cleaning_service_in_Gurgaon';
 export const IG_PAGE = 'https://www.instagram.com/cleaning_service_in_gurgaon/';
 
-function ShortCard({ id, label, caption, onTrack }) {
+function ShortCard({ id, label, caption, poster, onTrack }) {
   const [play, setPlay] = useState(false);
 
   return (
@@ -52,7 +55,7 @@ function ShortCard({ id, label, caption, onTrack }) {
               aria-label={`Play video: ${caption}`}
             >
               <img
-                src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+                src={poster}
                 alt={`${caption} — watch on YouTube`}
                 loading="lazy"
                 decoding="async"

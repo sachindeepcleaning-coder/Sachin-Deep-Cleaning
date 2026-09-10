@@ -8,6 +8,7 @@ export default function Footer() {
       <p>📍 Serving all of Gurgaon, Haryana &nbsp;|&nbsp; 📞 <a href={PHONE_TEL} onClick={phoneCallClick}>+91 92679-05943</a></p>
       <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved.</p>
       <p style={{ marginTop: '6px' }}>
+        <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Deep Cleaning Services in Gurgaon</a>
         <a href="/full-home-deep-cleaning-2bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Full Home Deep Cleaning Gurgaon</a>
         <a href="/kitchen-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Kitchen Deep Cleaning Gurgaon</a>
         <a href="/bathroom-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Bathroom Deep Cleaning Gurgaon</a>

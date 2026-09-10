@@ -174,6 +174,15 @@ Target: `office deep cleaning services in gurgaon` (GSC office cluster: 131 impr
 
 ---
 
+# 2026-09-10 (GSC) — URL Inspection resource failures → full lockdown
+
+User pasted GSC “Page resources couldn’t be loaded” for deep (26/34) + office (38/99) pages. Triage:
+- **Repo-fixed:** 625KB monolith JS failing on mobile emulation → route-split per-page chunks (money pages 625KB → ~163KB initial JS); mp4 autoplay → IntersectionObserver + preload=none + poster; YouTube thumbs (i.ytimg) → local posters; Instagram iframes/embeds (~15 blocked scontent requests) → click-to-play facades + embed.js removed; Google Fonts (5 failing woff2) → self-hosted in /fonts + preloaded, zero GF requests; per-page og:image:alt + x-default hreflang; footer deep-keyword link; custom 404 (noindex, off-sitemap); hourly + Pronto/UrbanClap FAQs; 4 dead components + 4 unused deps removed.
+- **Local pre-flight (new standard):** script checks all 54 dist pages — same-origin assets exist, internal links resolve, JSON-LD parses, head essentials present, noindex only thank-you/404 → **zero issues, zero third-party fetch hosts in initial HTML** (GTM inline loader intended).
+- **Cannot fix from repo (harmless, documented):** doubleclick.net / google-analytics / stats.g beacons “blocked by robots.txt” come from Google’s own hosts + your GTM container tags (Ads AW-449303659, GA4 ×2) — expected on every GTM site, zero indexing impact. Removing them means editing the GTM container, not the site.
+
+---
+
 # 2026-09-10 (final) — Money-keyword offensive: `deep cleaning services in gurgaon`
 
 SERP dissected (user-provided): local pack MH 5.0/366, JK 4.8/154, Mr Deep 4.9/245 (all out-review us: 148) + organic UC, NoBroker, JustDial, IG (our profile ranks #4!), Kleanhomz, TechSquad, ShineGlow, ZoopGo, Safaiwale. PAA: price / best / included / 24-hr maid. Related: price list, urban clap, pronto, bathroom, floor.

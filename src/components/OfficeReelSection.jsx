@@ -1,25 +1,82 @@
+import { useState } from 'react';
 import YtShortsSection from './YtShortsSection.jsx';
 
-// Portrait 9:16 Instagram reel embeds (direct iframes) for the office service page.
-// Direct iframe embeds (rather than Instagram's oEmbed blockquote) keep the reel
-// tall and full-bleed — no letterboxed rectangle, no extra embed.js dependency.
+// Portrait 9:16 Instagram reels as click-to-play facades (local poster, real
+// iframe only on tap). Direct IG iframes pulled ~15 scontent/cdninstagram
+// requests that Googlebot flags blocked-by-robots on every crawl — the facade
+// removes them from page load entirely while keeping one-tap playback.
 const REELS = [
   {
     id: 'Db2rFlgxWoU',
     label: 'Real Jobs',
     caption: 'Real deep-clean, DLF Phase 2',
+    poster: '/images/office-deep-cleaning.webp',
   },
   {
     id: 'Db2qqbgxXQy',
     label: 'Kitchen & Bathroom',
     caption: 'Kitchen & bathroom deep clean',
+    poster: '/images/kitchen-deep-cleaning.webp',
   },
   {
     id: 'Db2qRfaRnO9',
     label: 'Full Walkthrough',
     caption: 'Full home walkthrough',
+    poster: '/images/full-home-deep-cleaning.webp',
   },
 ];
+
+function IgCard({ id, label, caption, poster, onTrack }) {
+  const [play, setPlay] = useState(false);
+  return (
+    <div className="sdc-reel-item fade-up">
+      <span className="sdc-reel-label">{label}</span>
+      <div className="sdc-ig-card">
+        <div className="ig-reel-frame">
+          {play ? (
+            <iframe
+              src={`https://www.instagram.com/reel/${id}/embed/`}
+              title={`Instagram reel — ${caption}`}
+              allowTransparency="true"
+              allowFullScreen="true"
+              scrolling="no"
+              frameBorder="0"
+            />
+          ) : (
+            <button
+              type="button"
+              className="yt-thumb"
+              onClick={() => {
+                setPlay(true);
+                onTrack(`Reel ${id}`);
+              }}
+              aria-label={`Play Instagram reel: ${caption}`}
+            >
+              <img
+                src={poster}
+                alt={`${caption} — watch on Instagram`}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="yt-play-btn">▶</span>
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="sdc-reel-caption-row">
+        {caption} ·
+        <a
+          href={`https://www.instagram.com/reel/${id}/`}
+          target="_blank"
+          rel="noopener"
+          onClick={() => onTrack(`Reel ${id}`)}
+        >
+          Watch on Instagram ↗
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function OfficeReelSection() {
   const track = (label) => {
@@ -42,33 +99,7 @@ export default function OfficeReelSection() {
 
         <div className="sdc-reel-grid">
           {REELS.map((r) => (
-            <div key={r.id} className="sdc-reel-item fade-up">
-              <span className="sdc-reel-label">{r.label}</span>
-              <div className="sdc-ig-card">
-                <div className="ig-reel-frame">
-                  <iframe
-                    src={`https://www.instagram.com/reel/${r.id}/embed/`}
-                    title={`Instagram reel — ${r.caption}`}
-                    allowTransparency="true"
-                    allowFullScreen="true"
-                    scrolling="no"
-                    frameBorder="0"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="sdc-reel-caption-row">
-                {r.caption} ·
-                <a
-                  href={`https://www.instagram.com/reel/${r.id}/`}
-                  target="_blank"
-                  rel="noopener"
-                  onClick={() => track(`Reel ${r.id}`)}
-                >
-                  Watch on Instagram ↗
-                </a>
-              </div>
-            </div>
+            <IgCard key={r.id} {...r} onTrack={track} />
           ))}
         </div>
 

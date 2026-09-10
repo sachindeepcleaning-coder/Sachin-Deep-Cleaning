@@ -69,7 +69,7 @@ for (const path of collectHtmlFiles(distDir)) {
     continue;
   }
 
-  const body = renderPage({
+  const body = await renderPage({
     page: cfg.page,
     file: cfg.file,
     serviceKey: cfg.serviceKey,
