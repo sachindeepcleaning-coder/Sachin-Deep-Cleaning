@@ -43,12 +43,32 @@ https://sachindeepcleaning.shop/
 
 ## Tier 1 — Citations (NAP consistency; do all 6)
 
-- [ ] **Google Business Profile** — website field → `.shop` deep URL; categories: Deep Cleaning Service, House Cleaning Service, Home Cleaning; service areas = all Gurgaon; add 20+ real job photos; enable messaging.
-- [ ] **JustDial** (justdial.com) — claim/create Gurgaon listing, exact NAP, link money page.
-- [ ] **IndiaMART** (indiamart.com) — profile exists per old notes; update URL to `.shop`, sync NAP/prices.
-- [ ] **Sulekha** (sulekha.com) — home-cleaning Gurgaon listing + needs-based leads profile.
-- [ ] **UrbanPro** (urbanpro.com) — tutor-style pro profile works for home services too.
-- [ ] **Houzz India / HomeTriangle** — homeowner-intent directories; before/after photos win clicks.
+> Agent note 2026-09-10: automated submission was attempted (real Chrome, human-like navigation). JustDial serves bot-walled empty shells to automation; all three platforms hard-require mobile OTP to +91 9267905943 at step 1–2. There is no legitimate way past that without the phone in hand — anyone claiming otherwise is selling fake listings. Below is the exact walkthrough per platform with pre-filled payloads; each takes ~10 min with the phone nearby.
+
+### 1. JustDial — Free Listing (highest priority: ranks page 1 for every Gurgaon cleaning query)
+1. Open `justdial.com` → header/footer **“Free Listing / BUSINESS”** → `justdial.com/Free-Listing` (page is a JS app; if blank, reload once or switch to mobile data — their bot-wall sometimes blocks datacenter IPs).
+2. Enter mobile **9267905943** → OTP → verify.
+3. Business name: **Sachin Deep Cleaning** · Category: **Deep Cleaning Services** (+ add **House Cleaning Services**, **Office Cleaning Services** as secondary categories if offered).
+4. Address: canonical NAP block above. Area: **Sushant Lok Phase 1** · City: **Gurgaon** · Pincode: **122009**.
+5. Hours: **Mon–Sun 8:00 AM–8:00 PM** (match site + GBP exactly).
+6. Website: `https://sachindeepcleaning.shop/deep-cleaning-services-in-gurgaon.html` · Email: business email.
+7. Description: paste the **Medium bio**. Services: full-home/kitchen/bathroom/sofa/carpet/office/move-in-out with site prices.
+8. Photos: upload 10 (reuse `/images/` before-after + team shots from the site).
+9. Submit → note the JD listing URL back here for tracking.
+
+### 2. IndiaMART seller profile
+1. Open `seller.indiamart.com` → Register with **9267905943** → OTP.
+2. Business type: Service Provider · Category: **Deep Cleaning Services / Housekeeping Services**.
+3. Add services as products: Full Home Deep Cleaning (₹2,500+), Kitchen (₹1,500+), Bathroom (₹800+), Sofa (₹499/seat), Office (₹5,000+) — each with 2-line scope from the site.
+4. Address: canonical NAP. GST field: fill only if registered; do not fabricate.
+5. Website field → money page. Logo: `app_icon.png`.
+6. Complete TrustSEAL steps offered (verification badge = click-through).
+
+### 3. Sulekha business page
+1. Open `sulekha.com/business/` → List business → account with mobile OTP.
+2. Category: **Home Cleaning Services — Gurgaon**; service areas: DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar + pincode 122009.
+3. Paste **Long bio**, NAP block, money-page link, 10 photos.
+4. Enable the leads dashboard (Sulekha sends buyer requests by SMS — free inbound leads, not just SEO).
 
 ## Tier 2 — Profiles that pass authority (free, same-day)
 
