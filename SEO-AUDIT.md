@@ -153,3 +153,5 @@ Top-3 audit (Urban Company, NoBroker, Safaiwale + ZoopGo/TechSquad/MyGate/KleanH
 - `blog/room-cleaning-services-gurgaon` → `room cleaning services gurgaon` (single-room prices + partial-vs-full math; CTA → house page; linked from fullhome guides).
 - `blog/mr-deep-cleaning-vs-sachin-deep-cleaning` → `mr deep cleaning services` (fair comparison per competitor-page rules: verifiable facts only, "not publicly listed" where unknown, affiliation disclosed, Sep-2026 dated; CTA → deep page).
 - Titles 47–52 chars, descs 131–152, 1 H1, canonical, Article+FAQ+Breadcrumb JSON-LD, 1,100–1,400 words each.
+
+**Expansion (same eve):** all 4 grown to **~2,000–2,300 words, 11–13 H2s, 8–13 FAQs, 4–7 tables** — matching Safaiwale/KleanHomz depth (methods, maintenance 20/10 rule, exclusions, worked examples, methodology, landscape + benchmark tables, full 434-query long-tail woven in: company/agency/local variants, full-house/flat/new-home forms, bedroom/PG/nursery forms, best/cheap/same-day commercial forms).
