@@ -2,6 +2,7 @@
 // Helps Google crawl the articles and builds topical authority (service → guide).
 const GUIDES = [
   { serviceKey: 'deep', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  { serviceKey: 'deep', title: 'Cleaning Services in Gurgaon — Complete Guide', href: '/blog/cleaning-services-gurgaon-guide.html' },
   { serviceKey: 'deep', title: 'What Is Deep Cleaning? Complete Guide', href: '/blog/what-is-deep-cleaning-guide.html' },
   { serviceKey: 'deep', title: 'Deep Cleaners Near Me — Hire Verified Pros', href: '/blog/deep-cleaners-near-me-gurgaon.html' },
   { serviceKey: 'house', title: 'Home Cleaning Services Near Me — Gurgaon Guide', href: '/blog/home-cleaning-services-near-me-gurgaon.html' },
@@ -10,7 +11,8 @@ const GUIDES = [
   { serviceKey: 'fullhome', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
   { serviceKey: 'fullhome', title: 'Diwali Cleaning in Gurgaon — Price & Booking', href: '/blog/diwali-cleaning-gurgaon.html' },
   { serviceKey: 'fullhome', title: 'Dussehra Cleaning — Beat Diwali Rush', href: '/blog/dussehra-cleaning-gurgaon.html' },
-  { serviceKey: 'fullhome', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
+  { serviceKey: 'fullhome', title: 'Full Home Packages Compared — Prices & Time', href: '/blog/full-home-deep-cleaning-packages-gurgaon.html' },
+  { serviceKey: 'fullhome', title: 'Room Cleaning Services — Price Guide', href: '/blog/room-cleaning-services-gurgaon.html' },
   { serviceKey: 'kitchen', title: 'Kitchen Chimney Cleaning Guide', href: '/blog/kitchen-chimney-cleaning-guide.html' },
   { serviceKey: 'kitchen', title: 'Navratri Cleaning — Pooja-Ready Homes', href: '/blog/navratri-cleaning-gurgaon.html' },
   { serviceKey: 'kitchen', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },

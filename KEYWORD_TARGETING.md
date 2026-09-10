@@ -90,3 +90,14 @@ Build after fix: 45 shells, `sitemap.xml` 44 URLs (25 articles). Full diagnosis 
 | `navratri cleaning in gurgaon` (+ satvik/pooja) | `blog/navratri-cleaning-gurgaon` — kitchen + pooja angle | kitchen page |
 
 Build: 48 shells, sitemap 47 URLs (28 articles).
+
+## 2026-09-10 (eve) — GSC Instagram demand (6,257 impr) → 4 blogs
+
+| Query (impr) | Blog (primary) | CTA owner |
+|---|---|---|
+| `cleaning services gurgaon` (337) | `blog/cleaning-services-gurgaon-guide` — umbrella directory + quote method | deep page |
+| `full home deep cleaning` (370, 0 clicks) | `blog/full-home-deep-cleaning-packages-gurgaon` — package picker, exclusions | 3BHK page |
+| `room cleaning services gurgaon` (55) + room cluster (115) | `blog/room-cleaning-services-gurgaon` — single-room prices | house page |
+| `mr deep cleaning services` (172) + brand cluster (~220) | `blog/mr-deep-cleaning-vs-sachin-deep-cleaning` — fair comparison | deep page |
+
+Build: 52 shells, sitemap 51 URLs (32 articles). Competitor audit in `SEO-AUDIT.md` §2026-09-10 (eve).

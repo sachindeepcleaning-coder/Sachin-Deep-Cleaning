@@ -259,4 +259,24 @@ export const pages = [
     title: 'Navratri Cleaning in Gurgaon — Pooja-Ready Homes',
     description: 'Navratri cleaning in Gurgaon — satvik kitchen, pooja room & guest-ready home. Prices, 9-day prep checklist & slots. Since 2015. Updated Sep 2026.',
   },
+  {
+    file: 'blog/cleaning-services-gurgaon-guide', page: 'article',
+    title: 'Cleaning Services in Gurgaon — Price & Booking Guide',
+    description: 'Cleaning services in Gurgaon — every service, real prices, how to compare quotes & book verified pros. All sectors covered since 2015. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/full-home-deep-cleaning-packages-gurgaon', page: 'article',
+    title: 'Full Home Deep Cleaning in Gurgaon — Packages 2026',
+    description: 'Full home deep cleaning packages in Gurgaon — furnished vs unfurnished, partial vs full, inclusions, time & prices by BHK. Since 2015. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/room-cleaning-services-gurgaon', page: 'article',
+    title: 'Room Cleaning Services in Gurgaon — Price Guide',
+    description: 'Room cleaning services in Gurgaon — single bedroom, living room & partial cleans. Prices, inclusions & when partial beats full-home. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/mr-deep-cleaning-vs-sachin-deep-cleaning', page: 'article',
+    title: 'Mr Deep Cleaning vs Sachin Deep Cleaning — Compared',
+    description: 'Mr Deep Cleaning vs Sachin Deep Cleaning in Gurgaon — services, prices, verification & guarantee compared fairly. Updated Sep 2026.',
+  },
 ];

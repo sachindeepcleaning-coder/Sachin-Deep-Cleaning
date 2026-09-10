@@ -138,3 +138,18 @@ Owner confirmed operating **since 2015** (site previously said 2024). Aligned si
 - `blog/dussehra-cleaning-gurgaon` → `dussehra cleaning in gurgaon` 10× (+ `Dusshera` variant captured), post-monsoon + early-bird angle, CTA → 3BHK page. Linked from fullhome guides.
 - `blog/navratri-cleaning-gurgaon` → `navratri cleaning in gurgaon` 8×, satvik-kitchen/pooja angle, CTA → kitchen page. Linked from kitchen guides.
 - All: titles 47–49 chars, descs 145–152, 1 H1, canonical, Article+FAQ+Breadcrumb JSON-LD, 1,200–1,600 words, Hinglish FAQ, sectors + site-attested societies (DLF Magnolias, Emaar Emerald Hills, Godrej Aria, Unitech South City, Ansal Florance, Vatika/Nirvana/Ardee). Society names used as coverage + review-sector proof — swap in real festive job photos when available.
+
+---
+
+# 2026-09-10 (eve) — GSC Instagram demand → competitor audit → 4 blogs
+
+Source: `instagram.com_cleaning_service_in_gurgaon-Performance-on-Search-2026-09-10/Queries.csv` (GSC property for IG profile — real Gurgaon demand: 434 queries, 6,257 impr, 75 clicks). Top clusters: deep-cleaning core 2,099 (top `deep cleaning services gurgaon` 468), home/house core 2,113 (top `cleaning services gurgaon` 337), full-home 466 (top `full home deep cleaning` **370 impr, 0 clicks**), competitor-brand 259 (`mr deep cleaning services` 172 — verified real: mrdeepcleaning.com, thin site), room-level 115.
+
+Top-3 audit (Urban Company, NoBroker, Safaiwale + ZoopGo/TechSquad/MyGate/KleanHomz patterns): UC wins on package picker + inclusions/EXCLUSIONS + durations; Safaiwale blog (Aug 2026) on red-flags + quote-compare method; ZoopGo on Hinglish + price tables + sector FAQs + author byline; TechSquad on trust badges. Baked into new blogs: exclusions lists, package picker, Hinglish FAQs, since-2015 badges. Note: old domain `sachincleaning.online` ranks for same queries — self-competition, 301 consolidation still pending.
+
+4 new blogs (32 articles, 52 shells, sitemap 51 URLs):
+- `blog/cleaning-services-gurgaon-guide` → `cleaning services gurgaon` (umbrella directory + quote-compare method; CTA → deep page; linked from deep guides).
+- `blog/full-home-deep-cleaning-packages-gurgaon` → `full home deep cleaning` (package picker: furnished vs not, full vs partial, honest exclusions; CTA → 3BHK; linked from fullhome guides).
+- `blog/room-cleaning-services-gurgaon` → `room cleaning services gurgaon` (single-room prices + partial-vs-full math; CTA → house page; linked from fullhome guides).
+- `blog/mr-deep-cleaning-vs-sachin-deep-cleaning` → `mr deep cleaning services` (fair comparison per competitor-page rules: verifiable facts only, "not publicly listed" where unknown, affiliation disclosed, Sep-2026 dated; CTA → deep page).
+- Titles 47–52 chars, descs 131–152, 1 H1, canonical, Article+FAQ+Breadcrumb JSON-LD, 1,100–1,400 words each.
