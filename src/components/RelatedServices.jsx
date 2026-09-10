@@ -15,6 +15,7 @@ const LINKS = [
   { label: 'Office Deep Cleaning', href: 'office-deep-cleaning-gurgaon.html' },
   { label: 'Move-In / Move-Out', href: 'move-in-move-out-cleaning-gurgaon.html' },
   { label: 'Residential Cleaners Near Me', href: 'residential-cleaners-near-me.html' },
+  { label: 'Society & Bulk Cleaning', href: 'society-cleaning-services-gurgaon.html' },
 ];
 
 export default function RelatedServices({ currentHref }) {

@@ -12,6 +12,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const ServicePage = lazy(() => import('./pages/ServicePage.jsx'));
 const ThankYouPage = lazy(() => import('./pages/ThankYouPage.jsx'));
 const ResidentialPage = lazy(() => import('./pages/ResidentialPage.jsx'));
+const PartnersPage = lazy(() => import('./pages/PartnersPage.jsx'));
 const AllPagesPage = lazy(() => import('./pages/AllPagesPage.jsx'));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage.jsx'));
@@ -27,6 +28,7 @@ export default function App({ page = 'index', file = 'index', serviceKey, bhk })
   else if (page === 'contact') Page = ContactPage;
   else if (page === 'thank-you') Page = ThankYouPage;
   else if (page === 'residential') Page = ResidentialPage;
+  else if (page === 'partners') Page = PartnersPage;
   else if (page === 'allpages') Page = AllPagesPage;
   else if (page === 'about') Page = AboutPage;
   else if (page === 'blog') Page = BlogIndexPage;
