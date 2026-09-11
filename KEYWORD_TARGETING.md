@@ -101,3 +101,16 @@ Build: 48 shells, sitemap 47 URLs (28 articles).
 | `mr deep cleaning services` (172) + brand cluster (~220) | `blog/mr-deep-cleaning-vs-sachin-deep-cleaning` — fair comparison | deep page |
 
 Build: 52 shells, sitemap 51 URLs (32 articles). Competitor audit in `SEO-AUDIT.md` §2026-09-10 (eve).
+
+## 2026-09-11 — target.md plan (UC 4,160/mo + maid/app ~2,300/mo) — SHIPPED
+
+| Cluster | Query group | Captured on |
+|---|---|---|
+| A | urban company gurgaon / urbanclap / urban clap / urban company gurugram | `blog/urban-company-vs-sachin-deep-cleaning` (8 tables, 10 FAQs, 2,587 words) |
+| A | urban company home cleaning price / price list / charges | same — Table C + FAQs |
+| B | cleaning services app / house cleaning app / online booking | Table H of UC article **+** `book-cleaning-online-gurgaon` landing |
+| B | instant maid / online maid service gurgaon / book maid online | `book-cleaning-online-gurgaon` (1,606 words, 9 FAQs) |
+| B | house maid services gurgaon / maid services near me / maid service cleaning | `blog/house-maid-vs-deep-cleaning-gurgaon` (1,641 words, 9 FAQs) |
+| B | house maid vs deep cleaning / maid vs cleaning service | same |
+
+Build: 58 shells, sitemap 56 URLs (35 articles + booking landing). All live 200, console-clean, 56/56 indexed-queued.
