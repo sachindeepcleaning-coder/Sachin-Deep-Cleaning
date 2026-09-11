@@ -310,4 +310,14 @@ export const pages = [
     title: 'Book Cleaning Online in Gurgaon — No App Needed',
     description: 'Book house & deep cleaning online in Gurgaon without any app — 30-second WhatsApp booking, same-day slots, fixed price, pay after walkthrough.',
   },
+  {
+    file: 'blog/nobroker-cleaning-vs-sachin-deep-cleaning', page: 'article',
+    title: 'NoBroker Cleaning vs Sachin Deep Cleaning — Gurgaon',
+    description: 'NoBroker cleaning vs Sachin Deep Cleaning in Gurgaon — tier prices, mini-services, scope, rescheduling and reviews compared fairly. Sep 2026.',
+  },
+  {
+    file: 'blog/safaiwale-vs-sachin-deep-cleaning', page: 'article',
+    title: 'Safaiwale vs Sachin Deep Cleaning — Gurgaon Prices',
+    description: 'Safaiwale vs Sachin Deep Cleaning in Gurgaon — rate cards, scale, process, sectors and guarantees compared fairly. Sep 2026.',
+  },
 ];

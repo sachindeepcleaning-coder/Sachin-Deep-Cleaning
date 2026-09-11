@@ -133,11 +133,29 @@ npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
 
 ## 📊 Site State (2026-09-11)
 
-- **58 entry shells** (`npm run gen`) → **58 prerendered pages** in `dist/`
-- **Sitemap:** 56 URLs (excludes `thank-you`, `404`) · **Indexing API: 56/56 submitted, 0 failed**
-- **Blog:** 35 articles + booking landing page · every page ≥1,500 words, unique titles/descs/H1s
+- **60 entry shells** (`npm run gen`) → **60 prerendered pages** in `dist/`
+- **Sitemap:** 58 URLs (excludes `thank-you`, `404`) · **Indexing API: 56/56 submitted, 0 failed**
+- **Blog:** 37 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
 - **Performance:** route-split JS (money pages ~163KB initial vs 625KB monolith)
 - **Hydration rule:** SSR output must equal first client render — never mutate another component's DOM; keep effects out of render output.
+
+## 📝 Content System (how pages get built)
+
+- **Service pages** are data-driven: `src/lib/services.js` keyed by `serviceKey` (`deep/house/kitchen/bathroom/sofa/carpet/office/move/fullhome` + `bhk` 1–5), rendered by `ServicePage.jsx` with Service + FAQ + Reviews + HowTo + Breadcrumb JSON-LD, pricing tables, before/after sliders (deep/fullhome), related guides + services.
+- **Blog articles** live in `src/lib/blog.js` (`ARTICLES[]`: slug/file/title/description/dates/image/lead/faqs/cta/blocks). Block types: `p, lead, h2, h3, table{head,rows}, ul, ol, tip`; `**bold**` inline supported. Rendered by `BlogArticlePage.jsx` with Article + FAQ + Breadcrumb JSON-LD.
+- **Custom pages** (`index/residential/partners/landing/about/blog/allpages/contact/thank-you/404`) are hand-built components with own schema; new page types need an `app.jsx` lazy mapping + `pages.config.mjs` entry (see `BookingPage.jsx` + `page:'landing'` precedent).
+- **Content bars (enforced):** titles <60 chars, descriptions 120–160, exactly 1 H1, every page ≥1,500 prerendered words, primary keyword in title/H1/lead + body multiples, Hinglish FAQ on local-intent pages, CTA → money page, `since 2015` business history (never 2024), prices from the live rate card only.
+- **Comparison pages** (Mr/UC/NoBroker/Safaiwale/Best-office): verifiable public facts only, “Not publicly listed” where unknown, affiliation disclosed in lead + tip, figures dated (Sep 2026).
+- **Internal linking:** `RelatedGuides.jsx` (serviceKey → guides), `RelatedServices.jsx` (service mesh), blog CTA footer (3 money links), footer keyword links, `llms.txt` mirror for AI discovery.
+
+## 🔍 SEO Operations
+
+- **Keyword → page map:** `KEYWORD_TARGETING.md` (spend plan + coverage tables).
+- **Audit log:** `SEO-AUDIT.md` (dated sections per change).
+- **Backlinks:** `BACKLINKS.md` (NAP block, copy kit, tiered targets). Rule: never buy/automate links.
+- **Indexing discipline:** `scripts/submit-indexing.cjs` ONLY for newly written or materially changed URLs (`--url …`); never mass `--reset` except after site-wide rebuilds (200/day project quota, shared with old-domain cron).
+- **Pre-flight before every deploy:** same-origin assets exist, internal links resolve, JSON-LD parses, noindex only thank-you/404, zero third-party fetch hosts in initial HTML, Playwright console audit clean (repeat runs — hydration races are flaky).
+- **Docs policy:** `.md` files are local-only (`*.md` gitignored) except `README.md`, which stays on GitHub. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
 
 ## 📞 Business Details
 

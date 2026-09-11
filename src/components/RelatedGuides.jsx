@@ -8,6 +8,8 @@ const GUIDES = [
   { serviceKey: 'deep', title: 'Cleaning Services in Gurgaon — Complete Guide', href: '/blog/cleaning-services-gurgaon-guide.html' },
   { serviceKey: 'deep', title: 'What Is Deep Cleaning? Complete Guide', href: '/blog/what-is-deep-cleaning-guide.html' },
   { serviceKey: 'deep', title: 'Deep Cleaners Near Me — Hire Verified Pros', href: '/blog/deep-cleaners-near-me-gurgaon.html' },
+  { serviceKey: 'deep', title: 'NoBroker Cleaning vs Sachin — Compared', href: '/blog/nobroker-cleaning-vs-sachin-deep-cleaning.html' },
+  { serviceKey: 'deep', title: 'Safaiwale vs Sachin — Gurgaon Prices', href: '/blog/safaiwale-vs-sachin-deep-cleaning.html' },
   { serviceKey: 'house', title: 'Home Cleaning Services Near Me — Gurgaon Guide', href: '/blog/home-cleaning-services-near-me-gurgaon.html' },
   { serviceKey: 'house', title: 'How Often Should You Deep Clean Your Home?', href: '/blog/how-often-deep-clean-home-india.html' },
   { serviceKey: 'house', title: 'Kitchen Deep Cleaning vs Regular Cleaning', href: '/blog/kitchen-vs-regular-cleaning.html' },
