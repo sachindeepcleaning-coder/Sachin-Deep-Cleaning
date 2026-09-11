@@ -32,6 +32,8 @@ const FAQS = [
   ['Online booking Gurgaon me kaise karein bina app ke?', 'WhatsApp +91 9267905943 par BHK + sector bhejein — 30 minute me fixed price, same-day slot dopahar se pehle message par. Kaam ke baad payment, advance kabhi nahi.'],
   ['Can I book for my parents’ home in another sector?', 'Yes — share their sector, BHK and a contact number; we confirm the slot with you, clean with a walkthrough to them on video call if needed, and you pay on UPI after their approval. Popular for NRI families booking from abroad.'],
   ['Do you serve Delhi or Noida for online bookings?', 'Our teams cover all of Gurgaon (DLF to Manesar) same-day. Delhi/Noida requests are quoted case-by-case on WhatsApp depending on crew routing — message us and we confirm honestly instead of overpromising.'],
+  ['What if I need changes after booking online?', 'Message any change — date, scope, address — and it is done free, even morning-of. No app cancellation windows, no penalty logic, no rebooking fees. Your thread holds the full history if anything is ever disputed.'],
+  ['Can societies or offices book online in bulk?', 'Yes — facility desks and RWAs book cluster days over WhatsApp with consolidated GST invoicing, staff ID records and photo-logged walkthroughs. See our society cleaning page for the bulk playbook, or just message the requirement directly.'],
 ];
 
 export default function BookingPage({ url }) {
@@ -109,24 +111,56 @@ export default function BookingPage({ url }) {
         </div>
       </section>
 
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }} className="fade-up">
+            <div className="section-tag">App vs Direct</div>
+            <h2 className="section-title">What App Checkout Costs You (Beyond Money)</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Urban Company and NoBroker run the best-built booking apps in Indian home services. Here is the honest side-by-side so you can choose with open eyes.</p>
+          </div>
+          <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+              <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Booking Factor</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Cleaning Apps</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Our WhatsApp Line</th></tr></thead>
+              <tbody>
+                {[
+                  ['Get started', 'Download + account + OTP login', 'Send one message — no account'],
+                  ['Quote speed', 'Instant estimate, dynamic by slot', 'Fixed price on call, under 30 minutes'],
+                  ['Price character', 'Platform fee baked in (~25–30%)', 'Direct rates, no commission layer'],
+                  ['Payment timing', 'Online prepay at confirm', 'Pay after walkthrough approval'],
+                  ['Rescheduling', 'App policy windows', 'Free by message, even morning-of'],
+                  ['Who answers', 'Support queue + rotating pros', 'Manager directly + same crew repeats'],
+                  ['Privacy footprint', 'App permissions, tracking', 'Private chat only, no tracking'],
+                ].map(([a, b, c], i) => (
+                  <tr key={a} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', fontWeight: 700 }}>{a}</td>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{b}</td>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{c}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="section-inner">
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto' }} className="fade-up">
             <div className="section-tag">Honest Note</div>
-            <h2 className="section-title">If You Need a Daily Maid, We’ll Say So</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>We sell professional cleaning visits — not live-in maids. If your need is daily chores, our house-maid-vs-deep-cleaning guide maps the right hire, and our weekly plans (from ₹499/visit) cover everything between maid days and quarterly resets. No bait, no app required to find out.</p>
+            <h2 className="section-title">If You Need a Daily Maid, We\u2019ll Say So</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>We sell professional cleaning visits \u2014 not live-in maids. If your need is daily chores, our house-maid-vs-deep-cleaning guide maps the right hire, and our weekly plans (from \u20b9499/visit) cover everything between maid days and quarterly resets. No bait, no app required to find out.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
               <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Booking</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Fixed Price</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Time</th></tr></thead>
               <tbody>
                 {[
-                  ['1 RK / Studio deep clean', 'From ₹2,000', '3–5 hrs'],
-                  ['1 BHK deep clean', 'From ₹2,500', '5–6 hrs'],
-                  ['2 BHK deep clean', 'From ₹4,500', '7–8 hrs'],
-                  ['3 BHK deep clean', 'From ₹5,500', '9–10 hrs'],
-                  ['Weekly house cleaning', 'From ₹499/visit', '2–3 hrs'],
-                  ['Kitchen / Bathroom', '₹1,500+ / ₹800+', '3–4 / 1.5–2 hrs'],
+                  ['1 RK / Studio deep clean', 'From \u20b92,000', '3\u20135 hrs'],
+                  ['1 BHK deep clean', 'From \u20b92,500', '5\u20136 hrs'],
+                  ['2 BHK deep clean', 'From \u20b94,500', '7\u20138 hrs'],
+                  ['3 BHK deep clean', 'From \u20b95,500', '9\u201310 hrs'],
+                  ['Weekly house cleaning', 'From \u20b9499/visit', '2\u20133 hrs'],
+                  ['Kitchen / Bathroom', '\u20b91,500+ / \u20b9800+', '3\u20134 / 1.5\u20132 hrs'],
                 ].map(([a, b, c], i) => (
                   <tr key={a} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
                     <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{a}</td>
@@ -137,7 +171,42 @@ export default function BookingPage({ url }) {
               </tbody>
             </table>
           </div>
-          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call — identical in DLF, Sohna Road, Golf Course Road and all sectors.</p>
+          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call \u2014 identical in DLF, Sohna Road, Golf Course Road and all sectors.</p>
+          <div style={{ textAlign: 'center', maxWidth: '760px', margin: '32px auto 0' }} className="fade-up">
+            <div className="section-tag">Who Books Online Most</div>
+            <h2 className="section-title">Built for Busy Gurgaon Lives</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Working couples booking between meetings, NRI families managing parents\u2019 flats from abroad, bachelors in shared flats splitting a link, new moms who cannot take calls \u2014 if typing is easier than talking right now, this page is your counter. Same verified crew, same fixed prices, same pay-after walkthrough as every other booking channel.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }} className="fade-up">
+            <div className="section-tag">Slot Calendar</div>
+            <h2 className="section-title">Best Times to Book Online</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Same teams, same prices — but timing decides whether you get today or next week.</p>
+          </div>
+          <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+              <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>When You Message</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>What Happens</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Tip</th></tr></thead>
+              <tbody>
+                {[
+                  ['Weekday before noon', 'Same-day slot, nearest roster', 'Fastest confirmations of the week'],
+                  ['Weekday evening', 'Next-morning priority', 'Mention early time preference'],
+                  ['Saturday morning', 'Weekend slot if booked by Friday', 'Fridays fill — message Thursday'],
+                  ['Festival weeks (Diwali/Navratri)', '2–3 day lead needed', 'Book Dussehra, touch-up Diwali week'],
+                  ['Monsoon months', 'Mould/terrace add-ons offered', 'Ask for drain + moss check free'],
+                ].map(([a, b, c], i) => (
+                  <tr key={a} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', fontWeight: 700 }}>{a}</td>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{b}</td>
+                    <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{c}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
