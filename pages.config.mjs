@@ -295,4 +295,19 @@ export const pages = [
     title: 'Best Office Deep Cleaning Services in Gurgaon — Top 5',
     description: 'Best office deep cleaning services in Gurgaon compared — Balaji, Safaiwale, AYS Max, ZoopGo vs Sachin. Prices, licences & proof. Updated Sep 2026.',
   },
+  {
+    file: 'blog/urban-company-vs-sachin-deep-cleaning', page: 'article',
+    title: 'Urban Company vs Sachin Deep Cleaning Gurgaon — Compared',
+    description: 'Urban Company vs Sachin Deep Cleaning in Gurgaon — full-home, kitchen & mini-service prices, scope, reviews and damage policy compared line-by-line. Sep 2026.',
+  },
+  {
+    file: 'blog/house-maid-vs-deep-cleaning-gurgaon', page: 'article',
+    title: 'House Maid vs Deep Cleaning — Gurgaon Cost Guide',
+    description: 'House maid vs deep cleaning in Gurgaon — live-in costs, what maids can’t do, weekly plans from ₹499 and the hybrid most families run. Updated Sep 2026.',
+  },
+  {
+    file: 'book-cleaning-online-gurgaon', page: 'landing',
+    title: 'Book Cleaning Online in Gurgaon — No App Needed',
+    description: 'Book house & deep cleaning online in Gurgaon without any app — 30-second WhatsApp booking, same-day slots, fixed price, pay after walkthrough.',
+  },
 ];

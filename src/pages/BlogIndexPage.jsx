@@ -25,7 +25,7 @@ export default function BlogIndexPage({ url }) {
           </p>
           <p className="blog-lead" style={{ marginTop: '12px' }}>
             Start with your intent: <strong>prices</strong> (cost guides by BHK and service),
-            <strong> booking</strong> (near-me dispatch, packages, how to verify a cleaner),
+            <strong> booking</strong> (near-me dispatch, packages, how to verify a cleaner — <strong>and Urban Company vs us</strong>),
             <strong> know-how</strong> (chimney, hard-water, sofa and carpet methods), or
             <strong> festive</strong> (Diwali, Dussehra and Navratri playbooks from 10+ seasons since 2015).
             Every guide ends with a fixed-price quote path — no “call for price” dead-ends.
