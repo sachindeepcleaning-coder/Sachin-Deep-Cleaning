@@ -7,3 +7,10 @@ dist-ssr
 
 # Local-only docs (never push .md to GitHub)
 *.md
+
+# Secrets safety net (service keys must never enter git)
+.env*
+*.pem
+*key.json
+*service-account*.json
+*credentials*.json
