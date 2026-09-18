@@ -341,4 +341,46 @@ export const pages = [
     title: 'Sofa Cleaning Price Gurgaon — ₹499/Seat (2026)',
     description: 'Sofa cleaning price Gurgaon ₹499/seat dry, ₹599 shampoo. 3-seater ₹1,497–₹1,797, 5-seater ₹2,495. Drying, fabric, stain guide. Updated Sep 2026.',
   },
+  // ── Batch 2 — bathroom/kitchen price + micro-local (not thin) ──
+  {
+    file: 'blog/bathroom-cleaning-price-gurgaon-per-bathroom', page: 'article',
+    title: 'Bathroom Cleaning Price Gurgaon — ₹800/Bath',
+    description: 'Bathroom cleaning price Gurgaon ₹800/bath. Descaling, grout, commode, glass. 2-bath ₹1,400, hard-water included. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/kitchen-cleaning-price-gurgaon-chimney', page: 'article',
+    title: 'Kitchen Cleaning Price Gurgaon — ₹1,500 (Chimney)',
+    description: 'Kitchen cleaning price Gurgaon ₹1,500. Chimney dismantle, hob, cabinets, tiles, sink. Modular vs basic. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dlf-phase-3-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning DLF Phase 3 Gurgaon — Same-Day',
+    description: 'Deep cleaning DLF Phase 3 Gurgaon — same-day slots, gated entry, 2BHK ₹4,500. RWA & villa service, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sohna-road-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sohna Road Gurgaon — All Sectors',
+    description: 'Deep cleaning Sohna Road Gurgaon — Vatika, South City, Nirvana, all Sohna sectors. Same-day, pay after walkthrough. Updated Sep 2026.',
+  },
+  // ── Batch 3 — Golf + house price + end-tenancy + pest vs (not thin) ──
+  {
+    file: 'blog/golf-course-road-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Golf Course Road — Premium Homes',
+    description: 'Deep cleaning Golf Course Road Gurgaon — villas, premium apartments, same-day. Verified team, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/house-cleaning-price-gurgaon-per-visit', page: 'article',
+    title: 'House Cleaning Price Gurgaon — ₹499/Visit',
+    description: 'House cleaning price Gurgaon ₹499/visit. Weekly/monthly plans, one-time vs subscription, inclusions. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/end-of-tenancy-cleaning-gurgaon', page: 'article',
+    title: 'End of Tenancy Cleaning Gurgaon — Deposit Back',
+    description: 'End of tenancy cleaning Gurgaon — landlord checklist, deposit-safe handover, ₹1,999–₹8,000. Inventory included. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/pest-control-vs-deep-cleaning-gurgaon', page: 'article',
+    title: 'Pest Control vs Deep Cleaning Gurgaon — Which First?',
+    description: 'Pest control vs deep cleaning Gurgaon — order, gap, combo price. Deep first, pest after 48h. Updated Sep 2026.',
+  },
 ];
