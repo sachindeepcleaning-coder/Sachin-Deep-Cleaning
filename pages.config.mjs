@@ -320,4 +320,25 @@ export const pages = [
     title: 'Safaiwale vs Sachin Deep Cleaning — Gurgaon Prices',
     description: 'Safaiwale vs Sachin Deep Cleaning in Gurgaon — rate cards, scale, process, sectors and guarantees compared fairly. Sep 2026.',
   },
+  // ── New: Price-intent blogs (Batch 1 — 1/2/3BHK + sofa per-seat, not thin) ──
+  {
+    file: 'blog/1bhk-deep-cleaning-price-gurgaon', page: 'article',
+    title: '1 BHK Deep Cleaning Price Gurgaon — From ₹2,500',
+    description: '1 BHK deep cleaning price in Gurgaon from ₹2,500 (empty) to ₹3,500 (furnished). What’s included, time, crew & fixed pay-after quote. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/2bhk-deep-cleaning-price-gurgaon', page: 'article',
+    title: '2 BHK Deep Cleaning Price Gurgaon — ₹4,500 Fixed',
+    description: '2 BHK deep cleaning price Gurgaon ₹4,500 fixed. 2-bed + 2-bath scope, 7–8 hrs, 4 cleaners. Furnished vs empty, add-ons. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/3bhk-deep-cleaning-price-gurgaon', page: 'article',
+    title: '3 BHK Deep Cleaning Price Gurgaon — ₹5,500 Fixed',
+    description: '3 BHK deep cleaning price Gurgaon ₹5,500. 3-bed, 2–3 bath, balcony, 9–10 hrs, 4 cleaners. What’s included, exclusions. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sofa-cleaning-price-gurgaon-per-seat', page: 'article',
+    title: 'Sofa Cleaning Price Gurgaon — ₹499/Seat (2026)',
+    description: 'Sofa cleaning price Gurgaon ₹499/seat dry, ₹599 shampoo. 3-seater ₹1,497–₹1,797, 5-seater ₹2,495. Drying, fabric, stain guide. Updated Sep 2026.',
+  },
 ];
