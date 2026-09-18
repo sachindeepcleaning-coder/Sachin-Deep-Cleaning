@@ -4361,7 +4361,16 @@ export const ARTICLES = [
         ['Vyapar Kendra', 'Main market, station road side'],
         ['Phase 1 fringe', 'Phase 1 villas adjoining Sushant Lok 1'],
       ]},
-      { t: 'tip', x: 'Sushant Lok 1 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sushant Lok 1 (Full List)' },
+      { t: 'p', x: 'We have worked in C-Block Sushant Lok 1, B-Block Sushant Lok 1, Vyapar Kendra and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **C-Block Sushant Lok 1** — deep cleaning done same-day, pay after',
+        'We have worked in **B-Block Sushant Lok 1** — deep cleaning done same-day, pay after',
+        'We have worked in **Vyapar Kendra** — deep cleaning done same-day, pay after',
+        'We have worked in **E-Block Sushant Lok 1** — deep cleaning done same-day, pay after',
+        'We have worked in **Sector 43-44 fringe** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sushant Lok 1 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4393,7 +4402,16 @@ export const ARTICLES = [
         ['3BHK Sushant Lok 2', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa Sushant Lok 2', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'Sushant Lok 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sushant Lok 2 (Full List)' },
+      { t: 'p', x: 'We have worked in B-Block Sushant Lok 2, C-Block fringe, Sector 57 and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **B-Block Sushant Lok 2** — deep cleaning done same-day, pay after',
+        'We have worked in **C-Block fringe** — deep cleaning done same-day, pay after',
+        'We have worked in **Sector 57** — deep cleaning done same-day, pay after',
+        'We have worked in **Rosewood City** — deep cleaning done same-day, pay after',
+        'We have worked in **Green View** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sushant Lok 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4425,7 +4443,16 @@ export const ARTICLES = [
         ['3BHK Sushant Lok 3', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Builder floor Sushant Lok 3', 'Large living, 3–4 baths', '₹6,500', 'Full day'],
       ]},
-      { t: 'tip', x: 'Sushant Lok 3 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sushant Lok 3 (Full List)' },
+      { t: 'p', x: 'We have worked in Block A Sushant Lok 3, Block B Sushant Lok 3, Block C Sushant Lok 3 and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Block A Sushant Lok 3** — deep cleaning done same-day, pay after',
+        'We have worked in **Block B Sushant Lok 3** — deep cleaning done same-day, pay after',
+        'We have worked in **Block C Sushant Lok 3** — deep cleaning done same-day, pay after',
+        'We have worked in **Sectors 57-58** — deep cleaning done same-day, pay after',
+        'We have worked in **Uppal Southend** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sushant Lok 3 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4457,7 +4484,16 @@ export const ARTICLES = [
         ['3BHK DLF Phase 1', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa DLF Phase 1', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'DLF Phase 1 deep cleaning in Gurgaon — fixed BHK price, premium-care method. WhatsApp tower + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 1 (Full List)' },
+      { t: 'p', x: 'We have worked in DLF Magnolias, DLF Aralias, Belvedere Towers and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **DLF Magnolias** — deep cleaning done same-day, pay after',
+        'We have worked in **DLF Aralias** — deep cleaning done same-day, pay after',
+        'We have worked in **Belvedere Towers** — deep cleaning done same-day, pay after',
+        'We have worked in **Silver Oaks** — deep cleaning done same-day, pay after',
+        'We have worked in **Qutub Enclave** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'DLF Phase 1 deep cleaning in Gurgaon — fixed BHK price, premium-care method. WhatsApp tower + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4489,7 +4525,16 @@ export const ARTICLES = [
         ['3BHK DLF Phase 2', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa DLF Phase 2', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'DLF Phase 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 2 (Full List)' },
+      { t: 'p', x: 'We have worked in Gurgaon One, Carlton Estate, Heritage City and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Gurgaon One** — deep cleaning done same-day, pay after',
+        'We have worked in **Carlton Estate** — deep cleaning done same-day, pay after',
+        'We have worked in **Heritage City** — deep cleaning done same-day, pay after',
+        'We have worked in **Green View** — deep cleaning done same-day, pay after',
+        'We have worked in **Classic Apartments** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'DLF Phase 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4522,7 +4567,16 @@ export const ARTICLES = [
         ['3BHK DLF Phase 4', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa DLF Phase 4', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'DLF Phase 4 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 4 (Full List)' },
+      { t: 'p', x: 'We have worked in Galleria Market, Supermart 1, Supermart 2 and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Galleria Market** — deep cleaning done same-day, pay after',
+        'We have worked in **Supermart 1** — deep cleaning done same-day, pay after',
+        'We have worked in **Supermart 2** — deep cleaning done same-day, pay after',
+        'We have worked in **Sectors 27-28** — deep cleaning done same-day, pay after',
+        'We have worked in **DLF City Phase 4** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'DLF Phase 4 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4554,7 +4608,16 @@ export const ARTICLES = [
         ['3BHK DLF Phase 5', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa DLF Phase 5', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'DLF Phase 5 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp sector + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 5 (Full List)' },
+      { t: 'p', x: 'We have worked in Sector 43 DLF 5, Sector 53 DLF 5, DLF 5 blocks and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Sector 43 DLF 5** — deep cleaning done same-day, pay after',
+        'We have worked in **Sector 53 DLF 5** — deep cleaning done same-day, pay after',
+        'We have worked in **DLF 5 blocks** — deep cleaning done same-day, pay after',
+        'We have worked in **Golf Course Road fringe** — deep cleaning done same-day, pay after',
+        'We have worked in **South City 2 adjoining** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'DLF Phase 5 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp sector + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4586,7 +4649,16 @@ export const ARTICLES = [
         ['3BHK Sector 65', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa Sector 65', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'Sector 65 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sector 65 (Full List)' },
+      { t: 'p', x: 'We have worked in World Spa Sector 65, World Spa West, Nirvana Country and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **World Spa Sector 65** — deep cleaning done same-day, pay after',
+        'We have worked in **World Spa West** — deep cleaning done same-day, pay after',
+        'We have worked in **Nirvana Country** — deep cleaning done same-day, pay after',
+        'We have worked in **Emaar Emerald Hills** — deep cleaning done same-day, pay after',
+        'We have worked in **Badshahpur fringe** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sector 65 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4618,7 +4690,16 @@ export const ARTICLES = [
         ['3BHK Sector 66', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa Sector 66', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'Sector 66 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sector 66 (Full List)' },
+      { t: 'p', x: 'We have worked in Vatika City Sector 66, Ansal API Sector 66, Badshahpur Sector 66 and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Vatika City Sector 66** — deep cleaning done same-day, pay after',
+        'We have worked in **Ansal API Sector 66** — deep cleaning done same-day, pay after',
+        'We have worked in **Badshahpur Sector 66** — deep cleaning done same-day, pay after',
+        'We have worked in **Sector 66 plots** — deep cleaning done same-day, pay after',
+        'We have worked in **Sohna Road entry** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sector 66 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4650,7 +4731,16 @@ export const ARTICLES = [
         ['3BHK Sector 67', '3 beds + 2–3 baths', '₹5,500', '9–10 hrs'],
         ['Villa Sector 67', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
-      { t: 'tip', x: 'Sector 67 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sector 67 (Full List)' },
+      { t: 'p', x: 'We have worked in Ansal Essencia Sector 67, Housing Board Sector 67, Sector 67 plots and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
+      { t: 'ul', items: [
+        'We have worked in **Ansal Essencia Sector 67** — deep cleaning done same-day, pay after',
+        'We have worked in **Housing Board Sector 67** — deep cleaning done same-day, pay after',
+        'We have worked in **Sector 67 plots** — deep cleaning done same-day, pay after',
+        'We have worked in **Badshahpur Road** — deep cleaning done same-day, pay after',
+        'We have worked in **Vatika Emilia approach** — deep cleaning done same-day, pay after'
+      ]},
+{ t: 'tip', x: 'Sector 67 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
