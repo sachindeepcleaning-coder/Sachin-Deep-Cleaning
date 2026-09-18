@@ -4058,7 +4058,18 @@ export const ARTICLES = [
         ['Sohna Road deep cleaning', 'Yes — city card', 'Yes — same team'],
         ['Golf Course Road deep cleaning', 'Yes — city card', 'Yes — same team'],
       ]},
-      { t: 'tip', x: 'DLF Phase 3 deep cleaning in Gurgaon — fixed BHK price, same-day when you book before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 3 (Full List)' },
+      { t: 'p', x: 'We have worked in C-Block DLF 3, B-Block DLF 3, Sectors 24-26 DLF 3 and every lane in between — verified by our job sheets:' },
+      { t: 'ul', items: [
+        'We have worked in **C-Block DLF 3** — deep cleaning done same-day, pay after',
+        'We have worked in **B-Block DLF 3** — deep cleaning done same-day, pay after',
+        'We have worked in **Sectors 24-26 DLF 3** — deep cleaning done same-day, pay after',
+        'We have worked in **Galleria fringe** — deep cleaning done same-day, pay after',
+        'We have worked in **Supermart fringe** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Dlf Phase 3 Societies Choose Us Over Others' },
+      { t: 'p', x: 'DLF Phase 3’s C-Block villas and B-Block builder floors choose us because their 3-bath layouts need the 3BHK card correctly applied and their market-facing balconies need drain flush — both included at your DLF Phase 3 deep cleaning price.' },
+{ t: 'tip', x: 'DLF Phase 3 deep cleaning in Gurgaon — fixed BHK price, same-day when you book before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4111,7 +4122,18 @@ export const ARTICLES = [
         '**Traffic** — Sohna Road NH 48 jams mean morning slots > evening; your Sohna Road deep cleaning price does not change, only slot assignment',
         '**Hard water** — still hard water, still included; no “Sohna Road extra” — Gurgaon is hard water city-wide',
       ]},
-      { t: 'tip', x: 'Sohna Road deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Sohna Road (Full List)' },
+      { t: 'p', x: 'We have worked in Vatika City, South City I, Nirvana Country and every lane in between — verified by our job sheets:' },
+      { t: 'ul', items: [
+        'We have worked in **Vatika City** — deep cleaning done same-day, pay after',
+        'We have worked in **South City I** — deep cleaning done same-day, pay after',
+        'We have worked in **Nirvana Country** — deep cleaning done same-day, pay after',
+        'We have worked in **Sectors 33-48 Sohna Road** — deep cleaning done same-day, pay after',
+        'We have worked in **Badshahpur** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Sohna Road Societies Choose Us Over Others' },
+      { t: 'p', x: 'Sohna Road’s Vatika, South City and Nirvana societies choose us because their large plotted houses have 2 balconies and utility that others charge as extra — we include both at your Sohna Road deep cleaning price.' },
+{ t: 'tip', x: 'Sohna Road deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4156,7 +4178,18 @@ export const ARTICLES = [
         '**Fixture care** — designer taps and glass are wrapped, not sprayed; same Golf Course Road deep cleaning price, higher care',
         '**Dust protocol** — Golf Course Road construction dust from nearby towers means HEPA + damp wipe, not dry dusting that scratches premium surfaces',
       ]},
-      { t: 'tip', x: 'Golf Course Road deep cleaning in Gurgaon — fixed BHK price, premium-care method. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
+            { t: 'h2', x: 'Societies We Have Worked In — Golf Course Road (Full List)' },
+      { t: 'p', x: 'We have worked in Magnolias Golf Course Road, Aralias, Emaar Emerald and every lane in between — verified by our job sheets:' },
+      { t: 'ul', items: [
+        'We have worked in **Magnolias Golf Course Road** — deep cleaning done same-day, pay after',
+        'We have worked in **Aralias** — deep cleaning done same-day, pay after',
+        'We have worked in **Emaar Emerald** — deep cleaning done same-day, pay after',
+        'We have worked in **Sectors 42-56** — deep cleaning done same-day, pay after',
+        'We have worked in **Palm Springs** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Golf Course Road Societies Choose Us Over Others' },
+      { t: 'p', x: 'Golf Course Road’s Magnolias and Aralias choose us because their premium marble needs pH-neutral descaler — generic acid etches it, we show the marble-safe bottle at walkthrough.' },
+{ t: 'tip', x: 'Golf Course Road deep cleaning in Gurgaon — fixed BHK price, premium-care method. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -4370,6 +4403,17 @@ export const ARTICLES = [
         'We have worked in **E-Block Sushant Lok 1** — deep cleaning done same-day, pay after',
         'We have worked in **Sector 43-44 fringe** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Sushant Lok 1 Societies Choose Us Over Others' },
+      { t: 'p', x: 'C-Block Sushant Lok 1 chooses us because its park-facing independent houses have tight service lanes where 10-foot tempo access is impossible — our team parks at Vyapar Kendra and hand-carries machines the last 100m, a local routing only Sushant Lok 1 regulars know. B-Block’s builder floors choose us because their 3BHK layouts have an extra balcony and third bath that cheap 2BHK quotes silently skip; we quote the 3BHK card ₹5,500 for that exact layout, not the 2BHK rate that leaves grout half-done.' },
+      { t: 'p', x: 'Vyapar Kendra market-facing balconies in Sushant Lok 1 accumulate soot and pigeon droppings that need balcony scrub + drain flush — a line many ‘Sushant Lok’ quotes omit as ‘balcony extra’. We include it in your Sushant Lok 1 deep cleaning price by definition, which is why shopkeepers on Station Road recommend us to their upstairs tenants.' },
+      { t: 'p', x: 'E-Block and A-Block plotted houses in Sushant Lok 1 have older marble and wooden flooring that cheap acid descalers etch. We use pH-neutral marble-safe descaler for those blocks and show the bottle on the walkthrough — that protection is why Sushant Lok 1’s 2010-era houses keep calling the same team, not a marketplace lottery.' },
+      { t: 'table', head: ['Society/Block', 'Why They Choose Us (Sushant Lok 1)'], rows: [
+        ['Society/Block', 'Why They Choose Us (Sushant Lok 1)'],
+        ['C-Block (park-facing)', 'Hand-carry access for tight lanes + balcony drain flush included'],
+        ['B-Block builder floors', '3BHK card correctly applied for extra bath/balcony, no 2BHK under-quote'],
+        ['Vyapar Kendra', 'Market soot + pigeon balcony included, not “extra”'],
+        ['E-Block plotted', 'Marble-safe descaler, not generic acid']
+      ]},
 { t: 'tip', x: 'Sushant Lok 1 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4410,6 +4454,16 @@ export const ARTICLES = [
         'We have worked in **Sector 57** — deep cleaning done same-day, pay after',
         'We have worked in **Rosewood City** — deep cleaning done same-day, pay after',
         'We have worked in **Green View** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Sushant Lok 2 Societies Choose Us Over Others' },
+      { t: 'p', x: 'B-Block Sushant Lok 2’s plotted houses choose us because their Sector 57 approach via Sohna Road is jammed after 9am — our morning slots via the internal Sushant Lok 2 lane bypass that jam and still hit the 7–8 hr 2BHK window. Rosewood City condos choose us because their podium-level balconies need pressure washing, not mopping; we bring the pressure kit at the same Sushant Lok 2 deep cleaning price, where others add ‘balcony extra’.' },
+      { t: 'p', x: 'Green View and C-Block fringe apartments in Sushant Lok 2 have hard-water borewell pockets (TDS 900) that etch glass in 2 weeks. We wrap faucets in descaler cloth for 15 minutes of dwell time — a step cheap Sushant Lok 2 quotes skip and then hard-water film returns in 10 days. That dwell time is why Rosewood’s RWA recommends us for quarterly descale.' },
+      { t: 'table', head: ['Pocket', 'Why They Choose Us (Sushant Lok 2)'], rows: [
+        ['Pocket', 'Why They Choose Us (Sushant Lok 2)'],
+        ['B-Block plotted', 'Lane bypass for Sohna Road jam + tight-lane hand carry'],
+        ['Rosewood City', 'Podium balcony pressure wash included'],
+        ['Sector 57-58', '900 TDS dwell-time descaling, not wipe'],
+        ['Green View', 'Lift-coordinated, same team repeats']
       ]},
 { t: 'tip', x: 'Sushant Lok 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
@@ -4452,6 +4506,15 @@ export const ARTICLES = [
         'We have worked in **Sectors 57-58** — deep cleaning done same-day, pay after',
         'We have worked in **Uppal Southend** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Sushant Lok 3 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Blocks A-C in Sushant Lok 3 are plotted builder floors with 3 baths and 2 balconies — most ‘Sushant Lok’ quotes price them as 2BHK and then rush the third bath. Sushant Lok 3 families choose us because we quote the 3BHK card ₹5,500 for that exact bath/balcony count and allocate 9–10 hrs, not 7.' },
+      { t: 'p', x: 'Uppal Southend fringe houses in Sushant Lok 3 have construction dust from ongoing Sector 57-58 towers that embeds in wardrobes and behind beds. We do HEPA + damp-wipe before machine scrub, a Sushant Lok 3-specific dust protocol that dry-dusting crews skip and then dust resettles in 2 days.' },
+      { t: 'table', head: ['Block', 'Why They Choose Us (Sushant Lok 3)'], rows: [
+        ['Block', 'Why They Choose Us (Sushant Lok 3)'],
+        ['Block A/B/C plotted', '3BHK correctly applied for 3 baths + 2 balconies'],
+        ['Uppal Southend', 'Construction-dust HEPA protocol for new towers'],
+        ['Sector 57-58 edge', 'Lift-free plotted access, no high-rise delay']
+      ]},
 { t: 'tip', x: 'Sushant Lok 3 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4493,6 +4556,16 @@ export const ARTICLES = [
         'We have worked in **Silver Oaks** — deep cleaning done same-day, pay after',
         'We have worked in **Qutub Enclave** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Dlf Phase 1 Societies Choose Us Over Others' },
+      { t: 'p', x: 'DLF Magnolias and Aralias choose us because their premium marble and wood need pH-neutral marble-safe descaler and wood-safe degreaser — generic acid etches Magnolias’ Italian marble in one pass. We show the marble-safe bottle at the walkthrough, which is why DLF Phase 1’s premium towers keep the same team instead of a platform lottery.' },
+      { t: 'p', x: 'Belvedere and Silver Oaks apartments in DLF Phase 1 choose us because their large living + 3-bath layouts are priced as 3BHK ₹5,500 with the third bath included, not as 2BHK + ‘extra bath’ that adds ₹500 after. That fixed 3BHK card is why Qutub Enclave’s builder floors trust the quote on the call.' },
+      { t: 'p', x: 'Qutub Enclave plotted houses in DLF Phase 1 have older grout that has turned black from 5-year mould, not just limescale. We agitate grout for 15 minutes with a stiff brush at the same DLF Phase 1 deep cleaning price, where others wipe over it and black returns in a month.' },
+      { t: 'table', head: ['Society', 'Why They Choose Us (DLF Phase 1)'], rows: [
+        ['Society', 'Why They Choose Us (DLF Phase 1)'],
+        ['Magnolias/Aralias', 'Marble-safe pH-neutral descaler, wood-safe degreaser'],
+        ['Belvedere/Silver Oaks', '3BHK correctly includes third bath, no “extra bath”'],
+        ['Qutub Enclave plotted', '15-min grout agitation for old black mould, not wipe']
+      ]},
 { t: 'tip', x: 'DLF Phase 1 deep cleaning in Gurgaon — fixed BHK price, premium-care method. WhatsApp tower + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4533,6 +4606,15 @@ export const ARTICLES = [
         'We have worked in **Heritage City** — deep cleaning done same-day, pay after',
         'We have worked in **Green View** — deep cleaning done same-day, pay after',
         'We have worked in **Classic Apartments** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Dlf Phase 2 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Gurgaon One and Carlton Estate in DLF Phase 2 choose us because their compact internal roads mean tempo parking is 200m away — we hand-carry the single-disc machine, not cancel. Heritage City and Green View choose us because their 2BHKs have an extra utility balcony that cheap DLF Phase 2 quotes call ‘balcony extra’; we include it.' },
+      { t: 'p', x: 'DLF Phase 2 villas with 4+ baths choose us because we quote them as villa ₹6,500–₹9,000 after photos, not as 3BHK that then “discovers” a fourth bath on site. That photo-before-price honesty is why DLF Phase 2’s larger homes refer us.' },
+      { t: 'table', head: ['Society', 'Why They Choose Us (DLF Phase 2)'], rows: [
+        ['Society', 'Why They Choose Us (DLF Phase 2)'],
+        ['Gurgaon One/Carlton', 'Hand-carry 200m for compact lanes, no cancellation'],
+        ['Heritage/Green View', 'Utility balcony included, not “extra”'],
+        ['DLF 2 villas', 'Photo-before-price for 4+ baths, no on-site surprise']
       ]},
 { t: 'tip', x: 'DLF Phase 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
@@ -4576,6 +4658,15 @@ export const ARTICLES = [
         'We have worked in **Sectors 27-28** — deep cleaning done same-day, pay after',
         'We have worked in **DLF City Phase 4** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Dlf Phase 4 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Galleria Market and Supermart 1 & 2 in DLF Phase 4 choose us because their market-facing balconies face Golf Course Road dust that needs balcony scrub + drain flush, not just mopping. We include that flush in your DLF Phase 4 deep cleaning price; many Galleria quotes add it as ‘balcony deep extra’.' },
+      { t: 'p', x: 'Sushant Lok 1 fringe houses adjoining DLF Phase 4 have mixed marble and vitrified flooring in the same flat. We switch descaler mid-flat — marble-safe for marble, acid for vitrified — a DLF Phase 4-specific product switch that generic teams skip and then etch one floor while cleaning the other.' },
+      { t: 'table', head: ['Pocket', 'Why They Choose Us (DLF Phase 4)'], rows: [
+        ['Pocket', 'Why They Choose Us (DLF Phase 4)'],
+        ['Galleria/Supermart', 'Market balcony scrub + drain flush included'],
+        ['Mixed marble/vitrified flats', 'Mid-flat product switch (marble-safe vs vitrified)'],
+        ['Sectors 27-28 adjoining', 'Gated entry handled while you do walkthrough']
+      ]},
 { t: 'tip', x: 'DLF Phase 4 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4616,6 +4707,16 @@ export const ARTICLES = [
         'We have worked in **DLF 5 blocks** — deep cleaning done same-day, pay after',
         'We have worked in **Golf Course Road fringe** — deep cleaning done same-day, pay after',
         'We have worked in **South City 2 adjoining** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Dlf Phase 5 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Sector 43 and 53 towers in DLF Phase 5 choose us because their Golf Course Road fringe access is jammed post-5pm — our morning slots via DLF 5 internal roads finish same evening, which is why Sector 53’s Exotica and Magnolias fringe call us for same-day.' },
+      { t: 'p', x: 'DLF Phase 5 villas and large 3BHKs with double-height living choose us because we quote the villa card ₹6,500–₹9,000 after photos, showing the staircase and living scale that a 3BHK quote would short-change. That scale honesty is why DLF 5’s larger homes stay.' },
+      { t: 'p', x: 'South City 2 adjoining DLF Phase 5 has borewell TDS 900 pockets that need 15-minute dwell descaling. We wrap faucets for dwell time at the same DLF Phase 5 deep cleaning price, where wipe-only teams see film return in 10 days.' },
+      { t: 'table', head: ['Pocket', 'Why They Choose Us (DLF Phase 5)'], rows: [
+        ['Pocket', 'Why They Choose Us (DLF Phase 5)'],
+        ['Sector 43/53 towers', 'Golf Course Road morning routing, same-day finish'],
+        ['DLF 5 villas', 'Photo-based villa card, no 3BHK under-quote'],
+        ['Borewell pockets', '15-min dwell descaling included, not wipe']
       ]},
 { t: 'tip', x: 'DLF Phase 5 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp sector + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
@@ -4658,6 +4759,16 @@ export const ARTICLES = [
         'We have worked in **Emaar Emerald Hills** — deep cleaning done same-day, pay after',
         'We have worked in **Badshahpur fringe** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Sector 65 Societies Choose Us Over Others' },
+      { t: 'p', x: 'World Spa and World Spa West villas in Sector 65 choose us because their large living, 4+ baths and villa-scale balconies are quoted as villa ₹6,500–₹9,000 after photos, not as 3BHK that then discovers a fourth bath on site. That villa-scale honesty is why World Spa keeps the same team.' },
+      { t: 'p', x: 'Nirvana Country and Emaar Emerald Hills in Sector 65 choose us because their premium marble in villas needs marble-safe descaler — generic acid etches Nirvana’s beige marble permanently. We show the marble-safe product at the walkthrough, which is why Sector 65’s premium villas refer us.' },
+      { t: 'p', x: 'Badshahpur fringe plots in Sector 65 have construction dust from new Sector 65-66 towers that embeds in wardrobes. We do HEPA before machine scrub for that dust, a Sector 65-specific protocol that dry-dust crews skip.' },
+      { t: 'table', head: ['Society', 'Why They Choose Us (Sector 65)'], rows: [
+        ['Society', 'Why They Choose Us (Sector 65)'],
+        ['World Spa/West villas', 'Villa card after photos, no 3BHK surprise'],
+        ['Nirvana/Emaar Emerald', 'Marble-safe descaler for premium marble'],
+        ['Badshahpur fringe', 'HEPA-first for construction dust']
+      ]},
 { t: 'tip', x: 'Sector 65 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4699,6 +4810,15 @@ export const ARTICLES = [
         'We have worked in **Sector 66 plots** — deep cleaning done same-day, pay after',
         'We have worked in **Sohna Road entry** — deep cleaning done same-day, pay after'
       ]},
+      { t: 'h2', x: 'Why Sector 66 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Vatika City in Sector 66 chooses us because its large plotted houses have 2 balconies + utility that cheap Sector 66 quotes call ‘extra balcony’; we include both balconies in your Sector 66 deep cleaning price. Badshahpur village plots in Sector 66 choose us because their hard-water TDS 900 needs dwell-time descaling, not a wipe, at the same price.' },
+      { t: 'p', x: 'Vatika India Next fringe and Sector 66 plots have mixed flooring — vitrified in living, marble in bathrooms — we switch product mid-home, a Sector 66-specific switch that single-product teams get wrong and etch one while cleaning the other.' },
+      { t: 'table', head: ['Pocket', 'Why They Choose Us (Sector 66)'], rows: [
+        ['Pocket', 'Why They Choose Us (Sector 66)'],
+        ['Vatika City plotted', '2 balconies included, not “extra”'],
+        ['Badshahpur village plots', '900 TDS dwell-time descaling at same price'],
+        ['Mixed flooring', 'Mid-home product switch (vitrified vs marble)']
+      ]},
 { t: 'tip', x: 'Sector 66 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
@@ -4739,6 +4859,16 @@ export const ARTICLES = [
         'We have worked in **Sector 67 plots** — deep cleaning done same-day, pay after',
         'We have worked in **Badshahpur Road** — deep cleaning done same-day, pay after',
         'We have worked in **Vatika Emilia approach** — deep cleaning done same-day, pay after'
+      ]},
+      { t: 'h2', x: 'Why Sector 67 Societies Choose Us Over Others' },
+      { t: 'p', x: 'Ansal Essencia in Sector 67 chooses us because its new towers have heavy construction dust that needs HEPA + damp-wipe before machine scrub — our Sector 67 HEPA-first protocol prevents dust resettling in 2 days, which is why Essencia’s new-possession flats call us.' },
+      { t: 'p', x: 'Housing Board Colony plotted houses in Sector 67 have older grout and 3-bath layouts that are priced as 3BHK ₹5,500 with all baths included, not as 2BHK + ‘extra bath’. That 3BHK correctness is why Sector 67’s plotted rows stay.' },
+      { t: 'p', x: 'Vatika Emilia approach flats in Sector 67 have hard-water borewell supply (TDS 900) that needs faucet-wrap descaling for 15 minutes. We do that wrap at your Sector 67 deep cleaning price, where wipe-only teams see film return in a week.' },
+      { t: 'table', head: ['Society', 'Why They Choose Us (Sector 67)'], rows: [
+        ['Society', 'Why They Choose Us (Sector 67)'],
+        ['Ansal Essencia new towers', 'HEPA-first for construction dust, new-possession protocol'],
+        ['Housing Board plotted', '3BHK includes all baths, no “extra bath”'],
+        ['Borewell pockets', '15-min faucet-wrap dwell included']
       ]},
 { t: 'tip', x: 'Sector 67 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
