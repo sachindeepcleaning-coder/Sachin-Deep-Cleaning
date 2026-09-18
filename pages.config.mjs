@@ -383,4 +383,55 @@ export const pages = [
     title: 'Pest Control vs Deep Cleaning Gurgaon — Which First?',
     description: 'Pest control vs deep cleaning Gurgaon — order, gap, combo price. Deep first, pest after 48h. Updated Sep 2026.',
   },
+  // ── Batch 4 — Top 11 work areas: Sushant Lok 1-3, DLF 1,2,4,5, Sector 65-67 (not thin) ──
+  {
+    file: 'blog/sushant-lok-1-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sushant Lok 1 Gurgaon — Same-Day',
+    description: 'Deep cleaning Sushant Lok 1 Gurgaon — C-block, Vyapar Kendra, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sushant-lok-2-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sushant Lok 2 Gurgaon — All Blocks',
+    description: 'Deep cleaning Sushant Lok 2 Gurgaon — B-block, Sec 57, 2BHK ₹4,500. Same-day slots, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sushant-lok-3-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sushant Lok 3 Gurgaon — Sectors 57-58',
+    description: 'Deep cleaning Sushant Lok 3 Gurgaon — sectors 57-58, 2BHK ₹4,500. Same-day, pay after walkthrough. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dlf-phase-1-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning DLF Phase 1 Gurgaon — Premium',
+    description: 'Deep cleaning DLF Phase 1 Gurgaon — DLF Magnolias, Aralias, 2BHK ₹4,500. Same-day, verified team. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dlf-phase-2-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning DLF Phase 2 Gurgaon — Same-Day',
+    description: 'Deep cleaning DLF Phase 2 Gurgaon — Gurgaon One, Carlton, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dlf-phase-4-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning DLF Phase 4 Gurgaon — All Blocks',
+    description: 'Deep cleaning DLF Phase 4 Gurgaon — Galleria, Supermart, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/dlf-phase-5-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning DLF Phase 5 Gurgaon — Sectors 43 & 53',
+    description: 'Deep cleaning DLF Phase 5 Gurgaon — Sector 43, 53, 2BHK ₹4,500. Same-day, pay after walkthrough. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sector-65-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sector 65 Gurgaon — World Spa & Villas',
+    description: 'Deep cleaning Sector 65 Gurgaon — World Spa, Nirvana, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sector-66-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sector 66 Gurgaon — Vatika & Sohna',
+    description: 'Deep cleaning Sector 66 Gurgaon — Vatika City, Sohna Road, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/sector-67-deep-cleaning-gurgaon', page: 'article',
+    title: 'Deep Cleaning Sector 67 Gurgaon — Ansal & Housing Board',
+    description: 'Deep cleaning Sector 67 Gurgaon — Ansal Essencia, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
+  },
 ];
