@@ -434,4 +434,15 @@ export const pages = [
     title: 'Deep Cleaning Sector 67 Gurgaon — Ansal & Housing Board',
     description: 'Deep cleaning Sector 67 Gurgaon — Ansal Essencia, 2BHK ₹4,500. Same-day, pay after. Updated Sep 2026.',
   },
+  // ── Pillar to outrank Urban/Zoopgo/TechSquad for bare "full home deep cleaning" (SERP #4) & Kleanhomz #6 ──
+  {
+    file: 'blog/full-home-deep-cleaning', page: 'article',
+    title: 'Full Home Deep Cleaning — Price & Checklist (2026)',
+    description: 'Full home deep cleaning price ₹2,500–₹9,000 (1BHK to villa). What’s included, BHK checklist, time & booking. Bare pillar to rank for “full home deep cleaning”. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/home-deep-cleaning-service-gurgaon', page: 'article',
+    title: 'Home Deep Cleaning Service Gurgaon — Price & Booking',
+    description: 'Home deep cleaning service Gurgaon from ₹2,500 (1BHK) to ₹5,500 (3BHK). What’s included, price per BHK, vs regular cleaning. Updated Sep 2026.',
+  },
 ];
