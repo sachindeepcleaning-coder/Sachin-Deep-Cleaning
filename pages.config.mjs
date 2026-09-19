@@ -466,4 +466,46 @@ export const pages = [
     title: 'Home Deep Cleaning Services Gurgaon — Price & Checklist',
     description: 'Home deep cleaning services Gurgaon ₹2,500–₹5,500. BHK price, checklist, vs regular. 125 imp 0 clicks. Updated Sep 2026.',
   },
+  {
+    file: 'blog/post-construction-cleaning-services-gurgaon', page: 'article',
+    title: 'Post Construction Cleaning Gurgaon — 3-Phase Deep Clean',
+    description: 'Post construction cleaning Gurgaon — rough + final + debris, 1BHK ₹2,499 to villa ₹9,000. 3-phase checklist, HEPA, paint/cement removal. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/office-deep-cleaning-udyog-vihar', page: 'article',
+    title: 'Office Deep Cleaning Udyog Vihar — Phase 1-5',
+    description: 'Office deep cleaning Udyog Vihar Phase 1-5 — workstations, pantry, washrooms, glass. 500–1000 sq ft ₹3,999, after-hours. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/carpet-cleaning-udyog-vihar', page: 'article',
+    title: 'Carpet Cleaning Udyog Vihar — Onsite ₹15/sq ft',
+    description: 'Carpet cleaning Udyog Vihar — onsite mechanized ₹15/sq ft vs pickup dry ₹25–49. Wall-to-wall offices, 4–8 hrs. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/carpet-shampoo-cleaning-udyog-vihar', page: 'article',
+    title: 'Carpet Shampoo Cleaning Udyog Vihar — ₹18/sq ft',
+    description: 'Carpet shampoo cleaning Udyog Vihar — hot-water extraction ₹18/sq ft, 4–8 hrs, stain + odor. Onsite vs pickup. Updated Sep 2026.',
+  },
+
+  {
+    file: 'blog/sofa-cleaning-udyog-vihar', page: 'article',
+    title: 'Sofa Cleaning Udyog Vihar — ₹499/Seat Onsite',
+    description: 'Sofa cleaning Udyog Vihar — fabric sofa ₹499/seat, leather polish, 45 mins, 3-4 hrs drying. Onsite mechanized. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/chair-cleaning-udyog-vihar', page: 'article',
+    title: 'Chair Cleaning Udyog Vihar — Office Chairs ₹199',
+    description: 'Chair cleaning Udyog Vihar — office mesh/fabric chairs ₹199/chair, steam + shampoo, 30 mins. Onsite. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/office-bathroom-cleaning-udyog-vihar', page: 'article',
+    title: 'Office Bathroom Cleaning Udyog Vihar — ₹800/Bath',
+    description: 'Office bathroom cleaning Udyog Vihar — urinals, washrooms, 1–2 hrs/bath, odor control. 500–1000 sq ft. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/commercial-office-cleaning-udyog-vihar', page: 'article',
+    title: 'Commercial Office Cleaning Udyog Vihar — AMC & Deep',
+    description: 'Commercial office cleaning Udyog Vihar — AMC, deep, 1,200 units, after-hours, Cyber City to Manesar. Updated Sep 2026.',
+  },
+
 ];
