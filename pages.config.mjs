@@ -450,4 +450,20 @@ export const pages = [
     title: 'Bathroom Deep Cleaning Gurgaon — ₹800/Bath (2026)',
     description: 'Bathroom deep cleaning Gurgaon ₹800/bath. Descaling, grout, commode, glass, exhaust. 49 imp 0 clicks → now exact pillar. Updated Sep 2026.',
   },
+  // ── 3 high-volume 0-click Instagram queries (skip mr brand) ──
+  {
+    file: 'blog/deep-cleaning-services', page: 'article',
+    title: 'Deep Cleaning Services — Price & Checklist (2026)',
+    description: 'Deep cleaning services price ₹2,500–₹9,000. What’s included, BHK table, vs regular cleaning. Bare 209 imp pillar. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/home-cleaning-services-gurgaon', page: 'article',
+    title: 'Home Cleaning Services Gurgaon — Price & Booking',
+    description: 'Home cleaning services Gurgaon from ₹499/visit. Weekly plans, what’s included, vs house cleaning. 142 imp 0 clicks. Updated Sep 2026.',
+  },
+  {
+    file: 'blog/home-deep-cleaning-services-gurgaon', page: 'article',
+    title: 'Home Deep Cleaning Services Gurgaon — Price & Checklist',
+    description: 'Home deep cleaning services Gurgaon ₹2,500–₹5,500. BHK price, checklist, vs regular. 125 imp 0 clicks. Updated Sep 2026.',
+  },
 ];
