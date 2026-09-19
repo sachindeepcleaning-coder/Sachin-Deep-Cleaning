@@ -445,4 +445,9 @@ export const pages = [
     title: 'Home Deep Cleaning Service Gurgaon — Price & Booking',
     description: 'Home deep cleaning service Gurgaon from ₹2,500 (1BHK) to ₹5,500 (3BHK). What’s included, price per BHK, vs regular cleaning. Updated Sep 2026.',
   },
+  {
+    file: 'blog/bathroom-deep-cleaning-gurgaon-best', page: 'article',
+    title: 'Bathroom Deep Cleaning Gurgaon — ₹800/Bath (2026)',
+    description: 'Bathroom deep cleaning Gurgaon ₹800/bath. Descaling, grout, commode, glass, exhaust. 49 imp 0 clicks → now exact pillar. Updated Sep 2026.',
+  },
 ];
