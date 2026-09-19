@@ -55,6 +55,33 @@ for (const p of pages) {
   const url = p.file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${p.file}.html`;
   const dataAttrs = `data-page="${p.page}" data-file="${p.file}"${p.serviceKey ? ` data-service="${p.serviceKey}"` : ''}${p.bhk ? ` data-bhk="${p.bhk}"` : ''}`;
 
+  // Merge-stub pages: two near-identical URLs cannibalising one query resolve
+  // here. GitHub Pages cannot send a real 301, so we emit a minimal
+  // meta-refresh + canonical stub. Excluded from the sitemap by gen-sitemap.mjs.
+  if (p.redirectTo) {
+    const target = `${SITE_URL}/${p.redirectTo}.html`;
+    const stub = `<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="${target}" />
+  <meta http-equiv="refresh" content="0; url=/${p.redirectTo}.html" />
+  <title>${p.title}</title>
+</head>
+<body>
+  <p>This page has moved to <a href="/${p.redirectTo}.html">${target}</a>.</p>
+</body>
+</html>
+`;
+    const stubPath = resolve(root, `${p.file}.html`);
+    mkdirSync(dirname(stubPath), { recursive: true });
+    writeFileSync(stubPath, stub);
+    console.log('wrote (merge stub)', `${p.file}.html → ${p.redirectTo}.html`);
+    continue;
+  }
+
   const noindex = p.noindex ? '  <meta name="robots" content="noindex, nofollow" />\n' : '';
   const ogType = p.page === 'article' ? 'article' : 'website';
   const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
