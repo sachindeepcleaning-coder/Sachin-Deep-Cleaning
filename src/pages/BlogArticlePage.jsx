@@ -130,6 +130,13 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
             <span>By <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sachin Deep Cleaning</a>, Founder</span>
           </div>
           <h1>{article.title}</h1>
+          {article.printable && (
+            <div style={{ margin: '14px 0 4px' }}>
+              <button className="blog-print-btn" onClick={() => window.print()} style={{ background: 'var(--dark)', color: '#fff', fontWeight: 700, fontSize: '.85rem', padding: '10px 20px', borderRadius: '10px', border: 'none', cursor: 'pointer' }}>
+                🖨️ Print checklist / Save as PDF
+              </button>
+            </div>
+          )}
           <img
             src={article.image}
             srcSet={srcSetFor(article.image)}

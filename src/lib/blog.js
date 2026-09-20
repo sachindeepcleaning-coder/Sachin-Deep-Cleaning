@@ -154,6 +154,9 @@ export const ARTICLES = [
         '**The honest comparison** — ask any 2026 quote two questions: is the chimney bath included, and is descaling dwell time on the checklist? Those two lines explain almost every price difference in the market.',
       ]},
       { t: 'p', x: 'Rate-card years matter less than scope years: the card moved little from 2025, but the number of vendors dropping chemistry and machine work from their \'deep clean\' keeps rising — which is why this guide prices the list, not the logo. Every figure above is what the full checklist costs, not what a van and two mops cost.' },
+      { t: 'h2', x: 'Hindi me sankshipt jankari: Gurgaon me deep cleaning ka kharcha' },
+      { t: 'p', x: 'Agar aap Hindi me samajhna chahte hain to seedhi baat ye hai: Gurgaon me full home deep cleaning 1 RK ke liye ₹2,000, 1 BHK ke liye ₹2,500, 2 BHK ke liye ₹4,500, 3 BHK ke liye ₹5,500 aur villa ke liye ₹9,000 se shuru hoti hai. Kitchen ki deep cleaning ₹1,500 se, bathroom ₹800 prati bathroom, sofa ₹499 prati seat aur carpet ₹15–18 prati square foot se shuru hote hain.' },
+      { t: 'p', x: 'Keemat ghar ke size, bathroom ki sankhya, chimney ke prakar aur ghar ki halat par nirbhar karti hai. Booking se pehle WhatsApp par +91 9267905943 par apne BHK ki photo bhejein — fixed price pehle se tay hota hai, kaam ke baad walkthrough hota hai, aur payment uske baad hi hoti hai. Koi advance nahi liya jata.' },
     ],
   },
 
@@ -695,6 +698,7 @@ export const ARTICLES = [
     imageAlt: 'Move-in move-out cleaning checklist for Gurgaon apartments',
     cta: { title: 'Hand over (or move into) a spotless flat', href: '/move-in-move-out-cleaning-gurgaon.html', label: 'Move-In / Move-Out Cleaning in Gurgaon →' },
     lead: 'Whether you are handing over keys to a landlord or moving into a new flat in Gurgaon, a proper deep clean is essential. Here is the complete move-in / move-out cleaning checklist used by Sachin Deep Cleaning.',
+    printable: true,
     faqs: [
       { q: 'Will move-out cleaning get my full security deposit back in Gurgaon?', a: 'It removes the landlord’s top deduction triggers — greasy kitchen, scaled bathrooms, stained floors and marked walls. Deposits are typically 6–10 months’ rent in Gurgaon societies, so a ₹4,000–₹5,500 clean protecting lakhs is simple math. Ask for our ticked checklist sheet as handover proof.' },
       { q: 'Do you clean only empty flats for move-in/out?', a: 'Empty or near-empty gives the deepest result since every corner is reachable. With furniture present we work around it, but wardrobes and under-bed zones stay partially covered — for deposit handovers, empty is strongly recommended.' },
@@ -2124,6 +2128,7 @@ export const ARTICLES = [
     imageAlt: 'Full house cleaning checklist for Gurgaon homes — printable',
     cta: { title: 'Want this checklist done for you?', href: '/full-home-deep-cleaning-3bhk-gurgaon.html', label: 'Full Home Deep Cleaning 3BHK →' },
     lead: 'Use this **full house clean checklist** (also searched as **full house cleaning checklist**, **full house deep cleaning checklist**) for Gurgaon homes — every room, kitchen, bathroom, balcony and window. Print it, tick it, or hand it to our team — we follow it on every full-home job.',
+    printable: true,
     faqs: [
       { q: 'What is full house cleaning checklist?', a: 'A room-by-room list that ensures nothing is missed — bedrooms, living, kitchen (chimney, cabinets), all bathrooms (descaling), balconies, windows and sanitization. Landlords use it for handover.' },
       { q: 'Is full house cleaning same as deep cleaning?', a: 'Full house cleaning is the full-home version of deep cleaning — every room at once. Deep cleaning can also be single-service (kitchen-only, bathroom-only). Full house is every room in one visit.' },
