@@ -37,4 +37,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://sachindeepcleaning.shop/sitemap.xml
-Sitemap: https://sachindeepcleaning.shop/sitemap-images.xml

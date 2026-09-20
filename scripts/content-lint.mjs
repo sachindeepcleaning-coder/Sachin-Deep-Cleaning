@@ -13,6 +13,9 @@
 
 import { ARTICLES } from '../src/lib/blog.js';
 import { pages } from '../pages.config.mjs';
+import { IMAGE_DIMS } from '../src/lib/image-dims.js';
+import { getService } from '../src/lib/services.js';
+import { existsSync } from 'node:fs';
 
 const STRICT = process.argv.includes('--strict');
 const VERBOSE = process.argv.includes('--verbose');
@@ -212,6 +215,30 @@ const imgCount = new Map();
 for (const a of ARTICLES) imgCount.set(a.image, (imgCount.get(a.image) || 0) + 1);
 for (const [img, n] of [...imgCount.entries()].sort((a, b) => b[1] - a[1])) {
   if (n > IMG_LIMIT) warnings.push(`hero image reused by ${n} articles: ${img}`);
+}
+
+// Image asset integrity (2026-09-20 seo-images audit): every rendered hero
+// needs measured dims (no 1200x675 fiction) and real 400w/800w variants,
+// otherwise srcset descriptors lie and browsers fetch wrong resources.
+const usedImages = new Set(ARTICLES.map((a) => a.image));
+for (const p of pages) {
+  if (p.page === 'service') {
+    try {
+      const svc = getService(p.serviceKey, p.bhk);
+      if (svc && svc.image) usedImages.add(svc.image);
+    } catch {}
+  }
+}
+for (const img of [...usedImages].sort()) {
+  if (!IMAGE_DIMS[img]) {
+    errors.push(`image ${img} missing from src/lib/image-dims.js (dims + srcset fall back to fiction)`);
+    continue;
+  }
+  for (const v of [`${img.replace(/\.(jpg|webp)$/, '-400w.webp')}`, `${img.replace(/\.(jpg|webp)$/, '-800w.webp')}`]) {
+    if (!existsSync(new URL(`../public${v}`, import.meta.url))) {
+      errors.push(`missing responsive variant public${v} (referenced by srcset for ${img})`);
+    }
+  }
 }
 
 // ── Metadata checks (pages.config.mjs = the real <title>/<meta description>) ──

@@ -1,6 +1,7 @@
 import { JsonLd, articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema.jsx';
 import { getArticle } from '../lib/blog.js';
 import { pageUrl } from '../lib/site.js';
+import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import QuoteForm from '../components/QuoteForm.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import TrustBar from '../components/TrustBar.jsx';
@@ -131,11 +132,11 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
           <h1>{article.title}</h1>
           <img
             src={article.image}
-            srcSet={`${article.image.replace(/\.(jpg|webp)$/, '-400w.webp')} 400w, ${article.image.replace(/\.(jpg|webp)$/, '-800w.webp')} 800w, ${article.image.replace(/\.jpg$/, '.webp')} 1200w`}
-            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+            srcSet={srcSetFor(article.image)}
+            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 860px"
             alt={article.imageAlt}
-            width="1200"
-            height="675"
+            width={imageDims(article.image)[0]}
+            height={imageDims(article.image)[1]}
             className="blog-hero-img"
             loading="eager"
             fetchPriority="high"
@@ -152,8 +153,8 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
               <img
                 src={secondaryImage(article).src}
                 alt={secondaryImage(article).alt}
-                width="1200"
-                height="675"
+                width={imageDims(secondaryImage(article).src)[0]}
+                height={imageDims(secondaryImage(article).src)[1]}
                 className="blog-hero-img"
                 loading="lazy"
                 decoding="async"
@@ -169,9 +170,16 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
               </p>
               <a href={article.cta.href} className="blog-cta-btn">{article.cta.label}</a>
               <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center' }}>
-                <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>Deep Cleaning Services in Gurgaon →</a>
-                <a href="/house-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>House Cleaning Services in Gurgaon →</a>
-                <a href="/kitchen-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>Kitchen Deep Cleaning Gurgaon →</a>
+                {[
+                  { href: '/deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
+                  { href: '/house-cleaning-services-in-gurgaon.html', label: 'House Cleaning Services in Gurgaon →' },
+                  { href: '/kitchen-deep-cleaning-gurgaon.html', label: 'Kitchen Deep Cleaning Gurgaon →' },
+                  // blog-seo-check §5.5: never repeat the CTA destination in body links.
+                  { href: '/bathroom-deep-cleaning-gurgaon.html', label: 'Bathroom Deep Cleaning Gurgaon →' },
+                  { href: '/sofa-shampoo-cleaning-gurgaon.html', label: 'Sofa Shampoo Cleaning Gurgaon →' },
+                ].filter((l) => !article.cta || l.href !== article.cta.href).slice(0, 3).map((l) => (
+                  <a key={l.href} href={l.href} style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '.88rem' }}>{l.label}</a>
+                ))}
               </div>
             </div>
           )}

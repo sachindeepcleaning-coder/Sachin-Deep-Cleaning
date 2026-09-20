@@ -11,7 +11,7 @@
 
 export const SITE_URL = 'https://sachindeepcleaning.shop';
 export const SITE_NAME = 'Sachin Deep Cleaning';
-export const OG_IMAGE = 'https://sachindeepcleaning.shop/images/cleaning-1.jpg';
+export const OG_IMAGE = 'https://sachindeepcleaning.shop/images/og-cover.jpg';
 
 export const pages = [
   {

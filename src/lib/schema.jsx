@@ -237,6 +237,10 @@ export function articleSchema({ title, description, url, datePublished, dateModi
     publisher: {
       '@id': `${SITE_URL}/#business`,
       name: 'Sachin Deep Cleaning',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/app_icon.png`,
+      },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   };

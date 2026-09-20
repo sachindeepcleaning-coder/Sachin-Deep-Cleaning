@@ -20,6 +20,7 @@ import { pages, SITE_URL, SITE_NAME, OG_IMAGE } from '../pages.config.mjs';
 import { GTM_ID, NETLIFY_FORM_NAME } from '../src/lib/site.js';
 import { ARTICLES } from '../src/lib/blog.js';
 import { getService } from '../src/lib/services.js';
+import { imageDims } from '../src/lib/image-dims.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -87,8 +88,8 @@ for (const p of pages) {
   const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
     ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" fetchpriority="high" />\n`
     : '';
-  // Page-specific OG image + alt (audit: alt was identical sitewide).
-  // Services use their service imageAlt; articles use their imageAlt.
+  // Page-specific OG image + alt + TRUE dimensions (2026-09-20 seo-images
+  // audit: tags claimed 1200x630 for files as small as 390px — emit measured).
   let ogImage = OG_IMAGE;
   let ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
   if (p.page === 'service' && HERO_IMAGES[p.serviceKey]) {
@@ -101,6 +102,14 @@ for (const p of pages) {
     const art = ARTICLES.find((a) => a.file === p.file);
     if (art && art.image) ogImage = SITE_URL + art.image;
     if (art && art.imageAlt) ogAlt = art.imageAlt;
+  }
+  // blog-seo-check Step 8: social cards need ≥1000px width — small heroes
+  // (carpet 390px, sofa 500px…) fall back to the 1200x630 OG cover.
+  let [ogW, ogH] = imageDims(ogImage.replace(SITE_URL, ''));
+  if (ogW < 1000) {
+    ogImage = OG_IMAGE;
+    ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
+    [ogW, ogH] = imageDims(ogImage.replace(SITE_URL, ''));
   }
 
   const html = `<!DOCTYPE html>
@@ -128,8 +137,8 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${ogImage}" />
   <meta property="og:image:alt" content="${ogAlt}" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="${ogW}" />
+  <meta property="og:image:height" content="${ogH}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${p.title}" />
   <meta name="twitter:description" content="${p.description}" />

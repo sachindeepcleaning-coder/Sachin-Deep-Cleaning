@@ -14,6 +14,7 @@ import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
 import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema } from '../lib/schema.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
+import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
 import { pageUrl } from '../lib/site.js';
 
@@ -135,12 +136,12 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             <div style={{ flex: '1 1 300px', minWidth: 0 }}>
               <img
                 src={s.image}
-                srcSet={`${s.image.replace(/\.(jpg|webp)$/, '-400w.webp')} 400w, ${s.image.replace(/\.(jpg|webp)$/, '-800w.webp')} 800w, ${s.image.replace(/\.jpg$/, '.webp')} 1200w`}
-                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+                srcSet={srcSetFor(s.image)}
+                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 600px"
                 alt={s.imageAlt}
                 loading="lazy"
-                width="600"
-                height="400"
+                width={imageDims(s.image)[0]}
+                height={imageDims(s.image)[1]}
                 style={{ width: '100%', height: 'auto', borderRadius: '14px', display: 'block' }}
               />
               {serviceKey === 'move' && (
