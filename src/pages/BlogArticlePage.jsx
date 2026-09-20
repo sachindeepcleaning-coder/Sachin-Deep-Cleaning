@@ -5,10 +5,17 @@ import QuoteForm from '../components/QuoteForm.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 
-// Renders inline **bold** markdown in article text.
+// Renders inline **bold** markdown and [anchor](/path.html) links in article text.
 function Rich({ text }) {
-  const parts = String(text).split(/\*\*(.+?)\*\*/g);
-  return parts.map((p, i) => (i % 2 === 1 ? <strong key={i}>{p}</strong> : p));
+  const segs = String(text).split(/(\[[^\]]+\]\([^)]+\))/g);
+  return segs.map((s, i) => {
+    const m = s.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (m) {
+      const ext = /^https?:/.test(m[2]);
+      return <a key={i} href={m[2]} {...(ext ? { target: '_blank', rel: 'noopener' } : {})} style={{ color: 'var(--primary)', fontWeight: 700 }}>{m[1]}</a>;
+    }
+    return String(s).split(/\*\*(.+?)\*\*/g).map((p, j) => (j % 2 === 1 ? <strong key={`${i}-${j}`}>{p}</strong> : p));
+  });
 }
 
 function slugId(text) {
@@ -50,6 +57,36 @@ function readingMinutes(article) {
     if (b.rows) words += b.rows.flat().join(' ').split(/\s+/).length;
   }
   return Math.max(3, Math.round(words / 200));
+}
+
+// Second in-content visual: every article ships a hero, so a mid-article
+// process/proof image doubles image depth using existing assets (no new files).
+// Keyed by the article CTA so the visual matches the money page it feeds.
+const SECONDARY_IMAGES = {
+  '/deep-cleaning-services-in-gurgaon.html': { src: '/images/full-home-2bhk-deep-cleaning.webp', alt: 'Full home deep cleaning in progress — machine-scrubbed floors in a Gurgaon 2 BHK' },
+  '/house-cleaning-services-in-gurgaon.html': { src: '/images/house-cleaning.webp', alt: 'Scheduled house cleaning visit in a Gurgaon home — dusting, mopping and bathrooms' },
+  '/kitchen-deep-cleaning-gurgaon.html': { src: '/images/kitchen-deep-cleaning.webp', alt: 'Chimney filter dismantled for degreasing during a kitchen deep clean in Gurgaon' },
+  '/bathroom-deep-cleaning-gurgaon.html': { src: '/images/bathroom-deep-cleaning.webp', alt: 'Bathroom tiles being descaled to remove hard-water stains in Gurgaon' },
+  '/sofa-shampoo-cleaning-gurgaon.html': { src: '/images/sofa-shampoo-cleaning.webp', alt: 'Sofa shampoo extraction lifting dust mites and stains in Gurgaon' },
+  '/carpet-shampoo-cleaning-gurgaon.html': { src: '/images/carpet-shampoo-cleaning.webp', alt: 'Hot-water carpet extraction in a Gurgaon living room' },
+  '/office-deep-cleaning-gurgaon.html': { src: '/images/office-deep-cleaning.jpg', alt: 'After-hours office deep cleaning in Gurgaon — workstations and floors' },
+  '/move-in-move-out-cleaning-gurgaon.html': { src: '/images/full-home-deep-cleaning.webp', alt: 'Empty flat being deep cleaned for a move-in handover in Gurgaon' },
+  '/full-home-deep-cleaning-1bhk-gurgaon.html': { src: '/images/full-home-deep-cleaning.webp', alt: 'Compact 1 BHK deep cleaned top to bottom in a single visit' },
+  '/full-home-deep-cleaning-2bhk-gurgaon.html': { src: '/images/full-home-2bhk-deep-cleaning.webp', alt: 'Two-bedroom home deep cleaning — kitchen, baths and living areas' },
+  '/full-home-deep-cleaning-3bhk-gurgaon.html': { src: '/images/full-home-3bhk-deep-cleaning.webp', alt: 'Three-bedroom family home deep cleaning in Gurgaon' },
+  '/full-home-deep-cleaning-4bhk-gurgaon.html': { src: '/images/full-home-4bhk-deep-cleaning.webp', alt: 'Four-bedroom villa deep cleaning with marble-safe products' },
+  '/full-home-deep-cleaning-5bhk-gurgaon.html': { src: '/images/full-home-5bhk-deep-cleaning.webp', alt: 'Luxury villa deep cleaning in Gurgaon — premium finishes' },
+  '/residential-cleaners-near-me.html': { src: '/images/cleaning-1.jpg', alt: 'Verified residential cleaner at work in a Gurgaon home' },
+  '/book-cleaning-online-gurgaon.html': { src: '/images/house-cleaning.webp', alt: 'Online-booked home cleaning in Gurgaon — no app needed' },
+};
+
+function secondaryImage(article) {
+  const mapped = (article.cta && SECONDARY_IMAGES[article.cta.href]) || SECONDARY_IMAGES['/deep-cleaning-services-in-gurgaon.html'];
+  const fallbacks = [mapped, SECONDARY_IMAGES['/deep-cleaning-services-in-gurgaon.html'], { src: '/images/cleaning-1.jpg', alt: 'Professional deep cleaning in a Gurgaon home by Sachin Deep Cleaning' }];
+  for (const img of fallbacks) {
+    if (img && img.src !== article.image) return img;
+  }
+  return null;
 }
 
 export default function BlogArticlePage({ file = 'blog', url = '' }) {
@@ -110,7 +147,19 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
         <div className="section-inner blog-content">
           <QuoteForm />
           <article>
-            {article.blocks.map((b, i) => renderBlock(b, `${b.t}-${i}`))}
+            {article.blocks.slice(0, Math.ceil(article.blocks.length / 2)).map((b, i) => renderBlock(b, `${b.t}-${i}`))}
+            {secondaryImage(article) && (
+              <img
+                src={secondaryImage(article).src}
+                alt={secondaryImage(article).alt}
+                width="1200"
+                height="675"
+                className="blog-hero-img"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            {article.blocks.slice(Math.ceil(article.blocks.length / 2)).map((b, i) => renderBlock(b, `${b.t}-b${i}`))}
           </article>
           {article.cta && (
             <div className="blog-cta">
@@ -129,6 +178,16 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
           {faqs.length > 0 && (
             <div className="blog-faq">
               <FaqSection faqs={faqs.map((f) => [f.q, f.a])} />
+            </div>
+          )}
+          {article.sources && article.sources.length > 0 && (
+            <div className="blog-sources">
+              <h2 className="blog-h2">Sources & further reading</h2>
+              <ul className="blog-ul">
+                {article.sources.map((s, i) => (
+                  <li key={i}><a href={s.href} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>{s.label}</a></li>
+                ))}
+              </ul>
             </div>
           )}
           <p className="blog-end" style={{ textAlign: 'center', marginTop: '40px' }}>

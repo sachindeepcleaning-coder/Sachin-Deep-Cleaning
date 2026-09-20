@@ -133,7 +133,7 @@ export const pages = [
   {
     file: 'blog/deep-cleaning-cost-gurgaon-2026', page: 'article',
     title: "Deep Cleaning Cost in Gurgaon (2026): BHK-Wise Rates",
-    description: "Deep cleaning in Gurgaon costs ₹2,500 for a 1BHK up to ₹9,000 for a villa. See the full 2026 rate card, what each price includes and the extras worth paying for.",
+    description: "Deep cleaning in Gurgaon costs ₹2,500 for a 1BHK up to ₹9,000 for a villa. Full 2026 rate card, inclusions and extras worth paying for.",
   },
   {
     file: 'blog/how-often-deep-clean-home-india', page: 'article',
@@ -163,7 +163,7 @@ export const pages = [
   {
     file: 'blog/move-in-move-out-cleaning-checklist-gurgaon', page: 'article',
     title: "Move-In & Move-Out Cleaning Checklist for Gurgaon Flats",
-    description: "The room-by-room checklist landlords and societies actually inspect at handover — chimney degrease, bathroom descaling, deep floors — and what a pro clean costs.",
+    description: "Room-by-room handover checklist landlords and societies inspect — chimney degrease, descaling, floors — plus pro-clean costs.",
   },
   {
     file: 'blog/full-home-deep-cleaning-gurgaon-guide', page: 'article',

@@ -12,22 +12,19 @@ import ReelSection from '../components/ReelSection.jsx';
 import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
-import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema, howToSchema, reviewsSchema, HOW_TO_CONFIGS } from '../lib/schema.jsx';
+import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema } from '../lib/schema.jsx';
 import { getService } from '../lib/services.js';
 import { pageUrl } from '../lib/site.js';
 
 export default function ServicePage({ serviceKey, bhk, url = '' }) {
   const s = getService(serviceKey, bhk);
-  const howTo = HOW_TO_CONFIGS[serviceKey];
 
   return (
     <>
+      <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={serviceSchema({ name: s.name, description: s.intro, url, price: s.price, image: s.image })} />
       <JsonLd data={faqSchema(s.faqs)} />
       <JsonLd data={reviewsSchema(s.reviews, s.name)} />
-      {howTo && (
-        <JsonLd data={howToSchema({ ...howTo, steps: s.process, image: s.image, serviceKey })} />
-      )}
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },

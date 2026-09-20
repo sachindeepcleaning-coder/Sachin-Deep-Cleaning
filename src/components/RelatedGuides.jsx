@@ -34,6 +34,20 @@ const GUIDES = [
   { serviceKey: 'office', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
   { serviceKey: 'move', title: 'Move-In / Move-Out Cleaning Checklist', href: '/blog/move-in-move-out-cleaning-checklist-gurgaon.html' },
   { serviceKey: 'move', title: 'Deep Cleaning Cost in Gurgaon 2026', href: '/blog/deep-cleaning-cost-gurgaon-2026.html' },
+  // ── 2026-09-20 audit: wire new price / micro-local / Udyog inventory ──
+  { serviceKey: 'deep', title: 'Deep Cleaning DLF Phase 3 — Same-Day', href: '/blog/dlf-phase-3-deep-cleaning-gurgaon.html' },
+  { serviceKey: 'deep', title: 'Deep Cleaning Sohna Road — All Towers', href: '/blog/sohna-road-deep-cleaning-gurgaon.html' },
+  { serviceKey: 'deep', title: 'Deep Cleaning Golf Course Road — Premium Homes', href: '/blog/golf-course-road-deep-cleaning-gurgaon.html' },
+  { serviceKey: 'fullhome', title: '1BHK Deep Cleaning Price — ₹2,500 Itemised', href: '/blog/1bhk-deep-cleaning-price-gurgaon.html' },
+  { serviceKey: 'fullhome', title: '2BHK Deep Cleaning Price — Fixed ₹4,500', href: '/blog/2bhk-deep-cleaning-price-gurgaon.html' },
+  { serviceKey: 'fullhome', title: '3BHK Deep Cleaning Price — Fixed ₹5,500', href: '/blog/3bhk-deep-cleaning-price-gurgaon.html' },
+  { serviceKey: 'bathroom', title: 'Bathroom Cleaning Price — ₹800/Bath', href: '/blog/bathroom-cleaning-price-gurgaon-per-bathroom.html' },
+  { serviceKey: 'kitchen', title: 'Kitchen Cleaning Price — ₹1,500 Chimney Included', href: '/blog/kitchen-cleaning-price-gurgaon-chimney.html' },
+  { serviceKey: 'sofa', title: 'Sofa Cleaning Price — ₹499/Seat Explained', href: '/blog/sofa-cleaning-price-gurgaon-per-seat.html' },
+  { serviceKey: 'house', title: 'What a ₹499 House Cleaning Visit Covers', href: '/blog/house-cleaning-price-gurgaon-per-visit.html' },
+  { serviceKey: 'move', title: 'End of Tenancy Cleaning — Get the Deposit Back', href: '/blog/end-of-tenancy-cleaning-gurgaon.html' },
+  { serviceKey: 'office', title: 'Office Deep Cleaning Udyog Vihar — Phases 1–5', href: '/blog/office-deep-cleaning-udyog-vihar.html' },
+  { serviceKey: 'office', title: 'Commercial Office Cleaning Udyog Vihar — AMC & Deep', href: '/blog/commercial-office-cleaning-udyog-vihar.html' },
 ];
 
 export default function RelatedGuides({ serviceKey }) {

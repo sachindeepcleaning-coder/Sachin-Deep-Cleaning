@@ -172,6 +172,16 @@ for (const a of ARTICLES) {
   if (a.datePublished === a.dateModified) {
     warnings.push(`${where} — dateModified equals datePublished (no genuine update signal)`);
   }
+  // Schema validity: dateModified must never precede datePublished (2026-09-20 audit: 47 inverted).
+  if (a.dateModified < a.datePublished) {
+    errors.push(`${where} — dateModified ${a.dateModified} precedes datePublished ${a.datePublished}`);
+  }
+  // Templating bug guard (2026-09-20 audit): the last content section must not
+  // repeat the previous H2 verbatim — 63 articles shipped a duplicated tail.
+  const h2texts = (a.blocks || []).filter((b) => b.t === 'h2').map((b) => String(b.x).trim().toLowerCase());
+  if (h2texts.length >= 2 && h2texts[h2texts.length - 1] === h2texts[h2texts.length - 2]) {
+    errors.push(`${where} — trailing duplicate <h2> section: "${h2texts[h2texts.length - 1].slice(0, 60)}"`);
+  }
 }
 
 // ── Cross-article duplication ─────────────────────────────────────────────────
