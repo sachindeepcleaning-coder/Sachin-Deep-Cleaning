@@ -13,18 +13,28 @@ import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
 import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema } from '../lib/schema.jsx';
+import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { getService } from '../lib/services.js';
 import { pageUrl } from '../lib/site.js';
 
 export default function ServicePage({ serviceKey, bhk, url = '' }) {
   const s = getService(serviceKey, bhk);
+  // 2026-09-20 audit: vary the shared trust blocks per service group so the
+  // 13 service pages don't render byte-identical WhyUs/Guarantee/TrustBar.
+  const trustVariant = trustVariantFor(serviceKey);
+  const guaranteeVariant = guaranteeVariantFor(serviceKey);
+  // Per-BHK review rotation: the 5 BHK pages share one review pool, so each
+  // size leads with a different real review instead of the identical order.
+  const reviews = serviceKey === 'fullhome' && bhk
+    ? [...s.reviews.slice(bhk % s.reviews.length), ...s.reviews.slice(0, bhk % s.reviews.length)]
+    : s.reviews;
 
   return (
     <>
       <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={serviceSchema({ name: s.name, description: s.intro, url, price: s.price, image: s.image })} />
       <JsonLd data={faqSchema(s.faqs)} />
-      <JsonLd data={reviewsSchema(s.reviews, s.name)} />
+      <JsonLd data={reviewsSchema(reviews, s.name)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
@@ -84,7 +94,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
         </div>
       </section>
 
-      <TrustBar />
+      <TrustBar variant={trustVariant} />
 
       {/* Competitor-inspired: 8-service grid on deep page — improves topical clustering & internal linking */}
       {serviceKey === 'deep' && (
@@ -184,7 +194,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
         </section>
       )}
 
-      <WhyUsSection />
+      <WhyUsSection variant={trustVariant} />
 
       {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
       {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
@@ -264,11 +274,11 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
         </section>
       )}
 
-      <ReviewsSection reviews={s.reviews} />
+      <ReviewsSection reviews={reviews} />
 
       {serviceKey === 'office' ? <OfficeReelSection /> : <ReelSection />}
 
-      <GuaranteeSection />
+      <GuaranteeSection variant={guaranteeVariant} />
 
       <section className="section">
         <div className="section-inner">

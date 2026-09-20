@@ -1,16 +1,11 @@
-const ITEMS = [
-  ['🛡️', 'Police Verified', 'Every team member'],
-  ['💰', 'Pay After Cleaning', 'Zero advance payment'],
-  ['🔄', 'Free Re-Clean', "If you're not satisfied"],
-  ['⚡', 'Same-Day Available', 'Book before 12 PM'],
-  ['🌿', 'Eco-Friendly Products', 'Safe for kids & pets'],
-];
+import { TRUST_VARIANTS } from '../lib/trust-variants.js';
 
-export default function TrustBar() {
+export default function TrustBar({ variant } = {}) {
+  const items = (variant && TRUST_VARIANTS[variant]) || TRUST_VARIANTS.standard;
   return (
     <div className="trust-bar">
       <div className="trust-bar-inner">
-        {ITEMS.map(([icon, main, sub]) => (
+        {items.map(([icon, main, sub]) => (
           <div key={main} className="trust-item">
             <span className="trust-icon">{icon}</span>
             <div className="trust-text">
