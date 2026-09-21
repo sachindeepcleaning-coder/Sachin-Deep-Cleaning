@@ -45,6 +45,7 @@ const GUIDES = [
   { serviceKey: 'kitchen', title: 'Kitchen Cleaning Price — ₹1,500 Chimney Included', href: '/blog/kitchen-cleaning-price-gurgaon-chimney.html' },
   { serviceKey: 'sofa', title: 'Sofa Cleaning Price — ₹499/Seat Explained', href: '/blog/sofa-cleaning-price-gurgaon-per-seat.html' },
   { serviceKey: 'house', title: 'What a ₹499 House Cleaning Visit Covers', href: '/blog/house-cleaning-price-gurgaon-per-visit.html' },
+  { serviceKey: 'house', title: 'Home Cleaning Service — What It Includes & Costs', href: '/blog/home-cleaning-service-guide.html' },
   { serviceKey: 'move', title: 'End of Tenancy Cleaning — Get the Deposit Back', href: '/blog/end-of-tenancy-cleaning-gurgaon.html' },
   { serviceKey: 'office', title: 'Office Deep Cleaning Udyog Vihar — Phases 1–5', href: '/blog/office-deep-cleaning-udyog-vihar.html' },
   { serviceKey: 'office', title: 'Commercial Office Cleaning Udyog Vihar — AMC & Deep', href: '/blog/commercial-office-cleaning-udyog-vihar.html' },

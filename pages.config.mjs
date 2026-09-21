@@ -532,4 +532,9 @@ export const pages = [
     title: "Sector 32 Office Deep Cleaning, Gurgaon",
     description: "Sector 32 office deep cleaning from ₹3/sq ft — weekend-night crews for managed workspaces. Shared scope in writing. GST invoice, pay after sign-off.",
   },
+  {
+    file: 'blog/home-cleaning-service-guide', page: 'article',
+    title: "Home Cleaning Service: What It Includes & Costs",
+    description: "What a home cleaning service includes, the four booking types, India-typical costs per visit, and how to choose between a service, a maid and a deep clean.",
+  },
 ];
