@@ -507,5 +507,9 @@ export const pages = [
     title: "Commercial Office Cleaning in Udyog Vihar: AMC & Deep",
     description: "Commercial office cleaning in Udyog Vihar: daily housekeeping AMCs priced per sq ft plus quarterly deep cleans from ₹3,999 — after-hours, survey-quoted.",
   },
-
+  {
+    file: 'blog/office-deep-cleaning-sector-44-gurgaon', page: 'article',
+    title: "Office Deep Cleaning in Sector 44 & Corporate Hubs",
+    description: "Office deep cleaning in Sector 44 from \u20b93/sq ft \u2014 after-hours crews for Cyber City, Golf Course Rd, Sector 32 & Udyog Vihar. GST invoice, pay after sign-off.",
+  },
 ];

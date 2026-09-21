@@ -48,6 +48,7 @@ const GUIDES = [
   { serviceKey: 'move', title: 'End of Tenancy Cleaning — Get the Deposit Back', href: '/blog/end-of-tenancy-cleaning-gurgaon.html' },
   { serviceKey: 'office', title: 'Office Deep Cleaning Udyog Vihar — Phases 1–5', href: '/blog/office-deep-cleaning-udyog-vihar.html' },
   { serviceKey: 'office', title: 'Commercial Office Cleaning Udyog Vihar — AMC & Deep', href: '/blog/commercial-office-cleaning-udyog-vihar.html' },
+  { serviceKey: 'office', title: 'Sector 44 & Corporate Hubs — Office Cleaning', href: '/blog/office-deep-cleaning-sector-44-gurgaon.html' },
 ];
 
 export default function RelatedGuides({ serviceKey }) {
