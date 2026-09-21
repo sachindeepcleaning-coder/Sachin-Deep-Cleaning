@@ -512,4 +512,24 @@ export const pages = [
     title: "Office Deep Cleaning in Sector 44 & Corporate Hubs",
     description: "Office deep cleaning in Sector 44 from \u20b93/sq ft \u2014 after-hours crews for Cyber City, Golf Course Rd, Sector 32 & Udyog Vihar. GST invoice, pay after sign-off.",
   },
+  {
+    file: 'blog/sector-44-office-deep-cleaning-gurgaon', page: 'article',
+    title: "Sector 44 Office Deep Cleaning: Full Guide",
+    description: "Office deep cleaning in Sector 44 from ₹3/sq ft — metro-side crews, coworking turnover, night shifts. GST invoice, NDA, pay after sign-off.",
+  },
+  {
+    file: 'blog/office-deep-cleaning-cyber-city-gurgaon', page: 'article',
+    title: "Cyber City Office Deep Cleaning, Gurgaon",
+    description: "Cyber City office deep cleaning from ₹3/sq ft — tower passes, dock slots, 9 PM night windows. Density crews. GST invoice, pay after sign-off.",
+  },
+  {
+    file: 'blog/office-deep-cleaning-golf-course-road-gurgaon', page: 'article',
+    title: "Golf Course Road Office Deep Cleaning",
+    description: "Premium office deep cleaning on Golf Course Road from ₹3/sq ft — marble-safe chemistry, concierge slots. GST invoice, pay after sign-off.",
+  },
+  {
+    file: 'blog/office-deep-cleaning-sector-32-gurgaon', page: 'article',
+    title: "Sector 32 Office Deep Cleaning, Gurgaon",
+    description: "Sector 32 office deep cleaning from ₹3/sq ft — weekend-night crews for managed workspaces. Shared scope in writing. GST invoice, pay after sign-off.",
+  },
 ];

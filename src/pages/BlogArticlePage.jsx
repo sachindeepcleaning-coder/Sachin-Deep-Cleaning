@@ -82,6 +82,11 @@ const SECONDARY_IMAGES = {
 };
 
 function secondaryImage(article) {
+  // Per-article second visual (image2) keeps office-hub pages on-topic;
+  // otherwise fall back to the CTA-mapped category image, then site defaults.
+  if (article.image2 && article.image2 !== article.image) {
+    return { src: article.image2, alt: article.image2Alt || article.title };
+  }
   const mapped = (article.cta && SECONDARY_IMAGES[article.cta.href]) || SECONDARY_IMAGES['/deep-cleaning-services-in-gurgaon.html'];
   const fallbacks = [mapped, SECONDARY_IMAGES['/deep-cleaning-services-in-gurgaon.html'], { src: '/images/cleaning-1.jpg', alt: 'Professional deep cleaning in a Gurgaon home by Sachin Deep Cleaning' }];
   for (const img of fallbacks) {

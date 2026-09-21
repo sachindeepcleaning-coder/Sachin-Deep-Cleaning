@@ -49,6 +49,10 @@ const GUIDES = [
   { serviceKey: 'office', title: 'Office Deep Cleaning Udyog Vihar — Phases 1–5', href: '/blog/office-deep-cleaning-udyog-vihar.html' },
   { serviceKey: 'office', title: 'Commercial Office Cleaning Udyog Vihar — AMC & Deep', href: '/blog/commercial-office-cleaning-udyog-vihar.html' },
   { serviceKey: 'office', title: 'Sector 44 & Corporate Hubs — Office Cleaning', href: '/blog/office-deep-cleaning-sector-44-gurgaon.html' },
+  { serviceKey: 'office', title: 'Sector 44 Offices — Detailed Guide', href: '/blog/sector-44-office-deep-cleaning-gurgaon.html' },
+  { serviceKey: 'office', title: 'Cyber City Offices — Tower Playbook', href: '/blog/office-deep-cleaning-cyber-city-gurgaon.html' },
+  { serviceKey: 'office', title: 'Golf Course Road — Premium Offices', href: '/blog/office-deep-cleaning-golf-course-road-gurgaon.html' },
+  { serviceKey: 'office', title: 'Sector 32 — Weekend-Night Offices', href: '/blog/office-deep-cleaning-sector-32-gurgaon.html' },
 ];
 
 export default function RelatedGuides({ serviceKey }) {

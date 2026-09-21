@@ -185,6 +185,9 @@ for (const a of ARTICLES) {
   if (h2texts.length >= 2 && h2texts[h2texts.length - 1] === h2texts[h2texts.length - 2]) {
     errors.push(`${where} — trailing duplicate <h2> section: "${h2texts[h2texts.length - 1].slice(0, 60)}"`);
   }
+  if (a.image2 && !a.image2Alt) {
+    errors.push(`${where} — image2 without image2Alt`);
+  }
 }
 
 // ── Cross-article duplication ─────────────────────────────────────────────────
