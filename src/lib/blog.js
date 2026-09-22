@@ -45,11 +45,11 @@ export const ARTICLES = [
       { t: 'p', x: 'The biggest factor in your deep cleaning quote is the size of your home.' },
       { t: 'table', head: ['Home Size', 'Rooms', 'Starting Price', 'Duration'], rows: [
         ['1 RK / Studio', '1 room + kitchen + bath', 'From ₹2,000', '3–5 hrs'],
-        ['1 BHK', '1 bedroom + living + kitchen + bath', 'From ₹2,500', '5–6 hrs'],
+        ['[1 BHK](/blog/1bhk-deep-cleaning-price-gurgaon.html)', '1 bedroom + living + kitchen + bath', 'From ₹2,500', '5–6 hrs'],
         ['2 BHK', '2 bedrooms + living + kitchen + 2 baths', 'From ₹4,500', '7–8 hrs'],
-        ['3 BHK', '3 bedrooms + living + kitchen + 2-3 baths', 'From ₹5,500', '9–10 hrs'],
-        ['4 BHK', '4 bedrooms + large living areas', 'From ₹6,500', 'Full day'],
-        ['5 BHK / Villa', 'Large villa with multiple bathrooms', 'From ₹9,000', 'Full day+'],
+        ['[3 BHK](/full-home-deep-cleaning-3bhk-gurgaon.html)', '3 bedrooms + living + kitchen + 2-3 baths', 'From ₹5,500', '9–10 hrs'],
+        ['[4 BHK](/full-home-deep-cleaning-4bhk-gurgaon.html)', '4 bedrooms + large living areas', 'From ₹6,500', 'Full day'],
+        ['[5 BHK / Villa](/full-home-deep-cleaning-5bhk-gurgaon.html)', 'Large villa with multiple bathrooms', 'From ₹9,000', 'Full day+'],
       ]},
       { t: 'p', x: '*Prices include all cleaning equipment, eco-friendly products and a final walkthrough.*' },
       { t: 'h2', x: 'Deep Cleaning Prices by Service Type' },
@@ -155,7 +155,7 @@ export const ARTICLES = [
       ]},
       { t: 'p', x: 'Rate-card years matter less than scope years: the card moved little from 2025, but the number of vendors dropping chemistry and machine work from their \'deep clean\' keeps rising — which is why this guide prices the list, not the logo. Every figure above is what the full checklist costs, not what a van and two mops cost.' },
       { t: 'h2', x: 'Hindi me sankshipt jankari: Gurgaon me deep cleaning ka kharcha' },
-      { t: 'p', x: 'Agar aap Hindi me samajhna chahte hain to seedhi baat ye hai: Gurgaon me full home deep cleaning 1 RK ke liye ₹2,000, 1 BHK ke liye ₹2,500, 2 BHK ke liye ₹4,500, 3 BHK ke liye ₹5,500 aur villa ke liye ₹9,000 se shuru hoti hai. Kitchen ki deep cleaning ₹1,500 se, bathroom ₹800 prati bathroom, sofa ₹499 prati seat aur carpet ₹15–18 prati square foot se shuru hote hain.' },
+      { t: 'p', x: 'Agar aap Hindi me samajhna chahte hain to seedhi baat ye hai: Gurgaon me [full home deep cleaning](/blog/full-home-deep-cleaning.html) 1 RK ke liye ₹2,000, 1 BHK ke liye ₹2,500, 2 BHK ke liye ₹4,500, 3 BHK ke liye ₹5,500 aur villa ke liye ₹9,000 se shuru hoti hai. Kitchen ki deep cleaning ₹1,500 se, bathroom ₹800 prati bathroom, sofa ₹499 prati seat aur carpet ₹15–18 prati square foot se shuru hote hain.' },
       { t: 'p', x: 'Keemat ghar ke size, bathroom ki sankhya, chimney ke prakar aur ghar ki halat par nirbhar karti hai. Booking se pehle WhatsApp par +91 9267905943 par apne BHK ki photo bhejein — fixed price pehle se tay hota hai, kaam ke baad walkthrough hota hai, aur payment uske baad hi hoti hai. Koi advance nahi liya jata.' },
     ],
   },
@@ -184,7 +184,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**Construction dust** — Gurgaon is in a continuous state of construction. Fine silica particles settle into carpets, mattresses, curtain folds and furniture gaps that a weekly mop never reaches.',
         '**Hard water** — Gurgaon\'s water supply has high TDS (Total Dissolved Solids), which means limescale builds rapidly on bathroom faucets, tiles, shower heads and even washing machine drums.',
-        '**Cooking habits** — Daily home cooking with oil produces grease on kitchen walls, chimney filters, cabinet doors and ceiling fans faster than in homes that cook occasionally.',
+        '**Cooking habits** — Daily home cooking with oil produces grease on kitchen walls, [chimney filters](/blog/kitchen-chimney-cleaning-guide.html), cabinet doors and ceiling fans faster than in homes that cook occasionally.',
         '**Monsoon humidity** — July–September humidity promotes mould in bathroom corners, window sills and under-sofa areas.',
         '**Air quality** — Gurgaon\'s AQI frequently exceeds 200 in winter, causing fine particulate (PM2.5) to settle into soft furnishings.',
       ]},
@@ -197,7 +197,7 @@ export const ARTICLES = [
       ]},
       { t: 'h3', x: 'Every 2–3 Months' },
       { t: 'ul', items: [
-        'Full kitchen deep clean (chimney dismantle, hob, cabinets, tiles, floor)',
+        'Full kitchen [deep clean](/deep-cleaning-services-in-gurgaon.html) ([chimney dismantle](/kitchen-deep-cleaning-gurgaon.html), hob, cabinets, tiles, floor)',
         'All bathrooms (tile descaling, grout scrub, commode sanitization)',
         'Balcony and utility area',
       ]},
@@ -247,10 +247,10 @@ export const ARTICLES = [
       { t: 'h3', x: 'Bedrooms and Living Areas' },
       { t: 'p', x: 'Every 3–6 months for full deep clean. Regular weekly dusting and mopping is essential in between, but a deep clean moves and cleans behind furniture, inside wardrobes and along ceiling edges.' },
       { t: 'h3', x: 'Sofas and Upholstery' },
-      { t: 'p', x: 'Vacuum weekly. Shampoo extraction every 6–12 months (every 6 months for homes with pets or young children). At a minimum, do it once pre-Diwali annually.' },
+      { t: 'p', x: 'Vacuum weekly. Shampoo extraction every 6–12 months (every 6 months for homes with pets or young children). At a minimum, do it once [pre-Diwali](/blog/diwali-cleaning-gurgaon.html) annually.' },
       { t: 'h3', x: 'Carpets' },
       { t: 'p', x: 'Full shampoo extraction every 6–12 months. If you have pets, every 4–6 months.' },
-      { t: 'tip', x: 'Sachin Deep Cleaning offers deep cleaning across all sectors in Gurgaon. To book your quarterly clean or ask about scheduling, WhatsApp +91 9267905943.' },
+      { t: 'tip', x: '[Sachin Deep Cleaning](/) offers deep cleaning across all sectors in Gurgaon. To book your quarterly clean or ask about scheduling, WhatsApp +91 9267905943.' },
       { t: 'h2', x: 'The Indian-Calendar Version: Seasons Drive the Schedule' },
       { t: 'ul', items: [
         '**Pre-monsoon (May–June)** — balcony drains, window tracks, bathroom descale before humidity amplifies every odour and mould spot.',
@@ -334,7 +334,7 @@ export const ARTICLES = [
         ['Post-renovation grease and dust', '❌ Requires industrial tools', '✅ Required'],
       ]},
       { t: 'h2', x: 'Kitchen Chimney Cleaning Cost in Gurgaon' },
-      { t: 'p', x: 'Standalone chimney cleaning is not a separate service most local providers offer — it is typically part of a kitchen deep clean package.' },
+      { t: 'p', x: 'Standalone [chimney cleaning](/blog/kitchen-cleaning-price-gurgaon-chimney.html) is not a separate [service](/blog/home-cleaning-service-guide.html) most local providers offer — it is typically part of a kitchen deep clean package.' },
       { t: 'table', head: ['Service', 'Approximate Cost'], rows: [
         ['Kitchen deep clean (includes chimney)', '₹1,500–₹2,500'],
         ['Chimney-only clean (if offered separately)', '₹500–₹800'],
@@ -414,7 +414,7 @@ export const ARTICLES = [
         'The shower head has noticeably reduced flow from mineral internal blockage',
       ]},
       { t: 'h2', x: 'How Professional Bathroom Descaling Works' },
-      { t: 'p', x: 'A professional bathroom deep clean by Sachin Deep Cleaning follows this process:' },
+      { t: 'p', x: 'A professional bathroom [deep clean](/deep-cleaning-services-in-gurgaon.html) by [Sachin Deep Cleaning](/) follows this process:' },
       { t: 'ol', items: [
         '**Assessment** — identify stain age and type (limescale, mould, soap scum or a combination)',
         '**Tile application** — a professional-grade acid-based descaler is applied to tiles and left to react for 10–15 minutes',
@@ -463,7 +463,7 @@ export const ARTICLES = [
         '**Monthly** — grout brush pass, shower-head soak, exhaust dusting',
         '**Quarterly** — professional descale before scale etches permanently',
       ]},
-      { t: 'tip', x: 'Sachin Deep Cleaning provides professional bathroom descaling and deep cleaning across Gurgaon. WhatsApp +91 9267905943 to book.' },
+      { t: 'tip', x: '[Sachin](/about.html) Deep Cleaning provides professional [bathroom descaling](/bathroom-deep-cleaning-gurgaon.html) and deep cleaning across Gurgaon. WhatsApp +91 9267905943 to book.' },
       { t: 'h2', x: 'A Month-by-Month Battle Plan (Because Scale Never Stops)' },
       { t: 'ul', items: [
         '**Week 1 after a professional descale** — squeegee glass after showers; 20 seconds that delays re-etching by weeks.',
@@ -513,14 +513,14 @@ export const ARTICLES = [
         '**Drying time:** Near zero — the sofa is usable immediately',
       ]},
       { t: 'h3', x: '2. Shampoo / Hot-Water Extraction (₹599/seat)' },
-      { t: 'p', x: 'A cleaning solution is injected into the fabric under pressure, then extracted along with the dissolved dirt and moisture. This is what professional carpet cleaning machines do — adapted for upholstery.' },
+      { t: 'p', x: 'A cleaning solution is injected into the fabric under pressure, then extracted along with the dissolved dirt and moisture. This is what professional [carpet cleaning](/carpet-shampoo-cleaning-gurgaon.html) machines do — adapted for upholstery.' },
       { t: 'ul', items: [
         '**Best for:** Embedded stains, strong odors, allergen removal, heavily soiled sofas',
         '**Drying time:** 4–6 hours in normal room conditions',
         '**Suction power removes:** Dust mites, pet hair, bacteria, years of embedded soil',
       ]},
       { t: 'h3', x: '3. Steam Cleaning' },
-      { t: 'p', x: 'A variant of the hot-water extraction method using steam at higher temperatures. More effective at killing bacteria and dust mites. Sachin Deep Cleaning uses this for mattresses and heavily contaminated upholstery.' },
+      { t: 'p', x: 'A variant of the hot-water extraction method using steam at higher temperatures. More effective at killing bacteria and dust mites. [Sachin Deep Cleaning](/) uses this for mattresses and heavily contaminated upholstery.' },
       { t: 'h2', x: 'Sofa Cleaning Prices in Gurgaon — 2026' },
       { t: 'table', head: ['Sofa Type', 'Dry Cleaning', 'Shampoo/Extraction'], rows: [
         ['Single seat / 1-seater', '₹499', '₹599'],
@@ -531,7 +531,7 @@ export const ARTICLES = [
         ['Armchair', '₹499', '₹599'],
         ['Footstool / Ottoman', '₹300', '₹400'],
       ]},
-      { t: 'p', x: '*Prices are per-seat at Sachin Deep Cleaning. Get a confirmed quote by WhatsApp before booking: +91 9267905943.*' },
+      { t: 'p', x: '*Prices are per-seat at [Sachin](/about.html) Deep Cleaning. Get a confirmed quote by WhatsApp before booking: +91 9267905943.*' },
       { t: 'h2', x: 'Fabric Guide: What Can Be Shampooed?' },
       { t: 'p', x: '**Safe for shampoo extraction:**' },
       { t: 'ul', items: [
@@ -553,7 +553,7 @@ export const ARTICLES = [
         'Any fabric labelled "W" (water-safe) is fine for shampoo; "S" (solvent only) — dry clean only; "X" — vacuum only',
       ]},
       { t: 'h3', x: 'Leather sofas' },
-      { t: 'p', x: 'Leather is cleaned with a leather-safe conditioner cleaner — never shampoo or water extraction. We include leather sofa cleaning as a separate service.' },
+      { t: 'p', x: 'Leather is cleaned with a leather-safe conditioner cleaner — never shampoo or water extraction. We include leather [sofa cleaning](/sofa-shampoo-cleaning-gurgaon.html) as a separate service.' },
       { t: 'h2', x: 'What to Do Before the Cleaner Arrives' },
       { t: 'ol', items: [
         'Remove cushion covers that are machine-washable (they can be washed while the sofa is being cleaned)',
@@ -572,7 +572,7 @@ export const ARTICLES = [
         ['High-allergy household', 'Every 3–6 months'],
         ['Post a heavily soiled incident', 'Immediately'],
       ]},
-      { t: 'tip', x: 'Sofa cleaning available across Gurgaon — DLF Phase 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sushant Lok and all sectors. WhatsApp Sachin Deep Cleaning: +91 9267905943.' },
+      { t: 'tip', x: 'Sofa cleaning available across Gurgaon — [DLF Phase 1](/blog/dlf-phase-1-deep-cleaning-gurgaon.html)–5, Sohna Road, Golf Course Road, Palam Vihar, Sushant Lok and all sectors. WhatsApp Sachin Deep Cleaning: +91 9267905943.' },
       { t: 'h2', x: 'Between Professional Cleans: What Keeps Fabric Good' },
       { t: 'ul', items: [
         '**Vacuum monthly, crevice tool out** — sofa insides and under-cushion crumbs are what actually degrade fabric and feed odours.',
@@ -642,10 +642,10 @@ export const ARTICLES = [
       { t: 'ul', items: [
         'Heavy daily cooking → every 2–3 months',
         'Moderate cooking → every 4–5 months',
-        'Combined with full home deep clean → every 5–6 months is ideal',
+        'Combined with full home [deep clean](/deep-cleaning-services-in-gurgaon.html) → every 5–6 months is ideal',
       ]},
       { t: 'h2', x: 'Price in Gurgaon (2026)' },
-      { t: 'p', x: 'Kitchen-only deep cleaning with Sachin Deep Cleaning starts from **₹1,500**. Exact quote depends on kitchen size and current grease level. Confirmed on call — no surprise charges.' },
+      { t: 'p', x: 'Kitchen-only deep cleaning with [Sachin Deep Cleaning](/) starts from **₹1,500**. Exact quote depends on kitchen size and current grease level. Confirmed on call — no surprise charges.' },
       { t: 'h2', x: 'The Cost of Skipping (What Grease Really Destroys)' },
       { t: 'table', head: ['Skipped For', 'Damage', 'Repair vs Reset'], rows: [
         ['6 months', 'Chimney suction halves, cabinet film sticky', '₹1,500 reset fixes it'],
@@ -683,7 +683,7 @@ export const ARTICLES = [
         '**Day 14** — the film returns on the chimney\'s outer shell and the grout by the hob starts grey-ing again — this is regular cleaning\'s ceiling, not its failure.',
         '**The lesson** — regular cleaning maintains what deep cleaning achieves; it never achieves it. The two are different products on a schedule, not rival prices.',
       ]},
-      { t: 'p', x: 'This is also why \'why pay ₹1,500 when my maid handles the kitchen\' is a category error, not a negotiation: the maid\'s two hours daily and the crew\'s degreaser bath are doing different jobs on different timelines. Homes that run one quarterly deep plus daily upkeep spend less on both than homes asking either to do the other\'s work.' },
+      { t: 'p', x: 'This is also why \'why pay ₹1,500 when my maid handles the kitchen\' is a category error, not a negotiation: the maid\'s two hours daily and the crew\'s degreaser bath are doing different jobs on different timelines. [Homes](/residential-cleaners-near-me.html) that run one quarterly deep plus daily upkeep spend less on both than homes asking either to do the other\'s work.' },
     ],
   },
 
@@ -713,7 +713,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         'Landlords often require a clean handover for deposit refund',
         'New tenants want a hygienic start without previous occupants\' dust and stains',
-        'Empty homes reveal every corner that normal cleaning misses',
+        'Empty [homes](/residential-cleaners-near-me.html) reveal every corner that normal cleaning misses',
         'Hard-water stains, kitchen grease and bathroom scale become clearly visible',
       ]},
       { t: 'h2', x: 'Complete Checklist — What We Clean' },
@@ -768,7 +768,7 @@ export const ARTICLES = [
       { t: 'p', x: 'Move-in / move-out cleaning starts from **₹1,999** for smaller homes. Final price depends on BHK size and condition. Confirmed on call with no hidden charges.' },
       { t: 'h2', x: 'How Long Does It Take?' },
       { t: 'ul', items: [
-        '1–2 BHK empty: usually 4–7 hours',
+        '1–[2 BHK](/blog/2bhk-deep-cleaning-price-gurgaon.html) empty: usually 4–7 hours',
         '3–4 BHK empty: 7–10 hours',
       ]},
       { t: 'p', x: 'We bring all equipment and eco-friendly products. You do not need to arrange anything.' },
@@ -808,7 +808,7 @@ export const ARTICLES = [
         ['6–7 PM', 'Landlord walkthrough', 'Flags fixed on the spot, keys exchange'],
       ]},
       { t: 'p', x: '*One shared WhatsApp group (you, mover lead, our supervisor) prevents the classic failure: cleaners arriving before movers finish. We coordinate timing free on every handover booking.*' },
-      { t: 'tip', x: 'Book move-in or move-out cleaning: call or WhatsApp +91 9267905943. Same-day and next-day slots available across Gurgaon (DLF, Sohna Road, Golf Course Road, Sectors, Palam Vihar, etc.). Police-verified team • Pay after inspection • Free re-clean guarantee if needed.' },
+      { t: 'tip', x: 'Book move-in or move-out cleaning: call or WhatsApp +91 9267905943. Same-day and next-day slots available [across Gurgaon](/) (DLF, Sohna Road, Golf Course Road, Sectors, Palam Vihar, etc.). Police-verified team • Pay after inspection • Free re-clean guarantee if needed.' },
       { t: 'h2', x: 'Move-Out vs Move-In: Same List, Different Stakes' },
       { t: 'table', head: ['Aspect', 'Move-Out Clean', 'Move-In Clean'], rows: [
         ['Primary goal', 'Deposit back, landlord sign-off', 'Safe, fresh start before your things arrive'],
@@ -842,7 +842,7 @@ export const ARTICLES = [
       { q: 'Full home cleaning vs deep cleaning the whole house — same thing?', a: 'Yes — full home, full house and whole-house deep cleaning all mean every room, kitchen, all bathrooms and balconies in one visit. Confirm the room list in writing; names vary, checklists should not.' },
     ],
     blocks: [
-      { t: 'p', x: "Searching for **full home deep cleaning** in Gurgaon returns dozens of vague quotes. This guide gives you Sachin Deep Cleaning’s fixed, sector-wide prices for every BHK — from compact 1 RK studios to 5 BHK villas — plus the exact checklist we follow so you know what you pay for." },
+      { t: 'p', x: "Searching for **full home deep cleaning** in Gurgaon returns dozens of vague quotes. This guide gives you [Sachin Deep Cleaning](/)’s fixed, sector-wide prices for every BHK — from compact 1 RK studios to 5 BHK villas — plus the exact checklist we follow so you know what you pay for." },
       { t: 'h2', x: 'Full Home Deep Cleaning Cost in Gurgaon by BHK' },
       { t: 'table', head: ['Home Size', 'Included', 'Price (Non-Furnished)', 'Duration'], rows: [
         ['1 RK / Studio', '1 room + kitchen + bath', 'From ₹2,000', '3–5 hrs'],
@@ -852,11 +852,11 @@ export const ARTICLES = [
         ['4 BHK', '4 bed + large living + 3–4 bath', 'From ₹6,500', 'Full day'],
         ['5 BHK / Villa', 'Villa, multiple baths + balconies', 'From ₹9,000', 'Full day+'],
       ]},
-      { t: 'p', x: '*Furnished homes: add ~₹500–₹1,000 for wardrobe, sofa and fixture detailing. Prices include all machines and eco-friendly products. No hidden charges — price is locked before the team arrives.*' },
+      { t: 'p', x: '*Furnished [homes](/residential-cleaners-near-me.html): add ~₹500–₹1,000 for wardrobe, sofa and fixture detailing. Prices include all machines and eco-friendly products. No hidden charges — price is locked before the team arrives.*' },
       { t: 'h2', x: 'What’s Included in a Full Home Deep Clean?' },
       { t: 'ul', items: [
         '**All bedrooms & living areas** — floor & tile scrubbing, wall/ceiling dusting, furniture and wardrobe detailing, cobweb removal',
-        '**Kitchen deep cleaning** — chimney filter degreasing, hob/burner scrub, cabinet interiors & exteriors, sink descaling, tile & grout scrub',
+        '**Kitchen deep cleaning** — [chimney filter](/blog/kitchen-chimney-cleaning-guide.html) degreasing, hob/burner scrub, cabinet interiors & exteriors, sink descaling, tile & grout scrub',
         '**All bathrooms** — tile & grout descaling, faucet & shower de-scaling, commode sanitization inside & out, exhaust fan & mirror polish',
         '**Balconies, hallways & passages** — floor scrub, wall spot-clean, railing wipe',
         '**Windows, sills & glass** — interior glass and accessible sills',
@@ -864,7 +864,7 @@ export const ARTICLES = [
         '**Eco-friendly products & equipment** — brought by the team',
       ]},
       { t: 'h2', x: 'Furnished vs Non-Furnished — Why the Price Differs' },
-      { t: 'p', x: 'In Gurgaon, **non-furnished** (empty) homes are fastest — no sofas, no wardrobes to work around. **Furnished** homes require careful detailing of every upholstery, wardrobe shelf, and fixture, so they take 1–2 hours longer. We confirm the exact price for your setup on the call.' },
+      { t: 'p', x: 'In Gurgaon, **non-furnished** (empty) homes are fastest — no [sofas](/sofa-shampoo-cleaning-gurgaon.html), no wardrobes to work around. **Furnished** homes require careful detailing of every upholstery, wardrobe shelf, and fixture, so they take 1–2 hours longer. We confirm the exact price for your setup on the call.' },
       { t: 'h2', x: 'How Long Does It Take? (With Team Size)' },
       { t: 'table', head: ['BHK', 'Team', 'Typical Time'], rows: [
         ['1 BHK', '3 cleaners', '5–6 hours'],
@@ -903,7 +903,7 @@ export const ARTICLES = [
         '**Living + worst bedroom** — furniture density decides team size',
         '**Send BHK + sector with photos** — fixed quote back in ~30 minutes on +91 9267905943',
       ]},
-      { t: 'tip', x: 'Serving all Gurgaon — DLF Phase 1–5, Sohna Road, Golf Course Road/Extension, MG Road, Palam Vihar, Sectors 14–57, Sushant Lok, South City, Manesar. WhatsApp +91 9267905943 for a fixed BHK quote.' },
+      { t: 'tip', x: 'Serving all Gurgaon — [DLF Phase 1](/blog/dlf-phase-1-deep-cleaning-gurgaon.html)–5, Sohna Road, Golf Course Road/Extension, MG Road, Palam Vihar, Sectors 14–57, Sushant Lok, South City, Manesar. WhatsApp +91 9267905943 for a fixed BHK quote.' },
       { t: 'h2', x: 'The Walkthrough Script: Five Minutes That Protect Your Money' },
       { t: 'ul', items: [
         '**Start high** — fan tops and AC grilles; the most-skipped lines in the industry, easiest to check first.',
@@ -952,13 +952,13 @@ export const ARTICLES = [
       { t: 'table', head: ['Task', 'House / Home Cleaning (Regular)', 'Full Home Deep Cleaning'], rows: [
         ['Dusting & vacuuming', 'Yes', 'Yes + behind furniture'],
         ['Mopping', 'Yes', 'Yes + tile scrub & polish'],
-        ['Kitchen', 'Surface wipe', 'Chimney dismantle, cabinet interiors, degreasing'],
+        ['Kitchen', 'Surface wipe', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html), cabinet interiors, degreasing'],
         ['Bathroom', 'Surface clean', 'Descaling, grout scrub, sanitization'],
         ['Windows & sills', 'Light wipe', 'Full glass & frame detail'],
         ['Duration 2 BHK', '2–3 hrs', '7–8 hrs (full team)'],
         ['Frequency', 'Weekly / bi-weekly', 'Every 3–6 months'],
       ]},
-      { t: 'p', x: '**Bottom line:** If you search *cleaning services* weekly, you need house cleaning. If you search *full home deep cleaning*, you need the quarterly intensive reset. Many families combine — deep clean quarterly + house cleaning weekly.' },
+      { t: 'p', x: '**Bottom line:** If you search *cleaning services* weekly, you need house cleaning. If you search *full home deep cleaning*, you need the quarterly intensive reset. Many families combine — [deep clean](/deep-cleaning-services-in-gurgaon.html) quarterly + house cleaning weekly.' },
       { t: 'h2', x: 'Plans Available in Gurgaon' },
       { t: 'ul', items: [
         '**One-time clean** — fresh start before festivals or after travel',
@@ -971,7 +971,7 @@ export const ARTICLES = [
         'Full dusting and vacuuming (all rooms, living area, hallways)',
         'Mopping all floors',
         'Kitchen surface wipe, hob wipe, sink rinse, bin empty & liner change',
-        'Bathroom cleaning — basin, mirror, commode wipe, floor mop',
+        '[Bathroom cleaning](/bathroom-deep-cleaning-gurgaon.html) — basin, mirror, commode wipe, floor mop',
         'Surface sanitization — switches and door handles',
         'Balconies & utility area sweep/mop',
         'Optional: bed-making, dish washing, laundry folding',
@@ -994,7 +994,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         'Gate & lift windows — same team learns your tower’s service-lift hours; random crews lose 30–45 min every visit',
         'Power-backup vs full-power days — machine scrubbing scheduled accordingly in load-shedding pockets',
-        'Festival blackouts — Diwali-week weekly slots pause; pre-book the fortnight before',
+        '[Festival](/blog/diwali-cleaning-gurgaon.html) blackouts — Diwali-week weekly slots pause; pre-book the fortnight before',
         'Key handling — sealed key pouches with photo log for working couples; no loose handoffs',
       ]},
       { t: 'h2', x: 'Staff Continuity — Why the Same Faces Matter' },
@@ -1003,7 +1003,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'What a ₹499 Visit Covers — and What It Never Will' },
       { t: 'ul', items: [
         '**Covered** — sweeping and mopping, surface dusting, bin lining, bathroom wipe-down, bed making on request.',
-        '**Never covered** — chimney degreasing, tile descaling, appliance insides, balcony drains, upholstery extraction.',
+        '**Never covered** — [chimney degreasing](/blog/kitchen-chimney-cleaning-guide.html), tile descaling, appliance insides, balcony drains, upholstery extraction.',
         '**The 45-minute shape** — visits are timed to a maintained home; a home six months past a deep needs the deep first.',
         '**The honest combo** — quarterly deep plus fortnightly visits costs about what monthly visits alone cost, and looks far better.',
       ]},
@@ -1057,9 +1057,9 @@ export const ARTICLES = [
       { t: 'h2', x: 'Services Available Near You' },
       { t: 'ul', items: [
         'Full home deep cleaning (1–5 BHK)',
-        'Kitchen deep cleaning — chimney, hob, cabinets',
-        'Bathroom descaling — tiles, grout, commode',
-        'Sofa shampoo (₹499/seat) & carpet shampoo (₹15/sq ft)',
+        '[Kitchen deep cleaning](/kitchen-deep-cleaning-gurgaon.html) — chimney, hob, cabinets',
+        '[Bathroom descaling](/bathroom-deep-cleaning-gurgaon.html) — tiles, grout, commode',
+        'Sofa shampoo (₹499/seat) & [carpet shampoo](/carpet-shampoo-cleaning-gurgaon.html) (₹15/sq ft)',
         'House cleaning (weekly/bi-weekly from ₹499/visit)',
         'Office and shop cleaning (₹3–11/sq ft)',
         'Move-in / move-out empty-flat cleaning (from ₹1,999)',
@@ -1074,13 +1074,13 @@ export const ARTICLES = [
         '**Local address presence** — we are physically in Gurgaon, not routing from another city',
         '**Fixed quote before start** — not an estimate that changes on-site',
       ]},
-      { t: 'tip', x: 'In Gurgaon and searching “near me”? Call +91 9267905943 now. Tell us your sector — we will confirm the nearest available slot in minutes.' },
+      { t: 'tip', x: 'In Gurgaon and searching “[near me](/blog/deep-cleaners-near-me-gurgaon.html)”? Call +91 9267905943 now. Tell us your sector — we will confirm the nearest available slot in minutes.' },
       { t: 'h2', x: 'What \'Near Me\' Should Actually Mean When You Book' },
       { t: 'ul', items: [
         '**A crew stationed, not dispatched** — teams start from DLF, Sushant Lok and Sector 56 bases, so a 9 am slot really is 9 am.',
         '**Same chemical kit everywhere** — descaler strength tuned to Gurgaon water, not a generic city mix.',
         '**Sector-level access knowledge** — service-lift timings and gate forms differ by sector; a local crew has them on file.',
-        '**One fixed price card city-wide** — Sector 82 pays the same ₹2,500/₹4,500/₹5,500 as DLF Phase 1.',
+        '**One fixed price card city-wide** — Sector 82 pays the same ₹2,500/₹4,500/₹5,500 as [DLF Phase 1](/blog/dlf-phase-1-deep-cleaning-gurgaon.html).',
       ]},
       { t: 'p', x: 'Distance matters less than readiness: a crew 4 km away that knows your society\'s service-lift slot beats one 1 km away fighting your gate process. Ask how many jobs a team has done in your sector this month — the answer predicts punctuality better than any rating.' },
       { t: 'h2', x: 'Same-Day Reality Check: When \'Near Me\' Can Actually Come Today' },
@@ -1126,7 +1126,7 @@ export const ARTICLES = [
       { q: 'Kitchen me cockroach grease se aate hain — cleaning se jayenge?', a: 'Grease hatne se food source khatm hota hai, jo infestation ka main kaaran hai. Deep degreasing + drain cleaning ke baad pest control zyada effective hota hai. Heavy infestation me pehle pest treatment, phir deep clean — hum order bata denge.' },
     ],
     blocks: [
-      { t: 'p', x: "If you are looking for **kitchen deep cleaning services Gurgaon** or **kitchen cleaning in Gurgaon**, here is the exact price and checklist from Sachin Deep Cleaning — no vague ‘call for price’. Gurgaon kitchens work hard with daily oil cooking, so they need degreasing far beyond a daily maid wipe." },
+      { t: 'p', x: "If you are looking for **kitchen deep cleaning services Gurgaon** or **kitchen cleaning in Gurgaon**, here is the exact price and checklist from [Sachin Deep Cleaning](/) — no vague ‘call for price’. Gurgaon kitchens work hard with daily oil cooking, so they need degreasing far beyond a daily maid wipe." },
       { t: 'h2', x: 'Kitchen Deep Cleaning Price in Gurgaon' },
       { t: 'table', head: ['Kitchen Type', 'Includes', 'Price', 'Duration'], rows: [
         ['Small (1–2 platform)', 'Chimney + hob + 2–3 cabinets', '₹1,500–₹1,800', '2–3 hrs'],
@@ -1134,7 +1134,7 @@ export const ARTICLES = [
         ['Large Modular + Pantry', 'All + tall units, pull-outs', '₹2,200–₹2,500', '4–5 hrs'],
         ['Chimney-only (if booked alone)', 'Filter + body wipe', '₹500–₹800', '45–60 min'],
       ]},
-      { t: 'p', x: '*Add-on: inside refrigerator deep clean +₹500 when booked with kitchen. Price includes all food-safe products and equipment.*' },
+      { t: 'p', x: '*Add-on: inside refrigerator [deep clean](/deep-cleaning-services-in-gurgaon.html) +₹500 when booked with kitchen. Price includes all food-safe products and equipment.*' },
       { t: 'h2', x: 'What’s Included — Full Checklist' },
       { t: 'ul', items: [
         '**Chimney** — filter dismantled, soaked in commercial degreaser, high-pressure rinse, body & grease cup cleaned, suction tested',
@@ -1184,9 +1184,9 @@ export const ARTICLES = [
         'Daily-tadka homes: 4 paid deep cleans/year ≈ ₹7,000 vs 4 one-times ≈ ₹8,000 + easier slots',
         'Each visit gets faster (less baked grease) — teams finish in 2.5 hrs by visit three',
         'Chimney motor life roughly doubles vs annual-only cleaning (less strain, less heat)',
-        'Festival-proof: Diwali-week emergency premiums never apply to AMC homes',
+        '[Festival](/blog/diwali-cleaning-gurgaon.html)-proof: Diwali-week emergency premiums never apply to AMC homes',
       ]},
-      { t: 'tip', x: 'Book kitchen deep cleaning across Gurgaon — DLF, Sohna Road, Golf Course, Palam Vihar & all sectors. WhatsApp +91 9267905943 for a fixed price.' },
+      { t: 'tip', x: 'Book [kitchen deep cleaning](/kitchen-deep-cleaning-gurgaon.html) across Gurgaon — DLF, Sohna Road, Golf Course, Palam Vihar & all sectors. WhatsApp +91 9267905943 for a fixed price.' },
       { t: 'h2', x: 'Where the Money Goes Inside a ₹1,500–₹2,500 Kitchen Quote' },
       { t: 'table', head: ['Line Item', 'Share of Effort', 'What It Involves'], rows: [
         ['Chimney', '~25%', 'Filter bath, housing degrease, exterior polish'],
@@ -1201,7 +1201,7 @@ export const ARTICLES = [
         '**₹1,500 (small/straight kitchen)** — under 60 sq ft, standard 2-burner hob, chimney with baffle filters, cabinets wiped outside; the flat-kitchen baseline.',
         '**₹2,000 (full kitchen)** — 60–100 sq ft, 3–4 burners, tall units, more tile area; cabinet insides included.',
         '**₹2,500 (heavy kitchen)** — over 100 sq ft or a year-plus of grease: two bath cycles for the chimney, detailed cabinet insides, inside-appliance wipe (OTG/microwave exterior + cavity).',
-        '**What always moves it up** — filterless chimneys with heavy oil cups, full glass shutters that need both sides, and tile grout that has never been scrubbed.',
+        '**What always moves it up** — filterless [chimneys](/blog/kitchen-chimney-cleaning-guide.html) with heavy oil cups, full glass shutters that need both sides, and tile grout that has never been scrubbed.',
         '**What never should** — your sector, your building\'s age, or \'because it\'s Gurgaon\'; geography is not a cleaning variable.',
       ]},
       { t: 'p', x: 'Ask a vendor to point at the checklist line that makes your kitchen the higher bracket — if the answer is geography or a shrug, the quote is a guess. The brackets here map to measurable things: square footage, burner count, filter type and time since the last real degrease.' },
@@ -1236,7 +1236,7 @@ export const ARTICLES = [
       { q: 'Office me deep cleaning aur daily housekeeping me kya antar hai?', a: 'Housekeeping roz sweeping-mopping-bins karti hai. Deep cleaning quarterly grout scrub, WC descaling, carpet extraction, AC vent cleaning aur exhaust degreasing karta hai — full reset. High-traffic offices (100+ staff) me monthly deep + daily upkeep best combo hai.' },
     ],
     blocks: [
-      { t: 'p', x: "Gurgaon companies searching for **office deep cleaning services in Gurgaon**, **office cleaning services Gurgaon** or **janitorial services in Gurgaon** need the same thing — a hygienic workplace that impresses clients and reduces sick days. This guide gives you real prices, checklist and after-hours scheduling from Sachin Deep Cleaning." },
+      { t: 'p', x: "Gurgaon companies searching for **office deep cleaning services in Gurgaon**, **office cleaning services Gurgaon** or **janitorial services in Gurgaon** need the same thing — a hygienic [workplace](/office-deep-cleaning-gurgaon.html) that impresses clients and reduces sick days. This guide gives you real prices, checklist and after-hours scheduling from [Sachin Deep Cleaning](/)." },
       { t: 'h2', x: 'Office Deep Cleaning Price in Gurgaon (2026)' },
       { t: 'table', head: ['Office Size / Type', 'Work Includes', 'Approx Price'], rows: [
         ['Small office <1,000 sq ft', 'Workstations, pantry, 1–2 washrooms, floor', '₹5,000–₹8,000'],
@@ -1264,7 +1264,7 @@ export const ARTICLES = [
       ]},
       { t: 'h3', x: 'Floors & Carpets' },
       { t: 'ul', items: [
-        'Tile scrub or carpet shampoo (hot-water extraction)',
+        'Tile scrub or [carpet shampoo](/carpet-shampoo-cleaning-gurgaon.html) (hot-water extraction)',
         'Wall-to-wall and area rugs',
       ]},
       { t: 'h3', x: 'Glass, Reception & Conference' },
@@ -1277,7 +1277,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Why Every 3 Months? (Hygiene & Sick Days)' },
       { t: 'ul', items: [
         'Shared desks and washrooms transfer germs fastest',
-        'Quarterly deep clean + daily housekeeping cuts sick days measurably',
+        'Quarterly [deep clean](/deep-cleaning-services-in-gurgaon.html) + daily housekeeping cuts sick days measurably',
         'Pantry grease and washroom limescale build visibly in 10–12 weeks in Gurgaon',
         'Impression on clients — sticky desks and stained carpets signal neglect',
       ]},
@@ -1378,7 +1378,7 @@ export const ARTICLES = [
       { q: 'Toilet cleaning ke liye Harpic kaafi nahi hai kya?', a: 'Bowl ke andar ke liye haan — overnight Harpic achha hai. Lekin tiles, grout, taps, glass aur silicone par professional descaler + scrubbing chahiye. Ek product se poora bathroom nahi hota.' },
     ],
     blocks: [
-      { t: 'p', x: "Searching for **bathroom cleaning service**, **bathroom cleaning service Gurgaon** or **bathroom deep cleaning**? Gurgaon’s hard water makes bathrooms scale faster than any other city — white crust on taps, yellow commode stains and foggy shower glass. Here’s the price and process from Sachin Deep Cleaning." },
+      { t: 'p', x: "Searching for **bathroom cleaning service**, **bathroom cleaning service Gurgaon** or **bathroom deep cleaning**? Gurgaon’s hard water makes [bathrooms](/bathroom-deep-cleaning-gurgaon.html) scale faster than any other city — white crust on taps, yellow commode stains and foggy shower glass. Here’s the [price](/blog/deep-cleaning-cost-gurgaon-2026.html) and process from [Sachin Deep Cleaning](/)." },
       { t: 'h2', x: 'Bathroom Deep Cleaning Price in Gurgaon (2026)' },
       { t: 'table', head: ['Service', 'Price', 'Duration'], rows: [
         ['1 bathroom deep clean', '₹800–₹1,200', '1.5–2 hrs'],
@@ -1483,7 +1483,7 @@ export const ARTICLES = [
       { q: 'Why do carpet edges near balconies turn grey fastest?', a: 'Filtration soiling — Gurgaon dust drafts under doors deposit in a dark lane along skirting. Pre-treatment + extraction edge passes remove it; regular vacuuming rarely reaches wall lines. Mention balcony-facing edges when booking.' },
     ],
     blocks: [
-      { t: 'p', x: "If you are looking for **carpet cleaning**, **carpet cleaning near me**, or **carpet cleaning rate Gurgaon per sqft**, this guide gives you real prices from Sachin Deep Cleaning. Gurgaon’s fine dust + construction particulate settles straight into pile — vacuuming alone leaves **70%** of embedded soil." },
+      { t: 'p', x: "If you are looking for **carpet cleaning**, **carpet cleaning near me**, or **carpet cleaning rate Gurgaon per sqft**, this guide gives you real prices from [Sachin Deep Cleaning](/). Gurgaon’s fine dust + construction particulate settles straight into pile — vacuuming alone leaves **70%** of embedded soil." },
       { t: 'h2', x: 'Carpet Cleaning Price in Gurgaon (2026)' },
       { t: 'table', head: ['Carpet Size', 'Dry Clean (₹15)', 'Shampoo (₹18)', 'Duration'], rows: [
         ['Small rug 5×7 ft (35 sq ft)', '₹525', '₹630', '45 min'],
@@ -1554,7 +1554,7 @@ export const ARTICLES = [
         ['Synthetic (nylon, poly)', 'Hot-water extraction', 'High', 'Sticky residue if rinse skipped'],
         ['Viscose / art silk', 'Dry compound only', 'Very low — water stains it', 'Any wet method yellows the pile'],
       ]},
-      { t: 'p', x: 'The fibre decides everything, which is why a proper quote starts with \'what is it made of\' — often with the label or a burn-test on a loose thread. Gurgaon homes mostly hold synthetics and cottons, which extract well; wool and viscose need the dry route and cost a bit more because the chemistry and drying control are more demanding.' },
+      { t: 'p', x: 'The fibre decides everything, which is why a proper quote starts with \'what is it made of\' — often with the label or a burn-test on a loose thread. [Gurgaon homes](/residential-cleaners-near-me.html) mostly hold synthetics and cottons, which extract well; wool and viscose need the dry route and cost a bit more because the chemistry and drying control are more demanding.' },
       { t: 'h2', x: 'Fibre Guide: What Your Gurgaon Carpet Is Made Of, and What That Means' },
       { t: 'table', head: ['Fibre', 'Common In', 'Method', 'Caution'], rows: [
         ['Wool', 'Hand-knotted rugs, heirloom pieces', 'Low-moisture or dry compound; minimal water', 'Hot water felts wool — never steamed hard'],
@@ -1562,7 +1562,7 @@ export const ARTICLES = [
         ['Polyester/olefin', 'Budget tufted carpets', 'Extraction fine; dries fast', 'Oil-based stains bond strongly — pre-treat'],
         ['Cotton (dhurrie-style)', 'Flatweaves', 'Extraction + flat dry', 'Shrinks if soaked — edges pinned'],
       ]},
-      { t: 'p', x: 'The ₹15/sq ft starting price assumes synthetic wall-to-wall carpet — the easy case. Wool and cotton get priced after a fibre check because the method and drying plan differ, and a wrong method on wool is not a redo, it is a write-off. Any vendor who quotes a hand-knotted rug sight-unseen at the per-sq-ft floor price is pricing it as polyester; you now know what that means.' },
+      { t: 'p', x: 'The ₹15/sq ft starting price assumes synthetic wall-to-wall carpet — the easy case. Wool and cotton get priced after a fibre check because the method and drying plan differ, and a wrong method on wool is not a redo, it is a write-off. Any vendor who quotes a hand-knotted rug sight-unseen at the per-sq-ft floor price is [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) it as polyester; you now know what that means.' },
     ],
   },
 
@@ -1599,9 +1599,9 @@ export const ARTICLES = [
         ['another local brand (dustbusters.in, 2024-05-24)', '1300 sq ft flat-rate home deep cleaning', '₹4,500 for 1300 sq ft (covers 2BHK, 1000 sq ft min, 1 team/day, 1300 sq ft/day capacity)', '200 technicians, 20+ years, “100% verified and trained team” — but no Gurgaon sector reviews shown'],
         ['a local listing (aonedeepcleaning.in)', 'Residential + commercial referrals', 'Call for quote (no BHK table)', '“Experienced & Trusted, Fair & Honest Pricing, 100+ customers via referrals” — 3 sector-untagged testimonials'],
         ['another Gurgaon listing (skks.co.in, Gurgaon, 278 reviews 4.7)', 'Furnished vs unfurnished home deep cleaning', 'Furnished ₹999, Unfurnished ₹799 (home deep cleaning, not “deep cleaning services” bare) — 2BHK deep cleaning is via home, not standalone', '4.7/278 (furnished), top localities DLF 1-5/Sushant Lok/Golf Course Road/Sohna Road listed'],
-        ['Sachin Deep Cleaning (this site, 148 reviews)', 'BHK-fixed home deep cleaning, pay after walkthrough', '1BHK ₹2,500, 2BHK ₹4,500, 3BHK ₹5,500, villa ₹9,000 (5-area checklist, 28–40 crew-hours)', '148 Google reviews sector-tagged (DLF, Sohna, Golf, Sushant, Sectors 14-92), supervisor tick sheets, pay after'],
+        ['[Sachin](/about.html) Deep Cleaning (this site, 148 reviews)', 'BHK-fixed home deep cleaning, pay after walkthrough', '1BHK ₹2,500, 2BHK ₹4,500, 3BHK ₹5,500, villa ₹9,000 (5-area checklist, 28–40 crew-hours)', '148 Google reviews sector-tagged (DLF, Sohna, Golf, Sushant, Sectors 14-92), supervisor tick sheets, pay after'],
       ]},
-      { t: 'p', x: '*Prices are as published on each site, Sep 2026. a large local brand/A One list “call for quote” — that is honest but not comparable; another local brand and Sachin are the only two with a fixed 2BHK figure for the best deep cleaning services in Gurgaon bare query.*' },
+      { t: 'p', x: '*Prices are as published on each site, Sep 2026. a large local brand/A One list “call for quote” — that is honest but not comparable; another local brand and Sachin are the only two with a fixed 2BHK figure for the best [deep cleaning services in Gurgaon](/deep-cleaning-services-in-gurgaon.html) bare query.*' },
       { t: 'h2', x: 'How to Judge the Best Deep Cleaning Services in Gurgaon in 5 Checks' },
       { t: 'table', head: ['What to Check', 'Typical Top-4 Listing', 'This Roundup'], rows: [
         ['BHK price', 'a large local brand “contact for personalised quotation” (no figure), A One “call for quote”, Royal “affordable” (no figure)', '1BHK ₹2,500 to 5BHK ₹9,000 fixed, BHK-by-BHK table'],
@@ -1609,7 +1609,7 @@ export const ARTICLES = [
         ['Time/crew', 'another local brand “1300 sq ft per day, 2 cleaners” (one line), A One “within committed time” (no hours)', '5–6 hrs 1BHK to 9–10 hrs 3BHK, 2–4 cleaners, 28–40 crew-hours'],
         ['Verification', 'a large local brand “biggest and oldest”, another local brand “100% verified” (no proof shown)', 'Police-verified shown on request, ID, supervisor on every job — 5 proofs test'],
         ['Pay terms', 'Never listed (another Gurgaon listing: add to cart ₹999/₹799)', 'Pay after walkthrough, UPI/cash, re-clean free — in every row'],
-        ['Sector proof', 'a large local brand “Gurgaon + Delhi NCR” (wide), A One “Gurgaon” (one word)', 'DLF 1-5, Sushant Lok 1-3, Sohna Road, Golf Course Road, Sectors 14-92, 65-67 — all micro-locals linked'],
+        ['Sector proof', 'a large local brand “Gurgaon + Delhi NCR” (wide), A One “Gurgaon” (one word)', 'DLF 1-5, [Sushant Lok 1](/blog/sushant-lok-1-deep-cleaning-gurgaon.html)-3, Sohna Road, Golf Course Road, Sectors 14-92, 65-67 — all micro-locals linked'],
       ]},
       { t: 'h2', x: 'What “Best” Means for Deep Cleaning Services in Gurgaon (5 Proofs)' },
       { t: 'ol', items: [
@@ -1619,10 +1619,10 @@ export const ARTICLES = [
         '**Pay after walkthrough** — UPI/cash after you tick the checklist, not app pay-before or “call for estimate” email',
         '**Sector-tagged recent Gurgaon proof** — a 2BHK in your exact society/block last week, not a national 878K review count',
       ]},
-      { t: 'tip', x: 'Best deep cleaning services in Gurgaon — fixed BHK price, 5-area walkthrough, pay after. WhatsApp your BHK + society for a 5-minute locked quote: Sachin Deep Cleaning +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all sectors, same-day when you book before noon.' },
+      { t: 'tip', x: 'Best [deep cleaning services in Gurgaon](/) — fixed BHK price, 5-area walkthrough, pay after. WhatsApp your BHK + society for a 5-minute locked quote: Sachin Deep Cleaning +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all sectors, same-day when you book before noon.' },
       { t: 'h2', x: 'How the Comparison Was Scored (So You Can Redo It)' },
       { t: 'ul', items: [
-        '**Price transparency (25%)** — fixed BHK pricing published, not \'get a quote\'.',
+        '**Price transparency (25%)** — fixed BHK [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) published, not \'get a quote\'.',
         '**Scope depth (25%)** — chimney bath, descaling dwell, machine polish named explicitly in the checklist.',
         '**Vetting (20%)** — police verification, ID display, uniformed crews.',
         '**Guarantee (15%)** — pay-after-walkthrough or a written redo policy.',
@@ -1674,18 +1674,18 @@ export const ARTICLES = [
         ['Full-time maid via agency', '₹12k–₹18k/month + agency fee', 'Daily chores if you need live-in help'],
         ['House cleaning (weekly, 2 BHK)', '₹1,199/visit (~₹4.8k/month)', 'Working families needing weekly upkeep'],
         ['Deep cleaning (2 BHK, quarterly)', '₹4,500 one-time (~₹1.5k/month avg)', 'Quarterly hygiene reset'],
-        ['House cleaning weekly + deep quarterly', '~₹6.3k/month avg', 'Best value — clean + hygienic'],
+        ['[House cleaning](/residential-cleaners-near-me.html) weekly + deep quarterly', '~₹6.3k/month avg', 'Best value — clean + hygienic'],
       ]},
       { t: 'p', x: "*Deep cleaning + weekly house cleaning is **~50% cheaper** than full-time housekeeping and **far more hygienic** — maids cannot descale, degrease or extract." },
       { t: 'h2', x: 'When to Choose What' },
       { t: 'ul', items: [
         '**Choose housekeeping placement** if you need daily dish-washing, laundry and presence — and can manage an employment contract.',
         '**Choose house cleaning** if you handle daily sweeping yourself but want weekly professional mopping/sanitization (from ₹499/visit).',
-        '**Choose deep cleaning** if you see limescale, greasy kitchen, foggy shower glass, or allergy symptoms — or pre-Diwali / move-in / post-renovation.',
-        '**Choose combo** (our recommendation for most Gurgaon 2–3 BHKs): weekly house cleaning + deep clean every 3–6 months.',
+        '**Choose deep cleaning** if you see limescale, greasy kitchen, foggy shower glass, or allergy symptoms — or [pre-Diwali](/blog/diwali-cleaning-gurgaon.html) / move-in / post-renovation.',
+        '**Choose combo** (our recommendation for most Gurgaon 2–3 BHKs): weekly house cleaning + [deep clean](/deep-cleaning-services-in-gurgaon.html) every 3–6 months.',
       ]},
       { t: 'h2', x: 'Why We Don’t Place Maids' },
-      { t: 'p', x: 'Sachin Deep Cleaning is a **machine-and-process** company — verified cleaners + extraction machines + descalers. We do not place permanent maids; that is a staffing business with different liability and contracts. If you are looking for *24 hours maid service* or *maid service near me*, a housekeeping agency is the right call. If you are looking for *deep cleaning* or *house cleaning*, we are.' },
+      { t: 'p', x: '[Sachin Deep Cleaning](/) is a **machine-and-process** company — verified cleaners + extraction machines + descalers. We do not place permanent maids; that is a staffing business with different liability and contracts. If you are looking for *24 hours maid service* or *maid service [near me](/blog/deep-cleaners-near-me-gurgaon.html)*, a housekeeping agency is the right call. If you are looking for *deep cleaning* or *house cleaning*, we are.' },
       { t: 'h2', x: '12-Month Cost Math (Real Gurgaon Numbers)' },
       { t: 'table', head: ['Model', 'Year-1 Cost (2 BHK)', 'Hygiene Depth'], rows: [
         ['Full-time maid via agency', '₹1.5–2.2L + agency fee', 'Surface only — no descale/degrease/extract'],
@@ -1745,7 +1745,7 @@ export const ARTICLES = [
       { q: 'Can terrace waterproofing be checked during cleaning?', a: 'We flag ponding spots, cracked screed and suspicious damp patches with photos during terrace jobs — but waterproofing itself is a contractor scope. Early flagging (free with our clean) routinely saves five-figure seepage repairs later.' },
     ],
     blocks: [
-      { t: 'p', x: "Gurgaon balconies and terraces collect more dust than any interior room — open to **Dwarka Expressway / Golf Course Extension construction dust** and monsoon algae. Searches for **balcony cleaning service**, **terrace cleaning services**, **facade cleaning services in Gurgaon** and **floor scrubbing** all map to the same standalone or add-on service." },
+      { t: 'p', x: "[Gurgaon](/) balconies and terraces collect more dust than any interior room — open to **Dwarka Expressway / Golf Course Extension construction dust** and monsoon algae. Searches for **balcony cleaning service**, **terrace cleaning services**, **facade cleaning services in Gurgaon** and **floor scrubbing** all map to the same standalone or add-on service." },
       { t: 'h2', x: 'Balcony & Terrace Cleaning Price in Gurgaon (2026)' },
       { t: 'table', head: ['Area', 'Includes', 'Price', 'Duration'], rows: [
         ['Standard balcony (40–80 sq ft)', 'Floor scrub, railing/grill, drain, wall spot-clean', '₹800–₹1,200', '1–1.5 hrs'],
@@ -1754,7 +1754,7 @@ export const ARTICLES = [
         ['Terrace (300+ sq ft / Penthouse)', 'Full wash, moss treatment', '₹2,500–₹4,000', 'Half-day'],
         ['Facade glass (per sq ft)', 'Exterior glass & frame wash', '₹3–₹8', 'Varies'],
       ]},
-      { t: 'p', x: '*Add-on to full-home or house cleaning is **cheaper** than standalone due to shared travel. Ask when booking.*' },
+      { t: 'p', x: '*Add-on to full-home or [house cleaning](/residential-cleaners-near-me.html) is **cheaper** than standalone due to shared travel. Ask when booking.*' },
       { t: 'h2', x: 'What’s Included — Checklist' },
       { t: 'ul', items: [
         '**Floor** — scrub with deck brush, grout lines if tiled, drain de-clog and flush',
@@ -1789,7 +1789,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'High-Rise Safety Limits (Honest Boundary)' },
       { t: 'p', x: 'We wash exterior glass and cladding reachable from your balcony/terrace level. Rope-access facade work above safe reach needs licensed industrial crews with harnesses and society NOCs — we say so upfront and refer instead of risking untrained height work. Interior glass, tracks, grills and sills are always fully covered.' },
-      { t: 'tip', x: 'Balcony/terrace in DLF, Sohna Road, Golf Course, Palam Vihar, Sectors 45–92 — WhatsApp +91 9267905943 with a photo for a fixed price.' },
+      { t: 'tip', x: 'Balcony/terrace in DLF, Sohna Road, Golf Course, Palam Vihar, Sectors 45–92 — WhatsApp +91 9267905943 with a photo for a fixed [price](/blog/2bhk-deep-cleaning-price-gurgaon.html).' },
       { t: 'h2', x: 'The Monsoon Prep Pass Most Bookings Skip' },
       { t: 'ul', items: [
         '**Drain first** — balcony drains are flushed and deodorised before tile work so scrub water has somewhere to go.',
@@ -1833,13 +1833,13 @@ export const ARTICLES = [
       { t: 'p', x: 'Three principles keep this page authoritative, complete:' },
       { t: 'ol', items: [
         '**Zone, not doorways** — Gurgaon’s 100+ sectors cluster into 6 housing zones (DLF, Sohna, Golf Course, West/Old, New Gurgaon, Manesar). We write **unique** context per zone: housing type, dust exposure, water hardness, not a repeated template.',
-        '**One price, proven process** — Same **₹2,500 (1 BHK) → ₹9,000 (5 BHK)** and same 4-step process (Walkthrough → Deep Clean → Sanitize → Final Check) across every zone — stated once, referenced everywhere.',
+        '**One price, proven process** — Same **₹2,500 (1 BHK) → ₹9,000 (5 BHK)** and same 4-step process (Walkthrough → [Deep Clean](/deep-cleaning-services-in-gurgaon.html) → Sanitize → Final Check) across every zone — stated once, referenced everywhere.',
         '**Sector table for discovery** — A single searchable table lists all sectors so users (and Google) see coverage without crawling 40 duplicates.',
       ]},
       { t: 'h2', x: 'Gurgaon at a Glance — 6 Zones, 50+ Sectors' },
       { t: 'table', head: ['Zone', 'Key Sectors & Colonies', 'Typical Housing'], rows: [
         ['DLF Corridor', 'DLF Phase 1, 2, 3, 4, 5', 'High-rise condos, builder floors, villas'],
-        ['Golf Course', 'Golf Course Road, Extension, Sushant Lok 1–3, South City 1–2', 'Premium towers, villas'],
+        ['Golf Course', 'Golf Course Road, Extension, [Sushant Lok 1](/blog/sushant-lok-1-deep-cleaning-gurgaon.html)–3, South City 1–2', 'Premium towers, villas'],
         ['Sohna Road & South', 'Sohna Road, Vatika City, Nirvana Country, South City, Ardee City', 'High-rise societies'],
         ['West / Old Gurgaon', 'Palam Vihar, Sector 14, 15, 17, 22, 45, 46, 47, MG Road, Cyber City', 'Plotted houses, DDA, low-rise'],
         ['New Gurgaon (82–95)', 'Sector 82, 83, 84, 86, 90, 92, 93, 95, SPR', 'New towers, heavy construction'],
@@ -1849,9 +1849,9 @@ export const ARTICLES = [
       { t: 'h3', x: '1. DLF Phase 1–5 — Villas & High-Rise Condos' },
       { t: 'p', x: 'Large balconies, marble floors and servant quarters. Heavy reliance on AC (dust in vents) and **hard water** in Phase 4–5. Our team brings marble-safe scrubbers and squeegees shower glass post-descaling. Common booking: 3–4 BHK full-home + sofa shampoo. Same-day from our Golf Course–DLF zone team.' },
       { t: 'h3', x: '2. Golf Course Road & Extension (Sushant Lok, South City, Nirvana)' },
-      { t: 'p', x: 'Premium society towers (e.g., DLF Magnolias, Ardee). Expectations high — our **walkthrough + sanitization** step matters. Kitchens are large modular (tall units, pantry pull-outs) — chimney and cabinet degreasing is the bulk of time. Book 9–10 hrs for 3 BHK.' },
+      { t: 'p', x: 'Premium society towers (e.g., DLF Magnolias, Ardee). Expectations high — our **walkthrough + sanitization** step matters. [Kitchens](/kitchen-deep-cleaning-gurgaon.html) are large modular (tall units, pantry pull-outs) — chimney and cabinet degreasing is the bulk of time. Book 9–10 hrs for 3 BHK.' },
       { t: 'h3', x: '3. Sohna Road Corridor (Vatika, Nirvana Country, South City)' },
-      { t: 'p', x: 'Young families in 2–3 BHK high-rises. Dust from Sohna highway construction settles on balconies and sofa pile. Most bookings: **2 BHK + kitchen + 2 bathrooms** (₹4,500–₹5,500). Pre-Diwali fills 2 weeks early.' },
+      { t: 'p', x: 'Young families in 2–3 BHK high-rises. Dust from Sohna highway construction settles on balconies and sofa pile. Most bookings: **2 BHK + kitchen + 2 bathrooms** (₹4,500–₹5,500). [Pre-Diwali](/blog/diwali-cleaning-gurgaon.html) fills 2 weeks early.' },
       { t: 'h3', x: '4. West / Old Gurgaon — Palam Vihar, Sectors 14–22, 45–57, Cyber City, MG Road' },
       { t: 'p', x: 'Mixed plotted houses and older DDA blocks. Interiors often have ** Kota stone or vitrified tiles** (machine scrub) and older commodes needing descaling. Palam Vihar & Sector 46/47 are our highest-volume west zone. **House cleaning weekly** (₹499/visit) is popular here alongside quarterly deep cleans.' },
       { t: 'h3', x: '5. New Gurgaon Sectors 82–95 & Southern Peripheral Road (SPR)' },
@@ -1916,7 +1916,7 @@ export const ARTICLES = [
         '**We check the zone team** — DLF/Golf/Sohna/West/New — and confirm the **nearest available slot** in <30 minutes',
         '**Price is locked** — we state the BHK price above before anyone travels',
         '**Team arrives with all machines + eco-friendly products** — you provide only water access',
-        '**Pay after walkthrough** — only when you approve every sector’s standard: same whether you’re in DLF Phase 5 or Sector 92',
+        '**Pay after walkthrough** — only when you approve every sector’s standard: same whether you’re in [DLF Phase 5](/blog/dlf-phase-5-deep-cleaning-gurgaon.html) or Sector 92',
       ]},
       { t: 'h2', x: 'Why One Complete Guide Beats 50 Near-Identical Sector Pages' },
       { t: 'p', x: 'Creating **“Deep Cleaning in Sector 14”, “Sector 15”…** as 40 near-identical pages is a classic **doorway** pattern. Google’s **helpful content** system now demotes such pages because they add no unique value and split authority. Our approach is opposite: **one guide** that passes **unique** zone context (housing type, dust level, water hardness) plus a **comprehensive table** for discovery. It earns links and ranks for **“deep cleaning in Sector 45 Gurgaon”** via the table + H3s, while interlinking to your service pages (`/deep-cleaning-services-in-gurgaon.html`, `/full-home-deep-cleaning-3bhk-gurgaon.html`) to pass equity — not dilute it.' },
@@ -1950,7 +1950,7 @@ export const ARTICLES = [
       { q: 'What is the minimum office size you take?', a: 'No minimum — single cabins and 200 sq ft shops book at the small-office rate (from ₹5,000). Per-sq-ft billing (₹3–₹11) applies above ~1,000 sq ft where measurement is fairer.' },
     ],
     blocks: [
-      { t: 'p', x: "Gurgaon searches for **commercial cleaning services in Gurgaon**, **office deep cleaning in gurgaon** and **housekeeping services in gurugram** often mean the same need — a hygienic, client-ready commercial space. This guide gives you the price, checklist and after-hours plan from Sachin Deep Cleaning." },
+      { t: 'p', x: "Gurgaon searches for **commercial cleaning services in Gurgaon**, **office deep cleaning in gurgaon** and **housekeeping services in gurugram** often mean the same need — a hygienic, client-ready commercial space. This guide gives you the price, checklist and after-hours plan from [Sachin Deep Cleaning](/)." },
       { t: 'h2', x: 'Commercial Cleaning Price in Gurgaon (2026)' },
       { t: 'table', head: ['Space', 'Includes', 'Approx Price'], rows: [
         ['Shop / Clinic <1,000 sq ft', 'Workstations/counters, pantry, 1–2 washrooms, floor', '₹5,000–₹8,000'],
@@ -1963,7 +1963,7 @@ export const ARTICLES = [
         '**Workstations / Counters** — desks, monitors, phones (electronics-safe), chairs, switchboards',
         '**Pantry / Kitchen** — counters, sink, exhaust, appliances wiped',
         '**Washrooms** — tile & grout scrub, WC descaling, mirror, exhaust, floor disinfection',
-        '**Floors & Carpets** — tile scrub or carpet shampoo (hot-water extraction)',
+        '**Floors & Carpets** — tile scrub or [carpet shampoo](/carpet-shampoo-cleaning-gurgaon.html) (hot-water extraction)',
         '**Glass, Reception & High-Dusting** — cabin glass, entrance, waiting upholstery, vents/fans',
         '**Bins & Finishing** — sanitising & liner replacement, supervisor walkthrough',
       ]},
@@ -2007,7 +2007,7 @@ export const ARTICLES = [
         '**Campus and multi-floor offices** — separate AMC and deep-clean vendors is common, but one vendor with both teams avoids blame games between contracts.',
         '**Fit-out handovers** — post-construction first, then AMC from day one; bundling both with the AMC vendor gets the handover audit free.',
       ]},
-      { t: 'p', x: 'Whichever shape you choose, insist on the same three documents: a written per-sq-ft or per-visit rate, a checklist signed at each visit, and a named supervisor who answers the phone. Vendors who resist any of the three are pricing for churn, not retention.' },
+      { t: 'p', x: 'Whichever shape you choose, insist on the same three documents: a written per-sq-ft or per-visit rate, a checklist signed at each visit, and a named supervisor who answers the phone. Vendors who resist any of the three are [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) for churn, not retention.' },
       { t: 'h2', x: 'What a Day-One AMC Handover Includes' },
       { t: 'ul', items: [
         '**Site map with zone ownership** — each cleaner owns named zones, so nothing falls between two people.',
@@ -2060,7 +2060,7 @@ export const ARTICLES = [
         'Eco-friendly products (not harsh acid)',
         'Time: 2 BHK 7–8 hrs with 4 cleaners (not 3 hrs)',
         'Google-verifiable reviews (not stock)',
-        'Gurgaon-based (not call centre elsewhere)',
+        '[Gurgaon](/)-based (not call centre elsewhere)',
         'Supervisor walkthrough',
         'Written re-clean / refund policy',
       ]},
@@ -2081,10 +2081,10 @@ export const ARTICLES = [
       { t: 'p', x: '*Score 8+ to shortlist. Our best-deep-cleaning 10-point checklist is the long version of this rubric — same logic, more checkpoints.*' },
       { t: 'h2', x: 'Top-5 Mini-Reviews (Public Facts, Sep 2026)' },
       { t: 'ul', items: [
-        '**Sachin Deep Cleaning** — local, since 2015; 4.5 (148 Google reviews); 2 BHK ₹4,500 fixed; pay-after + 24-hr re-clean. Best value for verified local work.',
+        '**Sachin Deep Cleaning** — local, [since 2015](/about.html); 4.5 (148 Google reviews); 2 BHK ₹4,500 fixed; pay-after + 24-hr re-clean. Best value for verified local work.',
         '**Urban Company** — 4.81 (~1.7M bookings); 2 BHK ₹6,500–₹9,000; instant app slots. Best for app-first booking; premium is commission.',
-        '**Safaiwale** — 100+ cleaners, 32 cities; sq-ft pricing; strong buyer-education blog. Best for readers who like documented process.',
-        '**NoBroker** — 4.9-claimed ratings; tenant-shift packs from ~₹4,999; free rescheduling. Best for movers already on NoBroker.',
+        '**Safaiwale** — 100+ cleaners, 32 cities; sq-ft [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html); strong buyer-education blog. Best for readers who like documented process.',
+        '**NoBroker** — 4.9-claimed ratings; tenant-shift packs from ~₹4,999; free rescheduling. Best for movers already on [NoBroker](/blog/nobroker-cleaning-vs-sachin-deep-cleaning.html).',
         '**ZoopGo** — aggregator bidding ₹2,499–₹5,999; 4.4 (1.5k). Best for bargain hunters comfortable vetting individual pros.',
       ]},
       { t: 'h2', x: 'Ad Decoder — What Listings Really Mean' },
@@ -2113,7 +2113,7 @@ export const ARTICLES = [
         ['Housekeeping agencies', '₹500–₹700', '₹5,000+', 'Consistent staff; contracts favour the agency on rescheduling'],
         ['Franchise cleaners', '₹600+', '₹5,500+', 'Branded processes; price carries the franchise fee'],
       ]},
-      { t: 'p', x: 'There is no single winner — Urban Company wins on app convenience, direct maids win on price, franchises win on process documentation. What Sachin Deep Cleaning wins on is ownership: the checklist, the walkthrough and the pay-after terms apply to every visit, because the crew is ours. Match the vendor to what you value; just never buy upkeep from one and deep cleans from another without checking the two checklists align.' },
+      { t: 'p', x: 'There is no single winner — [Urban Company](/blog/urban-company-vs-sachin-deep-cleaning.html) wins on app convenience, direct maids win on price, franchises win on process documentation. What Sachin Deep Cleaning wins on is ownership: the checklist, the walkthrough and the pay-after terms apply to every visit, because the crew is ours. Match the vendor to what you value; just never buy upkeep from one and deep cleans from another without checking the two checklists align.' },
     ],
   },
 
@@ -2142,7 +2142,7 @@ export const ARTICLES = [
       { q: 'How do I adapt this checklist for a 1 RK vs a villa?', a: 'Strike whole sections: 1 RK skips guest rooms, passages and second baths (3–5 hr job); villas add terrace, facade-reachable glass and store rooms (full-day crew). The room tables scale linearly — BHK time table above shows where.' },
     ],
     blocks: [
-      { t: 'p', x: "Gurgaon homeowners searching **full house clean**, **full house clean checklist** or **full house deep cleaning checklist** want a printable, landlord-proof list — not a sales pitch. Here is the **actual checklist** our team uses for 1–5 BHK homes across DLF, Sohna Road and Golf Course Road." },
+      { t: 'p', x: "[Gurgaon](/) homeowners searching **full house clean**, **full house clean checklist** or **full house deep cleaning checklist** want a printable, landlord-proof list — not a sales pitch. Here is the **actual checklist** our team uses for 1–5 BHK [homes](/residential-cleaners-near-me.html) across DLF, Sohna Road and Golf Course Road." },
       { t: 'h2', x: 'Full House Cleaning Checklist — Room by Room (Printable)' },
       { t: 'h3', x: 'Bedrooms & Living Areas (All)' },
       { t: 'ul', items: [
@@ -2222,7 +2222,7 @@ export const ARTICLES = [
         '**Open things** — wardrobes, cabinets, the chimney housing; insides are where rushed jobs cut scope.',
         '**Score it** — tick, cross or redo against the printed list; a crew that welcomes the audit is a crew you rebook.',
       ]},
-      { t: 'p', x: 'The checklist exists precisely so quality is not a matter of opinion at payment time. A home that passes all forty points looks and feels different for weeks — that is the whole promise of deep cleaning, and the reason we pay the walkthrough forward: you approve, then you pay.' },
+      { t: 'p', x: 'The checklist exists precisely so quality is not a matter of opinion at payment time. A home that passes all forty points looks and feels different for weeks — that is the whole promise of [deep cleaning](/blog/house-maid-vs-deep-cleaning-gurgaon.html), and the reason we pay the walkthrough forward: you approve, then you pay.' },
     ],
   },
 
@@ -2251,7 +2251,7 @@ export const ARTICLES = [
     blocks: [
       { t: 'p', x: "Typing **deep cleaners near me** or **home cleaners near me** into Google means you want a person — a verified cleaner at your door today — not a brochure. This guide shows how **deep cleaners near you in Gurgaon** actually work: who arrives, what they bring, what you pay, and how to avoid the unverified, advance-payment traps that dominate **cleaners near me** results." },
       { t: 'h2', x: 'What “Deep Cleaners Near Me” Means in Gurgaon' },
-      { t: 'p', x: 'Google personalises **near me** by your location and the provider’s local proof. A genuine **deep cleaners near me** result in Gurgaon should show: a Gurgaon phone number you can call (+91 9267905943), named sectors served (DLF, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–57), and real sector-tagged reviews — not a call centre in another city routing your booking.' },
+      { t: 'p', x: 'Google personalises **near me** by your location and the provider’s local proof. A genuine **deep cleaners near me** result in Gurgaon should show: a Gurgaon phone number you can call (+91 9267905943), named sectors served (DLF, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–57), and real sector-tagged reviews — not a call centre in another city [routing your booking](/book-cleaning-online-gurgaon.html).' },
       { t: 'h2', x: 'Individual Cleaner vs Verified Team — Honest Comparison' },
       { t: 'table', head: ['Factor', 'Individual Home Cleaners Near Me', 'Sachin Deep Cleaning Team'], rows: [
         ['Verification', 'Rarely verified — ask for ID proof', 'Police-verified, ID-checked, trained'],
@@ -2262,7 +2262,7 @@ export const ARTICLES = [
         ['Backup on cancellation', 'None — you rebook', 'Replacement team same slot'],
         ['Re-clean guarantee', 'None', 'Free re-clean within 24 hours'],
       ]},
-      { t: 'p', x: '*Bottom line: if you need a daily mop, an individual cleaner is fine. If you need descaling, degreasing and extraction — book the team. The per-visit cost is higher, the per-result cost is lower.*' },
+      { t: 'p', x: '*Bottom line: if you need [a daily mop](/house-cleaning-services-in-gurgaon.html), an individual cleaner is fine. If you need descaling, degreasing and extraction — book the team. The per-visit cost is higher, the per-result cost is lower.*' },
       { t: 'h2', x: 'What Deep Cleaners Near You Cost in Gurgaon (2026)' },
       { t: 'table', head: ['Booking', 'What Arrives', 'Price', 'Duration'], rows: [
         ['1 RK / Studio deep clean', '2 verified cleaners + machines', 'From ₹2,000', '3–5 hrs'],
@@ -2302,7 +2302,7 @@ export const ARTICLES = [
         ['Full-team deep clean', 'BHK rates ₹2,500–₹9,000', 'Confirm crew size + hours'],
         ['Weekly upkeep', '₹499+/visit', 'Same-team continuity in writing'],
       ]},
-      { t: 'tip', x: 'Searching deep cleaners near me or home cleaners near me in Gurgaon right now? WhatsApp +91 9267905943 with your sector — nearest verified slot confirmed in minutes. DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, Manesar.' },
+      { t: 'tip', x: 'Searching [deep](/blog/deep-cleaning-near-me-gurgaon.html) cleaners [near](/blog/residential-cleaning-services-near-me-gurgaon.html) me or home cleaners near me in Gurgaon right now? WhatsApp +91 9267905943 with your sector — nearest verified [slot confirmed in minutes](/contact.html). DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, Manesar.' },
       { t: 'h2', x: 'The Red Flags: What a Bad Crew Shows Before It Shows Up' },
       { t: 'ul', items: [
         '**Quote on condition** — \'depends how dirty\' without a fixed card means the invoice is decided after your things are already moved.',
@@ -2338,7 +2338,7 @@ export const ARTICLES = [
       { q: 'Can our whole tower book together for faster slots?', a: 'Yes — society-cluster days cover multiple flats on one roster across DLF, Vatika, Nirvana Country, Sushant Lok and South City. WhatsApp +91 9267905943 with your society name to join the next cluster day.' },
     ],
     blocks: [
-      { t: 'p', x: "If you are looking for **residential cleaning services near me**, **residential cleaners near me** or **residential cleaning services Gurgaon**, you live in a Gurgaon home — society flat, builder floor or villa — and want a local team that knows RWA gates, not a generic vendor. This guide gives you the residential scope, society process and fixed prices from Sachin Deep Cleaning." },
+      { t: 'p', x: "If you are looking for **residential cleaning services near me**, **residential cleaners near me** or **residential cleaning services Gurgaon**, you live in a Gurgaon home — society flat, builder floor or villa — and want a local team that knows RWA gates, not a generic vendor. This guide gives you the residential scope, society process and fixed prices from [Sachin Deep Cleaning](/)." },
       { t: 'h2', x: 'What Residential Cleaning Covers (Flats, Floors, Villas)' },
       { t: 'table', head: ['Home Type', 'Scope Highlights', 'Starting Price'], rows: [
         ['Society flat (1–3 BHK)', 'All rooms, kitchen, 1–3 bathrooms, balconies, windows', '₹2,500 (1 BHK)'],
@@ -2379,7 +2379,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Home Type', 'Extra Scope vs Flat', 'Starting Price'], rows: [
         ['Society flat (1–3 BHK)', 'Baseline checklist', '₹2,500 (1 BHK)'],
         ['Builder floor', 'Stairwell, passage, larger plates', '₹4,500 (2 BHK equiv.)'],
-        ['Villa / independent house', 'Terrace, facade wash, 5–6 cleaners', '₹6,500–₹9,000'],
+        ['Villa / independent house', 'Terrace, facade wash, 5–6 [cleaners](/blog/deep-cleaners-near-me-gurgaon.html)', '₹6,500–₹9,000'],
         ['PG / shared room', 'Single-room detail only', '₹800–₹1,500'],
       ]},
       { t: 'h2', x: 'RWA Playbook (Gates, Lifts, Quiet Hours)' },
@@ -2392,7 +2392,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Density Routes (Why Your Neighbours Book Together)' },
       { t: 'p', x: 'Society-cluster days run in DLF 1–5, Vatika City, Nirvana Country, Sushant Lok and South City: multiple flats, one roster, zero travel gaps. Ask for your society\u2019s next cluster day — back-to-back bookings keep slots (and revisits) fastest.' },
-      { t: 'tip', x: 'In a Gurgaon society, floor or villa and need residential cleaning services near you? Call +91 9267905943 — DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, South City, Manesar, all covered.' },
+      { t: 'tip', x: 'In a Gurgaon society, floor or villa and need [residential cleaning services](/residential-cleaners-near-me.html) near you? Call +91 9267905943 — DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, South City, Manesar, all covered.' },
       { t: 'h2', x: 'Matching the Service to the Situation' },
       { t: 'table', head: ['Your Situation', 'Right Service', 'Why Not the Others'], rows: [
         ['Routine dust and floors', '₹499 upkeep visit', 'A deep is overkill; the visit keeps the baseline'],
@@ -2434,7 +2434,7 @@ export const ARTICLES = [
       { q: 'What if I am not home during weekly visits?', a: 'Sealed key-pouch + photo log + optional video-call walkthrough covers working couples across DLF, Sohna Road and Golf Course Road. Entry/exit timestamps and room ticks arrive on WhatsApp; payment follows on UPI after your remote approval.' },
     ],
     blocks: [
-      { t: 'p', x: "Searching **home cleaning services**, **home cleaning services near me** or **house cleaning services Gurgaon** all lead to the same need — a reliable team at your door without quality lottery. This **home cleaning services near me** guide gives you real Gurgaon prices, plan types and the fastest way to get a same-day slot." },
+      { t: 'p', x: "Searching **home cleaning services**, **home cleaning services near me** or **house cleaning services Gurgaon** all lead to the same need — a reliable team at your door without quality lottery. This **home cleaning services near me** guide gives you real [Gurgaon](/) prices, plan types and the fastest way to get a same-day slot." },
       { t: 'h2', x: 'Home Cleaning Services Near You — Price List (2026)' },
       { t: 'table', head: ['Home Size', 'One-Time Visit', 'Weekly Plan (per visit)'], rows: [
         ['1 RK / Studio', '₹499', '₹449'],
@@ -2503,10 +2503,10 @@ export const ARTICLES = [
       { t: 'h2', x: 'Three Questions That Filter Gig Listings Fast' },
       { t: 'ul', items: [
         '**\'What exactly does the price include?\'** — a fixed list in writing, or an hourly rate that \'depends on condition\'? The second runs over, every time.',
-        '**\'Are the crew police-verified and is the checklist yours?\'** — platforms list workers; companies own checklists and answers.',
+        '**\'Are the crew police-verified and is the checklist yours?\'** — platforms list workers; companies own [checklists](/blog.html) and answers.',
         '**\'What happens if I am not satisfied?\'** — a redo policy beats a refund promise; crews that fix their own misses are crews that inspect before leaving.',
       ]},
-      { t: 'p', x: 'Near me should also mean resourced near you — a Gurgaon-based team carries the descaler strength this city\'s water needs and knows your society\'s gate process. Listings that can answer all three in one message are the ones that show up prepared; the rest are lottery tickets with a calendar slot.' },
+      { t: 'p', x: '[Near me](/blog/deep-cleaners-near-me-gurgaon.html) should also mean resourced near you — a Gurgaon-based team carries the descaler strength this city\'s water needs and knows your society\'s gate process. Listings that can answer all three in one message are the ones that show up prepared; the rest are lottery tickets with a calendar slot.' },
     ],
   },
 
@@ -2533,7 +2533,7 @@ export const ARTICLES = [
       { q: 'Deep cleaning ke baad ghar kitne din saaf rehta hai?', a: 'Surface shine 2–4 hafte (weekly upkeep par), hygiene depth 3–6 mahine. Gurgaon ki dust + hard water ke kaaran quarterly cycle best hai — beech me weekly house cleaning (₹499/visit se) rakhein.' },
     ],
     blocks: [
-      { t: 'p', x: "Everyone searches **deep cleaning** — but most quotes hide what it actually includes. This guide defines **what deep cleaning is**, what **deep cleaning services** cover room-by-room, how long it takes, and what it costs in Gurgaon — so you can tell a genuine deep clean from a 2-hour wipe-down sold under the same name." },
+      { t: 'p', x: "Everyone searches **deep cleaning** — but most quotes hide what it actually includes. This guide defines **what deep cleaning is**, what **deep cleaning services** cover room-by-room, how long it takes, and what it costs in Gurgaon — so you can tell a genuine [deep clean](/deep-cleaning-services-in-gurgaon.html) from a 2-hour wipe-down sold under the same name." },
       { t: 'h2', x: 'Deep Cleaning Definition (60 Seconds)' },
       { t: 'p', x: '**Deep cleaning = every surface, including hidden ones, cleaned with professional tools in one intensive visit.** If the team finishes a 2 BHK in 2 hours with one bucket, it was not deep cleaning. A real **deep cleaning** of a 2 BHK takes **7–8 hours with 4 cleaners**, extraction and scrubbing machines, descalers and degreasers — and ends with a walkthrough you sign off.' },
       { t: 'h2', x: 'What Deep Cleaning Services Include — Room by Room' },
@@ -2561,7 +2561,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Deep Cleaning vs Regular Cleaning — The Real Difference' },
       { t: 'table', head: ['Factor', 'Regular Cleaning', 'Deep Cleaning'], rows: [
         ['Surfaces', 'Visible only', 'Visible + hidden (behind, inside, under)'],
-        ['Kitchen', 'Counter wipe', 'Chimney dismantle, cabinet interiors, degreasing'],
+        ['Kitchen', 'Counter wipe', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html), cabinet interiors, degreasing'],
         ['Bathroom', 'Wipe and mop', 'Descaling, grout scrub, sanitization'],
         ['Sofa / carpet', 'Vacuum (sometimes)', 'Shampoo extraction, allergen removal'],
         ['Tools', 'Broom, mop, phenyl', 'Scrubbers, extractors, steamers, descalers'],
@@ -2570,7 +2570,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Why Gurgaon Needs Deep Cleaning More Often' },
       { t: 'ul', items: [
-        '**Construction dust** — Dwarka Expressway, Golf Course Extension and Sohna Road fines settle into carpets, mattresses and vents',
+        '**Construction dust** — Dwarka Expressway, Golf Course Extension and Sohna Road fines settle into [carpets](/carpet-shampoo-cleaning-gurgaon.html), mattresses and vents',
         '**Hard water (TDS 800–1,200)** — limescale crusts taps, tiles and shower glass in weeks',
         '**Oil-heavy cooking** — chimney, tiles and cabinets film over in 2–3 months',
         '**Monsoon humidity** — mould in grout, sills and under-sofa zones',
@@ -2606,12 +2606,12 @@ export const ARTICLES = [
         'Mid-renovation dust storm — wait for civil work to end, then post-construction reset',
         'Same-day party panic with zero prep — book a house-cleaning visit instead; deep needs hours',
       ]},
-      { t: 'tip', x: 'Now you know what deep cleaning really is — book the real thing across Gurgaon. WhatsApp Sachin Deep Cleaning +91 9267905943 for a fixed BHK quote. Verified team, machines included, pay after satisfaction.' },
+      { t: 'tip', x: 'Now you know what deep cleaning really is — book the real thing [across Gurgaon](/). WhatsApp Sachin Deep Cleaning +91 9267905943 for a fixed BHK quote. Verified team, machines included, pay after satisfaction.' },
       { t: 'h2', x: 'The Chemistry Shelf: What Each Bottle Is For' },
       { t: 'ul', items: [
         '**Acidic descaler** — dissolves limescale on tiles, taps, glass; dwell 15–20 minutes, never on marble or kota.',
         '**Chrome-safe descaler** — the fittings version; strong enough for scale, safe on plating.',
-        '**Alkaline degreaser** — chimney filters, hobs, kitchen tiles; hot dwell for baked grease.',
+        '**Alkaline degreaser** — [chimney filters](/blog/kitchen-chimney-cleaning-guide.html), hobs, kitchen tiles; hot dwell for baked grease.',
         '**Neutral-pH floor cleaner** — stone-safe polish and maintenance; the only thing that touches marble.',
         '**Glass cleaner + squeegee** — the finish step; leaving it out is why windows streak a day later.',
         '**Hospital-grade sanitiser** — high-touch points after cleaning, not instead of cleaning.',
@@ -2646,7 +2646,7 @@ export const ARTICLES = [
       { t: 'p', x: "Every October, Gurgaon searches **Diwali cleaning in Gurgaon**, **Diwali deep cleaning Gurgaon** and **pre-Diwali house cleaning** — and every October, the verified teams sell out first. With **10+ festive seasons behind us since 2015**, this guide gives you real Diwali prices, the exact festive checklist our teams follow, and the booking timeline that actually gets you a slot before the diyas are lit." },
       { t: 'h2', x: 'Why Diwali Cleaning Needs a Deep Clean, Not a Maid Visit' },
       { t: 'ul', items: [
-        '**A year of buildup** — chimney grease, bathroom limescale (Gurgaon TDS 800–1,200), sofa dust-mites and balcony construction dust cannot be wiped away in an afternoon',
+        '**A year of buildup** — chimney grease, bathroom limescale (Gurgaon TDS 800–1,200), sofa dust-mites and balcony [construction](/blog/post-construction-cleaning-services-gurgaon.html) dust cannot be wiped away in an afternoon',
         '**Guests notice everything** — glass, grout lines, fans and shining floors are what visitors see in diya light',
         '**Pooja purity** — mandir walls, oil-soot marks and the festive kitchen need detailing beyond daily mopping',
         '**Post-monsoon residue** — October follows the humid months; mould in grout and sills must go before the festival',
@@ -2742,7 +2742,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Home / Service', 'Dussehra Scope', 'Price'], rows: [
         ['1 BHK', 'Full home + post-monsoon treatment', 'From ₹2,500'],
         ['2 BHK', 'Full home + kitchen + 2 baths', 'From ₹4,500'],
-        ['3 BHK', 'Full home + guest room + balconies', 'From ₹5,500'],
+        ['3 BHK', 'Full home + guest [room](/blog/room-cleaning-services-gurgaon.html) + balconies', 'From ₹5,500'],
         ['Villa / 4–5 BHK', 'Full home + terrace & drains', 'From ₹6,500–₹9,000'],
         ['Diwali-week touch-up (later)', 'Dusting, mopping, bath refresh', 'From ₹499/visit'],
       ]},
@@ -2887,7 +2887,7 @@ export const ARTICLES = [
         ['Afternoon', 'Bathrooms', 'Descaling and fixture polish, fresh-block and towel swap'],
         ['Late afternoon', 'Living and entry', 'Floor machine polish, door and switch detail, doormat and shoe-rack reset'],
       ]},
-      { t: 'p', x: 'The sequence is designed so the rooms you will show first are finished last and freshest. Book a morning slot three or four days before the first pooja, not the evening before — the buffer absorbs a delay and leaves the deep-cleaned home time to air out. Navratri slots fill faster than Diwali\'s because they are fewer; a week\'s notice is the practical minimum.' },
+      { t: 'p', x: 'The sequence is designed so the rooms you will show first are finished last and freshest. Book a morning slot three or four days before the first pooja, not the evening before — the buffer absorbs a delay and leaves the deep-cleaned [home](/blog/home-cleaning-services-gurgaon.html) time to air out. Navratri slots fill faster than Diwali\'s because they are fewer; a week\'s notice is the practical minimum.' },
       { t: 'h2', x: 'The One-Day Pooja-Ready Plan, Hour by Hour' },
       { t: 'table', head: ['Hours', 'Zone', 'Pooja-Relevant Focus'], rows: [
         ['1–2', 'Kitchen first', 'Degrease so prasad-making happens on clean counters; chimney bath starts the clock'],
@@ -2925,7 +2925,7 @@ export const ARTICLES = [
       { q: 'Do cleaning services near me bring their own products and machines?', a: 'Verified ones do — extraction machines, scrubbers, descalers and eco-friendly products included in the quote. “Bring your own bucket” or inspection-visit fees (some chains charge ~₹150 just to quote) are red flags for a local booking.' },
     ],
     blocks: [
-      { t: 'p', x: "Typing **cleaning services Gurgaon** gives you app listings, aggregators and a dozen local sites — but rarely a straight answer on what each service costs and which one you actually need. This guide, from a team doing **cleaning services in Gurgaon since 2015**, maps every service to its real price and gives you the quote-comparison method the top-ranking buyer guides (Safaiwale, ZoopGo) all agree on." },
+      { t: 'p', x: "Typing **cleaning services Gurgaon** gives you app listings, [aggregators](/blog/urban-company-vs-sachin-deep-cleaning.html) and a dozen local sites — but rarely a straight answer on what each service costs and which one you actually need. This guide, from a team doing **cleaning services in Gurgaon since 2015**, maps every service to its real price and gives you the quote-comparison method the top-ranking buyer guides ([Safaiwale](/blog/safaiwale-vs-sachin-deep-cleaning.html), ZoopGo) all agree on." },
       { t: 'h2', x: 'Every Cleaning Service in Gurgaon — One Price Table (2026)' },
       { t: 'p', x: 'All **cleaning services Gurgaon** families book regularly, in one table — compare scope and starting price before you call anyone.' },
       { t: 'table', head: ['Service', 'What It Covers', 'Starting Price'], rows: [
@@ -2949,7 +2949,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'How to Compare Quotes (So the Cheapest Does Not Win by Lying)' },
       { t: 'ol', items: [
-        '**Fix the scope in writing** — rooms, bathrooms, kitchen, sofas itemised before anyone travels',
+        '**Fix the scope in writing** — rooms, bathrooms, kitchen, [sofas](/sofa-shampoo-cleaning-gurgaon.html) itemised before anyone travels',
         '**Ask what is EXCLUDED** — top-ranking guides agree: exclusions (utensils? walls? inside fridge?) are where cheap quotes hide',
         '**Check the clock** — a genuine 2 BHK needs 7–8 hours with 4 cleaners; “3 hours full-home” means skipped areas',
         '**Verify, don’t trust** — police verification proof, itemised quote, pay-after policy, sector-tagged reviews',
@@ -2982,8 +2982,8 @@ export const ARTICLES = [
       { t: 'p', x: '*Rule of thumb from a decade of Gurgaon routes: weekly upkeep plus a quarterly reset costs roughly half of full-time housekeeping — and reaches descaling, degreasing and extraction that daily mopping never touches.*' },
       { t: 'h2', x: 'Methods Professionals Use (and When Each Is Right)' },
       { t: 'ul', items: [
-        '**Hot-water extraction** — sofas, carpets, mattresses; flushes mites, stains and odour (our standard)',
-        '**Steam sanitization** — bathrooms, kitchens; kills germs without harsh residue',
+        '**Hot-water extraction** — sofas, [carpets](/carpet-shampoo-cleaning-gurgaon.html), mattresses; flushes mites, stains and odour (our standard)',
+        '**Steam sanitization** — bathrooms, [kitchens](/kitchen-deep-cleaning-gurgaon.html); kills germs without harsh residue',
         '**Acid descaling** — taps, tiles, shower glass vs Gurgaon’s hard water (never on marble)',
         '**Dry / low-moisture clean** — silk, velvet, delicate rugs that must not get wet',
         '**Machine scrubbing** — vitrified, Kota and tile floors; NOT diamond marble polish (separate service)',
@@ -3045,7 +3045,7 @@ export const ARTICLES = [
       { q: 'Do full home packages include balcony, windows and sofa?', a: 'Balconies, windows/sills and sofa vacuuming are included in our full packages; sofa shampoo extraction (₹499/seat) and carpet shampoo (₹15/sq ft) are add-ons. Always check this line in any competitor quote — it is the most-skipped inclusion.' },
     ],
     blocks: [
-      { t: 'p', x: "Everyone searching **full home deep cleaning** wants the same thing Urban Company sells best — a package picker: choose BHK, see inclusions, know the time. This guide is that picker for Sachin Deep Cleaning, built from **10+ years of Gurgaon packages since 2015**: furnished vs unfurnished, full vs partial, what is genuinely included — and what honestly is not." },
+      { t: 'p', x: "Everyone searching **full home deep cleaning** wants the same thing [Urban Company](/blog/urban-company-vs-sachin-deep-cleaning.html) sells best — a package picker: choose BHK, see inclusions, know the time. This guide is that picker for [Sachin Deep Cleaning](/), built from **10+ years of Gurgaon packages since 2015**: furnished vs unfurnished, full vs partial, what is genuinely included — and what honestly is not." },
       { t: 'h2', x: 'Packages by BHK — Price, Team & Time (2026)' },
       { t: 'table', head: ['Package', 'Team & Time', 'Non-Furnished', 'Furnished'], rows: [
         ['1 RK / Studio', '2 cleaners, 3–5 hrs', 'From ₹2,000', 'From ₹2,500'],
@@ -3057,7 +3057,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'What Every Full Package Includes (Room by Room)' },
       { t: 'ul', items: [
         '**Bedrooms & living** — floor scrub, walls/ceiling dusting, wardrobe interiors, under-bed HEPA vacuum, windows and sills',
-        '**Kitchen** — chimney filter dismantled and degreased, hob, cabinets inside-out, sink, tiles and floor',
+        '**Kitchen** — [chimney filter](/blog/kitchen-chimney-cleaning-guide.html) dismantled and degreased, hob, cabinets inside-out, sink, tiles and floor',
         '**Bathrooms (all)** — tile descaling, grout scrub, commode sanitization, glass polish, exhaust fan',
         '**Balconies & passages** — floor scrub, railing wipe, drain check, cobweb removal',
         '**Finishing** — switches/handles sanitized, walkthrough sign-off, pay after approval',
@@ -3095,7 +3095,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Room-by-Room Time Table (Where the Hours Go)' },
       { t: 'table', head: ['Zone (2 BHK)', 'Work', 'Share of Time'], rows: [
-        ['Kitchen', 'Chimney dismantle, hob, cabinets, tiles, floor', '~2 hrs'],
+        ['Kitchen', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html), hob, cabinets, tiles, floor', '~2 hrs'],
         ['2 bathrooms', 'Descaling, grout, commode, glass, fan', '~2.5 hrs'],
         ['2 bedrooms + living', 'Dusting, vacuum, wardrobes, windows', '~2 hrs'],
         ['Balconies + passages', 'Scrub, railing, drains, cobwebs', '~1 hr'],
@@ -3104,7 +3104,7 @@ export const ARTICLES = [
       { t: 'p', x: '*Total ~8 hours with 4 cleaners — which is exactly why “2 BHK in 3 hours” listings are selling partial cleans under a full-home name.*' },
       { t: 'h2', x: 'Add-On Menu (What Costs Extra Everywhere in Gurgaon)' },
       { t: 'table', head: ['Add-On', 'Price', 'When Worth It'], rows: [
-        ['Inside refrigerator', '₹500', 'Foul odour, spill layers, pre-festival'],
+        ['Inside refrigerator', '₹500', 'Foul odour, spill layers, pre-[festival](/blog/diwali-cleaning-gurgaon.html)'],
         ['Sofa shampoo (per seat)', '₹499–₹599', 'Visible dullness, pet odour, allergies'],
         ['Carpet shampoo (per sq ft)', '₹15–₹18', 'Dust-matted pile, post-renovation'],
         ['Marble diamond polish (per sq ft)', '₹8–₹25', 'Etched, traffic-worn stone (not a mop job)'],
@@ -3150,7 +3150,7 @@ export const ARTICLES = [
       { q: 'Do you clean single rooms in offices or shops?', a: 'Yes — cabins, back rooms, pantry corners and single washrooms follow the same single-room rates with after-hours scheduling. Larger offices quote per sq ft instead — see our office deep cleaning guide.' },
     ],
     blocks: [
-      { t: 'p', x: "Searches for **room cleaning services gurgaon**, **room deep cleaning** and **single room cleaning** come from sharers, PG residents and hosts — people who refuse to pay full-home prices for one dirty room. The top-ranking package pages (Urban Company’s partial-home, Eco-Cleaning’s room cleaning) prove the demand. This guide gives you honest single-room prices from a Gurgaon team since 2015." },
+      { t: 'p', x: "Searches for **room cleaning services gurgaon**, **room deep cleaning** and **single room cleaning** come from sharers, PG residents and hosts — people who refuse to pay full-home prices for one dirty room. The top-ranking package pages ([Urban Company](/blog/urban-company-vs-sachin-deep-cleaning.html)’s partial-home, Eco-Cleaning’s room cleaning) prove the demand. This guide gives you honest single-room prices from a [Gurgaon](/) team since 2015." },
       { t: 'h2', x: 'Room Cleaning Price in Gurgaon (2026)' },
       { t: 'p', x: 'Real **room cleaning services Gurgaon** rates — no “call for price”. Single rooms and money-saving combos:' },
       { t: 'table', head: ['Room / Combo', 'Includes', 'Price', 'Time'], rows: [
@@ -3180,7 +3180,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**PG and shared-flat residents** — one occupied room, quiet timing with flatmates',
         '**Hosts before guests** — guest bedroom + living combo, 48-hour turnaround',
-        '**New parents** — nursery-only deep clean with baby-safe, low-odour products',
+        '**New parents** — nursery-only [deep clean](/deep-cleaning-services-in-gurgaon.html) with baby-safe, low-odour products',
         '**Work-from-home** — study/office room reset without disturbing the household',
       ]},
       { t: 'p', x: "Also searched as **room deep cleaning**, **bedroom cleaning**, **flat deep cleaning** and **ghar cleaning services** for single rooms — same rates below." },
@@ -3335,7 +3335,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Where Each Side Is Strong (Honest Take)' },
       { t: 'ul', items: [
-        '**Mr Deep Cleaning** — focused signature-service menu (home, carpet, upholstery, kitchen, bathroom, glass) suggests a specialist rather than a manpower agency; worth a quote call to compare scope line-by-line',
+        '**Mr Deep Cleaning** — focused signature-service menu (home, carpet, upholstery, [kitchen](/blog/kitchen-vs-regular-cleaning.html), bathroom, glass) suggests a specialist rather than a manpower agency; worth a quote call to compare scope line-by-line',
         '**Sachin Deep Cleaning** — decade in Gurgaon since 2015, published BHK prices, verification and pay-after terms in writing, 30+ named sectors with same-day slots',
       ]},
       { t: 'h2', x: 'The 5-Question Test (Ask Both)' },
@@ -3387,10 +3387,10 @@ export const ARTICLES = [
       { t: 'h2', x: 'Top 5 Office Deep Cleaning Services — Head-to-Head (Sep 2026)' },
       { t: 'table', head: ['Provider', 'Scale (Public)', 'Office Price Signal', 'Corporate Proof'], rows: [
         ['a large local brand Cleaning Company', '200+ professionals; 5+ yrs (own site)', 'Not publicly listed — quote on call', 'Govt-approved licences (cleaning/pest/marble); HQ Sec-53A + GST public; ISO cert; brochures'],
-        ['Safaiwale', '100+ cleaners, 32 cities (own site)', 'Quote-based for office', 'Dedicated office-cleaning page; documented process; buyer guides'],
+        ['Safaiwale', '100+ cleaners, 32 cities (own site)', 'Quote-based for office', 'Dedicated office-cleaning page; documented process; buyer [guides](/blog.html)'],
         ['AYS Max', 'Multi-city; Sushant Lok Sec-57 base', 'Small ₹2,500–₹5,000; per-sq-ft bands; +18% GST stated', 'Free site survey; hub-wise coverage; AMC housekeeping'],
         ['ZoopGo', 'Aggregator; 4.8 (11 reviews)', 'Sq-ft bands from ₹1,999 (bands published)', '4 free vendor quotes; pro profiles with reviews'],
-        ['Sachin Deep Cleaning', 'Local; since 2015; 4.5 (148 Google reviews)', 'Small office ₹5,000–₹8,000 fixed; per-sq-ft mid floors', 'GST invoice; staff IDs; NDA; photo-logged walkthroughs; pay-after'],
+        ['Sachin Deep Cleaning', 'Local; [since 2015](/about.html); 4.5 (148 Google reviews)', 'Small office ₹5,000–₹8,000 fixed; per-sq-ft mid floors', 'GST invoice; staff IDs; NDA; photo-logged walkthroughs; pay-after'],
       ]},
       { t: 'p', x: '*“Not publicly listed” means not found on their site — not absent. Confirm on call; corrections welcome when published facts change.*' },
       { t: 'h2', x: 'Commercial Range Compared (Who Covers Your Vertical)' },
@@ -3423,12 +3423,12 @@ export const ARTICLES = [
       { t: 'h2', x: 'When Scale Wins vs When Local-Fixed Wins' },
       { t: 'table', head: ['Your Situation', 'Lean Toward', 'Why'], rows: [
         ['Single office, need it this weekend', 'Fixed-price local (us)', 'One call, locked figure, same crew'],
-        ['Multi-city rollout (Gurgaon + Noida)', 'a large local brand / Safaiwale scale', 'One vendor, many cities, central billing'],
+        ['Multi-city rollout (Gurgaon + Noida)', 'a large local brand / [Safaiwale](/blog/safaiwale-vs-sachin-deep-cleaning.html) scale', 'One vendor, many cities, central billing'],
         ['Tightest budget, flexible timing', 'ZoopGo bidding', '4 quotes, negotiate hardest'],
         ['Tenant-shift with movers', 'NoBroker packs / local combo', 'Move + clean coordination matters most'],
         ['Regulated space (clinic/lab/finance)', 'Whoever signs NDA + files IDs first', 'Paperwork decides, not slogans'],
       ]},
-      { t: 'tip', x: 'Disclosure: written by Sachin Deep Cleaning. Competitor facts from public pages (balajicleaning.com, safaiwale.in, aysmax.com, zoopgo.com), September 2026. Verify, then book whoever passes the checklist: +91 9267905943.' },
+      { t: 'tip', x: 'Disclosure: written by [Sachin Deep Cleaning](/). Competitor facts from public pages (balajicleaning.com, safaiwale.in, aysmax.com, zoopgo.com), September 2026. Verify, then book whoever passes the checklist: +91 9267905943.' },
       { t: 'h2', x: 'The Questions That Separate Office-Clean Vendors' },
       { t: 'ul', items: [
         '**After-hours proof** — ask for two references where work ran past 9 pm; day-only crews will move your meeting rooms instead.',
@@ -3437,7 +3437,7 @@ export const ARTICLES = [
         '**Insurance and verification** — accidental-damage cover plus police-verified staff; offices carry assets homes do not.',
         '**AMC handoff** — if you run an AMC, the deep vendor should audit the AMC\'s work, not compete with it.',
       ]},
-      { t: 'p', x: 'Price differences of ₹1–2 per sq ft between quotes matter less than the answers above — one bad weekend with a damaged floor or an unverified crew costs more than every rupee saved. Get the scope in writing per area; \'deep clean\' alone is not a scope, it is a hope.' },
+      { t: 'p', x: 'Price differences of ₹1–2 per sq ft between quotes matter less than the answers above — one bad weekend with a damaged floor or an unverified crew costs more than every rupee saved. Get the scope in writing per area; \'[deep clean](/deep-cleaning-services-in-gurgaon.html)\' alone is not a scope, it is a hope.' },
     ],
   },  {
     slug: 'urban-company-vs-sachin-deep-cleaning',
@@ -3640,12 +3640,12 @@ export const ARTICLES = [
       { t: 'h2', x: 'Real Cost Math (2 BHK, 12 Months)' },
       { t: 'table', head: ['Setup', 'Year-1 Cost', 'What You Get'], rows: [
         ['Full-time maid only', '~\u20b91.8L + agency fee', 'Daily chores; zero hygiene depth'],
-        ['Part-time help + weekly pro visits', '~\u20b91.1L', 'Daily cover + maintained surfaces'],
+        ['Part-time help + [weekly pro visits](/blog/home-cleaning-services-gurgaon.html)', '~\u20b91.1L', 'Daily cover + maintained surfaces'],
         ['Above + quarterly deep clean', '~\u20b91.3L', 'The complete home most DLF/Sohna families run'],
         ['Quarterly deep only, no help', '~\u20b918k', 'Depth without daily upkeep (suits bachelors)'],
       ]},
       { t: 'h2', x: 'The Middle Option: Weekly House Cleaning (From \u20b9499)' },
-      { t: 'p', x: "Between a full-time maid and quarterly resets sits **weekly professional visits**: dusting, mopping, kitchen and bathroom upkeep, bins and sanitization — same verified team, pay after walkthrough. At ~\u20b91,049/visit for a 2 BHK it costs roughly a third of full-time housekeeping while keeping surfaces at a level where each deep clean is faster and cheaper." },
+      { t: 'p', x: "Between a [full](/blog/full-house-cleaning-checklist-gurgaon.html)-time maid and quarterly resets sits **weekly professional visits**: [dusting, mopping, kitchen and bathroom upkeep](/house-cleaning-services-in-gurgaon.html), bins and sanitization — same verified team, pay after walkthrough. At ~\u20b91,049/visit for a 2 BHK it costs roughly a third of full-time [housekeeping](/blog/housekeeping-vs-deep-cleaning-gurgaon.html) while keeping surfaces at a level where each deep clean is faster and cheaper." },
       { t: 'h2', x: 'How to Hire a Maid Without Getting Burned' },
       { t: 'ol', items: [
         '**Use manpower agencies**, not cleaning companies, for placement — different business, different liability.',
@@ -3690,7 +3690,7 @@ export const ARTICLES = [
         ['Quarterly deep + maid (₹12,000/mo + 4 × ₹4,500)', '~₹1,62,000', 'Upkeep plus four full resets; maid\'s daily job stays 2 hours, not 5'],
         ['Deeps only, no maid', '4 × ₹4,500 = ₹18,000', 'Great four days a year; drift the other 361'],
       ]},
-      { t: 'p', x: 'The surprising line is the second: homes that add quarterly deeps often downgrade the maid arrangement from full-time to part-time because the deep keeps surfaces workable — the maid\'s daily load genuinely shrinks. The ledger also reframes the deep itself: at ₹4,500 a quarter it costs less per month than two days of full-time maid salary, and it buys machines and chemistry no daily wage can.' },
+      { t: 'p', x: 'The surprising line is the second: [homes that add quarterly deeps](/blog/how-often-deep-clean-home-india.html) often downgrade the maid arrangement from full-time to part-time because the deep keeps surfaces workable — the maid\'s daily load genuinely shrinks. The ledger also reframes the deep itself: at ₹4,500 a quarter it costs less per month than two days of full-time maid salary, and it buys machines and chemistry no daily wage can.' },
     ],
   },
   {
@@ -3802,7 +3802,7 @@ export const ARTICLES = [
         '**The honest split** — use platforms for one-off micro-tasks; use a specialist for the quarterly deep and any job whose checklist is the product.',
         '**Rescheduling** — platform slots depend on worker availability; a specialist team with a base reschedules within the same day.',
       ]},
-      { t: 'p', x: 'The real test is the checklist question: \'send me the written scope for a 2BHK deep\'. A specialist answers with a document; a marketplace listing answers with \'everything will be cleaned\'. For deep cleaning — where the excluded items are exactly what you are paying for — that difference decides the booking.' },
+      { t: 'p', x: 'The real test is the checklist question: \'send me the written scope for a 2BHK deep\'. A specialist answers with a document; a marketplace listing answers with \'everything will be cleaned\'. For [deep cleaning](/blog/pest-control-vs-deep-cleaning-gurgaon.html) — where the excluded items are exactly what you are paying for — that difference decides the booking.' },
     ],
   },
   {
@@ -3906,7 +3906,7 @@ export const ARTICLES = [
         ['Dry + verify', 'Air movers + post-inspection walk', 'Airflow dry + supervisor tick sheets'],
       ]},
       { t: 'h2', x: 'Services Breadth (Where Scale Shows)' },
-      { t: 'p', x: "Credit the machine honestly: beyond home cleaning they publish bird-netting, pest control, painting, facade, water-tank, swimming-pool and invisible-grill verticals few locals match. If your job spans pest + netting + deep clean, one 32-city vendor simplifies billing. If it is purely home deep cleaning, compare the BHK rows above — breadth you never use should not decide a cleaning quote." },
+      { t: 'p', x: "Credit the machine honestly: beyond [home cleaning](/blog/home-cleaning-services-near-me-gurgaon.html) they publish bird-netting, pest control, painting, facade, water-tank, swimming-pool and invisible-grill verticals few locals match. If your job spans pest + netting + deep clean, one 32-city vendor simplifies billing. If it is purely home deep cleaning, compare the BHK rows above — breadth you never use should not decide a cleaning quote." },
       { t: 'tip', x: 'Disclosure: written by Sachin Deep Cleaning. Safaiwale figures from safaiwale.in rate card and service pages, September 2026 — verify before booking. Fixed local quote: WhatsApp +91 9267905943.' },
       { t: 'h2', x: 'Rate Cards vs Fixed Quotes: Reading Both Correctly' },
       { t: 'ul', items: [
@@ -3941,12 +3941,12 @@ export const ARTICLES = [
       { q: 'What if my 1 BHK is very dirty after tenants left?', a: 'Post-tenant 1 BHKs need longer degreasing and descaling — still within the 1 BHK deep cleaning price in Gurgaon band (₹2,500–₹3,500) unless it is a post-renovation or heavily stained case, which we flag as a small add-on before starting, never after. Photos help us quote precisely.' },
     ],
     blocks: [
-      { t: 'p', x: 'Searching **1 BHK deep cleaning price in Gurgaon** and getting only “call for quote”? Here is the fixed, checkable answer from Sachin Deep Cleaning — the team that has done 1 BHK deep cleaning in Gurgaon since 2015, with pay-after-satisfaction in every sector.' },
+      { t: 'p', x: 'Searching **1 BHK deep cleaning price in Gurgaon** and getting only “call for quote”? Here is the fixed, checkable answer from Sachin Deep Cleaning — the team that has done [1 BHK deep cleaning](/full-home-deep-cleaning-1bhk-gurgaon.html) in Gurgaon since 2015, with pay-after-satisfaction in every sector.' },
       { t: 'h2', x: '1 BHK Deep Cleaning Price in Gurgaon — Fixed Bands (Sep 2026)' },
       { t: 'table', head: ['1 BHK Condition', 'Rooms', 'Starting Price', 'Time', 'Crew'], rows: [
         ['Empty (move-in/out, no furniture)', '1 bed + living + kitchen + 1 bath + balcony', '₹2,500', '5 hrs', '2 cleaners'],
         ['Furnished (occupied, wardrobe + sofa)', 'Same + wardrobe interiors + sofa vacuum', '₹3,000', '5–6 hrs', '2 cleaners'],
-        ['Furnished + heavy grease/hard water', 'Same + chimney dismantle + full descale', '₹3,500', '6 hrs', '2 cleaners'],
+        ['Furnished + heavy grease/hard water', 'Same + [chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) + full descale', '₹3,500', '6 hrs', '2 cleaners'],
         ['Post-renovation / heavy stain', 'Same + cement/paint removal', '₹3,500 + add-on if needed', '6 hrs+', '2–3 cleaners'],
       ]},
       { t: 'p', x: '*Your exact 1 BHK deep cleaning price in Gurgaon is locked on the WhatsApp call after you share 3 photos (kitchen, bathroom, living). No asterisk, no site-visit fee, fixed before we arrive.*' },
@@ -3960,7 +3960,7 @@ export const ARTICLES = [
         ['General', 'All fans, lights, switches sanitized, cobwebs, high-touch disinfection, final walkthrough', 'Facade, lift lobby'],
       ]},
       { t: 'h2', x: 'Why 1 BHK Deep Cleaning Price in Gurgaon Varies by ₹1,000' },
-      { t: 'p', x: 'Two 1 BHKs side-by-side can quote ₹2,500 and ₹3,500 for the same “1 BHK deep cleaning in Gurgaon” because:' },
+      { t: 'p', x: 'Two 1 BHKs side-by-side can quote ₹2,500 and ₹3,500 for the same “1 BHK [deep cleaning in Gurgaon](/deep-cleaning-services-in-gurgaon.html)” because:' },
       { t: 'ul', items: [
         '**Furnished vs empty** — wardrobe interiors, sofa and appliance detailing add 45–60 minutes of detailing that an empty flat skips entirely',
         '**Grease load** — a daily-cooking modular kitchen with ghee/mustard oil needs 40-minute chimney dismantle + tile degrease; a light-cooking kitchen needs 15 minutes',
@@ -3973,7 +3973,7 @@ export const ARTICLES = [
         ['1 BHK deep cleaning price in Gurgaon', 'Full 1 BHK top-to-bottom (this page)', '₹2,500–₹3,500 fixed'],
         ['Kitchen + bathroom only', 'Chimney + 1 bath descaled, no bedroom/living/balcony/windows', '₹1,500 + ₹800 = ₹2,300 (not full home)'],
         ['House cleaning (regular, 1 visit)', 'Surface dust/mop, no chimney dismantle, no descaling machine', '₹499/visit weekly plan'],
-        ['2 BHK deep cleaning price in Gurgaon', '2 beds + 2 baths + larger living (7–8 hrs, 4 cleaners)', '₹4,500 (different scope)'],
+        ['[2 BHK deep cleaning price](/blog/2bhk-deep-cleaning-price-gurgaon.html) in Gurgaon', '2 beds + 2 baths + larger living (7–8 hrs, 4 cleaners)', '₹4,500 (different scope)'],
       ]},
       { t: 'p', x: '*Rule: one kitchen or one bathroom alone — book that single. Whole flat — book the 1 BHK deep cleaning price in Gurgaon bundle; the per-room math wins.*' },
       { t: 'h2', x: 'What Slows or Speeds Your 1 BHK Clean' },
@@ -3992,7 +3992,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'How to Get the Lowest Honest 1 BHK Quote' },
       { t: 'ol', items: [
         '**Send 3 photos** — kitchen, bathroom, living — on WhatsApp +91 9267905943; we lock your exact 1 BHK deep cleaning price in Gurgaon in 5 minutes, no site visit',
-        '**State furnished/empty + bath count** — the two biggest drivers; vague “1 BHK” gets buffer pricing',
+        '**State furnished/empty + bath count** — the two biggest drivers; vague “1 BHK” gets buffer [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html)',
         '**Book weekday before noon** — same 1 BHK deep cleaning price in Gurgaon, but weekday slots are easier vs Diwali crunch',
         '**Ask the 5 proofs** — verification, itemised scope, locked figure, pay-after terms, sector references (see below)',
       ]},
@@ -4042,7 +4042,7 @@ export const ARTICLES = [
       { t: 'p', x: 'If you are looking for **2 BHK deep cleaning price in Gurgaon** and found only ranges, here is the single fixed figure and the 18-line checklist it buys — from the Gurgaon team that does 2 BHK deep cleaning in Gurgaon daily, pay-after-satisfaction.' },
       { t: 'h2', x: '2 BHK Deep Cleaning Price in Gurgaon — The Fixed Figure (Sep 2026)' },
       { t: 'table', head: ['Home', 'What’s Included (Rooms)', 'Fixed Price', 'Time', 'Crew'], rows: [
-        ['2 BHK deep cleaning price in Gurgaon', '2 beds + living/dining + kitchen + 2 baths + balcony + windows', '₹4,500', '7–8 hrs', '4 cleaners'],
+        ['2 BHK deep cleaning [price](/blog/house-cleaning-price-gurgaon-per-visit.html) in Gurgaon', '2 beds + living/dining + kitchen + 2 baths + balcony + windows', '₹4,500', '7–8 hrs', '4 cleaners'],
         ['2 BHK + third bath / large balcony', 'Same + third bath full descale', '₹4,500 + ₹500', '8 hrs', '4 cleaners'],
         ['2 BHK post-renovation', 'Same + cement/paint/adhesive removal', '₹4,500 + small add-on if needed', '8 hrs+', '4 cleaners'],
         ['1 BHK deep cleaning price in Gurgaon', '1 bed + living + kitchen + 1 bath', '₹2,500', '5–6 hrs', '2 cleaners'],
@@ -4052,7 +4052,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'What Your 2 BHK Deep Cleaning Price in Gurgaon Includes (Tick Sheet)' },
       { t: 'table', head: ['Area', 'Included in 2 BHK Price', 'Extra (Quoted Separately)'], rows: [
         ['Bedrooms (×2)', 'Floor machine scrub, walls, wardrobe inside-out, under-bed, fan + switch', 'Wall repaint, curtain dry-clean'],
-        ['Living/Dining', 'Floor, windows + sills, sofa vacuum, balcony scrub + drain, cobwebs', 'Sofa shampoo ₹499/seat, carpet ₹15–18/sq ft'],
+        ['Living/Dining', 'Floor, windows + sills, sofa vacuum, balcony scrub + drain, cobwebs', '[Sofa shampoo ₹499/seat](/blog/sofa-cleaning-price-gurgaon-per-seat.html), [carpet ₹15–18/sq ft](/blog/carpet-cleaning-gurgaon-guide.html)'],
         ['Kitchen', 'Chimney dismantle + degrease, hob, cabinets, tiles, sink descaled, floor', 'Chimney carbon filter replacement'],
         ['Bathrooms (×2)', 'Tile descaling, grout, commode, faucets, shower glass, exhaust, floor', 'Third bath ₹500, marble polish'],
         ['General', 'All fans/lights/switches, sanitization, final supervisor walkthrough', 'Façade, lift lobby, utensils'],
@@ -4083,8 +4083,8 @@ export const ARTICLES = [
       { t: 'h2', x: '2 BHK vs 1/3 BHK vs House Cleaning — When Each Wins' },
       { t: 'table', head: ['Job', 'Best For', 'Price'], rows: [
         ['2 BHK deep cleaning price in Gurgaon', 'Full 2 BHK top-to-bottom', '₹4,500 fixed'],
-        ['1 BHK deep cleaning price in Gurgaon', 'Single BHK', '₹2,500 (5–6 hrs)'],
-        ['3 BHK deep cleaning price in Gurgaon', '3 beds, 2–3 baths', '₹5,500 (9–10 hrs)'],
+        ['[1 BHK deep cleaning price in Gurgaon](/blog/1bhk-deep-cleaning-price-gurgaon.html)', 'Single BHK', '₹2,500 (5–6 hrs)'],
+        ['[3 BHK deep cleaning price in Gurgaon](/full-home-deep-cleaning-3bhk-gurgaon.html)', '3 beds, 2–3 baths', '₹5,500 (9–10 hrs)'],
         ['House cleaning (regular)', 'Weekly upkeep, no chimney/descale machine', '₹499/visit'],
         ['Kitchen + 2 baths only', 'One area, not full home', '₹1,500 + ₹1,600 = ₹3,100'],
       ]},
@@ -4130,18 +4130,18 @@ export const ARTICLES = [
       { q: 'What is excluded from 3 BHK deep cleaning price?', a: 'Utensils, wall repaint, marble diamond polish, sealed appliance motors and rope-access façade are excluded everywhere. Your 3 BHK deep cleaning price in Gurgaon checklist lists exclusions in writing at quote — no surprise add-ons.' },
     ],
     blocks: [
-      { t: 'p', x: 'Shopping for **3 BHK deep cleaning price in Gurgaon** should not feel like haggling. Here is one fixed figure and the room list it buys — from the Gurgaon crew that does 3 BHK deep cleaning in Gurgaon every day, pay-after-satisfaction.' },
+      { t: 'p', x: 'Shopping for **3 BHK deep cleaning price in Gurgaon** should not feel like haggling. Here is one fixed figure and the room list it buys — from the Gurgaon crew that does 3 BHK [deep cleaning](/blog/1bhk-deep-cleaning-price-gurgaon.html) in Gurgaon every day, pay-after-satisfaction.' },
       { t: 'h2', x: '3 BHK Deep Cleaning Price in Gurgaon — Fixed Figure (Sep 2026)' },
       { t: 'table', head: ['Home', 'Included Rooms', 'Fixed Price', 'Time', 'Crew'], rows: [
         ['3 BHK deep cleaning price in Gurgaon', '3 beds + living/dining + kitchen + 2–3 baths + balconies + windows', '₹5,500', '9–10 hrs', '4 cleaners'],
         ['3 BHK duplex / large living', 'Same + staircase / double-height', '₹5,500 + small add-on if villa-scale', '10 hrs', '4 cleaners'],
-        ['4 BHK deep cleaning price in Gurgaon', '4 beds + larger living + 3 baths', '₹6,500', 'Full day', '4 cleaners'],
+        ['[4 BHK deep cleaning price in Gurgaon](/full-home-deep-cleaning-4bhk-gurgaon.html)', '4 beds + larger living + 3 baths', '₹6,500', 'Full day', '4 cleaners'],
         ['2 BHK deep cleaning price in Gurgaon', '2 beds + 2 baths', '₹4,500', '7–8 hrs', '4 cleaners'],
       ]},
       { t: 'h2', x: 'What Your 3 BHK Deep Cleaning Price in Gurgaon Includes' },
       { t: 'table', head: ['Area', 'Included', 'Extra'], rows: [
         ['Bedrooms (×3)', 'Floor machine scrub, walls, wardrobes inside-out, under-bed, fan/switch', 'Wall repaint, curtain dry-clean'],
-        ['Living/Dining', 'Floor, windows + sills, sofa vacuum, balconies scrub + drains, cobwebs', 'Sofa shampoo ₹499/seat, carpet ₹15–18/sq ft'],
+        ['Living/Dining', 'Floor, windows + sills, sofa vacuum, balconies scrub + drains, cobwebs', '[Sofa shampoo ₹499/seat](/blog/sofa-cleaning-price-gurgaon-per-seat.html), [carpet ₹15–18/sq ft](/blog/carpet-cleaning-gurgaon-guide.html)'],
         ['Kitchen', 'Chimney dismantle + degrease, hob, cabinets, tiles, sink descaled, floor', 'Carbon filter replacement'],
         ['Bathrooms (2–3)', 'Tile descaling, grout, commode, faucets, shower glass, exhaust, floor', 'Fourth bath, marble polish'],
         ['General', 'All fans/lights/switches sanitized, high-touch disinfection, supervisor walkthrough', 'Façade, lift lobby, utensils'],
@@ -4166,7 +4166,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Option', 'You Get', 'Price'], rows: [
         ['3 BHK deep cleaning price in Gurgaon', 'Full 3 BHK top-to-bottom', '₹5,500 fixed'],
         ['Kitchen + 3 baths alone', 'Chimney + 3× descale, no beds/living/balcony/windows', '₹1,500 + ₹2,400 = ₹3,900 (not full home)'],
-        ['House cleaning (regular)', 'Surface upkeep, no machines/descale', '₹599/visit (weekly)'],
+        ['[House cleaning (regular)](/house-cleaning-services-in-gurgaon.html)', 'Surface upkeep, no machines/descale', '₹599/visit (weekly)'],
         ['One-off room cleans ×3', '3 bedrooms only', '₹2,400 (not full home)'],
       ]},
       { t: 'h2', x: 'How to Lock the Honest 3 BHK Quote' },
@@ -4211,7 +4211,7 @@ export const ARTICLES = [
       { q: 'How often should sofa cleaning be done in Gurgaon?', a: 'Adults only no pets: every 12 months; with kids: 6 months; with pets/allergies: 4–6 months; heavily used: immediately after a spill. Your sofa cleaning price in Gurgaon stays per-seat regardless of frequency — ask for the weekly upkeep tips to stretch it.' },
     ],
     blocks: [
-      { t: 'p', x: 'If you googled **sofa cleaning price in Gurgaon per seat** and found “contact for price”, use this table instead — every seat counted, every method priced, from the Gurgaon team that does sofa cleaning in Gurgaon daily.' },
+      { t: 'p', x: 'If you googled **sofa cleaning price in Gurgaon per seat** and found “contact for price”, use this table instead — every seat counted, every method priced, from the Gurgaon team that does [sofa cleaning](/sofa-shampoo-cleaning-gurgaon.html) in Gurgaon daily.' },
       { t: 'h2', x: 'Sofa Cleaning Price in Gurgaon — Per-Seat Table (Sep 2026)' },
       { t: 'table', head: ['Sofa Type', 'Seats', 'Dry Price', 'Shampoo Price', 'Drying'], rows: [
         ['1-seater / armchair', '1', '₹499', '₹599', 'Dry: immediate / Shampoo: 4–6 hrs'],
@@ -4238,7 +4238,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**Seat count is the driver** — sofa cleaning price in Gurgaon is strictly per seat, not per sofa. A “5-seater” that is really 3+2 seats is still 5 seats; a 3-seater + 2 single armchairs is 5 seats priced identically',
         '**Method choice** — ₹100/seat delta between dry and shampoo; shampoo is worth it for anything beyond light dust',
-        '**Stain age** — 1-week curry stain lifts fully; 6-month ink needs pre-treatment and may still shadow — same sofa cleaning price in Gurgaon, but honesty about result before charging',
+        '**Stain age** — 1-week curry stain lifts fully; 6-month ink needs pre-treatment and may still shadow — same sofa cleaning price in Gurgaon, but honesty [about](/about.html) result before charging',
         '**Fabric type** — velvet needs low-moisture at same price (no extra), silk needs dry-only, leather needs conditioner (different quote) — tell fabric on booking',
         '**Add-ons** — carpet at ₹15–18/sq ft or full-home bundle saves call-out vs sofa alone; your sofa cleaning price in Gurgaon stays per-seat, bundle saves on trip',
       ]},
@@ -4264,7 +4264,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Bundle Math — Sofa + Carpet + Full Home' },
       { t: 'table', head: ['Bundle', 'Math', 'You Pay (Example)'], rows: [
         ['Sofa alone (3-seater shampoo)', '3×₹599', '₹1,797'],
-        ['Sofa 3-seater + 12×10 carpet shampoo', '₹1,797 + (120×₹18)=₹2,160', '₹3,957 one visit'],
+        ['Sofa 3-seater + 12×10 [carpet shampoo](/carpet-shampoo-cleaning-gurgaon.html)', '₹1,797 + (120×₹18)=₹2,160', '₹3,957 one visit'],
         ['Sofa 3-seater as add-on to full-home 2BHK (₹4,500)', 'Full-home includes vacuum; shampoo add-on', '₹4,500 + ₹1,797 = ₹6,297'],
         ['Sofa dry as maintenance between shampoos', '3×₹499 every 3–4 months', '₹1,497 interim'],
       ]},
@@ -4274,7 +4274,7 @@ export const ARTICLES = [
         '**Book dry now** — silk/velvet, light dust, need sofa same-hour, maintenance between shampoos',
         '**Ask us** — send stain photo + fabric, we recommend method at same sofa cleaning price in Gurgaon bands — no upsell, honesty about result',
       ]},
-      { t: 'tip', x: 'Per-seat sofa cleaning price in Gurgaon, pay after you approve — WhatsApp your sofa photo for a 5-minute lock: Sachin Deep Cleaning +91 9267905943. Dry ₹499, shampoo ₹599, all sectors, same-day when slots allow.' },
+      { t: 'tip', x: 'Per-seat sofa cleaning price in Gurgaon, pay after you approve — WhatsApp your sofa photo for a 5-minute lock: [Sachin Deep Cleaning](/) +91 9267905943. Dry ₹499, shampoo ₹599, all sectors, same-day when slots allow.' },
       { t: 'h2', x: 'Why Two 3-Seater Quotes Differ by ₹1,000' },
       { t: 'ul', items: [
         '**Seat definition** — some vendors count cushions, others count seating positions; a \'3-seater\' with a chaise is 4 positions. Our count: seating positions, stated in the quote.',
@@ -4283,7 +4283,7 @@ export const ARTICLES = [
         '**Fabric risk** — viscose and velvet need dry methods; the cheaper wet quote on those fabrics is expensive damage.',
         '**Drying reality** — 4–6 hours regardless of vendor; anyone promising \'dry in an hour\' is selling foam-only as extraction.',
       ]},
-      { t: 'p', x: '₹499 per seat is the market\'s honest benchmark for extraction-based cleaning of standard fabric sofas. Quotes far below it use foam-and-vacuum; quotes far above it are pricing stain anxiety. Send photos of the sofa and its worst stain zone — one message, and both price and method are pinned in writing.' },
+      { t: 'p', x: '₹499 per seat is the market\'s honest benchmark for extraction-based cleaning of standard fabric sofas. Quotes far below it use foam-and-vacuum; quotes far above it are [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) stain anxiety. Send photos of the sofa and its worst stain zone — one message, and both price and method are pinned in writing.' },
     ],
   },
 
@@ -4309,7 +4309,7 @@ export const ARTICLES = [
       { q: 'How often should bathrooms be deep cleaned in Gurgaon?', a: 'Every 2–3 months due to hard water. Your bathroom cleaning price in Gurgaon is quarterly maintenance, not annual — squeegee glass after each shower and dry taps to stretch to 3 months, but professional descaling remains the reset.' },
     ],
     blocks: [
-      { t: 'p', x: 'Searching **bathroom cleaning price in Gurgaon per bathroom** and finding “call for quote”? Here is the fixed per-bath figure and the 7-step checklist it buys — from the Gurgaon team that descales bathrooms daily in hard-water TDS 500–1,200.' },
+      { t: 'p', x: 'Searching **bathroom cleaning price in Gurgaon per bathroom** and finding “call for quote”? Here is the fixed per-bath figure and the 7-step checklist it buys — from the [Gurgaon team](/residential-cleaners-near-me.html) that descales bathrooms daily in hard-water TDS 500–1,200.' },
       { t: 'h2', x: 'Bathroom Cleaning Price in Gurgaon — Per-Bath Table (Sep 2026)' },
       { t: 'table', head: ['Bathrooms', 'Price', 'Per Bath', 'Time'], rows: [
         ['1 bathroom', '₹800', '₹800', '45 min'],
@@ -4318,7 +4318,7 @@ export const ARTICLES = [
         ['4 bathrooms', '₹2,600', '₹650', '180 min'],
         ['Bath as add-on to 2BHK full-home (₹4,500)', 'Included', 'Included', 'Within 7–8 hrs'],
       ]},
-      { t: 'p', x: '*Your exact bathroom cleaning price in Gurgaon is locked from a photo — no visit. Hard-water descaling is included, never extra.*' },
+      { t: 'p', x: '*Your exact [bathroom cleaning](/bathroom-deep-cleaning-gurgaon.html) price in Gurgaon is locked from a photo — no visit. Hard-water descaling is included, never extra.*' },
       { t: 'h2', x: 'What Your Bathroom Cleaning Price in Gurgaon Includes' },
       { t: 'table', head: ['Step', 'What We Do', 'Why It Matters in Gurgaon'], rows: [
         ['Descaler dwell', 'Professional acid descaler applied to tiles, dwell 15 min', 'Dissolves calcium/magnesium crust from TDS 500–1,200'],
@@ -4356,10 +4356,10 @@ export const ARTICLES = [
         '**Monthly** — grout brush pass, shower-head soak',
         '**Quarterly** — professional bathroom cleaning price in Gurgaon reset before etch becomes permanent',
       ]},
-      { t: 'tip', x: 'Fixed bathroom cleaning price in Gurgaon ₹800/bath — pay after walkthrough. WhatsApp bathroom photos: Sachin Deep Cleaning +91 9267905943. All sectors, same-day when slots allow.' },
+      { t: 'tip', x: 'Fixed bathroom cleaning price in Gurgaon ₹800/bath — pay after walkthrough. WhatsApp bathroom photos: [Sachin Deep Cleaning](/) +91 9267905943. All sectors, same-day when slots allow.' },
       { t: 'h2', x: 'Reading a Bathroom Quote: the Line Items That Matter' },
       { t: 'ul', items: [
-        '**\'Descaling\' must name the chemistry** — acid-based for ceramic and chrome-safe formulas for fittings; a quote that just says \'deep clean\' usually skips it.',
+        '**\'Descaling\' must name the chemistry** — acid-based for ceramic and chrome-safe formulas for fittings; a quote that just says \'[deep clean](/deep-cleaning-services-in-gurgaon.html)\' usually skips it.',
         '**Grout work is the hours** — brushing grout lines is most of the time difference between a 30-minute wipe and a 45–60 minute clean.',
         '**Exhaust fan** — the greasy-dust grille is a 5-minute job most crews skip; it should be on the list.',
         '**Shower glass** — a squeegee polish at the end is what keeps glass clear for weeks; without it, spots re-etch in days.',
@@ -4398,10 +4398,10 @@ export const ARTICLES = [
       { q: 'How often should kitchens be deep cleaned in Gurgaon?', a: 'Every 2–3 months for daily-cooking Gurgaon homes. Ghee/mustard-oil cooking and hard-water film mean grease and limescale build 2–3× faster than in light-cooking homes. Your kitchen cleaning price in Gurgaon is quarterly maintenance.' },
     ],
     blocks: [
-      { t: 'p', x: 'Searching **kitchen cleaning price in Gurgaon** and seeing “chimney extra” asterisks? Here is one fixed figure where chimney is included — from the Gurgaon team that degreases kitchens daily.' },
+      { t: 'p', x: 'Searching **kitchen cleaning price in Gurgaon** and seeing “chimney extra” asterisks? Here is one fixed figure where chimney is included — from the [Gurgaon team](/residential-cleaners-near-me.html) that degreases kitchens daily.' },
       { t: 'h2', x: 'Kitchen Cleaning Price in Gurgaon — Fixed Bands (Sep 2026)' },
       { t: 'table', head: ['Kitchen Type', 'Included', 'Fixed Price', 'Time'], rows: [
-        ['Standard modular (1 chimney, 1 hob, cabinets)', 'Chimney dismantle + degrease, hob, cabinets inside-out, tiles, sink, floor', '₹1,500', '3–4 hrs'],
+        ['Standard modular (1 chimney, 1 hob, cabinets)', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) + degrease, hob, cabinets inside-out, tiles, sink, floor', '₹1,500', '3–4 hrs'],
         ['Large L-shape / many cabinets', 'Same + extra cabinet interiors', '₹1,800', '4 hrs'],
         ['Post-tenant / heavy grease', 'Same + heavy degrease dwell', '₹1,800–₹2,000', '4 hrs'],
         ['Kitchen as add-on to 2BHK full-home', 'Already included in ₹4,500', 'Included', 'Within 7–8 hrs'],
@@ -4437,7 +4437,7 @@ export const ARTICLES = [
         ['Full-home 2BHK (includes kitchen)', '2 beds + 2 baths + kitchen + living + balcony', '₹4,500'],
         ['House cleaning (regular)', 'Surface wipe, no dismantle/descale', '₹499/visit'],
       ]},
-      { t: 'tip', x: 'Fixed kitchen cleaning price in Gurgaon ₹1,500 — chimney included, pay after walkthrough. WhatsApp kitchen photo: Sachin Deep Cleaning +91 9267905943. 3–4 hrs, 2 cleaners, all sectors.' },
+      { t: 'tip', x: 'Fixed kitchen cleaning price in Gurgaon ₹1,500 — chimney included, pay after walkthrough. WhatsApp kitchen photo: [Sachin Deep Cleaning](/) +91 9267905943. 3–4 hrs, 2 cleaners, all sectors.' },
       { t: 'h2', x: 'Why Chimney Degreasing Changes the Whole Quote' },
       { t: 'ul', items: [
         '**Baffle filters** — degreased in a chemical bath on site; 20–30 minutes of soaking beats an hour of scrubbing.',
@@ -4448,7 +4448,7 @@ export const ARTICLES = [
       { t: 'p', x: 'A properly degreased chimney makes the whole kitchen easier to keep clean — less grease re-settles on cabinets and tiles each week. That is why the chimney is done first, while its chemical bath does the waiting, and why the quote lists it separately: it is the item most crews quietly skip.' },
       { t: 'h2', x: 'The 2-Hour Sequence, Minuted' },
       { t: 'table', head: ['Minute 0–15', '15–45', '45–90', '90–120'], rows: [
-        ['Hob burners and grates into the degrease bath; chimney filter panels follow; degreaser on tiles', 'Counters, sink and splash zones scrubbed while the bath works', 'Bath pieces brushed and rinsed; cabinet exteriors and handles done; glass wiped', 'Filter panels back in, hob reassembled and test-lit, floor degreased and mopped'],
+        ['Hob burners and grates into the degrease bath; [chimney filter](/blog/kitchen-chimney-cleaning-guide.html) panels follow; degreaser on tiles', 'Counters, sink and splash zones scrubbed while the bath works', 'Bath pieces brushed and rinsed; cabinet exteriors and handles done; glass wiped', 'Filter panels back in, hob reassembled and test-lit, floor degreased and mopped'],
       ]},
       { t: 'p', x: 'The bath is the shortcut everyone else skips: grease that resists 30 minutes of scrubbing surrenders to 20 minutes of hot chemistry. A kitchen cleaned this way stays clean longer too — baked grease is rough and catches dust; a truly degreased hob surface wipes clean with a damp cloth for weeks afterwards.' },
       { t: 'h2', x: 'DIY, Sweep, or Professional: an Honest Line' },
@@ -4537,7 +4537,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**Tower flats (Belgium Blocks, Rolex and similar)** — society lift windows and facility-desk intimation; standard card applies.',
         '**Market-adjacent builder floors** — grease film on kitchen-facing walls and dust on everything from the bazaar below; dwell times extended, tracks detailed.',
-        '**Short-term rentals** — frequent turnover shows as scuffed skirting and stale bathroom drains; the end-of-tenancy add-on merges with the deep.',
+        '**Short-term rentals** — frequent turnover shows as scuffed skirting and stale bathroom drains; the end-of-[tenancy](/blog/end-of-tenancy-cleaning-gurgaon.html) add-on merges with the deep.',
         '**Pet households** — dander work on upholstery and under-furniture; flagged at booking, no price surprise.',
       ]},
       { t: 'p', x: 'Phase 3\'s mix of towers and market-facing floors changes the work, not the price: same ₹2,500–₹5,500 card, with the adaptation visible in crew hours. The tell of an experienced Phase 3 crew is what they ask at booking — \'which floor, market-facing?\' — because the answer changes the chemical plan, not the checklist.' },
@@ -4590,7 +4590,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Why Sohna Road Quotes Vary' },
       { t: 'ul', items: [
         '**Society size** — South City/Greenwood villas vs Vatika 2BHK apartments = bath/balcony delta, not locality markup',
-        '**Traffic** — Sohna Road NH 48 jams mean morning slots > evening; your Sohna Road deep cleaning price does not change, only slot assignment',
+        '**Traffic** — Sohna Road NH 48 jams mean morning slots > evening; your Sohna Road [deep cleaning](/blog/full-home-deep-cleaning-gurgaon-guide.html) price does not change, only slot assignment',
         '**Hard water** — still hard water, still included; no “Sohna Road extra” — Gurgaon is hard water city-wide',
       ]},
             { t: 'h2', x: 'Societies We Have Worked In — Sohna Road (Full List)' },
@@ -4662,7 +4662,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Premium-Care Method — Same Price, Different Protection' },
       { t: 'ul', items: [
-        '**Marble/wood safe** — pH-neutral cleaners for premium flooring, never acid on marble; your Golf Course Road deep cleaning protects finishes, cheap quotes etch them',
+        '**Marble/wood safe** — pH-neutral cleaners for premium flooring, never acid on marble; your Golf Course Road [deep cleaning](/blog/kitchen-deep-cleaning-cost-gurgaon.html) protects finishes, cheap quotes etch them',
         '**Fixture care** — designer taps and glass are wrapped, not sprayed; same Golf Course Road deep cleaning price, higher care',
         '**Dust protocol** — Golf Course Road construction dust from nearby towers means HEPA + damp wipe, not dry dusting that scratches premium surfaces',
       ]},
@@ -4743,7 +4743,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Task', 'Included in Per-Visit Price', 'Deep Cleaning (Separate)'], rows: [
         ['Dusting + vacuuming', 'Yes', 'Yes (deeper, behind furniture)'],
         ['Mopping + floor care', 'Yes', 'Yes (machine scrub + polish)'],
-        ['Kitchen surfaces', 'Counter + hob wipe, sink', 'Chimney dismantle + degrease, cabinets inside-out'],
+        ['Kitchen surfaces', 'Counter + hob wipe, sink', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) + degrease, cabinets inside-out'],
         ['Bathroom surfaces', 'Wipe + basin', 'Descaling + grout + glass + exhaust'],
         ['Bins', 'Empty + liner', 'Same'],
         ['Sanitization', 'High-touch wipe', 'Full antiviral'],
@@ -4763,10 +4763,10 @@ export const ARTICLES = [
         '**Team** — same team each weekly visit vs random workers; repeat team is faster and knows your preferences, hence lower weekly house cleaning price in Gurgaon per visit',
       ]},
       { t: 'h2', x: 'What Is Not Included in the Per-Visit Price' },
-      { t: 'p', x: 'The per-visit figure covers regular upkeep: dusting, vacuuming, mopping, kitchen and bathroom surface wipe, bins and sanitising of high-touch surfaces. It does not cover chimney dismantling, bathroom descaling, machine floor scrubbing, sofa or carpet shampoo, or cleaning behind and under heavy furniture — those are deep-clean work and are quoted separately. A weekly plan plus one deep clean each quarter is the combination most Gurgaon homes settle into, and the two are never bundled into the per-visit price.' },
+      { t: 'p', x: 'The per-visit figure covers regular upkeep: dusting, vacuuming, mopping, kitchen and bathroom surface wipe, bins and sanitising of high-touch surfaces. It does not cover chimney dismantling, [bathroom descaling](/bathroom-deep-cleaning-gurgaon.html), machine floor scrubbing, sofa or [carpet shampoo](/carpet-shampoo-cleaning-gurgaon.html), or cleaning behind and under heavy furniture — those are deep-clean work and are quoted separately. A weekly plan plus one deep clean each quarter is the combination most Gurgaon homes settle into, and the two are never bundled into the per-visit price.' },
       { t: 'h2', x: 'One-Time, Weekly or Bi-Weekly — What the Per-Visit Rate Means' },
       { t: 'p', x: 'A one-time visit costs more per visit than a scheduled plan because the team is clearing whatever backlog built up before booking. On a weekly or bi-weekly plan the home stays at the same standard between visits, so each visit takes less time and the rate drops. That is why a plan is quoted per visit and not per hour: the price is fixed for your home size, not for however long the visit happens to take.' },
-      { t: 'tip', x: 'House cleaning price in Gurgaon — pay per visit, same team, pay after. WhatsApp BHK + area: Sachin Deep Cleaning +91 9267905943. ₹499/visit studio, weekly save.' },
+      { t: 'tip', x: 'House cleaning price in Gurgaon — pay per visit, same team, pay after. WhatsApp BHK + area: [Sachin Deep Cleaning](/) +91 9267905943. ₹499/visit studio, weekly save.' },
       { t: 'h2', x: 'The Upgrade Math: When ₹499 Stops Being Cheap' },
       { t: 'table', head: ['Situation', '₹499 Visit Result', 'Better Option'], rows: [
         ['Clean home, busy week', 'Perfect fit', '—'],
@@ -4774,7 +4774,7 @@ export const ARTICLES = [
         ['Moving out', 'Landlord will reject it', '₹2,500+ end-of-tenancy deep'],
         ['Post-renovation dust', 'Paint residue needs solvents', 'Post-construction quote'],
       ]},
-      { t: 'p', x: 'The ₹499 visit is designed for maintenance, not rescue. The honest test: if the last deep clean is under two months old, a visit keeps it there; if it is six months back, the visit will feel like a surface wipe, not a clean, no matter how hard the crew works. Alternating visits with quarterly deeps costs about the same as monthly visits and the home looks materially better.' },
+      { t: 'p', x: 'The ₹499 visit is designed for maintenance, not rescue. The honest test: if the last [deep clean](/deep-cleaning-services-in-gurgaon.html) is under two months old, a visit keeps it there; if it is six months back, the visit will feel like a surface wipe, not a clean, no matter how hard the crew works. Alternating visits with quarterly deeps costs about the same as monthly visits and the home looks materially better.' },
       { t: 'h2', x: 'Five Visits, One Deep: a Year of Cleaning, Priced' },
       { t: 'table', head: ['Month', 'Booking', 'Cost', 'What It Buys'], rows: [
         ['Every week', '4× ₹499 upkeep', '₹1,996', 'Baseline tidiness through the quarter'],
@@ -4819,7 +4819,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Landlord Inventory — What End of Tenancy Cleaning in Gurgaon Covers' },
       { t: 'table', head: ['Area', 'Checked at Handover', 'Included'], rows: [
-        ['Kitchen', 'Chimney filter + hob + cabinets inside-out + tiles + sink', 'Yes'],
+        ['Kitchen', '[Chimney filter](/blog/kitchen-chimney-cleaning-guide.html) + hob + cabinets inside-out + tiles + sink', 'Yes'],
         ['Bathrooms', 'Tiles descaled, grout, commode, faucets, glass', 'Yes'],
         ['Bedrooms', 'Floors, walls, wardrobes, under-bed, fan', 'Yes'],
         ['Living + Balcony', 'Floor, windows, sills, balcony + drain', 'Yes'],
@@ -4829,18 +4829,18 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**Gurgaon landlords deduct for “professional cleaning” on rent agreements** — a ticked end of tenancy cleaning in Gurgaon satisfies that clause with proof, not argument',
         '**Hard-water and grease** — Gurgaon bathrooms and kitchens fail handover on descaling and chimney grease alone; our checklist hits both',
-        '**Inventory vs regular clean** — regular house cleaning is surface upkeep; end of tenancy cleaning in Gurgaon is empty-flat deep cleaning with inventory sign-off',
+        '**Inventory vs regular clean** — regular [house cleaning](/residential-cleaners-near-me.html) is surface upkeep; end of tenancy cleaning in Gurgaon is empty-flat deep cleaning with inventory sign-off',
       ]},
       { t: 'h2', x: 'What Landlords and Societies in Gurgaon Actually Check at Handover' },
-      { t: 'p', x: 'Handover disputes are rarely about the visible floor. They are about the chimney filter, the bathroom grout line, the inside of kitchen cabinets, the balcony drain, and the marks furniture left on the walls and flooring. The walkthrough should be done room by room against a printed tick sheet, with the landlord or broker present and photographs taken before and after. Our end of tenancy cleaning in Gurgaon works to that sheet so the deposit conversation rests on evidence rather than memory.' },
+      { t: 'p', x: 'Handover disputes are rarely [about](/about.html) the visible floor. They are about the chimney filter, the bathroom grout line, the inside of kitchen cabinets, the balcony drain, and the marks furniture left on the walls and flooring. The walkthrough should be done room by room against a printed tick sheet, with the landlord or broker present and photographs taken before and after. Our end of tenancy cleaning in Gurgaon works to that sheet so the deposit conversation rests on evidence rather than memory.' },
       { t: 'h2', x: 'The Order of Work That Gets a Handover Right' },
       { t: 'ol', items: [
-        '**Start with the kitchen** — chimney dismantle and degrease, hob, cabinet interiors, tiles and sink; this takes the longest, so booking it first keeps the day on schedule.',
+        '**Start with the kitchen** — [chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) and degrease, hob, cabinet interiors, tiles and sink; this takes the longest, so booking it first keeps the day on schedule.',
         '**Then the bathrooms** — descaler dwell, grout scrub, commode, faucet and glass, because hard-water removal needs contact time.',
         '**Then bedrooms and living areas** — wardrobe interiors, under-bed, fans and switches, then floors last.',
         '**Finish with balcony, windows and photographs** — the outside-facing surfaces are what a landlord sees first on arrival.',
       ]},
-      { t: 'tip', x: 'End of tenancy cleaning in Gurgaon — fixed price, inventory tick sheet, pay after landlord walkthrough. WhatsApp BHK + move date: Sachin Deep Cleaning +91 9267905943.' },
+      { t: 'tip', x: 'End of tenancy cleaning in Gurgaon — fixed price, inventory tick sheet, pay after landlord walkthrough. WhatsApp BHK + move date: [Sachin Deep Cleaning](/) +91 9267905943.' },
       { t: 'h2', x: 'The Deposit-Costing Items, Ranked by What Gets Cut' },
       { t: 'table', head: ['Item Landlords Check', 'Frequency Cut From Deposits', 'Fix'], rows: [
         ['Chimney and hob grease', 'Very common', 'Degrease, not wipe — takes the chemical bath'],
@@ -4887,7 +4887,7 @@ export const ARTICLES = [
       { q: 'Can I book pest control and deep cleaning together in Gurgaon?', a: 'Yes — book deep cleaning on Day 1, pest control on Day 3 (48h gap) with us. Pest control vs deep cleaning combo is coordinated — one WhatsApp, two scheduled visits, fixed deep price + pest quote.' },
     ],
     blocks: [
-      { t: 'p', x: 'Googling **pest control vs deep cleaning in Gurgaon** usually means one question: which do I book first, and can I skip one? Here is the entomology + cleaning order that actually holds in Gurgaon homes — not sales, physics.' },
+      { t: 'p', x: 'Googling **pest control vs deep cleaning in Gurgaon** usually means one question: which do I book first, and can I skip one? Here is the entomology + cleaning order that actually holds in [Gurgaon homes](/residential-cleaners-near-me.html) — not sales, physics.' },
       { t: 'h2', x: 'Pest Control vs Deep Cleaning — What Each Does (Not the Same)' },
       { t: 'table', head: ['Service', 'Target', 'Method', 'Effect'], rows: [
         ['Deep cleaning', 'Grease, dust, food residue, hard-water scale', 'Machine scrub, degrease, descaling, extraction', 'Removes pest food + hiding dust'],
@@ -4917,8 +4917,8 @@ export const ARTICLES = [
         ['Deep only, no pest', 'Food removed, existing colony remains → need pest if infestation visible'],
       ]},
       { t: 'h2', x: 'Gurgaon-Specific Tip — Kitchen Cockroaches Love Gurgaon Grease' },
-      { t: 'p', x: 'Gurgaon kitchens with daily ghee/mustard-oil cooking and hard-water scale create the perfect cockroach harborage: warm, greasy, damp. Your pest control vs deep cleaning in Gurgaon kitchen plan should be: Day 1 deep degrease (chimney dismantle + cabinet degrease), Day 3 cockroach gel in degreased cracks — the gel adheres better to clean surfaces.' },
-      { t: 'tip', x: 'Pest control vs deep cleaning in Gurgaon — deep first, pest after 48h. Book both in order: Sachin Deep Cleaning +91 9267905943. Deep fixed ₹4,500/2BHK, pest quoted per BHK and pest type.' },
+      { t: 'p', x: 'Gurgaon kitchens with daily ghee/mustard-oil cooking and hard-water scale create the perfect cockroach harborage: warm, greasy, damp. Your pest control vs [deep cleaning in Gurgaon](/deep-cleaning-services-in-gurgaon.html) kitchen plan should be: Day 1 deep degrease ([chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) + cabinet degrease), Day 3 cockroach gel in degreased cracks — the gel adheres better to clean surfaces.' },
+      { t: 'tip', x: 'Pest control vs deep cleaning in Gurgaon — deep first, pest after 48h. Book both in order: [Sachin Deep Cleaning](/) +91 9267905943. Deep fixed ₹4,500/2BHK, pest quoted per BHK and pest type.' },
       { t: 'h2', x: 'The Combined Booking: One Week, Two Visits' },
       { t: 'table', head: ['Day', 'Service', 'Why This Order'], rows: [
         ['Day 1', 'Full home deep clean', 'Removes grease, crumbs and harbourage that pests feed and nest in'],
@@ -5014,7 +5014,7 @@ export const ARTICLES = [
         ['Society access', 'C-Block park — hand-carry / lift coordination, no cancellation; Vyapar Kendra — walk-in from market side'],
         ['Why we are chosen', 'Fixed BHK card correctly applied + included balcony/drain + marble-safe product switch where needed'],
       ]},
-{ t: 'tip', x: 'Sushant Lok 1 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+{ t: 'tip', x: 'Sushant Lok 1 [deep cleaning](/blog/full-home-deep-cleaning-packages-gurgaon.html) in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -5049,7 +5049,7 @@ export const ARTICLES = [
       { t: 'h3', x: 'Why B-Block Sushant Lok 2 in Sushant Lok 2 Chooses Us' },
       { t: 'p', x: '**Deep cleaning in Sushant Lok 2** starts in **B-Block Sushant Lok 2** — the plotted core between the internal loop road, **Sector 57 signal** and **Vyapar Kendra** cut, where every house is an independent plotted villa or builder floor with stilt parking and exterior utility. The pain here is not lifts but 6-metre lanes where a tempo cannot park at the gate and **Sohna Road** jams after 9 am, so late crews lose an hour before the first bucket. We route morning teams via the internal Sushant Lok 2 lane that bypasses Sohna Road, then hand-carry the single-disc scrubber, HEPA vacuum and poles 80–150m to the door — no cancellations. Method is plotted-specific: Kota and granite get machine scrub with pH-neutral cleaner, kitchens are heavy-tadka units with baffle chimneys needing 20-minute dwell degreaser and burner dismantling, bathrooms have older vitrified tiles with black grout mould agitated 15 minutes before acid descaling. **Case Study:** Last Tuesday in **B-Block Lane 7 near Kendriya Vihar**, a **2BHK builder floor 1180 sq ft** (2 beds, living, kitchen, 2 baths, utility) took **7h 45m with 4 cleaners**: 85 min kitchen, 110 min for 2 baths (grout restored black to grey), 90 min living+utility (Kota scrub+drain flush), 60 min bedrooms, 30 min walkthrough. **Review:** *“B-Block lane is tight, they carried the machine to my door and my 2BHK utility balcony was scrubbed, not mopped. Same **Sushant Lok 2 deep cleaning** price ₹4,500, pay after.” — Rajiv, B-Block.* TDS nuance: **B-Block borewell 620–750 mg/L** — moderate-hard but films taps in 3 weeks; we wrap faucets 15-minute dwell at same price, where wipe-only teams see film return in 10 days.' },
       { t: 'h3', x: 'Why C-Block Fringe Sushant Lok 2 in Sushant Lok 2 Chooses Us' },
-      { t: 'p', x: 'The **C-Block fringe of Sushant Lok 2** — the seam where **Sushant Lok 3’s C-Block** meets **B-Block** along the **Sector 57–58 divider road** and **Tulip Chowk** — is a hybrid of plotted houses and low-rise apartments facing both internal lanes and Sohna Road dust drifts. The pain is wind-tunnel dust from the divider road settling on balconies hourly, and mixed flooring (vitrified living, Kota balcony, marble in one bath) where one chemical etches while cleaning the other. Landmarks for routing are **Hong Kong Bazaar**, **Sector 57 police chowki** and the community centre — we confirm which side of the divider you are on so the team does not circle Sushant Lok 3. Method is hybrid: HEPA vacuum before damp wipe so dust does not turn to mud, then mid-home product switch — pH-neutral marble-safe for marble bath, timed acid for vitrified and Kota, dwell-time faucet wraps. Balconies get scrub+drain flush because dust clogs the 2-inch drain fortnightly. **Case Study:** Last Thursday on the **C-Block fringe near Tulip Chowk**, a **3BHK 1380 sq ft top-floor builder floor** (3 beds, living, L-shape kitchen with 4 cabinets, 2 baths+powder, 2 balconies) took **9h 20m with 4 cleaners**: 95 min kitchen, 145 min for 3 baths (one marble-safe pass, two acid passes logged), 100 min for 2 balconies (HEPA first, drains flushed), 60 min bedrooms, 40 min walkthrough. **Review:** *“C-Block fringe is dusty — they HEPA’d before mopping and switched product for my marble bath. All 3 baths at 3BHK ₹5,500.” — Neha, C-Block Fringe.* TDS nuance: **fringe borewell 700–820 mg/L** with evening spikes; we do 15-minute dwell wraps at same **Sushant Lok 2 deep cleaning** price — no hard-water extra — so glass stays clear 8 weeks, not 10 days.' },
+      { t: 'p', x: 'The **C-Block fringe of Sushant Lok 2** — the seam where **Sushant Lok 3’s C-Block** meets **B-Block** along the **Sector 57–58 divider road** and **Tulip Chowk** — is a hybrid of plotted houses and low-rise apartments facing both internal lanes and Sohna Road dust drifts. The pain is wind-tunnel dust from the divider road settling on balconies hourly, and mixed flooring (vitrified living, Kota balcony, marble in one bath) where one chemical etches while cleaning the other. Landmarks for routing are **Hong Kong Bazaar**, **Sector 57 police chowki** and the community centre — we confirm which side of the divider you are on so the team does not circle Sushant Lok 3. Method is hybrid: HEPA vacuum before damp wipe so dust does not turn to mud, then mid-[home](/blog/best-home-cleaning-services-gurgaon.html) product switch — pH-neutral marble-safe for marble bath, timed acid for vitrified and Kota, dwell-time faucet wraps. Balconies get scrub+drain flush because dust clogs the 2-inch drain fortnightly. **Case Study:** Last Thursday on the **C-Block fringe near Tulip Chowk**, a **3BHK 1380 sq ft top-floor builder floor** (3 beds, living, L-shape kitchen with 4 cabinets, 2 baths+powder, 2 balconies) took **9h 20m with 4 cleaners**: 95 min kitchen, 145 min for 3 baths (one marble-safe pass, two acid passes logged), 100 min for 2 balconies (HEPA first, drains flushed), 60 min bedrooms, 40 min walkthrough. **Review:** *“C-Block fringe is dusty — they HEPA’d before mopping and switched product for my marble bath. All 3 baths at 3BHK ₹5,500.” — Neha, C-Block Fringe.* TDS nuance: **fringe borewell 700–820 mg/L** with evening spikes; we do 15-minute dwell wraps at same **Sushant Lok 2 deep cleaning** price — no hard-water extra — so glass stays clear 8 weeks, not 10 days.' },
       { t: 'h3', x: 'Why Sector 57 (Rosewood City) in Sushant Lok 2 Chooses Us' },
       { t: 'p', x: '**Sector 57 (Rosewood City)** anchors the east edge of **Sushant Lok 2** — the condo belt with **Rosewood City, Rosewood Tower** and **Golf Course Extension Road** frontage where **Sohna Road** and **Golf Course Extension** meet at **Vatika Chowk**. The pain is vertical: podium balconies collect construction dust from **Sector 57 towers** under build, large 3BHK layouts with 3 baths+powder+2 balconies are sold elsewhere as “2BHK+extras”, and borewell supply etches podium glass in 14 days. Generic **Sushant Lok 2 deep cleaning** quotes mop the podium and charge the third bath as add-on, then rush. We do opposite: podiums are pressure-washed with a compact pressure kit, not mopped — the only way grey film lifts — and we quote the 3BHK card **₹5,500** for true bath+balcony count, allocating **9–10 hours**. Method is condo-specific: lift coordination via freight entry, shoe covers on marble lobbies, HEPA before scrub on podium, chimney baffle degrease with suction test, and triple-bath descaling with dwell wraps and grout agitation. **Case Study:** Last Friday in **Rosewood City, Sector 57 (Podium Tower, 12th floor)**, a **3BHK 1450 sq ft** (3 beds, living, modular kitchen with 3 tall units, 3 baths, 2 podium balconies) took **9h 30m with 5 cleaners**: 90 min kitchen, 150 min for 3 baths (rose-tinted TDS stain needed extra dwell), 110 min for 2 podiums (pressure wash+drain flush, HEPA first), 70 min living+bedrooms, 30 min walkthrough. **Review:** *“Rosewood podium was pressure-washed, not mopped, and all 3 baths were dwell-time descaled at 3BHK price — no extra bath.” — Amit, Rosewood City.* TDS nuance: **Rosewood borewell 750–850 mg/L** — we include longer dwell and second pass for etched glass at same price; that dwell is why the RWA refers us quarterly.' },
       { t: 'h3', x: 'Why Sector 58 + Green View in Sushant Lok 2 Chooses Us' },
@@ -5162,7 +5162,7 @@ export const ARTICLES = [
         ['Society access', 'Blocks A/B/C Sushant Lok 3 — hand-carry / lift coordination, no cancellation'],
         ['Why we are chosen', 'Fixed BHK card correctly applied + included balcony/drain + marble-safe where needed'],
       ]},
-{ t: 'tip', x: 'Sushant Lok 3 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+{ t: 'tip', x: 'Sushant Lok 3 [deep cleaning](/blog/home-deep-cleaning-service-gurgaon.html) in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
     ],
   },
 
@@ -5197,14 +5197,14 @@ export const ARTICLES = [
             { t: 'h2', x: 'Societies We Have Worked In — Dlf Phase 1 (Full List)' },
       { t: 'p', x: 'We have worked in DLF Magnolias, DLF Aralias, Belvedere Towers and every lane in between — verified by our job sheets, so you can spot your block before booking:' },
       { t: 'ul', items: [
-        'We have worked in **DLF Magnolias** — deep cleaning done same-day, pay after',
+        'We have worked in **DLF Magnolias** — [deep cleaning](/blog/dlf-phase-2-deep-cleaning-gurgaon.html) done same-day, pay after',
         'We have worked in **DLF Aralias** — deep cleaning done same-day, pay after',
         'We have worked in **Belvedere Towers** — deep cleaning done same-day, pay after',
         'We have worked in **Silver Oaks** — deep cleaning done same-day, pay after',
         'We have worked in **Qutub Enclave** — deep cleaning done same-day, pay after'
       ]},
       { t: 'h2', x: 'Why Dlf Phase 1 Societies Choose Us Over Others' },
-      { t: 'p', x: 'DLF Magnolias and Aralias choose us because their premium marble and wood need pH-neutral marble-safe descaler and wood-safe degreaser — generic acid etches Magnolias’ Italian marble in one pass. We show the marble-safe bottle at the walkthrough, which is why DLF Phase 1’s premium towers keep the same team instead of a platform lottery.' },
+      { t: 'p', x: 'DLF Magnolias and Aralias choose us because their premium marble and wood need pH-neutral marble-safe descaler and wood-safe degreaser — generic acid etches Magnolias’ Italian marble in one pass. We show the marble-safe bottle at the walkthrough, which is why DLF Phase 1’s [premium towers keep the same team](/society-cleaning-services-gurgaon.html) instead of a platform lottery.' },
       { t: 'p', x: 'Belvedere and Silver Oaks apartments in DLF Phase 1 choose us because their large living + 3-bath layouts are priced as 3BHK ₹5,500 with the third bath included, not as 2BHK + ‘extra bath’ that adds ₹500 after. That fixed 3BHK card is why Qutub Enclave’s builder floors trust the quote on the call.' },
       { t: 'p', x: 'Qutub Enclave plotted houses in DLF Phase 1 have older grout that has turned black from 5-year mould, not just limescale. We agitate grout for 15 minutes with a stiff brush at the same DLF Phase 1 deep cleaning price, where others wipe over it and black returns in a month.' },
       { t: 'table', head: ['Society', 'Why They Choose Us (DLF Phase 1)'], rows: [
@@ -5301,11 +5301,11 @@ export const ARTICLES = [
         ['Inside fridge / sofa / carpet', 'Add-on with approval', 'Different machines and time — quoted upfront'],
       ]},
       { t: 'h2', x: 'DLF Phase 2 vs Nearby Phases — Book the Right Phase' },
-      { t: 'p', x: 'Families typing **DLF Phase 2 deep cleaning** often land on generic “DLF” pages that mix **DLF Phase 1 (Magnolias, Aralias, Belvedere premium marble)**, **DLF Phase 2 (Gurgaon One, Carlton, Heritage, Green View, Classic, villas)**, **DLF Phase 3 (C-Block villas, B-Block builder floors, Supermart spine)** and **DLF Phase 5 (Sectors 43/53 villas)**. The lane matters for method, not price: DLF Phase 1 needs marble-safe pH-neutral, DLF Phase 2 needs podium pressure + lane hand-carry + Kota switch + villa photo pricing, DLF Phase 3 needs 3-bath correctness on builder floors, but the **BHK price is identical across all — 2BHK ₹4,500, 3BHK ₹5,500**. We confirm your exact society on WhatsApp (Gurgaon One vs Carlton vs Heritage vs DLF Phase 1 Magnolias) before dispatch, so the crew arrives with the right access plan (freight lift vs 200m hand-carry vs villa stairs) and the right kit.' },
+      { t: 'p', x: 'Families typing **DLF Phase 2 deep cleaning** often land on generic “DLF” pages that mix **DLF Phase 1 (Magnolias, Aralias, Belvedere premium marble)**, **DLF Phase 2 (Gurgaon One, Carlton, Heritage, Green View, Classic, villas)**, **DLF Phase 3 (C-Block villas, B-Block builder floors, Supermart spine)** and **DLF Phase 5 (Sectors 43/53 villas)**. The lane matters for method, not price: [DLF Phase 1](/blog/dlf-phase-1-deep-cleaning-gurgaon.html) needs marble-safe pH-neutral, DLF Phase 2 needs podium pressure + lane hand-carry + Kota switch + villa photo pricing, [DLF Phase 3](/blog/dlf-phase-3-deep-cleaning-gurgaon.html) needs 3-bath correctness on builder floors, but the **BHK price is identical across all — 2BHK ₹4,500, 3BHK ₹5,500**. We confirm your exact society on WhatsApp (Gurgaon One vs Carlton vs Heritage vs DLF Phase 1 Magnolias) before dispatch, so the crew arrives with the right access plan (freight lift vs 200m hand-carry vs villa stairs) and the right kit.' },
       { t: 'h2', x: 'Hard-Water Bills — Why DLF Phase 2 Never Pays Extra' },
       { t: 'p', x: 'Gurgaon borewells run **620–820 mg/L TDS** across **DLF Phase 2** — **Gurgaon One 640–760, Carlton 620–720, Heritage 660–820, Green View/Classic 680–780, villa lane 720–820** — all far above WHO 300 mg/L, so every bathroom films in 2–3 weeks and podium/balcony glass etches in 14 days. Some **DLF Phase 2 deep cleaning** quotes use that number to add “hard water extra ₹300–500” per bath. We never do: your **BHK price already includes 15-minute dwell-time descaling** with faucet wraps and grout agitation, and a second pass on etched glass where **Heritage 820 or villa 800** has baked the scale. That dwell is the difference between a wipe that looks clear for 10 days and a descaling that stays clear for 8 weeks, which is why our quarterly clients in **Carlton and Gurgaon One** see the same glass through to Diwali. Between visits, a 30-second squeegee after showers and a monthly vinegar wipe on tap necks stretches that clarity without chemistry — we leave the card on the tick sheet.' },
       { t: 'h2', x: 'When to Book — Morning Slots Beat the DLF Phase 2 Service Lane Jam' },
-      { t: 'p', x: 'In **DLF Phase 2**, traffic is the hidden variable in every **DLF Phase 2 deep cleaning** slot. **NH-48 service lane, MG Road cut and Gurgaon One–Sohna Road cut jam solid after 10 am**, so a crew dispatched at 11 am reaches **Heritage City or Carlton** 60–90 minutes late and the 9-hour 3BHK window slips into overtime. We protect the window by routing the first team at **8–9 am via the internal DLF Phase 2 lane for Carlton and Green View**, and via **MG Road early cut for Heritage**, with freight-lift windows pre-booked for **Gurgaon One**. Book before noon and you finish same evening; book after 2 pm and we offer next-morning priority instead of a rushed evening. Festival weeks (Dussehra–Diwali) need 2–3 days lead — the podiums and villa terraces book first, and the **pay-after walkthrough with tick sheet** means your evening aarti or guest check-in never waits on us.' },
+      { t: 'p', x: 'In **DLF Phase 2**, traffic is the hidden variable in every **DLF Phase 2 deep cleaning** slot. **NH-48 service lane, MG Road cut and Gurgaon One–Sohna Road cut jam solid after 10 am**, so a crew dispatched at 11 am reaches **Heritage City or Carlton** 60–90 minutes late and the 9-hour 3BHK window slips into overtime. We protect the window by routing the first team at **8–9 am via the internal DLF Phase 2 lane for Carlton and Green View**, and via **MG Road early cut for Heritage**, with freight-lift windows pre-booked for **Gurgaon One**. Book before noon and you finish same evening; book after 2 pm and we offer next-morning priority instead of a rushed evening. [Festival](/blog/diwali-cleaning-gurgaon.html) weeks ([Dussehra](/blog/dussehra-cleaning-gurgaon.html)–Diwali) need 2–3 days lead — the podiums and villa terraces book first, and the **pay-after walkthrough with tick sheet** means your evening aarti or guest check-in never waits on us.' },
 { t: 'tip', x: 'DLF Phase 2 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp society + BHK: Sachin Deep Cleaning +91 9267905943.' },
       { t: 'h2', x: 'Same-Day in Phase 2: How the Slot Actually Works' },
       { t: 'ul', items: [
@@ -5323,7 +5323,7 @@ export const ARTICLES = [
         ['Typical start', 'Any slot', 'Morning preferred', 'After 10 am (lift window)'],
         ['Price', 'Standard BHK card', 'Standard BHK card', 'Standard BHK card'],
       ]},
-      { t: 'p', x: 'The price card is deliberately identical across all three phases — a 2BHK is ₹4,500 whether it is a Phase 1 builder floor or a Phase 3 tower. What changes is logistics, and logistics are handled in the booking call, not the bill. If a vendor quotes Phase 3 higher \'because towers\', you now know that is a surcharge in search of a reason.' },
+      { t: 'p', x: 'The [price card](/blog/deep-cleaning-cost-gurgaon-2026.html) is deliberately identical across all three phases — a 2BHK is ₹4,500 whether it is a Phase 1 builder floor or a Phase 3 tower. What changes is logistics, and logistics are handled in the booking call, not the bill. If a vendor quotes Phase 3 higher \'because towers\', you now know that is a surcharge in search of a reason.' },
     ],
   },
 
@@ -5348,7 +5348,7 @@ export const ARTICLES = [
       { q: 'Is DLF Phase 4 hard water different?', a: 'DLF Phase 4 TDS 600–900 mg/L — standard Gurgaon hard water. Your DLF Phase 4 deep cleaning price includes descaling.' },
     ],
     blocks: [
-      { t: 'p', x: 'DLF Phase 4 is Galleria and Supermart — the retail spine between DLF 3 and Sushant Lok 1. **Deep cleaning in DLF Phase 4 in Gurgaon** is market-facing balcony heavy and needs that lane-level detail.' },
+      { t: 'p', x: 'DLF Phase 4 is Galleria and Supermart — the retail spine between DLF 3 and Sushant Lok 1. **Deep cleaning in DLF Phase 4 in Gurgaon** is market-facing [balcony](/blog/balcony-terrace-cleaning-gurgaon.html) heavy and needs that lane-level detail.' },
       { t: 'h2', x: 'Deep Cleaning DLF Phase 4 in Gurgaon — Fixed Price' },
       { t: 'table', head: ['Home', 'Included', 'Price', 'Time'], rows: [
         ['1BHK DLF Phase 4', '1 bed + living + kitchen + 1 bath', '₹2,500', '5–6 hrs'],
@@ -5458,7 +5458,7 @@ export const ARTICLES = [
         ['Golf Course Road fringe', '640–760 mg/L', 'Traffic soot; service-only 10 AM–4 PM, balcony-first'],
       ]},
       { t: 'h2', x: 'What ₹4,500 for 2BHK Covers in DLF Phase 5 — Hour-by-Hour' },
-      { t: 'p', x: '**Fixed does not mean vague** — a **DLF Phase 5 2BHK at ₹4,500 is 7–8 hours with 4 cleaners (28–32 crew-hours)**. Here is the **actual time split** we log on tick sheets, so you can compare apples to apples when another DLF Phase 5 quote says “deep cleaning” in 3 hours. **Kitchen (90 min)** always includes **chimney dismantle + soak, hob/burner, cabinet degrease** — not a wipe. **Bathrooms (90–110 min per bath)** are **descale with dwell wrap, grout scrub, commode sanitization, mirror polish** — South City 2’s borewell takes 110 min, Sector 43 marble takes 100 min with pH-neutral. **Living + balcony (70–90 min)** covers **floor scrub, balcony drain flush, glass squeegee on fringe** — not “extra.” **Bedrooms (50–60 min)** include **wardrobe HEPA, under-bed, switch sanitization**. Final **walkthrough (30 min)** is **pay after**, not before. Villas at **₹6,500–₹9,000** use the same logic scaled to **4+ baths and double-height** — that is why a **fringe villa 1,900 sq ft needs a full-day villa crew**, not a 3BHK crew stretched generic.' },
+      { t: 'p', x: '**Fixed does not mean vague** — a **DLF Phase 5 2BHK at ₹4,500 is 7–8 hours with 4 cleaners (28–32 crew-hours)**. Here is the **actual time split** we log on tick sheets, so you can compare apples to apples when another DLF Phase 5 quote says “[deep cleaning](/blog/best-deep-cleaning-services-gurgaon.html)” in 3 hours. **Kitchen (90 min)** always includes **chimney dismantle + soak, hob/burner, cabinet degrease** — not a wipe. **Bathrooms (90–110 min per bath)** are **descale with dwell wrap, grout scrub, commode sanitization, mirror polish** — South City 2’s borewell takes 110 min, Sector 43 marble takes 100 min with pH-neutral. **Living + balcony (70–90 min)** covers **floor scrub, balcony drain flush, glass squeegee on fringe** — not “extra.” **Bedrooms (50–60 min)** include **wardrobe HEPA, under-bed, switch sanitization**. Final **walkthrough (30 min)** is **pay after**, not before. Villas at **₹6,500–₹9,000** use the same logic scaled to **4+ baths and double-height** — that is why a **fringe villa 1,900 sq ft needs a full-day villa crew**, not a 3BHK crew stretched generic.' },
       { t: 'table', head: ['2BHK DLF Phase 5 Area', 'Time', 'Method Included'], rows: [
         ['Kitchen', '90 min', 'Chimney dismantle 20 min soak, hob, 3–4 cabinets degreased'],
         ['Bathrooms (2)', '100–110 min each', 'Dwell wrap 15 min, grout scrub, sanitization'],
@@ -5552,7 +5552,7 @@ export const ARTICLES = [
         ['Villa 4th/5th bath (World Spa, Nirvana)', 'Included in villa ₹6,500–₹9,000', 'Bath count defines villa card, not 3BHK + extra'],
         ['Podium pressure-wash (World Spa West)', 'Included in BHK', 'Grey film needs pressure, not mop — kit is standard'],
         ['Lawn/terrace Kota scrub (Nirvana/Emaar)', 'Included in BHK/villa', 'Open terrace is part of plotted/villa home, not add-on'],
-        ['Terrace + 2 balconies (Emaar/Tulip)', 'Included in BHK', 'Balcony/terrace drain flush prevents monsoon flood — not surcharge'],
+        ['Terrace + 2 balconies (Emaar/Tulip)', 'Included in BHK', 'Balcony/terrace drain flush prevents [monsoon](/blog/how-often-deep-clean-home-india.html) flood — not surcharge'],
         ['Inside fridge / sofa / carpet', 'Add-on with approval', 'Different machines and time — quoted upfront'],
       ]},
       { t: 'h2', x: 'Sector 65 vs Nearby Sectors — Book the Right Pin' },
@@ -5638,7 +5638,7 @@ export const ARTICLES = [
       { t: 'p', x: 'Quotes for Sector 66 fail in predictable ways. Vatika City plotted bookings get quoted per floor and pay triple for a house that is one BHK price; Essencia tower bookings get charged an extra-bathroom fee the fixed card already includes; Badshahpur homes at 880–950 mg/L get a standard descale that re-scales within a month; Sohna-entry flats get billed for balcony soot removal that is part of the base checklist. Audit any quote with two questions: does it match the flat BHK card (₹2,500 / ₹4,500 / ₹5,500), and does it name the TDS handling for your pocket? If either answer is vague, the fixed price is a lure and the real number appears at the door.' },
       { t: 'h2', x: 'After Your Sector 66 Deep Cleaning — 5-Minute Daily Keep' },
       { t: 'p', x: 'Keep **Vatika City plotted balconies** fresh with a **daily 2-minute dry sweep and weekly damp mop** so Sohna dust does not bake, keep **Ansal API wardrobes** dust-free with **HEPA-light vacuuming of shelf joints weekly** where silica settles, keep **Badshahpur village terraces** clear by **flushing drains with a mug of water weekly** to prevent silt clogs and **damp-wiping pigeon spots with disinfectant** (never dry-sweep spores), keep **Sector 66 plotted Kota terraces** safe by **never using acid at home — only pH-neutral wipes**, keep **Sohna Road Entry glass balconies** streak-free with **squeegee after windy days**. For hard water at **580–950 mg/L**, **squeegee shower glass after every use, wipe faucet necks dry, and run exhaust 15 minutes post-shower** — this **extends dwell-descaling results from weeks to months**. Kitchen stays grease-free if you **rinse chimney mesh monthly in hot water + baking soda** between **quarterly professional 20-minute dismantle degreases**. These **5-minute habits** make your **₹4,500 2BHK Sector 66 deep cleaning** last **3–4 months** before the next quarterly reset, instead of rescaling in 3 weeks.' },
-      { t: 'tip', x: 'Sector 66 deep cleaning in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
+      { t: 'tip', x: 'Sector 66 [deep cleaning](/blog/bathroom-deep-cleaning-services-gurgaon-guide.html) in Gurgaon — fixed BHK price, same-day before noon. WhatsApp block + BHK: Sachin Deep Cleaning +91 9267905943.' },
       { t: 'h2', x: 'Move-In Season: First-Occupancy Dust in the New Towers' },
       { t: 'ul', items: [
         '**Construction finesse dust** — settled inside wardrobes and on wardrobe tops while units sat locked; wiped before clothes go in.',
@@ -5689,7 +5689,7 @@ export const ARTICLES = [
         ['Villa Sector 67', 'Large living, 4+ baths', '₹6,500–₹9,000', 'Full day'],
       ]},
       { t: 'h3', x: 'Why Ansal Essencia in Sector 67 Chooses Us' },
-      { t: 'p', x: 'Ansal Essencia sits at the **Sohna Road–Badshahpur Road junction** inside Sector 67, with its arched main gate opposite the **Vatika City approach** and 500m from the **Golf Course Extension Road** spur. Families here bought **new-possession 2BHK and 3BHK builder floors** in towers that are still surrounded by active construction on all sides. The pain is **construction cement dust that settles daily** into wardrobes, under beds, AC vents and chimney meshes, plus **borewell TDS 850–900 mg/L** that leaves white crust on every tap neck and shower glass within two weeks. Generic wipe teams make it worse by dry-dusting, which simply resuspends silica and lets it resettle 48 hours later. Our **HEPA-first method** reverses that: we start with **HEPA vacuum on every shelf, track and vent**, then **damp-wipe with microfibre** before any scrub machine touches the floor, so dust is captured not spread. Bathrooms get a **15-minute faucet-wrap acid dwell** for that **TDS 850** crust, not a 30-second phenyl wipe, and kitchens get **chimney filter dismantle + 20-minute degrease** because new-possession kitchens already have baked oil from trial cooking. **Case study last Tuesday: Ansal Essencia Tower B, 3BHK 1380 sq ft, 3 baths, 2 balconies**, 9.5 hours with **4 cleaners**: 2 hours kitchen, 150 min for 3 baths all descaled at **3BHK ₹5,500** with third bath included not extra, 90 min living + balconies with drain flush, 30 min walkthrough with tick sheet. Before photos showed grey balcony film and scaled taps, after showed glossy vitrified and clear chrome. **Local Review:** *Rohit, Ansal Essencia Sector 67 — Essencia new tower was dusty from construction, HEPA first then scrub made it stay clean, my 3BHK 3 baths were all at ₹5,500 not 2BHK plus extra, pay after.* No extra ever, same **₹4,500 2BHK** as every Sector 67 lane.' },
+      { t: 'p', x: 'Ansal Essencia sits at the **Sohna Road–Badshahpur Road junction** inside Sector 67, with its arched main gate opposite the **Vatika City approach** and 500m from the **Golf Course Extension Road** spur. Families here bought **new-possession 2BHK and 3BHK builder floors** in towers that are still surrounded by active construction on all sides. The pain is **construction cement dust that settles daily** into wardrobes, under beds, AC vents and chimney meshes, plus **borewell TDS 850–900 mg/L** that leaves white crust on every tap neck and shower glass within two weeks. Generic wipe teams make it worse by dry-dusting, which simply resuspends silica and lets it resettle 48 hours later. Our **HEPA-first method** reverses that: we start with **HEPA vacuum on every shelf, track and vent**, then **damp-wipe with microfibre** before any scrub machine touches the floor, so dust is captured not spread. Bathrooms get a **15-minute faucet-wrap acid dwell** for that **TDS 850** crust, not a 30-second phenyl wipe, and kitchens get **chimney filter dismantle + 20-minute degrease** because new-possession kitchens already have baked oil from trial cooking. **Case study last Tuesday: Ansal Essencia Tower B, 3BHK 1380 sq ft, 3 baths, 2 balconies**, 9.5 hours with **4 cleaners**: 2 hours kitchen, 150 min for 3 baths all descaled at **3BHK ₹5,500** with third bath included not extra, 90 min living + balconies with drain flush, 30 min walkthrough with tick sheet. Before photos showed grey balcony film and scaled taps, after showed glossy vitrified and clear chrome. **Local Review:** *Rohit, Ansal Essencia Sector 67 — Essencia new tower was dusty from construction, HEPA first then scrub made it stay clean, my 3BHK 3 baths were all at ₹5,500 not 2BHK plus extra, pay after.* No extra ever, same **₹4,500 2BHK** as [every Sector](/blog/deep-cleaning-all-sectors-gurgaon.html) 67 lane.' },
       { t: 'h3', x: 'Why Housing Board Colony in Sector 67 Chooses Us' },
       { t: 'p', x: 'Housing Board Colony anchors the **northern pocket of Sector 67** along the **Sector 67 internal road** linking **Badshahpur village market** to **Sohna Road**, landmarked by the **Housing Board Park** and the **government dispensary lane**. These are **late-90s plotted houses and 2-storey builder floors**, many with **Kota stone living floors, 3-bath layouts, and 15-year-old tile grout** that has turned grey-black. The pain is different from Essencia new dust: **hard-water grout that no maid has ever descaled**, **older commodes with mineral bonded under the rim**, and **store rooms where cement dust from Sector 67 construction has sat for months** behind cartons. Owners are quoted elsewhere as 2BHK plus **extra bath charge**, where we charge the correct **3BHK ₹5,500 for all 3 baths** with no add-on. Our method switches product mid-home: **pH-neutral on Kota and any marble sill**, **acid dwell only on ceramic and chrome** for **TDS 700–750 mg/L**, so we descale without etching. We also **vacuum under cots and inside wardrobes** that have not moved in years, because plotted houses hide the most soil behind heavy steel almirahs. **Case study last Thursday: Housing Board Colony Lane 4, 2.5-storey plotted house 1650 sq ft, 3BHK with 3 baths**, 10 hours with **5 cleaners**: 90 min kitchen with old chimney dismantle, 160 min for 3 baths with grout scrub and rim jets cleared, 120 min bedrooms shifting almirahs to vacuum behind, balconies with pigeon-dropping disinfectant. **Local Review:** *Sunita, Housing Board Colony Sector 67 — Our plotted house has 3 baths, others wanted extra, they took 3BHK ₹5,500 fixed, grout now white again and Kota shine back, pay after.* Same price as Essencia towers, different chemistry, same walkthrough.' },
       { t: 'h3', x: 'Why Sector 67 Plotted Houses in Sector 67 Chooses Us' },
@@ -5777,7 +5777,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Area', 'Included in Full Home Deep Cleaning', 'Excluded Everywhere'], rows: [
         ['Bedrooms (1–3)', 'Floor machine scrub + polish, walls/ceiling dusted, wardrobe inside-out, under-bed vacuum, fan + switch detail', 'Wall repaint, curtain dry-clean, AC gas'],
         ['Living/Dining + Balcony', 'Floor scrub, windows + sills, balcony scrub + drain flush, cobwebs, sofa vacuum (shampoo extra ₹499/seat)', 'Sofa shampoo, carpet shampoo, wall texture polish'],
-        ['Kitchen', 'Chimney filter dismantled + degreased (20 min dwell), hob + burners, cabinets inside-out, tiles degreased, sink descaled, floor', 'Chimney motor sealed, utensils, chimney carbon filter'],
+        ['Kitchen', '[Chimney filter](/blog/kitchen-chimney-cleaning-guide.html) dismantled + degreased (20 min dwell), hob + burners, cabinets inside-out, tiles degreased, sink descaled, floor', 'Chimney motor sealed, utensils, chimney carbon filter'],
         ['Bathrooms (1–3)', 'Tile descaling (acid dwell 15 min), grout scrub 15 min, commode sanitization, faucet wrap descaling, shower glass polish, exhaust, floor', 'Marble diamond polish, cracked-tile replacement'],
         ['General', 'All fans/lights/switches sanitized, high-touch disinfection, final supervisor walkthrough with tick sheet', 'Facade, lift lobby, water tank'],
       ]},
@@ -5791,9 +5791,9 @@ export const ARTICLES = [
         ['4BHK full home deep cleaning', '4 beds + large living + 3 baths', '₹6,500', 'Full day', '4 cleaners'],
         ['5BHK / Villa full home deep cleaning', 'Large villa, 4+ baths, villa-scale living', '₹9,000', 'Full day+', '4–5 cleaners'],
       ]},
-      { t: 'p', x: '*Your exact full home deep cleaning price is locked on WhatsApp after 3 photos (kitchen, bathrooms, living). No travel, floor or lift fee — the bare query “full home deep cleaning” and “full home deep cleaning service Gurgaon” both resolve to this BHK card.*' },
+      { t: 'p', x: '*Your exact full home deep cleaning price is locked on WhatsApp after 3 photos (kitchen, bathrooms, living). No travel, floor or lift fee — the bare query “full home deep cleaning” and “full home [deep cleaning service](/deep-cleaning-services-in-gurgaon.html) Gurgaon” both resolve to this BHK card.*' },
       { t: 'h2', x: 'Why Some “Full Home Deep Cleaning” Quotes Look Cheaper — And What They Leave Out' },
-      { t: 'p', x: 'The current top 4 for bare “full home deep cleaning” are: Urban Company service card (878K reviews, Starts at ₹3,499 3 hrs 45 mins, but scope is “cleaning & stain removal from rooms, kitchen, bathroom & balcony” — no BHK, no walkthrough, no exclusions), a marketplace listing (₹499–₹3,999 range with no rooms listed), a national aggregator (corporate “Deep Home Cleaning Services” with “Rs.3600 56% OFF” and no BHK table), and Justdial (80 listings). All are generic on the one thing PAA asks: “What does a full house deep clean include?” — they list “floor, doors, washrooms, wardrobes, sliding doors was done amazingly well” as a testimonial, not a scope.' },
+      { t: 'p', x: 'The current top 4 for bare “full home deep cleaning” are: [Urban Company](/blog/urban-company-vs-sachin-deep-cleaning.html) service card (878K reviews, Starts at ₹3,499 3 hrs 45 mins, but scope is “cleaning & stain removal from rooms, kitchen, bathroom & balcony” — no BHK, no walkthrough, no exclusions), a marketplace listing (₹499–₹3,999 range with no rooms listed), a national aggregator (corporate “Deep Home Cleaning Services” with “Rs.3600 56% OFF” and no BHK table), and Justdial (80 listings). All are generic on the one thing PAA asks: “What does a full house deep clean include?” — they list “floor, doors, washrooms, wardrobes, sliding doors was done amazingly well” as a testimonial, not a scope.' },
       { t: 'table', head: ['What to Check', 'Typical “Starts At” Quote', 'Our Fixed-Price Full Home Deep Clean'], rows: [
         ['BHK price', '“Starts at ₹3,499/₹4,199” (hides BHK)', '1BHK ₹2,500 to 5BHK ₹9,000 fixed, BHK-by-BHK'],
         ['Checklist', '“Floor, Doors, Washrooms, Wardrobes” (testimonial)', '5-area table with Included vs Excluded, walkthrough-ticked'],
@@ -5816,7 +5816,7 @@ export const ARTICLES = [
         '**Ask their exclusions** — “Are utensils, repaint, marble polish excluded in writing?” Our guide lists them; generic pages never do',
         '**Book the clearer scope, not the lower “Starts at”** — the bare query “full home deep cleaning” rewards the guide that answers PAA, not the cheapest card',
       ]},
-      { t: 'tip', x: 'Full home deep cleaning — fixed BHK price, pay after you approve. WhatsApp 3 photos (kitchen, bathrooms, living) for a 5-minute lock: Sachin Deep Cleaning +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all Gurgaon sectors, same-day when you book before noon.' },
+      { t: 'tip', x: 'Full home deep cleaning — fixed BHK price, pay after you approve. WhatsApp 3 photos (kitchen, bathrooms, living) for a 5-minute lock: [Sachin Deep Cleaning](/) +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all Gurgaon sectors, same-day when you book before noon.' },
       { t: 'h2', x: 'The 2026 Rate Card, and What Sits Behind Each Line' },
       { t: 'table', head: ['Home', 'Price', 'Crew × Hours', 'The Line That Decides Quality'], rows: [
         ['1BHK', '₹2,500', '2 × 4–5 hrs', 'Chimney bath included, not skipped'],
@@ -5825,7 +5825,7 @@ export const ARTICLES = [
         ['4BHK+', 'By survey', '5+ × full day', 'Parallel workstreams keep it one day'],
         ['Villa', '₹9,000+', '2 days', 'Day split: wet areas first, floors last'],
       ]},
-      { t: 'p', x: 'Quotes below these lines are missing one of the three expensive commitments: dwell-time chemistry, machine work, or crew size. The rate card holds across Gurgaon because the checklist holds — same room-by-room list at every size, same pay-after-walkthrough close. Where a home is genuinely unusual (villa scale, heavy post-renovation), the survey quote says so in writing before anyone rolls.' },
+      { t: 'p', x: 'Quotes below these lines are missing one of the three expensive commitments: dwell-time chemistry, machine work, or crew size. The [rate card](/blog/deep-cleaning-cost-gurgaon-2026.html) holds across Gurgaon because the checklist holds — same room-by-room list at every size, same pay-after-walkthrough close. Where a home is genuinely unusual (villa scale, heavy post-renovation), the survey quote says so in writing before anyone rolls.' },
     ],
   },
 
@@ -5851,7 +5851,7 @@ export const ARTICLES = [
       { q: 'Do you serve my society for home deep cleaning service in Gurgaon?', a: 'Yes — home deep cleaning service in Gurgaon covers DLF Phase 1–5, Sushant Lok 1-3, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, South City, Sector 65-67 and all societies. Share society + BHK for a 5-minute fixed quote.' },
     ],
     blocks: [
-      { t: 'p', x: '**Home deep cleaning service in Gurgaon** is a full-home reset, not the weekly dust-and-mop. On this page, the crew that has run the service since 2015 lists the **BHK price card** (₹2,500–₹9,000), the **room-by-room checklist** — chimney filter dismantled and degreased, tiles descaled, floors machine-scrubbed — and exactly what is **excluded**, so you can compare quotes on facts instead of adjectives. For the scope reference behind these prices see [what deep cleaning includes](/blog/deep-cleaning-services.html); for fixed rates and crew timings see [BHK rates and process](/blog/home-deep-cleaning-services-gurgaon.html).' },
+      { t: 'p', x: '**Home deep cleaning service in Gurgaon** is a full-home reset, not the weekly dust-and-mop. On this page, the crew that has run the service since 2015 lists the **BHK price card** (₹2,500–₹9,000), the **room-by-room checklist** — [chimney filter](/blog/kitchen-chimney-cleaning-guide.html) dismantled and degreased, tiles descaled, floors machine-scrubbed — and exactly what is **excluded**, so you can compare quotes on facts instead of adjectives. For the scope reference behind these prices see [what deep cleaning includes](/blog/deep-cleaning-services.html); for fixed rates and crew timings see [BHK rates and process](/blog/home-deep-cleaning-services-gurgaon.html).' },
       { t: 'h2', x: 'Home Deep Cleaning Service Gurgaon — Fixed BHK Price (Sep 2026)' },
       { t: 'table', head: ['Home', 'Home Deep Cleaning Service (Rooms)', 'Fixed Price', 'Time', 'Crew'], rows: [
         ['1BHK home deep cleaning service Gurgaon', '1 bed + living + kitchen + 1 bath + balcony + windows', '₹2,500', '5–6 hrs', '2 cleaners'],
@@ -5872,9 +5872,9 @@ export const ARTICLES = [
       { t: 'p', x: 'Gurgaon users type three variants that mean two different jobs. Here is the disambiguation that the generic a company site #6 never gives, and why your “home deep cleaning service gurgaon” query lands here (deep) and not on house cleaning (regular):' },
       { t: 'table', head: ['Your Query', 'Intent', 'What You Get', 'Price (2BHK Eg)'], rows: [
         ['home deep cleaning service gurgaon (this page)', 'One-time intensive deep clean of entire home', 'Full 2BHK top-to-bottom, machine scrub, descaling, degreasing, walkthrough', '₹4,500 fixed'],
-        ['house cleaning service gurgaon / house cleaning gurgaon', 'Regular upkeep (weekly/bi-weekly)', 'Surface dust/mop, wipe, bins — no chimney dismantle, no machine descaling', '₹499/visit (weekly)'],
+        ['house cleaning service gurgaon / house cleaning gurgaon', 'Regular upkeep (weekly/bi-weekly)', 'Surface dust/mop, wipe, bins — no [chimney dismantle](/kitchen-deep-cleaning-gurgaon.html), no machine descaling', '₹499/visit (weekly)'],
         ['full home deep cleaning', 'Same as home deep cleaning service (bare query)', 'Identical to this page — home = full home, same BHK card', '₹4,500'],
-        ['deep cleaning services gurgaon (plural)', 'Umbrella (home + office)', 'Home + office/commercial options, same home card for residential', '₹4,500 (home)'],
+        ['[deep cleaning services](/deep-cleaning-services-in-gurgaon.html) gurgaon (plural)', 'Umbrella (home + office)', 'Home + office/commercial options, same home card for residential', '₹4,500 (home)'],
       ]},
       { t: 'h2', x: 'What a Cheaper Home Deep Cleaning Quote Usually Leaves Out' },
       { t: 'table', head: ['What to Check', 'A Cheaper Local Quote', 'Our Fixed BHK Price'], rows: [
@@ -5884,7 +5884,7 @@ export const ARTICLES = [
         ['Exclusions', 'Never listed', 'Utensils, repaint, marble polish, sealed motors listed as excluded everywhere'],
         ['Proof', 'Two testimonials (Shreya, Harpreet)', '148 Google reviews, DLF/Sohna/Golf/City sector-tagged, supervisor tick sheets'],
         ['Pay terms', 'Never listed', 'Pay after walkthrough, UPI/cash, re-clean free'],
-        ['Local', 'DLF Phase 4, Gurgaon (one address)', 'DLF 1-5, Sushant Lok 1-3, Sohna Road, Sectors 14-92, 65-67 — all micro-locals linked'],
+        ['Local', '[DLF Phase 4](/blog/dlf-phase-4-deep-cleaning-gurgaon.html), Gurgaon (one address)', 'DLF 1-5, [Sushant Lok 1](/blog/sushant-lok-1-deep-cleaning-gurgaon.html)-3, Sohna Road, Sectors 14-92, 65-67 — all micro-locals linked'],
       ]},
       { t: 'h2', x: 'Home Deep Cleaning Service Gurgaon — How to Book in 30 Seconds' },
       { t: 'ol', items: [
@@ -5932,7 +5932,7 @@ export const ARTICLES = [
       { t: 'p', x: 'If you are booking **bathroom deep cleaning gurgaon** in Gurgaon, this guide answers the two things quotes usually avoid: the exact price for your home size, and the written list of what is and is not included.' },
       { t: 'h2', x: 'Bathroom Deep Cleaning Gurgaon — Fixed Per-Bath Price (Sep 2026)' },
       { t: 'table', head: ['Bathrooms', 'Price', 'Per Bath', 'Time', 'What’s Included'], rows: [
-        ['1 bathroom deep cleaning Gurgaon', '₹800', '₹800', '45–60 min', 'Tile descaling + grout scrub 15 + commode + faucet wrap + glass polish + exhaust + floor'],
+        ['1 [bathroom deep cleaning Gurgaon](/bathroom-deep-cleaning-gurgaon.html)', '₹800', '₹800', '45–60 min', 'Tile descaling + grout scrub 15 + commode + faucet wrap + glass polish + exhaust + floor'],
         ['2 bathrooms', '₹1,400', '₹700', '90 min', 'Same per bath, 1 cleaner'],
         ['3 bathrooms', '₹2,000', '₹667', '135 min', 'Same per bath'],
         ['4 bathrooms', '₹2,600', '₹650', '180 min', 'Same per bath'],
@@ -5955,7 +5955,7 @@ export const ARTICLES = [
         ['Per-bath price', 'one Gurgaon listing “Call us” (no fixed), a facilities company “call for price”, another Gurgaon listing “Starts @ ₹399” (teaser) / ₹999 (actual)', '₹800 fixed per bath, 2 baths ₹1,400, 3 baths ₹2,000 — fixed before arrival'],
         ['Descaling chemistry', 'a facilities company lists “R9 or Roff for hard water” but no dwell time', 'Acid descaler dwell 15 min + grout agitation 15 min at ₹800/bath'],
         ['TDS zone', 'a facilities company lists TDS + equipment but no zone table', 'Old Gurgaon 900–1,200 (2 weeks film) vs DLF 600–900 (monthly) vs New Sectors 400–700 — all included at same price'],
-        ['Time per bath', 'one Gurgaon listing 1–2 hrs, a facilities company 1.5–2 hrs, a marketplace listing 6 steps (no time)', '45–60 min per bath at ₹800 — 2 baths 90 min, not 3 hrs with 2 cleaners'],
+        ['Time per bath', 'one Gurgaon listing 1–2 hrs, a facilities company 1.5–2 hrs, a [marketplace](/blog/urban-company-vs-sachin-deep-cleaning.html) listing 6 steps (no time)', '45–60 min per bath at ₹800 — 2 baths 90 min, not 3 hrs with 2 cleaners'],
         ['Grout', 'one Gurgaon listing “Tile & Grout Scrubbing — getting rid of black spots” (one line)', '15-min stiff grout brush + descaler, black mould vs limescale distinguished'],
         ['Glass', 'one Gurgaon listing “Mirror & Glass Polishing — streak-free” (one line)', 'Hard-water film on shower glass/bathtub with squeegee + glass cleaner, etch honesty after 12 months'],
       ]},
@@ -5966,7 +5966,7 @@ export const ARTICLES = [
         ['New Sectors (treated supply)', '400–700 mg/L', 'Slower', 'Descale quarterly'],
         ['WHO safe benchmark', '<300 mg/L', 'Reference', 'Gurgaon rarely meets it — hence quarterly'],
       ]},
-      { t: 'tip', x: 'Bathroom deep cleaning Gurgaon — ₹800/bath fixed, 45–60 min per bath, TDS-zone descaling included, pay after walkthrough. WhatsApp bathroom photos: Sachin Deep Cleaning +91 9267905943. All sectors, same-day when slots allow.' },
+      { t: 'tip', x: 'Bathroom deep cleaning Gurgaon — ₹800/bath fixed, 45–60 min per bath, TDS-zone descaling included, pay after walkthrough. WhatsApp bathroom photos: [Sachin Deep Cleaning](/) +91 9267905943. All sectors, same-day when slots allow.' },
       { t: 'h2', x: 'The Finish Test: What \'Best\' Looks Like at Handover' },
       { t: 'ul', items: [
         '**Glass** — squeegeed clear, no beading; spots re-etch within days if the polish step was skipped.',
@@ -6001,7 +6001,7 @@ export const ARTICLES = [
       { q: 'Which deep cleaning services are best in Gurgaon?', a: 'Score the 5 proofs: locked BHK figure, written 5-area scope, verification shown, pay after walkthrough, sector-tagged recent Gurgaon proof. Our deep cleaning services pass all 5 at BHK-fixed ₹2,500–₹9,000; generic Urban/a marketplace listing cards list “Starts at ₹3,499/₹4,199” with no BHK walkthrough.' },
     ],
     blocks: [
-      { t: 'p', x: 'This guide is the **scope reference** for deep cleaning services in Gurgaon: what a full service includes room by room, the honest exclusions, and how the included list changes BHK by BHK. If you already know your BHK and want a price in five minutes, use the [5-minute WhatsApp quote](/blog/home-deep-cleaning-service-gurgaon.html); for fixed BHK rates and crew timings see [home deep cleaning rates](/blog/home-deep-cleaning-services-gurgaon.html).' },
+      { t: 'p', x: 'This guide is the **scope reference** for [deep cleaning services in Gurgaon](/deep-cleaning-services-in-gurgaon.html): what a full service includes room by room, the honest exclusions, and how the included list changes BHK by BHK. If you already know your BHK and want a price in five minutes, use the [5-minute WhatsApp quote](/blog/home-deep-cleaning-service-gurgaon.html); for fixed BHK rates and crew timings see [home deep cleaning rates](/blog/home-deep-cleaning-services-gurgaon.html).' },
       { t: 'h2', x: 'Deep Cleaning Services — Fixed BHK Price (Sep 2026)' },
       { t: 'table', head: ['Home', 'Deep Cleaning Services (Rooms)', 'Fixed Price', 'Time'], rows: [
         ['1BHK deep cleaning services', '1 bed + living + kitchen + 1 bath + balcony + windows', '₹2,500', '5–6 hrs'],
@@ -6014,7 +6014,7 @@ export const ARTICLES = [
       { t: 'table', head: ['Area', 'Included in Deep Cleaning Services', 'Excluded Everywhere'], rows: [
         ['Bedrooms (1–3)', 'Floor machine scrub + polish, walls/ceiling dusted, wardrobe inside-out, under-bed vacuum, fan + switch detail', 'Wall repaint, curtain dry-clean'],
         ['Living/Dining + Balcony', 'Floor scrub, windows + sills, balcony scrub + drain flush, cobwebs, sofa vacuum (shampoo extra ₹499/seat)', 'Sofa shampoo, carpet shampoo'],
-        ['Kitchen', 'Chimney filter dismantled + degreased, hob + burners, cabinets inside-out, tiles degreased, sink descaled, floor', 'Chimney motor sealed, utensils'],
+        ['Kitchen', '[Chimney filter](/blog/kitchen-chimney-cleaning-guide.html) dismantled + degreased, hob + burners, cabinets inside-out, tiles degreased, sink descaled, floor', 'Chimney motor sealed, utensils'],
         ['Bathrooms (1–3)', 'Tile descaling, grout scrub, commode sanitization, faucet wrap descaling, shower glass polish, exhaust, floor', 'Marble diamond polish'],
         ['General', 'All fans/lights/switches sanitized, high-touch disinfection, final supervisor walkthrough with tick sheet', 'Facade, lift lobby'],
       ]},
@@ -6023,9 +6023,9 @@ export const ARTICLES = [
         ['deep cleaning services (city-wide)', 'One-time intensive deep clean of entire home', 'Full 2BHK top-to-bottom, machine scrub, descaling, walkthrough', '₹4,500 fixed'],
         ['house cleaning services', 'Regular upkeep (weekly)', 'Surface dust/mop, wipe, bins — no chimney/descaling', '₹499/visit'],
         ['full home deep cleaning', 'Same as deep cleaning services, bare', 'Identical to this guide — bare + Gurgaon both resolve to BHK card', '₹4,500'],
-        ['deep cleaning services in gurgaon (with location)', 'Same, with city', 'Same 5-area table, Sushant Lok/DLF/Sectors 14-92 proof', '₹4,500'],
+        ['[deep cleaning services in gurgaon](/) (with location)', 'Same, with city', 'Same 5-area table, Sushant Lok/DLF/Sectors 14-92 proof', '₹4,500'],
       ]},
-      { t: 'tip', x: 'Deep cleaning services — fixed BHK price, pay after you approve. WhatsApp 3 photos for a 5-minute lock: Sachin Deep Cleaning +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all sectors, same-day when you book before noon.' },
+      { t: 'tip', x: 'Deep cleaning services — fixed BHK price, pay after you approve. WhatsApp 3 photos for a 5-minute lock: [Sachin](/about.html) Deep Cleaning +91 9267905943. 1BHK ₹2,500 to villa ₹9,000, all sectors, same-day when you book before noon.' },
       { t: 'h2', x: 'How the Day Unfolds: Crew Size and Timings' },
       { t: 'table', head: ['Home Size', 'Crew', 'Time on Site', 'Machines Brought'], rows: [
         ['1BHK', '2 cleaners', '4–5 hours', 'Scrubber, vacuum, descaler kit'],
@@ -6088,13 +6088,13 @@ export const ARTICLES = [
       { t: 'table', head: ['Task', 'Included in Per-Visit Price', 'Deep Cleaning (Separate)'], rows: [
         ['Dusting + vacuuming', 'Yes', 'Yes (deeper, behind furniture)'],
         ['Mopping + floor care', 'Yes', 'Yes (machine scrub + polish)'],
-        ['Kitchen surfaces', 'Counter + hob wipe, sink', 'Chimney dismantle + degrease, cabinets inside-out'],
+        ['Kitchen surfaces', 'Counter + hob wipe, sink', '[Chimney dismantle](/kitchen-deep-cleaning-gurgaon.html) + degrease, cabinets inside-out'],
         ['Bathroom surfaces', 'Wipe + basin', 'Descaling + grout + glass + exhaust'],
         ['Bins', 'Empty + liner', 'Same'],
         ['Sanitization', 'High-touch wipe', 'Full antiviral'],
       ]},
       { t: 'h2', x: 'Home Cleaning Services Gurgaon vs House Cleaning Services Gurgaon — House vs Home Wording' },
-      { t: 'p', x: 'In Gurgaon, “home cleaning services” and “house cleaning services” describe the same job: regular upkeep of your whole home, priced per visit. This guide covers both phrasings, gives the per-visit table for every home size, and shows where regular upkeep ends and a deep clean begins.' },
+      { t: 'p', x: 'In Gurgaon, “home cleaning services” and “[house cleaning](/residential-cleaners-near-me.html) services” describe the same job: regular upkeep of your whole home, priced per visit. This guide covers both phrasings, gives the per-visit table for every home size, and shows where regular upkeep ends and a [deep clean](/deep-cleaning-services-in-gurgaon.html) begins.' },
       { t: 'table', head: ['Your Query', 'Intent', 'What You Get'], rows: [
         ['home cleaning services gurgaon', 'Regular upkeep, exact home wording', 'Per-visit table above, weekly/bi-weekly/one-time, ₹499/visit studio'],
         ['house cleaning services gurgaon', 'Same intent, house wording', 'Same per-visit card — house page is your service page, home is this blog guide; both resolve to same price'],
@@ -6104,7 +6104,7 @@ export const ARTICLES = [
       { t: 'p', x: 'The first visit on a weekly plan always takes longer than the ones that follow, because it clears the backlog that built up before the plan started. After that, holding the same home to the same standard takes less time each week — which is why a scheduled plan costs less per visit than repeated one-time bookings, and why the price is fixed per visit rather than per hour. Skip two weeks and the next visit is effectively a first visit again.' },
       { t: 'h2', x: 'Consumables, Equipment and Who Brings What' },
       { t: 'p', x: 'The team brings the cleaning solutions, microfibre cloths, mops and the vacuum, so nothing needs to be supplied at home. If you prefer a specific floor cleaner for marble or wooden flooring, keep it out and it will be used instead. Consumables such as bin liners and dishwash liquid are not part of the per-visit price — most households keep their own, and we use what is available.' },
-      { t: 'tip', x: 'Home cleaning services Gurgaon — pay per visit, same team, pay after. WhatsApp BHK + area: Sachin Deep Cleaning +91 9267905943. ₹499/visit studio, weekly save, all sectors.' },
+      { t: 'tip', x: 'Home cleaning services Gurgaon — pay per visit, same team, pay after. WhatsApp BHK + area: [Sachin Deep Cleaning](/) +91 9267905943. ₹499/visit studio, weekly save, all sectors.' },
       { t: 'h2', x: 'Upkeep vs Deep: a 12-Month Calendar for a Gurgaon Home' },
       { t: 'table', head: ['When', 'Booking', 'Why'], rows: [
         ['Weekly or fortnightly', '₹499 upkeep visit', 'Dust, mop, bins, bathrooms wiped — keeps the baseline'],
@@ -6121,7 +6121,7 @@ export const ARTICLES = [
         '**Parking for the van** — the number-one delay in older sectors; solved in the call, not on the street.',
         '**Your three priorities** — the crew leader gets them on the checklist; the visit is signed off against them.',
       ]},
-      { t: 'p', x: 'Fifteen minutes of questions buys a visit that lands on the right day, with the right crew and the right checklist — and it is why our first-visit redo rate is a rounding error. A vendor who books on \'2BHK, ₹499, done\' is pricing for the visit, not the outcome.' },
+      { t: 'p', x: 'Fifteen minutes of questions buys a visit that lands on the right day, with the right crew and the right checklist — and it is why our first-visit redo rate is a rounding error. A vendor who books on \'2BHK, ₹499, done\' is [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) for the visit, not the outcome.' },
     ],
   },
 
@@ -6147,7 +6147,7 @@ export const ARTICLES = [
       { q: 'Do you serve my society for home deep cleaning services in Gurgaon?', a: 'Yes — home deep cleaning services in Gurgaon cover DLF Phase 1–5, Sushant Lok 1-3, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92, 65–67 and all societies. Share society + BHK for a 5-minute fixed quote.' },
     ],
     blocks: [
-      { t: 'p', x: '**Home deep cleaning services in Gurgaon** differ from a regular clean in one word: machines. A crew with a single-disc floor scrubber, acid descaler, degreaser and HEPA vacuum resets a home in one day in ways weeks of daily mopping cannot. Below: the fixed BHK price card, an hour-by-hour account of what those machines actually do inside a Gurgaon flat, and the adjustments that move the quote up or down. New to the category? Start with [what deep cleaning includes](/blog/deep-cleaning-services.html); ready to book? Get the [5-minute WhatsApp quote](/blog/home-deep-cleaning-service-gurgaon.html).' },
+      { t: 'p', x: '**Home deep cleaning services in Gurgaon** differ from a regular clean in one word: machines. A crew with a single-disc floor scrubber, acid descaler, degreaser and HEPA vacuum resets a home in one day in ways weeks of daily mopping cannot. Below: the fixed BHK [price card](/blog/deep-cleaning-cost-gurgaon-2026.html), an hour-by-hour account of what those machines actually do inside a Gurgaon flat, and the adjustments that move the quote up or down. New to the category? Start with [what deep cleaning includes](/blog/deep-cleaning-services.html); ready to book? Get the [5-minute WhatsApp quote](/blog/home-deep-cleaning-service-gurgaon.html).' },
       { t: 'h2', x: 'Home Deep Cleaning Services Gurgaon — Fixed BHK Price (Sep 2026)' },
       { t: 'table', head: ['Home', 'Home Deep Cleaning Services (Rooms)', 'Fixed Price', 'Time', 'Crew'], rows: [
         ['1BHK home deep cleaning services Gurgaon', '1 bed + living + kitchen + 1 bath + balcony + windows', '₹2,500', '5–6 hrs', '2 cleaners'],
@@ -6159,7 +6159,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'A 2BHK Deep Clean, Hour by Hour — What the Crew Actually Does' },
       { t: 'table', head: ['Time', 'Where', 'What Happens'], rows: [
         ['Hour 1', 'Bathrooms first', 'Acid descaler goes on tiles, faucets and shower glass and needs 15 minutes of contact time — so bathrooms start first while hands work elsewhere'],
-        ['Hours 1–2', 'Kitchen', 'Chimney filters soaked and degreased, hob and burners detailed, cabinets wiped inside-out, tiles degreased, sink descaled'],
+        ['Hours 1–2', 'Kitchen', '[Chimney filters](/blog/kitchen-chimney-cleaning-guide.html) soaked and degreased, hob and burners detailed, cabinets wiped inside-out, tiles degreased, sink descaled'],
         ['Hours 2–4', 'Bedrooms', 'Wardrobes wiped inside-out, under-bed vacuum, fans and switchboards sanitised, single-disc machine scrub on the floor'],
         ['Hours 4–6', 'Living/dining + balcony', 'Windows and sills, sofa vacuum, balcony scrub with drain flush, cobwebs pulled from corners and curtain rails'],
         ['Hours 6–7', 'Bathrooms finished + floors', 'Descaler scrubbed off, grout brushed, shower glass polished, then every floor machine-polished room by room'],
@@ -6168,14 +6168,14 @@ export const ARTICLES = [
       { t: 'p', x: 'Sequence matters more than effort: chemicals that need dwell time (descaler, degreaser) are applied first so they keep working while hands are elsewhere, and floors are always last so nothing re-dusts a finished room. That ordering — not extra workers — is what keeps a 2BHK inside 7–8 hours.' },
       { t:'h2', x: 'What Moves the Price Up or Down — Real Adjustments, Not Fine Print' },
       { t:'table', head: ['Situation in Your Home', 'Effect on Price / Time'], rows: [
-        ['Extra bathroom beyond the BHK count', '+₹400 and about 45 minutes — descaling and grout work are the slowest steps'],
+        ['Extra bathroom beyond the BHK count', '+₹400 and [about](/about.html) 45 minutes — descaling and grout work are the slowest steps'],
         ['Heavy balcony (pigeon droppings, planter soil, choked drain)', 'Included at no extra cost on 1–3BHK; villas quoted after photos'],
         ['Sofa or mattress shampoo (optional add-on)', '+₹499 per seat, roughly 20 minutes each'],
         ['Marble or kota flooring', 'Same price — machine polish without acid; acidic descalers are never used on natural stone'],
         ['Post-renovation dust or paint splatter', 'Needs the post-construction checklist, not this one — quoted separately'],
         ['Same-day booking before noon', 'No surcharge; crew arrives the same evening wherever a slot allows'],
       ]},
-      { t: 'tip', x: 'Home deep cleaning services in Gurgaon, fixed per BHK: ₹2,500 (1BHK), ₹4,500 (2BHK), ₹5,500 (3BHK), ₹9,000 (villa) — pay only after the supervisor walkthrough. WhatsApp 3 photos to Sachin Deep Cleaning +91 9267905943 for a locked quote in 5 minutes; crews cover DLF Phases, Sushant Lok, Sohna Road, Golf Course Road and all sectors daily.' },
+      { t: 'tip', x: 'Home [deep cleaning services in Gurgaon](/deep-cleaning-services-in-gurgaon.html), fixed per BHK: ₹2,500 (1BHK), ₹4,500 (2BHK), ₹5,500 (3BHK), ₹9,000 (villa) — pay only after the supervisor walkthrough. WhatsApp 3 photos to [Sachin Deep Cleaning](/) +91 9267905943 for a locked quote in 5 minutes; crews cover DLF Phases, Sushant Lok, Sohna Road, Golf Course Road and all sectors daily.' },
       { t: 'h2', x: 'Before the Crew Arrives: a 10-Minute Prep List' },
       { t: 'ul', items: [
         '**Clear counters and floors** — laundry, toys, loose cables; the crew cleans surfaces, not clutter.',
@@ -6214,7 +6214,7 @@ export const ARTICLES = [
       { q: 'Can I do post construction cleaning myself in Gurgaon?', a: 'For a single room with light dust, yes — shop-vac + HEPA + microfibre + N95/goggles/gloves, 8–24 hours, top-to-bottom. For whole-house builds, hire pros: 3–6 cleaners, 40–80 hours, HEPA, scraper and dumpster needs. Post construction cleaning in Gurgaon for 1,500–2,000 sq ft is 1–2 days pro vs 3–5 days DIY — the 1BHK ₹2,499 fixed beats DIY time.' },
     ],
     blocks: [
-      { t: 'p', x: 'If you are booking **post construction cleaning services gurgaon** in Gurgaon, this guide answers the two things quotes usually avoid: the exact price for your home size, and the written list of what is and is not included.' },
+      { t: 'p', x: 'If you are booking **post construction cleaning services gurgaon** in Gurgaon, this guide answers the two things quotes usually avoid: the exact [price](/blog/2bhk-deep-cleaning-price-gurgaon.html) for your home size, and the written list of what is and is not included.' },
       { t: 'h2', x: 'Post Construction Cleaning Gurgaon — 3 Phases (What “Post Interior Work” Means)' },
       { t: 'table', head: ['Phase', 'What We Do (Post Construction Cleaning Gurgaon)', 'Gurgaon BHK Time'], rows: [
         ['1. Rough Clean', 'Large debris, trash, packaging, wood scraps, tile/cement chunks, nails/screws haul', '2–3 hrs (2 cleaners)'],
@@ -6226,7 +6226,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Post Construction Cleaning Price in Gurgaon — BHK & Sq-Ft Table (Sep 2026)' },
       { t: 'table', head: ['Home / Office', 'Post Construction Cleaning (Gurgaon)', 'Fixed Price', 'Time'], rows: [
         ['1BHK post construction cleaning Gurgaon (up to 600 sq ft)', 'Rough + dust extraction + surface + final', '₹2,499 (their card)', '6–10 hrs (another listing)'],
-        ['2–3BHK flats post construction cleaning Gurgaon', 'Same 3 phases, 2–3BHK', '₹3,499–₹4,999 (a facilities company 2–3BHK)', '1–2 days (a maid-service site 1,500–2,000 sq ft)'],
+        ['2–[3BHK](/blog/3bhk-deep-cleaning-price-gurgaon.html) flats post construction cleaning Gurgaon', 'Same 3 phases, 2–3BHK', '₹3,499–₹4,999 (a facilities company 2–3BHK)', '1–2 days (a maid-service site 1,500–2,000 sq ft)'],
         ['Villa / large new build post construction', 'Same + debris haul', 'Custom, ₹5,000–₹15,000 (Justdial Gurgaon range)', '3–5 days'],
         ['Office post construction cleaning Gurgaon (500–1000 sq ft)', 'Same + workstations/pantry/restrooms/glass', 'Custom, ₹0.10–0.75/sq ft + debris ₹100–300', '2–4 hrs per 500 sq ft'],
         ['Small room remodel post interior work cleaning', 'Rough + final only', '₹200–400 dollars / ₹16,000–₹32,000', '1 day'],
@@ -6241,7 +6241,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'Post Interior Work Cleaning vs Post Construction — Same 3 Phases, Different Word' },
       { t: 'p', x: 'In Gurgaon, **post interior work cleaning**, **post renovation cleaning** and **pre-handover cleaning** (another listing) are the same as **post construction cleaning** — all mean 3-phase clean after interior designers/contractors finish. Whether you search “post interior work cleaning” or “post construction cleaning services”, the checklist is identical: rough, dust extraction, surface, final. Book 1–2 weeks before handover, plan 6–10 hours for 1BHK, 1–2 days for 2–3BHK.' },
-      { t: 'tip', x: 'Post construction cleaning Gurgaon — 3-phase, HEPA + scraper, BHK-fixed ₹2,499 (1BHK) to ₹4,999 (2–3BHK), pay after walkthrough. WhatsApp BHK + site photos: Sachin Deep Cleaning +91 9267905943. All sectors, 1–2 days for 2BHK, debris haul included.' },
+      { t: 'tip', x: 'Post construction cleaning Gurgaon — 3-phase, HEPA + scraper, BHK-fixed ₹2,499 (1BHK) to ₹4,999 (2–3BHK), pay after walkthrough. WhatsApp BHK + site photos: [Sachin Deep Cleaning](/) +91 9267905943. All sectors, 1–2 days for 2BHK, debris haul included.' },
       { t: 'h2', x: 'Phase Three: The Detail Pass That Shows' },
       { t: 'ul', items: [
         '**Switch plates and sockets** — paint flecks and cement dust sit on every one; wiped and sanitised individually.',
@@ -6312,7 +6312,7 @@ export const ARTICLES = [
         ['Phase 5', 'Software, BPO/KPO, corporate towers'],
         ['Adjoining', 'Cyber City, Golf Course Road, Sohna Road, MG Road, Sectors 32/44/54, Manesar/IMT'],
       ]},
-      { t: 'tip', x: 'Office deep cleaning Udyog Vihar — ₹3,999 for 500–1000 sq ft, 9-area checklist, after-hours/weekend, pan-Phase 1-5. WhatsApp sq ft + Phase: Sachin Deep Cleaning +91 9267905943.' },
+      { t: 'tip', x: 'Office [deep cleaning](/blog/office-deep-cleaning-gurgaon-guide.html) Udyog Vihar — ₹3,999 for 500–1000 sq ft, 9-area checklist, after-hours/weekend, pan-Phase 1-5. WhatsApp sq ft + Phase: Sachin Deep Cleaning +91 9267905943.' },
       { t: 'h2', x: 'The 9-Area Scope, Area by Area' },
       { t: 'table', head: ['Area', 'What the Night Crew Does', 'Typical Time'], rows: [
         ['Workstations', 'Desk tops, chairs, cables, partitions wiped and sanitised', '2–3 hrs per 50 seats'],
@@ -6369,7 +6369,7 @@ export const ARTICLES = [
     blocks: [
       { t: 'p', x: 'If you are booking **carpet cleaning in udyog vihar** in Gurgaon, this guide answers the two things quotes usually avoid: the exact price for your home size, and the written list of what is and is not included.' },
       { t: 'h2', x: 'Carpet Cleaning Udyog Vihar — Onsite vs Pickup Dry (Price per Sq Ft, Sep 2026)' },
-      { t: 'table', head: ['Method', 'Carpet Cleaning Udyog Vihar (Onsite Mechanized)', 'Pickup Dry (a laundry-pickup brand, 1500 Stores)'], rows: [
+      { t: 'table', head: ['Method', '[Carpet Cleaning](/carpet-shampoo-cleaning-gurgaon.html) Udyog Vihar (Onsite Mechanized)', 'Pickup Dry (a laundry-pickup brand, 1500 Stores)'], rows: [
         ['Price', '₹15/sq ft onsite (wall-to-wall, 4–8 hrs)', '₹25–49/sq ft pickup (ClanClean ₹25, Cloud Dhobi ₹49, 4 days)'],
         ['Best for', 'Wall-to-wall office broadloom (5,000+ sq ft floor plates, Cyber City/Udyog Vihar)', 'Delicate rugs (Persian, silk, Turkish, Kashmiri) you don’t want wet'],
         ['Dry time', '60–90 min via encapsulation (Friday-night, Monday ready)', '1 full day (a laundry-pickup brand 4 days)'],
@@ -6381,11 +6381,11 @@ export const ARTICLES = [
       { t: 'ul', items: [
         '**Wall-to-wall broadloom cannot be picked up** — Cyber City, Udyog Vihar Phase 1–5, Sohna Road offices have 5,000+ sq ft glued broadloom; a laundry-pickup brand pickup is for rugs, not wall-to-wall. Your carpet cleaning price in Udyog Vihar onsite at ₹15/sq ft is the only option for wall-to-wall.',
         '**Friday-night window** — Udyog Vihar offices run 18 hours/day, 5 days/week; onsite Friday-night + Saturday with 60–90 min dry means zero workday loss vs a laundry-pickup brand 4-day pickup',
-        '**Bulk AMC** — 5,000+ sq ft floor plates get bulk pricing and quarterly AMC (like AYS Max bulk above 5,000 sq ft) — pickup dry has no bulk office flow',
+        '**Bulk AMC** — 5,000+ sq ft floor plates get bulk [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) and quarterly AMC (like AYS Max bulk above 5,000 sq ft) — pickup dry has no bulk office flow',
       ]},
       { t: 'h2', x: 'Carpet Cleaning Phase by Phase in Udyog Vihar' },
       { t: 'p', x: 'Phase 1 to Phase 5 differ mostly in building age and floor type, not in method. Phase 1 and 2 blocks are older, with more broadloom and heavy footfall near the Delhi border; Phase 3 and 4 carry newer fit-outs with modular tiles, where dry encapsulation keeps most of the floor usable while the rest is worked; Phase 5 has larger, newer plates that suit a wall-to-wall extraction on a Friday night. The price stays **₹15/sq ft onsite dry** or **₹18/sq ft with shampoo and extraction**, whichever phase you are in.' },
-      { t: 'tip', x: 'Carpet cleaning Udyog Vihar — onsite ₹15/sq ft, 60–90 min dry, wall-to-wall 5,000+ sq ft Friday-night. WhatsApp office sq ft + Phase: Sachin Deep Cleaning +91 9267905943.' },
+      { t: 'tip', x: 'Carpet cleaning Udyog Vihar — onsite ₹15/sq ft, 60–90 min dry, wall-to-wall 5,000+ sq ft Friday-night. WhatsApp office sq ft + Phase: [Sachin Deep Cleaning](/) +91 9267905943.' },
       { t: 'h2', x: 'Low-Moisture vs Extraction: Which Carpet Gets Which' },
       { t: 'table', head: ['Carpet Condition', 'Method', 'Drying', 'Best For'], rows: [
         ['Light office soil', 'Encapsulation low-moisture', '45–60 min', 'Routine quarterly upkeep'],
@@ -6433,9 +6433,9 @@ export const ARTICLES = [
       { q: 'Is carpet shampoo cleaning safe for office carpets in Udyog Vihar?', a: 'Yes — we use colour-lock chemicals, Scotchgard optional, and test on a corner. a laundry-pickup brand is “colour-bleeding proof” for rugs; we are colour-lock for wall-to-wall. Your carpet shampoo cleaning price in Udyog Vihar includes colour test.' },
     ],
     blocks: [
-      { t: 'p', x: 'For **carpet shampoo cleaning in udyog vihar**, a laundry-pickup brand shows “Best Carpet Cleaning Service In Udyog Vihar, Gurgaon” for dry (pickup, 4 days, 20% off) and Klean Homz shows “mechanized deep” with no per-sq-ft shampoo vs dry table. Here is the **shampoo ₹18 vs dry ₹15** guide that actually lists hot-water extraction for “carpet shampoo cleaning in udyog vihar”.' },
+      { t: 'p', x: 'For **carpet shampoo cleaning in udyog vihar**, a laundry-pickup brand shows “Best Carpet Cleaning Service In Udyog Vihar, Gurgaon” for dry (pickup, 4 days, 20% off) and Klean Homz shows “mechanized deep” with no per-sq-ft shampoo vs dry table. Here is the **shampoo ₹18 vs dry ₹15** [guide](/blog/cleaning-services-gurgaon-guide.html) that actually lists hot-water extraction for “[carpet](/blog/carpet-cleaning-gurgaon-guide.html) shampoo cleaning in udyog vihar”.' },
       { t: 'h2', x: 'Carpet Shampoo Cleaning Udyog Vihar — Shampoo vs Dry (Sep 2026)' },
-      { t: 'table', head: ['Method', 'Carpet Shampoo Cleaning Udyog Vihar (₹18/sq ft)', 'Carpet Cleaning Dry (₹15/sq ft)'], rows: [
+      { t: 'table', head: ['Method', 'Carpet Shampoo Cleaning Udyog Vihar (₹18/sq ft)', '[Carpet Cleaning](/blog/carpet-cleaning-udyog-vihar.html) Dry (₹15/sq ft)'], rows: [
         ['Method', 'Hot-water extraction + shampoo + steam', 'Dry/onsite mechanized + encapsulation'],
         ['Best for', 'Heavy soil, pet odor, allergens, 5,000+ sq ft wall-to-wall', 'Light maintenance, delicate Persian/silk rugs, 60–90 min dry'],
         ['Dry time', '4–8 hrs + 1 day full dry', '60–90 min (encapsulation)'],
@@ -6507,7 +6507,7 @@ export const ARTICLES = [
     blocks: [
       { t: 'p', x: 'If you are booking **sofa cleaning in udyog vihar** in Gurgaon, this guide answers the two things quotes usually avoid: the exact price for your home size, and the written list of what is and is not included.' },
       { t: 'h2', x: 'Sofa Cleaning Udyog Vihar — Per-Seat Price (Sep 2026)' },
-      { t: 'table', head: ['Sofa Type', 'Sofa Cleaning Udyog Vihar (Onsite)', 'Urban Company “Starts at”', 'Time'], rows: [
+      { t: 'table', head: ['Sofa Type', '[Sofa Cleaning](/blog/sofa-cleaning-gurgaon-guide.html) Udyog Vihar (Onsite)', 'Urban Company “Starts at”', 'Time'], rows: [
         ['Fabric sofa (1 seater)', '₹499 dry / ₹599 shampoo (per seat)', '₹399 Starts at (per sofa, not per seat)', '45 mins + 3–4 hrs dry'],
         ['3-seater fabric', '₹1,497 dry / ₹1,797 shampoo (3×)', '₹399×3 = ₹1,197 (but no per-seat table)', '45 mins + 3–4 hrs'],
         ['Leather sofa', 'Sanitization + microfibre + polish (per sofa)', '₹399 Starts at + polish separate', '45 mins'],
@@ -6523,7 +6523,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Why Office Sofas in Udyog Vihar Stain Differently From Home Sofas' },
       { t: 'p', x: 'Office sofas sit in lobbies and receptions, so they collect a different kind of soiling: hand cream and sanitiser on the armrests, coffee rings on the centre seat, and fit-out dust from the Phase 4–5 construction belt settling into the back cushions. Reception seating is also the highest-traffic soft furniture on the floor — cleaned quarterly it stays presentable, left for a year the seat pads hold a grey film that a daily wipe cannot lift.' },
       { t: 'h2', x: 'Booking Sofa Cleaning Without Closing the Lobby' },
-      { t: 'p', x: 'Sofa cleaning is done in place, so there is no pickup and no downtime. Seats are worked two at a time and the lobby stays usable throughout. Extraction needs 3–4 hours to dry and the dry method under an hour, so an early-morning slot means the lobby is dry before the working day starts. Offices in the **1,200-unit Udyog Vihar belt** usually put lobby seating on a quarterly cycle alongside carpet shampoo, which keeps the per-seat price at ₹499 dry or ₹599 shampoo.' },
+      { t: 'p', x: 'Sofa cleaning is done in place, so there is no pickup and no downtime. Seats are worked two at a time and the lobby stays usable throughout. Extraction needs 3–4 hours to dry and the dry method under an hour, so an early-morning slot means the lobby is dry before the working day starts. Offices in the **1,200-unit Udyog Vihar belt** usually put lobby seating on a quarterly cycle alongside carpet shampoo, which keeps the [per-seat price](/blog/sofa-cleaning-price-gurgaon-per-seat.html) at ₹499 dry or ₹599 shampoo.' },
       { t: 'tip', x: 'Sofa cleaning Udyog Vihar — ₹499/seat dry / ₹599 shampoo, 45 mins, 3–4 hrs drying, onsite mechanized. WhatsApp sofa seats + Phase: Sachin Deep Cleaning +91 9267905943.' },
       { t: 'h2', x: 'Office Upholstery Is Not Home Upholstery' },
       { t: 'ul', items: [
@@ -6575,7 +6575,7 @@ export const ARTICLES = [
       { q: 'Will the chairs be dry before the morning shift?', a: 'Yes. Mesh and fabric chairs dry in 1–4 hours depending on the method, and scheduling is built around that: an after-7pm slot is dry well before a 9am shift, while weekend slots are used where extraction needs the full 3–4 hours. Leather chairs are surface-dry within 30 minutes because no steam touches the hide.' },
     ],
     blocks: [
-      { t: 'p', x: 'For **chair cleaning in udyog vihar**, most “sofa & chair” pages (Urban, Sulekha) list chair as a bullet with no per-chair price, time or fabric method. Here is the **per-chair ₹199, mesh vs fabric, steam + shampoo, 30 mins** guide that owns the exact “chair cleaning in udyog vihar” query.' },
+      { t: 'p', x: 'For **chair cleaning in udyog vihar**, most “sofa & chair” pages (Urban, Sulekha) list chair as a bullet with no per-chair price, time or fabric method. Here is the **per-chair ₹199, mesh vs fabric, steam + shampoo, 30 mins** [guide](/blog/house-cleaning-services-gurgaon-guide.html) that owns the exact “chair cleaning in udyog vihar” query.' },
       { t: 'h2', x: 'Chair Cleaning Udyog Vihar — Per-Chair Price (Sep 2026)' },
       { t: 'table', head: ['Chair Type', 'Chair Cleaning Udyog Vihar', 'Price', 'Time'], rows: [
         ['Office mesh chair', 'Steam + shampoo, mesh-safe', '₹199/chair', '30 mins'],
@@ -6681,7 +6681,7 @@ export const ARTICLES = [
         '**Pair baths with a floor deep clean** — doing washrooms the same night as workstation deep cleaning avoids a second visit charge.',
         '**Check the consumables stock before the visit** — the crew refills nothing it did not bring; telling us beforehand lets us carry matching dispensers.',
       ]},
-      { t: 'tip', x: 'Office bathroom cleaning Udyog Vihar — ₹800/bath, 1–2 hrs/bath, urinals + odor control, hospital-grade. WhatsApp bath count + Phase: Sachin Deep Cleaning +91 9267905943.' },
+      { t: 'tip', x: 'Office [bathroom cleaning](/blog/bathroom-cleaning-price-gurgaon-per-bathroom.html) Udyog Vihar — ₹800/bath, 1–2 hrs/bath, urinals + odor control, hospital-grade. WhatsApp bath count + Phase: Sachin Deep Cleaning +91 9267905943.' },
       { t: 'h2', x: 'Odour Control: Why It Starts in the Drain, Not the Air' },
       { t: 'ul', items: [
         '**Trap evaporation** — weekend-empty offices let P-traps dry out; Monday smells are evaporated sewer gas, not dirty floors — a jug of water down each drain fixes it and is worth telling your housekeeping.',
@@ -6779,7 +6779,7 @@ export const ARTICLES = [
       { q: 'Do you provide GST invoice and NDA for corporate offices?', a: 'Yes. Every corporate booking gets a GST invoice, NDA on request before the shift, and photo walkthrough logs at handover. Payment is released after your facility sign-off, not before the crew arrives.' },
     ],
     blocks: [
-      { t: 'p', x: '**Sector 44**, right next to Millennium City Centre metro station, has grown into one of Gurgaon\'s busiest corporate pockets — company floors stacked above coworking spaces, all running six days a week. This guide covers office deep cleaning across Sector 44 and the other corporate hubs where the scope changes with the building: [Cyber City](#cyber-city-dlf-phase-2-sector-24-nh-48), [Golf Course Road](#golf-course-road-sector-43-dlf-phase-5), [Institutional Sector 32](#institutional-area-sector-32) and [Udyog Vihar](#udyog-vihar-phases-i-v-sector-20). For the full method behind these hub playbooks, start with the [office deep cleaning guide](/blog/office-deep-cleaning-gurgaon-guide.html).' },
+      { t: 'p', x: '**Sector 44**, right next to Millennium City Centre metro station, has grown into one of Gurgaon\'s busiest corporate pockets — company floors stacked above coworking spaces, all running six days a week. This guide covers office [deep cleaning](/blog/home-deep-cleaning-services-gurgaon.html) across Sector 44 and the other corporate hubs where the scope changes with the building: [Cyber City](#cyber-city-dlf-phase-2-sector-24-nh-48), [Golf Course Road](#golf-course-road-sector-43-dlf-phase-5), [Institutional Sector 32](#institutional-area-sector-32) and [Udyog Vihar](#udyog-vihar-phases-i-v-sector-20). For the full method behind these hub playbooks, start with the [office deep cleaning guide](/blog/office-deep-cleaning-gurgaon-guide.html).' },
       { t: 'h2', x: 'Sector 44 Office Deep Cleaning — Scope & Fixed Pricing' },
       { t: 'p', x: 'Sector 44 floors are typically 1,000–5,000 sq ft — open workstations, 1–2 meeting rooms, a pantry and 2–4 washrooms. Metro-adjacent access means crews arrive without the parking delays that plague Cyber City docks, so same-week night slots are genuinely available. Pricing follows the standard commercial card, fixed on survey — never per-hour.' },
       { t: 'table', head: ['Office Size', 'Crew & Shift', 'Indicative Price'], rows: [
@@ -6882,7 +6882,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'Daytime Touch-up Service (While Members Work)' },
       { t: 'p', x: 'Not everything waits for night. Midday touch-up rounds cover pantry counter wipe-downs, coffee-machine drip trays, washroom consumable refills and bin swaps — quiet hand tools only, no machines, no disruption. Priced per visit and popular with 50+ member floors where a single morning pantry reset never survives lunch. Pair touch-ups with the monthly overnight reset and the floor never visibly degrades.' },
       { t: 'h2', x: 'Glass, Lobbies & Entry Experience' },
-      { t: 'p', x: 'First impressions in Sector 44 happen at the glass door, not the desk. Entry glass, reception desk polish, waiting-area chair detailing and entrance-mat deep vacuum run in every scope — these four items take 30 minutes and decide what visitors conclude about the whole office. Buildings with double-height lobbies add high-dust vent and glass-fin detailing quarterly.' },
+      { t: 'p', x: 'First impressions in Sector 44 happen at the glass door, not the desk. Entry glass, reception desk polish, waiting-area chair detailing and entrance-mat [deep](/blog/what-is-deep-cleaning-guide.html) vacuum run in every scope — these four items take 30 minutes and decide what visitors conclude about the whole office. Buildings with double-height lobbies add high-dust vent and glass-fin detailing quarterly.' },
       { t: 'tip', x: 'Sector 44 books fastest in Gurgaon — metro-side access, no dock queues. WhatsApp floor size, photos and member count (if coworking) to Sachin Deep Cleaning +91 9267905943 for a fixed night-shift quote.' },
     ],
   },
@@ -6940,7 +6940,7 @@ export const ARTICLES = [
         ['Carpet shampoo extraction', 'Add-on, same night', '₹15–18/sq ft'],
       ]},
       { t: 'h2', x: 'Lobbies, Lifts & Common Touch-points' },
-      { t: 'p', x: 'Tower life means shared touch-points: lift panels, lobby handles, turnstile readers and common corridors that no single tenant owns but every employee touches. Our scope closes these gaps explicitly — entrance mats vacuumed, lift panels disinfected, lobby glass polished — and the tick-sheet marks them as a separate zone so they are never assumed into (or out of) the floor scope. Where the tower manages commons centrally, we document the handover line in writing.' },
+      { t: 'p', x: 'Tower life means shared touch-points: lift panels, lobby handles, turnstile readers and common corridors that no single [tenant](/blog/move-in-move-out-cleaning-checklist-gurgaon.html) owns but every employee touches. Our scope closes these gaps explicitly — entrance mats vacuumed, lift panels disinfected, lobby glass polished — and the tick-sheet marks them as a separate zone so they are never assumed into (or out of) the floor scope. Where the tower manages commons centrally, we document the handover line in writing.' },
       { t: 'h2', x: 'Carpet Tiles vs Hard Floors on Dense Floors' },
       { t: 'p', x: 'Dense Cyber City floors split flooring three ways: carpet tiles under desks, hard aisles, stone lobbies. Carpet tiles get commercial vacuum plus spot treatment every shift — full hot-water extraction books quarterly as an add-on at ₹15–18 per sq ft, because extraction drying needs the floor empty for 6–8 hours. Hard aisles get single-disc machine scrubbing; stone lobbies get pH-neutral mopping. One product across all three is how vendors ruin stone — the tick-sheet forbids it.' },
       { t: 'h2', x: 'Post-Shift Reporting Pack' },
@@ -6983,7 +6983,7 @@ export const ARTICLES = [
         ['Washroom glaze & chrome', 'Glaze-safe descaler, chrome polish', 'Dwell 5–10 min, rinse, polish'],
       ]},
       { t: 'h2', x: 'Concierge Coordination & Arrival Precision' },
-      { t: 'p', x: 'Premium towers run vendor movement through the concierge: crew lists in advance, announced arrivals, lobby work sequenced around tenant traffic. Our shifts confirm arrival windows to the minute and front-load lobby detailing early night, moving to floors for the deep-night machine phases. If your tower needs after-midnight-only lobby access, the shift plan inverts — detail first, machines after 1 AM.' },
+      { t: 'p', x: 'Premium towers run vendor movement through the concierge: crew lists in advance, announced arrivals, lobby work sequenced around tenant traffic. Our shifts confirm arrival windows to the minute and front-load lobby detailing early night, moving to floors for the [deep](/blog/best-office-deep-cleaning-services-gurgaon.html)-night machine phases. If your tower needs after-midnight-only lobby access, the shift plan inverts — detail first, machines after 1 AM.' },
       { t: 'h2', x: 'Quiet-Hours Etiquette for Late-Working Floors' },
       { t: 'p', x: 'Golf Course Road floors often hold teams past 9 PM. The shift map splits quiet zones (occupied bays: glass, desks, pantry detail) from machine zones (empty wings: scrubbing, extraction). Noisy phases wait for midnight; photo check-ins keep the facility contact informed without floor walks that disturb work.' },
       { t: 'h2', x: 'Washrooms & Pantries at Premium Standard' },
@@ -7032,7 +7032,7 @@ export const ARTICLES = [
       { t: 'h2', x: 'The Weekend-Night Model' },
       { t: 'p', x: 'The floor closes Saturday evening and reopens Monday 9 AM — that 36-hour window is the entire product. Smaller managed offices finish in one Saturday shift (9 PM–5 AM); larger floors split across Saturday and Sunday nights with Sunday reserved for floors, glass and detailing. No weekday disruption, no section-work compromises, no "we\'ll finish the pantry Monday" — Monday opens done.' },
       { t: 'h2', x: 'Shared Washrooms & Facility Boundaries' },
-      { t: 'p', x: 'Many Sector 32 floors share washrooms, lobbies or pantry utilities with neighbouring tenants. The site visit draws the boundary in writing: your washrooms vs building washrooms, your pantry vs shared pantry line. Quotes attach to the boundary document. This single page of paperwork prevents the most common commercial cleaning dispute in the city — "we thought the lobby was included".' },
+      { t: 'p', x: 'Many Sector 32 floors share washrooms, lobbies or pantry utilities with neighbouring tenants. The site visit draws the boundary in writing: your washrooms vs building washrooms, your pantry vs shared pantry line. Quotes attach to the boundary document. This single page of paperwork prevents the most common [commercial cleaning](/blog/commercial-cleaning-services-gurgaon.html) dispute in the city — "we thought the lobby was included".' },
       { t: 'h2', x: 'Monday-Morning Sequencing (Glass First)' },
       { t: 'p', x: 'Monday judges rooms in a fixed order: meeting-room glass and whiteboards first (8 AM meetings), pantry second (9 AM coffee), washrooms third, workstations fourth, floors last (nobody inspects floors before glass). The shift plan sequences Zones in exactly this order, so even a shortened night delivers the rooms Monday actually checks.' },
       { t: 'table', head: ['Weekend Window', 'Crews & Focus', 'Fit'], rows: [
@@ -7081,7 +7081,7 @@ export const ARTICLES = [
       { q: 'Ghar ke liye home cleaning service kaise chunein?', a: 'Teen cheezein dekhein: verified team (police verification + ID), likhit checklist (har visit same scope), aur pay-after terms (kaam dekhne ke baad payment). Weekly plan wahi lein jahan same team aaye. Gurgaon me plans aur rates ke liye [Gurgaon home cleaning plans](/blog/home-cleaning-services-gurgaon.html) dekhein.' },
     ],
     blocks: [
-      { t: 'p', x: 'A **home cleaning service** is a scheduled upkeep visit by a professional team — distinct from a full-time maid and from a one-time deep clean. This guide defines the category nationally: what it includes, the four ways to book, India-typical costs, and how to choose. For Gurgaon-specific plans and BHK rates see [home cleaning plans in Gurgaon](/blog/home-cleaning-services-gurgaon.html); for the 5-minute booking route see [book in 5 minutes](/blog/home-deep-cleaning-service-gurgaon.html).' },
+      { t: 'p', x: 'A **home cleaning service** is a scheduled upkeep visit by a professional team — distinct from a [full-time maid](/blog/house-maid-vs-deep-cleaning-gurgaon.html) and from a one-time [deep clean](/deep-cleaning-services-in-gurgaon.html). This guide defines the category nationally: what it includes, the four ways to book, India-typical costs, and how to choose. For Gurgaon-specific plans and BHK rates see [home cleaning plans in Gurgaon](/blog/home-cleaning-services-gurgaon.html); for the 5-minute booking route see [book in 5 minutes](/blog/home-deep-cleaning-service-gurgaon.html).' },
       { t: 'h2', x: 'What a Home Cleaning Service Actually Is' },
       { t: 'p', x: 'The definition matters because three different products share one name in listings. A home cleaning service is a recurring visit (weekly, bi-weekly or monthly) by a team carrying professional equipment — HEPA vacuum, microfiber systems, multi-surface mops — working off a written room-by-room checklist at a fixed per-visit price. It maintains visible surfaces: dusting, vacuuming, mopping, kitchen and bathroom upkeep, bins and touch-point sanitization. What it never includes: inside cabinets, behind heavy furniture, grout restoration, descaling-grade buildup — that tier is deep cleaning, with different machines and chemistry.' },
       { t: 'h2', x: 'The Four Ways to Book (Pick by Situation)' },
@@ -7098,7 +7098,7 @@ export const ARTICLES = [
         '**Excluded (deep-clean tier):** inside cabinets and wardrobes, behind heavy furniture, grout scrubbing, limescale descaling, chimney dismantling, shampoo extraction.',
       ]},
       { t: 'h2', x: 'What It Costs Across India' },
-      { t: 'p', x: 'Metro pricing clusters tightly: single visits ₹499–₹1,700 by home size, with studios at the floor and 3 BHKs at the ceiling. Weekly plans discount the per-visit rate 10–20% against one-time bookings. Two variables move any quote: bathroom count (each bath is separately detailed) and condition (first visits after a gap run longer). Always confirm whether the quote includes equipment and products — reputable services bring both; gig listings often assume yours.' },
+      { t: 'p', x: 'Metro [pricing](/blog/deep-cleaning-cost-gurgaon-2026.html) clusters tightly: single visits ₹499–₹1,700 by home size, with studios at the floor and 3 BHKs at the ceiling. Weekly plans discount the per-visit rate 10–20% against one-time bookings. Two variables move any quote: bathroom count (each bath is separately detailed) and condition (first visits after a gap run longer). Always confirm whether the quote includes equipment and products — reputable services bring both; gig listings often assume yours.' },
       { t: 'table', head: ['Home Size', 'Single Visit (Typical)', 'With Weekly Plan'], rows: [
         ['Studio / 1 RK', '₹499–₹700', 'Lower per visit, same checklist'],
         ['1 BHK', '₹799–₹1,100', 'Same team rhythm builds speed'],
@@ -7129,7 +7129,7 @@ export const ARTICLES = [
         ['Typical cost', '₹3,000–8,000/month', '₹499–1,700/visit', '₹2,500–9,000/job'],
       ]},
       { t: 'h2', x: 'When to Upgrade a Visit Into a Deep Clean' },
-      { t: 'p', x: 'Upkeep has a ceiling, and five signs mark it: grout lines staying grey after mopping, taps filming within days of a wipe, chimney filters heavy enough to drip, sofa arms darkening at the touch points, and a general staleness no visit lifts. Any two together mean the home has crossed from upkeep-grade to deep-clean-grade soil. Book the deep clean once — kitchens, baths, balconies and furniture reset in a day — then resume the service plan on the clean slate. Homes that alternate this way spend less per year than homes forcing weekly visits to do a quarterly job.' },
+      { t: 'p', x: 'Upkeep has a ceiling, and five signs mark it: grout lines staying grey after mopping, taps filming within days of a wipe, [chimney filters](/blog/kitchen-chimney-cleaning-guide.html) heavy enough to drip, sofa arms darkening at the touch points, and a general staleness no visit lifts. Any two together mean the home has crossed from upkeep-grade to deep-clean-grade soil. Book the deep clean once — [kitchens](/kitchen-deep-cleaning-gurgaon.html), baths, balconies and furniture reset in a day — then resume the service plan on the clean slate. Homes that alternate this way spend less per year than homes forcing weekly visits to do a quarterly job.' },
       { t: 'tip', x: 'Start with the honest map above: daily order needs a maid, upkeep needs a service, buildup needs a deep clean. For Gurgaon homes, fixed BHK upkeep from ₹499 a visit with pay-after terms — WhatsApp your BHK to Sachin Deep Cleaning +91 9267905943.' },
     ],
   },

@@ -18,6 +18,26 @@ import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
 import { pageUrl } from '../lib/site.js';
 
+// Renders inline **bold** markdown and [anchor](/path.html) links in service copy.
+// Same authoring convention as BlogArticlePage.jsx, so editors write internal
+// links identically on blog and service pages.
+function Rich({ text }) {
+  const segs = String(text).split(/(\[[^\]]+\]\([^)]+\))/g);
+  return segs.map((s, i) => {
+    const m = s.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (m) {
+      const ext = /^https?:/.test(m[2]);
+      return <a key={i} href={m[2]} {...(ext ? { target: '_blank', rel: 'noopener' } : {})} style={{ color: 'var(--primary)', fontWeight: 700 }}>{m[1]}</a>;
+    }
+    return String(s).split(/\*\*(.+?)\*\*/g).map((p, j) => (j % 2 === 1 ? <strong key={`${i}-${j}`}>{p}</strong> : p));
+  });
+}
+
+// Strips inline markdown so structured-data descriptions stay plain text.
+function plain(text) {
+  return String(text).replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '');
+}
+
 export default function ServicePage({ serviceKey, bhk, url = '' }) {
   const s = getService(serviceKey, bhk);
   // 2026-09-20 audit: vary the shared trust blocks per service group so the
@@ -33,7 +53,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
   return (
     <>
       <JsonLd data={localBusinessSchema({ url })} />
-      <JsonLd data={serviceSchema({ name: s.name, description: s.intro, url, price: s.price, image: s.image })} />
+      <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image })} />
       <JsonLd data={faqSchema(s.faqs)} />
       <JsonLd data={reviewsSchema(reviews, s.name)} />
       <JsonLd
@@ -83,7 +103,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             <h1>
               <span className="hl">{s.name}</span>
             </h1>
-            <p className="hero-sub">{s.intro} {s.price?.amount && s.price.amount !== 'request' && <strong>{s.price.amount} onwards.</strong>}</p>
+            <p className="hero-sub"><Rich text={s.intro} /> {s.price?.amount && s.price.amount !== 'request' && <strong>{s.price.amount} onwards.</strong>}</p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Same-Day Service</span>
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
@@ -130,7 +150,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           <div className="about-wrap fade-up" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', alignItems: 'center', marginTop: '32px' }}>
             <div style={{ flex: '1 1 300px', minWidth: 0 }}>
               {s.detail.split('\n\n').map((p, i) => (
-                <p key={i} style={{ margin: '0 0 16px', lineHeight: 1.75, color: 'var(--muted)' }}>{p}</p>
+                <p key={i} style={{ margin: '0 0 16px', lineHeight: 1.75, color: 'var(--muted)' }}><Rich text={p} /></p>
               ))}
             </div>
             <div style={{ flex: '1 1 300px', minWidth: 0 }}>

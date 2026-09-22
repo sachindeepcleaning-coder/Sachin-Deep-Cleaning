@@ -56,7 +56,7 @@ export default function BookingPage({ url }) {
               Without Any <span className="hl2">App Download</span>
             </h1>
             <p className="hero-sub">
-              Skip the 7-screen app checkout. One WhatsApp message books verified deep cleaning with a
+              Skip the 7-screen app checkout. One WhatsApp message books <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>verified deep cleaning</a> with a
               fixed price and <strong>pay-after-walkthrough</strong> — serving Gurgaon since <strong>2015</strong>.
             </p>
             <div className="hero-pills">
@@ -116,7 +116,7 @@ export default function BookingPage({ url }) {
           <div style={{ textAlign: 'center' }} className="fade-up">
             <div className="section-tag">App vs Direct</div>
             <h2 className="section-title">What App Checkout Costs You (Beyond Money)</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>Urban Company and NoBroker run the best-built booking apps in Indian home services. Here is the honest side-by-side so you can choose with open eyes.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}><a href="/blog/urban-company-vs-sachin-deep-cleaning.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Urban Company and NoBroker</a> run the best-built booking apps in Indian home services. Here is the honest side-by-side so you can choose with open eyes.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
@@ -148,7 +148,7 @@ export default function BookingPage({ url }) {
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto' }} className="fade-up">
             <div className="section-tag">Honest Note</div>
             <h2 className="section-title">If You Need a Daily Maid, We\u2019ll Say So</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>We sell professional cleaning visits \u2014 not live-in maids. If your need is daily chores, our house-maid-vs-deep-cleaning guide maps the right hire, and our weekly plans (from \u20b9499/visit) cover everything between maid days and quarterly resets. No bait, no app required to find out.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}>We sell professional cleaning visits \u2014 not live-in maids. If your need is daily chores, our <a href="/blog/house-maid-vs-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>house-maid-vs-deep-cleaning guide</a> maps the right hire, and our weekly plans (from \u20b9499/visit) cover everything between maid days and quarterly resets. No bait, no app required to find out.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
@@ -171,7 +171,7 @@ export default function BookingPage({ url }) {
               </tbody>
             </table>
           </div>
-          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call \u2014 identical in DLF, Sohna Road, Golf Course Road and all sectors.</p>
+          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call \u2014 identical in DLF, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a> and all sectors.</p>
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '32px auto 0' }} className="fade-up">
             <div className="section-tag">Who Books Online Most</div>
             <h2 className="section-title">Built for Busy Gurgaon Lives</h2>

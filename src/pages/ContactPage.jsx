@@ -40,7 +40,7 @@ export default function ContactPage({ url }) {
               <span className="hl2">Same-Day</span> Booking
             </h1>
             <p className="hero-sub">
-              Leave your details and we’ll call you back in under 5 minutes — often under 3. Or reach us directly on WhatsApp for an instant reply from our work manager, who confirms your sector slot and locks your fixed price in the same chat.
+              Leave your details and we’ll call you back in under 5 minutes — often under 3. Or reach us directly on WhatsApp for an instant reply from our work manager, who confirms your sector slot and <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>locks your fixed price</a> in the same chat.
             </p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 5-Min Callback</span>
@@ -147,7 +147,7 @@ export default function ContactPage({ url }) {
           <div style={{ textAlign: 'center' }} className="fade-up">
             <div className="section-tag">Find Us</div>
             <h2 className="section-title">We Serve Every Sector of Gurgaon</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at Sushant Lok Phase I with zone rosters across DLF, Golf Course Road, Sohna Road, West and Central Gurgaon, so the nearest crew — never a cross-city one — gets your job. Call +91 92679-05943 to confirm nearest slot.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at <a href="/blog/sushant-lok-1-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok Phase I</a> with zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon, so the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 92679-05943 to confirm nearest slot.</p>
           </div>
           <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)', height: 360 }} className="fade-up">
             <iframe
