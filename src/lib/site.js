@@ -9,9 +9,9 @@ export function pageUrl(file = 'index') {
   return file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${file}.html`;
 }
 
-export const PHONE = '+91 92679-05943';
-export const PHONE_TEL = 'tel:+919267905943';
-export const WHATSAPP_NUMBER = '919267905943';
+export const PHONE = '+91 95607-39281';
+export const PHONE_TEL = 'tel:+919560739281';
+export const WHATSAPP_NUMBER = '919560739281';
 export const WHATSAPP = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 // Pre-filled WhatsApp links for the template CTAs.

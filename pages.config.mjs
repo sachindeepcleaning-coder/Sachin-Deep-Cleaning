@@ -17,12 +17,12 @@ export const pages = [
   {
     file: 'index', page: 'index',
     title: 'Full Home Deep Cleaning Gurgaon | From ₹2,500',
-    description: 'Trusted deep cleaning in Gurgaon since 2015. Full-home from ₹2,500, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9267905943.',
+    description: 'Trusted deep cleaning in Gurgaon since 2015. Full-home from ₹2,500, kitchen, bathroom, sofa & carpet. Pay after satisfaction. Book on WhatsApp: +91 9560739281.',
   },
   {
     file: 'contact', page: 'contact',
     title: 'Book a Deep Clean in Gurgaon | Sachin Deep Cleaning',
-    description: 'Get a free quote for home deep cleaning in Gurgaon. Call or WhatsApp +91 9267905943. All sectors served. Same-day slots available.',
+    description: 'Get a free quote for home deep cleaning in Gurgaon. Call or WhatsApp +91 9560739281. All sectors served. Same-day slots available.',
   },
   {
     file: 'thank-you', page: 'thank-you',
@@ -76,7 +76,7 @@ export const pages = [
   {
     file: 'full-home-deep-cleaning-5bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 5,
     title: '5 BHK Deep Cleaning Gurgaon | Premium Full-Home',
-    description: '5 BHK full home deep cleaning in Gurgaon. Comprehensive luxury home service. Full professional team. Book on WhatsApp or call +91 9267905943.',
+    description: '5 BHK full home deep cleaning in Gurgaon. Comprehensive luxury home service. Full professional team. Book on WhatsApp or call +91 9560739281.',
   },
   {
     file: 'kitchen-deep-cleaning-gurgaon', page: 'service', serviceKey: 'kitchen',

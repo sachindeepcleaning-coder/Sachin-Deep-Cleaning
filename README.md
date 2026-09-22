@@ -160,13 +160,13 @@ npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
 ## 📞 Business Details
 
 - **Company:** Sachin Deep Cleaning
-- **Phone / WhatsApp:** +91 9267905943
+- **Phone / WhatsApp:** +91 9560739281
 - **Location:** Gurgaon, Haryana
 - **Facebook:** [Sachin Deep Cleaning](https://www.facebook.com/profile.php?id=61577737535478)
 - **Instagram:** [@cleaning_service_in_gurgaon](https://www.instagram.com/cleaning_service_in_gurgaon)
 - **YouTube:** [@Cleaning_service_in_Gurgaon](https://www.youtube.com/@Cleaning_service_in_Gurgaon)
 - **X:** [@sachindeepclean](https://x.com/sachindeepclean)
-- **WhatsApp:** https://wa.me/919267905943
+- **WhatsApp:** https://wa.me/919560739281
 
 ---
 

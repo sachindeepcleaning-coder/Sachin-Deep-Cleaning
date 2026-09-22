@@ -16,7 +16,7 @@ export function track(event, params = {}) {
 // Phone click → GA4 "phone_call_click" event (matches GTM trigger).
 export function phoneCallClick() {
   track('phone_call_click', {
-    phone_number: '+91 9267905943',
+    phone_number: '+91 9560739281',
     page_path: typeof window !== 'undefined' ? window.location.pathname : '',
   });
 }
@@ -24,7 +24,7 @@ export function phoneCallClick() {
 // WhatsApp click → GA4 "whatsapp_click" event (matches GTM trigger).
 export function whatsappClick() {
   track('whatsapp_click', {
-    phone_number: '+919267905943',
+    phone_number: '+919560739281',
     page_path: typeof window !== 'undefined' ? window.location.pathname : '',
   });
 }

@@ -44,7 +44,7 @@ const RULES = [
   // competitor phone numbers
   [/\u20b97303133245/g, ''],
   [/\s*7303133245/g, ''],
-  [/Call 9115550011 \(AYS\) or \+91 9267905943 \(us\)/, 'Call +91 9267905943'],
+  [/Call 9115550011 \(AYS\) or \+91 9560739281 \(us\)/, 'Call +91 9560739281'],
 
   // "thin competitor" framing
   [/\(Not Thin, \d[\d,+]* words\)/g, ''],

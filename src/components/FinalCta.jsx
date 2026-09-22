@@ -13,7 +13,7 @@ export default function FinalCta() {
             className="fcta-call"
             onClick={phoneCallClick}
           >
-            📞 Call: +91 92679-05943
+            📞 Call: +91 95607-39281
           </a>
           <a
             href={waMsg('Hi I want to book deep cleaning in Gurgaon. Please send me a quote.')}

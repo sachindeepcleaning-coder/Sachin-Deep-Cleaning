@@ -12,7 +12,7 @@ const TEAM = [
 ];
 
 const PROCESS = [
-  { title: 'Call or WhatsApp', desc: 'Reach us at +91 9267905943 or fill the form — we confirm scope, exact price and slot, often same-day if booked before noon.' },
+  { title: 'Call or WhatsApp', desc: 'Reach us at +91 9560739281 or fill the form — we confirm scope, exact price and slot, often same-day if booked before noon.' },
   { title: 'We Arrive Equipped', desc: 'Our team arrives with all machines and eco-friendly, food-safe products.' },
   { title: 'We Deep Clean', desc: 'Every area is cleaned systematically — kitchen, bathrooms, rooms, floors and fixtures.' },
   { title: 'You Inspect', desc: 'We walk through every area together so you can see the result.' },
@@ -227,7 +227,7 @@ export default function AboutPage({ url }) {
               Sachin Deep Cleaning started in 2015 with one team, one scrubber and a simple rule that has never changed: <strong>you pay only after you walk through and approve the work</strong>. A decade later that rule still runs every job — across DLF Phase 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sushant Lok, South City and 30+ sectors, from compact 1 RK studios to 5 BHK villas, plus offices, shops and clinics after hours.
             </p>
             <p className="section-sub" style={{ margin: '16px auto 0' }}>
-              What changed in ten years is the craft: hot-water extraction for sofas and carpets, acid descaling tuned for Gurgaon’s hard water, food-safe degreasing for modular chimneys, and a supervisor walkthrough on every booking — plus festive rosters that have run eleven straight Diwali seasons without missing a single booked slot. What never changed is the accountability — the owner’s number (+91 92679-05943) is on every quote, and the same police-verified teams return to the same societies season after season.
+              What changed in ten years is the craft: hot-water extraction for sofas and carpets, acid descaling tuned for Gurgaon’s hard water, food-safe degreasing for modular chimneys, and a supervisor walkthrough on every booking — plus festive rosters that have run eleven straight Diwali seasons without missing a single booked slot. What never changed is the accountability — the owner’s number (+91 95607-39281) is on every quote, and the same police-verified teams return to the same societies season after season.
             </p>
           </div>
           <div className="hiw-wrap" style={{ marginTop: '36px' }}>
@@ -348,7 +348,7 @@ export default function AboutPage({ url }) {
               <a href={waMsg('Hi, I want a free quote for deep cleaning in Gurgaon.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ margin: 0 }} onClick={whatsappClick}>
                 💬 WhatsApp: {PHONE}
               </a>
-              <a href="tel:+919267905943" className="fcta-call" style={{ margin: 0, textAlign: 'center' }} onClick={phoneCallClick}>
+              <a href="tel:+919560739281" className="fcta-call" style={{ margin: 0, textAlign: 'center' }} onClick={phoneCallClick}>
                 📞 Call: {PHONE}
               </a>
             </div>
