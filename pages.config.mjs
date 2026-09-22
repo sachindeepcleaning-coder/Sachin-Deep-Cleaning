@@ -537,4 +537,35 @@ export const pages = [
     title: "Home Cleaning Service: What It Includes & Costs",
     description: "What a home cleaning service includes, the four booking types, India-typical costs per visit, and how to choose between a service, a maid and a deep clean.",
   },
+  // ── Batch 4 — 4/5BHK price + mattress + Dwarka + society + monsoon ──
+  {
+    file: 'blog/4bhk-deep-cleaning-price-gurgaon', page: 'article',
+    title: "4BHK Deep Cleaning in Gurgaon for a Fixed ₹6,500",
+    description: "Fixed ₹6,500 4BHK deep cleaning in Gurgaon: four bedrooms, three baths, lounge, kitchen degrease, balconies and a written checklist audited before you pay.",
+  },
+  {
+    file: 'blog/5bhk-deep-cleaning-price-gurgaon', page: 'article',
+    title: "5BHK Deep Cleaning in Gurgaon for a Fixed ₹9,000",
+    description: "Fixed ₹9,000 5BHK and villa deep cleaning in Gurgaon: five bedrooms, four-plus baths, terrace, kitchen degrease and a written checklist audited before you pay.",
+  },
+  {
+    file: 'blog/mattress-cleaning-gurgaon', page: 'article',
+    title: "Mattress Cleaning in Gurgaon — Steam & Shampoo Guide",
+    description: "Mattress cleaning in Gurgaon by steam and shampoo extraction: dust mites, stains, odour, drying time and how mattress jobs bundle with sofa service.",
+  },
+  {
+    file: 'blog/dwarka-expressway-deep-cleaning-gurgaon', page: 'article',
+    title: "Dwarka Expressway Deep Cleaning in Gurgaon",
+    description: "Deep cleaning on Dwarka Expressway in Gurgaon — Sectors 102–113, new towers, move-in dust, service-lift bookings and fixed BHK prices.",
+  },
+  {
+    file: 'blog/society-deep-cleaning-day-gurgaon', page: 'article',
+    title: "Society Deep Cleaning in Gurgaon: Cluster Days",
+    description: "Society deep cleaning in Gurgaon through tower cluster days: RWA coordination, gate passes, lift slots, the same BHK card and pay-after walkthrough.",
+  },
+  {
+    file: 'blog/monsoon-cleaning-checklist-gurgaon', page: 'article',
+    title: "Monsoon Cleaning Checklist for Gurgaon Homes",
+    description: "Monsoon cleaning checklist for Gurgaon homes: drains, balconies, grout, damp corners, drying, and the post-monsoon deep clean that resets it all.",
+  },
 ];
