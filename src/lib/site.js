@@ -23,6 +23,9 @@ export function waMsg(msg) {
 // Analytics — Google Tag Manager only (GA4 removed; old project had GTM only).
 export const GTM_ID = 'GTM-P4KVBGRK';
 
+// Microsoft Clarity (Sachin project) — heatmaps + session recordings.
+export const CLARITY_ID = 'xmhey9airm';
+
 // Netlify Forms handles lead capture (works when deployed to Netlify).
 export const NETLIFY_FORM_NAME = 'lead-quote';
 
