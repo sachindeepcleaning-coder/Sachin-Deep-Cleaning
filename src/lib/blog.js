@@ -4485,6 +4485,7 @@ export const ARTICLES = [
       { q: 'How fast can you do DLF Phase 3 deep cleaning same-day?', a: 'Book before noon for best same-day DLF Phase 3 deep cleaning in Gurgaon. 2BHK takes 7–8 hrs, so morning slots finish same evening. Evening bookings roll to next-morning start.' },
       { q: 'Do DLF Phase 3 villas cost more than apartments?', a: 'Standard DLF Phase 3 apartments use the city BHK card. Villas/builder floors with large living, duplex or 4+ baths are quoted as 4/5BHK or villa (₹6,500–₹9,000) after photos — still fixed before arrival for DLF Phase 3 deep cleaning in Gurgaon.' },
       { q: 'What is included for DLF Phase 3 deep cleaning?', a: 'Floor machine scrub, walls, wardrobes, kitchen chimney dismantle + degrease, bathroom descaling, windows, balcony, sofa vacuum, sanitization and supervisor walkthrough — included in your DLF Phase 3 deep cleaning price, same checklist as every sector.' },
+      { q: 'Why do market-facing flats in DLF Phase 3 need deep cleaning more often?', a: 'Supermart-spine road dust films balconies, grilles and window channels within weeks. A 3–6 month deep-clean cycle with balcony pressure-washing keeps market-facing B-Block and C-Block homes ahead of the buildup.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 3 is not “any sector” — gated towers, villa lanes, high footfall on DLF Phase 3’s service spine and hard-water borewell pockets mean **deep cleaning in DLF Phase 3 in Gurgaon** needs local routing, not city-generic promises. Here is the micro-local scope, entry playbook and fixed price.' },
@@ -4568,6 +4569,7 @@ export const ARTICLES = [
       { q: 'Is Sohna Road hard water worse for bathrooms?', a: 'Sohna Road TDS varies 400–900 mg/L by sector — still hard water. Your Sohna Road deep cleaning price includes descaling; Gurgaon hard water is the norm, not an extra.' },
       { q: 'Do you handle Sohna Road high-rises with lift rules?', a: 'Yes. We coordinate lift timing with the society while you do the walkthrough. Your Sohna Road deep cleaning needs only one tap access — we bring machines.' },
       { q: 'Sohna Road par deep cleaning kitne me hota hai?', a: 'Sohna Road par 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai, lift booking hum society se coordinate karte hain. Working couples ke liye evening slots best rehte hain.' },
+      { q: 'What should I tell my Sohna Road facility desk before your crew arrives?', a: 'Just your tower, flat number and preferred slot — we coordinate crew IDs, the equipment list and service-lift timing with the desk directly. Evening post-work slots are popular on Sohna Road and cost the same fixed price.' },
     ],
     blocks: [
       { t: 'p', x: 'Sohna Road is not one pin — it is 12 km of Vatika, South City, Nirvana, Sushant Lok and Sectors 33–66 strung along NH 48. **Deep cleaning on Sohna Road in Gurgaon** needs society-level routing, not “we cover Sohna Road” hand-waving. Here is the sector list and fixed price.' },
@@ -4650,6 +4652,7 @@ export const ARTICLES = [
       { q: 'Is Golf Course Road hard water different?', a: 'Golf Course Road TDS is 600–900 mg/L (mixed supply) — still hard water. Your Golf Course Road deep cleaning price includes descaling; no extra for hard water.' },
       { q: 'Do you handle high-end finishes in Golf Course Road homes?', a: 'Yes — we use eco-safe, pH-neutral products for premium marble, wooden flooring and designer fixtures. Your Golf Course Road deep cleaning includes careful protection of premium finishes — we name products on the quote.' },
       { q: 'Golf Course Road me premium ghar ki cleaning ka price kya hai?', a: 'Golf Course Road me 3BHK ₹5,500 aur villa ₹9,000 tak fixed hai, marble-safe chemicals ke saath. Concierge coordination hum karte hain, pay after walkthrough hota hai.' },
+      { q: 'Is Italian marble safe with your descaling chemicals on Golf Course Road?', a: 'Yes. Marble and premium stone get pH-neutral marble-safe products only; acids are reserved for vitrified tiles, chrome and ceramic. That split is exactly why Golf Course Road stone-heavy bathrooms book us.' },
     ],
     blocks: [
       { t: 'p', x: 'Golf Course Road is not just an address — it is magnolias, palm springs and marbled villas where **deep cleaning on Golf Course Road in Gurgaon** means protecting premium finishes while hitting the same hard-water and dust reality as every Gurgaon sector. Here is the micro-local fixed price and premium-care method.' },
@@ -4971,6 +4974,7 @@ export const ARTICLES = [
       { q: 'How fast for Sushant Lok 1 same-day deep cleaning?', a: 'Book before noon for best same-day Sushant Lok 1 deep cleaning in Gurgaon. Sushant Lok 1’s internal lanes are compact — our team parks at Vyapar Kendra and walks the last 100m, so morning slots reliably finish same evening.' },
       { q: 'Is Sushant Lok 1 hard water different?', a: 'Sushant Lok 1 TDS runs 600–900 mg/L (mixed DJB + borewell) — standard Gurgaon hard water. Your Sushant Lok 1 deep cleaning price includes descaling; no extra for hard water.' },
       { q: 'Do you handle builder floors vs apartments in Sushant Lok 1?', a: 'Yes — Sushant Lok 1 has both. Builder floors (often 3BHK) use the 3BHK card ₹5,500; standard 2BHK apartments use ₹4,500. Share BHK + floor for an exact Sushant Lok 1 deep cleaning price.' },
+      { q: 'Do Sushant Lok 1 builder floors without lifts cost extra?', a: 'No — the BHK card is the same. The crew carries portable scrubbers, steamers and HEPA vacuums up the stairs; extraction work is done with the portable hot-water unit, and the pay-after walkthrough applies exactly as in lift towers.' },
     ],
     blocks: [
       { t: 'p', x: 'Sushant Lok 1 is not “Sushant Lok generically” — it is C-block’s tight lanes, Vyapar Kendra’s market spine and Phase 1’s builder floors, each with gated pockets that need local routing. Here is the fixed **deep cleaning in Sushant Lok 1 in Gurgaon** price and society playbook for your top work area.' },
@@ -5043,6 +5047,7 @@ export const ARTICLES = [
       { q: 'How fast for Sushant Lok 2 same-day deep cleaning?', a: 'Book before noon for best same-day Sushant Lok 2 deep cleaning in Gurgaon. Sushant Lok 2’s Sector 57 approach via Sohna Road is clear mornings, so morning slots finish same evening.' },
       { q: 'Is Sushant Lok 2 different from Sushant Lok 1?', a: 'Yes — Sushant Lok 2 is B-block and Sectors 57–58, while Sushant Lok 1 is C-block/Vyapar Kendra. Both use the same city-wide fixed Sushant Lok deep cleaning price: 2BHK ₹4,500.' },
       { q: 'Do you handle Sushant Lok 2 high-rises?', a: 'Yes — we coordinate lift timing with the society while you do the walkthrough. Your Sushant Lok 2 deep cleaning needs only one tap access.' },
+      { q: 'Can one visit cover both Sushant Lok 2 and an adjoining Sector 57 flat?', a: 'Yes. B-Block Sushant Lok 2 and the Sector 57 edge societies fall in one dispatch zone — share both addresses on WhatsApp (+91 9560739281) and the crew routes them in a single day at the same fixed BHK prices.' },
     ],
     blocks: [
       { t: 'p', x: 'Sushant Lok 2 sits on the Sectors 57–58 spine where **B-Block Sushant Lok 2** plotted lanes meet **Sector 57 Rosewood City** podiums and the **Sector 58 + Green View** and **Sushant Lok 2 Extension / Uppal Southend fringe** tails. That mix is why **deep cleaning in Sushant Lok 2 in Gurgaon** cannot be a city-generic pitch: plotted houses need lane hand-carry and Kota machine scrub, Rosewood podiums need pressure washing not mopping, Green View towers need freight-lift coordination, and the Extension needs HEPA-first for Sohna Road silica. Below is the **Sushant Lok 2 deep cleaning** price that holds in every pocket, then five pocket-specific methods with case studies, before the comparison tables.' },
@@ -5126,6 +5131,7 @@ export const ARTICLES = [
       { q: 'How fast for Sushant Lok 3 same-day deep cleaning?', a: 'Book before noon for best same-day Sushant Lok 3 deep cleaning in Gurgaon. Morning Sohna Road access is clear, so morning slots finish same evening.' },
       { q: 'Is Sushant Lok 3 same as Sushant Lok 2?', a: 'Adjacent but distinct — Sushant Lok 3 is Sectors 57–58 Blocks A-C, Sushant Lok 2 is B-block core and Sector 57. Both use the same Sushant Lok deep cleaning price: 2BHK ₹4,500.' },
       { q: 'Do you handle Sushant Lok 3 builder floors?', a: 'Yes — Sushant Lok 3 builder floors (often 3BHK) use the 3BHK card ₹5,500; standard 2BHK use ₹4,500. Share BHK + floor.' },
+      { q: 'How do gate passes work for Sushant Lok 3 high-rises?', a: 'Share the tower and flat number when booking. The police-verified crew reports at the gate with IDs and our dispatcher coordinates entry with your guard — most Sushant Lok 3 towers clear the team within minutes.' },
     ],
     blocks: [
       { t: 'p', x: 'Sushant Lok 3 is the quieter Blocks A-C on the Sectors 57–58 edge — plotted houses, not high-rises. **Deep cleaning in Sushant Lok 3 in Gurgaon** is builder-floor heavy and needs plotted-house detailing.' },
@@ -5192,6 +5198,7 @@ export const ARTICLES = [
       { q: 'Do DLF Phase 1 villas cost more?', a: 'Standard DLF Phase 1 apartments use city BHK card. Magnolias/Aralias villas with 4+ baths are quoted as villa (₹6,500–₹9,000) after photos — still fixed before arrival.' },
       { q: 'Is DLF Phase 1 hard water different?', a: 'DLF Phase 1 mixed supply TDS 600–900 mg/L — standard Gurgaon hard water. Your DLF Phase 1 deep cleaning price includes descaling.' },
       { q: 'DLF Phase 1 me deep cleaning kitne ka padta hai?', a: 'DLF Phase 1 me 1BHK ₹2,500, 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai — koi DLF premium nahi. WhatsApp +91 9560739281 par tower bhejein, same-day slot milega.' },
+      { q: 'Can you deep clean a DLF Phase 1 independent house with terrace and no lift?', a: 'Yes. Independent houses get the villa-grade checklist at the same fixed BHK price — portable machines go floor to floor, and terrace wash plus balcony-drain flushing are included on request.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 1 is Magnolias, Aralias and Belvedere — premium condos where **deep cleaning in DLF Phase 1 in Gurgaon** means premium-finish protection with the same hard-water reality as every sector.' },
@@ -5261,6 +5268,7 @@ export const ARTICLES = [
       { q: 'How fast for DLF Phase 2 same-day deep cleaning?', a: 'Book before noon for best same-day DLF Phase 2 deep cleaning in Gurgaon. DLF Phase 2’s internal roads are compact, so morning slots finish same evening.' },
       { q: 'Do DLF Phase 2 high-rises need lift booking?', a: 'Yes — we coordinate lift timing with the society while you do the walkthrough. Your DLF Phase 2 deep cleaning needs only one tap access.' },
       { q: 'Is DLF Phase 2 hard water worse?', a: 'DLF Phase 2 TDS 600–900 mg/L — standard Gurgaon hard water. Your DLF Phase 2 deep cleaning price includes descaling.' },
+      { q: 'My society has its own entry rules — do you handle that in DLF Phase 2?', a: 'Yes. Share your exact society on WhatsApp and we confirm the access plan before dispatch — freight-lift booking, lane hand-carry, or villa-stair routing — so the crew arrives with the right kit at the same fixed price.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 2 is Gurgaon One and Carlton — mid-rise condos with compact lanes. **Deep cleaning in DLF Phase 2 in Gurgaon** is high-density routing with the same fixed price and 7–8 hr 2BHK method.' },
@@ -5354,6 +5362,7 @@ export const ARTICLES = [
       { q: 'How fast for DLF Phase 4 same-day deep cleaning?', a: 'Book before noon for best same-day DLF Phase 4 deep cleaning in Gurgaon. DLF Phase 4’s Galleria spine is congested evenings, so morning slots finish same day.' },
       { q: 'Do you handle DLF Phase 4 builder floors?', a: 'Yes — DLF Phase 4 builder floors (often 3BHK) use the 3BHK card ₹5,500; standard 2BHK use ₹4,500.' },
       { q: 'Is DLF Phase 4 hard water different?', a: 'DLF Phase 4 TDS 600–900 mg/L — standard Gurgaon hard water. Your DLF Phase 4 deep cleaning price includes descaling.' },
+      { q: 'Are weekend slots available around Galleria and Supermart in DLF Phase 4?', a: 'Yes — weekend morning slots with service-lift booking are the norm for Galleria-belt towers. Book 2–3 days ahead for Saturday or Sunday; the price stays the same fixed BHK card.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 4 is Galleria and Supermart — the retail spine between DLF 3 and Sushant Lok 1. **Deep cleaning in DLF Phase 4 in Gurgaon** is market-facing [balcony](/blog/balcony-terrace-cleaning-gurgaon.html) heavy and needs that lane-level detail.' },
@@ -5434,6 +5443,7 @@ export const ARTICLES = [
       { q: 'How fast for DLF Phase 5 same-day deep cleaning?', a: 'Book before noon for best same-day DLF Phase 5 deep cleaning in Gurgaon. DLF Phase 5’s Sector 43 access via Golf Course Road is clear mornings.' },
       { q: 'Do DLF Phase 5 villas cost more?', a: 'Standard DLF Phase 5 apartments use city BHK card. Villas with 4+ baths are quoted as villa (₹6,500–₹9,000) after photos — still fixed before arrival.' },
       { q: 'Is DLF Phase 5 different from DLF Phase 3?', a: 'Yes — DLF Phase 5 is Sectors 43/53 on the Golf Course Road end, DLF Phase 3 is near Supermart/Galleria. Both use the same city-wide DLF deep cleaning price: 2BHK ₹4,500.' },
+      { q: 'Do DLF Phase 5 villas get a bigger crew?', a: 'Yes. Villas and large Sectors 43–53 flats get a 4-person team over a full day on the villa-grade checklist — priced by the same fixed BHK card, confirmed after photos on WhatsApp.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 5 is Sectors 43 and 53 — the Golf Course Road end of DLF. **Deep cleaning in DLF Phase 5 in Gurgaon** is villa-and-tower mixed and needs that sector split.' },
@@ -5517,6 +5527,7 @@ export const ARTICLES = [
       { q: 'How fast for Sector 65 same-day deep cleaning?', a: 'Book before noon for best same-day Sector 65 deep cleaning in Gurgaon. Sector 65’s Sohna Road access is clear mornings, so morning slots finish same evening.' },
       { q: 'Is Sector 65 hard water different?', a: 'Sector 65 TDS 400–800 mg/L — still hard water. Your Sector 65 deep cleaning price includes descaling.' },
       { q: 'Do you handle Sector 65 villas?', a: 'Yes — Sector 65 villas (World Spa villas, large builder floors) are quoted as villa (₹6,500–₹9,000) after photos — standard 2BHK stays ₹4,500.' },
+      { q: 'How do you work within World Spa and premium Sector 65 society rules?', a: 'ID-verified crew, service-lift use, quiet-hour discipline and marble-safe pH-neutral chemistry on stone floors. Share your tower norms while booking and the supervisor briefs the team before arrival.' },
     ],
     blocks: [
       { t: 'p', x: 'Sector 65 is **World Spa and Nirvana Country** — ultra-luxury villas, Emaar Emerald Hills and Badshahpur fringe plots on the **Sohna Road–Golf Course Extension corridor**. **Deep cleaning in Sector 65 in Gurgaon** is villa-heavy with **4+ baths, double-height living and Italian marble** that generic 3BHK quotes misprice — here are **5 dedicated society deep-cleans** with landmarks, pain, method, case study, review and TDS, each **250–300 words** and **bold** on auditable decisions.' },
@@ -5599,6 +5610,7 @@ export const ARTICLES = [
       { q: 'How fast for Sector 66 same-day deep cleaning?', a: 'Book before noon for best same-day Sector 66 deep cleaning in Gurgaon. Sector 66’s Badshahpur approach is clear mornings.' },
       { q: 'Is Sector 66 same as Sector 65?', a: 'Adjacent — Sector 66 is Vatika/Badshahpur side, Sector 65 is World Spa side. Both use the same Sector 66/65 deep cleaning price: 2BHK ₹4,500.' },
       { q: 'Do you handle Sector 66 builder floors?', a: 'Yes — Sector 66 builder floors (often 3BHK) use the 3BHK card ₹5,500; standard 2BHK use ₹4,500.' },
+      { q: 'Does a first clean in a new Sector 66 tower include construction dust?', a: 'Yes. Handover flats in Vatika City and new Sector 66 towers get fine-dust removal from wardrobes, lofts, window channels and balconies as part of the first deep clean — the main reason new-tower bookings take the full day.' },
     ],
     blocks: [
       { t: 'p', x: 'Sector 66 is Vatika’s edge and Badshahpur’s plotted lanes. **Deep cleaning in Sector 66 in Gurgaon** is mixed plotted and apartment, needs that split.' },
@@ -5686,6 +5698,7 @@ export const ARTICLES = [
       { q: 'How fast for Sector 67 same-day deep cleaning?', a: 'Book before noon for best same-day Sector 67 deep cleaning in Gurgaon. Sector 67’s Badshahpur Road access is clear mornings.' },
       { q: 'Is Sector 67 new construction dusty?', a: 'Yes — Sector 67’s new towers mean extra construction dust; your Sector 67 deep cleaning price includes HEPA + damp-wipe protocol for that dust, no extra.' },
       { q: 'Do you handle Sector 67 builder floors?', a: 'Yes — Sector 67 builder floors (often 3BHK) use the 3BHK card ₹5,500; standard 2BHK use ₹4,500.' },
+      { q: 'Do Ansal floors and Housing Board flats in Sector 67 pay the same rate?', a: 'Yes. One fixed BHK card covers every home type in Sector 67 — Ansal builder floors, Housing Board units and new societies alike. Only the crew-hours change with size, never the rate.' },
     ],
     blocks: [
       { t: 'p', x: 'Sector 67 is Ansal Essencia and Housing Board — plotted houses and new towers on the Badshahpur Road edge. **Deep cleaning in Sector 67 in Gurgaon** is new-construction dust heavy and needs HEPA-first method.' },
@@ -7399,6 +7412,7 @@ export const ARTICLES = [
       { q: 'Is hard-water descaling included on Dwarka Expressway?', a: 'Yes. New towers mix supply sources, so every bathroom gets dwell-time descaling with grout agitation at the BHK price — no “new area extra” anywhere on the corridor.' },
       { q: 'How fast for same-day Dwarka Expressway deep cleaning?', a: 'Book before noon for the best same-day Dwarka Expressway deep cleaning in Gurgaon. Morning starts beat corridor traffic and finish the same evening; post-noon bookings roll to next-morning priority.' },
       { q: 'Dwarka Expressway par deep cleaning ka price kya hai?', a: 'Dwarka Expressway par 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai, new towers me move-in dust removal included. Service-lift booking hum coordinate karte hain.' },
+      { q: 'Should a Dwarka Expressway flat be deep cleaned before furniture moves in?', a: 'Always. An empty-flat deep clean across Sectors 102–113 takes a full day and reaches behind every wardrobe line, loft and balcony drain before furniture blocks access — a lighter upkeep clean then suffices after you settle.' },
     ],
     blocks: [
       { t: 'p', x: 'Dwarka Expressway — the Northern Peripheral Road linking Delhi and Dwarka to Gurgaon — is now a lived-in corridor of new towers across **Sectors 102–113**. **Deep cleaning on Dwarka Expressway in Gurgaon** is move-in heavy: handover dust, new-wardrobe silica, balcony grit from open corridors, and bathrooms filming fast on mixed supply. Here is the fixed price and the corridor playbook.' },
