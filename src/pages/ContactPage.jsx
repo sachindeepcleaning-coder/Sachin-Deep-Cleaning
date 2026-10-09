@@ -4,7 +4,7 @@ import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import { JsonLd, localBusinessSchema } from '../lib/schema.jsx';
-import { waMsg } from '../lib/site.js';
+import { waMsg, BRAND_NAME, GBP_LISTING_NAME, SUB_BRANDS_TEXT, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const FAQS = [
@@ -151,8 +151,8 @@ export default function ContactPage({ url }) {
           </div>
           <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)', height: 360 }} className="fade-up">
             <iframe
-              title="Sachin Deep Cleaning — A one deep cleaning, Sushant Lok Phase I, Gurugram"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5!2d77.0786716!3d28.4612679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1918a4b66c09%3A0xd7f8d0265ff60bef!2sA%20one%20deep%20cleaning!5e0!3m2!1sen!2sin"
+              title={`${BRAND_NAME} — ${ADDRESS_FULL}`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(`${GBP_LISTING_NAME} ${ADDRESS_FULL}`)}&z=16&output=embed`}
               width="100%"
               height="360"
               style={{ border: 0 }}
@@ -162,7 +162,7 @@ export default function ContactPage({ url }) {
             />
           </div>
           <div style={{ textAlign: 'center', marginTop: 16, fontSize: '.92rem', color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--dark)' }}>Sachin Deep Cleaning</strong> — Sushant Lok Phase I, Gurugram, Haryana 122009 &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607-39281</a>
+            <strong style={{ color: 'var(--dark)' }}>{BRAND_NAME}</strong> (also operating as {SUB_BRANDS_TEXT}) — {ADDRESS_FULL} &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607-39281</a>
           </div>
         </div>
       </section>

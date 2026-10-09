@@ -7,6 +7,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL } from '../pages.config.mjs';
 import { ARTICLES } from '../src/lib/blog.js';
+import { CONTENT_UPDATED } from '../src/lib/site.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -37,10 +38,10 @@ const entries = pages
     const loc = p.file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${p.file}.html`;
     const priority = p.page === 'service' ? (p.serviceKey === 'deep' ? '0.9' : '0.8') : PRIORITY[p.page] || '0.5';
     // seo-sitemap: lastmod must reflect the real content change, not the build
-    // date — articles carry their dateModified; service/utility pages change
-    // with shared components and prices, so they take the build date.
+    // date — articles carry their dateModified; service/utility pages use
+    // CONTENT_UPDATED (src/lib/site.js), bumped only when prices/rating/address change.
     const art = p.page === 'article' ? ARTICLES.find((a) => a.file === p.file) : null;
-    const lastmod = (art && art.dateModified) || today;
+    const lastmod = (art && art.dateModified) || CONTENT_UPDATED;
     return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>

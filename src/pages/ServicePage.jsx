@@ -12,11 +12,12 @@ import ReelSection from '../components/ReelSection.jsx';
 import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
-import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema, webpageSchema } from '../lib/schema.jsx';
+import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
+import UpdatedNote from '../components/UpdatedNote.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
-import { pageUrl } from '../lib/site.js';
+import { pageUrl, CONTENT_UPDATED } from '../lib/site.js';
 
 // Renders inline **bold** markdown and [anchor](/path.html) links in service copy.
 // Same authoring convention as BlogArticlePage.jsx, so editors write internal
@@ -54,9 +55,8 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
     <>
       <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image })} />
-      <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url })} />
+      <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url, dateModified: CONTENT_UPDATED })} />
       <JsonLd data={faqSchema(s.faqs)} />
-      <JsonLd data={reviewsSchema(reviews, s.name)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
@@ -117,6 +117,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
       </section>
 
       <TrustBar variant={trustVariant} />
+      <UpdatedNote />
 
       {/* Competitor-inspired: 8-service grid on deep page — improves topical clustering & internal linking */}
       {serviceKey === 'deep' && (

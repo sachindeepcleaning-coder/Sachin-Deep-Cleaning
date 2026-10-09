@@ -8,6 +8,7 @@ import FinalCta from '../components/FinalCta.jsx';
 import ReelEmbed from '../components/ReelEmbed.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
+import { RATING } from '../lib/site.js';
 
 const NEAR_ME = [
   ['📍', 'Closest Available Team', 'We route your request to the cleaning crew already working nearest to your sector — not a team crossing the whole city.'],
@@ -38,7 +39,7 @@ const PILLS = [
 
 const STATS = [
   ['5,000', '+', 'Homes Cleaned'],
-  ['4.5', '★', 'Average Rating'],
+  [RATING.value, '★', 'Google Rating'],
   ['30', '+', 'Sectors Covered'],
   ['₹2,000', '+', 'Starting Price'],
 ];
@@ -59,7 +60,7 @@ export default function ResidentialPage({ url }) {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-              Local Team · Gurugram · 4.5★ Rated
+              Local Team · Gurugram · {RATING.value}★ on Google
             </div>
             <h1>
               <span className="hl">Residential Cleaners Near Me?</span><br />

@@ -2,7 +2,7 @@ import QuoteForm from '../components/QuoteForm.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
-import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS } from '../lib/site.js';
+import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, SUB_BRANDS, SUB_BRANDS_TEXT, SECOND_SITE, ADDRESS_PARTS, RATING } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const TEAM = [
@@ -36,14 +36,15 @@ export default function AboutPage({ url }) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#business`,
-    name: 'Sachin Deep Cleaning',
+    name: BRAND_NAME,
+    subOrganization: SUB_BRANDS.map((b) => ({ '@type': 'Organization', name: b.name, ...(b.url ? { url: b.url } : {}) })),
     url: SITE_URL,
     telephone: PHONE,
-    address: { '@type': 'PostalAddress', addressLocality: 'Gurgaon', addressRegion: 'Haryana', addressCountry: 'IN' },
+    address: { '@type': 'PostalAddress', ...ADDRESS_PARTS },
     areaServed: 'Gurgaon, Haryana, India',
     foundingDate: '2015',
     description: 'Police-verified, eco-friendly deep cleaning team serving Gurgaon. Full-home, kitchen, bathroom, sofa and carpet deep cleaning with pay-after-satisfaction.',
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter, SECOND_SITE],
   };
   const personSchema = {
     '@context': 'https://schema.org',
@@ -55,7 +56,7 @@ export default function AboutPage({ url }) {
     sameAs: [SOCIAL.facebook, SOCIAL.instagram],
     worksFor: { '@id': `${SITE_URL}/#business` },
     knowsAbout: ['Deep Cleaning', 'House Cleaning', 'Bathroom Descaling', 'Kitchen Degreasing', 'Gurgaon'],
-    description: 'Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, 148 verified Google reviews, police-verified team lead.',
+    description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, rated ${RATING.value} on Google from ${RATING.count} reviews, police-verified team lead.`,
   };
 
   return (
@@ -108,7 +109,7 @@ export default function AboutPage({ url }) {
               ['2015 — One team, one rule', 'Started in Gurgaon with a single crew: pay only after you approve the work. The rule has survived every festive season since.'],
               ['2018 — Machines over mops', 'Added hot-water extraction, scrubbers and trade descalers as hard-water and construction-dust jobs demanded real equipment.'],
               ['2021 — Society routes', 'Zone rosters across DLF, Sohna Road and Golf Course Road — nearest-team dispatch replacing cross-city travel.'],
-              ['2024 — 100+ verified reviews', 'Sector-tagged Google reviews crossed a century; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
+              ['2024 — Reviews from your sector', 'Sector-tagged Google reviews from Gurgaon customers; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
               ['2026 — 5,000+ homes', 'Studios to villas plus offices and clinics, with published BHK prices and owner-supervised 3 BHK+ jobs.'],
             ].map(([title, desc], i) => (
               <div key={title} className="hiw-step fade-up">
@@ -243,8 +244,8 @@ export default function AboutPage({ url }) {
               <div className="hiw-desc">Studios to villas, plus offices and shops across Gurugram.</div>
             </div>
             <div className="hiw-step fade-up">
-              <div className="hiw-num">4.5★</div>
-              <div className="hiw-title">148 Google Reviews</div>
+              <div className="hiw-num">{RATING.value}★</div>
+              <div className="hiw-title">{RATING.count} Google Reviews</div>
               <div className="hiw-desc">Sector-tagged, verifiable — DLF, Sohna Road, Golf Course Road and beyond.</div>
             </div>
           </div>
@@ -273,7 +274,7 @@ export default function AboutPage({ url }) {
             <img src="/images/cleaning-1.webp" alt="Sachin Deep Cleaning team in Gurgaon — police-verified lead specialists" width="180" height="180" style={{ borderRadius: '50%', width: 140, height: 140, objectFit: 'cover', border: '3px solid var(--primary)' }} loading="lazy" />
             <div style={{ flex: 1, minWidth: 260 }}>
               <h3 style={{ fontFamily: 'Syne', fontWeight: 800, marginBottom: 8 }}>Sachin Deep Cleaning — Founder & Lead Specialist</h3>
-              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, 148 verified Google reviews. Trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
+              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, {RATING.value}★ from {RATING.count} Google reviews. Trained in descaling, extraction and food-safe degreasing. {SUB_BRANDS_TEXT} are Sachin Deep Cleaning sub-brands. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Facebook →</a>
                 <a href={SOCIAL.instagram} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Instagram →</a>

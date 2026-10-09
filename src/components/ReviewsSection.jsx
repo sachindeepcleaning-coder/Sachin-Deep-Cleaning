@@ -1,4 +1,5 @@
 import { REVIEWS } from '../lib/landing.js';
+import { RATING } from '../lib/site.js';
 
 export default function ReviewsSection({ reviews = REVIEWS }) {
   return (
@@ -10,8 +11,8 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
           <div style={{ marginTop: '14px' }}>
             <div className="rating-summary">
               <span className="rs-stars">⭐⭐⭐⭐⭐</span>
-              <span className="rs-num">4.5</span>
-              <span className="rs-count">/ 5 · 148 Reviews</span>
+              <span className="rs-num">{RATING.value}</span>
+              <span className="rs-count">/ 5 · {RATING.count} Google reviews</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import QuoteForm from './QuoteForm.jsx';
+import { RATING } from '../lib/site.js';
 
 const PILLS = [
   'Same-Day Service',
@@ -10,7 +11,7 @@ const PILLS = [
 
 const STATS = [
   ['5,000', '+', 'Homes Cleaned'],
-  ['4.5', '★', 'Average Rating'],
+  [RATING.value, '★', 'Google Rating'],
   ['98', '%', 'Happy Customers'],
   ['₹2,000', '+', 'Starting Price'],
 ];
@@ -23,7 +24,7 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-            Gurgaon's Trusted Deep Cleaning Service · 4.5★ Rated by 148 Customers
+            Gurgaon's Trusted Deep Cleaning Service · {RATING.value}★ on Google ({RATING.count} reviews)
           </div>
           <h1>
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>

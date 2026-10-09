@@ -12,8 +12,10 @@ import GuaranteeSection from '../components/GuaranteeSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, websiteSchema, localBusinessSchema, faqSchema, reviewsSchema } from '../lib/schema.jsx';
-import { FAQS, REVIEWS } from '../lib/landing.js';
+import UpdatedNote from '../components/UpdatedNote.jsx';
+import { JsonLd, websiteSchema, localBusinessSchema, faqSchema, webpageSchema } from '../lib/schema.jsx';
+import { FAQS } from '../lib/landing.js';
+import { CONTENT_UPDATED } from '../lib/site.js';
 
 export default function IndexPage({ url }) {
   return (
@@ -21,10 +23,11 @@ export default function IndexPage({ url }) {
       <JsonLd data={websiteSchema()} />
       <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
-      <JsonLd data={reviewsSchema(REVIEWS, 'Deep Cleaning Services in Gurgaon')} />
+      <JsonLd data={webpageSchema({ title: 'Sachin Deep Cleaning — Home Deep Cleaning in Gurgaon', description: 'Full-home, kitchen, bathroom, sofa and carpet deep cleaning in Gurgaon with fixed prices and pay-after-satisfaction.', url, dateModified: CONTENT_UPDATED })} />
 
       <Hero />
       <TrustBar />
+      <UpdatedNote />
       <ReelSection />
       <CountdownStrip />
       <ServiceSection />

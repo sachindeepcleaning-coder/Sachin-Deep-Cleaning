@@ -15,6 +15,7 @@ import { ARTICLES } from '../src/lib/blog.js';
 import { pages } from '../pages.config.mjs';
 import { IMAGE_DIMS } from '../src/lib/image-dims.js';
 import { getService } from '../src/lib/services.js';
+import { RATING } from '../src/lib/site.js';
 import { existsSync } from 'node:fs';
 
 const STRICT = process.argv.includes('--strict');
@@ -42,7 +43,10 @@ const BANNED = [
 const COMPETITOR_BRANDS = [
   'ProsAdda', 'SKKS', 'AKS Facilities', 'BusyBucket', 'Kleanhomz', 'DustBusters',
   'TechSquad', 'Zoopgo', 'Tumbledry', 'SPFM', 'Favorz', 'MaidsinGurgaon',
-  'Aone', 'A One Deep Cleaning', 'Smart City Care', 'Balaji',
+  'Smart City Care',
+  // Balaji Cleaning Services / A One Deep Cleaning are our own sub-brands (not competitors).
+  // The real competitor is balajicleaning.com — keep it off non-comparison pages:
+  'balajicleaning.com',
 ];
 const isComparatorPage = (slug) => /-vs-|best-|versus|compare/.test(slug);
 
@@ -144,6 +148,10 @@ for (const a of ARTICLES) {
   for (const phone of FOREIGN_PHONES) {
     if (t.all.includes(phone)) errors.push(`${where} — publishes foreign phone number ${phone}`);
   }
+
+  // Review claims must match the Google Business Profile (RATING in src/lib/site.js).
+  // 148 was the old, unverified count; the GBP showed 80 on 2026-10-09.
+  if (/\b148\b/.test(t.all)) errors.push(`${where} — stale review count "148" (GBP count is ${RATING.count})`);
 
   // Thin content: words and heading structure.
   const bodyWords = words(t.body.join(' '));

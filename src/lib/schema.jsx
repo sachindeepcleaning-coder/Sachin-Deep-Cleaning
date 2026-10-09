@@ -4,9 +4,12 @@
 //   2. serviceSchema — added telephone + offers + image
 //   3. howToSchema — for kitchen/bathroom/sofa/carpet/deep service pages
 //   4. articleSchema — for blog articles
-//   5. reviewsSchema — explicit Review objects for rich results
+//   (reviewsSchema was removed: its Review dates were generated, not real.)
 
-import { PHONE, SOCIAL, SITE_URL } from './site.js';
+import {
+  PHONE, SOCIAL, SITE_URL, BRAND_NAME, GBP_LISTING_NAME, SUB_BRANDS, SECOND_SITE,
+  ADDRESS_PARTS, GEO, RATING, PLUS_CODE,
+} from './site.js';
 import { imageDims } from './image-dims.js';
 
 export function JsonLd({ data }) {
@@ -17,9 +20,6 @@ export function JsonLd({ data }) {
     />
   );
 }
-
-// GBP-verified coordinates (A one deep cleaning — Google Maps place 0x390d1918a4b66c09:0xd7f8d0265ff60bef).
-const GEO = { latitude: 28.4612679, longitude: 77.0786716 };
 
 // Expanded list of Gurgaon service sectors — improves local pack matching.
 const SERVICE_AREAS = [
@@ -74,7 +74,8 @@ export function localBusinessSchema({ url }) {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': `${SITE_URL}/#business`,
-    name: 'Sachin Deep Cleaning',
+    name: BRAND_NAME,
+    subOrganization: SUB_BRANDS.map((b) => ({ '@type': 'Organization', name: b.name, ...(b.url ? { url: b.url } : {}) })),
     description:
       'Professional home deep cleaning services in Gurgaon — sofas, bathrooms, kitchens, carpets, offices and full-house makeovers. Eco-friendly products, trained staff, pay after satisfaction.',
     telephone: PHONE,
@@ -92,11 +93,7 @@ export function localBusinessSchema({ url }) {
     areaServed: SERVICE_AREAS,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Sushant Lok Rd, Block C, Sushant Lok Phase I, Kanahi',
-      addressLocality: 'Gurugram',
-      addressRegion: 'Haryana',
-      postalCode: '122009',
-      addressCountry: 'IN',
+      ...ADDRESS_PARTS,
     },
     geo: {
       '@type': 'GeoCoordinates',
@@ -105,8 +102,8 @@ export function localBusinessSchema({ url }) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.5',
-      reviewCount: '148',
+      ratingValue: RATING.value,
+      reviewCount: String(RATING.count),
       bestRating: '5',
       worstRating: '1',
     },
@@ -116,7 +113,8 @@ export function localBusinessSchema({ url }) {
       opens: '08:00',
       closes: '20:00',
     },
-    hasMap: 'https://www.google.com/maps/place/A+one+deep+cleaning/@28.4612679,77.0786716,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1918a4b66c09:0xd7f8d0265ff60bef!8m2!3d28.4612679!4d77.0786716!16s%2Fg%2F11t6y63gvk',
+    // Replace with the official share link from the Google Maps listing when available.
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${GBP_LISTING_NAME} ${PLUS_CODE}`)}`,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Deep Cleaning Services',
@@ -130,7 +128,7 @@ export function localBusinessSchema({ url }) {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Move-In Move-Out Cleaning', description: 'Handover deep cleaning for empty flats' } },
       ],
     },
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter, SECOND_SITE],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,
@@ -163,7 +161,7 @@ export function serviceSchema({ name, description, url, price, image }) {
     image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
     provider: {
       '@id': `${SITE_URL}/#business`,
-      name: 'Sachin Deep Cleaning',
+      name: BRAND_NAME,
       telephone: PHONE,
     },
     areaServed: SERVICE_AREAS,
@@ -204,8 +202,8 @@ export function faqSchema(items) {
 // Use on: kitchen, bathroom, sofa, carpet, deep-cleaning service pages.
 // Each step maps directly to the service's `process` array.
 const HOW_TO_TOOLS = {
-  deep: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole &amp; duster', 'HEPA vacuum cleaner'],
-  fullhome: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole &amp; duster', 'HEPA vacuum cleaner'],
+  deep: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole & duster', 'HEPA vacuum cleaner'],
+  fullhome: ['Microfiber cloths', 'Floor scrubbing machine', 'Extension pole & duster', 'HEPA vacuum cleaner'],
   kitchen: ['Food-safe degreaser', 'Steam extraction machine', 'Microfiber cloths', 'Chimney dismantle tools'],
   bathroom: ['Professional descaling solution', 'Grout brush', 'Microfiber cloths', 'Mould remover'],
   sofa: ['Fabric-safe shampoo', 'Hot-water extraction machine', 'Stain pre-treatment spray', 'Low-moisture dryer'],
@@ -279,42 +277,6 @@ export function articleSchema({ title, description, url, datePublished, dateModi
   };
 }
 
-// ─── Review ─────────────────────────────────────────────────────────────────
-// Generate Review schema from the service reviews array.
-// Dates are staggered deterministically (fixed base, per-index offset) so they
-// don't all share one date AND stay identical between prerender and hydration.
-const REVIEW_DATE_BASE = new Date('2026-07-15T00:00:00Z');
-const DAY = 86400000;
-function reviewDate(idx) {
-  return new Date(REVIEW_DATE_BASE.getTime() - idx * 12 * DAY).toISOString().slice(0, 10);
-}
-
-export function reviewsSchema(reviews, serviceName) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `Customer Reviews — ${serviceName}`,
-    itemListElement: reviews.map(([initials, name, area, reviewText], idx) => ({
-      '@type': 'ListItem',
-      position: idx + 1,
-      item: {
-        '@type': 'Review',
-        author: { '@type': 'Person', name },
-        reviewBody: reviewText,
-        reviewRating: { '@type': 'Rating', ratingValue: '5', worstRating: '1', bestRating: '5' },
-        // itemReviewed MUST carry @type + name inline: Google rejects bare
-        // @id references here ("1 critical issue" per Review in URL Inspection).
-        itemReviewed: {
-          '@type': 'LocalBusiness',
-          '@id': `${SITE_URL}/#business`,
-          name: 'Sachin Deep Cleaning',
-        },
-        datePublished: reviewDate(idx),
-      },
-    })),
-  };
-}
-
 // ─── Breadcrumb ─────────────────────────────────────────────────────────────
 export function breadcrumbSchema(items) {
   return {
@@ -331,7 +293,7 @@ export function breadcrumbSchema(items) {
 
 // ─── WebPage + Speakable (GEO / voice) ──────────────────────────────────────
 // Exported helper only — NOT wired into pages (another agent handles wiring).
-export function webpageSchema({ title, description, url }) {
+export function webpageSchema({ title, description, url, dateModified }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -340,6 +302,7 @@ export function webpageSchema({ title, description, url }) {
     name: title,
     description,
     inLanguage: 'en-IN',
+    ...(dateModified ? { dateModified } : {}),
     isPartOf: { '@id': `${SITE_URL}/#website` },
     speakable: {
       '@type': 'SpeakableSpecification',
