@@ -35,6 +35,7 @@ export default function AboutPage({ url }) {
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#business`,
     name: 'Sachin Deep Cleaning',
     url: SITE_URL,
     telephone: PHONE,
@@ -42,7 +43,7 @@ export default function AboutPage({ url }) {
     areaServed: 'Gurgaon, Haryana, India',
     foundingDate: '2015',
     description: 'Police-verified, eco-friendly deep cleaning team serving Gurgaon. Full-home, kitchen, bathroom, sofa and carpet deep cleaning with pay-after-satisfaction.',
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, WHATSAPP],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
   };
   const personSchema = {
     '@context': 'https://schema.org',

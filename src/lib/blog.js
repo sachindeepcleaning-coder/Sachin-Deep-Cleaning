@@ -1481,6 +1481,7 @@ export const ARTICLES = [
       { q: 'Do you clean dhurries and thin rugs differently?', a: 'Yes — low-pile dhurries and thin cotton rugs get lower-moisture passes and faster dry times; thick wool piles get full extraction with pH-neutral solutions. Fibre dictates method on every job.' },
       { q: 'Why does my carpet smell musty after monsoon?', a: 'Trapped humidity feeds mildew deep in pile and underlay — surface sprays only mask it. Hot-water extraction plus airflow drying removes the colony, not the smell. Post-monsoon (October) is Gurgaon’s peak carpet-booking month for this reason.' },
       { q: 'Why do carpet edges near balconies turn grey fastest?', a: 'Filtration soiling — Gurgaon dust drafts under doors deposit in a dark lane along skirting. Pre-treatment + extraction edge passes remove it; regular vacuuming rarely reaches wall lines. Mention balcony-facing edges when booking.' },
+      { q: 'Gurgaon me carpet cleaning ka rate kya hai?', a: 'Gurgaon me carpet cleaning ₹15 dry aur ₹18 shampoo per sq ft hai — 8x10 carpet lagbhag ₹1,200–₹1,440 me hota hai. Sookhne me 6–8 ghante lagte hain.' },
     ],
     blocks: [
       { t: 'p', x: "If you are looking for **carpet cleaning**, **carpet cleaning near me**, or **carpet cleaning rate Gurgaon per sqft**, this guide gives you real prices from [Sachin Deep Cleaning](/). Gurgaon’s fine dust + construction particulate settles straight into pile — vacuuming alone leaves **70%** of embedded soil." },
@@ -3939,6 +3940,7 @@ export const ARTICLES = [
       { q: 'Is 1 BHK deep cleaning price cheaper if I book with kitchen or bathroom-only?', a: 'Kitchen deep cleaning alone is ₹1,500 and bathroom ₹800 — together ₹2,300, similar to a full 1 BHK deep cleaning price in Gurgaon at ₹2,500 but without the bedroom, living area, balcony and windows. For a full home, the 1 BHK bundle saves vs booking room-by-room. We show the math on the call.' },
       { q: 'Can I get same-day 1 BHK deep cleaning in Gurgaon?', a: 'Yes — book before noon and we confirm a same-day 1 BHK deep cleaning in Gurgaon when slots allow. Your 1 BHK deep cleaning price in Gurgaon does not change for same-day — fixed is fixed, pay after you approve.' },
       { q: 'What if my 1 BHK is very dirty after tenants left?', a: 'Post-tenant 1 BHKs need longer degreasing and descaling — still within the 1 BHK deep cleaning price in Gurgaon band (₹2,500–₹3,500) unless it is a post-renovation or heavily stained case, which we flag as a small add-on before starting, never after. Photos help us quote precisely.' },
+      { q: 'Gurgaon me 1BHK deep cleaning kitne me hoti hai?', a: 'Gurgaon me 1BHK deep cleaning ₹2,500 se shuru hoti hai, furnished me ₹3,000–₹3,500 tak jaati hai. Noon se pehle booking par same-day slot milta hai.' },
     ],
     blocks: [
       { t: 'p', x: 'Searching **1 BHK deep cleaning price in Gurgaon** and getting only “call for quote”? Here is the fixed, checkable answer from Sachin Deep Cleaning — the team that has done [1 BHK deep cleaning](/full-home-deep-cleaning-1bhk-gurgaon.html) in Gurgaon since 2015, with pay-after-satisfaction in every sector.' },
@@ -4128,6 +4130,7 @@ export const ARTICLES = [
       { q: 'Can I get same-day 3 BHK deep cleaning in Gurgaon?', a: 'Yes if you book before noon — same-day 3 BHK deep cleaning in Gurgaon is offered when slots allow at the same 3 BHK deep cleaning price in Gurgaon of ₹5,500, pay after approval.' },
       { q: 'What if my 3 BHK is a villa or duplex?', a: 'Villa-scale 3 BHKs (large living, double-height, 4+ baths) are quoted as 4/5 BHK or villa (₹6,500–₹9,000) after photos. Standard 3 BHK deep cleaning price in Gurgaon stays ₹5,500 — we flag villa scale before committing, never after.' },
       { q: 'What is excluded from 3 BHK deep cleaning price?', a: 'Utensils, wall repaint, marble diamond polish, sealed appliance motors and rope-access façade are excluded everywhere. Your 3 BHK deep cleaning price in Gurgaon checklist lists exclusions in writing at quote — no surprise add-ons.' },
+      { q: 'Gurgaon me 3BHK deep cleaning karane me kitna kharcha aata hai?', a: 'Gurgaon me 3BHK deep cleaning ₹5,500 fixed hai — 3 bedroom, kitchen degrease, 2–3 bath aur balcony ke saath. Pay after walkthrough, koi hidden charge nahi.' },
     ],
     blocks: [
       { t: 'p', x: 'Shopping for **3 BHK deep cleaning price in Gurgaon** should not feel like haggling. Here is one fixed figure and the room list it buys — from the Gurgaon crew that does 3 BHK [deep cleaning](/blog/1bhk-deep-cleaning-price-gurgaon.html) in Gurgaon every day, pay-after-satisfaction.' },
@@ -4396,6 +4399,7 @@ export const ARTICLES = [
       { q: 'Do you charge extra for DLF vs Sohna Road kitchens?', a: 'No. Kitchen cleaning price in Gurgaon is identical across DLF Phase 1–5, Sohna Road, Golf Course Road, Sectors 14–92. No travel fee — price is by kitchen condition, not pincode.' },
       { q: 'What is excluded from kitchen cleaning price?', a: 'Utensils, wall repaint, appliance internal motors and chimney carbon filter replacement are excluded everywhere. Your kitchen cleaning price in Gurgaon exclusions are listed at quote — no surprise add-ons.' },
       { q: 'How often should kitchens be deep cleaned in Gurgaon?', a: 'Every 2–3 months for daily-cooking Gurgaon homes. Ghee/mustard-oil cooking and hard-water film mean grease and limescale build 2–3× faster than in light-cooking homes. Your kitchen cleaning price in Gurgaon is quarterly maintenance.' },
+      { q: 'Gurgaon me kitchen cleaning chimney ke saath kitne ki hoti hai?', a: 'Gurgaon me kitchen cleaning ₹1,500 se shuru hoti hai, chimney dismantle included rehta hai. Badi ya bahut greasy kitchen ₹1,800–₹2,500 tak jaati hai, fixed quote pehle milta hai.' },
     ],
     blocks: [
       { t: 'p', x: 'Searching **kitchen cleaning price in Gurgaon** and seeing “chimney extra” asterisks? Here is one fixed figure where chimney is included — from the [Gurgaon team](/residential-cleaners-near-me.html) that degreases kitchens daily.' },
@@ -4562,6 +4566,7 @@ export const ARTICLES = [
       { q: 'How fast for Sohna Road same-day deep cleaning?', a: 'Book before noon for best same-day Sohna Road deep cleaning in Gurgaon. Sohna Road traffic is the variable — morning slots reliably finish same evening.' },
       { q: 'Is Sohna Road hard water worse for bathrooms?', a: 'Sohna Road TDS varies 400–900 mg/L by sector — still hard water. Your Sohna Road deep cleaning price includes descaling; Gurgaon hard water is the norm, not an extra.' },
       { q: 'Do you handle Sohna Road high-rises with lift rules?', a: 'Yes. We coordinate lift timing with the society while you do the walkthrough. Your Sohna Road deep cleaning needs only one tap access — we bring machines.' },
+      { q: 'Sohna Road par deep cleaning kitne me hota hai?', a: 'Sohna Road par 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai, lift booking hum society se coordinate karte hain. Working couples ke liye evening slots best rehte hain.' },
     ],
     blocks: [
       { t: 'p', x: 'Sohna Road is not one pin — it is 12 km of Vatika, South City, Nirvana, Sushant Lok and Sectors 33–66 strung along NH 48. **Deep cleaning on Sohna Road in Gurgaon** needs society-level routing, not “we cover Sohna Road” hand-waving. Here is the sector list and fixed price.' },
@@ -4643,6 +4648,7 @@ export const ARTICLES = [
       { q: 'How fast for Golf Course Road same-day deep cleaning?', a: 'Book before noon for best same-day Golf Course Road deep cleaning in Gurgaon. Golf Course Road access is gated — we coordinate at the gate, you do the walkthrough.' },
       { q: 'Is Golf Course Road hard water different?', a: 'Golf Course Road TDS is 600–900 mg/L (mixed supply) — still hard water. Your Golf Course Road deep cleaning price includes descaling; no extra for hard water.' },
       { q: 'Do you handle high-end finishes in Golf Course Road homes?', a: 'Yes — we use eco-safe, pH-neutral products for premium marble, wooden flooring and designer fixtures. Your Golf Course Road deep cleaning includes careful protection of premium finishes — we name products on the quote.' },
+      { q: 'Golf Course Road me premium ghar ki cleaning ka price kya hai?', a: 'Golf Course Road me 3BHK ₹5,500 aur villa ₹9,000 tak fixed hai, marble-safe chemicals ke saath. Concierge coordination hum karte hain, pay after walkthrough hota hai.' },
     ],
     blocks: [
       { t: 'p', x: 'Golf Course Road is not just an address — it is magnolias, palm springs and marbled villas where **deep cleaning on Golf Course Road in Gurgaon** means protecting premium finishes while hitting the same hard-water and dust reality as every Gurgaon sector. Here is the micro-local fixed price and premium-care method.' },
@@ -5184,6 +5190,7 @@ export const ARTICLES = [
       { q: 'How fast for DLF Phase 1 same-day deep cleaning?', a: 'Book before noon for best same-day DLF Phase 1 deep cleaning in Gurgaon. Golf Course Road access is the variable — morning slots reliably finish same evening.' },
       { q: 'Do DLF Phase 1 villas cost more?', a: 'Standard DLF Phase 1 apartments use city BHK card. Magnolias/Aralias villas with 4+ baths are quoted as villa (₹6,500–₹9,000) after photos — still fixed before arrival.' },
       { q: 'Is DLF Phase 1 hard water different?', a: 'DLF Phase 1 mixed supply TDS 600–900 mg/L — standard Gurgaon hard water. Your DLF Phase 1 deep cleaning price includes descaling.' },
+      { q: 'DLF Phase 1 me deep cleaning kitne ka padta hai?', a: 'DLF Phase 1 me 1BHK ₹2,500, 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai — koi DLF premium nahi. WhatsApp +91 9560739281 par tower bhejein, same-day slot milega.' },
     ],
     blocks: [
       { t: 'p', x: 'DLF Phase 1 is Magnolias, Aralias and Belvedere — premium condos where **deep cleaning in DLF Phase 1 in Gurgaon** means premium-finish protection with the same hard-water reality as every sector.' },
@@ -7152,6 +7159,7 @@ export const ARTICLES = [
       { q: 'Is the 4BHK price same across Gurgaon sectors?', a: 'Yes. 4BHK deep cleaning price in Gurgaon is identical across DLF, Sushant Lok, South City, Sohna Road, Golf Course Road and Sectors 14–92. No travel or society fee — price is BHK + condition, not pincode.' },
       { q: 'Can I get same-day 4BHK deep cleaning in Gurgaon?', a: 'Yes if you book before noon — same-day 4BHK deep cleaning in Gurgaon is offered when slots allow at the same 4BHK deep cleaning price in Gurgaon of ₹6,500, pay after approval. Large homes need a morning start to finish the same evening.' },
       { q: 'What is excluded from the 4BHK price?', a: 'Utensils, wall repaint, marble diamond polish, sealed appliance motors and rope-access façade are excluded everywhere. Your 4BHK deep cleaning price in Gurgaon checklist lists exclusions in writing at quote — no surprise add-ons.' },
+      { q: 'Gurgaon me 4BHK deep cleaning kitne ka hota hai?', a: 'Gurgaon me 4BHK deep cleaning ₹6,500 fixed hai — 4 bedroom, 3 bath, kitchen aur balcony included. Poore din ka kaam hai, pay after walkthrough hota hai.' },
     ],
     blocks: [
       { t: 'p', x: 'Shopping for **4BHK deep cleaning price in Gurgaon** should end with one fixed figure and the room list it buys. Large 4BHK apartments carry a second living space, three full bathrooms, and wardrobe walls that smaller-BHK checklists underestimate — here is the full-day plan from the Gurgaon crew that cleans 4BHK [homes](/full-home-deep-cleaning-4bhk-gurgaon.html) every week, pay-after-satisfaction.' },
@@ -7231,6 +7239,7 @@ export const ARTICLES = [
       { q: 'Is the 5BHK price same for apartments and villas?', a: 'The ₹9,000 card covers standard 5BHK apartments and villas of comparable bath count. Very large villas (double-height living, 6+ baths, lawns) are survey-quoted after photos — never padded on site.' },
       { q: 'Can I get same-week 5BHK villa cleaning in Gurgaon?', a: 'Yes — 5BHK and villa slots need a morning start and photo confirmation first. Share society, BHK, bath count and terrace photos on +91 9560739281 for the earliest full-day-plus window at the fixed 5BHK deep cleaning price in Gurgaon.' },
       { q: 'What is excluded from the 5BHK villa price?', a: 'Utensils, wall repaint, marble diamond polish, sealed appliance motors, lawn landscaping and rope-access façade are excluded everywhere. Your 5BHK deep cleaning price in Gurgaon checklist lists exclusions in writing at quote.' },
+      { q: 'Gurgaon me 5BHK ya villa cleaning ka kharcha kitna hai?', a: 'Gurgaon me 5BHK ya villa deep cleaning ₹9,000 fixed hai — 5 bedroom, 4-plus bath, terrace aur kitchen degrease ke saath. Photos par final quote turant milta hai.' },
     ],
     blocks: [
       { t: 'p', x: 'Shopping for **5BHK deep cleaning price in Gurgaon** should end with one fixed figure and the villa-scale room list it buys. Five-bedroom homes carry four or more bathrooms, a terrace or multiple balconies, and living areas that smaller-BHK crews cannot finish in a day — here is the full-day-plus plan from the Gurgaon team behind [5BHK and villa deep cleaning](/full-home-deep-cleaning-5bhk-gurgaon.html), pay-after-satisfaction.' },
@@ -7388,6 +7397,7 @@ export const ARTICLES = [
       { q: 'How do service lifts and gate passes work on the Expressway?', a: 'Share tower, gate and floor at booking; the team carries IDs, follows the visitor-pass process, and works inside service-lift windows. You get the team lead’s number before arrival.' },
       { q: 'Is hard-water descaling included on Dwarka Expressway?', a: 'Yes. New towers mix supply sources, so every bathroom gets dwell-time descaling with grout agitation at the BHK price — no “new area extra” anywhere on the corridor.' },
       { q: 'How fast for same-day Dwarka Expressway deep cleaning?', a: 'Book before noon for the best same-day Dwarka Expressway deep cleaning in Gurgaon. Morning starts beat corridor traffic and finish the same evening; post-noon bookings roll to next-morning priority.' },
+      { q: 'Dwarka Expressway par deep cleaning ka price kya hai?', a: 'Dwarka Expressway par 2BHK ₹4,500 aur 3BHK ₹5,500 fixed hai, new towers me move-in dust removal included. Service-lift booking hum coordinate karte hain.' },
     ],
     blocks: [
       { t: 'p', x: 'Dwarka Expressway — the Northern Peripheral Road linking Delhi and Dwarka to Gurgaon — is now a lived-in corridor of new towers across **Sectors 102–113**. **Deep cleaning on Dwarka Expressway in Gurgaon** is move-in heavy: handover dust, new-wardrobe silica, balcony grit from open corridors, and bathrooms filming fast on mixed supply. Here is the fixed price and the corridor playbook.' },

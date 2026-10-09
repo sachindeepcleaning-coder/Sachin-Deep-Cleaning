@@ -12,7 +12,7 @@ import ReelSection from '../components/ReelSection.jsx';
 import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
-import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema } from '../lib/schema.jsx';
+import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, reviewsSchema, webpageSchema } from '../lib/schema.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
@@ -54,13 +54,14 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
     <>
       <JsonLd data={localBusinessSchema({ url })} />
       <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image })} />
+      <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url })} />
       <JsonLd data={faqSchema(s.faqs)} />
       <JsonLd data={reviewsSchema(reviews, s.name)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
           ...(serviceKey === 'fullhome' && bhk
-            ? [{ name: 'Full Home Deep Cleaning', url: pageUrl('full-home-deep-cleaning-1bhk-gurgaon') }]
+            ? [{ name: 'Full Home Deep Cleaning', url: pageUrl(`full-home-deep-cleaning-${bhk}bhk-gurgaon`) }]
             : serviceKey === 'fullhome'
               ? []
               : serviceKey !== 'index'
@@ -219,6 +220,68 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
       {/* Competitor-inspired transparent pricing table — deep shows full table, others keep cards */}
       {s.pricingTable ? <PricingTable rows={s.pricingTable} /> : (!['kitchen', 'bathroom', 'sofa', 'carpet'].includes(serviceKey) && <PricingSection />)}
+
+      {serviceKey === 'sofa' && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Honest Pricing</div>
+              <h2 className="section-title">Sofa Cleaning Price in Gurgaon</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Per-seat fixed rates — no hidden charges, pay after walkthrough.</p>
+            </div>
+            <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+                <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Service</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Price</th></tr></thead>
+                <tbody>
+                  {[
+                    ['Dry cleaning', '₹499 / seat'],
+                    ['Shampoo (hot-water extraction)', '₹599 / seat'],
+                    ['Standard 3-seater', '₹1,500–₹1,800'],
+                    ['Drying time', '4–6 hours'],
+                  ].map((r, i) => (
+                    <tr key={i} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                      {r.map((c, j) => (
+                        <td key={j} style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', color: j === 1 ? 'var(--primary)' : 'inherit', fontWeight: j === 1 ? 700 : 400 }}>{c}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {serviceKey === 'kitchen' && (
+        <section className="section section-alt">
+          <div className="section-inner">
+            <div style={{ textAlign: 'center' }} className="fade-up">
+              <div className="section-tag">Honest Pricing</div>
+              <h2 className="section-title">Kitchen Deep Cleaning Price in Gurgaon</h2>
+              <p className="section-sub" style={{ margin: '0 auto' }}>Fixed kitchen rates with chimney included — food-safe degreaser, pay after walkthrough.</p>
+            </div>
+            <div className="fade-up" style={{ marginTop: 32, overflowX: 'auto', borderRadius: 14, border: '1px solid var(--border)' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
+                <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Service</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Price / Detail</th></tr></thead>
+                <tbody>
+                  {[
+                    ['Standard modular kitchen', '₹1,500–₹2,500'],
+                    ['Chimney filter degreasing', 'Included'],
+                    ['Time on site', '3–4 hours'],
+                    ['Degreaser', 'Food-safe'],
+                  ].map((r, i) => (
+                    <tr key={i} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
+                      {r.map((c, j) => (
+                        <td key={j} style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', color: j === 1 ? 'var(--primary)' : 'inherit', fontWeight: j === 1 ? 700 : 400 }}>{c}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Public price check — verified-figures comparison for the money keyword */}
       {s.priceCheck && (

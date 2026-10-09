@@ -13,8 +13,8 @@ const root = resolve(__dirname, '..');
 
 const today = new Date().toISOString().slice(0, 10);
 
-// Pages excluded from the sitemap (noindex / utility pages).
-const excluded = new Set(['thank-you']);
+// Pages excluded from the sitemap (noindex / utility pages + merge stubs).
+const excluded = new Set(['thank-you', '404']);
 
 const PRIORITY = {
   index: '1.0',
@@ -31,8 +31,8 @@ const CHANGEFREQ = {
   article: 'yearly',
 };
 
-const urls = pages
-  .filter((p) => !excluded.has(p.file) && !p.noindex)
+const entries = pages
+  .filter((p) => !excluded.has(p.file) && p.file !== '404' && !p.redirectTo && !p.noindex)
   .map((p) => {
     const loc = p.file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${p.file}.html`;
     const priority = p.page === 'service' ? (p.serviceKey === 'deep' ? '0.9' : '0.8') : PRIORITY[p.page] || '0.5';
@@ -47,8 +47,9 @@ const urls = pages
     <changefreq>${CHANGEFREQ[p.page] || 'monthly'}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-  })
-  .join('\n');
+  });
+
+const urls = entries.join('\n');
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -57,4 +58,4 @@ ${urls}
 `;
 
 writeFileSync(resolve(root, 'public/sitemap.xml'), xml);
-console.log(`Generated public/sitemap.xml with ${pages.length - excluded.size} URLs (lastmod ${today}).`);
+console.log(`Generated public/sitemap.xml with ${entries.length} URLs (lastmod ${today}).`);

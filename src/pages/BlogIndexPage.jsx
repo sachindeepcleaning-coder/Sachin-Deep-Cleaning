@@ -3,6 +3,21 @@ import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
 import TrustBar from '../components/TrustBar.jsx';
 
+const FEATURED_FILES = [
+  'blog/deep-cleaning-cost-gurgaon-2026',
+  'blog/full-home-deep-cleaning-packages-gurgaon',
+  'blog/best-deep-cleaning-services-gurgaon',
+  'blog/urban-company-vs-sachin-deep-cleaning',
+  'blog/2bhk-deep-cleaning-price-gurgaon',
+  'blog/3bhk-deep-cleaning-price-gurgaon',
+  'blog/kitchen-cleaning-price-gurgaon-chimney',
+  'blog/bathroom-deep-cleaning-gurgaon-best',
+  'blog/sofa-cleaning-gurgaon-guide',
+  'blog/dlf-phase-3-deep-cleaning-gurgaon',
+  'blog/sohna-road-deep-cleaning-gurgaon',
+  'blog/full-home-deep-cleaning-gurgaon-guide',
+];
+
 export default function BlogIndexPage({ url }) {
   return (
     <>
@@ -33,6 +48,30 @@ export default function BlogIndexPage({ url }) {
             comparison guides (best services, Mr Deep Cleaning vs us) show their scoring openly so you can audit us.
             New here? Read the cost guide for your BHK first, then the booking guide for your situation — you will know exactly what to order before you ever message us.
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }}>
+            <div className="section-tag">Top Guides</div>
+            <h2 className="section-title">Start with these 12 featured guides</h2>
+          </div>
+          <div className="blog-grid" style={{ marginTop: 24 }}>
+            {FEATURED_FILES.map((f) => {
+              const a = ARTICLES.find((x) => x.file === f);
+              if (!a) return null;
+              return (
+                <a key={a.slug} className="blog-card" href={`${a.file}.html`}>
+                  <div className="blog-card-body">
+                    <h2>{a.title}</h2>
+                    <p>{a.description}</p>
+                    <span className="blog-card-link">Read guide →</span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </section>
 

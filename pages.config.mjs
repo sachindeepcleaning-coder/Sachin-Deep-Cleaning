@@ -122,6 +122,7 @@ export const pages = [
     file: 'all-pages', page: 'allpages',
     title: 'All Services — Sachin Deep Cleaning Gurgaon',
     description: 'Browse all deep cleaning services in Gurgaon: full home, kitchen, bathroom, sofa, carpet, office and move-in/out cleaning by Sachin Deep Cleaning.',
+    noindex: true,
   },
 
   // ── Blog ──────────────────────────────────────────────────────────────────
@@ -464,7 +465,7 @@ export const pages = [
   {
     file: 'blog/home-deep-cleaning-services-gurgaon', page: 'article',
     title: "Home Deep Cleaning Services in Gurgaon: Fixed BHK Rates",
-    description: "Fixed BHK rates for home deep cleaning services in Gurgaon — ₹2,500/₹4,500/₹5,500 — an hour-by-hour account of the crew's day and what moves the price.",
+    description: "Fixed BHK rates for home deep cleaning services in Gurgaon — ₹2,500/₹4,500/₹5,500 — pay after satisfaction, same-day slots across all sectors.",
   },
   {
     file: 'blog/post-construction-cleaning-services-gurgaon', page: 'article',
@@ -510,12 +511,13 @@ export const pages = [
   {
     file: 'blog/office-deep-cleaning-sector-44-gurgaon', page: 'article',
     title: "Office Deep Cleaning in Sector 44 & Corporate Hubs",
-    description: "Office deep cleaning in Sector 44 from \u20b93/sq ft \u2014 after-hours crews for Cyber City, Golf Course Rd, Sector 32 & Udyog Vihar. GST invoice, pay after sign-off.",
+    description: "Office deep cleaning in Sector 44 from ₹3/sq ft — after-hours crews for Cyber City, Golf Course Rd & Udyog Vihar. GST invoice, pay after sign-off.",
   },
   {
     file: 'blog/sector-44-office-deep-cleaning-gurgaon', page: 'article',
     title: "Sector 44 Office Deep Cleaning: Full Guide",
     description: "Office deep cleaning in Sector 44 from ₹3/sq ft — metro-side crews, coworking turnover, night shifts. GST invoice, NDA, pay after sign-off.",
+    redirectTo: 'blog/office-deep-cleaning-sector-44-gurgaon',
   },
   {
     file: 'blog/office-deep-cleaning-cyber-city-gurgaon', page: 'article',

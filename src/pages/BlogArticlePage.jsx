@@ -1,4 +1,4 @@
-import { JsonLd, articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema.jsx';
+import { JsonLd, articleSchema, faqSchema, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
 import { getArticle } from '../lib/blog.js';
 import { pageUrl } from '../lib/site.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
@@ -115,6 +115,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
   return (
     <>
       <JsonLd data={articleSchema({ title: article.title, description: article.description, url, datePublished: article.datePublished, dateModified: article.dateModified, image: article.image })} />
+      <JsonLd data={webpageSchema({ title: article.title, description: article.description, url })} />
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
       <JsonLd
         data={breadcrumbSchema([
@@ -132,9 +133,12 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
             <span>·</span>
             <span>{mins} min read</span>
             <span>·</span>
-            <span>By <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sachin Deep Cleaning</a>, Founder</span>
+            <span>By <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sachin Kumar</a>, Founder</span>
           </div>
           <h1>{article.title}</h1>
+          {article.lead && (
+            <p className="blog-lead"><Rich text={article.lead} /></p>
+          )}
           {article.printable && (
             <div style={{ margin: '14px 0 4px' }}>
               <button className="blog-print-btn" onClick={() => window.print()} style={{ background: 'var(--dark)', color: '#fff', fontWeight: 700, fontSize: '.85rem', padding: '10px 20px', borderRadius: '10px', border: 'none', cursor: 'pointer' }}>
@@ -200,6 +204,30 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
               <FaqSection faqs={faqs.map((f) => [f.q, f.a])} />
             </div>
           )}
+          {(() => {
+            const fallbacks = [
+              { href: '/blog/deep-cleaning-cost-gurgaon-2026.html', label: 'Deep Cleaning Cost in Gurgaon (2026) →' },
+              { href: '/blog/full-home-deep-cleaning-packages-gurgaon.html', label: 'Full Home Deep Cleaning Packages →' },
+              { href: '/blog/2bhk-deep-cleaning-price-gurgaon.html', label: '2 BHK Deep Cleaning Price →' },
+              { href: '/blog/3bhk-deep-cleaning-price-gurgaon.html', label: '3 BHK Deep Cleaning Price →' },
+              { href: '/blog/kitchen-cleaning-price-gurgaon-chimney.html', label: 'Kitchen Cleaning Price (Chimney Included) →' },
+            ];
+            const current = `/${file}.html`;
+            const links = [
+              ...(article.cta ? [{ href: article.cta.href, label: article.cta.label }] : []),
+              ...fallbacks,
+            ].filter((l, i, arr) => l.href !== current && arr.findIndex((x) => x.href === l.href) === i).slice(0, 3);
+            return (
+              <div className="blog-related">
+                <h2 className="blog-h2">Related guides</h2>
+                <ul className="blog-ul">
+                  {links.map((l) => (
+                    <li key={l.href}><a href={l.href} style={{ color: 'var(--primary)', fontWeight: 700 }}>{l.label}</a></li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })()}
           {article.sources && article.sources.length > 0 && (
             <div className="blog-sources">
               <h2 className="blog-h2">Sources & further reading</h2>

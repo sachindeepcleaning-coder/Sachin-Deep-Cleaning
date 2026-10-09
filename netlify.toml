@@ -1,3 +1,36 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# Canonical: /index.html -> / (no force — only exact hits)
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = false
+
+# Canonical: www -> apex
+[[redirects]]
+  from = "https://www.sachindeepcleaning.shop/*"
+  to = "https://sachindeepcleaning.shop/:splat"
+  status = 301
+  force = true
+
+# Enforce https (apex + www)
+[[redirects]]
+  from = "http://sachindeepcleaning.shop/*"
+  to = "https://sachindeepcleaning.shop/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.sachindeepcleaning.shop/*"
+  to = "https://sachindeepcleaning.shop/:splat"
+  status = 301
+  force = true
+
+# Custom 404 (cache/security headers live in public/_headers)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

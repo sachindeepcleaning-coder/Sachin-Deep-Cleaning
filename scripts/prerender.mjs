@@ -59,31 +59,56 @@ const { renderPage } = await import(pathToFileURL(ssrEntry).href);
 
 // 3) Inject rendered content into every entry shell produced by the build.
 let injected = 0;
+let errors = 0;
 for (const path of collectHtmlFiles(distDir)) {
   let html = readFileSync(path, 'utf8');
 
   const relPath = relative(distDir, path).split(sep).join('/');
+
   const cfg = pages.find((p) => `${p.file}.html` === relPath);
   if (!cfg) {
     console.log('skip (no config):', relPath);
     continue;
   }
-
-  const body = await renderPage({
-    page: cfg.page,
-    file: cfg.file,
-    serviceKey: cfg.serviceKey,
-    bhk: cfg.bhk,
-  });
-
-  if (html.includes('<div id="root"></div>')) {
-    html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
-    writeFileSync(path, html);
-    injected++;
-    console.log('prerendered:', relPath, `(${body.length} chars)`);
-  } else {
-    console.warn('root not found in', relPath);
+  if (cfg.redirectTo) {
+    console.log('skip (redirect stub):', relPath, '->', cfg.redirectTo);
+    continue;
   }
+
+  if (!html.includes('<div id="root"></div>')) {
+    console.warn('root not found in', relPath);
+    errors++;
+    continue;
+  }
+
+  let body;
+  try {
+    body = await renderPage({
+      page: cfg.page,
+      file: cfg.file,
+      serviceKey: cfg.serviceKey,
+      bhk: cfg.bhk,
+    });
+  } catch (err) {
+    console.error('prerender failed:', relPath, err);
+    errors++;
+    continue;
+  }
+
+  if (!body || body.length < 500) {
+    console.error(`prerender failed: ${relPath} — body too short (${body ? body.length : 0} chars), leaving shell unmodified`);
+    errors++;
+    continue;
+  }
+
+  html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+  writeFileSync(path, html);
+  injected++;
+  console.log('prerendered:', relPath, `(${body.length} chars)`);
 }
 
 console.log(`\nPrerendered ${injected}/${pages.length} pages.`);
+if (errors > 0) {
+  console.error(`Prerender completed with ${errors} error(s).`);
+  process.exitCode = 1;
+}

@@ -153,7 +153,11 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta name="twitter:title" content="${p.title}" />
   <meta name="twitter:description" content="${p.description}" />
   <meta name="twitter:image" content="${ogImage}" />
-${preload}  ${gtm}
+${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  ${gtm}
   ${clarity}
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/dm-sans-400.woff2" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/syne-800.woff2" />

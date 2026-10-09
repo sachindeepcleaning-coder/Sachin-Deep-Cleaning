@@ -6,7 +6,8 @@
 //   4. articleSchema — for blog articles
 //   5. reviewsSchema — explicit Review objects for rich results
 
-import { PHONE, WHATSAPP, SOCIAL, SITE_URL } from './site.js';
+import { PHONE, SOCIAL, SITE_URL } from './site.js';
+import { imageDims } from './image-dims.js';
 
 export function JsonLd({ data }) {
   return (
@@ -129,7 +130,7 @@ export function localBusinessSchema({ url }) {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Move-In Move-Out Cleaning', description: 'Handover deep cleaning for empty flats' } },
       ],
     },
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter, WHATSAPP],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,
@@ -142,6 +143,17 @@ export function localBusinessSchema({ url }) {
 
 // ─── Service ────────────────────────────────────────────────────────────────
 export function serviceSchema({ name, description, url, price, image }) {
+  const hasOffer = price && price.amount !== 'request';
+  // Parse '₹499 / seat' -> value '499', unit 'seat'; '₹18 / sq ft' -> '18' / 'sq ft'.
+  // Plain amounts ('₹2,000') yield value only, no unitText.
+  let parsed = null;
+  if (hasOffer) {
+    const [pricePart, unitPart] = price.amount.split('/').map((s) => s.trim());
+    parsed = {
+      value: pricePart.replace('₹', '').replace(/,/g, '').trim(),
+      unit: unitPart || null,
+    };
+  }
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -156,16 +168,19 @@ export function serviceSchema({ name, description, url, price, image }) {
     },
     areaServed: SERVICE_AREAS,
     serviceType: name,
-    ...(price && price.amount !== 'request' && !price.amount.includes('/') && {
+    ...(hasOffer && {
       offers: {
         '@type': 'Offer',
-        price: price.amount.replace('₹', '').replace(',', ''),
+        price: parsed.value,
         priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url,
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: price.amount.replace('₹', '').replace(',', ''),
+          price: parsed.value,
           priceCurrency: 'INR',
           description: price.label,
+          ...(parsed.unit ? { unitText: parsed.unit } : {}),
         },
       },
     }),
@@ -231,6 +246,7 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
 // ─── Article ────────────────────────────────────────────────────────────────
 // Use on: blog articles — BlogPosting with Person (E-E-A-T, audit 70→90)
 export function articleSchema({ title, description, url, datePublished, dateModified, image }) {
+  const [w, h] = imageDims(image || '/images/cleaning-1.jpg');
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -240,8 +256,8 @@ export function articleSchema({ title, description, url, datePublished, dateModi
     image: {
       '@type': 'ImageObject',
       url: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
-      width: 1200,
-      height: 675,
+      width: w,
+      height: h,
     },
     datePublished,
     dateModified: dateModified || datePublished,
@@ -285,7 +301,7 @@ export function reviewsSchema(reviews, serviceName) {
         '@type': 'Review',
         author: { '@type': 'Person', name },
         reviewBody: reviewText,
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', worstRating: '1', bestRating: '5' },
         // itemReviewed MUST carry @type + name inline: Google rejects bare
         // @id references here ("1 critical issue" per Review in URL Inspection).
         itemReviewed: {
@@ -310,6 +326,25 @@ export function breadcrumbSchema(items) {
       name: i.name,
       item: i.url,
     })),
+  };
+}
+
+// ─── WebPage + Speakable (GEO / voice) ──────────────────────────────────────
+// Exported helper only — NOT wired into pages (another agent handles wiring).
+export function webpageSchema({ title, description, url }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.hero-sub', '.blog-lead', 'h1'],
+    },
   };
 }
 
