@@ -7,9 +7,17 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://wa.me https://*.wa.me; frame-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://wa.me https://*.wa.me; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://*.wa.me
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /llms.txt
   Cache-Control: public, max-age=3600
 
 /sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/sitemap-images.xml
+  Cache-Control: public, max-age=3600
+
+/.well-known/*
   Cache-Control: public, max-age=3600
