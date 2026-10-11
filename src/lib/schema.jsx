@@ -7,7 +7,7 @@
 //   (reviewsSchema was removed: its Review dates were generated, not real.)
 
 import {
-  PHONE, SOCIAL, SITE_URL, BRAND_NAME, GBP_LISTING_NAME, SUB_BRANDS, SECOND_SITE,
+  PHONE, SOCIAL, SITE_URL, BRAND_NAME, GBP_LISTING_NAME,
   ADDRESS_PARTS, GEO, RATING, PLUS_CODE,
 } from './site.js';
 import { imageDims } from './image-dims.js';
@@ -75,7 +75,6 @@ export function localBusinessSchema({ url }) {
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': `${SITE_URL}/#business`,
     name: BRAND_NAME,
-    subOrganization: SUB_BRANDS.map((b) => ({ '@type': 'Organization', name: b.name, ...(b.url ? { url: b.url } : {}) })),
     description:
       'Professional home deep cleaning services in Gurgaon — sofas, bathrooms, kitchens, carpets, offices and full-house makeovers. Eco-friendly products, trained staff, pay after satisfaction.',
     telephone: PHONE,
@@ -128,7 +127,7 @@ export function localBusinessSchema({ url }) {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Move-In Move-Out Cleaning', description: 'Handover deep cleaning for empty flats' } },
       ],
     },
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter, SECOND_SITE],
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,

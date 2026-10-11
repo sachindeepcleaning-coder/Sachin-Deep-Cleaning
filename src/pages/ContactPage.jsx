@@ -4,7 +4,7 @@ import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import { JsonLd, localBusinessSchema } from '../lib/schema.jsx';
-import { waMsg, BRAND_NAME, GBP_LISTING_NAME, SUB_BRANDS_TEXT, ADDRESS_FULL } from '../lib/site.js';
+import { waMsg, BRAND_NAME, GBP_LISTING_NAME, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const FAQS = [
@@ -162,7 +162,7 @@ export default function ContactPage({ url }) {
             />
           </div>
           <div style={{ textAlign: 'center', marginTop: 16, fontSize: '.92rem', color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--dark)' }}>{BRAND_NAME}</strong> (also operating as {SUB_BRANDS_TEXT}) — {ADDRESS_FULL} &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607-39281</a>
+            <strong style={{ color: 'var(--dark)' }}>{BRAND_NAME}</strong> — {ADDRESS_FULL} &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607-39281</a>
           </div>
         </div>
       </section>

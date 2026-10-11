@@ -1,4 +1,4 @@
-import { waMsg } from '../lib/site.js';
+import { waMsg, REVIEW_URL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 export default function ThankYouPage() {
@@ -21,6 +21,9 @@ export default function ThankYouPage() {
         </div>
         <p style={{ marginTop: '28px' }}>
           <a href="/" style={{ color: '#8FA4BE', textDecoration: 'none', fontWeight: 600 }}>← Back to home</a>
+        </p>
+        <p style={{ marginTop: '18px', fontSize: '.88rem', color: 'var(--muted)' }}>
+          Used us before? <a href={REVIEW_URL} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>⭐ Review us on Google</a> — it takes 30 seconds and helps other Gurgaon families find us.
         </p>
       </div>
     </section>

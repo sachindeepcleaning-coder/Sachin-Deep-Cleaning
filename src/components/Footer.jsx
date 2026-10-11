@@ -1,12 +1,12 @@
-import { PHONE_TEL, ADDRESS_FULL, SUB_BRANDS_TEXT } from '../lib/site.js';
+import { PHONE_TEL, ADDRESS_FULL, REVIEW_URL } from '../lib/site.js';
 import { phoneCallClick } from '../lib/landing.js';
 
 export default function Footer() {
   return (
     <footer>
-      <p><strong>Sachin Deep Cleaning Services</strong> (also operating as {SUB_BRANDS_TEXT}) — Professional Deep Cleaning in Gurgaon</p>
+      <p><strong>Sachin Deep Cleaning Services</strong> — Professional Deep Cleaning in Gurgaon</p>
       <p>📍 {ADDRESS_FULL} — serving all of Gurgaon &nbsp;|&nbsp; 📞 <a href={PHONE_TEL} onClick={phoneCallClick}>+91 95607-39281</a></p>
-      <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved.</p>
+      <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved. <a href={REVIEW_URL} target="_blank" rel="noopener" style={{ color: '#8FA4BE', textDecoration: 'none' }}>⭐ Review us on Google</a></p>
       <p style={{ marginTop: '6px' }}>
         <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Deep Cleaning Services in Gurgaon</a>
         <a href="/house-cleaning-services-in-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>House Cleaning Services</a>

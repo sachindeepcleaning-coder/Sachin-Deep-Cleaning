@@ -17,7 +17,7 @@ import UpdatedNote from '../components/UpdatedNote.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
-import { pageUrl, CONTENT_UPDATED } from '../lib/site.js';
+import { pageUrl, CONTENT_UPDATED, SITE_URL } from '../lib/site.js';
 
 // Renders inline **bold** markdown and [anchor](/path.html) links in service copy.
 // Same authoring convention as BlogArticlePage.jsx, so editors write internal
@@ -76,10 +76,9 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           '@context': 'https://schema.org',
           '@type': 'VideoObject',
           name: `${s.name} — Real Cleaning Video Gurgaon`,
-          description: `Watch real ${s.name.toLowerCase()} work by Sachin Deep Cleaning team in Gurgaon — before/after, 60 seconds.`,
-          thumbnailUrl: `https://sachindeepcleaning.shop${s.image}`,
+          description: `Watch real ${s.name.toLowerCase()} work by the Sachin Deep Cleaning team in Gurgaon.`,
+          thumbnailUrl: `${SITE_URL}/images/cleaning-1.webp`,
           uploadDate: '2026-08-28',
-          duration: 'PT60S',
           isFamilyFriendly: true,
           author: { '@type': 'Person', name: 'Sachin Kumar', url: 'https://sachindeepcleaning.shop/about.html#sachin-kumar' },
           publisher: {
@@ -87,8 +86,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             '@id': 'https://sachindeepcleaning.shop/#business',
             name: 'Sachin Deep Cleaning',
           },
-          contentUrl: 'https://sachindeepcleaning.shop/videos/cleaning-1.mp4',
-          embedUrl: 'https://www.youtube.com/shorts/p-ArftUay5I',
+          contentUrl: `${SITE_URL}/videos/cleaning-1.mp4`,
         }}
       />
       )}

@@ -204,6 +204,13 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
               <FaqSection faqs={faqs.map((f) => [f.q, f.a])} />
             </div>
           )}
+          <div className="blog-author" style={{ display: 'flex', gap: 16, alignItems: 'center', marginTop: 32, padding: 20, border: '1px solid var(--border)', borderRadius: 14, background: 'var(--card)' }}>
+            <img src="/images/cleaning-1.webp" alt="Sachin Kumar, Founder of Sachin Deep Cleaning" width={64} height={64} loading="lazy" style={{ width: 64, height: 64, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+            <div>
+              <div style={{ fontWeight: 800 }}>Written by <a href="/about.html#sachin-kumar" style={{ color: 'var(--primary)' }}>Sachin Kumar</a>, Founder</div>
+              <p style={{ margin: '6px 0 0', fontSize: '.9rem', color: 'var(--muted)', lineHeight: 1.6 }}>10+ years hands-on deep cleaning in Gurgaon — descaling, extraction and food-safe degreasing. Leads a police-verified crew serving DLF, Sushant Lok, Sohna Road and Golf Course Road since 2015.</p>
+            </div>
+          </div>
           {(() => {
             const fallbacks = [
               { href: '/blog/deep-cleaning-cost-gurgaon-2026.html', label: 'Deep Cleaning Cost in Gurgaon (2026) →' },

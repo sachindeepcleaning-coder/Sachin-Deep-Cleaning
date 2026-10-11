@@ -40,16 +40,9 @@ export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 // ─── Entity (NAP) — single source of truth ──────────────────────────────────
 // Must match the Google Business Profile exactly. If the GBP changes, change it here.
 export const BRAND_NAME = 'Sachin Deep Cleaning';
-// Sachin Deep Cleaning is the primary company. Balaji Cleaning Services and
-// A One Deep Cleaning are its sub-companies. GBP_LISTING_NAME is the name the
+// Sachin Deep Cleaning is the primary company. GBP_LISTING_NAME is the name the
 // Google Maps listing currently shows.
 export const GBP_LISTING_NAME = 'Balaji Cleaning Services';
-export const SECOND_SITE = 'https://balajicleaningservice.shop/';
-export const SUB_BRANDS = [
-  { name: 'Balaji Cleaning Services', url: SECOND_SITE },
-  { name: 'A One Deep Cleaning' },
-];
-export const SUB_BRANDS_TEXT = 'Balaji Cleaning Services and A One Deep Cleaning';
 
 // Address exactly as shown on the Google Business Profile (checked 2026-10-09).
 export const ADDRESS_PARTS = {
@@ -86,6 +79,10 @@ export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
+// "Review us on Google" link (Maps listing search URL — opens the live
+// GBP listing where customers can leave a review). Used by Footer + ThankYou.
+export const REVIEW_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${GBP_LISTING_NAME} ${PLUS_CODE}`)}`;
+
 export const SOCIAL = {
   facebook: 'https://www.facebook.com/profile.php?id=61577737535478',
   instagram: 'https://www.instagram.com/cleaning_service_in_gurgaon',
