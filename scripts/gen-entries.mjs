@@ -31,6 +31,18 @@ const gtm = `<!-- Google Tag Manager (on-interaction: analytics must not cost IN
 
 const gtmNoscript = `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`;
 
+// Standard (immediate) GTM snippet — used ONLY on thank-you.html so the
+// lead conversion fires on page view without waiting for user interaction.
+const gtmStd = `<!-- Google Tag Manager (thank-you: immediate, conversion must fire) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');</script>
+<!-- End Google Tag Manager -->`;
+
+// Once-per-session repeat guard for thank-you.html. Must run BEFORE the GTM
+// snippet: on a repeat view in the same tab session it pushes
+// {thankyou_repeat:true} so a GTM exception (to be added) can skip the
+// conversion; first visit only sets the flag and changes nothing.
+const tyGuard = `<script>try{window.dataLayer=window.dataLayer||[];if(window.sessionStorage&&sessionStorage.getItem('ty_seen')){window.dataLayer.push({thankyou_repeat:true});}else if(window.sessionStorage){sessionStorage.setItem('ty_seen','1');}}catch(_){}</script>`;
+
 const clarity = `<!-- Microsoft Clarity (on-interaction: must not cost INP) -->
 <script type="text/javascript">
 (function(){function load(){if(window.__clarityLoaded)return;window.__clarityLoaded=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${CLARITY_ID}");}function arm(){var evs=['scroll','click','touchstart','keydown'];evs.forEach(function(e){window.addEventListener(e,load,{once:true,passive:true});});setTimeout(load,10000);}if(document.readyState==='complete'||document.readyState==='interactive'){arm();}else{window.addEventListener('DOMContentLoaded',arm,{once:true});}})();
@@ -153,11 +165,12 @@ ${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" cross
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
   <link rel="dns-prefetch" href="https://www.clarity.ms" />
-  ${gtm}
+  ${p.file === 'thank-you' ? tyGuard + '\n  ' + gtmStd : gtm}
   ${clarity}
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/dm-sans-400.woff2" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/syne-800.woff2" />
   <link rel="stylesheet" href="/src/styles/global.css" />
+  <script src="/tracking.js" defer></script>
 </head>
 <body>
   ${gtmNoscript}
