@@ -29,9 +29,13 @@ export const CLARITY_ID = 'xmhey9airm';
 // Netlify Forms handles lead capture (works when deployed to Netlify).
 export const NETLIFY_FORM_NAME = 'lead-quote';
 
+// Lead delivery — Web3Forms (replaces Netlify Forms + Formspree on GitHub Pages).
+// Public client-side key (see Web3Forms FAQ: access keys are public by design).
+export const WEB3FORMS_KEY = '4e6c6104-b943-4aa8-a9c1-e052336ec4c0';
+
 // Core business claims (from the high-converting landing page).
-// Legacy Formspree (kept for older pages accepting leads until migrated).
-export const FORMSPREE_ID = 'xdaqkbwa';
+// Rollback: the previous Formspree form ID was 'xdaqkbwa'.
+// export const FORMSPREE_ID = 'xdaqkbwa';
 
 export const STARTING_PRICE = '₹2,000';
 export const PHONE_HREF = PHONE_TEL;
