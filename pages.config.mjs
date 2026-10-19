@@ -134,7 +134,7 @@ export const pages = [
   {
     file: 'blog/deep-cleaning-cost-gurgaon-2026', page: 'article',
     title: "Deep Cleaning Cost in Gurgaon (2026): BHK-Wise Rates",
-    description: "Deep cleaning in Gurgaon costs ₹2,500 for a 1BHK up to ₹9,000 for a villa. Full 2026 rate card, inclusions and extras worth paying for.",
+    description: "Every deep cleaning price in Gurgaon in one table: 1 BHK ₹2,500 to 5 BHK ₹9,000, kitchen ₹1,500, sofa ₹499/seat. What changes a quote plus exclusions.",
   },
   {
     file: 'blog/how-often-deep-clean-home-india', page: 'article',
@@ -298,8 +298,8 @@ export const pages = [
   },
   {
     file: 'blog/urban-company-vs-sachin-deep-cleaning', page: 'article',
-    title: "Urban Company vs Sachin Deep Cleaning in Gurgaon",
-    description: "Urban Company vs Sachin Deep Cleaning on price, crew continuity, checklist ownership and what happens when a Gurgaon deep clean goes wrong.",
+    title: "Urban Company vs Local Deep Cleaners in Gurgaon",
+    description: "Urban Company vs local deep cleaners in Gurgaon on app booking, fixed prices, exclusions, verification and damage cover — plus a how-to-choose checklist.",
   },
   {
     file: 'blog/house-maid-vs-deep-cleaning-gurgaon', page: 'article',
@@ -310,6 +310,7 @@ export const pages = [
     file: 'book-cleaning-online-gurgaon', page: 'landing',
     title: 'Book Cleaning Online in Gurgaon — No App Needed',
     description: 'Book house & deep cleaning online in Gurgaon without any app — 30-second WhatsApp booking, same-day slots, fixed price, pay after walkthrough.',
+    lastmod: '2026-10-19',
   },
   {
     file: 'blog/nobroker-cleaning-vs-sachin-deep-cleaning', page: 'article',

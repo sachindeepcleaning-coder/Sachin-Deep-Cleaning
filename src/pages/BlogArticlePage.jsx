@@ -1,5 +1,6 @@
-import { JsonLd, articleSchema, faqSchema, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
+import { JsonLd, articleSchema, faqSchema, breadcrumbSchema, webpageSchema, serviceSchema } from '../lib/schema.jsx';
 import { getArticle } from '../lib/blog.js';
+import { getService } from '../lib/services.js';
 import { pageUrl } from '../lib/site.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import QuoteForm from '../components/QuoteForm.jsx';
@@ -111,10 +112,16 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
 
   const mins = readingMinutes(article);
   const faqs = article.faqs;
+  // Single source of truth for pricing: the cost guide carries Service schema
+  // with the site's own deep-clean starting price (reused from services.js).
+  const costService = file === 'blog/deep-cleaning-cost-gurgaon-2026' ? getService('deep') : null;
 
   return (
     <>
       <JsonLd data={articleSchema({ title: article.title, description: article.description, url, datePublished: article.datePublished, dateModified: article.dateModified, image: article.image })} />
+      {costService && (
+        <JsonLd data={serviceSchema({ name: 'Deep Cleaning Services in Gurgaon', description: article.description, url, price: costService.price, image: article.image })} />
+      )}
       <JsonLd data={webpageSchema({ title: article.title, description: article.description, url })} />
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
       <JsonLd

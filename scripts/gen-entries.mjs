@@ -171,6 +171,7 @@ ${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" cross
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/syne-800.woff2" />
   <link rel="stylesheet" href="/src/styles/global.css" />
   <script src="/tracking.js" defer></script>
+<script src="/beacon.js" defer></script>
 </head>
 <body>
   ${gtmNoscript}

@@ -28,6 +28,11 @@ export default function IndexPage({ url }) {
       <Hero />
       <TrustBar />
       <UpdatedNote />
+      <div style={{ textAlign: 'center', padding: '18px 20px 2px' }}>
+        <p style={{ margin: 0, fontSize: '.95rem', color: 'var(--muted)' }}>
+          Price-first? See <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>every 2026 deep cleaning price</a> — or book online now on <a href="/book-cleaning-online-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>the no-app booking page</a>.
+        </p>
+      </div>
       <ReelSection />
       <CountdownStrip />
       <ServiceSection />

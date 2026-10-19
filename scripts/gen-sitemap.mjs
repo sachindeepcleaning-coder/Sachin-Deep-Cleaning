@@ -41,7 +41,7 @@ const entries = pages
     // date — articles carry their dateModified; service/utility pages use
     // CONTENT_UPDATED (src/lib/site.js), bumped only when prices/rating/address change.
     const art = p.page === 'article' ? ARTICLES.find((a) => a.file === p.file) : null;
-    const lastmod = (art && art.dateModified) || CONTENT_UPDATED;
+    const lastmod = p.lastmod || (art && art.dateModified) || CONTENT_UPDATED;
     return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>

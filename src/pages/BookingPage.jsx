@@ -3,7 +3,8 @@ import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
+import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, breadcrumbSchema } from '../lib/schema.jsx';
+import { pageUrl } from '../lib/site.js';
 
 // App-less online booking landing page: the no-app answer to
 // "cleaning services app / house cleaning app / instant maid" searches.
@@ -31,16 +32,29 @@ const FAQS = [
   ['What if I need a daily maid, not a one-time clean?', 'We will tell you honestly: daily chores need a maid agency, not us. Read our house-maid-vs-deep-cleaning guide first — then book us for weekly upkeep (from ₹499/visit) and quarterly resets.'],
   ['Online booking Gurgaon me kaise karein bina app ke?', 'WhatsApp +91 9560739281 par BHK + sector bhejein — 30 minute me fixed price, same-day slot dopahar se pehle message par. Kaam ke baad payment, advance kabhi nahi.'],
   ['Can I book for my parents’ home in another sector?', 'Yes — share their sector, BHK and a contact number; we confirm the slot with you, clean with a walkthrough to them on video call if needed, and you pay on UPI after their approval. Popular for NRI families booking from abroad.'],
-  ['Do you serve Delhi or Noida for online bookings?', 'Our teams cover all of Gurgaon (DLF to Manesar) same-day. Delhi/Noida requests are quoted case-by-case on WhatsApp depending on crew routing — message us and we confirm honestly instead of overpromising.'],
-  ['What if I need changes after booking online?', 'Message any change — date, scope, address — and it is done free, even morning-of. No app cancellation windows, no penalty logic, no rebooking fees. Your thread holds the full history if anything is ever disputed.'],
-  ['Can societies or offices book online in bulk?', 'Yes — facility desks and RWAs book cluster days over WhatsApp with consolidated GST invoicing, staff ID records and photo-logged walkthroughs. See our society cleaning page for the bulk playbook, or just message the requirement directly.'],
+];
+
+// What a standard full-home deep clean includes (from the service pages).
+const INCLUDE_ITEMS = [
+  'Floor & tile scrubbing and polishing',
+  'Kitchen degreasing — countertops, stove, chimney, cabinets',
+  'Bathroom descaling — tiles, faucets, commode, grout',
+  'Wall, ceiling and fixture dusting',
+  'Furniture, wardrobe and cupboard detailing',
+  'Windows, sills and glass cleaning',
+  'Anti-viral sanitization of touch points',
+  'Cobweb removal and under-furniture vacuuming',
+  'Balcony & utility deep clean — scrub, railing, drains',
+  'Skirting & behind-furniture zones — edge lanes, under-bed, sides',
+  'Final walkthrough sign-off — ticked room sheets before payment',
 ];
 
 export default function BookingPage({ url }) {
   return (
     <>
       <JsonLd data={localBusinessSchema({ url })} />
-      <JsonLd data={serviceSchema({ name: 'Book Cleaning Online in Gurgaon — No App Needed', description: 'Book house and deep cleaning online in Gurgaon without any app: WhatsApp booking in 30 seconds, same-day slots, fixed price, pay after walkthrough.', url })} />
+      <JsonLd data={serviceSchema({ name: 'Book Cleaning Online in Gurgaon — No App Needed', description: 'Book house and deep cleaning online in Gurgaon without any app: WhatsApp booking in 30 seconds, same-day slots, fixed price, pay after walkthrough.', url, price: { label: 'Starting from', amount: '₹2,500' } })} />
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', url: pageUrl('index') }, { name: 'Book Cleaning Online in Gurgaon', url }])} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
 
       <section className="hero">
@@ -56,8 +70,7 @@ export default function BookingPage({ url }) {
               Without Any <span className="hl2">App Download</span>
             </h1>
             <p className="hero-sub">
-              Skip the 7-screen app checkout. One WhatsApp message books <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>verified deep cleaning</a> with a
-              fixed price and <strong>pay-after-walkthrough</strong> — serving Gurgaon since <strong>2015</strong>.
+              This is the direct booking page for <strong>Sachin Deep Cleaning in Gurgaon</strong>. A full-home deep clean starts at <strong>₹2,500 for a 1 BHK</strong>, ₹4,500 for a 2 BHK and ₹5,500 for a 3 BHK, and you <strong>pay only after you walk through and approve the work</strong>. Book in under a minute — message +91 95607-39281 on WhatsApp or call the same number. One message locks the fixed price, confirms the slot and books the same police-verified team that serves DLF Phase 1–5, Sohna Road, Golf Course Road and every Gurgaon sector. No app, no account, zero advance.
             </p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 30-Second Booking</span>
@@ -86,6 +99,27 @@ export default function BookingPage({ url }) {
                 <div>
                   <div className="why-title">{title}</div>
                   <div className="why-desc">{desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="section-inner">
+          <div style={{ textAlign: 'center' }} className="fade-up">
+            <div className="section-tag">What's Included</div>
+            <h2 className="section-title">Every Booking Covers the Same Checklist</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Full-home deep clean? These are the lines on the job card — the same ones the walkthrough sign-off is ticked against.</p>
+          </div>
+          <div className="checklist-grid" style={{ marginTop: 32 }}>
+            {INCLUDE_ITEMS.map((i) => (
+              <div key={i} className="checklist-item fade-up">
+                <div className="checklist-icon">✓</div>
+                <div>
+                  <div className="checklist-title">{i.split('—')[0].split('–')[0]}</div>
+                  <div className="checklist-desc">{i}</div>
                 </div>
               </div>
             ))}
@@ -154,14 +188,19 @@ export default function BookingPage({ url }) {
             <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--card)' }}>
               <thead><tr style={{ background: 'var(--primary)' }}><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Booking</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Fixed Price</th><th style={{ padding: '14px 20px', color: '#fff', textAlign: 'left' }}>Time</th></tr></thead>
               <tbody>
-                {[
-                  ['1 RK / Studio deep clean', 'From \u20b92,000', '3\u20135 hrs'],
-                  ['1 BHK deep clean', 'From \u20b92,500', '5\u20136 hrs'],
-                  ['2 BHK deep clean', 'From \u20b94,500', '7\u20138 hrs'],
-                  ['3 BHK deep clean', 'From \u20b95,500', '9\u201310 hrs'],
-                  ['Weekly house cleaning', 'From \u20b9499/visit', '2\u20133 hrs'],
-                  ['Kitchen / Bathroom', '\u20b91,500+ / \u20b9800+', '3\u20134 / 1.5\u20132 hrs'],
-                ].map(([a, b, c], i) => (
+{[
+                    ['1 RK / Studio deep clean', 'From \u20b92,000', '3\u20135 hrs'],
+                    ['1 BHK deep clean', 'From \u20b92,500', '5\u20136 hrs'],
+                    ['2 BHK deep clean', 'From \u20b94,500', '7\u20138 hrs'],
+                    ['3 BHK deep clean', 'From \u20b95,500', '9\u201310 hrs'],
+                    ['4 BHK deep clean', 'From \u20b96,500', 'Full day'],
+                    ['5 BHK / Villa deep clean', 'From \u20b99,000', 'Full day+'],
+                    ['Kitchen / Bathroom', '\u20b91,500+ / \u20b9800+', '3\u20134 / 1.5\u20132 hrs'],
+                    ['Sofa / Carpet shampoo', '\u20b9499/seat / \u20b915 sq ft', '2\u20134 hrs'],
+                    ['Move-in / move-out', 'From \u20b91,999', 'Based on flat size'],
+                    ['Office deep cleaning', 'From \u20b93 / sq ft', 'Site visit quoted'],
+                    ['Weekly house cleaning', 'From \u20b9499/visit', '2\u20133 hrs'],
+                  ].map(([a, b, c], i) => (
                   <tr key={a} style={{ background: i % 2 ? 'var(--card)' : 'var(--bg-alt)' }}>
                     <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)' }}>{a}</td>
                     <td style={{ padding: '13px 20px', borderBottom: '1px solid var(--border)', color: 'var(--primary)', fontWeight: 700 }}>{b}</td>
@@ -171,7 +210,7 @@ export default function BookingPage({ url }) {
               </tbody>
             </table>
           </div>
-          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call \u2014 identical in DLF, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a> and all sectors.</p>
+          <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>Every figure locked on the confirmation call \u2014 identical in DLF, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a> and all sectors. See the <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>full 2026 cost guide for every service</a> first, then message the number below.</p>
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '32px auto 0' }} className="fade-up">
             <div className="section-tag">Who Books Online Most</div>
             <h2 className="section-title">Built for Busy Gurgaon Lives</h2>

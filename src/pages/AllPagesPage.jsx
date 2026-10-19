@@ -19,6 +19,7 @@ const GROUPS = [
       { icon: '🏢', title: 'Office Deep Cleaning in Gurgaon', text: 'Cabins, pantries, washrooms & floors.', href: 'office-deep-cleaning-gurgaon.html' },
       { icon: '📦', title: 'Move-In / Move-Out Cleaning in Gurgaon', text: 'Leave it spotless — or move into one.', href: 'move-in-move-out-cleaning-gurgaon.html' },
       { icon: '📍', title: 'Residential Cleaners Near Me', text: 'Local, police-verified team at your door.', href: 'residential-cleaners-near-me.html' },
+      { icon: '🔖', title: 'Book Cleaning Online', text: 'No-app online booking — fixed price, pay after walkthrough.', href: 'book-cleaning-online-gurgaon.html' },
     ],
   },
   {
