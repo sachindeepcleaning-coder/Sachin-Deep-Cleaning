@@ -7,7 +7,14 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://wa.me https://*.wa.me; frame-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://wa.me https://*.wa.me; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://*.wa.me
+  # NOTE: the hosts below are load-bearing. GitHub Pages ignores this file
+  # today, but the moment the site moves to Netlify/Cloudflare Pages this
+  # policy is enforced — and a missing host means 100% loss of tracking
+  # (connect-src) or 100% loss of leads (connect-src / form-action).
+  # connect-src must allow: the click-guard beacon worker, the lead gateway,
+  # the Web3Forms fallback and GTM/Clarity/GA4.
+  # form-action must allow: 'self' (the Netlify form POST) + the lead hosts.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://www.google-analytics.com https://region1.google-analytics.com https://visit-log.sachindeepcleaning.workers.dev https://lead-gateway.sachindeepcleaning.workers.dev https://api.web3forms.com https://wa.me https://*.wa.me; frame-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://maps.google.com https://wa.me https://*.wa.me; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://lead-gateway.sachindeepcleaning.workers.dev https://api.web3forms.com https://wa.me https://*.wa.me
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /llms.txt
