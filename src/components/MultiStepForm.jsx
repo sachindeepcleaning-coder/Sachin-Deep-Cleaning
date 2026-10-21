@@ -1,22 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { PHONE, waMsg } from '../lib/site.js';
 import { sendLead } from '../lib/sendLead.js';
 import { track, whatsappClick } from '../lib/landing.js';
+import { normalizePhone, isValidPhone } from '../lib/phone.js';
+import { focusField, cgFormRejected } from '../lib/formReject.js';
 
 const STEPS = [{ title: 'Your Details' }, { title: 'Service' }, { title: 'Schedule' }];
 const STORAGE_KEY = 'sdc_lead';
 
 // Multi-step quote form: progress bar, localStorage draft, Web3Forms submit.
+//
+// Owner priority: never lose a lead, never fake a conversion.
+//  - The phone field used to carry pattern="[0-9+ ]{8,15}". The browser's
+//    own validation runs BEFORE the submit event, so a hyphenated / spaced
+//    number never even reached the submit handler — the visitor was stuck on
+//    a native bubble and the lead was lost.
+//  - The "Next" button is a plain button, so the browser never checks the
+//    phone at all: the number is validated here, on submit, and a submit the
+//    site refuses (or a send that fails) tells click-guard to undo the
+//    conversion it recorded.
 export default function MultiStepForm() {
   const [step, setStep] = useState(0);
   const [data, setData] = useState({ name: '', phone: '', service: '', date: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [focusPhone, setFocusPhone] = useState(false);
+  const phoneRef = useRef(null);
 
   useEffect(() => {
     try {
       const s = localStorage.getItem(STORAGE_KEY);
-      if (s) setData((d) => ({ ...d, ...JSON.parse(s) }));
+      if (s) {
+        const saved = JSON.parse(s);
+        // A restored draft may hold an old raw number ("+91 98739-15215") —
+        // put the canonical digits back in the field.
+        setData((d) => ({ ...d, ...saved, phone: normalizePhone(saved && saved.phone) }));
+      }
     } catch (e) {}
   }, []);
 
@@ -26,17 +45,44 @@ export default function MultiStepForm() {
     } catch (e) {}
   }, [data]);
 
+  // The phone field only exists on step 1, so bringing the focus back to it
+  // means going back to that step first.
+  useEffect(() => {
+    if (!focusPhone || step !== 0) return;
+    setFocusPhone(false);
+    if (phoneRef.current) focusField(phoneRef.current);
+  }, [focusPhone, step]);
+
   const set = (k, v) => setData((d) => ({ ...d, [k]: v }));
   const next = () => setStep((s) => Math.min(s + 1, STEPS.length - 1));
   const prev = () => setStep((s) => Math.max(s - 1, 0));
 
+  // The site refused this submit: no lead was created, so click-guard must
+  // not count it as a conversion and the visitor must land back on the field
+  // that has to be fixed. The service / date / message the visitor already
+  // picked are kept (state + localStorage draft), so a retry is 2 clicks.
+  const rejectSubmit = (message) => {
+    setStatus('idle');
+    setError(message);
+    cgFormRejected();
+    setStep(0);
+    setFocusPhone(true);
+  };
+
   const submit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
     setError('');
+    // Normalise ONCE, here — never while typing. "+91 98739-15215" and
+    // "09873915215" become the canonical 10 digits the gateway accepts.
+    const p = normalizePhone(data.phone);
+    if (!isValidPhone(p)) {
+      rejectSubmit('❌ Enter a valid 10-digit mobile number (it starts with 6-9).');
+      return;
+    }
+    setStatus('sending');
     const ok = await sendLead({
       name: data.name,
-      phone: data.phone,
+      phone: p,
       source: 'Multi-Step Form',
       fields: { service: data.service, date: data.date, message: data.message },
     });
@@ -46,8 +92,9 @@ export default function MultiStepForm() {
       window.setTimeout(() => { window.location.href = '/thank-you.html'; }, 250);
       return;
     }
-    setStatus('idle');
-    setError(`❌ Couldn't send your request. Please call ${PHONE} or`);
+    // The send failed, so no lead exists on the site either — click-guard
+    // must not count this as a conversion.
+    rejectSubmit(`❌ Couldn't send your request. Please call ${PHONE} or`);
   };
 
   return (
@@ -66,12 +113,19 @@ export default function MultiStepForm() {
           <label>Your Name *</label>
           <input value={data.name} onChange={(e) => set('name', e.target.value)} required />
           <label>Phone *</label>
+          {/* No pattern attribute: a hyphenated / spaced / +91 number used to
+              fail the browser's own validation. The digits are stripped as
+              they are typed (13 digits, so "+91 98739-15215" still fits) and
+              the canonical 10 digits are what gets sent. */}
           <input
             type="tel"
             value={data.phone}
-            onChange={(e) => set('phone', e.target.value)}
-            pattern="[0-9+ ]{8,15}"
+            onChange={(e) => set('phone', e.target.value.replace(/\D/g, '').slice(0, 13))}
+            inputMode="numeric"
+            maxLength="13"
+            autoComplete="tel"
             required
+            ref={phoneRef}
           />
         </>
       )}

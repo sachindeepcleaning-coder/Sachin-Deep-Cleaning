@@ -2,10 +2,17 @@ import { useState, useRef } from 'react';
 import { NETLIFY_FORM_NAME, PHONE, waMsg } from '../lib/site.js';
 import { sendLead } from '../lib/sendLead.js';
 import { track, whatsappClick } from '../lib/landing.js';
+import { normalizePhone, isValidPhone } from '../lib/phone.js';
+import { focusField, cgFormRejected } from '../lib/formReject.js';
 
 // Hero quote form card.
 // Lead delivery: Web3Forms via sendLead (works on GitHub Pages).
 // On success it shows the confirmation state + WhatsApp nudge popup.
+//
+// The focus jump and the click-guard rejection hook live in
+// ../lib/formReject.js — every form on the site uses the same two channels
+// (see that file for why the blur() is not cosmetic).
+
 export default function QuoteForm() {
   const [status, setStatus] = useState('idle'); // idle | sending | success
   const [error, setError] = useState('');
@@ -13,15 +20,31 @@ export default function QuoteForm() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const formRef = useRef(null);
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
 
   const onSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setErrorWa(false);
     const n = name.trim();
-    const p = phone.trim();
-    if (n.length < 2) { setError('❌ Please enter your full name.'); return; }
-    if (!/^[6-9][0-9]{9}$/.test(p)) { setError('❌ Enter a valid 10-digit Indian mobile number.'); return; }
+    // Normalise ONCE, here — never while typing. The visitor may type
+    // "+91 98739-15215" or a leading 0; the raw value stays in the field and
+    // is canonicalised at submit, so nothing is cut off mid-typing and the
+    // gateway, the Sheet and the owner all get the same 10 digits.
+    const p = normalizePhone(phone);
+    if (n.length < 2) {
+      setError('❌ Please enter your full name.');
+      cgFormRejected();
+      focusField(nameRef.current);
+      return;
+    }
+    if (!isValidPhone(p)) {
+      setError('❌ Enter a valid 10-digit mobile number (it starts with 6-9).');
+      cgFormRejected();
+      focusField(phoneRef.current);
+      return;
+    }
     setStatus('sending');
 
     const ok = await sendLead({ name: n, phone: p, source: 'Quote Form' });
@@ -36,6 +59,10 @@ export default function QuoteForm() {
     setStatus('idle');
     setError(`❌ Couldn't send your request. Please call ${PHONE} or`);
     setErrorWa(true);
+    // The send failed, so no lead exists on the site either — click-guard
+    // must not count this as a conversion.
+    cgFormRejected();
+    focusField(phoneRef.current);
   };
 
   if (status === 'success') {
@@ -44,7 +71,7 @@ export default function QuoteForm() {
         <div className="success-box" style={{ display: 'block' }}>
           <div className="s-icon">✅</div>
           <h3>Quote Request Sent!</h3>
-          <p>We&rsquo;ll call <strong>+91{phone}</strong> within 5 minutes.<br />Want a faster reply? Chat with us on WhatsApp below ↓</p>
+          <p>We&rsquo;ll call <strong>+91{normalizePhone(phone)}</strong> within 5 minutes.<br />Want a faster reply? Chat with us on WhatsApp below ↓</p>
         </div>
         <a href={waMsg('Hi! I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ marginTop: '16px' }} onClick={whatsappClick}>
           💬 WhatsApp Us Now — Instant Reply
@@ -96,13 +123,17 @@ export default function QuoteForm() {
         <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
         <div className="field-wrap">
           <label htmlFor="fname">Your Full Name <span className="req">*</span></label>
-          <input type="text" id="fname" name="name" placeholder="e.g. Priya Sharma" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" id="fname" name="name" placeholder="e.g. Priya Sharma" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'sending'} ref={nameRef} />
         </div>
         <div className="field-wrap">
           <label htmlFor="fphone">Mobile Number <span className="req">*</span></label>
           <div className="phone-wrap">
             <span className="phone-prefix">+91</span>
-            <input type="tel" id="fphone" name="phone" placeholder="10-digit mobile number" inputMode="numeric" maxLength="10" autoComplete="tel" required value={phone} onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))} />
+            {/* 13 digits, not 10: the visitor may type "+91 98739-15215" or a
+                leading 0. The raw value is kept until submit and normalised
+                there (see onSubmit) so a valid number is never truncated
+                away — truncating it used to LOSE the lead. */}
+            <input type="tel" id="fphone" name="phone" placeholder="10-digit mobile number" inputMode="numeric" maxLength="13" autoComplete="tel" required value={phone} onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 13))} disabled={status === 'sending'} ref={phoneRef} />
           </div>
         </div>
         <button type="submit" className="btn-submit" id="submitBtn" disabled={status === 'sending'}>
