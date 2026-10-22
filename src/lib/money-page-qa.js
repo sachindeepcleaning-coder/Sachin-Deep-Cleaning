@@ -1148,7 +1148,7 @@ export const MONEY_QA = {
         ['1 BHK (400–600 sq ft)', '₹3 per sq ft', '₹2,500', '5–6 hrs'],
         ['2 BHK (601–1,000 sq ft)', '₹3 per sq ft', '₹4,500', '7–8 hrs'],
         ['3 BHK (1,001–1,500 sq ft)', '₹3 per sq ft', '₹5,500', '9–10 hrs'],
-        ['4 BHK (1,501–2,100 sq ft)', '₹3 per sq ft', '₹6,500', 'Full day'],
+        ['4 BHK (1,501–2,100 sq ft)', '₹3 per sq ft', '₹6,500', '8–10 hrs'],
         ['5 BHK / villa (2,100+ sq ft)', '₹3 per sq ft', 'From ₹9,000', '10–12 hrs'],
         ['Furnished home', 'Add ₹500–₹1,500', 'Add ₹500–₹1,500', 'Adds 1–2 hrs'],
       ],
