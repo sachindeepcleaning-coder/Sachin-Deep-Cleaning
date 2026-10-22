@@ -95,13 +95,13 @@ export const pages = [
   },
   {
     file: 'carpet-shampoo-cleaning-gurgaon', page: 'service', serviceKey: 'carpet',
-    title: 'Carpet Cleaning Gurgaon | ₹15/sq ft Shampoo',
-    description: 'Carpet shampoo cleaning in Gurgaon from ₹15/sq ft. Hot-water extraction, stain removal, allergen treatment. Wall-to-wall & rugs. Book now.',
+    title: 'Carpet Cleaning Gurgaon | ₹18/sq ft Shampoo',
+    description: 'Carpet shampoo cleaning in Gurgaon from ₹18/sq ft (dry clean ₹15). Hot-water extraction, stain removal, allergen treatment. Wall-to-wall & rugs. Book now.',
   },
   {
     file: 'office-deep-cleaning-gurgaon', page: 'service', serviceKey: 'office',
-    title: 'Office Deep Cleaning Gurgaon | From ₹3/Sq Ft',
-    description: 'Office deep cleaning in Gurgaon from ₹3 per sq ft (small office from ₹5,000) — 9-area scope, after-hours and weekend crews, GST invoice, pay after sign-off.',
+    title: 'Office Deep Cleaning Gurgaon | Small Office ₹5,000',
+    description: 'Office deep cleaning in Gurgaon: small office from ₹5,000, larger sites from ₹3 per sq ft — 9-area scope, after-hours and weekend crews, GST invoice, pay after sign-off.',
   },
   {
     file: 'move-in-move-out-cleaning-gurgaon', page: 'service', serviceKey: 'move',
@@ -145,8 +145,8 @@ export const pages = [
   },
   {
     file: 'utensils', page: 'service', serviceKey: 'utensils',
-    title: 'Kitchen Utensils Cleaning in Gurgaon | From ₹409',
-    description: 'Kitchen utensil cleaning in Gurgaon from ₹409 for a daily lot of 20 pieces, ₹699 for 20–50. Scrub, descale, disinfect, dry and pack back into your storage.',
+    title: 'Kitchen Utensils Cleaning in Gurgaon | From ₹299',
+    description: 'Kitchen utensil cleaning in Gurgaon from ₹299 for a cutlery and serving-set wash, ₹409 for a daily lot of 20 pieces, ₹699 for 20–50. Scrub, descale, disinfect, dry and pack back into your storage.',
   },
   {
     file: 'road', page: 'service', serviceKey: 'road',
@@ -155,8 +155,8 @@ export const pages = [
   },
   {
     file: 'chandelier', page: 'service', serviceKey: 'chandelier',
-    title: 'Chandelier & High-Reach Cleaning Gurgaon | ₹1,499',
-    description: 'Chandelier and high-reach cleaning in Gurgaon at ₹1,499 per unit — crystal, glass and metal, cleaned piece by piece where safe. Access quoted with the clean, never improvised.',
+    title: 'Chandelier & High-Reach Cleaning Gurgaon | ₹999',
+    description: 'Chandelier and high-reach cleaning in Gurgaon from ₹999 per unit — crystal, glass and metal, cleaned piece by piece where safe. Access quoted with the clean, never improvised.',
   },
   {
     file: 'washingmachine', page: 'service', serviceKey: 'washingmachine',
@@ -180,8 +180,8 @@ export const pages = [
   },
   {
     file: 'instantclean', page: 'service', serviceKey: 'instantclean',
-    title: 'Instant & Same-Day Cleaning in Gurgaon | ₹999',
-    description: 'Instant and same-day cleaning in Gurgaon at ₹999 — crew dispatched within 4 hours, 2–3 cleaners, fixed scope and a walkthrough before you pay. No evening premium.',
+    title: 'Instant & Same-Day Cleaning in Gurgaon | ₹799',
+    description: 'Instant and same-day cleaning in Gurgaon from ₹799 (single bathroom) and ₹999 for a 1 BHK — crew dispatched within 4 hours, fixed scope and a walkthrough before you pay. No evening premium.',
   },
   {
     file: 'balconyclean', page: 'service', serviceKey: 'balconyclean',
@@ -298,7 +298,7 @@ export const pages = [
   },
   {
     file: 'blog/office-deep-cleaning-gurgaon-guide', page: 'article',
-    title: "Office Deep Cleaning Gurgaon | From ₹3/Sq Ft, ₹5,000 Min",
+    title: "Office Deep Cleaning Gurgaon | Small Office ₹5,000",
     description: "Office deep cleaning in Gurgaon from ₹3 per sq ft (small office from ₹5,000) — 9-area scope, after-hours and weekend crews, GST invoice, photo logs, pay after sign-off.",
   },
   {
@@ -308,7 +308,7 @@ export const pages = [
   },
   {
     file: 'blog/carpet-cleaning-gurgaon-guide', page: 'article',
-    title: "Carpet Cleaning in Gurgaon from ₹15/Sq Ft — Method & Drying",
+    title: "Carpet Cleaning in Gurgaon from ₹18/Sq Ft — Method & Drying",
     description: "Carpet and rug cleaning in Gurgaon from ₹15 per sq ft — shampoo versus dry cleaning, 6–8 hour drying, and how the method is picked for each fibre.",
   },
   {
@@ -403,7 +403,7 @@ export const pages = [
   },
   {
     file: 'blog/best-office-deep-cleaning-services-gurgaon', page: 'article',
-    title: "Best Office Deep Cleaning Gurgaon | Top 5, From ₹3/Sq Ft",
+    title: "Best Office Deep Cleaning Gurgaon | Top 5, From ₹5,000",
     description: "The five office deep cleaning providers in Gurgaon compared on per-sq-ft rates, after-hours capability, AMC terms and washroom specialisation — with where each one genuinely wins.",
   },
   {

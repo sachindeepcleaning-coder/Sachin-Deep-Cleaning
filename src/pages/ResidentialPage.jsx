@@ -40,7 +40,7 @@ const PILLS = [
 
 const STATS = [
   ['30', '+', 'Sectors Covered'],
-  ['₹2,000', '+', 'Starting Price'],
+  ['From ₹2,500', ' (1 BHK)', 'Fixed Price'],
   ['Since 2015', '', 'In Gurgaon'],
 ];
 

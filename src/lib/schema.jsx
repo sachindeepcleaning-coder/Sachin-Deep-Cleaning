@@ -154,7 +154,6 @@ export function localBusinessSchema() {
       `${SITE_URL}/images/full-home-deep-cleaning.jpg`,
       `${SITE_URL}/images/kitchen-deep-cleaning.webp`,
     ],
-    priceRange: '₹499 - ₹9,000',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer',
     areaServed: SERVICE_AREAS,

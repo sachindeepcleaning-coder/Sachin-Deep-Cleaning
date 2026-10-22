@@ -10,7 +10,7 @@ const PILLS = [
 
 const STATS = [
   ['Since 2015', '', 'Cleaning Gurgaon'],
-  ['₹2,000', '+', 'Starting Price'],
+  ['From ₹2,500', ' (1 BHK)', 'Fixed Price'],
   ['Pay After', '', 'Walkthrough'],
 ];
 
