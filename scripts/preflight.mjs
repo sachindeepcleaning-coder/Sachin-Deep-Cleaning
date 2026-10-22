@@ -223,8 +223,110 @@ for (const m of llms.matchAll(/\]\((https:\/\/sachindeepcleaning\.shop[^)]*)\)/g
   }
 }
 
+// 13 — no second brand and no second trading name.
+//
+// A second brand name on the same domain splits the Knowledge Graph into two
+// entities and halves the local signal for both. The site represents exactly
+// one business: Sachin Deep Cleaning.
+//
+// The patterns are assembled from string fragments on purpose: the retired
+// brand names must not appear anywhere in this repository, not even inside
+// the guard that checks for them. A `grep` over the repo has to come back
+// empty.
+//
+// Note: a short "one" phrase such as "a one-day visit" is NOT matched — that
+// is ordinary English, not a brand reference.
+const BRAND_PATTERNS = [
+  { re: new RegExp('bala' + 'ji', 'i'), why: 'second brand name' },
+  { re: new RegExp('ao' + 'ne' + 'deep' + 'cleaning', 'i'), why: 'second brand site' },
+  { re: new RegExp('bala' + 'ji' + 'deep' + 'cleaning', 'i'), why: 'second brand site' },
+  { re: new RegExp('a' + 'one' + ' deep ' + 'cleaning', 'i'), why: 'second brand name' },
+  { re: new RegExp('also operating' + ' as', 'i'), why: 'second-brand claim' },
+  { re: new RegExp('sub' + '-?brand', 'i'), why: 'second-brand claim' },
+  { re: new RegExp('F33' + 'H', 'i'), why: 'plus code from the old listing' },
+  { re: new RegExp('92679' + '05943'), why: 'old phone number' },
+  { re: new RegExp('\\+91\\s*92679'), why: 'old phone number' },
+];
+
+for (const file of htmlFiles) {
+  const name = rel(file);
+  const html = readFileSync(file, 'utf8');
+  for (const { re, why } of BRAND_PATTERNS) {
+    const m = html.match(re);
+    if (m) {
+      const line = html.slice(0, m.index).split('\n').length;
+      fail(`${name}:${line} — ${why} ("${m[0]}")`);
+    }
+  }
+}
+
+// 14 — the brand identity is identical on every page
+{
+  const identity = new Map();
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    for (const m of html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)) {
+      let b;
+      try {
+        b = JSON.parse(m[1]);
+      } catch {
+        continue;
+      }
+      if (!String(b['@type'] || '').includes('LocalBusiness')) continue;
+      const key = JSON.stringify({
+        name: b.name,
+        telephone: b.telephone,
+        url: b.url,
+        address: b.address,
+        sameAs: b.sameAs,
+      });
+      if (!identity.has(key)) identity.set(key, name);
+    }
+  }
+  if (identity.size > 1) {
+    fail(`LocalBusiness identity differs across ${identity.size} variants (${[...identity.values()].join(', ')})`);
+  }
+}
+
+// 15 — no leftover fake urgency, fake scarcity or fake social proof
+{
+  const DARK_PATTERNS = [
+    { re: /₹200 OFF/, why: 'permanent fake discount' },
+    { re: /Limited Time/i, why: 'fake urgency' },
+    { re: /offer expires/i, why: 'fake urgency' },
+    { re: /countdown-timer|countdown-strip/, why: 'countdown timer' },
+    { re: /booking-popup/i, why: 'fake booking popup' },
+    { re: /slots? left/i, why: 'fake scarcity' },
+    { re: /under 3 min|under 5 min|under 2 minutes/, why: 'unverifiable response-time promise' },
+    { re: /ISO-certified/i, why: 'uncertified certificate claim' },
+    { re: /₹10,?000 damage protection|₹10k Damage/i, why: 'unbacked damage-cover claim' },
+    { re: /5,000\+ happy|5,000\+ homes|5,000\+ Gurgaon homes/i, why: 'unverified homes-served count' },
+  ];
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    for (const { re, why } of DARK_PATTERNS) {
+      const m = html.match(re);
+      if (m) {
+        const line = html.slice(0, m.index).split('\n').length;
+        fail(`${name}:${line} — ${why} ("${m[0]}")`);
+      }
+    }
+  }
+}
+
 // ─── report ─────────────────────────────────────────────────────────────────
 console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD blocks, ${idTypes.size} entity ids`);
+
+// Outstanding [VERIFY] items — reported, but they do not fail the build.
+{
+  const { GBP_REVIEW_URL, ADDRESS_FULL } = await import('../src/lib/site.js');
+  if (!/^https?:\/\//.test(GBP_REVIEW_URL)) {
+    warn(`[VERIFY] GBP review URL is still a placeholder: "${GBP_REVIEW_URL}" — set it in src/lib/site.js`);
+  }
+  warn(`[VERIFY] Confirm the single address against the live GBP listing: "${ADDRESS_FULL}"`);
+}
 
 if (warnings.length) {
   console.log(`\nWARNINGS (${warnings.length})`);

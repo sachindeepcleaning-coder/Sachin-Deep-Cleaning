@@ -93,7 +93,7 @@ export const WHY_US = [
   ['👮', 'Police-Verified Team', 'Every cleaner is background-checked, ID-verified and professionally trained before entering your home.'],
   ['💰', 'Pay After Cleaning Only', 'Zero advance. You inspect the results and pay only when completely satisfied. No risk whatsoever.'],
   ['⚡', 'Same-Day Service', 'Book before noon and get same-day service. Emergency bookings also available at no extra cost.'],
-  ['🌿', 'Safe Eco-Friendly Products', 'ISO-certified, non-toxic cleaning agents. Safe for children, elderly, and pets. No harsh chemical smell.'],
+  ['🌿', 'Safe Eco-Friendly Products', 'Non-toxic cleaning agents. Safe for children, elderly, and pets. No harsh chemical smell.'],
   ['🔄', 'Free Re-Clean Guarantee', "If any area doesn't meet your expectations, we come back within 24 hours and re-clean it absolutely free."],
   ['📋', 'Transparent Pricing', 'Quoted upfront on call. What we say is what you pay. No hidden charges, no surprise additions.'],
 ];
@@ -130,28 +130,11 @@ export const FAQS = [
 
 export const AREAS_SERVED = AREAS;
 
-export const SOCIAL_PROOF_BOOKINGS = [
-  ['P', 'Priya M.', 'Booked full home deep clean', 'DLF Phase 3'],
-  ['A', 'Amit K.', 'Booked kitchen deep clean', 'Sector 45'],
-  ['S', 'Sunita A.', 'Booked post-renovation clean', 'Golf Course Rd'],
-  ['R', 'Rohit G.', 'Booked sofa & carpet clean', 'Sohna Road'],
-  ['N', 'Neha T.', 'Booked 2BHK deep clean', 'Palam Vihar'],
-  ['V', 'Vikram S.', 'Booked 3BHK deep clean', 'MG Road'],
-  ['D', 'Deepa R.', 'Booked bathroom deep clean', 'Sector 56'],
-];
-
-export const TIME_AGO = ['2 minutes ago', '5 minutes ago', '8 minutes ago', '12 minutes ago', '18 minutes ago', '24 minutes ago'];
-
-// Hourly scarcity map (from template). Deterministic fake scarcity.
-export function slotsLeft() {
-  const h = new Date().getHours();
-  const slotMap = [8, 7, 6, 5, 7, 6, 5, 4, 6, 5, 4, 3, 5, 4, 3, 5, 6, 7, 5, 4, 6, 7, 6, 7];
-  return slotMap[h] || 5;
-}
-
-export function randomCallbackTime() {
-  const times = ['under 3 min', '2 min 45 sec', '3 min 10 sec', 'under 5 min', '3 min 30 sec'];
-  return times[Math.floor(Math.random() * times.length)];
-}
+// NOTE: the fake-booking popup, the hourly "slots left" scarcity map and the
+// randomised callback-time promise were removed. They were template
+// placeholders that generated fake booking notifications and fake scarcity —
+// a deceptive-pricing pattern under Google's "Deceptive Pricing" and "Fake
+// Urgency" policies, and a trust risk. Real availability is confirmed on the
+// call, never faked on the page.
 
 export { WHATSAPP_NUMBER };

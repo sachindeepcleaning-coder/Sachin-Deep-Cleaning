@@ -17,7 +17,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL } from '../pages.config.mjs';
 import { ARTICLES } from '../src/lib/blog.js';
-import { CONTENT_UPDATED, RATING, PHONE, ADDRESS_FULL, GBP_LISTING_NAME } from '../src/lib/site.js';
+import { CONTENT_UPDATED, RATING, PHONE, ADDRESS_FULL } from '../src/lib/site.js';
 import { getService } from '../src/lib/services.js';
 import { imageDims } from '../src/lib/image-dims.js';
 
@@ -36,7 +36,6 @@ const header = [
   '# Sachin Deep Cleaning',
   '> Professional deep cleaning in Gurgaon since 2015 — pay after satisfaction. Verified pros, fixed prices, same-day slots.',
   `> Last-Updated: ${CONTENT_UPDATED}`,
-  '> Sub-brands: Balaji Cleaning Services (https://balajicleaningservice.shop/), A One Deep Cleaning (https://aonedeepcleaning.com/)',
   `> Contact: ${PHONE}`,
   `> Address: ${ADDRESS_FULL}`,
   `> Google rating: ${RATING.value} from ${RATING.count} reviews (Google Business Profile, checked ${RATING.asOf})`,

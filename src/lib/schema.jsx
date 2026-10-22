@@ -22,8 +22,8 @@
 //     with "Organization" and "LocalBusiness" both claiming #business).
 
 import {
-  PHONE, SOCIAL, SITE_URL, BRAND_NAME, GBP_LISTING_NAME,
-  ADDRESS_PARTS, GEO, RATING, PLUS_CODE,
+  PHONE, SITE_URL, BRAND_NAME, GBP_REVIEW_URL, SAME_AS,
+  ADDRESS_PARTS, GEO, RATING,
 } from './site.js';
 import { imageDims } from './image-dims.js';
 
@@ -43,6 +43,22 @@ export const IDS = {
   organization: `${SITE_URL}/#organization`,
   person: `${SITE_URL}/about.html#sachin-kumar`,
 };
+
+// THE BUSINESS IDENTITY — one object, used by every schema on every page.
+//
+// Requirement: name, telephone, address, url and sameAs must be byte-identical
+// on every page, otherwise a crawler sees several slightly different businesses
+// and the local/entity signal is split. Building them from one function makes
+// that structural rather than a thing to remember.
+function identity() {
+  return {
+    name: BRAND_NAME,
+    telephone: PHONE,
+    url: `${SITE_URL}/`,
+    address: { '@type': 'PostalAddress', ...ADDRESS_PARTS },
+    sameAs: [...SAME_AS],
+  };
+}
 
 // Expanded list of Gurgaon service sectors — improves local pack matching.
 const SERVICE_AREAS = [
@@ -74,14 +90,6 @@ const SERVICE_AREAS = [
   { '@type': 'AdministrativeArea', name: 'Manesar' },
 ];
 
-// Sister brands of Sachin Deep Cleaning — disclosed on-page (About, contact
-// and the Top-5 comparison guides) and declared here so the entity graph
-// does not treat them as unrelated third parties.
-const SUB_BRANDS = [
-  { '@type': 'Organization', '@id': `${SITE_URL}/#subbrand-balaji`, name: 'Balaji Cleaning Services', url: 'https://balajicleaningservice.shop/' },
-  { '@type': 'Organization', '@id': `${SITE_URL}/#subbrand-aone`, name: 'A One Deep Cleaning', url: 'https://aonedeepcleaning.com/' },
-];
-
 // ─── WebSite (site name for Google Search) ─────────────────────────────────
 // Google's site-name system reads the `name` here on the HOMEPAGE only.
 // Keep it identical to the brand everywhere (titles, og:site_name, GBP).
@@ -104,17 +112,18 @@ export function websiteSchema() {
 
 // ─── LocalBusiness ──────────────────────────────────────────────────────────
 export function localBusinessSchema() {
+  const id = identity();
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': IDS.business,
-    name: BRAND_NAME,
+    name: id.name,
     description:
       'Professional home deep cleaning services in Gurgaon — sofas, bathrooms, kitchens, carpets, offices and full-house makeovers. Eco-friendly products, trained staff, pay after satisfaction.',
-    telephone: PHONE,
+    telephone: id.telephone,
     email: 'contact@sachindeepcleaning.shop',
     // A multi-page business advertises its HOME page here, not the current URL.
-    url: `${SITE_URL}/`,
+    url: id.url,
     logo: `${SITE_URL}/images/app_icon.png`,
     image: [
       `${SITE_URL}/images/cleaning-1.jpg`,
@@ -125,10 +134,7 @@ export function localBusinessSchema() {
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer',
     areaServed: SERVICE_AREAS,
-    address: {
-      '@type': 'PostalAddress',
-      ...ADDRESS_PARTS,
-    },
+    address: id.address,
     geo: {
       '@type': 'GeoCoordinates',
       latitude: GEO.latitude,
@@ -148,8 +154,9 @@ export function localBusinessSchema() {
       closes: '20:00',
     },
     foundingDate: '2015',
-    // Replace with the official share link from the Google Maps listing when available.
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${GBP_LISTING_NAME} ${PLUS_CODE}`)}`,
+    // The Google Business Profile — the canonical Maps listing for this
+    // business. [VERIFY] until the real listing URL is supplied.
+    hasMap: GBP_REVIEW_URL,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Deep Cleaning Services',
@@ -163,8 +170,7 @@ export function localBusinessSchema() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Move-In Move-Out Cleaning', description: 'Handover deep cleaning for empty flats' } },
       ],
     },
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
-    subOrganization: SUB_BRANDS,
+    sameAs: id.sameAs,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,
@@ -177,6 +183,7 @@ export function localBusinessSchema() {
 
 // ─── Service ────────────────────────────────────────────────────────────────
 export function serviceSchema({ name, description, url, price, image }) {
+  const id = identity();
   const hasOffer = price && price.amount !== 'request';
   // Parse '₹499 / seat' -> value '499', unit 'seat'; '₹18 / sq ft' -> '18' / 'sq ft'.
   // Plain amounts ('₹2,000') yield value only, no unitText.
@@ -199,8 +206,11 @@ export function serviceSchema({ name, description, url, price, image }) {
     provider: {
       '@id': IDS.business,
       '@type': 'LocalBusiness',
-      name: BRAND_NAME,
-      telephone: PHONE,
+      name: id.name,
+      telephone: id.telephone,
+      url: id.url,
+      address: id.address,
+      sameAs: [...id.sameAs],
     },
     areaServed: SERVICE_AREAS,
     serviceType: name,
@@ -286,6 +296,7 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
 // ─── Article ────────────────────────────────────────────────────────────────
 // Use on: blog articles — BlogPosting with Person (E-E-A-T).
 export function articleSchema({ title, description, url, datePublished, dateModified, image }) {
+  const id = identity();
   const [w, h] = imageDims(image || '/images/cleaning-1.jpg');
   return {
     '@context': 'https://schema.org',
@@ -307,12 +318,16 @@ export function articleSchema({ title, description, url, datePublished, dateModi
       '@type': 'Person',
       name: 'Sachin Kumar',
       url: IDS.person,
-      sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
+      sameAs: [...id.sameAs],
     },
     publisher: {
       '@id': IDS.business,
       '@type': 'LocalBusiness',
-      name: 'Sachin Deep Cleaning',
+      name: id.name,
+      telephone: id.telephone,
+      url: id.url,
+      address: id.address,
+      sameAs: [...id.sameAs],
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/app_icon.png`,
@@ -363,23 +378,24 @@ export function webpageSchema({ title, description, url, dateModified }) {
 // `#organization` is the legal entity; `#business` is the LocalBusiness the
 // rest of the site points at. They must never share an @id.
 export function organizationSchema() {
+  const id = identity();
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': IDS.organization,
-    name: BRAND_NAME,
-    url: `${SITE_URL}/`,
-    telephone: PHONE,
-    address: { '@type': 'PostalAddress', ...ADDRESS_PARTS },
+    name: id.name,
+    url: id.url,
+    telephone: id.telephone,
+    address: id.address,
     areaServed: 'Gurgaon, Haryana, India',
     foundingDate: '2015',
     description: 'Police-verified, eco-friendly deep cleaning team serving Gurgaon. Full-home, kitchen, bathroom, sofa and carpet deep cleaning with pay-after-satisfaction.',
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
-    subOrganization: SUB_BRANDS,
+    sameAs: [...id.sameAs],
   };
 }
 
 export function personSchema() {
+  const id = identity();
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -388,8 +404,8 @@ export function personSchema() {
     jobTitle: 'Founder & Lead Cleaning Specialist',
     url: IDS.person,
     image: `${SITE_URL}/images/cleaning-1.webp`,
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram],
-    worksFor: { '@id': IDS.organization, '@type': 'Organization', name: BRAND_NAME },
+    sameAs: [...id.sameAs],
+    worksFor: { '@id': IDS.organization, '@type': 'Organization', name: id.name },
     knowsAbout: ['Deep Cleaning', 'House Cleaning', 'Bathroom Descaling', 'Kitchen Degreasing', 'Gurgaon'],
     description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, rated ${RATING.value} on Google from ${RATING.count} reviews, police-verified team lead.`,
   };

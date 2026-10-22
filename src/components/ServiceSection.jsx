@@ -19,7 +19,7 @@ export default function ServiceSection() {
         <div className="services-head fade-up">
           <div className="section-tag">Our Services</div>
           <h2 className="section-title">Deep Cleaning Services in Gurgaon</h2>
-          <p className="section-sub" style={{ margin: '0 auto' }}>Complete, professional deep cleaning for homes and offices across Gurgaon — eco-friendly products, police-verified team, ₹200 OFF today.</p>
+          <p className="section-sub" style={{ margin: '0 auto' }}>Complete, professional deep cleaning for homes and offices across Gurgaon — eco-friendly products, police-verified team, fixed price before we start.</p>
         </div>
         <div className="services-grid">
           {SERVICES.map((s) => (

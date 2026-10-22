@@ -22,7 +22,6 @@ const RULES = [
   // competitor brands → neutral descriptors
   [/\bAKS Facilities\b/g, 'a facilities company'],
   [/\bSmart City Care\b/g, 'a facilities company'],
-  [/\bA One Deep Cleaning\b/g, 'a local listing'],
   [/\bMaidsinGurgaon\b/g, 'a maid-service site'],
   [/\bDustBusters\b/g, 'another local brand'],
   [/\bTumbledry\b/g, 'a laundry-pickup brand'],
@@ -32,19 +31,16 @@ const RULES = [
   [/\bBusyBucket\b/g, 'a marketplace listing'],
   [/\bZoopgo\b/g, 'a marketplace listing'],
   [/\bFavorz\b/g, 'another listing'],
-  [/\bBalaji\/Favorz\b/g, 'many of those pages'],
-  [/\bBalaji\b/g, 'a large local brand'],
   [/\bSPFM card\b/g, 'their card'],
   [/\bSPFM\b/g, 'a facilities company'],
   [/\bSKKS\b/g, 'another Gurgaon listing'],
-  [/\bAone\b/g, 'a local listing'],
   [/\bAKS\b/g, 'a facilities company'],
   [/\bgodaddy\b/gi, 'outdated'],
 
   // competitor phone numbers
   [/\u20b97303133245/g, ''],
   [/\s*7303133245/g, ''],
-  [/Call 9115550011 \(AYS\) or \+91 9560739281 \(us\)/, 'Call +91 9560739281'],
+  [/Call 9115550011 \(AYS\) or \+91 95607 39281 \(us\)/, 'Call +91 95607 39281'],
 
   // "thin competitor" framing
   [/\(Not Thin, \d[\d,+]* words\)/g, ''],
@@ -146,7 +142,7 @@ const FIXES = [
   // table headers
   ["['Signal', 'Urban/Zoopgo/TechSquad (Thin)', 'This Full Home Deep Cleaning Pillar (Not Thin)']",
    "['What to Check', 'Typical \u201cStarts At\u201d Quote', 'Our Fixed-Price Full Home Deep Clean']"],
-  ["['Signal', 'Thin Competitors (ProsAdda/AKS/SKKS/BusyBucket/ Balaji)', 'This Bathroom Deep Cleaning Gurgaon Pillar (Not Thin)']",
+  ["['Signal', 'Thin Competitors (ProsAdda/AKS/SKKS/BusyBucket)', 'This Bathroom Deep Cleaning Gurgaon Pillar (Not Thin)']",
    "['What to Compare', '\u20b9399 \u201cStarts At\u201d Quote', 'Our \u20b9800/Bath Fixed Price']"],
   ["['Signal', 'Kleanhomz #6 (Thin, 800 words)', 'This Home Deep Cleaning Service Gurgaon Pillar (Not Thin)']",
    "['What to Check', 'A Cheaper Local Quote', 'Our Fixed BHK Price']"],

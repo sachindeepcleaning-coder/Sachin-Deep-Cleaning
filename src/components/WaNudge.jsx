@@ -29,7 +29,7 @@ export default function WaNudge() {
           </div>
           <div>
             <div className="wa-nudge-heading">Chat with us for instant reply →</div>
-            <div className="wa-nudge-sub">Work manager replies in under 2 minutes ⚡</div>
+            <div className="wa-nudge-sub">Message the work manager directly</div>
           </div>
         </div>
         <div className="wa-nudge-preview">Your details are pre-filled. Just tap Send! 👇</div>

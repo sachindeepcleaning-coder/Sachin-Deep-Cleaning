@@ -1,4 +1,4 @@
-import { waMsg, REVIEW_URL } from '../lib/site.js';
+import { waMsg, REVIEW_URL, hasRealReviewUrl } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 export default function ThankYouPage() {
@@ -16,14 +16,18 @@ export default function ThankYouPage() {
             💬 WhatsApp Us Now
           </a>
           <a href="tel:+919560739281" className="fcta-call" onClick={phoneCallClick}>
-            📞 Call: +91 95607-39281
+            📞 Call: +91 95607 39281
           </a>
         </div>
         <p style={{ marginTop: '28px' }}>
           <a href="/" style={{ color: '#8FA4BE', textDecoration: 'none', fontWeight: 600 }}>← Back to home</a>
         </p>
         <p style={{ marginTop: '18px', fontSize: '.88rem', color: 'var(--muted)' }}>
-          Used us before? <a href={REVIEW_URL} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>⭐ Review us on Google</a> — it takes 30 seconds and helps other Gurgaon families find us.
+          Used us before? {hasRealReviewUrl() ? (
+            <a href={REVIEW_URL} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>⭐ Review us on Google</a>
+          ) : (
+            <span style={{ color: 'var(--primary)', fontWeight: 700 }}>⭐ Review us on Google</span>
+          )} — it takes 30 seconds and helps other Gurgaon families find us.
         </p>
       </div>
     </section>

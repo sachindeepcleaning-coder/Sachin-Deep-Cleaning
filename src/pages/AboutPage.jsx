@@ -12,7 +12,7 @@ const TEAM = [
 ];
 
 const PROCESS = [
-  { title: 'Call or WhatsApp', desc: 'Reach us at +91 9560739281 or fill the form — we confirm scope, exact price and slot, often same-day if booked before noon.' },
+  { title: 'Call or WhatsApp', desc: 'Reach us at +91 95607 39281 or fill the form — we confirm scope, exact price and slot, often same-day if booked before noon.' },
   { title: 'We Arrive Equipped', desc: 'Our team arrives with all machines and eco-friendly, food-safe products.' },
   { title: 'We Deep Clean', desc: 'Every area is cleaned systematically — kitchen, bathrooms, rooms, floors and fixtures.' },
   { title: 'You Inspect', desc: 'We walk through every area together so you can see the result.' },
@@ -83,7 +83,7 @@ export default function AboutPage({ url }) {
               ['2018 — Machines over mops', 'Added hot-water extraction, scrubbers and trade descalers as hard-water and construction-dust jobs demanded real equipment.'],
               ['2021 — Society routes', 'Zone rosters across DLF, Sohna Road and Golf Course Road — nearest-team dispatch replacing cross-city travel.'],
               ['2024 — Reviews from your sector', 'Sector-tagged Google reviews from Gurgaon customers; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
-              ['2026 — 5,000+ homes', 'Studios to villas plus offices and clinics, with published BHK prices and owner-supervised 3 BHK+ jobs.'],
+              ['2026 — published BHK prices', 'Studios to villas plus offices and clinics, with published BHK prices and owner-supervised 3 BHK+ jobs.'],
             ].map(([title, desc], i) => (
               <div key={title} className="hiw-step fade-up">
                 <div className="hiw-num">{i + 1}</div>
@@ -202,7 +202,7 @@ export default function AboutPage({ url }) {
               Sachin Deep Cleaning started in 2015 with one team, one scrubber and a simple rule that has never changed: <strong>you pay only after you walk through and approve the work</strong>. A decade later that rule still runs every job — across DLF Phase 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sushant Lok, South City and 30+ sectors, from compact 1 RK studios to 5 BHK villas, plus offices, shops and clinics after hours.
             </p>
             <p className="section-sub" style={{ margin: '16px auto 0' }}>
-              What changed in ten years is the craft: hot-water extraction for sofas and carpets, acid descaling tuned for Gurgaon’s hard water, food-safe degreasing for modular chimneys, and a supervisor walkthrough on every booking — plus festive rosters that have run eleven straight Diwali seasons without missing a single booked slot. What never changed is the accountability — the owner’s number (+91 95607-39281) is on every quote, and the same police-verified teams return to the same societies season after season.
+              What changed in ten years is the craft: hot-water extraction for sofas and carpets, acid descaling tuned for Gurgaon’s hard water, food-safe degreasing for modular chimneys, and a supervisor walkthrough on every booking — plus festive rosters that have run eleven straight Diwali seasons without missing a single booked slot. What never changed is the accountability — the owner’s number (+91 95607 39281) is on every quote, and the same police-verified teams return to the same societies season after season.
             </p>
           </div>
           <div className="hiw-wrap" style={{ marginTop: '36px' }}>

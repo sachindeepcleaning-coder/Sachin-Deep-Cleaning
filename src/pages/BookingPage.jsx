@@ -17,7 +17,7 @@ const BENEFITS = [
 ];
 
 const STEPS = [
-  ['Message your BHK', 'WhatsApp +91 9560739281 — sector, BHK, preferred date. Thirty seconds of typing.'],
+  ['Message your BHK', 'WhatsApp +91 95607 39281 — sector, BHK, preferred date. Thirty seconds of typing.'],
   ['Get fixed price', 'Itemised quote on the call: rooms, bathrooms, kitchen, add-ons. Locked, no asterisks.'],
   ['Team arrives equipped', 'Police-verified crew with machines and eco-friendly products. Team-lead number shared beforehand.'],
   ['Approve, then pay', 'Walk every room first. Pay only on approval; misses re-cleaned on the spot, free.'],
@@ -30,7 +30,7 @@ const FAQS = [
   ['Can I reschedule or cancel online?', 'Yes — one message moves or cancels free of charge, even morning-of. Compare that against app cancellation windows before you commit elsewhere.'],
   ['Is my number and address safe without an app?', 'Your details stay in a private chat with our booking desk — no app permissions, no location tracking, no data harvesting. Key-pouch + photo-log system for working couples.'],
   ['What if I need a daily maid, not a one-time clean?', 'We will tell you honestly: daily chores need a maid agency, not us. Read our house-maid-vs-deep-cleaning guide first — then book us for weekly upkeep (from ₹499/visit) and quarterly resets.'],
-  ['Online booking Gurgaon me kaise karein bina app ke?', 'WhatsApp +91 9560739281 par BHK + sector bhejein — 30 minute me fixed price, same-day slot dopahar se pehle message par. Kaam ke baad payment, advance kabhi nahi.'],
+  ['Online booking Gurgaon me kaise karein bina app ke?', 'WhatsApp +91 95607 39281 par BHK + sector bhejein — 30 minute me fixed price, same-day slot dopahar se pehle message par. Kaam ke baad payment, advance kabhi nahi.'],
   ['Can I book for my parents’ home in another sector?', 'Yes — share their sector, BHK and a contact number; we confirm the slot with you, clean with a walkthrough to them on video call if needed, and you pay on UPI after their approval. Popular for NRI families booking from abroad.'],
 ];
 
@@ -70,7 +70,7 @@ export default function BookingPage({ url }) {
               Without Any <span className="hl2">App Download</span>
             </h1>
             <p className="hero-sub">
-              This is the direct booking page for <strong>Sachin Deep Cleaning in Gurgaon</strong>. A full-home deep clean starts at <strong>₹2,500 for a 1 BHK</strong>, ₹4,500 for a 2 BHK and ₹5,500 for a 3 BHK, and you <strong>pay only after you walk through and approve the work</strong>. Book in under a minute — message +91 95607-39281 on WhatsApp or call the same number. One message locks the fixed price, confirms the slot and books the same police-verified team that serves DLF Phase 1–5, Sohna Road, Golf Course Road and every Gurgaon sector. No app, no account, zero advance.
+              This is the direct booking page for <strong>Sachin Deep Cleaning in Gurgaon</strong>. A full-home deep clean starts at <strong>₹2,500 for a 1 BHK</strong>, ₹4,500 for a 2 BHK and ₹5,500 for a 3 BHK, and you <strong>pay only after you walk through and approve the work</strong>. Book in under a minute — message +91 95607 39281 on WhatsApp or call the same number. One message locks the fixed price, confirms the slot and books the same police-verified team that serves DLF Phase 1–5, Sohna Road, Golf Course Road and every Gurgaon sector. No app, no account, zero advance.
             </p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 30-Second Booking</span>

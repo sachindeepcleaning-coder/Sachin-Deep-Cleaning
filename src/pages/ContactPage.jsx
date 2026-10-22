@@ -5,7 +5,7 @@ import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import MapEmbed from '../components/MapEmbed.jsx';
 import { JsonLd, localBusinessSchema, faqSchema } from '../lib/schema.jsx';
-import { waMsg, BRAND_NAME, GBP_LISTING_NAME, ADDRESS_FULL } from '../lib/site.js';
+import { waMsg, BRAND_NAME, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const FAQS = [
@@ -42,7 +42,7 @@ export default function ContactPage({ url }) {
               <span className="hl2">Same-Day</span> Booking
             </h1>
             <p className="hero-sub">
-              Leave your details and we’ll call you back in under 5 minutes — often under 3. Or reach us directly on WhatsApp for an instant reply from our work manager, who confirms your sector slot and <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>locks your fixed price</a> in the same chat.
+              Leave your details and we’ll call you back with a fixed price for your sector and home size. Or reach us directly on WhatsApp for a direct reply from our work manager, who confirms your slot and <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>locks your fixed price</a> in the same chat.
             </p>
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 5-Min Callback</span>
@@ -54,7 +54,7 @@ export default function ContactPage({ url }) {
                 💬 WhatsApp Us Now — Instant Reply
               </a>
               <a href="tel:+919560739281" className="fcta-call" style={{ margin: 0, textAlign: 'center' }} onClick={phoneCallClick}>
-                📞 Call: +91 95607-39281
+                📞 Call: +91 95607 39281
               </a>
             </div>
           </div>
@@ -98,9 +98,9 @@ export default function ContactPage({ url }) {
           </div>
           <div className="whyus-grid" style={{ marginTop: '28px' }}>
             {[
-              ['📞', 'Call +91 95607-39281', 'Fastest for complex jobs — villas, offices, post-renovation. Talk scope with the manager and lock the price in one conversation.'],
+              ['📞', 'Call +91 95607 39281', 'Fastest for complex jobs — villas, offices, post-renovation. Talk scope with the manager and lock the price in one conversation.'],
               ['💬', 'WhatsApp with photos', 'Best for accuracy — send room, kitchen and bathroom photos with your sector and BHK; the fixed quote comes back with zero guesswork.'],
-              ['📝', 'Quote form above', 'Best when busy — drop name, number and requirement; callback in under 5 minutes in working hours. Zero spam, zero commitment.'],
+              ['📝', 'Quote form above', 'Best when busy — drop name, number and requirement; callback with a fixed price in working hours. Zero spam, zero commitment.'],
               ['🏢', 'Societies & offices', 'Share tower, sq ft and timing constraints once — RWA passes, service lifts and after-hours windows handled for you.'],
             ].map(([icon, title, desc]) => (
               <div key={title} className="why-card fade-up">
@@ -149,17 +149,17 @@ export default function ContactPage({ url }) {
           <div style={{ textAlign: 'center' }} className="fade-up">
             <div className="section-tag">Find Us</div>
             <h2 className="section-title">We Serve Every Sector of Gurgaon</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at <a href="/blog/sushant-lok-1-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok Phase I</a> with zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon, so the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 95607-39281 to confirm nearest slot.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at <a href="/blog/sushant-lok-1-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok Phase I</a> with zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon, so the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 95607 39281 to confirm nearest slot.</p>
           </div>
           <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)' }} className="fade-up">
             <MapEmbed
-              query={`${GBP_LISTING_NAME} ${ADDRESS_FULL}`}
+              query={`${BRAND_NAME} ${ADDRESS_FULL}`}
               address={ADDRESS_FULL}
               brand={BRAND_NAME}
             />
           </div>
           <div style={{ textAlign: 'center', marginTop: 16, fontSize: '.92rem', color: 'var(--muted)' }}>
-            <strong style={{ color: 'var(--dark)' }}>{BRAND_NAME}</strong> — {ADDRESS_FULL} &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607-39281</a>
+            <strong style={{ color: 'var(--dark)' }}>{BRAND_NAME}</strong> — {ADDRESS_FULL} &nbsp;|&nbsp; <a href="tel:+919560739281" style={{ color: 'var(--primary)', fontWeight: 700 }}>+91 95607 39281</a>
           </div>
         </div>
       </section>

@@ -83,17 +83,16 @@ export default function QuoteForm() {
   return (
     <div className="form-card" id="formCard">
       <div className="form-offer">
-        <div className="form-offer-icon">🎁</div>
+        <div className="form-offer-icon">📋</div>
         <div className="form-offer-text">
-          <div className="form-offer-main">₹200 OFF + FREE Bathroom Clean</div>
-          <div className="form-offer-sub">For new customers booking today</div>
+          <div className="form-offer-main">Free fixed-price quote</div>
+          <div className="form-offer-sub">Price confirmed before the visit — nothing hidden</div>
         </div>
-        <div className="form-offer-slots" id="slotsForm" data-slots></div>
       </div>
 
       <div className="form-title">Get Your FREE Quote — 30 Seconds</div>
       <div className="form-subtitle">
-        We call you back in <span className="cb-time" id="callbackTime">under 3 min</span> · No spam, no commitment
+        We call you back with a fixed price for your home size &nbsp;·&nbsp; No spam, no commitment
       </div>
 
       {error && (

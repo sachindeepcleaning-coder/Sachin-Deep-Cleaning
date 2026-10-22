@@ -38,20 +38,20 @@ export const WHY_US_VARIANTS = {
 export const GUARANTEE_VARIANTS = {
   standard: {
     title: 'Our Iron-Clad Satisfaction Guarantee — 3-Day Service Promise',
-    body: "We're so confident in our cleaning that you **don't pay until you're satisfied**. Not happy with any area? We re-clean for free within 24 hours. Still not satisfied? Full refund — no questions asked. Plus **₹10,000 damage protection** on every booking — same as Urban Company.",
-    pills: ['✓ Pay After Cleaning', '✓ Free Re-Clean Within 24hrs', '✓ 3-Day Service Guarantee', '✓ ₹10k Damage Insurance', '✓ No Hidden Charges', '✓ Verified Professionals'],
+    body: "We're so confident in our cleaning that you **don't pay until you're satisfied**. Not happy with any area? We re-clean for free within 24 hours. Still not satisfied? Full refund — no questions asked. If anything goes wrong, tell us on the spot and we sort it before you pay.",
+    pills: ['✓ Pay After Cleaning', '✓ Free Re-Clean Within 24hrs', '✓ 3-Day Service Guarantee', '✓ No Hidden Charges', '✓ Verified Professionals'],
   },
   // move / fullhome — handover angle.
   handover: {
     title: 'Our Deposit-Safe Handover Promise',
-    body: "Moving or resetting a full home is judged at one moment — the **walkthrough**. So you **don't pay until it passes**: every room ticked against the written checklist, landlord-grade finish in kitchen and baths, and a free 24-hour re-clean if anything falls short. Plus **₹10,000 damage protection** on every booking.",
-    pills: ['✓ Pay After Walkthrough', '✓ Landlord-Checklist Finish', '✓ Free Re-Clean Within 24hrs', '✓ ₹10k Damage Insurance', '✓ Fixed BHK Price', '✓ No Hidden Charges'],
+    body: "Moving or resetting a full home is judged at one moment — the **walkthrough**. So you **don't pay until it passes**: every room ticked against the written checklist, landlord-grade finish in kitchen and baths, and a free 24-hour re-clean if anything falls short. If anything goes wrong, tell us on the spot and we sort it before you pay.",
+    pills: ['✓ Pay After Walkthrough', '✓ Landlord-Checklist Finish', '✓ Free Re-Clean Within 24hrs', '✓ Fixed BHK Price', '✓ No Hidden Charges'],
   },
   // office — uptime angle.
   commercial: {
     title: 'Our Zero-Downtime Commercial Promise',
-    body: "Offices can't pause for cleaning, so neither do you: **after-hours crews**, a **signed-off site inspection before invoicing**, and a free next-night re-clean of any flagged zone. GST invoice and NDA handling included — plus **₹10,000 damage protection** on every booking.",
-    pills: ['✓ After-Hours Service', '✓ Sign-Off Before Invoicing', '✓ Free Next-Night Re-Clean', '✓ ₹10k Damage Insurance', '✓ GST Invoice Included', '✓ Verified Professionals'],
+    body: "Offices can't pause for cleaning, so neither do you: **after-hours crews**, a **signed-off site inspection before invoicing**, and a free next-night re-clean of any flagged zone. GST invoice and NDA handling included — and if anything goes wrong, tell us on the spot and we sort it before you pay.",
+    pills: ['✓ After-Hours Service', '✓ Sign-Off Before Invoicing', '✓ Free Next-Night Re-Clean', '✓ GST Invoice Included', '✓ Verified Professionals'],
   },
 };
 

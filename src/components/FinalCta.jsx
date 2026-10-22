@@ -6,14 +6,14 @@ export default function FinalCta() {
     <section className="final-cta">
       <div className="final-cta-inner fade-up">
         <h2>Ready for a Spotless Home?</h2>
-        <p>Join 5,000+ happy Gurgaon families. Get your free quote in under 30 seconds — no commitment, no hidden charges, pay only after cleaning.</p>
+        <p>Get your free fixed-price quote in under 30 seconds — no commitment, no hidden charges, pay only after cleaning.</p>
         <div className="final-cta-btns">
           <a
             href={PHONE_TEL}
             className="fcta-call"
             onClick={phoneCallClick}
           >
-            📞 Call: +91 95607-39281
+            📞 Call: +91 95607 39281
           </a>
           <a
             href={waMsg('Hi I want to book deep cleaning in Gurgaon. Please send me a quote.')}

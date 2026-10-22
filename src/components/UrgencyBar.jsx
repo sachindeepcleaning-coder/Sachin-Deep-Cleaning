@@ -16,8 +16,8 @@ export default function UrgencyBar() {
 
   return (
     <div className="urgency-bar">
-      <span className="ub-live"><span className="ub-dot"></span>OPEN TODAY</span>
-      🏠 Full Home Deep Cleaning in Gurgaon &nbsp;·&nbsp; <span className="ub-hl">under 5 min callback</span> &nbsp;·&nbsp; 🎁 <span className="ub-hl">₹200 OFF</span> for new customers
+      <span className="ub-live"><span className="ub-dot"></span>OPEN 7 DAYS</span>
+      🏠 Deep Cleaning in Gurgaon &nbsp;·&nbsp; <span className="ub-hl">fixed BHK price</span> &nbsp;·&nbsp; <span className="ub-hl">pay after walkthrough</span> &nbsp;·&nbsp; same-day slots when you book before noon
     </div>
   );
 }

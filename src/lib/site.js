@@ -9,7 +9,7 @@ export function pageUrl(file = 'index') {
   return file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${file}.html`;
 }
 
-export const PHONE = '+91 9560739281';
+export const PHONE = '+91 95607 39281';
 export const PHONE_TEL = 'tel:+919560739281';
 export const WHATSAPP_NUMBER = '919560739281';
 export const WHATSAPP = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -47,30 +47,40 @@ export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 
 // ─── Entity (NAP) — single source of truth ──────────────────────────────────
 // Must match the Google Business Profile exactly. If the GBP changes, change it here.
+//
+// SINGLE BRAND: Sachin Deep Cleaning is the only brand this site represents.
+// There is no second trading name anywhere on the domain — a second brand name
+// splits the Knowledge Graph into two entities and halves the local signal
+// for both.
+//
+// [VERIFY] The address below is the one address used everywhere on the site
+// (footer, contact, About, JSON-LD, llms.txt, sitemap captions). The earlier
+// "Sector 27, Sector 43" double was removed because a single shop cannot be in
+// two sectors. Confirm the surviving sector against the live GBP listing and
+// change it here only — every other file reads from here.
 export const BRAND_NAME = 'Sachin Deep Cleaning';
-// Sachin Deep Cleaning is the primary company. GBP_LISTING_NAME is the name the
-// Google Maps listing currently shows.
-export const GBP_LISTING_NAME = 'Balaji Cleaning Services';
 
-// Address exactly as shown on the Google Business Profile (checked 2026-10-09).
+// Address exactly as shown on the Google Business Profile.
 export const ADDRESS_PARTS = {
-  streetAddress: 'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 27, Sector 43',
+  streetAddress: 'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 43',
   addressLocality: 'Gurugram',
   addressRegion: 'Haryana',
   postalCode: '122009',
   addressCountry: 'IN',
 };
 export const ADDRESS_FULL =
-  'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 27, Sector 43, Gurugram, Haryana 122009';
-export const PLUS_CODE = 'F33H+G7 Gurugram';
+  'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 43, Gurugram, Haryana 122009';
 
-// Derived from the GBP plus code F33H+G7 (approx. 14 m). Confirm in Google Maps
-// (right-click the pin) and update if it differs.
+// Coordinates — one place, used by the meta geo tags and the JSON-LD.
 export const GEO = { latitude: 28.4538, longitude: 77.0782 };
 
 // Google rating — copy from the live GBP, never estimate. Every on-page claim,
 // the JSON-LD and llms.txt read from here; scripts/content-lint.mjs fails the
 // build if copy states a different review count.
+//
+// [VERIFY] Re-check this against the live GBP before each deploy. If the live
+// count has moved, update `count` here and nothing else — do NOT edit the
+// number anywhere else, and never invent a count.
 export const RATING = {
   value: '4.4',
   count: 80,
@@ -87,9 +97,21 @@ export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
-// "Review us on Google" link (Maps listing search URL — opens the live
-// GBP listing where customers can leave a review). Used by Footer + ThankYou.
-export const REVIEW_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${GBP_LISTING_NAME} ${PLUS_CODE}`)}`;
+// "Review us on Google" link — points at the live Google Business Profile.
+//
+// [VERIFY] Replace with the real GBP review URL (the share link from the
+// listing, i.e. https://maps.app.goo.gl/… or the place URL + /reviews).
+// The placeholder below is intentionally NOT a working link — a search URL for
+// the brand name can land on a different business, which is exactly the
+// entity-splitting problem this file exists to prevent.
+export const GBP_REVIEW_URL = '[GOOGLE_REVIEW_LINK from my GBP]';
+export const REVIEW_URL = GBP_REVIEW_URL;
+
+// True once GBP_REVIEW_URL has been replaced with the real listing URL.
+// While it is still a placeholder the UI renders the review prompt as plain
+// text instead of a broken link, and scripts/preflight.mjs reports it as an
+// outstanding [VERIFY] item.
+export const hasRealReviewUrl = (url = GBP_REVIEW_URL) => /^https?:\/\//.test(url);
 
 export const SOCIAL = {
   facebook: 'https://www.facebook.com/profile.php?id=61577737535478',
@@ -98,6 +120,20 @@ export const SOCIAL = {
   twitter: 'https://x.com/sachindeepclean',
   whatsapp: WHATSAPP,
 };
+
+// The four profiles that identify this business on the web, in the order they
+// should appear in schema.org `sameAs`.
+//
+// [VERIFY] The Google Business Profile entry is a placeholder until the real
+// GBP URL is supplied (see GBP_REVIEW_URL). Keep this list in sync with the
+// GBP — `sameAs` is how a crawler confirms that the website, the social
+// profiles and the Maps listing all describe ONE business.
+export const SAME_AS = [
+  GBP_REVIEW_URL,
+  SOCIAL.facebook,
+  SOCIAL.instagram,
+  SOCIAL.youtube,
+];
 
 export const AREAS = [
   'DLF Phase 1-5', 'Sohna Road', 'Golf Course Road', 'Cyber City', 'MG Road',

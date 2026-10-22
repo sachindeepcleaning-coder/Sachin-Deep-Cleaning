@@ -44,9 +44,6 @@ const COMPETITOR_BRANDS = [
   'ProsAdda', 'SKKS', 'AKS Facilities', 'BusyBucket', 'Kleanhomz', 'DustBusters',
   'TechSquad', 'Zoopgo', 'Tumbledry', 'SPFM', 'Favorz', 'MaidsinGurgaon',
   'Smart City Care',
-  // Balaji Cleaning Services / A One Deep Cleaning are our own sub-brands (not competitors).
-  // The real competitor is balajicleaning.com — keep it off non-comparison pages:
-  'balajicleaning.com',
 ];
 const isComparatorPage = (slug) => /-vs-|best-|versus|compare/.test(slug);
 
