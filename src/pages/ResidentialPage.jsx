@@ -171,7 +171,7 @@ export default function ResidentialPage({ url }) {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection reviews={[]} />
 
       <section className="section section-alt">
         <div className="section-inner" style={{ textAlign: 'center' }}>

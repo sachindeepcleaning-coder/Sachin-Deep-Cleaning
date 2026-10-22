@@ -125,7 +125,7 @@ export default function PartnersPage({ url }) {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection reviews={[]} />
 
       <AreasSection />
 

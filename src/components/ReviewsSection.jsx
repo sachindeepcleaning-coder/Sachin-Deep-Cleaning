@@ -1,6 +1,4 @@
-import { REVIEWS } from '../lib/landing.js';
-
-export default function ReviewsSection({ reviews = REVIEWS }) {
+export default function ReviewsSection({ reviews = [] }) {
   // A page with no testimonials must not imply it has any, and no rating or
   // review count is published anywhere on this site — so a page without
   // quotes shows no review section at all.
@@ -17,7 +15,6 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
         <div className="reviews-grid">
           {reviews.map(([initials, name, loc, text]) => (
             <div key={initials + name} className="review-card fade-up">
-              <div className="review-stars">⭐⭐⭐⭐⭐</div>
               <p className="review-text">&ldquo;{text}&rdquo;</p>
               <div className="reviewer">
                 <div className="reviewer-av">{initials}</div>
@@ -25,7 +22,6 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
                   <div className="reviewer-name">{name}</div>
                   <div className="reviewer-loc">{loc}</div>
                 </div>
-                <span className="review-verified">✓ Verified</span>
               </div>
             </div>
           ))}

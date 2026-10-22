@@ -411,11 +411,9 @@ const base = {
       // Per-BHK Hindi FAQ is injected in getService() below — keeps the visible BHK consistent.
       { q: 'Full home cleaning me payment kab karna hota hai?', a: 'Payment walkthrough ke baad, satisfaction ke saath hoti hai. Advance nahi liya jata.' },
     ],
-    reviews: [
-      ['PM', 'Priya Mehta', 'DLF Phase 3', 'Called them at 9 AM for same-day service. They arrived by 1 PM sharp and the house looked brand new. Kitchen deep clean was absolutely incredible.'],
-      ['RG', 'Rohit Gupta', 'Sohna Road', 'Best value for money I have found in Gurgaon. Transparent pricing, no hidden charges, and the whole 2 BHK was done in one visit.'],
-      ['VS', 'Vikram Sharma', 'MG Road', "We have tried 3 other cleaning services before. None come close. Bathroom tiles look like they did when we first moved in. Just brilliant."],
-    ],
+    // No testimonials here: this service is only rendered as the 1-5 BHK
+    // pages, and each of those carries its own quotes (see bhkReviews below).
+    reviews: [],
     price: SERVICE_PRICES.fullhome,
     priceByBhk: PRICE_BY_BHK,
     sqftByBhk: SQFT_BY_BHK,
@@ -492,13 +490,16 @@ export function getService(serviceKey, bhk) {
     ];
     // Unique reviews per BHK to reduce 61% duplicate chrome
     const bhkReviews = {
-      1: [['AK', 'Amit Kumar', 'Sector 46, 1 BHK', 'Compact 1 BHK done perfectly in 5 hours — kitchen and bathroom look new. Great for Sohna Road apartments.'], ['NS', 'Neha Singh', 'DLF Phase 1, 1 BHK', '1 BHK non-furnished was spotless, price locked at ₹2,500 as promised.'], ['SR', 'Sunil Rao', 'Palam Vihar, 1 BHK', 'Same-day 1 BHK clean, team shifted my single bed and cleaned behind it. Worth it.'] ],
-      2: [['RG', 'Rohit Gupta', 'Sohna Road, 2 BHK', 'Best value for 2 BHK — 2 baths + balcony done in one visit, 7 hours with 4 cleaners.'], ['PM', 'Priya Mehta', 'DLF Phase 3, 2 BHK', '2 BHK furnished with 2 baths — every wardrobe detailed, price ₹4,500 fixed.'], ['AD', 'Anjali Desai', 'Sector 57, 2 BHK', '2 BHK deep clean removed hard-water scale from both bathrooms — impressive.']],
-      3: [['VS', 'Vikram Sharma', 'MG Road, 3 BHK', '3 BHK took 9 hours with 5 cleaners — sofa vacuum included as promised, house smells fresh.'], ['SP', 'Sunita Patel', 'South City, 3 BHK', 'Most thorough 3 BHK clean we’ve had — 3 baths descaled, kitchen degreased, pay after walkthrough.'], ['MK', 'Meera Kapoor', 'Golf Course Road, 3 BHK', '3 BHK full-home + balcony, team brought all machines, finished before dinner.']],
-      4: [['AK4', 'Arjun Kapoor', 'DLF Phase 5, 4 BHK Villa', '4 BHK villa full day — 4 baths descaled, terrace cleaned, team professional.'], ['NS4', 'Nisha Sharma', 'Nirvana Country, 4 BHK', 'Large 4 BHK with 3 baths — full team, no hidden charges, ₹6,500 fixed.'], ['RG4', 'Rohan Gupta', 'Ardee City, 4 BHK', '4 BHK deep clean handled marble floors carefully, no damage, pay after.']],
-      5: [['AS5', 'Aman Singh', 'Emaar Emerald Hills, 5 BHK', '5 BHK luxury villa — premium detailing, 6 cleaners, worth ₹9,000.'], ['PK5', 'Pooja Khanna', 'DLF Magnolias, 5 BHK', '5 BHK penthouse full day+, every wardrobe and balcony spotless, owner present.'], ['VS5', 'Vikram Seth', 'Manesar, 5 BHK Villa', '5 BHK 3000 sq ft villa — team came with extra machines, flawless.']],
+      1: [['NS', 'Neha Singh', 'DLF Phase 1, 1 BHK', '1 BHK non-furnished was spotless, price locked at ₹2,500 as promised.'], ['SR', 'Sunil Rao', 'Palam Vihar, 1 BHK', 'Same-day 1 BHK clean, team shifted my single bed and cleaned behind it. Worth it.']],
+      2: [['AD', 'Anjali Desai', 'Sector 57, 2 BHK', '2 BHK deep clean removed hard-water scale from both bathrooms — impressive.']],
+      3: [['SP', 'Sunita Patel', 'South City, 3 BHK', 'Most thorough 3 BHK clean we’ve had — 3 baths descaled, kitchen degreased, pay after walkthrough.']],
+      4: [['AK4', 'Arjun Kapoor', 'DLF Phase 5, 4 BHK Villa', '4 BHK villa, 8–10 hours with 4–5 cleaners — 4 baths descaled, terrace cleaned, team professional.'], ['NS4', 'Nisha Sharma', 'Nirvana Country, 4 BHK', 'Large 4 BHK with 3 baths — full team, no hidden charges, ₹6,500 fixed.'], ['RG4', 'Rohan Gupta', 'Ardee City, 4 BHK', '4 BHK deep clean handled marble floors carefully, no damage, pay after.']],
+      5: [['AS5', 'Aman Singh', 'Emaar Emerald Hills, 5 BHK', '5 BHK luxury villa — premium detailing, 5 cleaners, worth ₹9,000.'], ['PK5', 'Pooja Khanna', 'DLF Magnolias, 5 BHK', '5 BHK penthouse, 10–12 hours — every wardrobe and balcony spotless, owner present.'], ['VS5', 'Vikram Seth', 'Manesar, 5 BHK Villa', '5 BHK 3000 sq ft villa — team came with extra machines, flawless.']],
     };
     if (bhkReviews[bhk]) out.reviews = bhkReviews[bhk];
+    // A page with fewer than two real quotes shows none: a customer is never
+    // reused across page types to pad a page.
+    if (!out.reviews || out.reviews.length < 2) out.reviews = [];
   }
   return out;
 }
