@@ -27,7 +27,7 @@ const FAQS = [
   ['Do you cover gated societies and RWAs?', 'Yes. Our teams regularly work across Gurgaon major societies and are used to standard visitor-entry and ID-verification processes.'],
   ['What if my exact locality is not listed?', 'Our listed areas are not exhaustive. Call us directly — we cover most of Gurgaon and can usually confirm coverage in under a minute.'],
   ['How is pricing fixed for my specific home?', 'On the confirmation call we itemise your BHK, bathroom count, kitchen type and add-ons (sofa seats, carpet sq ft) and lock one figure. 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500 — same in every sector, no travel or gate-entry surcharge.'],
-  ['Do you clean villas and builder floors, not just flats?', 'Yes — villas and floors get larger teams (5–6 cleaners), terrace and facade wash, and stairwell detailing. 4–5 BHK villa packages run ₹6,500–₹9,000 with the same pay-after walkthrough.'],
+  ['Do you clean villas and builder floors, not just flats?', 'Yes — villas and floors get larger teams (5 cleaners), terrace and facade wash, and stairwell detailing. 4–5 BHK villa packages run ₹6,500–₹9,000 with the same pay-after walkthrough.'],
   ['Can I get the same team for repeat visits?', 'On weekly and bi-weekly plans, yes — the same crew learns your home, your RWA gate and your preferences. One-time and festive bookings get the nearest available verified team.'],
 ];
 

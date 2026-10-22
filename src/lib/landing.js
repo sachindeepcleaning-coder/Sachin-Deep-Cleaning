@@ -103,19 +103,19 @@ export const PRICING = [
   {
     size: '1 BHK Deep Clean',
     price: '2,500',
-    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~5-6 hours · 3 cleaners'],
+    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~5-6 hours · 2 cleaners'],
     pop: false,
   },
   {
     size: '2 BHK Deep Clean',
     price: '4,500',
-    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~7-8 hours · 4 cleaners'],
+    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~7-8 hours · 3 cleaners'],
     pop: true,
   },
   {
     size: '3 BHK Deep Clean',
     price: '5,500',
-    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~9-10 hours · 5 cleaners'],
+    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~9-10 hours · 3-4 cleaners'],
     pop: false,
   },
 ];

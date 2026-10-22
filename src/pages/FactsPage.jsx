@@ -104,7 +104,7 @@ const FAQS = [
   },
   {
     q: 'How long does a deep clean take?',
-    a: 'A 1 BHK takes about 5–6 hours with a 2-person crew, a 2 BHK 7–8 hours with 3 cleaners, a 3 BHK 9–10 hours with 4 cleaners and a 5 BHK 10–14 hours with 6 cleaners. The timing for your home is confirmed on the call.',
+    a: 'A 1 BHK takes about 5–6 hours with a 2-person crew, a 2 BHK 7–8 hours with 3 cleaners, a 3 BHK 9–10 hours with 3–4 cleaners, a 4 BHK 8–10 hours with 4–5 cleaners and a 5 BHK 10–12 hours with 5 cleaners. The timing for your home is confirmed on the call.',
   },
   {
     q: 'Which areas of Gurgaon do you serve?',

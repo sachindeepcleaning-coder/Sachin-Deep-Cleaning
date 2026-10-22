@@ -510,9 +510,9 @@ export const MONEY_QA = {
       rows: [
         ['1 BHK', '₹2,500', '400–600 sq ft', '5–6 hours, 2 cleaners'],
         ['2 BHK', '₹4,500', '601–1,000 sq ft', '7–8 hours, 3 cleaners'],
-        ['3 BHK', '₹5,500', '1,001–1,500 sq ft', '9–10 hours, 4 cleaners'],
-        ['4 BHK', '₹6,500', '1,501–2,100 sq ft', '8–10 hours, 5 cleaners'],
-        ['5 BHK / villa', '₹9,000', '2,500–3,000 sq ft', '10–12 hours, 5–6 cleaners'],
+        ['3 BHK', '₹5,500', '1,001–1,500 sq ft', '9–10 hours, 3–4 cleaners'],
+        ['4 BHK', '₹6,500', '1,501–2,100 sq ft', '8–10 hours, 4–5 cleaners'],
+        ['5 BHK / villa', '₹9,000', '2,500–3,000 sq ft', '10–12 hours, 5 cleaners'],
         ['Per square foot equivalent', '₹3–₹6 per sq ft', 'Any built-up size', 'Scales with the area'],
         ['Furnished home', 'Add ₹500–₹1,500', 'Sofa and dining units', 'Adds 1–2 hours'],
       ],
