@@ -43,7 +43,7 @@ export const SITE_KEY = 'SACHIN-SHOP';
 
 export const STARTING_PRICE = '₹2,000';
 export const PHONE_HREF = PHONE_TEL;
-export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
+export const SERVICE_AREA_TEXT = 'Serving all areas of Gurgaon, Haryana';
 
 // ─── Entity (NAP) — single source of truth ──────────────────────────────────
 // Must match the Google Business Profile exactly. If the GBP changes, change it here.
@@ -55,7 +55,7 @@ export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 //
 // The address below is the ONE address used everywhere on the site (footer,
 // contact, About, JSON-LD, llms.txt, sitemap captions, Maps links). The earlier
-// "Sector 27, Sector 43" double was removed because a single shop cannot be in
+// two-sector double was removed because a single shop cannot be in
 // two sectors, and the block letter is Block B (confirmed 2026-10-22).
 // Change it here only — every other file reads from here.
 export const BRAND_NAME = 'Sachin Deep Cleaning';

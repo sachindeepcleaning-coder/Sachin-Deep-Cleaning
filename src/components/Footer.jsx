@@ -14,7 +14,7 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer>
-      <p><strong>Sachin Deep Cleaning Services</strong> — Professional Deep Cleaning in Gurgaon</p>
+      <p><strong>Sachin Deep Cleaning</strong> — Professional Deep Cleaning in Gurgaon</p>
       <p>📍 {ADDRESS_FULL} — serving all of Gurgaon &nbsp;|&nbsp; 📞 <a href={PHONE_TEL} onClick={phoneCallClick}>+91 95607 39281</a></p>
       <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved.</p>
       <p style={{ marginTop: '6px' }}>
