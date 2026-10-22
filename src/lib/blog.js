@@ -2283,7 +2283,7 @@ export const ARTICLES = [
     blocks: [
       { t: 'p', x: "Typing **deep cleaners near me** or **home cleaners near me** into Google means you want a person — a verified cleaner at your door today — not a brochure. This guide shows how **deep cleaners near you in Gurgaon** actually work: who arrives, what they bring, what you pay, and how to avoid the unverified, advance-payment traps that dominate **cleaners near me** results." },
       { t: 'h2', x: 'What “Deep Cleaners Near Me” Means in Gurgaon' },
-      { t: 'p', x: 'Google personalises **near me** by your location and the provider’s local proof. A genuine **deep cleaners near me** result in Gurgaon should show: a Gurgaon phone number you can call (+91 95607 39281), named sectors served (DLF, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–57), and real sector-tagged reviews — not a call centre in another city [routing your booking](/book-cleaning-online-gurgaon.html).' },
+      { t: 'p', x: 'Google personalises **near me** by your location and the provider’s local proof. A genuine **deep cleaners near me** result in Gurgaon should show: a Gurgaon phone number you can call (+91 95607 39281), named sectors served (DLF, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–57), and real sector-tagged job references — not a call centre in another city [routing your booking](/book-cleaning-online-gurgaon.html).' },
       { t: 'h2', x: 'Individual Cleaner vs Verified Team — Honest Comparison' },
       { t: 'table', head: ['Factor', 'Individual Home Cleaners Near Me', 'Sachin Deep Cleaning Team'], rows: [
         ['Verification', 'Rarely verified — ask for ID proof', 'Police-verified, ID-checked, trained'],
@@ -2955,7 +2955,7 @@ export const ARTICLES = [
       { q: 'Should I hire a local cleaning company or a big app in Gurgaon?', a: 'Apps (Urban Company, NoBroker) offer scale and instant slots but add 25–30% platform commission — a 2 BHK at ₹6,500–₹9,000 vs ₹4,500 locally for the same machines. Local cleaners near you offer direct owner access and same teams on repeats. Verify either with the 5-question test in this guide.' },
       { q: 'What is the difference between a cleaning company and a cleaning agency near me?', a: 'A cleaning company (like ours) sends its own verified teams with machines per visit. A cleaning agency near me usually means manpower placement — maids on monthly contracts (₹12k–₹18k/month). Different businesses: sessions vs staffing.' },
       { q: 'Are professional cleaning services worth it vs a full-time maid?', a: 'For hygiene depth, yes: maids cannot descale, degrease chimneys or extract sofas. Cost-wise, weekly professional visits (~₹4.2k/month for 2 BHK) run at roughly one-third of full-time housekeeping — most families keep a maid for dishes/laundry and book us quarterly for the reset.' },
-      { q: 'Which are the best cleaning services in Gurgaon?', a: 'Judge by the checklist in this guide, not ads: verification, fixed written scope, pay-after, machines named, sector-tagged reviews. Our best-home-cleaning comparison scores Urban Company, Safaiwale, NoBroker, ZoopGo and us head-to-head — read it before deciding.' },
+      { q: 'Which are the best cleaning services in Gurgaon?', a: 'Judge by the checklist in this guide, not ads: verification, fixed written scope, pay-after, machines named, sector-tagged job references. Our best-home-cleaning comparison scores Urban Company, Safaiwale, NoBroker, ZoopGo and us head-to-head — read it before deciding.' },
       { q: 'Do cleaning services near me bring their own products and machines?', a: 'Verified ones do — extraction machines, scrubbers, descalers and eco-friendly products included in the quote. “Bring your own bucket” or inspection-visit fees (some chains charge ~₹150 just to quote) are red flags for a local booking.' },
     ],
     blocks: [
@@ -2986,7 +2986,7 @@ export const ARTICLES = [
         '**Fix the scope in writing** — rooms, bathrooms, kitchen, [sofas](/sofa-shampoo-cleaning-gurgaon.html) itemised before anyone travels',
         '**Ask what is EXCLUDED** — top-ranking guides agree: exclusions (utensils? walls? inside fridge?) are where cheap quotes hide',
         '**Check the clock** — a genuine 2 BHK needs 7–8 hours with 3 cleaners; “3 hours full-home” means skipped areas',
-        '**Verify, don’t trust** — police verification proof, itemised quote, pay-after policy, sector-tagged reviews',
+        '**Verify, don’t trust** — police verification proof, itemised quote, pay-after policy, sector-tagged job references',
       ]},
       { t: 'h2', x: 'Red Flags (Seen Across Gurgaon Listings)' },
       { t: 'ul', items: [
@@ -3297,7 +3297,7 @@ export const ARTICLES = [
       { q: 'What services does Mr Deep Cleaning offer?', a: 'Per mrdeepcleaning.com: Home Deep Cleaning, Carpet Cleaning, Upholstery Cleaning, Kitchen Cleaning, Bathroom Cleaning and Window & Glass Cleaning — a similar room-by-room scope to ours.' },
       { q: 'How much does Mr Deep Cleaning charge?', a: 'Not publicly listed on their website as of September 2026 — pricing appears to be quote-on-call. Sachin Deep Cleaning publishes starting prices (1 BHK ₹2,500, 2 BHK ₹4,500) with the exact figure locked before arrival.' },
       { q: 'How should I decide between two Gurgaon cleaners?', a: 'Ask both for: itemised written scope, fixed price before arrival, verification proof, pay-after vs advance terms, and re-clean policy. Book whoever answers all five in writing — that test matters more than any comparison page, including this one.' },
-      { q: 'Is this comparison unbiased?', a: 'It is written by Sachin Deep Cleaning, so treat our own rows as our claims (verifiable on this site and our reviews) and verify Mr Deep Cleaning’s current offering on mrdeepcleaning.com before deciding. We update this page when either side changes published facts.' },
+      { q: 'Is this comparison unbiased?', a: 'It is written by Sachin Deep Cleaning, so treat our own rows as our claims (verifiable on this site and in the job references we publish) and verify Mr Deep Cleaning’s current offering on mrdeepcleaning.com before deciding. We update this page when either side changes published facts.' },
       { q: 'Who are the best deep cleaning companies in Gurgaon overall?', a: 'By public scale: Urban Company (largest bookings), Safaiwale (widest city network), NoBroker (rescheduling), a national aggregator (ISO process), plus local specialists like Mr Deep Cleaning and us. “Best” depends on your priority — lowest price, fastest slot, or verified pay-after terms. Our landscape table above scores all six.' },
       { q: 'Should I pick the cheapest deep cleaning quote in Gurgaon?', a: 'Only if scope matches line-by-line. Cheap quotes cut team size, machines or rooms — a ₹2,999 “2 BHK” that skips grout, cabinets and behind-furniture zones is not cheaper than a ₹4,500 genuine one; it is half a job. Use the 5-question test in this guide on every quote.' },
       { q: 'Do these companies offer same-day and commercial cleaning?', a: 'Most Gurgaon providers — including us — offer same-day home slots when booked before noon, and office/commercial cleaning after hours. Confirm both explicitly: same-day cut-off times and after-hours surcharges (ours: none) vary by provider.' },
@@ -3498,7 +3498,7 @@ export const ARTICLES = [
       { q: 'How do I book Sachin Deep Cleaning without any app?', a: 'WhatsApp +91 95607 39281 with your BHK and sector — fixed price locked on the call in under 30 minutes, same-day slots before noon, pay only after walkthrough. No download, no account, no advance.' },
       { q: 'UC ke ₹3,529 vs aapke ₹4,500 — aap costlier kyun?', a: 'Honest jawab: UC Premium 4 ghante me hota hai jisme walls/ceiling, floor polish aur sofa/carpet wet shampoo excluded hai; hamara 2 BHK 7–8 ghante, 3 cleaners, grout descaling aur behind-furniture zones ke saath. Kaam alag hai — isliye tulna scope se karo, sirf price se nahi.' },
       { q: 'What happens if something gets damaged?', a: 'Urban Company carries formal damage cover up to ₹10,000 per booking (claim via support). We run supervisor-on-site plus a free 3-day re-clean and make-right promise before you pay a rupee. Demand either policy in writing from whoever you book.' },
-      { q: 'Is this comparison biased?', a: 'It is written by Sachin Deep Cleaning, so treat our rows as our claims (verifiable on this site and our reviews) and verify Urban Company\u2019s current app prices before booking — they change by slot and demand. We correct this page when published facts change.' },
+      { q: 'Is this comparison biased?', a: 'It is written by Sachin Deep Cleaning, so treat our rows as our claims (verifiable on this site and in the job references we publish) and verify Urban Company\u2019s current app prices before booking — they change by slot and demand. We correct this page when published facts change.' },
       { q: 'Which is best overall for a Gurgaon 2 BHK?', a: 'Use the 5-question test below: fixed price in writing, written exclusions, verification proof, damage/re-clean terms, same team or rotating pros. A ₹999-cheaper quote that excludes half the scope is not cheaper — the winner is whoever passes all five, not whoever advertises loudest.' },
       { q: 'What does Urban Company exclude from home deep cleaning?', a: 'Their own matrix excludes: utensils, walls and ceilings, floor polishing, wet shampoo of blinds‑chairs‑sofas‑carpets, wooden-furniture polishing, appliance servicing, and permanent stains. Our exclusions match on most lines — the difference is we bundle sofa/carpet vacuum plus shampoo add-ons and standard grout descaling into the BHK price.' },
       { q: 'Does Urban Company serve my Gurgaon sector?', a: 'They list hyperlocal pages down to village/sector level across Delhi NCR. We cover DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–92 and Manesar with same-day slots before noon — confirm your sector on WhatsApp and we lock price in 30 minutes.' },
@@ -3558,10 +3558,10 @@ export const ARTICLES = [
       { t: 'table', head: ['Metric', 'Urban Company', 'NoBroker', 'Sachin Deep Cleaning'], rows: [
         ['Headline rating', '4.81 · 262K reviews', '4.74 · 249.5K ratings', 'No rating published'],
         ['What a star means', 'Pool of thousands of rotating pros', 'Pool across 12 cities', 'The same local crews you will get'],
-        ['Low-review risk', 'Averages hide weak partners (their 1-stars exist)', 'Same pool effect', 'Every review names DLF/Sohna/Golf sectors'],
+        ['Low-review risk', 'Averages hide weak partners (their 1-stars exist)', 'Same pool effect', 'Job references name DLF/Sohna/Golf sectors'],
         ['Verification signal', 'Multi-level partner onboarding', 'Background-verified partners', 'Police verification shown on request'],
       ]},
-      { t: 'p', x: '*Honest framing: 262K reviews prove platform consistency systems; 80 local reviews prove the exact team. For a single Gurgaon flat, ask both sides for sector-tagged references — not averages.*' },
+      { t: 'p', x: '*Honest framing: 262K reviews prove platform consistency systems; a sector-tagged local job history proves the exact team. For a single Gurgaon flat, ask both sides for sector-tagged references — not averages.*' },
       { t: 'h2', x: 'App vs Direct: Booking Compared' },
       { t: 'table', head: ['Booking Factor', 'Urban Company App', 'Sachin (No App)'], rows: [
         ['Account needed', 'Yes — download + signup', 'No — WhatsApp +91 95607 39281'],
