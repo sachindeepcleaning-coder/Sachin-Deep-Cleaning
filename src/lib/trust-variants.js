@@ -2,8 +2,13 @@
 // The default WhyUs / Guarantee / TrustBar blocks were byte-identical on all
 // 13 service pages. ServicePage.jsx now picks an angle per service group;
 // every other page keeps the defaults (zero visual change outside services).
-// RULE: only restate site-attested claims (prices, 24-hr re-clean, ₹10k
-// damage cover, pay-after, same-day-before-noon, NDA/GST/photo-logs for office).
+// RULE: only restate claims that are in src/lib/claims.js with a proof
+// (prices, 24-hr re-clean, pay-after, same-day-before-noon,
+// NDA/GST/photo-logs for office).
+//
+// The police-verification badge copy is NOT written here — it comes from the
+// claims register, so there is one place to confirm or reword that claim.
+import { POLICE_VERIFIED_VARIANTS } from './claims.js';
 
 export const WHY_US_VARIANTS = {
   // deep / house / fullhome / move — family + value angle.
@@ -20,7 +25,7 @@ export const WHY_US_VARIANTS = {
     ['🧪', 'Surface-Matched Chemistry', 'Food-safe degreasers for kitchens, fabric-safe shampoo for sofas, glaze-safe descalers for baths.'],
     ['🔧', 'Dismantle, Not Just Wipe', 'Chimney filters, vent covers and tap aerators come off, soak and go back — wiping alone never counts.'],
     ['💰', 'Fixed Per-Unit Pricing', '₹800 per bath, ₹499 per sofa seat, ₹15–18 per sq ft carpet — confirmed on call, honoured on site.'],
-    ['👮', 'Police-Verified Specialists', 'Background-checked, ID-verified staff. The person quoted is the crew that arrives.'],
+    POLICE_VERIFIED_VARIANTS.care,
     ['🌿', 'Safe Around Food & Fabric', 'No harsh residues on cooking surfaces or upholstery your kids touch daily.'],
     ['🔄', 'Free Re-Clean in 24 Hours', 'Stain still showing or scale still white? We return free the next day.'],
   ],
@@ -29,7 +34,7 @@ export const WHY_US_VARIANTS = {
     ['🌙', 'After-Hours Crews', 'Nights and weekends as standard — workstations, pantry and washrooms done with zero workday lost.'],
     ['📋', 'Compliance Pack Included', 'GST invoice, NDA on request, photo walkthrough logs — the paperwork facility heads actually ask for.'],
     ['📐', 'Per-sq-ft Survey Quotes', 'Priced from ₹3 per sq ft after a free site visit. Scope in writing before a rupee is discussed.'],
-    ['👮', 'Police-Verified Staff', 'Background-checked teams, uniformed on site, same faces on repeat schedules.'],
+    POLICE_VERIFIED_VARIANTS.commercial,
     ['🔄', 'Free Re-Clean in 24 Hours', 'Flagged zones re-done next night shift free — then a refund if still not right.'],
     ['💰', 'Pay After Walkthrough', 'Sign off the site inspection first. No advance, no retainer for one-time deep cleans.'],
   ],
@@ -57,7 +62,7 @@ export const GUARANTEE_VARIANTS = {
 
 export const TRUST_VARIANTS = {
   standard: [
-    ['🛡️', 'Police Verified', 'Every team member'],
+    POLICE_VERIFIED_VARIANTS.standard,
     ['💰', 'Pay After Cleaning', 'Zero advance payment'],
     ['🔄', 'Free Re-Clean', "If you're not satisfied"],
     ['⚡', 'Same-Day Available', 'Book before 12 PM'],
@@ -66,14 +71,14 @@ export const TRUST_VARIANTS = {
   care: [
     ['🧪', 'Surface-Safe Chemistry', 'Food & fabric safe'],
     ['💰', 'Fixed Per-Unit Price', 'Confirmed on call'],
-    ['👮', 'Police Verified', 'Every team member'],
+    POLICE_VERIFIED_VARIANTS.standard,
     ['🔄', 'Free Re-Clean', 'Within 24 hours'],
     ['🌿', 'No Harsh Residue', 'Safe for kids & pets'],
   ],
   commercial: [
     ['🌙', 'After-Hours Crews', 'Zero workday lost'],
     ['📋', 'GST + NDA Ready', 'Compliance included'],
-    ['👮', 'Police Verified', 'Uniformed on site'],
+    POLICE_VERIFIED_VARIANTS.move,
     ['💰', 'Pay After Sign-Off', 'No advance'],
     ['🔄', 'Free Re-Clean', 'Next night shift'],
   ],

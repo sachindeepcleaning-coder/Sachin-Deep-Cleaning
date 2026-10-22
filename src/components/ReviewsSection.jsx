@@ -1,5 +1,6 @@
 import { REVIEWS } from '../lib/landing.js';
 import { RATING } from '../lib/site.js';
+import { ratingAsOf } from '../lib/claims.js';
 
 export default function ReviewsSection({ reviews = REVIEWS }) {
   return (
@@ -12,7 +13,7 @@ export default function ReviewsSection({ reviews = REVIEWS }) {
             <div className="rating-summary">
               <span className="rs-stars">⭐⭐⭐⭐⭐</span>
               <span className="rs-num">{RATING.value}</span>
-              <span className="rs-count">/ 5 · {RATING.count} Google reviews</span>
+              <span className="rs-count">/ 5 · {RATING.count} Google reviews (checked {ratingAsOf()})</span>
             </div>
           </div>
         </div>

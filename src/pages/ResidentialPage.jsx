@@ -9,6 +9,7 @@ import ReelEmbed from '../components/ReelEmbed.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
 import { RATING } from '../lib/site.js';
+import { ratingLabel } from '../lib/claims.js';
 
 const NEAR_ME = [
   ['📍', 'Closest Available Team', 'We route your request to the cleaning crew already working nearest to your sector — not a team crossing the whole city.'],
@@ -60,7 +61,7 @@ export default function ResidentialPage({ url }) {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-              Local Team · Gurugram · {RATING.value}★ on Google
+              Local Team · Gurugram · {ratingLabel()}
             </div>
             <h1>
               <span className="hl">Residential Cleaners Near Me?</span><br />

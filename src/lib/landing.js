@@ -1,4 +1,5 @@
 import { GTM_ID, WHATSAPP_NUMBER, waMsg, AREAS } from './site.js';
+import { POLICE_VERIFIED_BADGE } from './claims.js';
 
 // ---- Analytics: GTM custom-event pushes (matches GTM Custom Event triggers) ----
 // GTM triggers expect: dataLayer.push({ event: 'phone_call_click' })
@@ -90,7 +91,7 @@ export const REVIEWS = [
 ];
 
 export const WHY_US = [
-  ['👮', 'Police-Verified Team', 'Every cleaner is background-checked, ID-verified and professionally trained before entering your home.'],
+  [POLICE_VERIFIED_BADGE.icon, POLICE_VERIFIED_BADGE.title, POLICE_VERIFIED_BADGE.sub],
   ['💰', 'Pay After Cleaning Only', 'Zero advance. You inspect the results and pay only when completely satisfied. No risk whatsoever.'],
   ['⚡', 'Same-Day Service', 'Book before noon and get same-day service. Emergency bookings also available at no extra cost.'],
   ['🌿', 'Safe Eco-Friendly Products', 'Non-toxic cleaning agents. Safe for children, elderly, and pets. No harsh chemical smell.'],

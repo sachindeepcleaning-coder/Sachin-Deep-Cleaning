@@ -3,6 +3,7 @@ import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { JsonLd, breadcrumbSchema, organizationSchema, personSchema } from '../lib/schema.jsx';
 import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, ADDRESS_PARTS, RATING } from '../lib/site.js';
+import { ratingAsOf } from '../lib/claims.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const TEAM = [
@@ -247,7 +248,7 @@ export default function AboutPage({ url }) {
             <img src="/images/cleaning-1.webp" alt="Sachin Deep Cleaning team in Gurgaon — police-verified lead specialists" width="180" height="180" style={{ borderRadius: '50%', width: 140, height: 140, objectFit: 'cover', border: '3px solid var(--primary)' }} loading="lazy" />
             <div style={{ flex: 1, minWidth: 260 }}>
               <h3 style={{ fontFamily: 'Syne', fontWeight: 800, marginBottom: 8 }}>Sachin Deep Cleaning — Founder & Lead Specialist</h3>
-              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, {RATING.value}★ from {RATING.count} Google reviews. Trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
+              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, {RATING.value}★ from {RATING.count} Google reviews (checked {ratingAsOf()}). Trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Facebook →</a>
                 <a href={SOCIAL.instagram} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Instagram →</a>

@@ -1,5 +1,6 @@
 import QuoteForm from './QuoteForm.jsx';
 import { RATING } from '../lib/site.js';
+import { ratingLabel } from '../lib/claims.js';
 
 const PILLS = [
   'Same-Day Service',
@@ -24,7 +25,7 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-            Gurgaon's Trusted Deep Cleaning Service · {RATING.value}★ on Google ({RATING.count} reviews)
+            Gurgaon's Trusted Deep Cleaning Service · {ratingLabel()}
           </div>
           <h1>
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>
