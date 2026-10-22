@@ -17,7 +17,7 @@ export const WHY_US_VARIANTS = {
     ['👮', 'Police-Verified Team', 'ID and background check shown on request.'],
     ['🧰', 'Machines on Every Visit', 'Single-disc scrubbers, hot-water extraction and descalers — the gap weekly mopping can never close.'],
     ['⚡', 'Same-Day Slots', 'Book before noon and we are usually at your door the same day, anywhere in Gurgaon.'],
-    ['🔄', 'Free Re-Clean Within 3 Days', 'Any area below standard gets re-cleaned free within 3 days — then a refund if still not right.'],
+    ['🔄', 'Free Re-Clean Within 3 Days', 'Any area below standard gets re-cleaned free within 3 days. Not happy? Tell us within 3 days and we re-clean the affected area free.'],
     ['🌿', 'Kid & Pet Safe Products', 'Eco-friendly, non-toxic chemistry. No harsh smell lingering after we leave.'],
   ],
   // kitchen / bathroom / sofa / carpet — surface-care angle.
@@ -35,7 +35,7 @@ export const WHY_US_VARIANTS = {
     ['📋', 'Compliance Pack Included', 'GST invoice, NDA on request, photo walkthrough logs — the paperwork facility heads actually ask for.'],
     ['📐', 'Per-sq-ft Survey Quotes', 'Priced from ₹3 per sq ft after a free site visit. Scope in writing before a rupee is discussed.'],
     POLICE_VERIFIED_VARIANTS.commercial,
-    ['🔄', 'Free Re-Clean Within 3 Days', 'Flagged zones re-cleaned free within 3 days — then a refund if still not right.'],
+    ['🔄', 'Free Re-Clean Within 3 Days', 'Flagged zones re-cleaned free within 3 days. Not happy? Tell us within 3 days and we re-clean the affected area free.'],
     ['💰', 'Pay After Walkthrough', 'Sign off the site inspection first. No advance, no retainer for one-time deep cleans.'],
   ],
 };
@@ -43,7 +43,7 @@ export const WHY_US_VARIANTS = {
 export const GUARANTEE_VARIANTS = {
   standard: {
     title: 'Our Iron-Clad Satisfaction Guarantee — 3-Day Service Promise',
-    body: "We're so confident in our cleaning that you **don't pay until you're satisfied**. Not happy with any area? Tell us within 3 days and we re-clean the affected area free. Still not satisfied? Full refund — no questions asked. If anything goes wrong, tell us on the spot and we sort it before you pay.",
+    body: "We're so confident in our cleaning that you **don't pay until you're satisfied**. Not happy with any area? Tell us within 3 days and we re-clean the affected area free. If anything goes wrong, tell us on the spot and we sort it before you pay.",
     pills: ['✓ Pay After Cleaning', '✓ Free Re-Clean Within 3 Days', '✓ 3-Day Service Guarantee', '✓ No Hidden Charges', '✓ Police-Verified Team'],
   },
   // move / fullhome — handover angle.

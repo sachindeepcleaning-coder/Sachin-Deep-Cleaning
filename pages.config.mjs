@@ -56,12 +56,12 @@ export const pages = [
   {
     file: 'full-home-deep-cleaning-1bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 1,
     title: '1 BHK Deep Cleaning Gurgaon | ₹2,500 Fixed',
-    description: '1 BHK deep cleaning in Gurgaon at a fixed ₹2,500 — kitchen, bathroom, bedroom, living area, floors and balcony. 5–6 hrs, 2 cleaners, pay after walkthrough.',
+    description: '1 BHK deep cleaning in Gurgaon at a fixed ₹2,500 — kitchen, bathroom, bedroom, living area, floors and balcony. 4–5 hrs, 2 cleaners, pay after walkthrough.',
   },
   {
     file: 'full-home-deep-cleaning-2bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 2,
     title: '2 BHK Deep Cleaning Gurgaon | ₹4,500 Fixed',
-    description: '2 BHK deep cleaning in Gurgaon at a fixed ₹4,500 — both bathrooms descaled, kitchen degreased, wardrobes in and out, floors polished. 7–8 hrs, pay after.',
+    description: '2 BHK deep cleaning in Gurgaon at a fixed ₹4,500 — both bathrooms descaled, kitchen degreased, wardrobes in and out, floors polished. 5–6 hrs, pay after.',
   },
   {
     file: 'full-home-deep-cleaning-3bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 3,
@@ -71,7 +71,7 @@ export const pages = [
   {
     file: 'full-home-deep-cleaning-4bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 4,
     title: '4 BHK Deep Cleaning Gurgaon | ₹6,500 Fixed',
-    description: '4 BHK deep cleaning in Gurgaon at a fixed ₹6,500 — four bedrooms, three baths, lounge, kitchen degrease and balconies. 8–10 hrs, pay after.',
+    description: '4 BHK deep cleaning in Gurgaon at a fixed ₹6,500 — four bedrooms, three baths, lounge, kitchen degrease and balconies. 7–8 hrs, pay after.',
   },
   {
     file: 'full-home-deep-cleaning-5bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 5,
