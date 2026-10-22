@@ -1,5 +1,6 @@
 import FinalCta from '../components/FinalCta.jsx';
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { CONTENT_UPDATED } from '../lib/site.js';
 import { JsonLd, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
@@ -102,6 +103,7 @@ export default function AllPagesPage({ url }) {
               <span className="pill"><span className="pi">✓</span> Same-Day Available</span>
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>

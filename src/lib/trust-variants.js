@@ -14,7 +14,7 @@ export const WHY_US_VARIANTS = {
   // deep / house / fullhome / move — family + value angle.
   home: [
     ['🔒', 'Fixed Price Locked on Call', 'Your exact BHK quote is confirmed before dispatch — then pay after the walkthrough, not before.'],
-    ['👮', 'Police-Verified Team', 'Background-checked, ID-verified cleaners. Team details shared on WhatsApp before arrival.'],
+    ['👮', 'Police-Verified Team', 'ID and background check shown on request.'],
     ['🧰', 'Machines on Every Visit', 'Single-disc scrubbers, hot-water extraction and descalers — the gap weekly mopping can never close.'],
     ['⚡', 'Same-Day Slots', 'Book before noon and we are usually at your door the same day, anywhere in Gurgaon.'],
     ['🔄', 'Free Re-Clean in 24 Hours', 'Any area below standard gets re-cleaned free the next day — then a refund if still not right.'],
@@ -44,7 +44,7 @@ export const GUARANTEE_VARIANTS = {
   standard: {
     title: 'Our Iron-Clad Satisfaction Guarantee — 3-Day Service Promise',
     body: "We're so confident in our cleaning that you **don't pay until you're satisfied**. Not happy with any area? We re-clean for free within 24 hours. Still not satisfied? Full refund — no questions asked. If anything goes wrong, tell us on the spot and we sort it before you pay.",
-    pills: ['✓ Pay After Cleaning', '✓ Free Re-Clean Within 24hrs', '✓ 3-Day Service Guarantee', '✓ No Hidden Charges', '✓ Verified Professionals'],
+    pills: ['✓ Pay After Cleaning', '✓ Free Re-Clean Within 24hrs', '✓ 3-Day Service Guarantee', '✓ No Hidden Charges', '✓ Police-Verified Team'],
   },
   // move / fullhome — handover angle.
   handover: {
@@ -56,7 +56,7 @@ export const GUARANTEE_VARIANTS = {
   commercial: {
     title: 'Our Zero-Downtime Commercial Promise',
     body: "Offices can't pause for cleaning, so neither do you: **after-hours crews**, a **signed-off site inspection before invoicing**, and a free next-night re-clean of any flagged zone. GST invoice and NDA handling included — and if anything goes wrong, tell us on the spot and we sort it before you pay.",
-    pills: ['✓ After-Hours Service', '✓ Sign-Off Before Invoicing', '✓ Free Next-Night Re-Clean', '✓ GST Invoice Included', '✓ Verified Professionals'],
+    pills: ['✓ After-Hours Service', '✓ Sign-Off Before Invoicing', '✓ Free Next-Night Re-Clean', '✓ GST Invoice Included', '✓ Police-Verified Team'],
   },
 };
 

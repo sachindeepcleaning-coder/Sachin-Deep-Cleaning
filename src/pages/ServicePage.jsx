@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import PricingSection from '../components/PricingSection.jsx';
 import PricingTable from '../components/PricingTable.jsx';
@@ -155,6 +156,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
               <span className="pill"><span className="pi">✓</span> Eco-Friendly</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>

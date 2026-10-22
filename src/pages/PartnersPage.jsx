@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import ReviewsSection from '../components/ReviewsSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
@@ -66,9 +67,10 @@ export default function PartnersPage({ url }) {
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Bulk Cluster Days</span>
               <span className="pill"><span className="pi">✓</span> GST Invoice</span>
-              <span className="pill"><span className="pi">✓</span> Police-Verified Crew</span>
+              <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
               <span className="pill"><span className="pi">✓</span> Pay After Walkthrough</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>

@@ -619,21 +619,46 @@ console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD block
   warn(`[VERIFY] Re-check the single address against the live GBP listing each deploy: "${ADDRESS_FULL}"`);
 }
 
-// 17 — every public claim in the register either has a proof or is flagged.
+// 17 — an unproven claim may not be rendered.
 //
-// A claim with no proof is not a build failure (the business may legitimately
-// make it) but it must never be asserted silently: it is reported on every
-// build until the owner supplies the proof and sets verified: true.
+// A claim with no proof is a build failure, not a warning: if the claim text
+// appears anywhere in the built output while the claim is still unproven,
+// the build fails. A claim that is not rendered is only reported.
 {
   const { CLAIMS } = await import('../src/lib/claims.js');
   for (const [id, c] of Object.entries(CLAIMS)) {
     if (c.verified && c.proof) continue;
-    warn(
-      `[VERIFY] Claim "${id}" (${c.label}) has no proof. ` +
-        (c.proofWhenConfirmed
-          ? `Set proof to: "${c.proofWhenConfirmed}" once confirmed.`
-          : 'Supply a proof source, or remove the claim from the site.')
-    );
+    const marker = c.marker || c.label;
+    const re = new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+    let rendered = 0;
+    for (const file of htmlFiles) {
+      if (re.test(readFileSync(file, 'utf8'))) {
+        fail(`${rel(file)}: unproven claim "${id}" (${marker}) is rendered on the page`);
+        rendered++;
+      }
+    }
+    if (!rendered) {
+      warn(
+        `[VERIFY] Claim "${id}" (${c.label}) has no proof and is not rendered. ` +
+          (c.proofWhenConfirmed
+            ? `Set proof to: "${c.proofWhenConfirmed}" once confirmed.`
+            : 'Supply a proof source, or remove the claim from the site.')
+      );
+    }
+  }
+}
+
+// 18 — the police-verification claim always carries its proof line.
+//
+// "Police-Verified" may only appear on a page that also says "ID and
+// background check shown on request" — that is the whole point of the claim.
+{
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    if (/police-verified/i.test(html) && !/shown on request/i.test(html)) {
+      fail(`${name}: mentions the police-verification claim without the "shown on request" proof line`);
+    }
   }
 }
 

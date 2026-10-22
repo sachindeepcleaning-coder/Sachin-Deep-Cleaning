@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
@@ -87,6 +88,7 @@ export default function BookingPage({ url }) {
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>

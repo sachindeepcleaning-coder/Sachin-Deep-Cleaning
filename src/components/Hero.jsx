@@ -1,4 +1,5 @@
 import QuoteForm from './QuoteForm.jsx';
+import PoliceProofNote from './PoliceProofNote.jsx';
 
 const PILLS = [
   'Same-Day Service',
@@ -34,6 +35,7 @@ export default function Hero() {
               <span key={p} className="pill"><span className="pi">✓</span> {p}</span>
             ))}
           </div>
+          <PoliceProofNote />
           <div className="hero-stats">
             {STATS.map(([num, suffix, label]) => (
               <div key={label} className="hs">

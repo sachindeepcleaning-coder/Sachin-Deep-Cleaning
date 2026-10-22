@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { CONTENT_UPDATED } from '../lib/site.js';
@@ -73,6 +74,7 @@ export default function AboutPage({ url }) {
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
               <span className="pill"><span className="pi">✓</span> Eco-Friendly Products</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>
@@ -240,7 +242,7 @@ export default function AboutPage({ url }) {
             <div className="section-tag">How We Train</div>
             <h2 className="section-title">Verified First, Trained Always</h2>
             <p className="section-sub" style={{ margin: '0 auto' }}>
-              Every cleaner is police-verified and ID-checked before their first booking — then trained on our room-by-room process: descaling dilutions that remove limescale without etching chrome, degreaser dwell times for chimney filters, extraction passes for upholstery, and electronics-safe wiping for workstations. New members shadow senior leads across DLF, Sohna Road and Golf Course routes before leading jobs, and every 3 BHK+ booking is owner-supervised. Training never stops because Gurgaon’s dust, water and cooking load never stop changing it.
+              The team is police-verified — ID and background check shown on request — and trained on our room-by-room process: descaling dilutions that remove limescale without etching chrome, degreaser dwell times for chimney filters, extraction passes for upholstery, and electronics-safe wiping for workstations. New members shadow senior leads across DLF, Sohna Road and Golf Course routes before leading jobs, and every 3 BHK+ booking is owner-supervised. Training never stops because Gurgaon’s dust, water and cooking load never stop changing it.
             </p>
           </div>
         </div>

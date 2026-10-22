@@ -77,7 +77,7 @@ export const CHECKLIST = [
 export const HOW_IT_WORKS = [
   ['1', 'Choose your service', 'Pick from 8 deep cleaning services — full home, kitchen, bathroom, sofa, carpet and more.'],
   ['2', 'Confirm your slot', 'Share your name, number and preferred date. Price is locked in before booking is confirmed.'],
-  ['3', 'Get a verified pro', 'Matched with a police-verified, skill-assessed professional near you.'],
+  ['3', 'Get a verified pro', 'Police-verified team: ID and background check shown on request. You get the same trained crew near you.'],
   ['4', "Pay after service", 'UPI, cards or wallets — pay only after the job is complete to your satisfaction.'],
 ];
 
@@ -125,7 +125,7 @@ export const FAQS = [
   ['Do I need to arrange equipment or cleaning supplies?', 'No — we bring everything. Professional machines, high-grade tools, and eco-friendly cleaning products are all included in the price. You don\u2019t need to arrange anything.'],
   ['Do I really pay only after the cleaning?', 'Absolutely. We confirm the booking on call, arrive at your scheduled time, complete the cleaning, and you pay only after inspecting the results to your satisfaction. Zero advance payment — ever.'],
   ['Can I book same-day service?', 'Yes! We offer same-day service based on slot availability. Call or fill the form now and we\u2019ll confirm a same-day slot if available. Book before noon for best availability.'],
-  ['Is the cleaning team background-verified?', 'Yes. Every member of our team is police-verified, identity-checked, and professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
+  ['Is the cleaning team background-verified?', 'Yes. Police-verified team: ID and background check shown on request before the visit, and the team is professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
   ["What if I'm not happy with the cleaning?", "If any area isn't up to your expectation, inform us within 24 hours — we'll send the team back to re-clean it for free. Simple as that."],
 ];
 

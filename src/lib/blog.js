@@ -138,7 +138,7 @@ export const ARTICLES = [
       { t: 'ul', items: [
         'Pay-after-satisfaction policy (we offer this — it protects you)',
         'Clear itemized quote before starting',
-        'Background-checked staff',
+        'Police-verified team (ID and background check shown on request)',
         'Physical presence in Gurgaon (not a call center elsewhere)',
       ]},
       { t: 'h2', x: 'How to Get the Best Deep Cleaning Price in Gurgaon' },
@@ -1057,7 +1057,7 @@ export const ARTICLES = [
       { q: 'Do you serve my sector in Gurgaon?', a: 'We serve all of Gurgaon — DLF 1–5, Sohna Road, Golf Course Road/Extension, MG Road, Cyber City, Udyog Vihar, Palam Vihar, Sector 14–57, South City, Sushant Lok, Vatika, Manesar and all societies. Call +91 95607 39281 to confirm your sector.' },
       { q: 'Can I get same-day deep cleaning near me in Gurgaon?', a: 'Yes — same-day slots are available if you book before noon. We confirm within 30 minutes and reach most sectors in 2–4 hours.' },
       { q: 'What is the cost of deep cleaning near me in Gurgaon?', a: 'From ₹2,000 (1 RK) to ₹9,000 (5 BHK). 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500. Same prices across all Gurgaon sectors — no travel surcharge.' },
-      { q: 'Are the cleaners near me police-verified?', a: 'Yes — every cleaner is police-verified and skill-assessed before their first booking. You get the same trusted team regardless of sector.' },
+      { q: 'Are the cleaners near me police-verified?', a: 'Yes — police-verified team (ID and background check shown on request) and skill-assessed before the first booking. You get the same trusted team regardless of sector.' },
       { q: 'How do I book cleaning services near me?', a: 'Call +91 95607 39281 or WhatsApp. Share your sector, BHK and preferred date — we lock the price and slot on the call.' },
       { q: 'Deep cleaning near me Gurgaon me kaise book karu? (How to book near me?)', a: 'Google par “deep cleaning near me” search karke Sachin Deep Cleaning par aayein, sector aur BHK WhatsApp karein +91 95607 39281. Hum 30 minute me nearest team ka slot aur fixed price confirm kar dete hain — DLF ho ya Sohna Road.' },
       { q: 'Gurgaon me cleaning services near me ka price kya hai?', a: 'Cleaning services near me Gurgaon me ₹499/visit (house cleaning) se shuru, deep cleaning ₹2,500 (1 BHK) se. Aapka sector chahe DLF Phase 2 ho ya Sector 83, price same rehta hai.' },
@@ -2270,7 +2270,7 @@ export const ARTICLES = [
     faqs: [
       { q: 'How do I find reliable deep cleaners near me in Gurgaon?', a: 'Call or WhatsApp Sachin Deep Cleaning at +91 95607 39281 with your sector and BHK. We assign the nearest police-verified team, lock the price before dispatch, and confirm a same-day or next-morning slot — no advance payment.' },
       { q: 'What is the cost of hiring deep cleaners near me in Gurgaon?', a: 'From ₹2,000 (1 RK) to ₹9,000 (5 BHK) for a full team visit. 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500. Single-service cleaners (bathroom ₹800, sofa ₹499/seat) cost less. Same price in every sector — no travel fee.' },
-      { q: 'Are home cleaners near me police-verified?', a: 'Ours are — every cleaner is police-verified and ID-checked before their first booking, whether dispatched to DLF, Sohna Road or Sector 57. Ask any home cleaners near me service for verification proof before letting them in.' },
+      { q: 'Are home cleaners near me police-verified?', a: 'Ours are — police-verified team (ID and background check shown on request), whether dispatched to DLF, Sohna Road or Sector 57. Ask any home cleaners near me service for verification proof before letting them in.' },
       { q: 'Should I hire individual deep cleaners or a cleaning company?', a: 'Individual cleaners are cheaper per hour but bring no machines, no backup if they cancel, and no damage cover. A company team brings extraction machines, descalers, 3–5 cleaners at once, a supervisor walkthrough and pay-after-satisfaction — the job finishes in hours, not days.' },
       { q: 'Can deep cleaners near me come today?', a: 'Yes — book before noon and we confirm a same-day slot in most Gurgaon sectors (DLF 1–5, Sohna Road, Golf Course Road, Palam Vihar, Sectors 14–57). Sectors 82–92 and Manesar are usually next-day.' },
       { q: 'Gurgaon me deep cleaners near me kaise book karu?', a: 'WhatsApp +91 95607 39281 par apna sector aur BHK bhejein — jaise “Sector 45, 2 BHK”. Hum 30 minute me nearest verified team ka slot aur fixed price confirm kar dete hain. Payment kaam ke baad, satisfaction par.' },
@@ -6109,7 +6109,7 @@ export const ARTICLES = [
         ['Kitchen tech', 'Chimney bath, hob detailing, cabinet insides', 'First half of the day'],
         ['Floor crew (2)', 'Machine scrub and polish, last pass before walkthrough', 'Final hour'],
       ]},
-      { t: 'p', x: 'Every member is police-verified and uniformed, and the supervisor stays answerable after the visit too — redos, if ever needed, are handled by the same person who signed the walkthrough. That continuity is deliberate: a checklist only means something if the person who ticked it still answers for it next week.' },
+      { t: 'p', x: 'The team is police-verified (ID and background check shown on request) and uniformed, and the supervisor stays answerable after the visit too — redos, if ever needed, are handled by the same person who signed the walkthrough. That continuity is deliberate: a checklist only means something if the person who ticked it still answers for it next week.' },
       { t: 'h2', x: 'The Warranty Nobody Puts in Writing (We Do)' },
       { t: 'ul', items: [
         '**48-hour redo window** — anything missed on the checklist is redone free; you WhatsApp the room photo, we come back.',
@@ -7164,7 +7164,7 @@ export const ARTICLES = [
       { q: 'How often should I book a home cleaning service?', a: 'Weekly for pet homes, cooking-heavy kitchens and dusty corridors; bi-weekly for dust-managed apartments with working couples; monthly only as a supplement between deep cleans. Bathrooms and kitchens decide the cadence — when film returns before the next visit, shorten the interval.' },
       { q: 'What should I prepare before the cleaners arrive?', a: 'Almost nothing: clear clutter off floors and counters so the crew spends time cleaning, not tidying. Secure cash, jewellery and documents; confirm parking or gate access; keep pets in one room. The team brings vacuum, mops and products — you provide water and power.' },
       { q: 'Are home cleaning services safe and trustworthy?', a: 'Book police-verified teams with ID checks, pay-after-walkthrough terms and a written checklist — never full advance to an unverified listing. Same-team recurring plans build familiarity and accountability visit over visit.' },
-      { q: 'Ghar ke liye home cleaning service kaise chunein?', a: 'Teen cheezein dekhein: verified team (police verification + ID), likhit checklist (har visit same scope), aur pay-after terms (kaam dekhne ke baad payment). Weekly plan wahi lein jahan same team aaye. Gurgaon me plans aur rates ke liye [Gurgaon home cleaning plans](/blog/home-cleaning-services-gurgaon.html) dekhein.' },
+      { q: 'Ghar ke liye home cleaning service kaise chunein?', a: 'Teen cheezein dekhein: police-verified team (ID and background check shown on request), likhit checklist (har visit same scope), aur pay-after terms (kaam dekhne ke baad payment). Weekly plan wahi lein jahan same team aaye. Gurgaon me plans aur rates ke liye [Gurgaon home cleaning plans](/blog/home-cleaning-services-gurgaon.html) dekhein.' },
     ],
     blocks: [
       { t: 'p', x: 'A **home cleaning service** is a scheduled upkeep visit by a professional team — distinct from a [full-time maid](/blog/house-maid-vs-deep-cleaning-gurgaon.html) and from a one-time [deep clean](/deep-cleaning-services-in-gurgaon.html). This guide defines the category nationally: what it includes, the four ways to book, India-typical costs, and how to choose. For Gurgaon-specific plans and BHK rates see [home cleaning plans in Gurgaon](/blog/home-cleaning-services-gurgaon.html); for the 5-minute booking route see [book in 5 minutes](/blog/home-deep-cleaning-service-gurgaon.html).' },
@@ -7193,7 +7193,7 @@ export const ARTICLES = [
       ]},
       { t: 'h2', x: 'How to Choose: the Five-Point Check' },
       { t: 'ol', items: [
-        '**Verification first** — police-verified team with IDs shared before arrival. No verification, no booking.',
+        '**Verification first** — police-verified team, ID and background check shown on request. No verification, no booking.',
         '**Written checklist** — identical scope every visit. Vague "full cleaning" promises drift within a month.',
         '**Equipment included** — HEPA vacuum, microfiber, professional mops. Teams borrowing your broom deliver maid-grade results.',
         '**Pay terms** — pay after walkthrough beats advance. Free re-clean windows beat refund promises.',
