@@ -115,7 +115,7 @@ export default function AboutPage({ url }) {
             <div className="section-tag">Who We Are</div>
             <h2 className="section-title">Specialists in Deep, Not Just Clean</h2>
             <p className="section-sub" style={{ margin: '0 auto' }}>
-              We focus exclusively on deep, specialised cleaning tasks using professional equipment and eco-friendly, non-toxic products that are safe for children, elderly family members and pets. Our promise is simple: <strong>you only pay after you are completely satisfied</strong> with the result. No advance payment. Free re-clean within 24 hours if any area does not meet your expectation.
+              We focus exclusively on deep, specialised cleaning tasks using professional equipment and eco-friendly, non-toxic products that are safe for children, elderly family members and pets. Our promise is simple: <strong>you only pay after you are completely satisfied</strong> with the result. No advance payment. Free re-clean within 3 days if any area does not meet your expectation.
             </p>
           </div>
           <div className="services-grid" style={{ marginTop: '36px' }}>

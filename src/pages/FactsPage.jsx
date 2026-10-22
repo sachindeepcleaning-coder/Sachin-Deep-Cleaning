@@ -116,7 +116,7 @@ const FAQS = [
   },
   {
     q: 'What happens if the clean is not right?',
-    a: 'Our 3-Day Service Promise covers every booking: if an area falls short we re-clean it free within 24 hours, and if it is still not right you get a full refund. Flag it during the walkthrough.',
+    a: 'Our 3-Day Service Promise covers every booking: if an area falls short we re-clean it free within 3 days, and if it is still not right you get a full refund. Flag it during the walkthrough.',
   },
   {
     q: 'Where is the business, and when is it open?',
@@ -398,8 +398,8 @@ export default function FactsPage({ url }) {
               before anything is paid. There is no advance payment on a one-time deep clean.
             </li>
             <li>
-              <strong>Free re-clean within 24 hours.</strong> If an area falls short, the team
-              comes back and re-cleans it at no cost.
+              <strong>Free re-clean within 3 days.</strong> If an area falls short, tell us and
+              the team comes back and re-cleans it at no cost.
             </li>
             <li>
               <strong>3-Day Service Promise.</strong> Every booking carries the guarantee: a

@@ -95,7 +95,7 @@ export const WHY_US = [
   ['💰', 'Pay After Cleaning Only', 'Zero advance. You inspect the results and pay only when completely satisfied. No risk whatsoever.'],
   ['⚡', 'Same-Day Service', 'Book before noon and get same-day service. Emergency bookings also available at no extra cost.'],
   ['🌿', 'Safe Eco-Friendly Products', 'Non-toxic cleaning agents. Safe for children, elderly, and pets. No harsh chemical smell.'],
-  ['🔄', 'Free Re-Clean Guarantee', "If any area doesn't meet your expectations, we come back within 24 hours and re-clean it absolutely free."],
+  ['🔄', 'Free Re-Clean Guarantee', "Not happy? Tell us within 3 days and we re-clean the affected area free."],
   ['📋', 'Transparent Pricing', 'Quoted upfront on call. What we say is what you pay. No hidden charges, no surprise additions.'],
 ];
 
@@ -126,7 +126,7 @@ export const FAQS = [
   ['Do I really pay only after the cleaning?', 'Absolutely. We confirm the booking on call, arrive at your scheduled time, complete the cleaning, and you pay only after inspecting the results to your satisfaction. Zero advance payment — ever.'],
   ['Can I book same-day service?', 'Yes! We offer same-day service based on slot availability. Call or fill the form now and we\u2019ll confirm a same-day slot if available. Book before noon for best availability.'],
   ['Is the cleaning team background-verified?', 'Yes. Police-verified team: ID and background check shown on request before the visit, and the team is professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
-  ["What if I'm not happy with the cleaning?", "If any area isn't up to your expectation, inform us within 24 hours — we'll send the team back to re-clean it for free. Simple as that."],
+  ["What if I'm not happy with the cleaning?", "If any area isn't up to your expectation, tell us within 3 days and we'll re-clean the affected area free. Simple as that."],
 ];
 
 export const AREAS_SERVED = AREAS;

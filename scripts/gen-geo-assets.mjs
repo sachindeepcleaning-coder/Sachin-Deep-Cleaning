@@ -90,7 +90,7 @@ const factsBlock = [
   `- Full-home deep cleaning by home size: 1 RK / studio ${SERVICE_PRICES.deep.amount} | 1 BHK ${PRICE_BY_BHK[1]} | 2 BHK ${PRICE_BY_BHK[2]} | 3 BHK ${PRICE_BY_BHK[3]} | 4 BHK ${PRICE_BY_BHK[4]} | 5 BHK and villa ${PRICE_BY_BHK[5]}`,
   `- House cleaning (recurring visits): ${SERVICE_PRICES.house.amount} per visit is the starting rate for a studio; the per-visit price scales with home size (studio, 1 BHK, 2 BHK, 3 BHK) and is fixed on the confirmation call before the visit`,
   `- Other service prices: ${servicePriceLines}`,
-  `- Payment: pay after the walkthrough and sign-off; free re-clean within 24 hours; 3-day service promise; GST invoice on office work`,
+  `- Payment: pay after the walkthrough and sign-off; free re-clean within 3 days; 3-day service promise; GST invoice on office work`,
   `- Service area: ${AREAS.join(', ')}`,
   `- Google Maps: ${MAPS_URL}`,
   '',
