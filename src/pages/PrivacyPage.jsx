@@ -19,10 +19,11 @@ const COLLECTED = [
 ];
 
 const PROCESSORS = [
-  ['Cloudflare Worker (lead gateway)', 'Our own first-party server for enquiries. It receives your name, number, page, campaign details and message, and stores the lead so the team can call you.'],
+  ['Cloudflare Worker (lead gateway)', 'Our own first-party server for enquiries. It receives your name, number, the page you were on, the campaign details and your message, and stores the lead so the team can call you.'],
+  ['Cloudflare Worker (visit log)', 'Our own first-party analytics worker. It receives the page paths, how long each page was on screen, the campaign tags and which buttons you clicked, so we can read the reports. It never receives the values you type.'],
   ['Web3Forms', 'A form-delivery service used as a backup if the lead gateway does not confirm delivery. It receives the same enquiry details.'],
-  ['Microsoft Clarity', 'Session recordings and heat maps. It records how the pages work, not the content of the form fields.'],
-  ['Google Tag Manager (and Google Analytics)', 'Counts page views, call clicks and form submissions. It does not receive the form field values.'],
+  ['Microsoft Clarity', 'Session recordings and heat maps, so we can see which parts of the site are useful. Form fields are masked, so what you type into a form is not recorded.'],
+  ['Google Tag Manager (and Google Analytics)', 'Counts page views, call clicks and form submissions. The site does not send your name, number or message to it.'],
 ];
 
 export default function PrivacyPage({ url }) {
@@ -93,7 +94,7 @@ export default function PrivacyPage({ url }) {
             <div className="section-tag">Processors</div>
             <h2 className="section-title">Who receives it</h2>
             <p className="section-sub" style={{ margin: '0 auto', maxWidth: '820px' }}>
-              Four services handle the data this site collects. We do not sell any of it, and we do not share it with advertisers.
+              Five services handle the data this site collects. We do not sell any of it, and we do not share it with advertisers.
             </p>
           </div>
           <div className="blog-ul" style={{ maxWidth: '860px', margin: '32px auto 0' }}>
