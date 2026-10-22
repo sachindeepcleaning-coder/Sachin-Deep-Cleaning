@@ -1,0 +1,1 @@
+import{C as e}from"./site-D-OUIhgb.js";import{n as t}from"./claims-CziFeOe3.js";var n=e();function r({style:e}){return(0,n.jsxs)(`p`,{style:{fontSize:`.86rem`,color:`var(--muted)`,margin:`10px 0 0`,...e},children:[t,`.`]})}export{r as t};
