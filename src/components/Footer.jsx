@@ -14,7 +14,7 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer>
-      <p><strong>Sachin Deep Cleaning Services</strong> — Professional Deep Cleaning in Gurgaon</p>
+      <p><strong>Sachin Deep Cleaning</strong> — Professional Deep Cleaning in Gurgaon</p>
       <p>📍 {ADDRESS_FULL} — serving all of Gurgaon &nbsp;|&nbsp; 📞 <a href={PHONE_TEL} onClick={phoneCallClick}>+91 95607 39281</a></p>
       <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved.</p>
       <p style={{ marginTop: '6px' }}>
@@ -44,6 +44,7 @@ export default function Footer() {
         <a href="/about.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>About Us</a>
         <a href="/blog.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Blog</a>
         <a href="/contact.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Contact</a>
+        <a href="/privacy.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Privacy</a>
         <a href="/sitemap.xml" style={{ color: '#8FA4BE', textDecoration: 'none' }}>Sitemap</a>
       </p>
     </footer>

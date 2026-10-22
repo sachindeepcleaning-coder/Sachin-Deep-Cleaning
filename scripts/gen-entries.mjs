@@ -21,7 +21,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL, SITE_NAME, OG_IMAGE } from '../pages.config.mjs';
-import { GTM_ID, NETLIFY_FORM_NAME, CLARITY_ID, GEO } from '../src/lib/site.js';
+import { GTM_ID, CLARITY_ID, GEO } from '../src/lib/site.js';
 import { ARTICLES } from '../src/lib/blog.js';
 import { getService } from '../src/lib/services.js';
 import { imageDims, srcSetFor } from '../src/lib/image-dims.js';
@@ -50,17 +50,17 @@ const tyGuard = `<script>try{window.dataLayer=window.dataLayer||[];if(window.ses
 
 const clarity = `<!-- Microsoft Clarity (on-interaction: must not cost INP) -->
 <script type="text/javascript">
+// Mask every form field in session recordings: Clarity captures text typed
+// into inputs by default, and a name, a phone number and a message are not
+// something we need in a heat map. The command is queued before the tag
+// loads, so it applies from the first session.
+window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+window.clarity('set', 'mask', 'input, textarea, select');
+</script>
+<script type="text/javascript">
 (function(){function load(){if(window.__clarityLoaded)return;window.__clarityLoaded=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${CLARITY_ID}");}function arm(){var evs=['scroll','click','touchstart','keydown'];evs.forEach(function(e){window.addEventListener(e,load,{once:true,passive:true});});setTimeout(load,10000);}if(document.readyState==='complete'||document.readyState==='interactive'){arm();}else{window.addEventListener('DOMContentLoaded',arm,{once:true});}})();
 </script>
 <!-- End Microsoft Clarity -->`;
-
-// Netlify Forms: a real (static) form in the served HTML so the build
-// auto-detects the lead form ("lead-quote"). Field values are copied to the
-// hidden inputs before submission by src/components/QuoteForm.jsx.
-const netlifyForm = `<form name="${NETLIFY_FORM_NAME}" method="POST" data-netlify="true" class="netlify-hidden" hidden aria-hidden="true">
-  <input type="text" name="name" />
-  <input type="tel" name="phone" />
-</form>`;
 
 // The generated Open Graph price cards that exist for a service key.
 const OG_CARDS = new Set([
@@ -244,7 +244,6 @@ ${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" cross
 <body>
   ${gtmNoscript}
   <div id="root"></div>
-  ${netlifyForm}
   <script type="module" src="/src/bootstrap.jsx"></script>
 </body>
 </html>

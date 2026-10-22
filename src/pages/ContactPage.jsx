@@ -14,7 +14,7 @@ const FAQS = [
   ['Do you serve my area?', 'Yes — every sector across Gurgaon: DLF Phase 1–5, Sohna Road, Golf Course Road & Extension, Sushant Lok, South City, Palam Vihar, Sectors 14–92, Cyber City, MG Road and Manesar. Name your society and we confirm in one message.'],
   ['What does it cost?', 'House cleaning from ₹499/visit; full-home deep clean ₹2,500 (1 BHK) to ₹9,000 (villa); kitchen from ₹1,500; bathroom from ₹800; sofa from ₹499/seat. Free estimate on WhatsApp or via the form — price locked before booking, nothing hidden.'],
   ['What are your working hours?', 'Monday–Sunday, 8:00 AM – 8:00 PM for bookings and service. Early-morning, evening and weekend slots available; office cleaning runs after-hours so your team is never disturbed.'],
-  ['How do I pay?', 'UPI, cash or bank transfer — only after the walkthrough, when you approve the work. Zero advance, ever. If any area misses the mark, we re-clean free within 24 hours.'],
+  ['How do I pay?', 'UPI, cash or bank transfer — only after the walkthrough, when you approve the work. Zero advance, ever. If any area misses the mark, tell us within 3 days and we re-clean the affected area free.'],
   ['Can I reschedule or cancel?', 'Yes — message or call us and we move your slot free of charge. Morning-of changes are fine; we would rather arrive when it suits you than rush a bad slot.'],
   ['Do you need anything from my side?', 'Only water access and entry. We bring all machines, eco-friendly products and tools. For societies, share the tower/gate info and we handle the visitor-pass process with our IDs.'],
   ['Is the estimate on call really final?', 'Yes. We itemise rooms, bathrooms, kitchen and add-ons on the confirmation call and that figure is locked. The team cannot revise it on-site — if scope was misjudged on our side, that is our cost, not yours.'],
@@ -54,7 +54,7 @@ export default function ContactPage({ url }) {
               Leave your details and we’ll call you back with a fixed price for your sector and home size. Or reach us directly on WhatsApp for a direct reply from our work manager, who confirms your slot and <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>locks your fixed price</a> in the same chat.
             </p>
             <div className="hero-pills">
-              <span className="pill"><span className="pi">✓</span> 5-Min Callback</span>
+              <span className="pill"><span className="pi">✓</span> 5-Min Callback (working hours)</span>
               <span className="pill"><span className="pi">✓</span> Free Estimate</span>
               <span className="pill"><span className="pi">✓</span> No Advance Pay</span>
             </div>
@@ -82,7 +82,7 @@ export default function ContactPage({ url }) {
           </div>
           <div className="hiw-wrap" style={{ marginTop: '36px' }}>
             {[
-              ['0–3 min: human callback', 'Our work manager — not a bot — calls back, usually within 3 minutes in working hours (8 AM–8 PM). After hours, first thing next morning.'],
+              ['0–5 min: human callback', 'Our work manager — not a bot — calls back, usually within 5 minutes during working hours (8 AM–8 PM). After hours, first thing next morning.'],
               ['3–10 min: scope + fixed price', 'BHK, bathrooms, kitchen type and add-ons itemised on the call. One locked figure — 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500.'],
               ['10–30 min: slot locked', 'Nearest zone roster checked — DLF, Golf Course, Sohna, West or Central. Same-day when you message before noon; society gate formalities started early.'],
               ['On the day: equipped arrival', 'Police-verified team with machines, descalers and eco-friendly products. Team lead number shared with you before arrival.'],
@@ -158,7 +158,7 @@ export default function ContactPage({ url }) {
           <div style={{ textAlign: 'center' }} className="fade-up">
             <div className="section-tag">Find Us</div>
             <h2 className="section-title">We Serve Every Sector of Gurgaon</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at <a href="/blog/sushant-lok-1-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok Phase I</a> with zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon, so the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 95607 39281 to confirm nearest slot.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}>Visit our shop at <strong>Shop No-B, 747B, Sushant Lok Rd, Block B, Sector 43, Gurugram 122009</strong>, or we come to you across all of Gurgaon. Zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon mean the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 95607 39281 to confirm nearest slot.</p>
           </div>
           <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)' }} className="fade-up">
             <MapEmbed

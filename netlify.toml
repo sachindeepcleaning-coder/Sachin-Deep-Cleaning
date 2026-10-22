@@ -215,6 +215,11 @@
   status = 301
 
 [[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
   from = "/all-pages"
   to = "/all-pages.html"
   status = 301

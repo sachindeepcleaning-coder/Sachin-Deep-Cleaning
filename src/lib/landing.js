@@ -71,13 +71,13 @@ export const CHECKLIST = [
   ['Bathrooms', 'Tiles, grout cleaning, toilet sanitization, mirror polish, exhaust fan, anti-bacterial treatment'],
   ['Living Areas', 'Sofa cleaning, carpet shampooing, window washing, wall wiping, floor polishing'],
   ['Hallways & Passages', 'Thorough sweeping, mopping, wall cleaning, corner dust removal'],
-  ['Final Inspection', "100% satisfaction check. Pay only when you're completely happy with the work"],
+  ['Final Inspection', "Final walkthrough before you pay. Pay only when you're completely happy with the work"],
 ];
 
 export const HOW_IT_WORKS = [
   ['1', 'Choose your service', 'Pick from 8 deep cleaning services — full home, kitchen, bathroom, sofa, carpet and more.'],
   ['2', 'Confirm your slot', 'Share your name, number and preferred date. Price is locked in before booking is confirmed.'],
-  ['3', 'Get a verified pro', 'Matched with a police-verified, skill-assessed professional near you.'],
+  ['3', 'Get a verified pro', 'Police-verified team: ID and background check shown on request. You get the same trained crew near you.'],
   ['4', "Pay after service", 'UPI, cards or wallets — pay only after the job is complete to your satisfaction.'],
 ];
 
@@ -95,7 +95,7 @@ export const WHY_US = [
   ['💰', 'Pay After Cleaning Only', 'Zero advance. You inspect the results and pay only when completely satisfied. No risk whatsoever.'],
   ['⚡', 'Same-Day Service', 'Book before noon and get same-day service. Emergency bookings also available at no extra cost.'],
   ['🌿', 'Safe Eco-Friendly Products', 'Non-toxic cleaning agents. Safe for children, elderly, and pets. No harsh chemical smell.'],
-  ['🔄', 'Free Re-Clean Guarantee', "If any area doesn't meet your expectations, we come back within 24 hours and re-clean it absolutely free."],
+  ['🔄', 'Free Re-Clean Guarantee', "Not happy? Tell us within 3 days and we re-clean the affected area free."],
   ['📋', 'Transparent Pricing', 'Quoted upfront on call. What we say is what you pay. No hidden charges, no surprise additions.'],
 ];
 
@@ -103,19 +103,19 @@ export const PRICING = [
   {
     size: '1 BHK Deep Clean',
     price: '2,500',
-    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~5-6 hours · 3 cleaners'],
+    items: ['Kitchen + 1 Bathroom', 'All rooms & living area', 'Fans, switches & doors', 'Floor mopping', '~5-6 hours · 2 cleaners'],
     pop: false,
   },
   {
     size: '2 BHK Deep Clean',
     price: '4,500',
-    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~7-8 hours · 4 cleaners'],
+    items: ['Kitchen + 2 Bathrooms', 'All rooms & living areas', 'Balcony cleaning', 'Fans, switches & doors', '~7-8 hours · 3 cleaners'],
     pop: true,
   },
   {
     size: '3 BHK Deep Clean',
     price: '5,500',
-    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~9-10 hours · 5 cleaners'],
+    items: ['Kitchen + 2-3 Bathrooms', 'All rooms, study & balcony', 'Sofa vacuum included', 'Fans, switches & doors', '~9-10 hours · 3-4 cleaners'],
     pop: false,
   },
 ];
@@ -125,8 +125,8 @@ export const FAQS = [
   ['Do I need to arrange equipment or cleaning supplies?', 'No — we bring everything. Professional machines, high-grade tools, and eco-friendly cleaning products are all included in the price. You don\u2019t need to arrange anything.'],
   ['Do I really pay only after the cleaning?', 'Absolutely. We confirm the booking on call, arrive at your scheduled time, complete the cleaning, and you pay only after inspecting the results to your satisfaction. Zero advance payment — ever.'],
   ['Can I book same-day service?', 'Yes! We offer same-day service based on slot availability. Call or fill the form now and we\u2019ll confirm a same-day slot if available. Book before noon for best availability.'],
-  ['Is the cleaning team background-verified?', 'Yes. Every member of our team is police-verified, identity-checked, and professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
-  ["What if I'm not happy with the cleaning?", "You're protected by our 100% satisfaction guarantee. If any area isn't up to your expectation, inform us within 24 hours — we'll send the team back to re-clean it for free. Simple as that."],
+  ['Is the cleaning team background-verified?', 'Yes. Police-verified team: ID and background check shown on request before the visit, and the team is professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
+  ["What if I'm not happy with the cleaning?", "If any area isn't up to your expectation, tell us within 3 days and we'll re-clean the affected area free. Simple as that."],
 ];
 
 export const AREAS_SERVED = AREAS;

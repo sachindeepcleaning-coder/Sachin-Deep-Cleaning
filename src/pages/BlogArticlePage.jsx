@@ -3,6 +3,7 @@ import { SERVICE_PRICES } from '../lib/service-prices.js';
 import { pageUrl } from '../lib/site.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 
@@ -202,6 +203,7 @@ export default function BlogArticlePage({ file = 'blog', url = '', article = nul
               <p>
                 <strong>{article.title}</strong>? Our police-verified team in Gurgaon handles it for you — with a fixed quote before we start and pay-after-satisfaction. Same-day slots are often available if you book before noon.
               </p>
+              <PoliceProofNote style={{ textAlign: 'center' }} />
               <a href={article.cta.href} className="blog-cta-btn">{article.cta.label}</a>
               <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center' }}>
                 {[

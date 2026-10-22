@@ -15,7 +15,6 @@ import { ARTICLES } from '../src/lib/blog.js';
 import { pages } from '../pages.config.mjs';
 import { IMAGE_DIMS } from '../src/lib/image-dims.js';
 import { getService } from '../src/lib/services.js';
-import { RATING } from '../src/lib/site.js';
 import { existsSync } from 'node:fs';
 
 const STRICT = process.argv.includes('--strict');
@@ -146,9 +145,14 @@ for (const a of ARTICLES) {
     if (t.all.includes(phone)) errors.push(`${where} — publishes foreign phone number ${phone}`);
   }
 
-  // Review claims must match the Google Business Profile (RATING in src/lib/site.js).
-  // 148 was the old, unverified count; the GBP showed 80 on 2026-10-09.
-  if (/\b148\b/.test(t.all)) errors.push(`${where} — stale review count "148" (GBP count is ${RATING.count})`);
+  // No Google rating, star score or review count is published for this
+  // business: the listing cannot be renamed, so the site does not cite it.
+  // A competitor's own published rating may still be quoted when the page
+  // names the source.
+  const RATING_CLAIM =
+    /\b4\.4\b|4\.4\s*\/\s*80|\b80 reviews\b|\b80 Google reviews\b|google review|google rating|rated on google/i;
+  const rm = t.all.match(RATING_CLAIM);
+  if (rm) errors.push(`${where} — quotes a Google rating / review count: "${rm[0]}"`);
 
   // Thin content: words and heading structure.
   const bodyWords = words(t.body.join(' '));

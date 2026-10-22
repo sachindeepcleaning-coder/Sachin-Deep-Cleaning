@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
@@ -87,6 +88,7 @@ export default function BookingPage({ url }) {
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
               <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>
@@ -202,8 +204,8 @@ export default function BookingPage({ url }) {
                     ['1 BHK deep clean', 'From \u20b92,500', '5\u20136 hrs'],
                     ['2 BHK deep clean', 'From \u20b94,500', '7\u20138 hrs'],
                     ['3 BHK deep clean', 'From \u20b95,500', '9\u201310 hrs'],
-                    ['4 BHK deep clean', 'From \u20b96,500', 'Full day'],
-                    ['5 BHK / Villa deep clean', 'From \u20b99,000', 'Full day+'],
+                    ['4 BHK deep clean', 'From \u20b96,500', '8–10 hours'],
+                    ['5 BHK / Villa deep clean', 'From \u20b99,000', '10–12 hours'],
                     ['Kitchen / Bathroom', '\u20b91,500+ / \u20b9800+', '3\u20134 / 1.5\u20132 hrs'],
                     ['Sofa / Carpet shampoo', '\u20b9499/seat / \u20b915 sq ft', '2\u20134 hrs'],
                     ['Move-in / move-out', 'From \u20b91,999', 'Based on flat size'],

@@ -26,17 +26,16 @@ export default {
     { step: 4, title: 'Reassemble', desc: 'Bulbs, shades and covers are refitted and the fitting is tested on.' },
   ],
   faqs: [
-    { q: 'How much does chandelier cleaning cost in Gurgaon?', a: '₹1,499 per unit for a crystal or glass chandelier, with the high-reach access included. The rate is per fixture rather than per bulb. What changes the number is the access: a fixture on the ground floor or a low balcony is straightforward, while a high-rise fixture needing a rope-access team is quoted separately.' },
+    { q: 'How much does chandelier cleaning cost in Gurgaon?', a: '₹999 for a metal or wrought-iron unit, ₹1,499 for a crystal or glass chandelier, with the high-reach access included. The rate is per fixture rather than per bulb. What changes the number is the access: a fixture on the ground floor or a low balcony is straightforward, while a high-rise fixture needing a rope-access team is quoted separately.' },
     { q: 'How long does one chandelier take to clean?', a: 'About 60–90 minutes for a standard multi-arm crystal fixture, including the dusting, the wipe-down and the reassembly. A large lobby fixture with several hundred drops takes half a day, because every drop is handled by hand. The power to the fitting is switched off for the job.' },
     { q: 'Do you dismantle the chandelier?', a: 'Only where the fixing allows it and the client approves. Bulbs, shades and the canopy come off for cleaning, and the drops are wiped in place unless the fitting can be safely lowered. Anything needing dismantling beyond that is referred to a specialist rather than improvised.' },
     { q: 'Can you clean a high glass panel above a lobby?', a: 'Yes, using a boom lift or a pole set-up from the floor, depending on the height and the clearance around the panel. Surrounding high glass is quoted per pane. We lay protection on the floor below and work at a controlled speed so nothing is dropped.' },
     { q: 'Will the crystal drops get scratched?', a: 'No. Every drop is handled with cotton gloves and a dry micro-duster, and the wiping is done with a lightly damp microfibre rather than a wet cloth. We never spray directly onto the crystal, because the liquid can run down the wire and leave a mark on the fitting.' },
     { q: 'How often should a chandelier be cleaned?', a: 'Twice a year for most homes and lobbies — once before the festival season and once after the monsoon. A chandelier over a dining table in a kitchen-adjacent room collects grease film as well as dust, and that needs the second clean to come in sooner.' },
     { q: 'Do you clean the ceiling fans and light fittings as well?', a: 'Yes, high-reach light fittings are handled in the same visit, and ceiling fans can be added so the blades and the canopy are wiped with the same crew and the same setup. A [deep clean](/deep-cleaning-services-in-gurgaon.html) covers the fan blades and the switchboards at the same level.' },
-    { q: 'Chandelier cleaning ka kharcha kya hai?', a: 'Chandelier aur high-reach cleaning ₹1,499 per unit hoti hai, jisme crystal, glass aur high-reach access shamil hai. Ek fixture 60–90 minute me saaf hota hai. Agar fixture 12th floor par hai aur rope access chahiye, toh uska price alag quote hota hai.' },
+    { q: 'Chandelier cleaning ka kharcha kya hai?', a: 'Chandelier aur high-reach cleaning ₹999 se shuru hoti hai (metal ya wrought-iron unit); crystal ya glass ke liye ₹1,499 per unit, jisme high-reach access shamil hai. Ek fixture 60–90 minute me saaf hota hai. Agar fixture 12th floor par hai aur rope access chahiye, toh uska price alag quote hota hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.chandelier,
 };

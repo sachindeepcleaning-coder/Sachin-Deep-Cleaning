@@ -13,7 +13,7 @@ import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import UpdatedNote from '../components/UpdatedNote.jsx';
 import { JsonLd, websiteSchema, localBusinessSchema, faqSchema, webpageSchema } from '../lib/schema.jsx';
-import { FAQS } from '../lib/landing.js';
+import { FAQS, REVIEWS } from '../lib/landing.js';
 import { CONTENT_UPDATED } from '../lib/site.js';
 
 export default function IndexPage({ url }) {
@@ -36,7 +36,7 @@ export default function IndexPage({ url }) {
       <ServiceSection />
       <ChecklistSection />
       <HowItWorks />
-      <ReviewsSection />
+      <ReviewsSection reviews={REVIEWS} />
       <WhyUsSection />
       <PricingSection />
       <GuaranteeSection />

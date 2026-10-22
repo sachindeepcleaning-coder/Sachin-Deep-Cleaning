@@ -510,21 +510,23 @@ export const MONEY_QA = {
       rows: [
         ['1 BHK', '₹2,500', '400–600 sq ft', '5–6 hours, 2 cleaners'],
         ['2 BHK', '₹4,500', '601–1,000 sq ft', '7–8 hours, 3 cleaners'],
-        ['3 BHK', '₹5,500', '1,001–1,500 sq ft', '9–10 hours, 4 cleaners'],
-        ['4 BHK', '₹6,500', '1,501–2,100 sq ft', '8–10 hours, 5 cleaners'],
-        ['5 BHK / villa', '₹9,000', '2,500–3,000 sq ft', '10–12 hours, 5–6 cleaners'],
+        ['3 BHK', '₹5,500', '1,001–1,500 sq ft', '9–10 hours, 3–4 cleaners'],
+        ['4 BHK', '₹6,500', '1,501–2,100 sq ft', '8–10 hours, 4–5 cleaners'],
+        ['5 BHK / villa', '₹9,000', '2,500–3,000 sq ft', '10–12 hours, 5 cleaners'],
         ['Per square foot equivalent', '₹3–₹6 per sq ft', 'Any built-up size', 'Scales with the area'],
         ['Furnished home', 'Add ₹500–₹1,500', 'Sofa and dining units', 'Adds 1–2 hours'],
       ],
     },
     qa: [
       {
+        key: 'bhkCost',
         q: 'How much does full home deep cleaning cost for a 2 BHK in Gurgaon?',
         a: 'A 2 BHK full home deep clean in Gurgaon costs ₹4,500 for a non-furnished flat, covering 601–1,000 sq ft over 7–8 hours with three cleaners. Furnished 2 BHKs with a sofa, dining table and extra wardrobes run ₹5,000–₹5,500. The price includes machines, products, travel and the final walkthrough.',
       },
       {
+        key: 'bhkTime',
         q: 'How long does a 3 BHK full home deep clean take?',
-        a: 'Nine to ten hours, with four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
+        a: 'Nine to ten hours, with three to four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
       },
       {
         q: 'Which BHK deep cleaning package should I book for my flat?',
@@ -544,7 +546,7 @@ export const MONEY_QA = {
       },
       {
         q: 'How do you calculate deep cleaning cost per square foot?',
-        a: 'The published rate is ₹3–₹6 per square foot depending on size and finish, and the BHK packages are the fixed equivalents. A 1 BHK of roughly 450 sq ft at ₹2,500 works out near ₹5 per sq ft, while a 3 BHK of about 1,250 sq ft at ₹5,500 lands near ₹4.4. We quote the package, not the arithmetic.',
+        a: 'The published rate is ₹3–₹6 per square foot depending on size and finish, and the BHK packages are the fixed equivalents. A 1 BHK of roughly 450 sq ft at ₹2,500 works out near ₹5 per sq ft, while a 3 BHK of about 1,250 sq ft at ₹5,500 lands a little over ₹4 per sq ft. We quote the package, not the arithmetic.',
       },
     ],
     factors: {
@@ -831,13 +833,13 @@ export const MONEY_QA = {
       ],
     },
     qa: [
-      { q: 'How much does kitchen utensil cleaning cost in Gurgaon?', a: 'Kitchen utensil cleaning in Gurgaon starts at ₹409 for a daily lot of up to 20 pieces and ₹699 for a standard kitchen lot of 20–50 pieces. A heavy lot of 50 or more vessels is ₹999. The figure is confirmed on the call after the item list, never revised on site.' },
+      { q: 'How much does kitchen utensil cleaning cost in Gurgaon?', a: 'Kitchen utensil cleaning in Gurgaon starts at ₹299 for a cutlery and serving-set wash, ₹409 for a daily lot of up to 20 pieces and ₹699 for a standard kitchen lot of 20–50 pieces. A heavy lot of 50 or more vessels is ₹999. The figure is confirmed on the call after the item list, never revised on site.' },
       { q: 'Do you clean brass, copper and silver vessels in Gurgaon?', a: 'Yes, with metal-safe products rather than a generic detergent — brass and copper are treated for tarnish and depth, silver with a safe polish that does not strip it. If a piece is lacquered or needs a specialist polish, we tell you on the walkthrough before proceeding.' },
       { q: 'Do you clean inside pressure cooker lids and gaskets?', a: 'Yes. The lid, the gasket, the vent pipe and the regulator come apart where they safely can, so the starch film and the oil film under the gasket are removed. That part is the one a hand wash never reaches, and it is what carries the stale smell.' },
-      { q: 'Can I book a utensil clean on its own, or is it part of a kitchen clean?', a: 'You can book it on its own. A standalone utensil clean is ₹409 and takes 60–90 minutes — useful before Diwali or after a large function when the kitchen is stacked. If the cabinets, chimney and splashback also need a reset, the ₹1,500 kitchen deep clean is better value.' },
+      { q: 'Can I book a utensil clean on its own, or is it part of a kitchen clean?', a: 'You can book it on its own. A standalone daily-lot utensil clean is ₹409 (₹299 for a cutlery and serving-set wash) and takes 60–90 minutes — useful before Diwali or after a large function when the kitchen is stacked. If the cabinets, chimney and splashback also need a reset, the ₹1,500 kitchen deep clean is better value.' },
       { q: 'Do you dry and pack the utensils after cleaning in Gurgaon?', a: 'Yes — drying, stacking, and packing back into the storage is included at no extra charge. We dry every piece on a rack, pack them into the same cupboard section, and hand over with a count so nothing is short and nothing is wet where staff would walk.' },
       { q: 'How long does a utensil clean take for a family kitchen?', a: 'A typical family lot of 20–50 pieces takes 90 minutes to two hours with a two-person crew. A heavy lot with large storage containers and brass vessels takes two to three hours. The timing is part of the quote, not an estimate on the day.' },
-      { q: 'Gurgaon me utensils cleaning ka price kya hai?', a: 'Roz ke utensils (20 piece tak) ki safai ₹409 hoti hai, kitchen ke standard lot (20–50 piece) ₹699, aur bade bartaan ke liye ₹999. Pooja ke brass aur copper ke bartan alag product se saaf hote hain. Price call par fix hoti hai.' },
+      { q: 'Gurgaon me utensils cleaning ka price kya hai?', a: 'Cutlery aur serving-set ki safai ₹299 hoti hai, roz ke utensils (20 piece tak) ₹409, kitchen ke standard lot (20–50 piece) ₹699, aur bade bartaan ke liye ₹999. Pooja ke brass aur copper ke bartan alag product se saaf hote hain. Price call par fix hoti hai.' },
     ],
     factors: {
       title: 'What changes the utensil cleaning price',
@@ -902,7 +904,7 @@ export const MONEY_QA = {
       ],
     },
     qa: [
-      { q: 'How much does chandelier cleaning cost in Gurgaon?', a: 'Chandelier cleaning in Gurgaon costs ₹1,499 for a crystal or glass unit, ₹999 for a metal or wrought one, and from ₹1,999 for high-ceiling and cornice reach. A unit above a safe reach height is survey-quoted because it needs access equipment, never improvised.' },
+      { q: 'How much does chandelier cleaning cost in Gurgaon?', a: 'Chandelier cleaning in Gurgaon starts at ₹999 for a metal or wrought-iron unit, ₹1,499 for a crystal or glass one, and from ₹1,999 for high-ceiling and cornice reach. A unit above a safe reach height is survey-quoted because it needs access equipment, never improvised.' },
       { q: 'Do you dismantle a chandelier to clean it in Gurgaon?', a: 'Only where the fixture can be safely reached and the pieces are individually handled. In most Gurgaon homes the unit is cleaned in place, piece by piece, dried and re-hung. Dismantling is quoted separately because it needs a rigging plan and a longer access window.' },
       { q: 'How do you reach a chandelier in a double-height living room?', a: 'For a double-height lobby we work from the floor with extension poles up to a height, and above that we arrange a lift or rope-access as a separately quoted line. The access quote comes with the clean quote, so you see the full figure before a crew is booked.' },
       { q: 'Can you clean lobby feature lights in Gurgaon offices?', a: 'Yes. Lobby feature and statement lights are survey-quoted because each fixture, height and access path is different, and the same unit in a residential lobby is never priced like a corporate one. GST invoices and after-hours slots are standard for office work.' },
@@ -1080,7 +1082,7 @@ export const MONEY_QA = {
       ],
     },
     qa: [
-      { q: 'How much does same-day cleaning cost in Gurgaon?', a: 'Same-day cleaning in Gurgaon is ₹999 for a 1 BHK, ₹1,499 for a 2 BHK and ₹1,999 for a 3 BHK, with a 2 to 4 person crew. A single urgent bathroom is ₹799 and an urgent kitchen is ₹1,199. The price is the same in the evening as in the morning.' },
+      { q: 'How much does same-day cleaning cost in Gurgaon?', a: 'Same-day cleaning in Gurgaon starts at ₹799 for a single urgent bathroom, then ₹999 for a 1 BHK, ₹1,499 for a 2 BHK and ₹1,999 for a 3 BHK, with a 2 to 4 person crew. An urgent kitchen is ₹1,199. The price is the same in the evening as in the morning.' },
       { q: 'How fast can you send a cleaning crew in Gurgaon?', a: 'We dispatch within four hours of booking for same-day slots, which is why the package is scoped rather than a full deep clean. A 2 to 3 person crew takes a 2 BHK through kitchen, bathrooms, bedrooms, balcony and floors in four to five hours.' },
       { q: 'What is the difference between instant cleaning and a deep clean?', a: 'An instant clean is a same-day top-to-bottom reset scoped to a fixed checklist — kitchen, bathrooms, bedrooms, living area, floors and balcony. A deep clean adds machine scrubbing, wardrobe interiors, window tracks and a supervisor walkthrough. The instant package gets you to a clean flat today; the deep clean resets the grout and grime.' },
       { q: 'Can I get a same-day bathroom clean in Gurgaon?', a: 'Yes. An urgent same-day bathroom clean is ₹799 for one bathroom with a full descale, commode sanitization, mirror and floor work, and one to two cleaners. It is the fastest way to fix a bathroom before a guest arrives or a visitor is expected.' },
@@ -1146,7 +1148,7 @@ export const MONEY_QA = {
         ['1 BHK (400–600 sq ft)', '₹3 per sq ft', '₹2,500', '5–6 hrs'],
         ['2 BHK (601–1,000 sq ft)', '₹3 per sq ft', '₹4,500', '7–8 hrs'],
         ['3 BHK (1,001–1,500 sq ft)', '₹3 per sq ft', '₹5,500', '9–10 hrs'],
-        ['4 BHK (1,501–2,100 sq ft)', '₹3 per sq ft', '₹6,500', 'Full day'],
+        ['4 BHK (1,501–2,100 sq ft)', '₹3 per sq ft', '₹6,500', '8–10 hrs'],
         ['5 BHK / villa (2,100+ sq ft)', '₹3 per sq ft', 'From ₹9,000', '10–12 hrs'],
         ['Furnished home', 'Add ₹500–₹1,500', 'Add ₹500–₹1,500', 'Adds 1–2 hrs'],
       ],
@@ -1277,6 +1279,64 @@ export const MONEY_QA = {
         'Furniture — light items are moved and reset, heavy items are not',
         'Add-ons — a stain, an odour or a stain-specific treatment is quoted separately',
       ],
+    },
+  },
+};
+
+
+// ─── Per-BHK answers ────────────────────────────────────────────────────────
+// The cost and the duration questions are page-specific: the 1 BHK page must
+// not carry a "2 BHK" question. ServicePage swaps these two answers in when a
+// BHK is set, so every one of the five BHK pages answers its own question.
+export const BHK_QA = {
+  1: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 1 BHK in Gurgaon?',
+      a: 'A 1 BHK full home deep clean in Gurgaon costs ₹2,500 for a non-furnished flat, covering 400–600 sq ft over 5–6 hours with two cleaners. A furnished 1 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 1 BHK full home deep clean take?',
+      a: 'Five to six hours, with two cleaners on site. That is enough time for the bedroom and its wardrobes, one bathroom fully descaled, a modular kitchen with the chimney filter dismantled and soaked, the living area and the balcony floors. A furnished 1 BHK adds an hour for sofa and wardrobe detailing.',
+    },
+  },
+  2: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 2 BHK in Gurgaon?',
+      a: 'A 2 BHK full home deep clean in Gurgaon costs ₹4,500 for a non-furnished flat, covering 601–1,000 sq ft over 7–8 hours with three cleaners. Furnished 2 BHKs with a sofa, dining table and extra wardrobes run ₹5,000–₹5,500. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 2 BHK full home deep clean take?',
+      a: 'Seven to eight hours, with three cleaners on site. That is enough time for both bedrooms and their wardrobes, two bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, the living area and the balcony floors. A furnished 2 BHK adds an hour for sofa and wardrobe detailing.',
+    },
+  },
+  3: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 3 BHK in Gurgaon?',
+      a: 'A 3 BHK full home deep clean in Gurgaon costs ₹5,500 for a non-furnished flat, covering 1,001–1,500 sq ft over 9–10 hours with three to four cleaners. A furnished 3 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 3 BHK full home deep clean take?',
+      a: 'Nine to ten hours, with three to four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
+    },
+  },
+  4: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 4 BHK in Gurgaon?',
+      a: 'A 4 BHK full home deep clean in Gurgaon costs ₹6,500 for a non-furnished flat, covering 1,501–2,100 sq ft over 8–10 hours with four to five cleaners. A furnished 4 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 4 BHK full home deep clean take?',
+      a: 'Eight to ten hours, with four to five cleaners on site — a full working day for four bedrooms and their wardrobes, three or four bathrooms fully descaled, the terrace and the balconies. Marble-safe products are used on the floors.',
+    },
+  },
+  5: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 5 BHK or villa in Gurgaon?',
+      a: 'A 5 BHK or villa deep clean in Gurgaon costs ₹9,000 for a non-furnished home, covering 2,500–3,000 sq ft over 10–12 hours with five cleaners. A furnished villa adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 5 BHK or villa deep clean take?',
+      a: 'Ten to twelve hours, with five cleaners on site — one full working day for five bedrooms, four or more bathrooms fully descaled, the terrace and the balconies, with finish-specific products on the floors.',
     },
   },
 };

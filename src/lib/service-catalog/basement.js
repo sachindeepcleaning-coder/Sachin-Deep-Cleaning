@@ -36,8 +36,7 @@ export default {
     { q: 'Godown cleaning ka kharcha kya hai?', a: 'Unfinished basement aur godown cleaning ₹12 per sq ft hai, yaani 1,000 sq ft ke liye ₹12,000. Time lagta hai 5–6 ghante. Debris aur oil stains jitne zyada honge, cost bhi usi hisaab se badhta hai.' },
     { q: 'Can you clean a basement inside a society tower?', a: 'Yes, we clean society basements and storage areas on a scheduled basis so the access gates, ramps and lifts stay usable. Sloped ramps and low-headroom sections are slower to machine-scrub, and we plan the crew and the order of the bays around the parking schedule so residents are not blocked.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.basement,
 };

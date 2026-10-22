@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import ReviewsSection from '../components/ReviewsSection.jsx';
 import PricingSection from '../components/PricingSection.jsx';
@@ -9,26 +10,24 @@ import ReelEmbed from '../components/ReelEmbed.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
 import { CONTENT_UPDATED } from '../lib/site.js';
 import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, webpageSchema } from '../lib/schema.jsx';
-import { RATING } from '../lib/site.js';
-import { ratingLabel } from '../lib/claims.js';
 
 const NEAR_ME = [
   ['📍', 'Closest Available Team', 'We route your request to the cleaning crew already working nearest to your sector — not a team crossing the whole city.'],
   ['⏱️', 'Faster Arrival Windows', 'Local dispatch means shorter travel time, which usually means a same-day or next-morning slot instead of a multi-day wait.'],
   ['🏢', 'Familiar With Local Societies', 'Our teams already have visitor-pass experience with most major RWAs and gated societies across Gurgaon.'],
-  ['👮', 'Still Fully Verified', 'Nearby never means less vetted — every cleaner, local or not, is police-verified and ID-checked before entering your home.'],
+  ['👮', 'Still Fully Verified', 'Nearby never means less vetted — the same police verification applies: ID and background check shown on request.'],
 ];
 
 const FAQS = [
   ['What do residential cleaning services near me include in Gurgaon?', 'Everything a Gurgaon home needs: full-home deep clean (all rooms, kitchen chimney degreasing, bathroom descaling, windows, balconies) plus single services — sofa shampoo from ₹499/seat, carpet from ₹15/sq ft, and weekly house cleaning from ₹499/visit. Villas add terrace and facade wash.'],
   ['Are you the same team for deep cleaners near me and home cleaners near me searches?', 'Yes — whether you search residential cleaning services near me, deep cleaners near me, home cleaners near me or deep cleaning services near me, you reach the same police-verified local team. The wording differs; the booking, machines and pay-after-satisfaction guarantee are identical.'],
   ['How do you decide which cleaning team is nearest to me?', 'We match your area or sector to the crew already working closest to it that day. This is why we ask for your area in the quote form — it directly affects your arrival time.'],
-  ['Is a local team as reliable as a citywide company?', 'Yes — every cleaner, regardless of which zone they are dispatched from, goes through the same police verification, training, and satisfaction guarantee.'],
+  ['Is a local team as reliable as a citywide company?', 'Yes — whichever zone the crew is dispatched from, it goes through the same police verification (ID and background check shown on request), the same training and the same satisfaction promise.'],
   ['Can I get same-day residential cleaning near me?', 'In most Gurgaon sectors, yes — especially if you book before noon. We will confirm exact same-day availability for your specific area on the callback.'],
   ['Do you cover gated societies and RWAs?', 'Yes. Our teams regularly work across Gurgaon major societies and are used to standard visitor-entry and ID-verification processes.'],
   ['What if my exact locality is not listed?', 'Our listed areas are not exhaustive. Call us directly — we cover most of Gurgaon and can usually confirm coverage in under a minute.'],
   ['How is pricing fixed for my specific home?', 'On the confirmation call we itemise your BHK, bathroom count, kitchen type and add-ons (sofa seats, carpet sq ft) and lock one figure. 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500 — same in every sector, no travel or gate-entry surcharge.'],
-  ['Do you clean villas and builder floors, not just flats?', 'Yes — villas and floors get larger teams (5–6 cleaners), terrace and facade wash, and stairwell detailing. 4–5 BHK villa packages run ₹6,500–₹9,000 with the same pay-after walkthrough.'],
+  ['Do you clean villas and builder floors, not just flats?', 'Yes — villas and floors get larger teams (5 cleaners), terrace and facade wash, and stairwell detailing. 4–5 BHK villa packages run ₹6,500–₹9,000 with the same pay-after walkthrough.'],
   ['Can I get the same team for repeat visits?', 'On weekly and bi-weekly plans, yes — the same crew learns your home, your RWA gate and your preferences. One-time and festive bookings get the nearest available verified team.'],
 ];
 
@@ -40,10 +39,9 @@ const PILLS = [
 ];
 
 const STATS = [
-  ['5,000', '+', 'Homes Cleaned'],
-  [RATING.value, '★', 'Google Rating'],
   ['30', '+', 'Sectors Covered'],
-  ['₹2,000', '+', 'Starting Price'],
+  ['From ₹2,500', ' (1 BHK)', 'Fixed Price'],
+  ['Since 2015', '', 'In Gurgaon'],
 ];
 
 
@@ -70,7 +68,7 @@ export default function ResidentialPage({ url }) {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-              Local Team · Gurugram · {ratingLabel()}
+              Local Team · Gurugram · Since 2015
             </div>
             <h1>
               <span className="hl">Residential Cleaners Near Me?</span><br />
@@ -85,6 +83,7 @@ export default function ResidentialPage({ url }) {
                 <span key={p} className="pill"><span className="pi">✓</span> {p}</span>
               ))}
             </div>
+            <PoliceProofNote />
             <div className="hero-stats">
               {STATS.map(([num, suffix, label]) => (
                 <div key={label} className="hs">
@@ -174,7 +173,7 @@ export default function ResidentialPage({ url }) {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection reviews={[]} />
 
       <section className="section section-alt">
         <div className="section-inner" style={{ textAlign: 'center' }}>

@@ -141,7 +141,7 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 ## ⚙️ Config
 
 - **Build:** `npm run build` (vite). No Tailwind here.
-- **Leads:** Netlify Forms (`lead-quote`) + `FORMSPREE_ID = 'xdaqkbwa'` fallback via `QuoteForm.jsx`; redirect to `thank-you.html`.
+- **Leads:** `src/lib/sendLead.js` posts the enquiry to our Cloudflare Worker lead gateway first and falls back to Web3Forms. There is no Netlify form and no Formspree: the site is served from GitHub Pages, so a plain form POST would land on a static page and lose the lead. Every form carries a one-line consent note and points at `/privacy.html`.
 - **Reels:** click-to-play facades with local posters (no autoplay, no IG/YT embeds on load); local mp4s lazy-load on scroll into view.
 - **Map:** `MapEmbed.jsx` — click-to-load facade, so the contact page ships **no** third-party request until the visitor asks for the map.
 - **Fonts:** self-hosted in `public/fonts` (DM Sans + Syne), preloaded — no Google Fonts requests. Only these two families are referenced.
@@ -149,13 +149,13 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 
 ## 📊 Site State (2026-10-22)
 
-- **131 entry shells** (`npm run gen`) → **130 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
-- **Sitemap:** 126 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
+- **132 entry shells** (`npm run gen`) → **131 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
+- **Sitemap:** 127 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
 - **Blog:** 85 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
 - **Service pages:** 29 services (33 URLs with the BHK variants) — every one with a price table, 7–8 question-form answers and a HowTo node
 - **Titles:** every service page carries its published price (33/33); no title over 62 chars, no description under 120
 - **Internal links:** all 85 guides have a service-page link; every service page is linked from 129 pages
-- **Schema:** LocalBusiness on 38 pages · WebPage 119 · FAQPage 123 · HowTo 33 · Service 39 · BreadcrumbList 122 · CollectionPage + ItemList on `blog.html` · AggregateOffer on 35 · SpeakableSpecification on 119
+- **Schema:** LocalBusiness on 38 pages · WebPage 128 · FAQPage 123 · HowTo 33 · Service 39 · BreadcrumbList 124 · CollectionPage + ItemList on `blog.html` · No aggregateRating and no priceRange on the business entity — the Google listing is not citedgateOffer on 35 · SpeakableSpecification on 119
 - **Performance:** per-article chunks (a guide page ships ~12 KB of copy, not the whole 85-guide library) · `modulepreload` on every page · largest single chunk is the 170 KB entry
 - **Content gate:** `content-lint` passes with **0 warnings**, including `--strict`
 - **Hydration rule:** SSR output must equal first client render — never mutate another component's DOM; keep effects out of render output.
@@ -167,7 +167,7 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 - The included-scope list and the process steps render as real `<ul>`/`<ol>` so AI extractors can parse them, and the same steps feed the `HowTo` node 1:1.
 - **Blog articles** live in `src/lib/blog.js` (`ARTICLES[]`: slug/file/title/description/dates/image/lead/faqs/cta/blocks). Block types: `p, lead, h2, h3, table{head,rows}, ul, ol, tip`; `**bold**` inline supported. Rendered by `BlogArticlePage.jsx` with Article + FAQ + Breadcrumb + WebPage JSON-LD. Every article also renders a **Key takeaways** box (derived from the guide's own copy by `gen-article-modules.mjs`) — the labelled summary an answer engine lifts.
 - **`src/lib/blog.js` is never bundled.** `gen-article-modules.mjs` projects it into one module per guide; `src/lib/article-routes.jsx` maps each guide to its own chunk.
-- **Custom pages** (`index/residential/partners/landing/about/blog/allpages/contact/thank-you/404`) are hand-built components with own schema; new page types need an `app.jsx` lazy mapping + `pages.config.mjs` entry (see `BookingPage.jsx` + `page:'landing'` precedent).
+- **Custom pages** (`index/residential/partners/landing/about/blog/allpages/contact/privacy/thank-you/404`) are hand-built components with own schema; new page types need an `app.jsx` lazy mapping + `pages.config.mjs` entry (see `BookingPage.jsx` + `page:'landing'` precedent).
 - **Content bars (enforced):** titles <60 chars, descriptions 120–160, exactly 1 H1, every page ≥1,500 prerendered words, primary keyword in title/H1/lead + body multiples, Hinglish FAQ on local-intent pages, CTA → money page, `since 2015` business history (never 2024), prices from the live rate card only.
 - **Comparison pages** (Mr/UC/NoBroker/Safaiwale/Best-office): verifiable public facts only, “Not publicly listed” where unknown, affiliation disclosed in lead + tip, figures dated (Sep 2026).
 - **Internal linking:** `RelatedGuides.jsx` (serviceKey → guides), `RelatedServices.jsx` (service mesh), blog CTA footer (3 money links), footer keyword links, `llms.txt` mirror for AI discovery.
@@ -180,14 +180,14 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 - **Audit log:** `SEO-AUDIT.md` (dated sections per change).
 - **Backlinks:** `BACKLINKS.md` (NAP block, copy kit, tiered targets). Rule: never buy/automate links.
 - **Indexing discipline:** `scripts/submit-indexing.cjs` ONLY for newly written or materially changed URLs (`--url …`); never mass `--reset` except after site-wide rebuilds (200/day project quota, shared with old-domain cron).
-- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — 20 checks. Same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, every FAQPage question visible on the page, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts, no second brand name or retired phone/plus code, one identical business identity site-wide, no leftover fake-urgency or unbacked-claim strings, every service page has the price table + 6+ question-form answers whose commercial answers lead with a figure, the GEO surfaces (`facts.html`, `services.html`, `blog.html` CollectionPage/ItemList, the llms.txt facts block) are all wired, and no page is an orphan.
-- **Docs policy:** `.md` files are local-only (`*.md` gitignored) except `README.md`, which stays on GitHub. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
+- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — 24 checks. Same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed , no Google rating or review count anywhere, an unproven claim may not be rendered, and every page that carries the police-verification claim must carry its "shown on request" proof lineby two types, canonical present, exactly one `<h1>`, every FAQPage question visible on the page, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts, no second brand name or retired phone/plus code, one identical business identity site-wide, no leftover fake-urgency or unbacked-claim strings, every service page has the price table + 6+ question-form answers whose commercial answers lead with a figure, the GEO surfaces (`facts.html`, `services.html`, `blog.html` CollectionPage/ItemList, the llms.txt facts block) are all wired, and no page is an orphan.
+- **Docs policy:** `.md` files are tracked (`README.md` and any guide you add). The local working files — `Search keyword report(1).csv`, `indexing-progress.json`, `rank-history.json` and `sachindeepcleaning.shop-audit/` — live outside the repo and are gitignored. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
 
 ## 📞 Business Details
 
 - **Company:** Sachin Deep Cleaning
-- **Phone / WhatsApp:** +91 9560739281
-- **Location:** Gurgaon, Haryana
+- **Phone / WhatsApp:** +91 95607 39281
+- **Shop address:** Shop No-B, 747B, Sushant Lok Rd, Block B, Sector 43, Gurugram, Haryana 122009
 - **Facebook:** [Sachin Deep Cleaning](https://www.facebook.com/profile.php?id=61577737535478)
 - **Instagram:** [@cleaning_service_in_gurgaon](https://www.instagram.com/cleaning_service_in_gurgaon)
 - **YouTube:** [@Cleaning_service_in_Gurgaon](https://www.youtube.com/@Cleaning_service_in_Gurgaon)

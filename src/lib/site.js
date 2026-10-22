@@ -15,7 +15,7 @@ export const WHATSAPP_NUMBER = '919560739281';
 export const WHATSAPP = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 // Pre-filled WhatsApp links for the template CTAs.
-export const WA_BOOK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi I want to book deep cleaning service in Gurgaon.')}`;
+export const WA_BOOK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi, I want to book deep cleaning in Gurgaon.')}`;
 export function waMsg(msg) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
@@ -43,7 +43,7 @@ export const SITE_KEY = 'SACHIN-SHOP';
 
 export const STARTING_PRICE = '₹2,000';
 export const PHONE_HREF = PHONE_TEL;
-export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
+export const SERVICE_AREA_TEXT = 'Serving all areas of Gurgaon, Haryana';
 
 // ─── Entity (NAP) — single source of truth ──────────────────────────────────
 // Must match the Google Business Profile exactly. If the GBP changes, change it here.
@@ -55,7 +55,7 @@ export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 //
 // The address below is the ONE address used everywhere on the site (footer,
 // contact, About, JSON-LD, llms.txt, sitemap captions, Maps links). The earlier
-// "Sector 27, Sector 43" double was removed because a single shop cannot be in
+// two-sector double was removed because a single shop cannot be in
 // two sectors, and the block letter is Block B (confirmed 2026-10-22).
 // Change it here only — every other file reads from here.
 export const BRAND_NAME = 'Sachin Deep Cleaning';
@@ -76,21 +76,7 @@ export const ADDRESS_FULL =
 // Coordinates — one place, used by the meta geo tags and the JSON-LD.
 export const GEO = { latitude: 28.4538, longitude: 77.0782 };
 
-// Google rating — copy from the live GBP, never estimate. Every on-page claim,
-// the JSON-LD and llms.txt read from here; scripts/content-lint.mjs fails the
-// build if copy states a different review count.
-//
-// [VERIFY] Re-check this against the live GBP before each deploy. If the live
-// count has moved, update `count` here and nothing else — do NOT edit the
-// number anywhere else, and never invent a count.
-export const RATING = {
-  value: '4.4',
-  count: 80,
-  asOf: '2026-10-09',
-  source: 'Google Business Profile',
-};
-
-// Date the money-page content (prices, rating, address) was last reviewed.
+// Date the money-page content (prices, address) was last reviewed.
 // Bump this ONLY when that content really changes. It drives the visible
 // "Updated" line, WebPage.dateModified and sitemap lastmod for non-article pages.
 export const CONTENT_UPDATED = '2026-10-09';

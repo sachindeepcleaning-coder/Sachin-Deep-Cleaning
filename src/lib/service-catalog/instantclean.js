@@ -27,17 +27,16 @@ export default {
     { step: 4, title: 'Sign-Off', desc: 'You get room photos and a walkthrough before the payment is taken.' },
   ],
   faqs: [
-    { q: 'How much does same-day cleaning cost in Gurgaon?', a: '₹999 for the same-day slot, and the crew size is set by the scope you confirm on the call. The four-hour window itself carries no extra charge. If the home needs real scrubbing rather than a reset, we price it as a deep clean instead, so you are not paying a same-day rate for a bigger job.' },
+    { q: 'How much does same-day cleaning cost in Gurgaon?', a: '₹799 for a single urgent bathroom, ₹999 for the 1 BHK same-day slot, and the crew size is set by the scope you confirm on the call. The four-hour window itself carries no extra charge. If the home needs real scrubbing rather than a reset, we price it as a deep clean instead, so you are not paying a same-day rate for a bigger job.' },
     { q: 'How quickly can someone reach my home?', a: 'Call before noon and the crew reaches your home within four hours of confirmation, usually well inside that. The window is measured from the moment we lock the price and scope on the call, not from when you first picked up. Peak days around Diwali and the weekends in October run tighter, so an early call matters.' },
-    { q: 'What can be finished in four hours?', a: 'A 1 BHK or a 2 BHK can be reset properly inside four hours with two or three people, meaning bathrooms cleaned and descaled, the kitchen counter degreased, all rooms vacuumed and mopped, and touch points sanitised. A 3 BHK or a villa needs a full day rather than a four-hour window, and we will say so on the call.' },
+    { q: 'What can be finished in four hours?', a: 'A 1 BHK or a 2 BHK can be reset properly inside four hours with two or three people, meaning bathrooms cleaned and descaled, the kitchen counter degreased, all rooms vacuumed and mopped, and touch points sanitised. A 3 BHK or a villa needs 9–12 hours rather than a four-hour window, and we will say so on the call.' },
     { q: 'Do I need to be at home?', a: 'Not during the work. Many customers leave access instructions and go to work, and we send you a photo of each finished room from the site. Someone should be there for the final walkthrough, or you can approve by phone and settle the payment the same way.' },
     { q: 'Is same-day cleaning the same as deep cleaning?', a: 'No. Same-day cleaning is a surface reset done fast — the right job for guests, showings and a home that has been kept reasonably well. A deep clean goes behind furniture, into grout, inside wardrobes and over every fixture, and that takes 5–6 hours for a 1 BHK and 7–8 hours for a 2 BHK. Book the deep clean for a proper reset.' },
     { q: 'What if the home is in very bad condition?', a: 'Then a same-day crew cannot do it justice, and we will say so on the call rather than take the money and leave you with half the work. We will quote a deep clean with a date, or in some cases two same-day visits back to back, which gets a heavily neglected home to the same result faster than one rushed visit.' },
-    { q: 'Same-day cleaning ka kharcha kya hai?', a: 'Same-day cleaning ₹999 hai aur chaar ghante ke andar team pahunch jaati hai. Bathroom, kitchen, phir kamre aur floor — sab usi visit me. Doosri baar booking karne par charge wahi rehta hai, extra nahi lagta.' },
+    { q: 'Same-day cleaning ka kharcha kya hai?', a: 'Same-day cleaning ₹799 (ek urgent bathroom) ya ₹999 (1 BHK package) hai, aur chaar ghante ke andar team pahunch jaati hai. Bathroom, kitchen, phir kamre aur floor — sab usi visit me. Doosri baar booking karne par charge wahi rehta hai, extra nahi lagta.' },
     { q: 'Do you take instant cleaning bookings for offices?', a: 'Yes. A meeting room, a client floor or a showroom can be reset between bookings on the same day, and Cyber City and Udyog Vihar offices usually schedule it in the afternoon before an evening client. The same ₹999 slot applies, with the crew size adjusted to the number of cabins and washrooms involved.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.instantclean,
 };

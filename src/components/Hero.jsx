@@ -1,20 +1,17 @@
 import QuoteForm from './QuoteForm.jsx';
-import { RATING } from '../lib/site.js';
-import { ratingLabel } from '../lib/claims.js';
+import PoliceProofNote from './PoliceProofNote.jsx';
 
 const PILLS = [
   'Same-Day Service',
   'Police-Verified Team',
   'Pay After Cleaning',
-  '100% Satisfaction',
   'Eco-Friendly Products',
 ];
 
 const STATS = [
-  ['5,000', '+', 'Homes Cleaned'],
-  [RATING.value, '★', 'Google Rating'],
-  ['98', '%', 'Happy Customers'],
-  ['₹2,000', '+', 'Starting Price'],
+  ['Since 2015', '', 'Cleaning Gurgaon'],
+  ['From ₹2,500', ' (1 BHK)', 'Fixed Price'],
+  ['Pay After', '', 'Walkthrough'],
 ];
 
 export default function Hero() {
@@ -25,19 +22,20 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-            Gurgaon's Trusted Deep Cleaning Service · {ratingLabel()}
+            Gurgaon's Trusted Deep Cleaning Service · Since 2015
           </div>
           <h1>
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>
           </h1>
             <p className="hero-sub">
-              Expert deep cleaning for your entire home — bedroom, living room, kitchen, bathrooms, floors, walls & more. Rated among deep cleaning services in Gurgaon for pay-after-satisfaction. Police-verified team, fixed price before we start. Same-day booking available in all Gurgaon areas.
+              Expert deep cleaning for your entire home — bedroom, living room, kitchen, bathrooms, floors, walls & more. A local Gurgaon crew, pay after you walk through and approve the work. Police-verified team, fixed price before we start. Same-day booking available in all Gurgaon areas.
             </p>
           <div className="hero-pills">
             {PILLS.map((p) => (
               <span key={p} className="pill"><span className="pi">✓</span> {p}</span>
             ))}
           </div>
+          <PoliceProofNote />
           <div className="hero-stats">
             {STATS.map(([num, suffix, label]) => (
               <div key={label} className="hs">

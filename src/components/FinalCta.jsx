@@ -16,7 +16,7 @@ export default function FinalCta() {
             📞 Call: +91 95607 39281
           </a>
           <a
-            href={waMsg('Hi I want to book deep cleaning in Gurgaon. Please send me a quote.')}
+            href={waMsg('Hi, I want to book deep cleaning in Gurgaon. Please send me a quote.')}
             target="_blank" rel="noopener"
             className="fcta-wa"
             onClick={whatsappClick}

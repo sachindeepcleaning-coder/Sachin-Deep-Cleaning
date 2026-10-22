@@ -1,4 +1,5 @@
 import QuoteForm from '../components/QuoteForm.jsx';
+import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import ReviewsSection from '../components/ReviewsSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
@@ -66,9 +67,10 @@ export default function PartnersPage({ url }) {
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> Bulk Cluster Days</span>
               <span className="pill"><span className="pi">✓</span> GST Invoice</span>
-              <span className="pill"><span className="pi">✓</span> Police-Verified Crew</span>
+              <span className="pill"><span className="pi">✓</span> Police-Verified Team</span>
               <span className="pill"><span className="pi">✓</span> Pay After Walkthrough</span>
             </div>
+            <PoliceProofNote />
           </div>
           <QuoteForm />
         </div>
@@ -120,12 +122,12 @@ export default function PartnersPage({ url }) {
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto' }} className="fade-up">
             <div className="section-tag">Why Societies Stay Since 2015</div>
             <h2 className="section-title">The Same Crews, Season After Season</h2>
-            <p className="section-sub" style={{ margin: '0 auto' }}>A decade of Diwali rushes, tenant turnovers and monsoon recoveries across <a href="/blog/dlf-phase-4-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>DLF 1–5</a>, Vatika City, Nirvana Country, <a href="/blog/sushant-lok-3-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok</a>, South City, Palam Vihar and Sectors 14–92. Facility desks keep our number because gate formalities, fixed billing and re-clean windows work the same way every single time — no retraining a new vendor each festival. Tower clusters, villa rows and PG floors all run on the identical pay-after-walkthrough promise as single homes: inspect every room first, pay only on approval, with a free 24-hour re-clean on any miss.</p>
+            <p className="section-sub" style={{ margin: '0 auto' }}>A decade of Diwali rushes, tenant turnovers and monsoon recoveries across <a href="/blog/dlf-phase-4-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>DLF 1–5</a>, Vatika City, Nirvana Country, <a href="/blog/sushant-lok-3-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok</a>, South City, Palam Vihar and Sectors 14–92. Facility desks keep our number because gate formalities, fixed billing and re-clean windows work the same way every single time — no retraining a new vendor each festival. Tower clusters, villa rows and PG floors all run on the identical pay-after-walkthrough promise as single homes: inspect every room first, pay only on approval, with a free 3-day re-clean on any miss.</p>
           </div>
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection reviews={[]} />
 
       <AreasSection />
 

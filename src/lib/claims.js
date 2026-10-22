@@ -8,64 +8,43 @@
 //   1. Never invent a count, rating or certificate. If a claim cannot be
 //      sourced, `proof` stays null and the claim is flagged [VERIFY].
 //   2. A claim with a proof may be stated on the page. The proof is what
-//      makes it safe to state — and it is shown where it matters (the
-//      rating carries its as-of date on the page).
+//      makes it safe to state — and it is shown where it matters.
+//
+// The Google listing is NOT cited anywhere on this site: the listing cannot be
+// renamed, so no rating, star score or review count is published here. The
+// only claims left are the ones this business can evidence itself.
 
-import { RATING, formatDate } from './site.js';
+// The one approved wording for the police-verification claim. Every badge,
+// pill and sentence on the site uses this — never "every member", never
+// "all cleaners", and always with the proof line next to it.
+export const POLICE_VERIFIED_CLAIM =
+  'Police-verified team: ID and background check shown on request';
+export const POLICE_VERIFIED_PROOF_LINE = 'ID and background check shown on request.';
 
 export const CLAIMS = {
-  googleRating: {
-    label: 'Google rating',
-    value: RATING.value,
-    count: RATING.count,
-    asOf: RATING.asOf,
-    proof: `Google Business Profile, checked ${RATING.asOf}`,
-    verified: true,
-    // [VERIFY] Third-party aggregators currently report 4.5 from 74 reviews
-    // for this shop under a different listing name. Re-read the live Google
-    // Business Profile before each deploy and update RATING in
-    // src/lib/site.js only — never here, never anywhere else.
-  },
-
   policeVerified: {
     label: 'Police-verified team',
-    proof: null,
-    verified: false,
-    // [VERIFY] This is an operational commitment, not a third-party
-    // certificate: every crew member on the roster should hold a current
-    // police verification, and the customer can ask to see ID before the
-    // visit. Confirm the roster is current, then set `proof` to the wording
-    // below and `verified` to true.
-    proofWhenConfirmed:
-      'ID and background check shown to the customer on request before the visit',
+    proof: 'ID and background check shown to the customer on request before the visit',
+    verified: true,
+    // The text that must not be rendered anywhere while this claim is
+    // unproven. scripts/preflight.mjs fails the build if it appears.
+    marker: 'Police-Verified Team',
   },
 };
 
 // Canonical badge copy for the police-verification claim. One definition, so
-// there is a single place to confirm or reword it.
+// there is a single place to confirm or reword that claim.
 export const POLICE_VERIFIED_BADGE = {
   icon: '👮',
   title: 'Police-Verified Team',
-  sub: 'Background-checked, ID-verified cleaners. Team details shared on WhatsApp before arrival.',
+  sub: POLICE_VERIFIED_PROOF_LINE,
 };
 
-// The variant badges used on service pages. Same claim, contextual wording.
+// The variant badges used on service pages. Same claim, same proof line.
 export const POLICE_VERIFIED_VARIANTS = {
-  care: ['👮', 'Police-Verified Specialists', 'Background-checked, ID-verified staff. The person quoted is the crew that arrives.'],
-  commercial: ['👮', 'Police-Verified Staff', 'Background-checked teams, uniformed on site, same faces on repeat schedules.'],
-  standard: ['🛡️', 'Police Verified', 'Every team member'],
-  handover: ['👮', 'Police Verified', 'Every team member'],
-  move: ['👮', 'Police Verified', 'Uniformed on site'],
+  care: ['👮', 'Police-Verified Team', POLICE_VERIFIED_PROOF_LINE],
+  commercial: ['👮', 'Police-Verified Team', POLICE_VERIFIED_PROOF_LINE],
+  standard: ['🛡️', 'Police-Verified Team', POLICE_VERIFIED_PROOF_LINE],
+  handover: ['👮', 'Police-Verified Team', POLICE_VERIFIED_PROOF_LINE],
+  move: ['👮', 'Police-Verified Team', POLICE_VERIFIED_PROOF_LINE],
 };
-
-// "Oct 2026" — the short form used next to a rating on the page.
-export function ratingAsOf() {
-  const [y, m] = RATING.asOf.split('-').map(Number);
-  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${MONTHS[m - 1]} ${y}`;
-}
-
-// The rating as it appears on the page, with its proof attached.
-export function ratingLabel() {
-  return `${RATING.value} ★ on Google (${RATING.count} reviews · checked ${ratingAsOf()})`;
-}

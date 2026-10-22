@@ -71,7 +71,7 @@ export default function QuoteForm() {
         <div className="success-box" style={{ display: 'block' }}>
           <div className="s-icon">✅</div>
           <h3>Quote Request Sent!</h3>
-          <p>We&rsquo;ll call <strong>+91{normalizePhone(phone)}</strong> within 5 minutes.<br />Want a faster reply? Chat with us on WhatsApp below ↓</p>
+          <p>We&rsquo;ll call <strong>+91{normalizePhone(phone)}</strong> within 5 minutes during working hours.<br />Want a faster reply? Chat with us on WhatsApp below ↓</p>
         </div>
         <a href={waMsg('Hi! I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="btn-wa-form" style={{ marginTop: '16px' }} onClick={whatsappClick}>
           💬 WhatsApp Us Now — Instant Reply
@@ -109,13 +109,12 @@ export default function QuoteForm() {
         </div>
       )}
 
+      {/* No Netlify form and no static form action: the site is served from
+          GitHub Pages, where a plain form POST would land on a static page
+          and lose the lead. The enquiry is sent by sendLead() below. */}
       <form
         ref={formRef}
         id="leadForm"
-        data-netlify="true"
-        name={NETLIFY_FORM_NAME}
-        method="POST"
-        action="/thank-you.html"
         onSubmit={onSubmit}
         noValidate
       >
@@ -147,10 +146,14 @@ export default function QuoteForm() {
       </a>
 
       <div className="form-micro">
-        <div className="form-micro-item"><span className="mi">🔒</span> 100% Private</div>
+        <div className="form-micro-item"><span className="mi">🔒</span> We only use your number to call you about this quote</div>
         <div className="form-micro-item"><span className="mi">⚡</span> 5-Min Callback</div>
         <div className="form-micro-item"><span className="mi">0️⃣</span> No Advance Pay</div>
       </div>
+      <p className="form-consent" style={{ fontSize: '.78rem', color: 'var(--muted)', margin: '10px 0 0' }}>
+        By sending this form you agree that we may use your number and message to quote and call you about this
+        job. See the <a href="/privacy.html" style={{ color: 'var(--primary)', fontWeight: 600 }}>privacy page</a>.
+      </p>
     </div>
   );
 }

@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL } from '../pages.config.mjs';
 import { ARTICLES } from '../src/lib/blog.js';
 import {
-  CONTENT_UPDATED, RATING, PHONE, ADDRESS_FULL, BRAND_NAME, WHATSAPP,
+  CONTENT_UPDATED, PHONE, ADDRESS_FULL, BRAND_NAME, WHATSAPP,
   GEO, MAPS_URL, AREAS,
 } from '../src/lib/site.js';
 import { SERVICE_PRICES, PRICE_BY_BHK } from '../src/lib/service-prices.js';
@@ -62,7 +62,6 @@ const header = [
   `> Last-Updated: ${CONTENT_UPDATED}`,
   `> Contact: ${PHONE}`,
   `> Address: ${ADDRESS_FULL}`,
-  `> Google rating: ${RATING.value} from ${RATING.count} reviews (Google Business Profile, checked ${RATING.asOf})`,
   `> Prices: 1BHK ${PRICE_BY_BHK[1]}/2BHK ${PRICE_BY_BHK[2]}/3BHK ${PRICE_BY_BHK[3]}`,
   `> Sitemap: ${SITE_URL}/sitemap.xml`,
   `> Full text map: ${SITE_URL}/llms-full.txt`,
@@ -88,11 +87,10 @@ const factsBlock = [
   `- Address: ${ADDRESS_FULL}`,
   `- Coordinates: ${GEO.latitude}, ${GEO.longitude}`,
   `- Opening hours: ${OPENING_HOURS}`,
-  `- Google rating: ${RATING.value} from ${RATING.count} reviews (${RATING.source}, checked ${RATING.asOf})`,
   `- Full-home deep cleaning by home size: 1 RK / studio ${SERVICE_PRICES.deep.amount} | 1 BHK ${PRICE_BY_BHK[1]} | 2 BHK ${PRICE_BY_BHK[2]} | 3 BHK ${PRICE_BY_BHK[3]} | 4 BHK ${PRICE_BY_BHK[4]} | 5 BHK and villa ${PRICE_BY_BHK[5]}`,
   `- House cleaning (recurring visits): ${SERVICE_PRICES.house.amount} per visit is the starting rate for a studio; the per-visit price scales with home size (studio, 1 BHK, 2 BHK, 3 BHK) and is fixed on the confirmation call before the visit`,
   `- Other service prices: ${servicePriceLines}`,
-  `- Payment: pay after the walkthrough and sign-off; free re-clean within 24 hours; 3-day service promise; GST invoice on office work`,
+  `- Payment: pay after the walkthrough and sign-off; free re-clean within 3 days; 3-day service promise; GST invoice on office work`,
   `- Service area: ${AREAS.join(', ')}`,
   `- Google Maps: ${MAPS_URL}`,
   '',
