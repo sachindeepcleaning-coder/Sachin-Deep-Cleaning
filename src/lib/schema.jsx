@@ -22,7 +22,7 @@
 //     with "Organization" and "LocalBusiness" both claiming #business).
 
 import {
-  PHONE, SITE_URL, BRAND_NAME, GBP_REVIEW_URL, SAME_AS,
+  PHONE, SITE_URL, BRAND_NAME, MAPS_URL, SAME_AS,
   ADDRESS_PARTS, GEO, RATING,
 } from './site.js';
 import { imageDims } from './image-dims.js';
@@ -154,9 +154,9 @@ export function localBusinessSchema() {
       closes: '20:00',
     },
     foundingDate: '2015',
-    // The Google Business Profile — the canonical Maps listing for this
-    // business. [VERIFY] until the real listing URL is supplied.
-    hasMap: GBP_REVIEW_URL,
+    // Where the business is. A brand + address Maps search, which resolves to
+    // this listing without depending on a second brand name.
+    hasMap: MAPS_URL,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Deep Cleaning Services',

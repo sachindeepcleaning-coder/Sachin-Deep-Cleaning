@@ -244,6 +244,10 @@ const BRAND_PATTERNS = [
   { re: new RegExp('also operating' + ' as', 'i'), why: 'second-brand claim' },
   { re: new RegExp('sub' + '-?brand', 'i'), why: 'second-brand claim' },
   { re: new RegExp('F33' + 'H', 'i'), why: 'plus code from the old listing' },
+  // The old listing's Google Maps place URL — it also appeared as a
+  // "+"-separated path, so the spaced pattern above did not catch it.
+  { re: new RegExp('maps/place/A\\+one', 'i'), why: 'old listing place URL' },
+  { re: new RegExp('11t6y63gvk', 'i'), why: 'old listing place ID' },
   { re: new RegExp('92679' + '05943'), why: 'old phone number' },
   { re: new RegExp('\\+91\\s*92679'), why: 'old phone number' },
 ];
@@ -321,10 +325,7 @@ console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD block
 
 // Outstanding [VERIFY] items — reported, but they do not fail the build.
 {
-  const { GBP_REVIEW_URL, ADDRESS_FULL } = await import('../src/lib/site.js');
-  if (!/^https?:\/\//.test(GBP_REVIEW_URL)) {
-    warn(`[VERIFY] GBP review URL is still a placeholder: "${GBP_REVIEW_URL}" — set it in src/lib/site.js`);
-  }
+  const { ADDRESS_FULL } = await import('../src/lib/site.js');
   warn(`[VERIFY] Confirm the single address against the live GBP listing: "${ADDRESS_FULL}"`);
 }
 

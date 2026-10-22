@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MAPS_URL } from '../lib/site.js';
 
 // Click-to-load map facade.
 //
@@ -55,7 +56,7 @@ export default function MapEmbed({ query, address, brand }) {
         {address}
       </div>
       <a
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`}
+        href={MAPS_URL}
         target="_blank"
         rel="noopener"
         className="btn-outline"

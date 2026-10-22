@@ -97,21 +97,18 @@ export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
-// "Review us on Google" link — points at the live Google Business Profile.
+// Google Maps link for the business.
 //
-// [VERIFY] Replace with the real GBP review URL (the share link from the
-// listing, i.e. https://maps.app.goo.gl/… or the place URL + /reviews).
-// The placeholder below is intentionally NOT a working link — a search URL for
-// the brand name can land on a different business, which is exactly the
-// entity-splitting problem this file exists to prevent.
-export const GBP_REVIEW_URL = '[GOOGLE_REVIEW_LINK from my GBP]';
-export const REVIEW_URL = GBP_REVIEW_URL;
-
-// True once GBP_REVIEW_URL has been replaced with the real listing URL.
-// While it is still a placeholder the UI renders the review prompt as plain
-// text instead of a broken link, and scripts/preflight.mjs reports it as an
-// outstanding [VERIFY] item.
-export const hasRealReviewUrl = (url = GBP_REVIEW_URL) => /^https?:\/\//.test(url);
+// This is a SEARCH for the brand name plus the single street address — not a
+// place URL and not a review URL. It is used for `hasMap` and for the
+// "open in Google Maps" button, both of which need to resolve to a location.
+//
+// There is deliberately NO "Review us on Google" link. A review CTA that is
+// built from a search can land on a different business's listing, which sends
+// the customer to the wrong place and confirms a second Knowledge Graph
+// entity. If a review link is wanted later, it must be the real GBP review
+// URL for this listing — add it here and use it in one place.
+export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${BRAND_NAME} ${ADDRESS_FULL}`)}`;
 
 export const SOCIAL = {
   facebook: 'https://www.facebook.com/profile.php?id=61577737535478',
@@ -121,15 +118,14 @@ export const SOCIAL = {
   whatsapp: WHATSAPP,
 };
 
-// The four profiles that identify this business on the web, in the order they
+// The profiles that identify this business on the web, in the order they
 // should appear in schema.org `sameAs`.
 //
-// [VERIFY] The Google Business Profile entry is a placeholder until the real
-// GBP URL is supplied (see GBP_REVIEW_URL). Keep this list in sync with the
-// GBP — `sameAs` is how a crawler confirms that the website, the social
-// profiles and the Maps listing all describe ONE business.
+// [VERIFY] When the Google Business Profile URL is available, add it as the
+// first entry — `sameAs` is how a crawler confirms that the website and the
+// social profiles all describe ONE business. Until then the list carries the
+// three profiles that are confirmed to be ours, and nothing else.
 export const SAME_AS = [
-  GBP_REVIEW_URL,
   SOCIAL.facebook,
   SOCIAL.instagram,
   SOCIAL.youtube,
