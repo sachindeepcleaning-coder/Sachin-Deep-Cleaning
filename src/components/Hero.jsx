@@ -28,7 +28,7 @@ export default function Hero() {
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>
           </h1>
             <p className="hero-sub">
-              Expert deep cleaning for your entire home — bedroom, living room, kitchen, bathrooms, floors, walls & more. Rated among deep cleaning services in Gurgaon for pay-after-satisfaction. Police-verified team, fixed price before we start. Same-day booking available in all Gurgaon areas.
+              Expert deep cleaning for your entire home — bedroom, living room, kitchen, bathrooms, floors, walls & more. A local Gurgaon crew, pay after you walk through and approve the work. Police-verified team, fixed price before we start. Same-day booking available in all Gurgaon areas.
             </p>
           <div className="hero-pills">
             {PILLS.map((p) => (
