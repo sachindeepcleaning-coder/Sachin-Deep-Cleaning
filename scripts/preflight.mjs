@@ -549,6 +549,38 @@ for (const file of htmlFiles) {
   }
 }
 
+// 22 — every Open Graph price card must exist and be a real 1200x630 image.
+//
+// The cards are what a WhatsApp, Facebook or LinkedIn preview shows. A missing
+// card silently falls back to the generic cover, and a card of the wrong size
+// gets letterboxed by the platform. Both are invisible in a visual check.
+{
+  const ogDir = resolve(distDir, 'images/og');
+  if (!existsSync(ogDir)) {
+    fail('images/og: the Open Graph price cards are missing — run `node scripts/gen-og-images.mjs`');
+  } else {
+    const cards = readdirSync(ogDir).filter((f) => f.endsWith('.jpg'));
+    if (cards.length < 30) {
+      fail(`images/og: only ${cards.length} price card(s) found (expected 30+) — run \`node scripts/gen-og-images.mjs\``);
+    }
+    for (const c of cards) {
+      const buf = readFileSync(resolve(ogDir, c));
+      // JPEG SOF0/SOF2 markers carry the frame dimensions.
+      let w = 0; let h = 0;
+      for (let i = 2; i < buf.length - 9; i++) {
+        if (buf[i] === 0xff && (buf[i + 1] === 0xc0 || buf[i + 1] === 0xc2)) {
+          h = buf.readUInt16BE(i + 5);
+          w = buf.readUInt16BE(i + 7);
+          break;
+        }
+      }
+      if (w !== 1200 || h !== 630) {
+        fail(`images/og/${c}: ${w}x${h} — every card must be exactly 1200x630`);
+      }
+    }
+  }
+}
+
 // ─── report ─────────────────────────────────────────────────────────────────
 console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD blocks, ${idTypes.size} entity ids`);
 

@@ -25,6 +25,7 @@ import { GTM_ID, NETLIFY_FORM_NAME, CLARITY_ID, GEO } from '../src/lib/site.js';
 import { ARTICLES } from '../src/lib/blog.js';
 import { getService } from '../src/lib/services.js';
 import { imageDims, srcSetFor } from '../src/lib/image-dims.js';
+import { BRAND_NAME, PHONE } from '../src/lib/site.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -60,6 +61,16 @@ const netlifyForm = `<form name="${NETLIFY_FORM_NAME}" method="POST" data-netlif
   <input type="text" name="name" />
   <input type="tel" name="phone" />
 </form>`;
+
+// The generated Open Graph price cards that exist for a service key.
+const OG_CARDS = new Set([
+  'deep','house','fullhome','kitchen','bathroom','sofa','carpet','office','move',
+  'watertank','toilettank','facade','commonarea','sweeper','lift','windowgrill',
+  'utensils','road','chandelier','washingmachine','chairclean','curtain','basement',
+  'instantclean','balconyclean','sqftrate','kitchenplatform','postconstruction',
+  'roomclean',
+  'residential', 'society', 'bookcleaning', 'about', 'blog',
+]);
 
 // Hero image per service key for above-fold preload (LCP).
 const HERO_IMAGES = {
@@ -135,12 +146,34 @@ for (const p of pages) {
   let ogImage = OG_IMAGE;
   let ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
   let art = null;
-  if (p.page === 'service' && HERO_IMAGES[p.serviceKey]) {
-    ogImage = SITE_URL + HERO_IMAGES[p.serviceKey];
-    try {
-      const svc = getService(p.serviceKey, p.bhk);
-      if (svc && svc.imageAlt) ogAlt = svc.imageAlt;
-    } catch {}
+  if (p.page === 'service') {
+    // A dedicated price card per service. 43 of the service pages were
+    // sharing one generic cover, so every WhatsApp/Facebook link preview
+    // looked identical and carried no price.
+    const card = `/images/og/${p.serviceKey}.jpg`;
+    if (OG_CARDS.has(p.serviceKey)) {
+      ogImage = SITE_URL + card;
+      try {
+        const svc = getService(p.serviceKey, p.bhk);
+        if (svc && svc.price) {
+          ogAlt = `${svc.name} in Gurgaon — from ${svc.price.amount}. ${BRAND_NAME}, ${PHONE}.`;
+        }
+      } catch {}
+    } else if (HERO_IMAGES[p.serviceKey]) {
+      ogImage = SITE_URL + HERO_IMAGES[p.serviceKey];
+      try {
+        const svc = getService(p.serviceKey, p.bhk);
+        if (svc && svc.imageAlt) ogAlt = svc.imageAlt;
+      } catch {}
+    }
+  } else if (p.page === 'services' || p.page === 'facts' || p.page === 'about' || p.page === 'contact' || p.page === 'index') {
+    const card = p.page === 'index' ? 'home' : p.page;
+    ogImage = SITE_URL + `/images/og/${card}.jpg`;
+    ogAlt = `${p.title} — Sachin Deep Cleaning, Gurgaon. Call +91 95607 39281.`;
+  } else if (p.page === 'residential' || p.page === 'partners' || p.page === 'landing') {
+    const card = { residential: 'residential', partners: 'society', landing: 'bookcleaning' }[p.page];
+    ogImage = SITE_URL + `/images/og/${card}.jpg`;
+    ogAlt = `${p.title} — Sachin Deep Cleaning, Gurgaon.`;
   } else if (p.page === 'article') {
     art = ARTICLES.find((a) => a.file === p.file);
     if (art && art.image) ogImage = SITE_URL + art.image;

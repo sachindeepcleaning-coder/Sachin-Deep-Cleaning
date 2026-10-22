@@ -20,7 +20,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 }
 
 // Directories never scanned for MPA entry shells.
-const SKIP_DIRS = new Set(['node_modules', 'dist', 'dist-ssr', '.git', 'public', '.claude', 'html templete']);
+const SKIP_DIRS = new Set(['node_modules', 'dist', 'dist-ssr', '.git', 'public', '.claude', 'html templete', '.og-tmp', 'scripts', 'tests']);
 
 // Recursively collect every *.html entry shell in the repo root.
 // (Subdirectories like blog/ are supported so blog article pages build too.)
