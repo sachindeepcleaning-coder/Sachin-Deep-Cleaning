@@ -2,12 +2,542 @@
   command = "npm run build"
   publish = "dist"
 
-# Canonical: /index.html -> / (no force — only exact hits)
+# Canonical redirects — extensionless path -> the canonical .html path.
+# GitHub Pages ignores this file; it activates when the site moves here.
 [[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
-  force = false
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 301
+
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/deep-cleaning-services-in-gurgaon"
+  to = "/deep-cleaning-services-in-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/house-cleaning-services-in-gurgaon"
+  to = "/house-cleaning-services-in-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/full-home-deep-cleaning-1bhk-gurgaon"
+  to = "/full-home-deep-cleaning-1bhk-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/full-home-deep-cleaning-2bhk-gurgaon"
+  to = "/full-home-deep-cleaning-2bhk-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/full-home-deep-cleaning-3bhk-gurgaon"
+  to = "/full-home-deep-cleaning-3bhk-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/full-home-deep-cleaning-4bhk-gurgaon"
+  to = "/full-home-deep-cleaning-4bhk-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/full-home-deep-cleaning-5bhk-gurgaon"
+  to = "/full-home-deep-cleaning-5bhk-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/kitchen-deep-cleaning-gurgaon"
+  to = "/kitchen-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/bathroom-deep-cleaning-gurgaon"
+  to = "/bathroom-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/sofa-shampoo-cleaning-gurgaon"
+  to = "/sofa-shampoo-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/carpet-shampoo-cleaning-gurgaon"
+  to = "/carpet-shampoo-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/office-deep-cleaning-gurgaon"
+  to = "/office-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/move-in-move-out-cleaning-gurgaon"
+  to = "/move-in-move-out-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/residential-cleaners-near-me"
+  to = "/residential-cleaners-near-me.html"
+  status = 301
+
+[[redirects]]
+  from = "/society-cleaning-services-gurgaon"
+  to = "/society-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/all-pages"
+  to = "/all-pages.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/deep-cleaning-cost-gurgaon-2026"
+  to = "/blog/deep-cleaning-cost-gurgaon-2026.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/how-often-deep-clean-home-india"
+  to = "/blog/how-often-deep-clean-home-india.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/kitchen-chimney-cleaning-guide"
+  to = "/blog/kitchen-chimney-cleaning-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/hard-water-bathroom-stains-gurgaon"
+  to = "/blog/hard-water-bathroom-stains-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sofa-cleaning-gurgaon-guide"
+  to = "/blog/sofa-cleaning-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/kitchen-vs-regular-cleaning"
+  to = "/blog/kitchen-vs-regular-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/move-in-move-out-cleaning-checklist-gurgaon"
+  to = "/blog/move-in-move-out-cleaning-checklist-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/full-home-deep-cleaning-gurgaon-guide"
+  to = "/blog/full-home-deep-cleaning-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/house-cleaning-services-gurgaon-guide"
+  to = "/blog/house-cleaning-services-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/deep-cleaning-near-me-gurgaon"
+  to = "/blog/deep-cleaning-near-me-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/kitchen-deep-cleaning-cost-gurgaon"
+  to = "/blog/kitchen-deep-cleaning-cost-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-gurgaon-guide"
+  to = "/blog/office-deep-cleaning-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/bathroom-deep-cleaning-services-gurgaon-guide"
+  to = "/blog/bathroom-deep-cleaning-services-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/carpet-cleaning-gurgaon-guide"
+  to = "/blog/carpet-cleaning-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-deep-cleaning-services-gurgaon"
+  to = "/blog/best-deep-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/housekeeping-vs-deep-cleaning-gurgaon"
+  to = "/blog/housekeeping-vs-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/balcony-terrace-cleaning-gurgaon"
+  to = "/blog/balcony-terrace-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/deep-cleaning-all-sectors-gurgaon"
+  to = "/blog/deep-cleaning-all-sectors-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/commercial-cleaning-services-gurgaon"
+  to = "/blog/commercial-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-home-cleaning-services-gurgaon"
+  to = "/blog/best-home-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/full-house-cleaning-checklist-gurgaon"
+  to = "/blog/full-house-cleaning-checklist-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/deep-cleaners-near-me-gurgaon"
+  to = "/blog/deep-cleaners-near-me-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/residential-cleaning-services-near-me-gurgaon"
+  to = "/blog/residential-cleaning-services-near-me-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/home-cleaning-services-near-me-gurgaon"
+  to = "/blog/home-cleaning-services-near-me-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/what-is-deep-cleaning-guide"
+  to = "/blog/what-is-deep-cleaning-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/diwali-cleaning-gurgaon"
+  to = "/blog/diwali-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dussehra-cleaning-gurgaon"
+  to = "/blog/dussehra-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/navratri-cleaning-gurgaon"
+  to = "/blog/navratri-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/cleaning-services-gurgaon-guide"
+  to = "/blog/cleaning-services-gurgaon-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/full-home-deep-cleaning-packages-gurgaon"
+  to = "/blog/full-home-deep-cleaning-packages-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/room-cleaning-services-gurgaon"
+  to = "/blog/room-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/mr-deep-cleaning-vs-sachin-deep-cleaning"
+  to = "/blog/mr-deep-cleaning-vs-sachin-deep-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-office-deep-cleaning-services-gurgaon"
+  to = "/blog/best-office-deep-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/urban-company-vs-sachin-deep-cleaning"
+  to = "/blog/urban-company-vs-sachin-deep-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/house-maid-vs-deep-cleaning-gurgaon"
+  to = "/blog/house-maid-vs-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/book-cleaning-online-gurgaon"
+  to = "/book-cleaning-online-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/nobroker-cleaning-vs-sachin-deep-cleaning"
+  to = "/blog/nobroker-cleaning-vs-sachin-deep-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/safaiwale-vs-sachin-deep-cleaning"
+  to = "/blog/safaiwale-vs-sachin-deep-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/1bhk-deep-cleaning-price-gurgaon"
+  to = "/blog/1bhk-deep-cleaning-price-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/2bhk-deep-cleaning-price-gurgaon"
+  to = "/blog/2bhk-deep-cleaning-price-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/3bhk-deep-cleaning-price-gurgaon"
+  to = "/blog/3bhk-deep-cleaning-price-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sofa-cleaning-price-gurgaon-per-seat"
+  to = "/blog/sofa-cleaning-price-gurgaon-per-seat.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/bathroom-cleaning-price-gurgaon-per-bathroom"
+  to = "/blog/bathroom-cleaning-price-gurgaon-per-bathroom.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/kitchen-cleaning-price-gurgaon-chimney"
+  to = "/blog/kitchen-cleaning-price-gurgaon-chimney.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dlf-phase-3-deep-cleaning-gurgaon"
+  to = "/blog/dlf-phase-3-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sohna-road-deep-cleaning-gurgaon"
+  to = "/blog/sohna-road-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/golf-course-road-deep-cleaning-gurgaon"
+  to = "/blog/golf-course-road-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/house-cleaning-price-gurgaon-per-visit"
+  to = "/blog/house-cleaning-price-gurgaon-per-visit.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/end-of-tenancy-cleaning-gurgaon"
+  to = "/blog/end-of-tenancy-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/pest-control-vs-deep-cleaning-gurgaon"
+  to = "/blog/pest-control-vs-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sushant-lok-1-deep-cleaning-gurgaon"
+  to = "/blog/sushant-lok-1-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sushant-lok-2-deep-cleaning-gurgaon"
+  to = "/blog/sushant-lok-2-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sushant-lok-3-deep-cleaning-gurgaon"
+  to = "/blog/sushant-lok-3-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dlf-phase-1-deep-cleaning-gurgaon"
+  to = "/blog/dlf-phase-1-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dlf-phase-2-deep-cleaning-gurgaon"
+  to = "/blog/dlf-phase-2-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dlf-phase-4-deep-cleaning-gurgaon"
+  to = "/blog/dlf-phase-4-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dlf-phase-5-deep-cleaning-gurgaon"
+  to = "/blog/dlf-phase-5-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sector-65-deep-cleaning-gurgaon"
+  to = "/blog/sector-65-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sector-66-deep-cleaning-gurgaon"
+  to = "/blog/sector-66-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sector-67-deep-cleaning-gurgaon"
+  to = "/blog/sector-67-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/full-home-deep-cleaning"
+  to = "/blog/full-home-deep-cleaning.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/home-deep-cleaning-service-gurgaon"
+  to = "/blog/home-deep-cleaning-service-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/bathroom-deep-cleaning-gurgaon-best"
+  to = "/blog/bathroom-deep-cleaning-gurgaon-best.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/deep-cleaning-services"
+  to = "/blog/deep-cleaning-services.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/home-cleaning-services-gurgaon"
+  to = "/blog/home-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/home-deep-cleaning-services-gurgaon"
+  to = "/blog/home-deep-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/post-construction-cleaning-services-gurgaon"
+  to = "/blog/post-construction-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-udyog-vihar"
+  to = "/blog/office-deep-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/carpet-cleaning-udyog-vihar"
+  to = "/blog/carpet-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/carpet-shampoo-cleaning-udyog-vihar"
+  to = "/blog/carpet-shampoo-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sofa-cleaning-udyog-vihar"
+  to = "/blog/sofa-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/chair-cleaning-udyog-vihar"
+  to = "/blog/chair-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-bathroom-cleaning-udyog-vihar"
+  to = "/blog/office-bathroom-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/commercial-office-cleaning-udyog-vihar"
+  to = "/blog/commercial-office-cleaning-udyog-vihar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-sector-44-gurgaon"
+  to = "/blog/office-deep-cleaning-sector-44-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-cyber-city-gurgaon"
+  to = "/blog/office-deep-cleaning-cyber-city-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-golf-course-road-gurgaon"
+  to = "/blog/office-deep-cleaning-golf-course-road-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/office-deep-cleaning-sector-32-gurgaon"
+  to = "/blog/office-deep-cleaning-sector-32-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/home-cleaning-service-guide"
+  to = "/blog/home-cleaning-service-guide.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/4bhk-deep-cleaning-price-gurgaon"
+  to = "/blog/4bhk-deep-cleaning-price-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/5bhk-deep-cleaning-price-gurgaon"
+  to = "/blog/5bhk-deep-cleaning-price-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/mattress-cleaning-gurgaon"
+  to = "/blog/mattress-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/dwarka-expressway-deep-cleaning-gurgaon"
+  to = "/blog/dwarka-expressway-deep-cleaning-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/society-deep-cleaning-day-gurgaon"
+  to = "/blog/society-deep-cleaning-day-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/monsoon-cleaning-checklist-gurgaon"
+  to = "/blog/monsoon-cleaning-checklist-gurgaon.html"
+  status = 301
 
 # Canonical: www -> apex
 [[redirects]]

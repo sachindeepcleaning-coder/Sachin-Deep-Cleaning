@@ -1,10 +1,25 @@
-// schema.jsx — upgraded for SEO / AI search (GEO).
-// Replaces the older minimal schema. Adds:
-//   1. localBusinessSchema — expanded areaServed with Gurgaon sectors
-//   2. serviceSchema — added telephone + offers + image
-//   3. howToSchema — for kitchen/bathroom/sofa/carpet/deep service pages
-//   4. articleSchema — for blog articles
-//   (reviewsSchema was removed: its Review dates were generated, not real.)
+// schema.jsx — SEO / AEO / GEO structured data for sachindeepcleaning.shop.
+//
+// Entity graph (every @id below is stable and cross-referenced):
+//   #website      → WebSite            (homepage only, for the Google site name)
+//   #business     → LocalBusiness      (homepage + money pages)
+//   #organization → Organization       (About page — the legal entity)
+//   #person       → Person             (Sachin Kumar, founder)
+//   <url>#webpage → WebPage            (every indexable page)
+//   <url>#article → BlogPosting        (every guide)
+//   <url>#faq     → FAQPage
+//   <url>#howto   → HowTo              (service pages)
+//   <url>#service → Service
+//   <url>#crumb   → BreadcrumbList
+//
+// Rules that matter:
+//   - A referenced @id must either be defined on the same page OR carry its
+//     @type inline, so the graph is self-describing to a crawler that only
+//     fetches one document.
+//   - localBusinessSchema().url is ALWAYS the homepage. A multi-page business
+//     must not advertise 18 different `url` values under one @id.
+//   - Never invent a second @type for an existing @id (that is how you end up
+//     with "Organization" and "LocalBusiness" both claiming #business).
 
 import {
   PHONE, SOCIAL, SITE_URL, BRAND_NAME, GBP_LISTING_NAME,
@@ -20,6 +35,14 @@ export function JsonLd({ data }) {
     />
   );
 }
+
+// Stable entity ids.
+export const IDS = {
+  website: `${SITE_URL}/#website`,
+  business: `${SITE_URL}/#business`,
+  organization: `${SITE_URL}/#organization`,
+  person: `${SITE_URL}/about.html#sachin-kumar`,
+};
 
 // Expanded list of Gurgaon service sectors — improves local pack matching.
 const SERVICE_AREAS = [
@@ -51,6 +74,14 @@ const SERVICE_AREAS = [
   { '@type': 'AdministrativeArea', name: 'Manesar' },
 ];
 
+// Sister brands of Sachin Deep Cleaning — disclosed on-page (About, contact
+// and the Top-5 comparison guides) and declared here so the entity graph
+// does not treat them as unrelated third parties.
+const SUB_BRANDS = [
+  { '@type': 'Organization', '@id': `${SITE_URL}/#subbrand-balaji`, name: 'Balaji Cleaning Services', url: 'https://balajicleaningservice.shop/' },
+  { '@type': 'Organization', '@id': `${SITE_URL}/#subbrand-aone`, name: 'A One Deep Cleaning', url: 'https://aonedeepcleaning.com/' },
+];
+
 // ─── WebSite (site name for Google Search) ─────────────────────────────────
 // Google's site-name system reads the `name` here on the HOMEPAGE only.
 // Keep it identical to the brand everywhere (titles, og:site_name, GBP).
@@ -59,27 +90,31 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${SITE_URL}/#website`,
+    '@id': IDS.website,
     url: `${SITE_URL}/`,
     name: 'Sachin Deep Cleaning',
+    inLanguage: 'en-IN',
     publisher: {
-      '@id': `${SITE_URL}/#business`,
+      '@id': IDS.business,
+      '@type': 'LocalBusiness',
+      name: BRAND_NAME,
     },
   };
 }
 
 // ─── LocalBusiness ──────────────────────────────────────────────────────────
-export function localBusinessSchema({ url }) {
+export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
-    '@id': `${SITE_URL}/#business`,
+    '@id': IDS.business,
     name: BRAND_NAME,
     description:
       'Professional home deep cleaning services in Gurgaon — sofas, bathrooms, kitchens, carpets, offices and full-house makeovers. Eco-friendly products, trained staff, pay after satisfaction.',
     telephone: PHONE,
     email: 'contact@sachindeepcleaning.shop',
-    url,
+    // A multi-page business advertises its HOME page here, not the current URL.
+    url: `${SITE_URL}/`,
     logo: `${SITE_URL}/images/app_icon.png`,
     image: [
       `${SITE_URL}/images/cleaning-1.jpg`,
@@ -112,6 +147,7 @@ export function localBusinessSchema({ url }) {
       opens: '08:00',
       closes: '20:00',
     },
+    foundingDate: '2015',
     // Replace with the official share link from the Google Maps listing when available.
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${GBP_LISTING_NAME} ${PLUS_CODE}`)}`,
     hasOfferCatalog: {
@@ -128,6 +164,7 @@ export function localBusinessSchema({ url }) {
       ],
     },
     sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
+    subOrganization: SUB_BRANDS,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: PHONE,
@@ -154,12 +191,14 @@ export function serviceSchema({ name, description, url, price, image }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${url}#service`,
     name,
     description,
     url,
     image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/cleaning-1.jpg`,
     provider: {
-      '@id': `${SITE_URL}/#business`,
+      '@id': IDS.business,
+      '@type': 'LocalBusiness',
       name: BRAND_NAME,
       telephone: PHONE,
     },
@@ -185,10 +224,11 @@ export function serviceSchema({ name, description, url, price, image }) {
 }
 
 // ─── FAQ ────────────────────────────────────────────────────────────────────
-export function faqSchema(items) {
+export function faqSchema(items, url = '') {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    ...(url ? { '@id': `${url}#faq` } : {}),
     mainEntity: items.map((i) => ({
       '@type': 'Question',
       name: i.q,
@@ -211,11 +251,12 @@ const HOW_TO_TOOLS = {
   office: ['Commercial vacuum', 'Glass cleaning kit', 'Disinfectant spray', 'Floor scrubber'],
   move: ['Heavy-duty degreaser', 'Wall spot-cleaning kit', 'Floor scrubbing machine', 'Window cleaning kit'],
 };
-export function howToSchema({ name, description, steps, totalTime, estimatedCost, image, serviceKey }) {
+export function howToSchema({ name, description, steps, totalTime, estimatedCost, image, serviceKey, url = '' }) {
   const tools = (HOW_TO_TOOLS[serviceKey] || HOW_TO_TOOLS.deep).map((t) => ({ '@type': 'HowToTool', name: t }));
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
+    ...(url ? { '@id': `${url}#howto` } : {}),
     name,
     description,
     totalTime,
@@ -235,18 +276,21 @@ export function howToSchema({ name, description, steps, totalTime, estimatedCost
       text: s.desc,
     })),
     performer: {
-      '@id': `${SITE_URL}/#business`,
+      '@id': IDS.business,
+      '@type': 'LocalBusiness',
+      name: BRAND_NAME,
     },
   };
 }
 
 // ─── Article ────────────────────────────────────────────────────────────────
-// Use on: blog articles — BlogPosting with Person (E-E-A-T, audit 70→90)
+// Use on: blog articles — BlogPosting with Person (E-E-A-T).
 export function articleSchema({ title, description, url, datePublished, dateModified, image }) {
   const [w, h] = imageDims(image || '/images/cleaning-1.jpg');
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${url}#article`,
     headline: title,
     description,
     url,
@@ -259,28 +303,34 @@ export function articleSchema({ title, description, url, datePublished, dateModi
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
+      '@id': IDS.person,
       '@type': 'Person',
       name: 'Sachin Kumar',
-      url: `${SITE_URL}/about.html#sachin-kumar`,
+      url: IDS.person,
       sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
     },
     publisher: {
-      '@id': `${SITE_URL}/#business`,
+      '@id': IDS.business,
+      '@type': 'LocalBusiness',
       name: 'Sachin Deep Cleaning',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/app_icon.png`,
       },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    // Must point at the WebPage node that actually exists on this page.
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${url}#webpage` },
+    isPartOf: { '@id': IDS.website, '@type': 'WebSite' },
+    inLanguage: 'en-IN',
   };
 }
 
 // ─── Breadcrumb ─────────────────────────────────────────────────────────────
-export function breadcrumbSchema(items) {
+export function breadcrumbSchema(items, url = '') {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    ...(url ? { '@id': `${url}#crumb` } : {}),
     itemListElement: items.map((i, idx) => ({
       '@type': 'ListItem',
       position: idx + 1,
@@ -291,7 +341,6 @@ export function breadcrumbSchema(items) {
 }
 
 // ─── WebPage + Speakable (GEO / voice) ──────────────────────────────────────
-// Exported helper only — NOT wired into pages (another agent handles wiring).
 export function webpageSchema({ title, description, url, dateModified }) {
   return {
     '@context': 'https://schema.org',
@@ -302,16 +351,52 @@ export function webpageSchema({ title, description, url, dateModified }) {
     description,
     inLanguage: 'en-IN',
     ...(dateModified ? { dateModified } : {}),
-    isPartOf: { '@id': `${SITE_URL}/#website` },
+    isPartOf: { '@id': IDS.website, '@type': 'WebSite', name: 'Sachin Deep Cleaning' },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.hero-sub', '.blog-lead', 'h1'],
+      cssSelector: ['.hero-sub', '.blog-lead', '.key-takeaways', 'h1'],
     },
   };
 }
 
+// ─── Organization + Person (About page) ─────────────────────────────────────
+// `#organization` is the legal entity; `#business` is the LocalBusiness the
+// rest of the site points at. They must never share an @id.
+export function organizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': IDS.organization,
+    name: BRAND_NAME,
+    url: `${SITE_URL}/`,
+    telephone: PHONE,
+    address: { '@type': 'PostalAddress', ...ADDRESS_PARTS },
+    areaServed: 'Gurgaon, Haryana, India',
+    foundingDate: '2015',
+    description: 'Police-verified, eco-friendly deep cleaning team serving Gurgaon. Full-home, kitchen, bathroom, sofa and carpet deep cleaning with pay-after-satisfaction.',
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
+    subOrganization: SUB_BRANDS,
+  };
+}
+
+export function personSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': IDS.person,
+    name: 'Sachin Kumar',
+    jobTitle: 'Founder & Lead Cleaning Specialist',
+    url: IDS.person,
+    image: `${SITE_URL}/images/cleaning-1.webp`,
+    sameAs: [SOCIAL.facebook, SOCIAL.instagram],
+    worksFor: { '@id': IDS.organization, '@type': 'Organization', name: BRAND_NAME },
+    knowsAbout: ['Deep Cleaning', 'House Cleaning', 'Bathroom Descaling', 'Kitchen Degreasing', 'Gurgaon'],
+    description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, rated ${RATING.value} on Google from ${RATING.count} reviews, police-verified team lead.`,
+  };
+}
+
 // ─── HowTo configs for each service ─────────────────────────────────────────
-// Import in ServicePage.jsx and pass to howToSchema() based on serviceKey.
+// Consumed by ServicePage.jsx — `process` steps map 1:1 onto HowToStep.
 export const HOW_TO_CONFIGS = {
   deep: {
     name: 'How to Deep Clean a Home in Gurgaon',

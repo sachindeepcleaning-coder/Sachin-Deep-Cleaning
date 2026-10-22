@@ -21,8 +21,8 @@ export default function IndexPage({ url }) {
   return (
     <>
       <JsonLd data={websiteSchema()} />
-      <JsonLd data={localBusinessSchema({ url })} />
-      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
+      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
       <JsonLd data={webpageSchema({ title: 'Sachin Deep Cleaning — Home Deep Cleaning in Gurgaon', description: 'Full-home, kitchen, bathroom, sofa and carpet deep cleaning in Gurgaon with fixed prices and pay-after-satisfaction.', url, dateModified: CONTENT_UPDATED })} />
 
       <Hero />

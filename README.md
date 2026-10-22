@@ -96,22 +96,30 @@ echo "gh-pages:$(git rev-parse --short origin/gh-pages)"
 | File/Dir | Purpose |
 |----------|---------|
 | `pages.config.mjs` | Single source of truth for every MPA page (file, page type, title, description) |
-| `scripts/gen-entries.mjs` | Generates HTML entry shells from `pages.config.mjs` (run `npm run gen` after editing it) |
-| `scripts/gen-sitemap.mjs` | Regenerates `public/sitemap.xml` with fresh `lastmod` (runs automatically on `npm run build`) |
-| `scripts/prerender.mjs` | Renders every page to static HTML with `ReactDOMServer` and injects it into `dist/` (SEO: Google/Bing see content + JSON-LD without JS) |
+| `scripts/gen-entries.mjs` | Generates HTML entry shells from `pages.config.mjs` (head meta, canonical, OG, robots, preload) |
+| `scripts/gen-article-modules.mjs` | Projects `src/lib/blog.js` into `src/generated/articles/<slug>.js` (one module per guide) + a metadata index — keeps the 1 MB authored collection out of the browser bundle |
+| `scripts/gen-sitemap.mjs` | Regenerates `public/sitemap.xml` with content-driven `lastmod` |
+| `scripts/gen-geo-assets.mjs` | Generates `public/llms.txt`, `public/llms-full.txt` and `public/sitemap-images.xml` |
+| `scripts/gen-redirects.mjs` | Generates `public/_redirects` + `netlify.toml` — collapses the duplicate `/page` vs `/page.html` render paths |
+| `scripts/gen-modulepreload.mjs` | Injects `<link rel="modulepreload">` per page (from Vite's manifest) so the page chunk loads in parallel with the entry chunk |
+| `scripts/prerender.mjs` | Renders every page to static HTML with `ReactDOMServer` and injects it into `dist/` (SEO: Google/Bing see content + JSON-LD without JS). Also strips React 18 Fizz NUL padding and fails the build if any NUL byte survives |
+| `scripts/preflight.mjs` | Post-build gate: NUL bytes, JSON-LD parses, `@id` collisions, broken local refs, canonical, one `<h1>`, FAQ schema parity, HowTo on service pages, noindex allowlist, sitemap/llms URLs, third-party fetch hosts |
 | `src/app.jsx` | Shared app tree (route-split via `React.lazy` + `Suspense`; see prerender note) |
 | `src/prerender-entry.jsx` | SSR entry (`renderToPipeableStream`, required for lazy pages) for `scripts/prerender.mjs` |
 | `src/bootstrap.jsx` | Hydrates the pre-rendered HTML (or renders normally in dev) based on `data-page` |
+| `src/lib/article-routes.jsx` | Per-article route map (`import.meta.glob`) — each guide gets its own JS chunk |
 | `src/pages/*.jsx` | Page components (ServicePage, ResidentialPage, PartnersPage, BookingPage, ContactPage, ...) |
-| `src/components/*.jsx` | Nav, Footer, Hero, QuoteForm, FaqSection, ReviewsSection, ReelEmbed, ... |
+| `src/components/*.jsx` | Nav, Footer, Hero, QuoteForm, FaqSection, MapEmbed, ReviewsSection, ReelEmbed, ... |
 | `src/lib/services.js` | Service data (name, tagline, includes, process, faqs, price) |
 | `src/lib/site.js` | Phone, WhatsApp, social links, URLs |
-| `src/lib/schema.jsx` | JSON-LD builders (localBusiness, service, faq, breadcrumb, reviews, how-to) |
+| `src/lib/schema.jsx` | JSON-LD builders + the entity graph (WebSite / LocalBusiness / Organization / Person / WebPage / BlogPosting / Service / HowTo / FAQPage / BreadcrumbList) |
 | `scripts/submit-indexing.cjs` | Google Indexing API submitter (sitemap → skip submitted → publish; `--test`, `--limit N`, `--reset`, `--url <u>`) |
 | `indexing-progress.json` | Submitted/failed URL state for the submitter (commit after each run) |
 | `src/styles/global.css` | Global styles / design tokens |
-| `public/sitemap.xml` | SEO sitemap (remember to add new pages here) |
+| `public/sitemap.xml` | SEO sitemap (regenerated on every build) |
+| `public/llms.txt` / `public/llms-full.txt` | AI-discovery maps (regenerated on every build) |
 | `public/robots.txt` | Crawler rules (must be restored in gh-pages deploy) |
+| `public/_redirects` | Canonical redirects (active on Netlify / Cloudflare Pages) |
 | `public/CNAME` | Custom domain `sachindeepcleaning.shop` (must be restored in gh-pages deploy) |
 
 ## 🔧 Development
@@ -119,30 +127,35 @@ echo "gh-pages:$(git rev-parse --short origin/gh-pages)"
 ```bash
 npm install
 npm run dev        # local dev server http://localhost:5173
-npm run build      # production build → dist/
-npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
+npm run build      # production build → dist/ (regenerates every derived asset, then prerenders)
+npm run gen        # regenerate HTML entry shells + article modules after editing pages.config.mjs / blog.js
 ```
+
+`npm run build` runs, in order: `gen-entries` → `gen-article-modules` → `content-lint` → `gen-sitemap` → `gen-geo-assets` → `gen-redirects` → `vite build` → `gen-modulepreload` → `prerender`. Nothing derived is hand-maintained — edit the source and rebuild.
 
 ## ⚙️ Config
 
 - **Build:** `npm run build` (vite). No Tailwind here.
 - **Leads:** Netlify Forms (`lead-quote`) + `FORMSPREE_ID = 'xdaqkbwa'` fallback via `QuoteForm.jsx`; redirect to `thank-you.html`.
 - **Reels:** click-to-play facades with local posters (no autoplay, no IG/YT embeds on load); local mp4s lazy-load on scroll into view.
-- **Fonts:** self-hosted in `public/fonts` (DM Sans + Syne), preloaded — no Google Fonts requests.
-- **Media:** `public/images` (responsive `-400w`/`-800w` webp) + `public/videos` (4 mp4s).
+- **Map:** `MapEmbed.jsx` — click-to-load facade, so the contact page ships **no** third-party request until the visitor asks for the map.
+- **Fonts:** self-hosted in `public/fonts` (DM Sans + Syne), preloaded — no Google Fonts requests. Only these two families are referenced.
+- **Media:** `public/images` (responsive `-400w`/`-800w` webp, truthful srcset descriptors) + `public/videos` (4 mp4s).
 
-## 📊 Site State (2026-09-11)
+## 📊 Site State (2026-10-22)
 
-- **60 entry shells** (`npm run gen`) → **60 prerendered pages** in `dist/`
-- **Sitemap:** 58 URLs (excludes `thank-you`, `404`) · **Indexing API: 56/56 submitted, 0 failed**
-- **Blog:** 37 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
-- **Performance:** route-split JS (money pages ~163KB initial vs 625KB monolith)
+- **108 entry shells** (`npm run gen`) → **107 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
+- **Sitemap:** 104 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
+- **Blog:** 85 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
+- **Performance:** per-article chunks (a guide page ships ~12 KB of copy, not the whole 85-guide library) · `modulepreload` on every page · largest single chunk is the 170 KB entry
+- **Content gate:** `content-lint` passes with **0 warnings**, including `--strict`
 - **Hydration rule:** SSR output must equal first client render — never mutate another component's DOM; keep effects out of render output.
 
 ## 📝 Content System (how pages get built)
 
-- **Service pages** are data-driven: `src/lib/services.js` keyed by `serviceKey` (`deep/house/kitchen/bathroom/sofa/carpet/office/move/fullhome` + `bhk` 1–5), rendered by `ServicePage.jsx` with Service + FAQ + Reviews + HowTo + Breadcrumb JSON-LD, pricing tables, before/after sliders (deep/fullhome), related guides + services.
-- **Blog articles** live in `src/lib/blog.js` (`ARTICLES[]`: slug/file/title/description/dates/image/lead/faqs/cta/blocks). Block types: `p, lead, h2, h3, table{head,rows}, ul, ol, tip`; `**bold**` inline supported. Rendered by `BlogArticlePage.jsx` with Article + FAQ + Breadcrumb JSON-LD.
+- **Service pages** are data-driven: `src/lib/services.js` keyed by `serviceKey` (`deep/house/kitchen/bathroom/sofa/carpet/office/move/fullhome` + `bhk` 1–5), rendered by `ServicePage.jsx` with LocalBusiness + Service + HowTo + FAQ + Breadcrumb + WebPage JSON-LD, pricing tables, before/after sliders (deep/fullhome), related guides + services. The included-scope list and the process steps render as real `<ul>`/`<ol>` so AI extractors can parse them, and the same steps feed the `HowTo` node 1:1.
+- **Blog articles** live in `src/lib/blog.js` (`ARTICLES[]`: slug/file/title/description/dates/image/lead/faqs/cta/blocks). Block types: `p, lead, h2, h3, table{head,rows}, ul, ol, tip`; `**bold**` inline supported. Rendered by `BlogArticlePage.jsx` with Article + FAQ + Breadcrumb + WebPage JSON-LD. Every article also renders a **Key takeaways** box (derived from the guide's own copy by `gen-article-modules.mjs`) — the labelled summary an answer engine lifts.
+- **`src/lib/blog.js` is never bundled.** `gen-article-modules.mjs` projects it into one module per guide; `src/lib/article-routes.jsx` maps each guide to its own chunk.
 - **Custom pages** (`index/residential/partners/landing/about/blog/allpages/contact/thank-you/404`) are hand-built components with own schema; new page types need an `app.jsx` lazy mapping + `pages.config.mjs` entry (see `BookingPage.jsx` + `page:'landing'` precedent).
 - **Content bars (enforced):** titles <60 chars, descriptions 120–160, exactly 1 H1, every page ≥1,500 prerendered words, primary keyword in title/H1/lead + body multiples, Hinglish FAQ on local-intent pages, CTA → money page, `since 2015` business history (never 2024), prices from the live rate card only.
 - **Comparison pages** (Mr/UC/NoBroker/Safaiwale/Best-office): verifiable public facts only, “Not publicly listed” where unknown, affiliation disclosed in lead + tip, figures dated (Sep 2026).
@@ -154,7 +167,7 @@ npm run gen        # regenerate HTML entry shells after editing pages.config.mjs
 - **Audit log:** `SEO-AUDIT.md` (dated sections per change).
 - **Backlinks:** `BACKLINKS.md` (NAP block, copy kit, tiered targets). Rule: never buy/automate links.
 - **Indexing discipline:** `scripts/submit-indexing.cjs` ONLY for newly written or materially changed URLs (`--url …`); never mass `--reset` except after site-wide rebuilds (200/day project quota, shared with old-domain cron).
-- **Pre-flight before every deploy:** same-origin assets exist, internal links resolve, JSON-LD parses, noindex only thank-you/404, zero third-party fetch hosts in initial HTML, Playwright console audit clean (repeat runs — hydration races are flaky).
+- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, FAQ schema parity, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts in the initial HTML.
 - **Docs policy:** `.md` files are local-only (`*.md` gitignored) except `README.md`, which stays on GitHub. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
 
 ## 📞 Business Details

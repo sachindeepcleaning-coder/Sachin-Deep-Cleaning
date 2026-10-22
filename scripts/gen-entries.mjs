@@ -7,20 +7,24 @@
 //   - lang="en-IN"
 //   - <meta name="robots" noindex> when page.noindex === true
 //   - og:image:alt / width / height
-//   - hreflang alternates (en-IN / en)
-//   - geo.region / geo.placename / geo.position / ICBM
-//   - og:type="article" for blog articles
-//   - hero-image preload on service pages
+//   - geo.region / geo.placename / geo.position / ICBM (single source: site.js)
+//   - og:type="article" for blog articles + the article:* properties
+//   - hero-image preload on service pages (srcset-matched, no double fetch)
 //   - supports nested paths (blog/... creates subdirectories)
+//
+// NOTE on hreflang: the site is single-locale (lang="en-IN"). The old
+// x-default/en-IN/en cluster pointed all three alternates at the SAME url,
+// which Google ignores as a self-referential annotation. A single-language
+// site does not need hreflang at all, so it was removed rather than faked.
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL, SITE_NAME, OG_IMAGE } from '../pages.config.mjs';
-import { GTM_ID, NETLIFY_FORM_NAME, CLARITY_ID } from '../src/lib/site.js';
+import { GTM_ID, NETLIFY_FORM_NAME, CLARITY_ID, GEO } from '../src/lib/site.js';
 import { ARTICLES } from '../src/lib/blog.js';
 import { getService } from '../src/lib/services.js';
-import { imageDims } from '../src/lib/image-dims.js';
+import { imageDims, srcSetFor } from '../src/lib/image-dims.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -101,15 +105,36 @@ for (const p of pages) {
     continue;
   }
 
-  const noindex = p.noindex ? '  <meta name="robots" content="noindex, nofollow" />\n' : '';
+  const noindex = p.noindex
+    ? '  <meta name="robots" content="noindex, follow" />\n'
+    : '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />\n';
   const ogType = p.page === 'article' ? 'article' : 'website';
-  const preload = p.page === 'service' && p.serviceKey && HERO_IMAGES[p.serviceKey]
-    ? `  <link rel="preload" as="image" href="${HERO_IMAGES[p.serviceKey]}" fetchpriority="high" />\n`
-    : '';
+
+  // LCP preload must match the element the browser actually paints first.
+  //
+  // Service pages: the hero is text + a lead form — the only image sits in
+  // the "About" section far below the fold and is loading="lazy". Preloading
+  // it burned bandwidth without helping LCP, so the preload was removed.
+  //
+  // Article pages: the hero image IS the LCP element (loading="eager",
+  // fetchpriority="high"). Preload it with the SAME srcset + sizes the <img>
+  // uses, otherwise the browser downloads the base file as the preload and
+  // then the chosen variant again — a double fetch of the LCP image.
+  const HERO_SIZES = '(max-width: 600px) 400px, (max-width: 1000px) 800px, 860px';
+  let preload = '';
+  if (p.page === 'article') {
+    const art0 = ARTICLES.find((a) => a.file === p.file);
+    if (art0 && art0.image) {
+      const srcset = srcSetFor(art0.image);
+      const href = srcset.split(', ').pop().split(' ')[0];
+      preload = `  <link rel="preload" as="image" href="${href}" imagesrcset="${srcset}" imagesizes="${HERO_SIZES}" fetchpriority="high" />\n`;
+    }
+  }
   // Page-specific OG image + alt + TRUE dimensions (2026-09-20 seo-images
   // audit: tags claimed 1200x630 for files as small as 390px — emit measured).
   let ogImage = OG_IMAGE;
   let ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
+  let art = null;
   if (p.page === 'service' && HERO_IMAGES[p.serviceKey]) {
     ogImage = SITE_URL + HERO_IMAGES[p.serviceKey];
     try {
@@ -117,7 +142,7 @@ for (const p of pages) {
       if (svc && svc.imageAlt) ogAlt = svc.imageAlt;
     } catch {}
   } else if (p.page === 'article') {
-    const art = ARTICLES.find((a) => a.file === p.file);
+    art = ARTICLES.find((a) => a.file === p.file);
     if (art && art.image) ogImage = SITE_URL + art.image;
     if (art && art.imageAlt) ogAlt = art.imageAlt;
   }
@@ -129,6 +154,14 @@ for (const p of pages) {
     ogAlt = 'Sachin Deep Cleaning — professional deep cleaning services in Gurgaon';
     [ogW, ogH] = imageDims(ogImage.replace(SITE_URL, ''));
   }
+  // og:type="article" pages should carry the article:* properties — without
+  // them the card is treated as a generic website card by Facebook/LinkedIn.
+  const articleMeta = p.page === 'article' && art
+    ? `  <meta property="article:published_time" content="${art.datePublished}" />\n` +
+      `  <meta property="article:modified_time" content="${art.dateModified}" />\n` +
+      `  <meta property="article:author" content="${SITE_URL}/about.html#sachin-kumar" />\n` +
+      `  <meta property="article:section" content="Cleaning Guides" />\n`
+    : '';
 
   const html = `<!DOCTYPE html>
 <html lang="en-IN" data-theme="light" ${dataAttrs}>
@@ -142,14 +175,12 @@ for (const p of pages) {
   <meta name="description" content="${p.description}" />
 ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta name="geo.placename" content="Gurgaon" />
-  <meta name="geo.position" content="28.4595;77.0266" />
-  <meta name="ICBM" content="28.4595, 77.0266" />
+  <meta name="geo.position" content="${GEO.latitude};${GEO.longitude}" />
+  <meta name="ICBM" content="${GEO.latitude}, ${GEO.longitude}" />
   <link rel="canonical" href="${url}" />
-  <link rel="alternate" hreflang="x-default" href="${url}" />
-  <link rel="alternate" hreflang="en-IN" href="${url}" />
-  <link rel="alternate" hreflang="en" href="${url}" />
   <meta property="og:type" content="${ogType}" />
   <meta property="og:site_name" content="${SITE_NAME}" />
+  <meta property="og:locale" content="en_IN" />
   <meta property="og:title" content="${p.title}" />
   <meta property="og:description" content="${p.description}" />
   <meta property="og:url" content="${url}" />
@@ -157,10 +188,14 @@ ${noindex}  <meta name="geo.region" content="IN-HR" />
   <meta property="og:image:alt" content="${ogAlt}" />
   <meta property="og:image:width" content="${ogW}" />
   <meta property="og:image:height" content="${ogH}" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:type" content="${ogImage.endsWith('.webp') ? 'image/webp' : 'image/jpeg'}" />
+${articleMeta}  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@sachindeepclean" />
+  <meta name="twitter:creator" content="@sachindeepclean" />
   <meta name="twitter:title" content="${p.title}" />
   <meta name="twitter:description" content="${p.description}" />
   <meta name="twitter:image" content="${ogImage}" />
+  <meta name="twitter:image:alt" content="${ogAlt}" />
 ${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://www.clarity.ms" crossorigin />

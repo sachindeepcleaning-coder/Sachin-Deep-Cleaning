@@ -36,6 +36,18 @@ function collectHtmlFiles(dir, acc = []) {
   return acc;
 }
 
+// React 18's Fizz writer (writeStringChunk) flushes the ENTIRE 2048-byte
+// view when a string chunk does not fit — including the view's zero-filled
+// tail. The result is a literal NUL byte in the HTML immediately before some
+// multi-byte characters (₹, —, ▼, •, emoji). Browsers and Google re-parse
+// those bytes correctly, but raw-HTML consumers — LLM/AI crawlers, social
+// scrapers, plain HTTP clients — read corrupted prices ("���5,500").
+//
+// The padding always sits BETWEEN complete characters, so removing it is
+// lossless. (The upstream fix landed in React 19; upgrading is a bigger
+// change than this.)
+const stripNul = (s) => s.replace(/\0/g, '');
+
 // 1) Bundle the SSR entry with Vite (transpiles JSX).
 await build({
   configFile: false,
@@ -101,10 +113,29 @@ for (const path of collectHtmlFiles(distDir)) {
     continue;
   }
 
-  html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
-  writeFileSync(path, html);
+  html = html.replace('<div id="root"></div>', `<div id="root">${stripNul(body)}</div>`);
+  writeFileSync(path, stripNul(html));
   injected++;
   console.log('prerendered:', relPath, `(${body.length} chars)`);
+}
+
+// 4) Verify no NUL byte survived anywhere in the built HTML. A single NUL
+//    corrupts a price for every raw-HTML consumer, so fail the build.
+{
+  let nulFiles = 0;
+  for (const path of collectHtmlFiles(distDir)) {
+    const buf = readFileSync(path);
+    if (buf.includes(0)) {
+      console.error('NUL byte in', relative(distDir, path));
+      nulFiles++;
+    }
+  }
+  if (nulFiles > 0) {
+    console.error(`\nPrerender produced ${nulFiles} file(s) containing NUL bytes.`);
+    process.exitCode = 1;
+  } else {
+    console.log('NUL-byte check: clean.');
+  }
 }
 
 console.log(`\nPrerendered ${injected}/${pages.length} pages.`);

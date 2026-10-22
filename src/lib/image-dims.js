@@ -28,8 +28,23 @@ export function imageDims(src) {
 }
 
 // Truthful srcset: 400w/800w variants (verified 400/800px) + base at real width.
+//
+// The old version always appended the base, which produced TWO candidates
+// with the same width descriptor (e.g. "…-800w.webp 800w, …webp 800w" for an
+// 800px source). Duplicate width descriptors make a browser reject the whole
+// srcset, and for sources narrower than 400px it emitted an out-of-order list.
+// Now each real width appears once, ascending, and the base wins ties.
 export function srcSetFor(src) {
   const base = src.replace(/\.(jpg|webp)$/, '');
   const [w] = imageDims(src);
-  return `${base}-400w.webp 400w, ${base}-800w.webp 800w, ${src} ${w}w`;
+
+  const byWidth = new Map();
+  byWidth.set(w, src); // the original file, at its true width
+  if (!byWidth.has(400)) byWidth.set(400, `${base}-400w.webp`);
+  if (!byWidth.has(800)) byWidth.set(800, `${base}-800w.webp`);
+
+  return [...byWidth.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([width, url]) => `${url} ${width}w`)
+    .join(', ');
 }

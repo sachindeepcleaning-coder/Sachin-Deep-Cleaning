@@ -12,7 +12,7 @@ import ReelSection from '../components/ReelSection.jsx';
 import OfficeReelSection from '../components/OfficeReelSection.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import RelatedGuides from '../components/RelatedGuides.jsx';
-import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
+import { JsonLd, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema, webpageSchema, howToSchema, HOW_TO_CONFIGS } from '../lib/schema.jsx';
 import UpdatedNote from '../components/UpdatedNote.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
@@ -53,10 +53,24 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url })} />
+      <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image })} />
       <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url, dateModified: CONTENT_UPDATED })} />
-      <JsonLd data={faqSchema(s.faqs)} />
+      <JsonLd data={faqSchema(s.faqs, url)} />
+      {/* HowTo: the visible "How It Works" steps are the machine-readable
+          process. Every service page has the step list, so it ships the
+          matching HowTo node (step, tool, duration, estimated cost). */}
+      {s.process && HOW_TO_CONFIGS[serviceKey] && (
+        <JsonLd
+          data={howToSchema({
+            ...HOW_TO_CONFIGS[serviceKey],
+            steps: s.process,
+            image: s.image,
+            serviceKey,
+            url,
+          })}
+        />
+      )}
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
@@ -68,7 +82,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
                 ? [{ name: 'Services', url: pageUrl('deep-cleaning-services-in-gurgaon') }]
                 : []),
           { name: s.name, url },
-        ])}
+        ], url)}
       />
       {serviceKey === 'deep' && (
       <JsonLd
@@ -180,17 +194,19 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
             <h2 className="section-title">Everything We Cover</h2>
             <p className="section-sub" style={{ margin: '0 auto' }}>Every service comes with expert attention to detail and eco-friendly products.</p>
           </div>
-          <div className="checklist-grid">
+          {/* Real <ul>/<li> semantics: AI extractors and screen readers can
+              parse the included-scope list; the grid look is unchanged. */}
+          <ul className="checklist-grid">
             {s.includes.map((i) => (
-              <div key={i} className="checklist-item fade-up">
-                <div className="checklist-icon">✓</div>
+              <li key={i} className="checklist-item fade-up">
+                <div className="checklist-icon" aria-hidden="true">✓</div>
                 <div>
                   <div className="checklist-title">{i.split('\u2013')[0]}</div>
                   <div className="checklist-desc">{i}</div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -202,15 +218,16 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
               <h2 className="section-title">{s.name} — Step by Step</h2>
               <p className="section-sub" style={{ margin: '0 auto' }}>Here&apos;s exactly what our team does on the day.</p>
             </div>
-            <div className="hiw-wrap">
+            {/* Ordered list mirrors the HowTo schema steps 1:1. */}
+            <ol className="hiw-wrap">
               {s.process.map((p) => (
-                <div key={p.step} className="hiw-step fade-up">
-                  <div className="hiw-num">{p.step}</div>
+                <li key={p.step} className="hiw-step fade-up">
+                  <div className="hiw-num" aria-hidden="true">{p.step}</div>
                   <div className="hiw-title">{p.title}</div>
                   <div className="hiw-desc">{p.desc}</div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
       )}

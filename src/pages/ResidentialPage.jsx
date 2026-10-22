@@ -50,9 +50,9 @@ export default function ResidentialPage({ url }) {
 
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url })} />
+      <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema({ name: 'Residential Cleaners Near Me in Gurgaon', description: 'Local, police-verified residential cleaners dispatched from the team nearest to your Gurgaon area. Pay only after cleaning.', url })} />
-      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
+      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 
       <section className="hero">
         <div className="hero-grid"></div>

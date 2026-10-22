@@ -52,10 +52,10 @@ const INCLUDE_ITEMS = [
 export default function BookingPage({ url }) {
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url })} />
+      <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema({ name: 'Book Cleaning Online in Gurgaon — No App Needed', description: 'Book house and deep cleaning online in Gurgaon without any app: WhatsApp booking in 30 seconds, same-day slots, fixed price, pay after walkthrough.', url, price: { label: 'Starting from', amount: '₹2,500' } })} />
       <JsonLd data={breadcrumbSchema([{ name: 'Home', url: pageUrl('index') }, { name: 'Book Cleaning Online in Gurgaon', url }])} />
-      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
+      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 
       <section className="hero">
         <div className="hero-grid"></div>

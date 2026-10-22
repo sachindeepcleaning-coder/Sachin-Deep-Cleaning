@@ -3,7 +3,8 @@ import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
-import { JsonLd, localBusinessSchema } from '../lib/schema.jsx';
+import MapEmbed from '../components/MapEmbed.jsx';
+import { JsonLd, localBusinessSchema, faqSchema } from '../lib/schema.jsx';
 import { waMsg, BRAND_NAME, GBP_LISTING_NAME, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
@@ -24,7 +25,8 @@ const FAQS = [
 export default function ContactPage({ url }) {
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url })} />
+      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 
       <section className="hero">
         <div className="hero-grid"></div>
@@ -149,16 +151,11 @@ export default function ContactPage({ url }) {
             <h2 className="section-title">We Serve Every Sector of Gurgaon</h2>
             <p className="section-sub" style={{ margin: '0 auto' }}>Service-area business — no single shop counter, team dispatched to your sector. Headquarters at <a href="/blog/sushant-lok-1-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sushant Lok Phase I</a> with zone rosters across DLF, <a href="/blog/golf-course-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Golf Course Road</a>, <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>Sohna Road</a>, West and Central Gurgaon, so the <a href="/residential-cleaners-near-me.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>nearest crew</a> — never a cross-city one — gets your job. Call +91 95607-39281 to confirm nearest slot.</p>
           </div>
-          <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)', height: 360 }} className="fade-up">
-            <iframe
-              title={`${BRAND_NAME} — ${ADDRESS_FULL}`}
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(`${GBP_LISTING_NAME} ${ADDRESS_FULL}`)}&z=16&output=embed`}
-              width="100%"
-              height="360"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+          <div style={{ marginTop: 32, borderRadius: 14, overflow: 'hidden', border: '1px solid var(--border)' }} className="fade-up">
+            <MapEmbed
+              query={`${GBP_LISTING_NAME} ${ADDRESS_FULL}`}
+              address={ADDRESS_FULL}
+              brand={BRAND_NAME}
             />
           </div>
           <div style={{ textAlign: 'center', marginTop: 16, fontSize: '.92rem', color: 'var(--muted)' }}>

@@ -33,9 +33,9 @@ const STEPS = [
 export default function PartnersPage({ url }) {
   return (
     <>
-      <JsonLd data={localBusinessSchema({ url })} />
+      <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema({ name: 'Society & Apartment Cleaning Services in Gurgaon', description: 'Bulk RWA cluster-day bookings, villa and PG turnover cleaning across Gurgaon societies. Fixed quotes, GST invoice, pay after walkthrough.', url })} />
-      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })))} />
+      <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 
       <section className="hero">
         <div className="hero-grid"></div>

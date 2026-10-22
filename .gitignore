@@ -5,6 +5,10 @@ dist-ssr
 .vite
 .DS_Store
 
+# Projected from src/lib/blog.js at build time (per-article chunks).
+# src/lib/blog.js stays the single source of truth.
+src/generated
+
 # Local-only docs (never push .md to GitHub)
 *.md
 

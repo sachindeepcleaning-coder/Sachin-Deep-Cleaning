@@ -1,4 +1,4 @@
-import { ARTICLES } from '../lib/blog.js';
+import { ARTICLE_INDEX } from '../generated/article-index.js';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
 import TrustBar from '../components/TrustBar.jsx';
@@ -59,7 +59,7 @@ export default function BlogIndexPage({ url }) {
           </div>
           <div className="blog-grid" style={{ marginTop: 24 }}>
             {FEATURED_FILES.map((f) => {
-              const a = ARTICLES.find((x) => x.file === f);
+              const a = ARTICLE_INDEX.find((x) => x.file === f);
               if (!a) return null;
               return (
                 <a key={a.slug} className="blog-card" href={`${a.file}.html`}>
@@ -78,7 +78,7 @@ export default function BlogIndexPage({ url }) {
       <section className="section">
         <div className="section-inner">
           <div className="blog-grid">
-            {ARTICLES.map((a) => (
+            {ARTICLE_INDEX.map((a) => (
               <a key={a.slug} className="blog-card" href={`${a.file}.html`}>
                 <img
                   src={a.image}

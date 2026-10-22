@@ -4,7 +4,7 @@ import YtShortsSection from '../components/YtShortsSection.jsx';
 import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { pageUrl, WA_BOOK, waMsg } from '../lib/site.js';
 import { whatsappClick } from '../lib/landing.js';
-import { ARTICLES } from '../lib/blog.js';
+import { ARTICLE_INDEX } from '../generated/article-index.js';
 
 const GROUPS = [
   {
@@ -36,7 +36,7 @@ const GROUPS = [
     label: 'Blog & Guides',
     items: [
       { icon: '📖', title: 'All Cleaning Guides', text: 'Every article in the blog.', href: 'blog.html' },
-      ...ARTICLES.map((a) => ({
+      ...ARTICLE_INDEX.map((a) => ({
         icon: '📖',
         title: a.title,
         text: a.description,
@@ -82,7 +82,7 @@ export default function AllPagesPage({ url }) {
             <div className="hero-pills">
               <span className="pill"><span className="pi">✓</span> 9 Services</span>
               <span className="pill"><span className="pi">✓</span> 5 BHK Packages</span>
-              <span className="pill"><span className="pi">✓</span> {ARTICLES.length} Guides</span>
+              <span className="pill"><span className="pi">✓</span> {ARTICLE_INDEX.length} Guides</span>
               <span className="pill"><span className="pi">✓</span> Same-Day Available</span>
               <span className="pill"><span className="pi">✓</span> Pay After Cleaning</span>
             </div>

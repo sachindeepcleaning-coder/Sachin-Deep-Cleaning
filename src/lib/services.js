@@ -1,5 +1,10 @@
 // Content for data-driven service pages. Keyed by `serviceKey` from pages.config.mjs.
 // `fullhome` supports a `bhk` number (1–5) for tailored copy/pricing.
+//
+// Prices come from src/lib/service-prices.js — one source of truth, but in a
+// tiny module, so a page that needs a single price does not have to pull the
+// whole 75 KB service library into its chunk.
+import { SERVICE_PRICES, PRICE_BY_BHK, SQFT_BY_BHK } from './service-prices.js';
 
 const base = {
   deep: {
@@ -58,7 +63,7 @@ const base = {
       ['AD', 'Arjun Desai', 'Sector 57', 'They found and cleaned things I never even noticed — behind the fridge, under the beds, inside the wardrobes. Genuinely top-to-bottom.'],
       ['MK', 'Meera Kapoor', 'Golf Course Road', 'Pay-after-cleaning gave me full confidence. The house smelled fresh and the team was respectful and on time. Highly recommend.'],
     ],
-    price: { label: 'Starting from', amount: '₹2,000' },
+    price: SERVICE_PRICES.deep,
     priceCheck: {
       title: 'Gurgaon 2 BHK Price Check — Us vs Public Listings',
       note: 'Public listing figures, September 2026. Scopes differ — compare line items, not headlines. Re-check any provider before booking.',
@@ -125,7 +130,7 @@ const base = {
       ['RK', 'Rahul Khanna', 'Palam Vihar', 'Booked a one-time deep clean then switched to the monthly plan. Great value and very consistent quality.'],
       ['TM', 'Tanya Malhotra', 'Sushant Lok 1', 'They clean around my schedule and my dog loves them. Eco-friendly products, no strong smells.'],
     ],
-    price: { label: 'Starting from', amount: '₹499' },
+    price: SERVICE_PRICES.house,
   },
   kitchen: {
     name: 'Kitchen Deep Cleaning in Gurgaon',
@@ -161,7 +166,7 @@ const base = {
       ['SM', 'Shalini Mehra', 'DLF Phase 4', 'They took apart the exhaust fan and hob and degreased everything. Grease I thought was permanent is completely gone.'],
       ['RJ', 'Ritika Jain', 'Sector 49', 'Very thorough — even the cabinet interiors and the top of the chimney were cleaned. Worth booking every quarter.'],
     ],
-    price: { label: 'Starting from', amount: '₹1,500' },
+    price: SERVICE_PRICES.kitchen,
   },
   bathroom: {
     name: 'Bathroom Deep Cleaning in Gurgaon',
@@ -197,7 +202,7 @@ const base = {
       ['DP', 'Deepak Puri', 'MG Road', 'Very impressed with the commode sanitization and tile scrubbing. Thorough and hygienic, no shortcuts.'],
       ['SG', 'Sneha Gupta', 'Golf Course Extension', 'They even cleaned the exhaust fan and ceiling corners. The bathroom smells fresh days later. Great service.'],
     ],
-    price: { label: 'Starting from', amount: '₹800' },
+    price: SERVICE_PRICES.bathroom,
   },
   sofa: {
     name: 'Sofa Shampoo Cleaning in Gurgaon',
@@ -233,7 +238,7 @@ const base = {
       ['MR', 'Meghna Rao', 'Sector 66', 'My cream fabric sofa had a stubborn coffee stain that other services said was permanent. They got most of it out. Impressed.'],
       ['NA', 'Nikhil Arora', 'Palam Vihar', 'Pet odor is gone completely. They were careful with the fabric and it dried the same evening.'],
     ],
-    price: { label: 'Starting from', amount: '₹499' },
+    price: SERVICE_PRICES.sofa,
   },
   carpet: {
     name: 'Carpet Shampoo Cleaning in Gurgaon',
@@ -272,7 +277,7 @@ const base = {
       ['SA', 'Sanjay Arora', 'DLF Phase 3', 'Fair per-sq-ft pricing and they measured honestly. Deep stains from the kids came out nicely.'],
       ['PR', 'Priyanka Reddy', 'Sohna Road', 'They cleaned our wall-to-wall carpet after renovation dust settled in. The amount of dirt extracted was shocking.'],
     ],
-    price: { label: 'Per square foot (shampoo extraction)', amount: '₹18' },
+    price: SERVICE_PRICES.carpet,
   },
   office: {
     name: 'Office Deep Cleaning in Gurgaon',
@@ -325,7 +330,7 @@ const base = {
       ['LS', 'Lata Srivastava', 'Startup Office, Udyog Vihar', 'NDA signed, team professional, and the pantry grease was finally gone. Booked them again for the quarterly clean.'],
       ['AC', 'Anuj Chawla', 'Clinic, Sector 44', 'For a medical setup hygiene is everything. Their sanitization of our waiting area and washrooms was thorough and documented.'],
     ],
-    price: { label: 'Small office from', amount: '₹5,000' },
+    price: SERVICE_PRICES.office,
   },
   move: {
     name: 'Move-In / Move-Out Cleaning in Gurgaon',
@@ -359,7 +364,7 @@ const base = {
       ['PD', 'Pallavi Dua', 'Moved into 3 BHK, Golf Course Rd', 'Moved into a home that smelled of previous owners. Their move-in clean made it feel brand new.'],
       ['AS', 'Arvind Singh', 'Sector 82', 'Booked on the day of handover — they finished before the landlord arrived. Efficient and thorough.'],
     ],
-    price: { label: 'Starting from', amount: '₹1,999' },
+    price: SERVICE_PRICES.move,
   },
   fullhome: {
     name: 'Full Home Deep Cleaning',
@@ -391,9 +396,9 @@ const base = {
       ['RG', 'Rohit Gupta', 'Sohna Road', 'Best value for money I have found in Gurgaon. Transparent pricing, no hidden charges, and the whole 2 BHK was done in one visit.'],
       ['VS', 'Vikram Sharma', 'MG Road', "We have tried 3 other cleaning services before. None come close. Bathroom tiles look like they did when we first moved in. Just brilliant."],
     ],
-    price: { label: 'Starting from', amount: '₹2,500' },
-    priceByBhk: { 1: '₹2,500', 2: '₹4,500', 3: '₹5,500', 4: '₹6,500', 5: '₹9,000' },
-    sqftByBhk: { 1: '400–600 sq ft', 2: '601–1,000 sq ft', 3: '1,001–1,500 sq ft', 4: '1,501–2,100 sq ft', 5: '2,500–3,000 sq ft' },
+    price: SERVICE_PRICES.fullhome,
+    priceByBhk: PRICE_BY_BHK,
+    sqftByBhk: SQFT_BY_BHK,
   },
 };
 

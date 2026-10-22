@@ -1,6 +1,5 @@
 import { JsonLd, articleSchema, faqSchema, breadcrumbSchema, webpageSchema, serviceSchema } from '../lib/schema.jsx';
-import { getArticle } from '../lib/blog.js';
-import { getService } from '../lib/services.js';
+import { SERVICE_PRICES } from '../lib/service-prices.js';
 import { pageUrl } from '../lib/site.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import QuoteForm from '../components/QuoteForm.jsx';
@@ -96,9 +95,7 @@ function secondaryImage(article) {
   return null;
 }
 
-export default function BlogArticlePage({ file = 'blog', url = '' }) {
-  const article = getArticle(file);
-
+export default function BlogArticlePage({ file = 'blog', url = '', article = null }) {
   if (!article) {
     return (
       <section className="section">
@@ -112,24 +109,27 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
 
   const mins = readingMinutes(article);
   const faqs = article.faqs;
+  const takeaways = article.keyTakeaways || [];
   // Single source of truth for pricing: the cost guide carries Service schema
-  // with the site's own deep-clean starting price (reused from services.js).
-  const costService = file === 'blog/deep-cleaning-cost-gurgaon-2026' ? getService('deep') : null;
+  // with the site's own deep-clean starting price (from service-prices.js —
+  // the same object services.js uses, without pulling the 75 KB service
+  // library into every article chunk).
+  const costService = file === 'blog/deep-cleaning-cost-gurgaon-2026' ? SERVICE_PRICES.deep : null;
 
   return (
     <>
       <JsonLd data={articleSchema({ title: article.title, description: article.description, url, datePublished: article.datePublished, dateModified: article.dateModified, image: article.image })} />
       {costService && (
-        <JsonLd data={serviceSchema({ name: 'Deep Cleaning Services in Gurgaon', description: article.description, url, price: costService.price, image: article.image })} />
+        <JsonLd data={serviceSchema({ name: 'Deep Cleaning Services in Gurgaon', description: article.description, url, price: { label: costService.label, amount: costService.amount }, image: article.image })} />
       )}
-      <JsonLd data={webpageSchema({ title: article.title, description: article.description, url })} />
-      {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
+      <JsonLd data={webpageSchema({ title: article.title, description: article.description, url, dateModified: article.dateModified })} />
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs, url)} />}
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
           { name: 'Blog', url: pageUrl('blog') },
           { name: article.title, url },
-        ])}
+        ], url)}
       />
 
       <section className="blog-hero">
@@ -145,6 +145,17 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
           <h1>{article.title}</h1>
           {article.lead && (
             <p className="blog-lead"><Rich text={article.lead} /></p>
+          )}
+          {/* Labelled, self-contained summary. Answer engines lift a short
+              labelled list far more reliably than prose — and every bullet
+              here is a sentence the guide already makes. */}
+          {takeaways.length > 0 && (
+            <section className="key-takeaways" aria-label="Key takeaways">
+              <h2 className="key-takeaways-h">Key takeaways</h2>
+              <ul>
+                {takeaways.map((t, i) => <li key={i}>{t}</li>)}
+              </ul>
+            </section>
           )}
           {article.printable && (
             <div style={{ margin: '14px 0 4px' }}>
@@ -251,8 +262,7 @@ export default function BlogArticlePage({ file = 'blog', url = '' }) {
                 ))}
               </ul>
             </div>
-          )}
-          <p className="blog-end" style={{ textAlign: 'center', marginTop: '40px' }}>
+          )}          <p className="blog-end" style={{ textAlign: 'center', marginTop: '40px' }}>
             <a href="/blog.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>More cleaning guides for Gurgaon homes →</a>
           </p>
         </div>

@@ -63,3 +63,7 @@ Disallow: /
 # Sitemap location
 Sitemap: https://sachindeepcleaning.shop/sitemap.xml
 Sitemap: https://sachindeepcleaning.shop/sitemap-images.xml
+
+# AI discovery maps (answer engines read these for citable page summaries)
+Llms-Txt: https://sachindeepcleaning.shop/llms.txt
+Llms-Full: https://sachindeepcleaning.shop/llms-full.txt

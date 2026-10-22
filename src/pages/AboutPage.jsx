@@ -1,7 +1,7 @@
 import QuoteForm from '../components/QuoteForm.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
+import { JsonLd, breadcrumbSchema, organizationSchema, personSchema } from '../lib/schema.jsx';
 import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, ADDRESS_PARTS, RATING } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
@@ -32,41 +32,15 @@ const PRICING = [
 ];
 
 export default function AboutPage({ url }) {
-  const orgSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${SITE_URL}/#business`,
-    name: BRAND_NAME,
-    url: SITE_URL,
-    telephone: PHONE,
-    address: { '@type': 'PostalAddress', ...ADDRESS_PARTS },
-    areaServed: 'Gurgaon, Haryana, India',
-    foundingDate: '2015',
-    description: 'Police-verified, eco-friendly deep cleaning team serving Gurgaon. Full-home, kitchen, bathroom, sofa and carpet deep cleaning with pay-after-satisfaction.',
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.youtube, SOCIAL.twitter],
-  };
-  const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Sachin Kumar',
-    jobTitle: 'Founder & Lead Cleaning Specialist',
-    url: `${SITE_URL}/about.html#sachin-kumar`,
-    image: `${SITE_URL}/images/cleaning-1.webp`,
-    sameAs: [SOCIAL.facebook, SOCIAL.instagram],
-    worksFor: { '@id': `${SITE_URL}/#business` },
-    knowsAbout: ['Deep Cleaning', 'House Cleaning', 'Bathroom Descaling', 'Kitchen Degreasing', 'Gurgaon'],
-    description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, rated ${RATING.value} on Google from ${RATING.count} reviews, police-verified team lead.`,
-  };
-
   return (
     <>
-      <JsonLd data={orgSchema} />
-      <JsonLd data={personSchema} />
+      <JsonLd data={organizationSchema()} />
+      <JsonLd data={personSchema()} />
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: pageUrl('index') },
           { name: 'About Us', url },
-        ])}
+        ], url)}
       />
 
       <section className="hero">
