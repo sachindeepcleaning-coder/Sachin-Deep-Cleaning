@@ -12,7 +12,7 @@
 // Runs AFTER `vite build` (needs the manifest) and BEFORE `scripts/prerender.mjs`
 // (which only rewrites the body, so the injected head links survive).
 
-import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, rmSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,6 +28,10 @@ if (!existsSync(manifestPath)) {
 }
 
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+
+// The manifest maps source files to chunks — a build artifact, not site
+// content. It is read here and then deleted so it is never published.
+rmSync(resolve(distDir, '.vite'), { recursive: true, force: true });
 
 // page type (from the entry shell's data-page) -> source module
 const PAGE_MODULE = {
