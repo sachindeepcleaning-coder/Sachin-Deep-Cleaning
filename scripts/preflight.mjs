@@ -619,7 +619,7 @@ console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD block
   warn(`[VERIFY] Re-check the single address against the live GBP listing each deploy: "${ADDRESS_FULL}"`);
 }
 
-// 17 — an unproven claim may not be rendered.
+// 23 — an unproven claim may not be rendered.
 //
 // A claim with no proof is a build failure, not a warning: if the claim text
 // appears anywhere in the built output while the claim is still unproven,
@@ -648,7 +648,7 @@ console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD block
   }
 }
 
-// 18 — the police-verification claim always carries its proof line.
+// 24 — the police-verification claim always carries its proof line.
 //
 // "Police-Verified" may only appear on a page that also says "ID and
 // background check shown on request" — that is the whole point of the claim.

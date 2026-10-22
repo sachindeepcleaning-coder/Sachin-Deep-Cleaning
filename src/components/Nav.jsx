@@ -11,7 +11,7 @@ export default function Nav() {
       </a>
       <div className="nav-actions">
         <a
-          href={waMsg('Hi I want to book deep cleaning service in Gurgaon.')}
+          href={waMsg('Hi, I want to book deep cleaning in Gurgaon.')}
           target="_blank" rel="noopener"
           className="btn-nav-wa"
           onClick={whatsappClick}

@@ -15,7 +15,7 @@ export const WHATSAPP_NUMBER = '919560739281';
 export const WHATSAPP = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 // Pre-filled WhatsApp links for the template CTAs.
-export const WA_BOOK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi I want to book deep cleaning service in Gurgaon.')}`;
+export const WA_BOOK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi, I want to book deep cleaning in Gurgaon.')}`;
 export function waMsg(msg) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }

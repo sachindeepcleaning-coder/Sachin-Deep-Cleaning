@@ -9,8 +9,11 @@ dist-ssr
 # src/lib/blog.js stays the single source of truth.
 src/generated
 
-# Local-only docs (never push .md to GitHub)
-*.md
+# Local working files — not part of the site.
+Search keyword report(1).csv
+indexing-progress.json
+rank-history.json
+sachindeepcleaning.shop-audit/
 
 # Secrets safety net (service keys must never enter git)
 .env*
