@@ -5,6 +5,26 @@
 // tiny module, so a page that needs a single price does not have to pull the
 // whole 75 KB service library into its chunk.
 import { SERVICE_PRICES, PRICE_BY_BHK, SQFT_BY_BHK } from './service-prices.js';
+import watertank from './service-catalog/watertank.js';
+import toilettank from './service-catalog/toilettank.js';
+import facade from './service-catalog/facade.js';
+import commonarea from './service-catalog/commonarea.js';
+import sweeper from './service-catalog/sweeper.js';
+import lift from './service-catalog/lift.js';
+import windowgrill from './service-catalog/windowgrill.js';
+import utensils from './service-catalog/utensils.js';
+import road from './service-catalog/road.js';
+import chandelier from './service-catalog/chandelier.js';
+import washingmachine from './service-catalog/washingmachine.js';
+import chairclean from './service-catalog/chairclean.js';
+import curtain from './service-catalog/curtain.js';
+import basement from './service-catalog/basement.js';
+import instantclean from './service-catalog/instantclean.js';
+import balconyclean from './service-catalog/balconyclean.js';
+import sqftrate from './service-catalog/sqftrate.js';
+import kitchenplatform from './service-catalog/kitchenplatform.js';
+import postconstruction from './service-catalog/postconstruction.js';
+import roomclean from './service-catalog/roomclean.js';
 
 const base = {
   deep: {
@@ -400,6 +420,10 @@ const base = {
     priceByBhk: PRICE_BY_BHK,
     sqftByBhk: SQFT_BY_BHK,
   },
+  watertank, toilettank, facade, commonarea, sweeper, lift, windowgrill,
+  utensils, road, chandelier, washingmachine, chairclean, curtain, basement,
+  instantclean, balconyclean, sqftrate, kitchenplatform, postconstruction,
+  roomclean,
 };
 
 export function getService(serviceKey, bhk) {

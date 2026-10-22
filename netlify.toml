@@ -95,6 +95,106 @@
   status = 301
 
 [[redirects]]
+  from = "/watertank"
+  to = "/watertank.html"
+  status = 301
+
+[[redirects]]
+  from = "/toilettank"
+  to = "/toilettank.html"
+  status = 301
+
+[[redirects]]
+  from = "/facade"
+  to = "/facade.html"
+  status = 301
+
+[[redirects]]
+  from = "/commonarea"
+  to = "/commonarea.html"
+  status = 301
+
+[[redirects]]
+  from = "/sweeper"
+  to = "/sweeper.html"
+  status = 301
+
+[[redirects]]
+  from = "/lift"
+  to = "/lift.html"
+  status = 301
+
+[[redirects]]
+  from = "/windowgrill"
+  to = "/windowgrill.html"
+  status = 301
+
+[[redirects]]
+  from = "/utensils"
+  to = "/utensils.html"
+  status = 301
+
+[[redirects]]
+  from = "/road"
+  to = "/road.html"
+  status = 301
+
+[[redirects]]
+  from = "/chandelier"
+  to = "/chandelier.html"
+  status = 301
+
+[[redirects]]
+  from = "/washingmachine"
+  to = "/washingmachine.html"
+  status = 301
+
+[[redirects]]
+  from = "/chairclean"
+  to = "/chairclean.html"
+  status = 301
+
+[[redirects]]
+  from = "/curtain"
+  to = "/curtain.html"
+  status = 301
+
+[[redirects]]
+  from = "/basement"
+  to = "/basement.html"
+  status = 301
+
+[[redirects]]
+  from = "/instantclean"
+  to = "/instantclean.html"
+  status = 301
+
+[[redirects]]
+  from = "/balconyclean"
+  to = "/balconyclean.html"
+  status = 301
+
+[[redirects]]
+  from = "/sqftrate"
+  to = "/sqftrate.html"
+  status = 301
+
+[[redirects]]
+  from = "/kitchenplatform"
+  to = "/kitchenplatform.html"
+  status = 301
+
+[[redirects]]
+  from = "/postconstruction"
+  to = "/postconstruction.html"
+  status = 301
+
+[[redirects]]
+  from = "/roomclean"
+  to = "/roomclean.html"
+  status = 301
+
+[[redirects]]
   from = "/residential-cleaners-near-me"
   to = "/residential-cleaners-near-me.html"
   status = 301
@@ -102,6 +202,11 @@
 [[redirects]]
   from = "/society-cleaning-services-gurgaon"
   to = "/society-cleaning-services-gurgaon.html"
+  status = 301
+
+[[redirects]]
+  from = "/facts"
+  to = "/facts.html"
   status = 301
 
 [[redirects]]

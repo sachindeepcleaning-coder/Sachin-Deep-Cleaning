@@ -25,6 +25,7 @@ import {
   PHONE, SITE_URL, BRAND_NAME, MAPS_URL, SAME_AS,
   ADDRESS_PARTS, GEO, RATING,
 } from './site.js';
+import { SERVICE_PRICES, PRICE_BY_BHK } from './service-prices.js';
 import { imageDims } from './image-dims.js';
 
 export function JsonLd({ data }) {
@@ -42,6 +43,29 @@ export const IDS = {
   business: `${SITE_URL}/#business`,
   organization: `${SITE_URL}/#organization`,
   person: `${SITE_URL}/about.html#sachin-kumar`,
+};
+
+// ─── Entity facts (not in site.js) ──────────────────────────────────────────
+// The facts page (src/pages/FactsPage.jsx) quotes these and the schema below
+// publishes them, so both read the same strings. They live here rather than in
+// site.js because site.js is the site/analytics config and carries no entity
+// attributes. Move them into site.js the next time that file is opened — one
+// definition per fact, never two.
+export const FOUNDING_YEAR = '2015';
+export const FOUNDER_NAME = 'Sachin Kumar';
+export const OPENING_HOURS = {
+  days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+  opens: '08:00',
+  closes: '20:00',
+};
+export const PAYMENT_ACCEPTED = 'Cash, UPI, Bank Transfer';
+
+// The price span of the deep-cleaning service, read from the one price card
+// (src/lib/service-prices.js) so no page can quote a range of its own.
+export const DEEP_PRICE_RANGE = {
+  low: SERVICE_PRICES.deep.amount,
+  high: PRICE_BY_BHK[5],
+  offerCount: Object.keys(PRICE_BY_BHK).length + 1,
 };
 
 // THE BUSINESS IDENTITY — one object, used by every schema on every page.
@@ -181,8 +205,46 @@ export function localBusinessSchema() {
   };
 }
 
+// ─── AggregateOffer (the price range of a service) ───────────────────────────
+// A price is quoted in two places: the single `Offer` (one number, the one a
+// customer is asked to pay) and the `AggregateOffer` (the range the service
+// spans — ₹2,000 for a 1 RK up to ₹9,000 for a 5 BHK). Answer engines quote
+// the range, so it has to be machine-readable too.
+//
+// schema.org does NOT nest an AggregateOffer inside an Offer, so the two are
+// siblings on the Service node: `offers` and `aggregateOffer`.
+function numericPrice(value) {
+  if (value === null || value === undefined) return null;
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  const cleaned = String(value).replace(/[^0-9.]/g, ''); // '₹2,500' → '2500'
+  if (!cleaned) return null;
+  const n = Number(cleaned);
+  return Number.isFinite(n) ? n : null;
+}
+
+export function aggregateOfferSchema({ url, prices, low, high, offerCount }) {
+  const nums = (Array.isArray(prices) ? prices : [])
+    .map(numericPrice)
+    .filter((n) => n !== null);
+  const lo = numericPrice(low) ?? (nums.length ? Math.min(...nums) : undefined);
+  const hi = numericPrice(high) ?? (nums.length ? Math.max(...nums) : undefined);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateOffer',
+    priceCurrency: 'INR',
+    ...(lo !== undefined ? { lowPrice: lo } : {}),
+    ...(hi !== undefined ? { highPrice: hi } : {}),
+    offerCount: offerCount ?? nums.length,
+    url,
+  };
+}
+
 // ─── Service ────────────────────────────────────────────────────────────────
-export function serviceSchema({ name, description, url, price, image }) {
+// `priceRange` is optional: pass { low, high, offerCount } when the caller
+// knows the span of the service and an `aggregateOffer` is emitted next to
+// the single `offers` figure. Callers that only know one price (the current
+// signature) are unaffected.
+export function serviceSchema({ name, description, url, price, image, priceRange }) {
   const id = identity();
   const hasOffer = price && price.amount !== 'request';
   // Parse '₹499 / seat' -> value '499', unit 'seat'; '₹18 / sq ft' -> '18' / 'sq ft'.
@@ -194,6 +256,20 @@ export function serviceSchema({ name, description, url, price, image }) {
       value: pricePart.replace('₹', '').replace(/,/g, '').trim(),
       unit: unitPart || null,
     };
+  }
+  // The price span, when the caller knows it. The '@context' is dropped here
+  // because the node is embedded in the Service graph, where the context is
+  // already declared on the root node.
+  let aggregateOffer = null;
+  if (priceRange) {
+    const { '@context': _context, ...offer } = aggregateOfferSchema({
+      url,
+      prices: [priceRange.low, priceRange.high],
+      low: priceRange.low,
+      high: priceRange.high,
+      ...(priceRange.offerCount ? { offerCount: priceRange.offerCount } : {}),
+    });
+    aggregateOffer = offer;
   }
   return {
     '@context': 'https://schema.org',
@@ -230,6 +306,8 @@ export function serviceSchema({ name, description, url, price, image }) {
         },
       },
     }),
+    // The span of the price, as a sibling of `offers` (never nested inside it).
+    ...(aggregateOffer && { aggregateOffer }),
   };
 }
 
@@ -355,6 +433,61 @@ export function breadcrumbSchema(items, url = '') {
   };
 }
 
+// ─── CollectionPage + ItemList (an index a machine can read) ────────────────
+// A collection page is the machine-readable shape of an index: the page itself
+// plus the list of the things it holds. Without it, an index page is prose an
+// answer engine has to guess the contents of.
+//
+// Both nodes carry their @type inline, so a crawler that fetches only this
+// document still reads a complete graph (see the rules at the top of the file).
+export function collectionPageSchema({ url, title, description, breadcrumb }) {
+  // `breadcrumb` takes [{ name, url }] items. They are inlined so the node is
+  // self-describing; a dangling @id would not be.
+  const crumb = Array.isArray(breadcrumb)
+    ? {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumb.map((i, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: i.name,
+          item: i.url,
+        })),
+      }
+    : { '@id': `${url}#crumb`, '@type': 'BreadcrumbList' };
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${url}#collection`,
+    name: title,
+    url,
+    description,
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': IDS.website, '@type': 'WebSite' },
+    breadcrumb: crumb,
+  };
+}
+
+// `items` takes [{ name, url }] entries, in the order the page lists them.
+export function itemListSchema({ url, name, items }) {
+  const list = Array.isArray(items) ? items : [];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${url}#itemlist`,
+    name,
+    numberOfItems: list.length,
+    itemListElement: list.map((it, idx) => {
+      const entry = typeof it === 'string' ? { name: it } : it;
+      return {
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: entry.name,
+        ...(entry.url ? { url: entry.url } : {}),
+      };
+    }),
+  };
+}
+
 // ─── WebPage + Speakable (GEO / voice) ──────────────────────────────────────
 export function webpageSchema({ title, description, url, dateModified }) {
   return {
@@ -466,5 +599,125 @@ export const HOW_TO_CONFIGS = {
     description: 'End-to-end handover deep cleaning process for empty flats in Gurgaon.',
     totalTime: 'PT6H',
     estimatedCost: '3000',
+  },
+
+  // ── Added 2026-10-22 — one config per new service page ───────────────────
+  // estimatedCost is omitted for the per-sq-ft services: a single figure would
+  // be meaningless without the area, so the Offer node carries the rate instead.
+  watertank: {
+    name: 'How to Clean a Water Tank in Gurgaon',
+    description: 'Step-by-step overhead and underground water tank cleaning — scrub, descale, disinfect and rinse, with a final water-level check.',
+    totalTime: 'PT1H30M',
+    estimatedCost: '399',
+  },
+  toilettank: {
+    name: 'How to Clean a Toilet Tank',
+    description: 'Step-by-step flush tank cleaning — lid off, mechanism out, interior scrubbed and descaled, then reassembled and flushed.',
+    totalTime: 'PT1H',
+    estimatedCost: '499',
+  },
+  facade: {
+    name: 'How to Clean Window Glass and Facade',
+    description: 'Step-by-step external glass and facade cleaning with a squeegee finish, including frames, tracks and sills.',
+    totalTime: 'PT3H',
+  },
+  commonarea: {
+    name: 'How to Clean a Society Common Area',
+    description: 'Step-by-step common-area cleaning for lobbies, staircases, lift lobbies, parking aprons and clubhouses.',
+    totalTime: 'PT2H',
+    estimatedCost: '499',
+  },
+  sweeper: {
+    name: 'How to Sweep and Mop a Home',
+    description: 'Step-by-step sweep and mop method — dust, HEPA vacuum, multi-surface mop, kitchen and bathroom surface upkeep, bin change.',
+    totalTime: 'PT2H',
+    estimatedCost: '499',
+  },
+  lift: {
+    name: 'How to Clean a Lift Cabin and Landing',
+    description: 'Step-by-step lift cleaning — cabin panels, floor, door tracks, ceiling and the landing lobby.',
+    totalTime: 'PT3H',
+    estimatedCost: '1499',
+  },
+  windowgrill: {
+    name: 'How to Clean a Window Grill',
+    description: 'Step-by-step window grill cleaning — bars scrubbed on both faces, mesh washed, sill and track cleared.',
+    totalTime: 'PT1H',
+    estimatedCost: '399',
+  },
+  utensils: {
+    name: 'How to Clean Kitchen Utensils',
+    description: 'Step-by-step utensil cleaning — scrub, descale, disinfect, dry, then pack back into the same storage.',
+    totalTime: 'PT2H',
+    estimatedCost: '409',
+  },
+  road: {
+    name: 'How to Sweep a Road or Street',
+    description: 'Step-by-step road sweeping — mechanical pass, manual edges, drain-edge clearing and licensed disposal.',
+    totalTime: 'PT4H',
+  },
+  chandelier: {
+    name: 'How to Clean a Chandelier',
+    description: 'Step-by-step chandelier cleaning — piece by piece where safe, dried and re-hung, with access arranged for high units.',
+    totalTime: 'PT4H',
+    estimatedCost: '1499',
+  },
+  washingmachine: {
+    name: 'How to Deep Clean a Washing Machine',
+    description: 'Step-by-step washing machine cleaning — drum, pump filter, door seal, gasket and the detergent drawer.',
+    totalTime: 'PT2H',
+    estimatedCost: '799',
+  },
+  chairclean: {
+    name: 'How to Clean an Office Chair',
+    description: 'Step-by-step chair cleaning — pre-treatment, shampoo extraction, armrests, seams, base and castors.',
+    totalTime: 'PT1H',
+    estimatedCost: '199',
+  },
+  curtain: {
+    name: 'How to Clean Curtains',
+    description: 'Step-by-step curtain cleaning — vacuum, spot treatment, deodorise, and a wet shampoo where the fabric allows.',
+    totalTime: 'PT1H30M',
+    estimatedCost: '499',
+  },
+  basement: {
+    name: 'How to Clean an Unfinished Basement',
+    description: 'Step-by-step basement and godown cleaning — debris, HEPA fine dust, cobwebs, corners and floor mop.',
+    totalTime: 'PT6H',
+  },
+  instantclean: {
+    name: 'How to Do a Same-Day Deep Clean',
+    description: 'Step-by-step same-day cleaning method — a fixed scope, a two to four person crew, and a walkthrough before handover.',
+    totalTime: 'PT4H',
+    estimatedCost: '999',
+  },
+  balconyclean: {
+    name: 'How to Clean a Balcony',
+    description: 'Step-by-step balcony cleaning — pressure wash, joint scrub, drain flush, glass panels and railing.',
+    totalTime: 'PT1H',
+    estimatedCost: '399',
+  },
+  sqftrate: {
+    name: 'How to Price a Deep Clean by Area',
+    description: 'How a deep clean is priced per square foot in Gurgaon, and how it maps to the fixed BHK card.',
+    totalTime: 'PT8H',
+  },
+  kitchenplatform: {
+    name: 'How to Deep Clean a Kitchen Platform',
+    description: 'Step-by-step kitchen platform cleaning — platform, edges, backsplash joints, sink base and cabinet interiors.',
+    totalTime: 'PT3H',
+    estimatedCost: '999',
+  },
+  postconstruction: {
+    name: 'How to Clean After Construction',
+    description: 'The three-phase post-construction method — rough debris, then high surfaces, then the final HEPA fine-dust pass.',
+    totalTime: 'PT8H',
+    estimatedCost: '2499',
+  },
+  roomclean: {
+    name: 'How to Clean a Single Room',
+    description: 'Step-by-step single-room cleaning — dust, HEPA vacuum, mop, skirting, window glass and tracks.',
+    totalTime: 'PT1H30M',
+    estimatedCost: '299',
   },
 };

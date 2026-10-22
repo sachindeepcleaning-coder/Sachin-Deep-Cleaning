@@ -110,9 +110,12 @@ echo "gh-pages:$(git rev-parse --short origin/gh-pages)"
 | `src/lib/article-routes.jsx` | Per-article route map (`import.meta.glob`) — each guide gets its own JS chunk |
 | `src/pages/*.jsx` | Page components (ServicePage, ResidentialPage, PartnersPage, BookingPage, ContactPage, ...) |
 | `src/components/*.jsx` | Nav, Footer, Hero, QuoteForm, FaqSection, MapEmbed, ReviewsSection, ReelEmbed, ... |
-| `src/lib/services.js` | Service data (name, tagline, includes, process, faqs, price) |
+| `src/lib/service-catalog/<key>.js` | One module per new service page (name, tagline, intro, detail, includes, process, faqs, reviews, price) — merged into `services.js` |
+| `src/lib/services.js` | Service data (name, tagline, includes, process, faqs, price) — 29 services |
 | `src/lib/site.js` | Phone, WhatsApp, social links, URLs |
-| `src/lib/schema.jsx` | JSON-LD builders + the entity graph (WebSite / LocalBusiness / Organization / Person / WebPage / BlogPosting / Service / HowTo / FAQPage / BreadcrumbList) |
+| `src/lib/schema.jsx` | JSON-LD builders + the entity graph (WebSite / LocalBusiness / Organization / Person / WebPage / BlogPosting / Service / HowTo / FAQPage / BreadcrumbList / CollectionPage / ItemList / AggregateOffer) |
+| `src/lib/money-page-qa.js` | The AEO money blocks for every service page: price table, 7–8 question-form answers with a direct answer, and the "what changes the price" list |
+| `src/lib/claims.js` | Public claims register — every checkable claim with its proof and verification state |
 | `scripts/submit-indexing.cjs` | Google Indexing API submitter (sitemap → skip submitted → publish; `--test`, `--limit N`, `--reset`, `--url <u>`) |
 | `indexing-progress.json` | Submitted/failed URL state for the submitter (commit after each run) |
 | `src/styles/global.css` | Global styles / design tokens |
@@ -144,22 +147,27 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 
 ## 📊 Site State (2026-10-22)
 
-- **108 entry shells** (`npm run gen`) → **107 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
-- **Sitemap:** 104 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
+- **129 entry shells** (`npm run gen`) → **128 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
+- **Sitemap:** 125 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
 - **Blog:** 85 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
+- **Service pages:** 29 services (33 URLs with the BHK variants) — every one with a price table, 7–8 question-form answers and a HowTo node
+- **Schema:** LocalBusiness on 38 pages · WebPage 119 · FAQPage 123 · HowTo 33 · Service 39 · BreadcrumbList 122 · CollectionPage + ItemList on `blog.html` · AggregateOffer on 35 · SpeakableSpecification on 119
 - **Performance:** per-article chunks (a guide page ships ~12 KB of copy, not the whole 85-guide library) · `modulepreload` on every page · largest single chunk is the 170 KB entry
 - **Content gate:** `content-lint` passes with **0 warnings**, including `--strict`
 - **Hydration rule:** SSR output must equal first client render — never mutate another component's DOM; keep effects out of render output.
 
 ## 📝 Content System (how pages get built)
 
-- **Service pages** are data-driven: `src/lib/services.js` keyed by `serviceKey` (`deep/house/kitchen/bathroom/sofa/carpet/office/move/fullhome` + `bhk` 1–5), rendered by `ServicePage.jsx` with LocalBusiness + Service + HowTo + FAQ + Breadcrumb + WebPage JSON-LD, pricing tables, before/after sliders (deep/fullhome), related guides + services. The included-scope list and the process steps render as real `<ul>`/`<ol>` so AI extractors can parse them, and the same steps feed the `HowTo` node 1:1.
+- **Service pages** are data-driven: `src/lib/services.js` keyed by `serviceKey` — **29 services** (deep, house, kitchen, bathroom, sofa, carpet, office, move, fullhome ×1–5 BHK, plus watertank, toilettank, facade, commonarea, sweeper, lift, windowgrill, utensils, road, chandelier, washingmachine, chairclean, curtain, basement, instantclean, balconyclean, sqftrate, kitchenplatform, postconstruction, roomclean). Rendered by `ServicePage.jsx` with LocalBusiness + Service (+ AggregateOffer) + HowTo + FAQ + Breadcrumb + WebPage JSON-LD.
+- **Every service page opens with the money blocks** from `src/lib/money-page-qa.js`: the price table high on the page, then 7–8 **question-form H2s with a 40–60 word direct answer** (one of them Hinglish), then the "what changes the price" list. This is the format the top-ranking competitors use, and the thing that turns an impression into a click.
+- The included-scope list and the process steps render as real `<ul>`/`<ol>` so AI extractors can parse them, and the same steps feed the `HowTo` node 1:1.
 - **Blog articles** live in `src/lib/blog.js` (`ARTICLES[]`: slug/file/title/description/dates/image/lead/faqs/cta/blocks). Block types: `p, lead, h2, h3, table{head,rows}, ul, ol, tip`; `**bold**` inline supported. Rendered by `BlogArticlePage.jsx` with Article + FAQ + Breadcrumb + WebPage JSON-LD. Every article also renders a **Key takeaways** box (derived from the guide's own copy by `gen-article-modules.mjs`) — the labelled summary an answer engine lifts.
 - **`src/lib/blog.js` is never bundled.** `gen-article-modules.mjs` projects it into one module per guide; `src/lib/article-routes.jsx` maps each guide to its own chunk.
 - **Custom pages** (`index/residential/partners/landing/about/blog/allpages/contact/thank-you/404`) are hand-built components with own schema; new page types need an `app.jsx` lazy mapping + `pages.config.mjs` entry (see `BookingPage.jsx` + `page:'landing'` precedent).
 - **Content bars (enforced):** titles <60 chars, descriptions 120–160, exactly 1 H1, every page ≥1,500 prerendered words, primary keyword in title/H1/lead + body multiples, Hinglish FAQ on local-intent pages, CTA → money page, `since 2015` business history (never 2024), prices from the live rate card only.
 - **Comparison pages** (Mr/UC/NoBroker/Safaiwale/Best-office): verifiable public facts only, “Not publicly listed” where unknown, affiliation disclosed in lead + tip, figures dated (Sep 2026).
 - **Internal linking:** `RelatedGuides.jsx` (serviceKey → guides), `RelatedServices.jsx` (service mesh), blog CTA footer (3 money links), footer keyword links, `llms.txt` mirror for AI discovery.
+- **`/facts.html`** is the citable page: the verifiable facts as machine-quotable statements (price card, inclusions, exclusions, service area, hours, address, phone, rating + as-of, Maps link, social profiles, process, payment terms). `llms.txt` carries the same facts block and points at `llms-full.txt`.
 
 ## 🔍 SEO Operations
 
@@ -167,7 +175,7 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 - **Audit log:** `SEO-AUDIT.md` (dated sections per change).
 - **Backlinks:** `BACKLINKS.md` (NAP block, copy kit, tiered targets). Rule: never buy/automate links.
 - **Indexing discipline:** `scripts/submit-indexing.cjs` ONLY for newly written or materially changed URLs (`--url …`); never mass `--reset` except after site-wide rebuilds (200/day project quota, shared with old-domain cron).
-- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, FAQ schema parity, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts in the initial HTML.
+- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — 19 checks. Same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, every FAQPage question visible on the page, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts, no second brand name or retired phone/plus code, one identical business identity site-wide, no leftover fake-urgency or unbacked-claim strings, every service page has the price table + 6+ question-form answers whose commercial answers lead with a figure, and the GEO surfaces (`facts.html`, `blog.html` CollectionPage/ItemList, the llms.txt facts block) are all wired.
 - **Docs policy:** `.md` files are local-only (`*.md` gitignored) except `README.md`, which stays on GitHub. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
 
 ## 📞 Business Details

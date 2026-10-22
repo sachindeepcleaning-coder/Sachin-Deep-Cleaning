@@ -17,6 +17,8 @@ import UpdatedNote from '../components/UpdatedNote.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
+import { MONEY_QA } from '../lib/money-page-qa.js';
+import { PRICE_RANGES } from '../lib/service-prices.js';
 import { pageUrl, CONTENT_UPDATED, SITE_URL } from '../lib/site.js';
 
 // Renders inline **bold** markdown and [anchor](/path.html) links in service copy.
@@ -34,6 +36,16 @@ function Rich({ text }) {
   });
 }
 
+// Slug for heading anchors so each answer is individually linkable and
+// quotable by an answer engine.
+function slugId(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+    .slice(0, 60);
+}
+
 // Strips inline markdown so structured-data descriptions stay plain text.
 function plain(text) {
   return String(text).replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '');
@@ -41,6 +53,10 @@ function plain(text) {
 
 export default function ServicePage({ serviceKey, bhk, url = '' }) {
   const s = getService(serviceKey, bhk);
+  // The AEO blocks: a price table high on the page, question-form answers with
+  // direct answers, and what changes the price. Guarded so a service without
+  // an entry still renders.
+  const money = MONEY_QA[serviceKey] || null;
   // 2026-09-20 audit: vary the shared trust blocks per service group so the
   // 13 service pages don't render byte-identical WhyUs/Guarantee/TrustBar.
   const trustVariant = trustVariantFor(serviceKey);
@@ -54,7 +70,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
   return (
     <>
       <JsonLd data={localBusinessSchema()} />
-      <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image })} />
+      <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image, priceRange: PRICE_RANGES[serviceKey] })} />
       <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url, dateModified: CONTENT_UPDATED })} />
       <JsonLd data={faqSchema(s.faqs, url)} />
       {/* HowTo: the visible "How It Works" steps are the machine-readable
@@ -130,6 +146,31 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
 
       <TrustBar variant={trustVariant} />
       <UpdatedNote />
+
+      {/* Price table first — every competitor that wins this SERP opens with
+          the rate card, and it is the first thing an answer engine quotes. */}
+      {money && money.priceTable && (
+        <section className="section section-alt money-price">
+          <div className="section-inner">
+            <h2 className="section-title">{money.priceTable.title}</h2>
+            {money.priceTable.note && (
+              <p className="section-sub" style={{ margin: '0 auto 24px' }}>{money.priceTable.note}</p>
+            )}
+            <div className="blog-table-wrap">
+              <table className="blog-table">
+                <thead>
+                  <tr>{money.priceTable.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr>
+                </thead>
+                <tbody>
+                  {money.priceTable.rows.map((r, ri) => (
+                    <tr key={ri}>{r.map((c, ci) => <td key={ci}>{c}</td>)}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Competitor-inspired: 8-service grid on deep page — improves topical clustering & internal linking */}
       {serviceKey === 'deep' && (
@@ -379,6 +420,30 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
       {serviceKey === 'office' ? <OfficeReelSection /> : <ReelSection />}
 
       <GuaranteeSection variant={guaranteeVariant} />
+
+      {/* Question-form answers with a direct answer under each. These are the
+          passages an answer engine lifts — the FAQ accordion stays below for
+          the full set and the FAQPage schema. */}
+      {money && money.qa && money.qa.length > 0 && (
+        <section className="section money-qa">
+          <div className="section-inner">
+            {money.qa.map((item) => (
+              <div key={item.q} className="money-qa-item">
+                <h2 className="section-title" id={slugId(item.q)}>{item.q}</h2>
+                <p className="money-qa-a">{item.a}</p>
+              </div>
+            ))}
+            {money.factors && (
+              <div className="money-factors">
+                <h2 className="section-title">{money.factors.title}</h2>
+                <ul className="blog-ul">
+                  {money.factors.items.map((it) => <li key={it}>{it}</li>)}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="section-inner">

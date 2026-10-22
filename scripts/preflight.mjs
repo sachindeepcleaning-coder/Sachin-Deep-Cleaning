@@ -124,13 +124,27 @@ for (const file of htmlFiles) {
   const h1s = (html.match(/<h1[\s>]/g) || []).length;
   if (h1s !== 1) fail(`${name}: ${h1s} <h1> elements (expected exactly 1)`);
 
-  // 7 — FAQ schema matches the visible accordion
-  const visible = (html.match(/class="faq-q"/g) || []).length;
+  // 7 — every FAQPage question is actually visible on the page.
+  //
+  // A question counts as visible if its text appears in the rendered HTML —
+  // either inside the accordion button or as a heading+answer block. Counting
+  // the accordion class alone breaks on pages that render Q&A as headings
+  // (the facts page), so this checks the text, not the markup.
   const schemaQs = blocks
     .filter((b) => b['@type'] === 'FAQPage')
-    .reduce((n, b) => n + (b.mainEntity ? b.mainEntity.length : 0), 0);
-  if (visible !== schemaQs) {
-    fail(`${name}: ${visible} visible FAQ(s) but ${schemaQs} FAQPage question(s)`);
+    .flatMap((b) => b.mainEntity || []);
+  const text = html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&#x27;|&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, ' ');
+  const missingQs = schemaQs
+    .map((q) => String(q.name || '').replace(/\s+/g, ' ').trim())
+    .filter((q) => q && !text.includes(q));
+  if (missingQs.length) {
+    fail(`${name}: ${missingQs.length} FAQPage question(s) not visible on the page — "${missingQs[0].slice(0, 70)}"`);
   }
 
   // 8 — service pages carry HowTo
@@ -315,6 +329,111 @@ for (const file of htmlFiles) {
       if (m) {
         const line = html.slice(0, m.index).split('\n').length;
         fail(`${name}:${line} — ${why} ("${m[0]}")`);
+      }
+    }
+  }
+}
+
+// 18 — every service page carries the AEO money blocks.
+//
+// The money page is the commercial surface: a price table high on the page,
+// question-form H2s with a direct answer, and a "what changes the price" list.
+// A service page missing any of the three is a page that cannot win the
+// format war on this SERP, so it fails the build.
+{
+  const { MONEY_QA } = await import('../src/lib/money-page-qa.js');
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    const m = html.match(/data-page="service"/);
+    if (!m) continue;
+    const key = (html.match(/data-service="([^"]+)"/) || [])[1];
+    if (!key) continue;
+    const block = MONEY_QA[key];
+    if (!block) {
+      fail(`${name}: no MONEY_QA entry for service "${key}" — the AEO price table and answers are missing`);
+      continue;
+    }
+    if (!html.includes('money-price')) {
+      fail(`${name}: service page without the price table block`);
+    }
+    const h2s = [...html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gs)].map((m2) =>
+      m2[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim()
+    );
+    const questionH2s = h2s.filter((x) => x.endsWith('?'));
+    if (questionH2s.length < 6) {
+      fail(`${name}: only ${questionH2s.length} question-form H2 answer block(s) (need 6+)`);
+    }
+    // Pair each question with its answer so a commercial question can be
+    // checked on its own.
+    // Split on the block marker rather than matching balanced markup — the
+    // blocks are flat (h2 + p), so the next marker is the block boundary.
+    const items = html.split('<div class="money-qa-item">').slice(1);
+    const pairs = items.map((block) => {
+      const q = ((block.match(/<h2[^>]*>(.*?)<\/h2>/s) || [])[1] || '').replace(/<[^>]+>/g, '').trim();
+      const a = ((block.match(/class="money-qa-a"[^>]*>(.*?)<\/p>/s) || [])[1] || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      return { q, a };
+    }).filter((x) => x.q && x.a);
+    if (pairs.length < 6) {
+      fail(`${name}: only ${pairs.length} question/answer block(s) (need 6+)`);
+    }
+    // A COMMERCIAL question — price, cost, rate, duration, how long, how
+    // often — must be answered with a figure in the opening sentence.
+    // "It depends on the home" is not an answer an engine can quote, and a
+    // commercial question without a number is why a page gets impressions and
+    // no clicks.
+    const commercial = /^(how much|how (?:long|often|many)|when |what (?:is|does|are|it costs).*(?:cost|price|charge|rate|amount)|what is the (?:cost|price|charge|rate))/i;
+    const weak = pairs.filter(({ q, a }) => {
+      if (!commercial.test(q)) return false;
+      const first = a.split(/(?<=[.?])\s/).slice(0, 2).join(' ');
+      return !/(₹\s?\d|\d+\s*(?:hrs?|hours?|mins?|minutes?|months?|weeks?|years?|days?|pm|am|sq\s*ft|litres?|BHK|seats?|tanks?|panels?|chambers?|floors?|people|cleaners|per\b)|\b(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|quarterly|monthly|weekly|daily|annually)\b)/i.test(first);
+    });
+    if (weak.length) {
+      fail(`${name}: ${weak.length} commercial answer(s) do not lead with a figure — "${weak[0].q.slice(0, 55)}" → "${weak[0].a.slice(0, 55)}"`);
+    }
+  }
+}
+
+// 19 — the GEO surfaces exist and are wired
+{
+  const { MONEY_QA } = await import('../src/lib/money-page-qa.js');
+  const serviceKeys = Object.keys(MONEY_QA);
+
+  // blog.html must expose the corpus as an ItemList inside a CollectionPage.
+  const blogHtml = readFileSync(resolve(distDir, 'blog.html'), 'utf8');
+  const blogTypes = new Set();
+  for (const m of blogHtml.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)) {
+    const d = JSON.parse(m[1]);
+    const t = d['@type'];
+    (Array.isArray(t) ? t : [t]).forEach((x) => blogTypes.add(x));
+  }
+  if (!blogTypes.has('CollectionPage')) fail('blog.html: no CollectionPage schema — AI engines cannot parse the corpus');
+  if (!blogTypes.has('ItemList')) fail('blog.html: no ItemList schema');
+  const n = (blogHtml.match(/"numberOfItems":(\d+)/) || [])[1];
+  if (n && Number(n) < 50) fail(`blog.html: ItemList numberOfItems is ${n} (expected the full corpus)`);
+
+  // The facts page must exist, be in the sitemap and be linked from llms.txt.
+  if (!existsSync(resolve(distDir, 'facts.html'))) fail('facts.html: the citable facts page is missing');
+  const sm = readFileSync(resolve(distDir, 'sitemap.xml'), 'utf8');
+  if (!sm.includes('/facts.html')) fail('sitemap.xml: facts.html is not listed');
+  const llms = readFileSync(resolve(distDir, 'llms.txt'), 'utf8');
+  if (!llms.includes('/facts.html')) fail('llms.txt: facts.html is not listed');
+  if (!llms.includes('llms-full.txt')) fail('llms.txt: no pointer to llms-full.txt');
+  if (!/Google rating:/.test(llms)) fail('llms.txt: no facts block');
+
+  // Every service in the money-page registry must have a real page. The
+  // mapping comes from pages.config.mjs, because the original 9 services
+  // have descriptive file names while the new ones are named after the key.
+  const { pages: pageCfg } = await import('../pages.config.mjs');
+  for (const key of serviceKeys) {
+    const files = pageCfg.filter((pg) => pg.page === 'service' && pg.serviceKey === key);
+    if (!files.length) {
+      fail(`service "${key}": has a MONEY_QA entry but no page in pages.config.mjs`);
+      continue;
+    }
+    for (const pg of files) {
+      if (!existsSync(resolve(distDir, `${pg.file}.html`))) {
+        fail(`${pg.file}.html: service page missing for MONEY_QA entry "${key}"`);
       }
     }
   }

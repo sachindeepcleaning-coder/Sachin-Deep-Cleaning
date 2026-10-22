@@ -1,6 +1,10 @@
 import { ARTICLE_INDEX } from '../generated/article-index.js';
-import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
+import {
+  JsonLd, breadcrumbSchema, collectionPageSchema, itemListSchema, serviceSchema,
+  DEEP_PRICE_RANGE,
+} from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
+import { SERVICE_PRICES } from '../lib/service-prices.js';
 import TrustBar from '../components/TrustBar.jsx';
 
 const FEATURED_FILES = [
@@ -18,14 +22,53 @@ const FEATURED_FILES = [
   'blog/full-home-deep-cleaning-gurgaon-guide',
 ];
 
+// The title and description of the collection the index holds.
+const COLLECTION_TITLE = 'Deep Cleaning Blog & Guides — Sachin Deep Cleaning';
+const COLLECTION_DESCRIPTION =
+  'Deep cleaning guides for Gurgaon homes: costs by BHK, cleaning frequency, kitchen chimney care, hard water removal, sofa and carpet maintenance, and move-in / move-out checklists.';
+
+// The ItemList order matches the order the page renders: the 12 featured
+// guides first, then the rest of the collection in index order. Every guide is
+// listed once, even though the featured grid is repeated in the full grid.
+const FEATURED = FEATURED_FILES.map((f) => ARTICLE_INDEX.find((a) => a.file === f)).filter(Boolean);
+const REST = ARTICLE_INDEX.filter((a) => !FEATURED_FILES.includes(a.file));
+const LISTED = [...FEATURED, ...REST];
+
 export default function BlogIndexPage({ url }) {
+  const breadcrumb = [
+    { name: 'Home', url: pageUrl('index') },
+    { name: 'Blog', url },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema(breadcrumb)} />
       <JsonLd
-        data={breadcrumbSchema([
-          { name: 'Home', url: pageUrl('index') },
-          { name: 'Blog', url },
-        ])}
+        data={collectionPageSchema({
+          url,
+          title: COLLECTION_TITLE,
+          description: COLLECTION_DESCRIPTION,
+          breadcrumb,
+        })}
+      />
+      <JsonLd
+        data={itemListSchema({
+          url,
+          name: 'Deep cleaning guides for Gurgaon homes',
+          items: LISTED.map((a) => ({ name: a.title, url: pageUrl(a.file) })),
+        })}
+      />
+      {/* The subject of the collection, with the price span the guides quote.
+          The node carries the service page's own @id and url, so it is the
+          same entity described here — not a second one. */}
+      <JsonLd
+        data={serviceSchema({
+          name: 'Deep Cleaning Services in Gurgaon',
+          description: `The service every guide in this collection covers: home deep cleaning in Gurgaon priced by home size, from ${SERVICE_PRICES.deep.amount} for a 1 RK or studio.`,
+          url: pageUrl('deep-cleaning-services-in-gurgaon'),
+          price: SERVICE_PRICES.deep,
+          priceRange: DEEP_PRICE_RANGE,
+        })}
       />
 
       <section className="blog-hero">
