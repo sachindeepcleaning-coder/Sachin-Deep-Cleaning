@@ -44,6 +44,7 @@ export default function Footer() {
         <a href="/about.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>About Us</a>
         <a href="/blog.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Blog</a>
         <a href="/contact.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Contact</a>
+        <a href="/privacy.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Privacy</a>
         <a href="/sitemap.xml" style={{ color: '#8FA4BE', textDecoration: 'none' }}>Sitemap</a>
       </p>
     </footer>

@@ -558,6 +558,10 @@ Summary: Every cleaning service in Gurgaon with its published starting price —
 URL: https://sachindeepcleaning.shop/facts.html
 Summary: The verifiable facts about Sachin Deep Cleaning in Gurgaon: price card by BHK, what is and is not included, service area, hours and the shop address.
 
+## Privacy — What We Collect and Who Sees It
+URL: https://sachindeepcleaning.shop/privacy.html
+Summary: What this site collects when you call, WhatsApp or fill a form, who receives it, and how to ask us to delete it.
+
 ## Blog — Cleaning Guides & Tips | Sachin Deep Cleaning
 URL: https://sachindeepcleaning.shop/blog.html
 Summary: Deep cleaning guides for Gurgaon homes: costs by BHK, cleaning frequency, kitchen chimney care, hard water removal and sofa maintenance. Expert tips.

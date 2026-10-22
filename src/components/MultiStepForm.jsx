@@ -161,6 +161,11 @@ export default function MultiStepForm() {
             {status === 'sending' ? 'Sending…' : 'Submit'}
           </button>
         )}
+      <p className="form-consent" style={{ fontSize: '.78rem', color: 'var(--muted)', margin: '10px 0 0' }}>
+        By sending this form you agree that we may use your number and message to quote and call you about this
+        job. See the <a href="/privacy.html" style={{ color: 'var(--primary)', fontWeight: 600 }}>privacy page</a>.
+      </p>
+
       </div>
       {error && (
         <p className="form-error">

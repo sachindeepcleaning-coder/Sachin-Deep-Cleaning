@@ -22,6 +22,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage.jsx'));
 const BlogIndexPage = lazy(() => import('./pages/BlogIndexPage.jsx'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage.jsx'));
 
 // Shared app tree used by BOTH the browser entry (src/bootstrap.jsx) and the
 // prerender script (src/prerender-entry.jsx). Keeping this in one place means
@@ -39,6 +40,7 @@ export default function App({ page = 'index', file = 'index', serviceKey, bhk })
   else if (page === 'services') Page = ServicesHubPage;
   else if (page === 'about') Page = AboutPage;
   else if (page === 'blog') Page = BlogIndexPage;
+  else if (page === 'privacy') Page = PrivacyPage;
   else if (page === 'article') {
     // Per-article chunk: the guide's own copy is fetched on its own, so a
     // blog page no longer downloads the whole 85-article collection.

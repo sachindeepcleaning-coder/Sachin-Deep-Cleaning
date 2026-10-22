@@ -229,6 +229,11 @@ export const pages = [
     description: 'The verifiable facts about Sachin Deep Cleaning in Gurgaon: price card by BHK, what is and is not included, service area, hours and the shop address.',
   },
   {
+    file: 'privacy', page: 'privacy',
+    title: 'Privacy — What We Collect and Who Sees It',
+    description: 'What this site collects when you call, WhatsApp or fill a form, who receives it, and how to ask us to delete it.',
+  },
+  {
     file: 'all-pages', page: 'allpages',
     title: 'All Services — Sachin Deep Cleaning Gurgaon',
     description: 'Browse all deep cleaning services in Gurgaon: full home, kitchen, bathroom, sofa, carpet, office and move-in/out cleaning by Sachin Deep Cleaning.',

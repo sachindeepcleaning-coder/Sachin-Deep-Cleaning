@@ -9,7 +9,7 @@ export default function ThankYouPage() {
         <div className="hero-eyebrow" style={{ margin: '0 auto 18px' }}>Request Received</div>
         <h1>Thank You, <span className="hl">We’ll Call You Back!</span></h1>
         <p className="hero-sub">
-          We’ve received your request and a member of our team will call you within <strong>5 minutes</strong> to confirm your booking. For an even faster reply, chat with us on WhatsApp.
+          We’ve received your request and a member of our team will call you within <strong>5 minutes during working hours</strong> to confirm your booking. For an even faster reply, chat with us on WhatsApp.
         </p>
         <div className="final-cta-btns" style={{ justifyContent: 'center' }}>
           <a href={waMsg('Hi, I just submitted a quote. Please share pricing.')} target="_blank" rel="noopener" className="fcta-wa" onClick={whatsappClick}>

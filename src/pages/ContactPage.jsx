@@ -54,7 +54,7 @@ export default function ContactPage({ url }) {
               Leave your details and we’ll call you back with a fixed price for your sector and home size. Or reach us directly on WhatsApp for a direct reply from our work manager, who confirms your slot and <a href="/blog/deep-cleaning-cost-gurgaon-2026.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>locks your fixed price</a> in the same chat.
             </p>
             <div className="hero-pills">
-              <span className="pill"><span className="pi">✓</span> 5-Min Callback</span>
+              <span className="pill"><span className="pi">✓</span> 5-Min Callback (working hours)</span>
               <span className="pill"><span className="pi">✓</span> Free Estimate</span>
               <span className="pill"><span className="pi">✓</span> No Advance Pay</span>
             </div>
@@ -82,7 +82,7 @@ export default function ContactPage({ url }) {
           </div>
           <div className="hiw-wrap" style={{ marginTop: '36px' }}>
             {[
-              ['0–3 min: human callback', 'Our work manager — not a bot — calls back, usually within 3 minutes in working hours (8 AM–8 PM). After hours, first thing next morning.'],
+              ['0–5 min: human callback', 'Our work manager — not a bot — calls back, usually within 5 minutes during working hours (8 AM–8 PM). After hours, first thing next morning.'],
               ['3–10 min: scope + fixed price', 'BHK, bathrooms, kitchen type and add-ons itemised on the call. One locked figure — 1 BHK from ₹2,500, 2 BHK from ₹4,500, 3 BHK from ₹5,500.'],
               ['10–30 min: slot locked', 'Nearest zone roster checked — DLF, Golf Course, Sohna, West or Central. Same-day when you message before noon; society gate formalities started early.'],
               ['On the day: equipped arrival', 'Police-verified team with machines, descalers and eco-friendly products. Team lead number shared with you before arrival.'],
