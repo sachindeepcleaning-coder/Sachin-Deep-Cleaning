@@ -497,6 +497,12 @@ export function getService(serviceKey, bhk) {
       5: [['AS5', 'Aman Singh', 'Emaar Emerald Hills, 5 BHK', '5 BHK luxury villa — premium detailing, 5 cleaners, worth ₹9,000.'], ['PK5', 'Pooja Khanna', 'DLF Magnolias, 5 BHK', '5 BHK penthouse, 10–12 hours — every wardrobe and balcony spotless, owner present.'], ['VS5', 'Vikram Seth', 'Manesar, 5 BHK Villa', '5 BHK 3000 sq ft villa — team came with extra machines, flawless.']],
     };
     if (bhkReviews[bhk]) out.reviews = bhkReviews[bhk];
+    // Each BHK page answers its own duration question — never a sibling's.
+    // The shared "How long for a 2 BHK?" answer is dropped here; the page's
+    // own duration answer comes from the money-page block (BHK_QA).
+    out.faqs = (out.faqs || []).filter(
+      (f) => f.q !== 'How long for a 2 BHK?' && !/^How long does a \d BHK deep clean/.test(f.q)
+    );
     // A page with fewer than two real quotes shows none: a customer is never
     // reused across page types to pad a page.
     if (!out.reviews || out.reviews.length < 2) out.reviews = [];

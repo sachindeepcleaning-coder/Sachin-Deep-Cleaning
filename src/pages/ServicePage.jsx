@@ -18,7 +18,7 @@ import UpdatedNote from '../components/UpdatedNote.jsx';
 import { trustVariantFor, guaranteeVariantFor } from '../lib/trust-variants.js';
 import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
-import { MONEY_QA } from '../lib/money-page-qa.js';
+import { MONEY_QA, BHK_QA } from '../lib/money-page-qa.js';
 import { PRICE_RANGES } from '../lib/service-prices.js';
 import { pageUrl, CONTENT_UPDATED, SITE_URL } from '../lib/site.js';
 
@@ -57,7 +57,21 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
   // The AEO blocks: a price table high on the page, question-form answers with
   // direct answers, and what changes the price. Guarded so a service without
   // an entry still renders.
-  const money = MONEY_QA[serviceKey] || null;
+  const moneyBase = MONEY_QA[serviceKey] || null;
+  // Each BHK page must answer its own cost and duration question. The shared
+  // fullhome answers are placeholders for one size; they are swapped for the
+  // page's own BHK before anything is rendered.
+  const money = (() => {
+    if (!moneyBase || !bhk || serviceKey !== 'fullhome' || !BHK_QA[bhk]) return moneyBase;
+    return {
+      ...moneyBase,
+      qa: moneyBase.qa.map((item) => {
+        if (item.key === 'bhkCost') return BHK_QA[bhk].cost;
+        if (item.key === 'bhkTime') return BHK_QA[bhk].time;
+        return item;
+      }),
+    };
+  })();
   // The FAQPage schema must cover every question the page actually shows.
   // The money-page answers (7-8 direct-answer blocks) are the most quotable
   // passages on the page, so they belong in the schema alongside the

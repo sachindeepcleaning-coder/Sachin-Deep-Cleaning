@@ -519,12 +519,14 @@ export const MONEY_QA = {
     },
     qa: [
       {
+        key: 'bhkCost',
         q: 'How much does full home deep cleaning cost for a 2 BHK in Gurgaon?',
         a: 'A 2 BHK full home deep clean in Gurgaon costs ₹4,500 for a non-furnished flat, covering 601–1,000 sq ft over 7–8 hours with three cleaners. Furnished 2 BHKs with a sofa, dining table and extra wardrobes run ₹5,000–₹5,500. The price includes machines, products, travel and the final walkthrough.',
       },
       {
+        key: 'bhkTime',
         q: 'How long does a 3 BHK full home deep clean take?',
-        a: 'Nine to ten hours, with four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
+        a: 'Nine to ten hours, with three to four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
       },
       {
         q: 'Which BHK deep cleaning package should I book for my flat?',
@@ -1277,6 +1279,64 @@ export const MONEY_QA = {
         'Furniture — light items are moved and reset, heavy items are not',
         'Add-ons — a stain, an odour or a stain-specific treatment is quoted separately',
       ],
+    },
+  },
+};
+
+
+// ─── Per-BHK answers ────────────────────────────────────────────────────────
+// The cost and the duration questions are page-specific: the 1 BHK page must
+// not carry a "2 BHK" question. ServicePage swaps these two answers in when a
+// BHK is set, so every one of the five BHK pages answers its own question.
+export const BHK_QA = {
+  1: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 1 BHK in Gurgaon?',
+      a: 'A 1 BHK full home deep clean in Gurgaon costs ₹2,500 for a non-furnished flat, covering 400–600 sq ft over 5–6 hours with two cleaners. A furnished 1 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 1 BHK full home deep clean take?',
+      a: 'Five to six hours, with two cleaners on site. That is enough time for the bedroom and its wardrobes, one bathroom fully descaled, a modular kitchen with the chimney filter dismantled and soaked, the living area and the balcony floors. A furnished 1 BHK adds an hour for sofa and wardrobe detailing.',
+    },
+  },
+  2: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 2 BHK in Gurgaon?',
+      a: 'A 2 BHK full home deep clean in Gurgaon costs ₹4,500 for a non-furnished flat, covering 601–1,000 sq ft over 7–8 hours with three cleaners. Furnished 2 BHKs with a sofa, dining table and extra wardrobes run ₹5,000–₹5,500. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 2 BHK full home deep clean take?',
+      a: 'Seven to eight hours, with three cleaners on site. That is enough time for both bedrooms and their wardrobes, two bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, the living area and the balcony floors. A furnished 2 BHK adds an hour for sofa and wardrobe detailing.',
+    },
+  },
+  3: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 3 BHK in Gurgaon?',
+      a: 'A 3 BHK full home deep clean in Gurgaon costs ₹5,500 for a non-furnished flat, covering 1,001–1,500 sq ft over 9–10 hours with three to four cleaners. A furnished 3 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 3 BHK full home deep clean take?',
+      a: 'Nine to ten hours, with three to four cleaners on site. That is enough time for three bedrooms and their wardrobes, two or three bathrooms fully descaled, a modular kitchen with the chimney filter dismantled and soaked, AC vent covers opened and dusted, and every ceiling fan wiped blade by blade. A furnished 3 BHK adds one to two hours.',
+    },
+  },
+  4: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 4 BHK in Gurgaon?',
+      a: 'A 4 BHK full home deep clean in Gurgaon costs ₹6,500 for a non-furnished flat, covering 1,501–2,100 sq ft over 8–10 hours with four to five cleaners. A furnished 4 BHK adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 4 BHK full home deep clean take?',
+      a: 'Eight to ten hours, with four to five cleaners on site — a full working day for four bedrooms and their wardrobes, three or four bathrooms fully descaled, the terrace and the balconies. Marble-safe products are used on the floors.',
+    },
+  },
+  5: {
+    cost: {
+      q: 'How much does full home deep cleaning cost for a 5 BHK or villa in Gurgaon?',
+      a: 'A 5 BHK or villa deep clean in Gurgaon costs ₹9,000 for a non-furnished home, covering 2,500–3,000 sq ft over 10–12 hours with five cleaners. A furnished villa adds ₹500–₹1,500 for the sofa, dining units and extra wardrobes. The price includes machines, products, travel and the final walkthrough.',
+    },
+    time: {
+      q: 'How long does a 5 BHK or villa deep clean take?',
+      a: 'Ten to twelve hours, with five cleaners on site — one full working day for five bedrooms, four or more bathrooms fully descaled, the terrace and the balconies, with finish-specific products on the floors.',
     },
   },
 };
