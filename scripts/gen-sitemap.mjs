@@ -19,6 +19,8 @@ const excluded = new Set(['thank-you', '404']);
 
 const PRIORITY = {
   index: '1.0',
+  services: '0.9',
+  facts: '0.8',
   residential: '0.9',
   service: '0.8',
   contact: '0.6',
@@ -36,6 +38,9 @@ const entries = pages
   .filter((p) => !excluded.has(p.file) && p.file !== '404' && !p.redirectTo && !p.noindex)
   .map((p) => {
     const loc = p.file === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${p.file}.html`;
+    // Every service page is a money page. The 20 added 2026-10-22 target
+    // queries the site already ranks 1-8 for, so they carry a service-level
+    // priority rather than the default.
     const priority = p.page === 'service' ? (p.serviceKey === 'deep' ? '0.9' : '0.8') : PRIORITY[p.page] || '0.5';
     // seo-sitemap: lastmod must reflect the real content change, not the build
     // date — articles carry their dateModified; service/utility pages use

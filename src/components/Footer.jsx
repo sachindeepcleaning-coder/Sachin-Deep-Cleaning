@@ -1,5 +1,15 @@
 import { PHONE_TEL, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick } from '../lib/landing.js';
+import { SERVICE_LINKS } from '../generated/service-links.js';
+
+// The footer is the one link block every page passes through, so it is the
+// site's crawl backbone. The service list is GENERATED from pages.config.mjs
+// (scripts/gen-article-modules.mjs) — a hardcoded list silently dropped the
+// 20 new service pages, leaving them with no inbound link at all.
+const FOOTER_LINKS = [
+  { label: 'All Cleaning Services', href: '/services.html' },
+  ...SERVICE_LINKS.map((l) => ({ label: l.label, href: `/${l.href}` })),
+];
 
 export default function Footer() {
   return (
@@ -8,22 +18,9 @@ export default function Footer() {
       <p>📍 {ADDRESS_FULL} — serving all of Gurgaon &nbsp;|&nbsp; 📞 <a href={PHONE_TEL} onClick={phoneCallClick}>+91 95607 39281</a></p>
       <p style={{ marginTop: '10px' }}>© {new Date().getFullYear()} Sachin Deep Cleaning. All rights reserved.</p>
       <p style={{ marginTop: '6px' }}>
-        <a href="/deep-cleaning-services-in-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Deep Cleaning Services in Gurgaon</a>
-        <a href="/house-cleaning-services-in-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>House Cleaning Services</a>
-        <a href="/full-home-deep-cleaning-1bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>1 BHK</a>
-        <a href="/full-home-deep-cleaning-2bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>2 BHK</a>
-        <a href="/full-home-deep-cleaning-3bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>3 BHK</a>
-        <a href="/full-home-deep-cleaning-4bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>4 BHK</a>
-        <a href="/full-home-deep-cleaning-5bhk-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>5 BHK</a>
-        <a href="/kitchen-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Kitchen Deep Cleaning Gurgaon</a>
-        <a href="/bathroom-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Bathroom Deep Cleaning Gurgaon</a>
-        <a href="/sofa-shampoo-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Sofa Cleaning Gurgaon</a>
-        <a href="/carpet-shampoo-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Carpet Cleaning Gurgaon</a>
-        <a href="/office-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Office Deep Cleaning Gurgaon</a>
-        <a href="/move-in-move-out-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Move-In Move-Out Gurgaon</a>
-        <a href="/residential-cleaners-near-me.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Residential Cleaners Near Me</a>
-        <a href="/society-cleaning-services-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Society Cleaning Gurgaon</a>
-        <a href="/book-cleaning-online-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Book Cleaning Online</a>
+        {FOOTER_LINKS.map((l) => (
+          <a key={l.href} href={l.href} style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>{l.label}</a>
+        ))}
       </p>
       <p style={{ marginTop: '6px' }}>
         <span style={{ color: '#8FA4BE', marginRight: '16px' }}>Top Guides:</span>
@@ -41,6 +38,8 @@ export default function Footer() {
         <a href="/blog/sohna-road-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Sohna Road</a>
       </p>
       <p style={{ marginTop: '6px' }}>
+        <a href="/services.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>All Services</a>
+        <a href="/facts.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Facts &amp; Price List</a>
         <a href="/all-pages.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>All Pages</a>
         <a href="/about.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>About Us</a>
         <a href="/blog.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Blog</a>

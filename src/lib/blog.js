@@ -23,7 +23,7 @@ export const ARTICLES = [
     cta: { title: 'Get a fixed deep cleaning quote for your home', href: '/deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
     sources: [
       { label: 'Urban Company — official site', href: 'https://www.urbancompany.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Deep cleaning in Gurgaon costs ₹2,000–₹9,000 for a full home, depending on home size. Individual services like bathroom cleaning start at ₹800 and sofa cleaning from ₹499 per seat.',
     faqs: [
@@ -3059,7 +3059,7 @@ export const ARTICLES = [
     cta: { title: 'Pick your BHK package and book', href: '/full-home-deep-cleaning-3bhk-gurgaon.html', label: 'Full Home Deep Cleaning 3BHK →' },
     sources: [
       { label: 'Urban Company — official site', href: 'https://www.urbancompany.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Booking **full home deep cleaning** in Gurgaon? Packages differ by **furnished vs unfurnished, full vs partial, BHK size** — pick wrong and you overpay or under-clean. Here are the exact packages, inclusions, exclusions and times from a decade of festive and routine jobs **since 2015**.',
     faqs: [
@@ -3284,7 +3284,7 @@ export const ARTICLES = [
     cta: { title: 'Compare done — book verified cleaning', href: '/deep-cleaning-services-in-gurgaon.html', label: 'Deep Cleaning Services in Gurgaon →' },
     sources: [
       { label: 'Mr Deep Cleaning — official site', href: 'https://mrdeepcleaning.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Choosing between **Mr Deep Cleaning** and **Sachin Deep Cleaning**? This fair, source-cited comparison covers **services, public pricing, verification and guarantee** — written by Sachin Deep Cleaning, checked against mrdeepcleaning.com in September 2026.',
     faqs: [
@@ -3400,7 +3400,7 @@ export const ARTICLES = [
     cta: { title: 'Book corporate-grade office cleaning', href: '/office-deep-cleaning-gurgaon.html', label: 'Office Deep Cleaning in Gurgaon →' },
     sources: [
       { label: 'NoBroker — official site', href: 'https://www.nobroker.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Choosing the **best office deep cleaning services in Gurgaon**? We scored **a large local brand Cleaning, Safaiwale, AYS Max, ZoopGo and Sachin Deep Cleaning** on public scale, licences, published prices and corporate proof — written by Sachin Deep Cleaning, checked September 2026.',
     faqs: [
@@ -3482,7 +3482,7 @@ export const ARTICLES = [
     sources: [
       { label: 'Urban Company — official site', href: 'https://www.urbancompany.com' },
       { label: 'NoBroker — packers, movers & cleaning', href: 'https://www.nobroker.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Choosing between **Urban Company** and a **local deep cleaner in Gurgaon** such as Sachin Deep Cleaning? This neutral, source-checked guide compares app booking and brand scale against fixed local prices, written scope and pay-after terms — so you can decide with open eyes, whoever you book.',
     faqs: [
@@ -3747,7 +3747,7 @@ export const ARTICLES = [
     sources: [
       { label: 'NoBroker — official site', href: 'https://www.nobroker.com' },
       { label: 'Urban Company — official site', href: 'https://www.urbancompany.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Choosing between **NoBroker cleaning** and **Sachin Deep Cleaning**? This fair, source-cited comparison covers **tier prices, mini-services, scope, rescheduling and reviews** — written by Sachin Deep Cleaning, checked against nobroker.in in September 2026.',
     faqs: [
@@ -3859,7 +3859,7 @@ export const ARTICLES = [
     sources: [
       { label: 'Safaiwale — house cleaning in Gurgaon', href: 'https://safaiwale.in/house-cleaning-services-in-gurgaon' },
       { label: 'Urban Company — official site', href: 'https://www.urbancompany.com' },
-      { label: 'Sachin Deep Cleaning on Google Maps — reviews', href: 'MAPS_URL' },
+      { label: 'Sachin Deep Cleaning on Google Maps', href: MAPS_URL },
     ],
     lead: 'Choosing between **Safaiwale** and **Sachin Deep Cleaning**? This fair, source-cited comparison covers **rate cards, scale, process, sectors and guarantees** — written by Sachin Deep Cleaning, checked against safaiwale.in in September 2026.',
     faqs: [

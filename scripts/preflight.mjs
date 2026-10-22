@@ -21,7 +21,7 @@
 // Usage: node scripts/preflight.mjs
 
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -99,14 +99,23 @@ for (const file of htmlFiles) {
     idTypes.get(b['@id']).add(t);
   }
 
-  // 4 — same-origin assets and internal links resolve
+  // 4 — same-origin assets and internal links resolve.
+  //
+  // Relative hrefs are resolved against the PAGE's own directory, the way a
+  // browser does. Resolving them against the dist root hid a real bug: the
+  // blog index linked to "blog/foo.html", which from /blog.html resolves to
+  // /blog/blog/foo.html — a 404 on every article link on the site.
+  const pageDir = dirname(name);
   const refs = [
-    ...html.matchAll(/(?:href|src)="(\/[^"#?]*)/g),
+    ...html.matchAll(/(?:href|src)="([^"#?]+)"/g),
   ].map((m) => m[1]);
   for (const ref of new Set(refs)) {
-    if (ref.startsWith('//')) continue;
-    const target = join(distDir, decodeURIComponent(ref));
-    if (!existsSync(target)) fail(`${name}: broken local reference ${ref}`);
+    if (ref.startsWith('//') || /^https?:/i.test(ref) || ref.startsWith('tel:') || ref.startsWith('mailto:') || ref.startsWith('data:')) continue;
+    const clean = decodeURIComponent(ref);
+    const target = clean.startsWith('/')
+      ? join(distDir, clean.slice(1))
+      : resolve(distDir, pageDir, clean);
+    if (!existsSync(target)) fail(`${name}: broken local reference "${ref}" -> ${target.replace(distDir + '/', '')}`);
   }
 
   // 5 — canonical
@@ -436,6 +445,48 @@ for (const file of htmlFiles) {
         fail(`${pg.file}.html: service page missing for MONEY_QA entry "${key}"`);
       }
     }
+  }
+}
+
+// 20 — no page is an orphan.
+//
+// An orphan — a page with no inbound internal link — is not crawled, so it
+// cannot rank no matter how good the content is. The 20 service pages added
+// 2026-10-22 were all orphans because the footer and the cross-link mesh
+// were hardcoded lists that nobody updated. They are generated now; this
+// check makes the failure impossible to miss.
+{
+  const inbound = new Map();
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    const pageDir = dirname(name);
+    for (const m of html.matchAll(/href="([^"#?]+)"/g)) {
+      const href = m[1];
+      if (/^https?:/i.test(href) || href.startsWith('//') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('data:')) continue;
+      // Resolve the way a browser does: root-absolute from the site root,
+      // relative against the page's own directory.
+      // join(), not resolve() — resolve() with a relative pageDir would
+      // resolve against the process cwd instead of the page's directory.
+      const target = href.startsWith('/')
+        ? href.slice(1).split('#')[0]
+        : join(pageDir, href).split('#')[0].split(sep).join('/');
+      if (!target) continue;
+      if (target === name) continue;
+      inbound.set(target, (inbound.get(target) || 0) + 1);
+    }
+  }
+  // Pages that are allowed to have no inbound link.
+  const orphansAllowed = new Set(['404.html', 'google4bc4a68e1ff9b7f5.html']);
+  const orphans = [];
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    if (orphansAllowed.has(name)) continue;
+    if (name === 'index.html') continue;
+    if (!inbound.get(name)) orphans.push(name);
+  }
+  if (orphans.length) {
+    fail(`${orphans.length} orphaned page(s) with no inbound internal link: ${orphans.slice(0, 8).join(', ')}${orphans.length > 8 ? ' …' : ''}`);
   }
 }
 

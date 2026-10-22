@@ -45,8 +45,8 @@ export const pages = [
   // ── Service pages ─────────────────────────────────────────────────────────
   {
     file: 'deep-cleaning-services-in-gurgaon', page: 'service', serviceKey: 'deep',
-    title: 'Deep Cleaning Services in Gurgaon — Prices & Process',
-    description: 'Top-to-bottom deep cleaning in Gurgaon from ₹2,000. Floors, walls, fixtures & furniture. Trained team, eco-friendly products. Book via WhatsApp.',
+    title: 'Deep Cleaning Services in Gurgaon | From ₹2,000',
+    description: 'Deep cleaning services in Gurgaon from ₹2,000 (1 RK) to ₹9,000 (villa). Fixed BHK price, 5–6 hrs for a 1 BHK, police-verified crew, pay after walkthrough.',
   },
   {
     file: 'house-cleaning-services-in-gurgaon', page: 'service', serviceKey: 'house',
@@ -55,38 +55,38 @@ export const pages = [
   },
   {
     file: 'full-home-deep-cleaning-1bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 1,
-    title: '1 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
-    description: '1 BHK full home deep cleaning in Gurgaon. Every room floor to ceiling — kitchen, bathroom, bedroom. Transparent pricing. Book on WhatsApp.',
+    title: '1 BHK Deep Cleaning Gurgaon | ₹2,500 Fixed',
+    description: '1 BHK deep cleaning in Gurgaon at a fixed ₹2,500 — kitchen, bathroom, bedroom, living area, floors and balcony. 5–6 hrs, 2 cleaners, pay after walkthrough.',
   },
   {
     file: 'full-home-deep-cleaning-2bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 2,
-    title: '2 BHK Deep Cleaning Gurgaon | Price & Booking',
-    description: '2 BHK full home deep cleaning in Gurgaon. Both bedrooms, kitchen, 2 bathrooms & living area. Trained cleaners, eco-friendly. Book via WhatsApp.',
+    title: '2 BHK Deep Cleaning Gurgaon | ₹4,500 Fixed',
+    description: '2 BHK deep cleaning in Gurgaon at a fixed ₹4,500 — both bathrooms descaled, kitchen degreased, wardrobes in and out, machine-polished floors. 7–8 hrs, pay after walkthrough.',
   },
   {
     file: 'full-home-deep-cleaning-3bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 3,
-    title: '3 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
-    description: '3 BHK full home deep cleaning in Gurgaon. Thorough, room-by-room service. Eco-friendly products, pay after satisfaction. Get a free quote today.',
+    title: '3 BHK Deep Cleaning Gurgaon | ₹5,500 Fixed',
+    description: '3 BHK deep cleaning in Gurgaon at a fixed ₹5,500 — three bathrooms, full kitchen degrease, balcony, machine scrub and a written checklist you audit before paying.',
   },
   {
     file: 'full-home-deep-cleaning-4bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 4,
-    title: '4 BHK Deep Cleaning Gurgaon | Sachin Deep Cleaning',
-    description: '4 BHK full home deep cleaning in Gurgaon. Large homes, spotless results. Full team deployed, satisfaction guaranteed. Book on WhatsApp.',
+    title: '4 BHK Deep Cleaning Gurgaon | ₹6,500 Fixed',
+    description: '4 BHK deep cleaning in Gurgaon at a fixed ₹6,500 — four bedrooms, three baths, lounge, kitchen degrease and balconies. Full-day crew, pay after walkthrough.',
   },
   {
     file: 'full-home-deep-cleaning-5bhk-gurgaon', page: 'service', serviceKey: 'fullhome', bhk: 5,
-    title: '5 BHK Deep Cleaning Gurgaon | Premium Full-Home',
-    description: '5 BHK full home deep cleaning in Gurgaon. Comprehensive luxury home service. Full professional team. Book on WhatsApp or call +91 95607 39281.',
+    title: '5 BHK Deep Cleaning Gurgaon | ₹9,000 Fixed',
+    description: '5 BHK and villa deep cleaning in Gurgaon from ₹9,000 — five bedrooms, four-plus baths, terrace, kitchen degrease and a written checklist audited before you pay.',
   },
   {
     file: 'kitchen-deep-cleaning-gurgaon', page: 'service', serviceKey: 'kitchen',
-    title: 'Kitchen Deep Cleaning Gurgaon | Chimney & Hob',
-    description: 'Kitchen deep cleaning in Gurgaon — chimney filter degreasing, hob scrub, cabinets & tiles. Food-safe products. Takes 3–4 hrs. Book via WhatsApp.',
+    title: 'Kitchen Deep Cleaning Gurgaon | ₹1,500 Chimney In',
+    description: 'Kitchen deep cleaning in Gurgaon from ₹1,500 with the chimney filter dismantled, hob and cabinets degreased, 3–4 hrs. Fixed price on the call, pay after walkthrough.',
   },
   {
     file: 'bathroom-deep-cleaning-gurgaon', page: 'service', serviceKey: 'bathroom',
-    title: 'Bathroom Deep Cleaning Gurgaon | Descaling & Tiles',
-    description: 'Remove hard-water stains in Gurgaon bathrooms. Tile descaling, commode sanitization, limescale removal. 1.5–2 hrs per bathroom. Book now.',
+    title: 'Bathroom Deep Cleaning Gurgaon | ₹800 per Bath',
+    description: 'Bathroom deep cleaning in Gurgaon at ₹800 per bathroom — tile descaling, grout scrub, commode sanitisation, mirror polish. 45–60 min per bath, pay after walkthrough.',
   },
   {
     file: 'sofa-shampoo-cleaning-gurgaon', page: 'service', serviceKey: 'sofa',
@@ -100,123 +100,128 @@ export const pages = [
   },
   {
     file: 'office-deep-cleaning-gurgaon', page: 'service', serviceKey: 'office',
-    title: 'Office Deep Cleaning Gurgaon | Commercial Cleaning',
-    description: 'Office deep cleaning in Gurgaon — workstations, pantries, washrooms, carpets & glass. Scheduled around business hours. Book a free site visit.',
+    title: 'Office Deep Cleaning Gurgaon | From ₹3/Sq Ft',
+    description: 'Office deep cleaning in Gurgaon from ₹3 per sq ft (small office from ₹5,000) — 9-area scope, after-hours and weekend crews, GST invoice, pay after sign-off.',
   },
   {
     file: 'move-in-move-out-cleaning-gurgaon', page: 'service', serviceKey: 'move',
-    title: 'Move-In Move-Out Cleaning Gurgaon | Empty Flat',
-    description: 'Move-in & move-out deep cleaning in Gurgaon. Leave your old flat spotless or enter a fresh one. End-to-end handover cleaning. Book via WhatsApp.',
+    title: 'Move-In Move-Out Cleaning Gurgaon | From ₹1,999',
+    description: 'Move-in and move-out cleaning in Gurgaon from ₹1,999 — full empty-flat clean, kitchen degreased, bathrooms descaled, landlord checklist sign-off. Pay after walkthrough.',
   },
   {
     file: 'watertank', page: 'service', serviceKey: 'watertank',
-    title: 'Water Tank Cleaning in Gurgaon | Overhead & Underground',
-    description: 'Overhead and underground water tank cleaning in Gurgaon — scrub, disinfect and seal. From ₹399 per overhead tank. Same-day slots available.',
+    title: 'Water Tank Cleaning in Gurgaon | From ₹399',
+    description: 'Water tank cleaning in Gurgaon from ₹399 for an overhead tank, ₹999 underground. Scrub, descale, disinfect and rinse, 60–90 min, same-day slots.',
   },
   {
     file: 'toilettank', page: 'service', serviceKey: 'toilettank',
     title: 'Toilet Tank Cleaning in Gurgaon | ₹499 per Tank',
-    description: 'Toilet tank cleaning in Gurgaon — seat, flush lever, hinges and interior scrubbed and disinfected. ₹499 per tank, pay after walkthrough.',
+    description: 'Toilet tank cleaning in Gurgaon at ₹499 per tank — flush tank interior, seat, hinges and lever, scrubbed and disinfected. 45–60 min, pay after walkthrough.',
   },
   {
     file: 'facade', page: 'service', serviceKey: 'facade',
-    title: 'Window & Facade Cleaning in Gurgaon | From ₹3/sq ft',
-    description: 'Window and facade cleaning in Gurgaon from ₹3 per sq ft — external glass, frames, tracks and balcony facades. Same-day slots available.',
+    title: 'Window & Facade Cleaning in Gurgaon | From ₹3/sq Ft',
+    description: 'Window and facade cleaning in Gurgaon from ₹3 per sq ft for external glass, ₹4 for both panes with frames and tracks. Frames, sills and grills at ₹149 per window.',
   },
   {
     file: 'commonarea', page: 'service', serviceKey: 'commonarea',
-    title: 'Common Area Cleaning in Gurgaon | RWA & Society',
-    description: 'Common area cleaning in Gurgaon for RWAs, societies and towers — lobby, stairs, lift lobby, parking apron, clubhouse. ₹499 per visit.',
+    title: 'Common Area Cleaning in Gurgaon | From ₹499',
+    description: 'Common area cleaning in Gurgaon from ₹499 a visit — lobby, stairs, lift lobby, parking apron and clubhouse for RWAs and societies. GST invoice, pay after walkthrough.',
   },
   {
     file: 'sweeper', page: 'service', serviceKey: 'sweeper',
-    title: 'Sweeper & Mop Cleaning Services in Gurgaon | From ₹499',
-    description: 'Sweeper and mop cleaning services in Gurgaon from ₹499 per visit — daily, weekly or monthly upkeep for homes, offices and societies.',
+    title: 'Sweeper & Mop Cleaning Gurgaon | From ₹499 a Visit',
+    description: 'Sweeper and mop cleaning in Gurgaon from ₹499 a visit — studio ₹499, 1 BHK ₹799, 2 BHK ₹1,199, 3 BHK ₹1,699. Weekly plans are cheaper per visit.',
   },
   {
     file: 'lift', page: 'service', serviceKey: 'lift',
     title: 'Lift & Elevator Cleaning in Gurgaon | ₹1,499 per Lift',
-    description: 'Lift and elevator cleaning in Gurgaon — cabin, landing, shaft and door tracks. ₹1,499 per lift. After-hours slots available.',
+    description: 'Lift and elevator cleaning in Gurgaon at ₹1,499 per cabin — panels, floor, door tracks and ceiling, with the landing lobby at ₹1,999. 2–3 hrs, after-hours slots included.',
   },
   {
     file: 'windowgrill', page: 'service', serviceKey: 'windowgrill',
     title: 'Window Grill Cleaning in Gurgaon | ₹399 per Window',
-    description: 'Window grill cleaning in Gurgaon — grill, mesh and sill scrubbed and rust-treated. ₹399 per window. Same-day slots available.',
+    description: 'Window grill cleaning in Gurgaon at ₹399 per window — bars and corners scrubbed both faces, mesh washed, sill and track cleared. 30–45 min, same-day slots.',
   },
   {
     file: 'utensils', page: 'service', serviceKey: 'utensils',
     title: 'Kitchen Utensils Cleaning in Gurgaon | From ₹409',
-    description: 'Kitchen utensils cleaning in Gurgaon — vessels, cutlery, pressure cookers and storage. From ₹409. Pay after walkthrough.',
+    description: 'Kitchen utensil cleaning in Gurgaon from ₹409 for a daily lot of 20 pieces, ₹699 for 20–50. Scrub, descale, disinfect, dry and pack back into your storage.',
   },
   {
     file: 'road', page: 'service', serviceKey: 'road',
-    title: 'Road & Street Sweeping in Gurgaon | From ₹6/sq ft',
-    description: 'Road and street sweeping in Gurgaon from ₹6 per sq ft — dust removal, disposal and drain-edge cleaning for societies and commercial lanes.',
+    title: 'Road & Street Sweeping in Gurgaon | From ₹6/sq Ft',
+    description: 'Road and street sweeping in Gurgaon from ₹6 per sq ft — dust lift, grit, drain edges and licensed disposal. Commercial lane ₹7, construction lane ₹8, society stretch ₹4,999.',
   },
   {
     file: 'chandelier', page: 'service', serviceKey: 'chandelier',
-    title: 'Chandelier & High-Reach Cleaning in Gurgaon | ₹1,499',
-    description: 'Chandelier and high-reach cleaning in Gurgaon — crystal, glass and metal chandeliers cleaned with a lift. ₹1,499 per unit.',
+    title: 'Chandelier & High-Reach Cleaning Gurgaon | ₹1,499',
+    description: 'Chandelier and high-reach cleaning in Gurgaon at ₹1,499 per unit — crystal, glass and metal, cleaned piece by piece where safe. Access quoted with the clean, never improvised.',
   },
   {
     file: 'washingmachine', page: 'service', serviceKey: 'washingmachine',
-    title: 'Washing Machine Deep Cleaning in Gurgaon | ₹799 per Unit',
-    description: 'Washing machine deep cleaning in Gurgaon — drum, filter, door seal and pump. ₹799 per unit, 90–120 minutes. Same-day slots.',
+    title: 'Washing Machine Cleaning Gurgaon | ₹799 per Unit',
+    description: 'Washing machine deep cleaning in Gurgaon at ₹799 per unit — drum, pump filter, door seal and gasket. 90–120 min, front-load and top-load, same-day slots.',
   },
   {
     file: 'chairclean', page: 'service', serviceKey: 'chairclean',
-    title: 'Chair & Recliner Cleaning in Gurgaon | ₹199 per Chair',
-    description: 'Chair and recliner cleaning in Gurgaon — office chairs, recliners, gaming chairs. ₹199 per chair, fabric-safe, 45–60 minutes.',
+    title: 'Chair & Recliner Cleaning in Gurgaon | ₹199',
+    description: 'Chair and recliner cleaning in Gurgaon at ₹199 per chair — office, recliner and gaming chairs, fabric-safe with base and castor clean. 45–60 min per chair.',
   },
   {
     file: 'curtain', page: 'service', serviceKey: 'curtain',
-    title: 'Curtain Vacuum & Shampoo Cleaning in Gurgaon | ₹499',
-    description: 'Curtain vacuum and shampoo cleaning in Gurgaon — ₹499 per set of up to 4 panels, on-site, 3–4 hours. Dust-mite and allergen removal.',
+    title: 'Curtain Vacuum & Shampoo Cleaning Gurgaon | ₹499',
+    description: 'Curtain vacuum and shampoo cleaning in Gurgaon at ₹499 per set of up to 4 panels — on-site, dust-mite and allergen removal, dried in place. 3–4 hrs.',
   },
   {
     file: 'basement', page: 'service', serviceKey: 'basement',
-    title: 'Unfinished Basement & Godown Cleaning in Gurgaon',
-    description: 'Unfinished basement and godown cleaning in Gurgaon from ₹12 per sq ft — debris, dust, cobwebs, drains. 1,000 sq ft in 5–6 hours.',
+    title: 'Unfinished Basement Cleaning Gurgaon | ₹12/sq Ft',
+    description: 'Unfinished basement and godown cleaning in Gurgaon from ₹12 per sq ft — debris haul, HEPA fine dust, cobwebs, corners and floor mop. 1,000 sq ft in 5–6 hrs.',
   },
   {
     file: 'instantclean', page: 'service', serviceKey: 'instantclean',
     title: 'Instant & Same-Day Cleaning in Gurgaon | ₹999',
-    description: 'Instant and same-day cleaning in Gurgaon — ₹999, within 4 hours, 2–3 person crew. Emergency and last-minute slots.',
+    description: 'Instant and same-day cleaning in Gurgaon at ₹999 — crew dispatched within 4 hours, 2–3 cleaners, fixed scope and a walkthrough before you pay. No evening premium.',
   },
   {
     file: 'balconyclean', page: 'service', serviceKey: 'balconyclean',
-    title: 'Balcony Cleaning Services in Gurgaon | ₹399 per Balcony',
-    description: 'Balcony cleaning services in Gurgaon — pressure wash, drain flush, glass and grill. ₹399 per balcony, 45–60 minutes.',
+    title: 'Balcony Cleaning in Gurgaon | ₹399 per Balcony',
+    description: 'Balcony cleaning in Gurgaon at ₹399 per balcony — pressure wash, joint scrub, drain flush, glass panels and railing. 45–60 min, pay after walkthrough.',
   },
   {
     file: 'sqftrate', page: 'service', serviceKey: 'sqftrate',
-    title: 'Deep Cleaning Rate Per Square Foot in Gurgaon | ₹3/sq ft',
-    description: 'Deep cleaning rate per square foot in Gurgaon — ₹3 per sq ft, or the fixed BHK card (1 BHK ₹2,500 to villa ₹9,000).',
+    title: 'Deep Cleaning Rate Per Square Foot Gurgaon | ₹3',
+    description: 'Deep cleaning in Gurgaon works out to about ₹3 per sq ft, pro-rata from a fixed BHK card — 1 BHK ₹2,500, 2 BHK ₹4,500, 3 BHK ₹5,500, villa ₹9,000. Which one is cheaper and why.',
   },
   {
     file: 'kitchenplatform', page: 'service', serviceKey: 'kitchenplatform',
-    title: 'Kitchen Platform Deep Cleaning in Gurgaon | ₹999',
-    description: 'Kitchen platform deep cleaning in Gurgaon — platform, cabinets, backsplash, sink base. ₹999, 2–3 hours. Food-safe degreaser.',
+    title: 'Kitchen Platform Deep Cleaning Gurgaon | ₹999',
+    description: 'Kitchen platform deep cleaning in Gurgaon at ₹999 — platform, edges, backsplash joints and sink base, with cabinet interiors at ₹1,399. 2–3 hrs, food-safe degreaser.',
   },
   {
     file: 'postconstruction', page: 'service', serviceKey: 'postconstruction',
-    title: 'Post-Construction Cleaning in Gurgaon | ₹2,499 (1 BHK)',
-    description: 'Post-construction cleaning in Gurgaon — 3 phases, rough to final HEPA. From ₹2,499 for a 1 BHK up to 600 sq ft, 1–2 days.',
+    title: 'Post-Construction Cleaning Gurgaon | From ₹2,499',
+    description: 'Post-construction cleaning in Gurgaon from ₹2,499 (1 BHK up to 600 sq ft) — three phases: rough debris, high surfaces, final HEPA pass. 1–2 days, licensed disposal.',
   },
   {
     file: 'roomclean', page: 'service', serviceKey: 'roomclean',
     title: 'Single Room Cleaning in Gurgaon | ₹299 per Room',
-    description: 'Single room cleaning in Gurgaon — one room, kitchenette or bathroom. ₹299 per room, 60–90 minutes. Same-day slots available.',
+    description: 'Single room cleaning in Gurgaon at ₹299 per room — one bedroom, kitchenette or bathroom, with windows and tracks included. 60–90 min, same-day slots available.',
   },
   {
     file: 'residential-cleaners-near-me', page: 'residential',
-    title: 'Residential Cleaners Near Me — Gurgaon | Same-Day',
-    description: 'Local residential cleaners in Gurgaon. Police-verified, same-day slots, pay after job is done. Serving DLF, Sohna Rd, Golf Course Rd & all sectors.',
+    title: 'Residential Cleaners Near Me Gurgaon | From ₹499',
+    description: 'Residential cleaners near you in Gurgaon from ₹499 a visit. Police-verified, same team each visit, nearest-crew dispatch to your sector, pay after the job is done.',
   },
   {
     file: 'society-cleaning-services-gurgaon', page: 'partners',
-    title: 'Society Cleaning Services in Gurgaon — RWA & Bulk',
-    description: 'Society & apartment cleaning in Gurgaon — RWA cluster days, villa & PG turnover, GST invoice, pay after walkthrough. Serving since 2015.',
+    title: 'Society Cleaning Services in Gurgaon | RWA & Bulk',
+    description: 'Society and bulk cleaning in Gurgaon for RWAs and towers — cluster days, gate-pass handling, GST invoice, per-zone tick sheet. Covering every Gurgaon sector since 2015.',
+  },
+  {
+    file: 'services', page: 'services',
+    title: 'Cleaning Services in Gurgaon — Full List & Price List',
+    description: 'Every cleaning service in Gurgaon with its published starting price — full home, kitchen, bathroom, sofa, carpet, office, water tank, lift, window, curtain and more.',
   },
   {
     file: 'facts', page: 'facts',
@@ -248,8 +253,8 @@ export const pages = [
   },
   {
     file: 'blog/kitchen-chimney-cleaning-guide', page: 'article',
-    title: "Kitchen Chimney Cleaning: DIY Maintenance vs Professional",
-    description: "When a chimney filter needs a professional degrease instead of a DIY wash, what a deep clean costs and why Gurgaon kitchens need it more often than you think.",
+    title: "Kitchen Chimney Cleaning in Gurgaon | From ₹1,500",
+    description: "Kitchen chimney cleaning in Gurgaon from ₹1,500 — when a filter needs a professional degrease instead of a DIY wash, what the deep clean costs, and why Gurgaon kitchens need it more often.",
   },
   {
     file: 'blog/hard-water-bathroom-stains-gurgaon', page: 'article',
@@ -268,8 +273,8 @@ export const pages = [
   },
   {
     file: 'blog/move-in-move-out-cleaning-checklist-gurgaon', page: 'article',
-    title: "Move-In & Move-Out Cleaning Checklist for Gurgaon Flats",
-    description: "Room-by-room handover checklist landlords and societies inspect — chimney degrease, descaling, floors — plus pro-clean costs.",
+    title: "Move-In Move-Out Cleaning in Gurgaon | From ₹1,999",
+    description: "Move-in and move-out cleaning in Gurgaon from ₹1,999 — the room-by-room handover checklist landlords inspect, kitchen degrease, descaled floors, and photo proof before you hand over the keys.",
   },
   {
     file: 'blog/full-home-deep-cleaning-gurgaon-guide', page: 'article',
@@ -278,13 +283,13 @@ export const pages = [
   },
   {
     file: 'blog/house-cleaning-services-gurgaon-guide', page: 'article',
-    title: "House Cleaning Services in Gurgaon from ₹499 a Visit",
-    description: "Weekly, fortnightly and one-time house cleaning in Gurgaon from ₹499 a visit — what each plan covers, how it differs from deep cleaning and how to book.",
+    title: "House Cleaning Services in Gurgaon | From ₹499 a Visit",
+    description: "House cleaning services in Gurgaon from ₹499 a visit — what a weekly, bi-weekly or monthly plan covers, what it costs per home size, and how it differs from a deep clean.",
   },
   {
     file: 'blog/deep-cleaning-near-me-gurgaon', page: 'article',
-    title: "Deep Cleaning Near Me in Gurgaon: Every Area Covered",
-    description: "Verified deep cleaning crews across DLF Phases, Sushant Lok, Sohna Road, Golf Course Road, Palam Vihar and all 100+ sectors — same-day slots, fixed prices.",
+    title: "Deep Cleaning Near Me in Gurgaon | From ₹2,000, Same Day",
+    description: "Deep cleaning near me in Gurgaon from ₹2,000 — same-day slots when you book before noon, crew rosters for DLF, Sushant Lok, Sohna Road and every sector. Pay after walkthrough.",
   },
   {
     file: 'blog/kitchen-deep-cleaning-cost-gurgaon', page: 'article',
@@ -293,8 +298,8 @@ export const pages = [
   },
   {
     file: 'blog/office-deep-cleaning-gurgaon-guide', page: 'article',
-    title: "Office Deep Cleaning in Gurgaon from ₹3 per Sq Ft",
-    description: "Office deep cleaning in Gurgaon from ₹3 per sq ft — workstations, pantry, washrooms, glass and floors, done after hours so no workday is lost.",
+    title: "Office Deep Cleaning Gurgaon | From ₹3/Sq Ft, ₹5,000 Min",
+    description: "Office deep cleaning in Gurgaon from ₹3 per sq ft (small office from ₹5,000) — 9-area scope, after-hours and weekend crews, GST invoice, photo logs, pay after sign-off.",
   },
   {
     file: 'blog/bathroom-deep-cleaning-services-gurgaon-guide', page: 'article',
@@ -378,8 +383,8 @@ export const pages = [
   },
   {
     file: 'blog/cleaning-services-gurgaon-guide', page: 'article',
-    title: "Cleaning Services in Gurgaon: Every Price That Matters",
-    description: "From ₹499 visits to ₹9,000 villa deep cleans — the complete 2026 price picture for cleaning services in Gurgaon, with what changes the quote.",
+    title: "Cleaning Services in Gurgaon | Full Price List ₹499–₹9,000",
+    description: "Every cleaning service in Gurgaon with its price — house visits from ₹499, bathroom ₹800, kitchen ₹1,500, sofa ₹499 a seat, full home ₹2,500 to ₹9,000, office from ₹3 per sq ft.",
   },
   {
     file: 'blog/full-home-deep-cleaning-packages-gurgaon', page: 'article',
@@ -398,8 +403,8 @@ export const pages = [
   },
   {
     file: 'blog/best-office-deep-cleaning-services-gurgaon', page: 'article',
-    title: "Best Office Deep Cleaning Services in Gurgaon: Top 5",
-    description: "Five office deep cleaning services in Gurgaon compared on per-sq-ft rates, after-hours capability, AMC terms and washroom specialisation.",
+    title: "Best Office Deep Cleaning Gurgaon | Top 5, From ₹3/Sq Ft",
+    description: "The five office deep cleaning providers in Gurgaon compared on per-sq-ft rates, after-hours capability, AMC terms and washroom specialisation — with where each one genuinely wins.",
   },
   {
     file: 'blog/urban-company-vs-sachin-deep-cleaning', page: 'article',
@@ -413,8 +418,8 @@ export const pages = [
   },
   {
     file: 'book-cleaning-online-gurgaon', page: 'landing',
-    title: 'Book Cleaning Online in Gurgaon — No App Needed',
-    description: 'Book house & deep cleaning online in Gurgaon without any app — 30-second WhatsApp booking, same-day slots, fixed price, pay after walkthrough.',
+    title: 'Book Cleaning Online in Gurgaon | No App Needed',
+    description: 'Book cleaning online in Gurgaon without an app — WhatsApp your BHK and society, get a fixed price and a same-day slot in 30 seconds. No advance, pay after the walkthrough.',
     lastmod: '2026-10-19',
   },
   {
@@ -451,13 +456,13 @@ export const pages = [
   // ── Batch 2 — bathroom/kitchen price + micro-local (complete) ──
   {
     file: 'blog/bathroom-cleaning-price-gurgaon-per-bathroom', page: 'article',
-    title: "Bathroom Cleaning Price in Gurgaon (₹800/Bath)",
-    description: "₹800 per bathroom in Gurgaon: the nine descaling and sanitisation steps inside the price, timing per bath and the discounts for booking 2–3 together.",
+    title: "Bathroom Cleaning Price in Gurgaon | ₹800 per Bathroom",
+    description: "Bathroom cleaning in Gurgaon at ₹800 per bathroom — the nine descaling and sanitisation steps inside the price, timing per bath, and the discounts for booking two or three together.",
   },
   {
     file: 'blog/kitchen-cleaning-price-gurgaon-chimney', page: 'article',
-    title: "Kitchen Cleaning in Gurgaon — ₹1,500, Chimney Included",
-    description: "Kitchen cleaning in Gurgaon from ₹1,500 with chimney degreasing included — the size brackets, what pushes it to ₹2,500 and the 2-hour process.",
+    title: "Kitchen Cleaning Price in Gurgaon | ₹1,500, Chimney In",
+    description: "Kitchen cleaning in Gurgaon from ₹1,500 with the chimney included — the size brackets, what pushes it to ₹2,500, and the 2-hour process behind the price.",
   },
   {
     file: 'blog/dlf-phase-3-deep-cleaning-gurgaon', page: 'article',
@@ -544,8 +549,8 @@ export const pages = [
   // ── guide to answers better than Urban/a marketplace listing/a national aggregator for bare "full home deep cleaning" (search results #4) & a company site #6 ──
   {
     file: 'blog/full-home-deep-cleaning', page: 'article',
-    title: "Full Home Deep Cleaning: Price & Checklist (2026)",
-    description: "Full home deep cleaning prices for 2026 — ₹2,500 to ₹9,000 by BHK — with the room-by-room checklist and the pay-after walkthrough that protects you.",
+    title: "Full Home Deep Cleaning in Gurgaon (2026) | ₹2,500–₹9,000",
+    description: "Full home deep cleaning in Gurgaon from ₹2,500 for a 1 BHK to ₹9,000 for a villa — the room-by-room checklist, how long it takes, and the walkthrough before you pay.",
   },
   {
     file: 'blog/home-deep-cleaning-service-gurgaon', page: 'article',
@@ -560,18 +565,18 @@ export const pages = [
   // ── 3 high-volume 0-click Instagram queries (skip mr brand) ──
   {
     file: 'blog/deep-cleaning-services', page: 'article',
-    title: "Deep Cleaning Services: What’s Included, BHK by BHK",
-    description: "Every deep cleaning service laid out BHK by BHK: the included list, the honest exclusions, timing per home size and fixed prices before booking.",
+    title: "Deep Cleaning Services in Gurgaon | BHK Prices ₹2,500–₹9,000",
+    description: "What deep cleaning services include in Gurgaon, BHK by BHK — 1 BHK ₹2,500, 2 BHK ₹4,500, 3 BHK ₹5,500, villa ₹9,000, with the honest exclusions written out.",
   },
   {
     file: 'blog/home-cleaning-services-gurgaon', page: 'article',
-    title: "Home Cleaning Services in Gurgaon: Plans & Pricing",
-    description: "Home cleaning plans in Gurgaon — ₹499 upkeep visits or full deep cleans from ₹2,500 — with the checklist difference that decides which you need.",
+    title: "Home Cleaning Services in Gurgaon | From ₹499 a Visit",
+    description: "Home cleaning services in Gurgaon from ₹499 a visit — studio ₹499, 1 BHK ₹799, 2 BHK ₹1,199, 3 BHK ₹1,699. Weekly, bi-weekly and monthly plans, same team each visit.",
   },
   {
     file: 'blog/home-deep-cleaning-services-gurgaon', page: 'article',
-    title: "Home Deep Cleaning Services in Gurgaon: Fixed BHK Rates",
-    description: "Fixed BHK rates for home deep cleaning services in Gurgaon — ₹2,500/₹4,500/₹5,500 — pay after satisfaction, same-day slots across all sectors.",
+    title: "Home Deep Cleaning Services in Gurgaon | ₹2,500–₹9,000",
+    description: "Home deep cleaning services in Gurgaon from ₹2,500 for a 1 BHK to ₹9,000 for a villa — fixed BHK rates, an hour-by-hour account of the crew’s day, and what moves the price.",
   },
   {
     file: 'blog/post-construction-cleaning-services-gurgaon', page: 'article',

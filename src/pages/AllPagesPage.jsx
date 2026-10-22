@@ -5,6 +5,7 @@ import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
 import { pageUrl, WA_BOOK, waMsg } from '../lib/site.js';
 import { whatsappClick } from '../lib/landing.js';
 import { ARTICLE_INDEX } from '../generated/article-index.js';
+import { SERVICE_LINKS } from '../generated/service-links.js';
 
 const GROUPS = [
   {
@@ -31,6 +32,12 @@ const GROUPS = [
       { icon: '4️⃣', title: '4 BHK Full Home Deep Cleaning', text: 'Complete 4 BHK deep cleaning.', href: 'full-home-deep-cleaning-4bhk-gurgaon.html' },
       { icon: '5️⃣', title: '5 BHK Full Home Deep Cleaning', text: 'Complete 5 BHK deep cleaning.', href: 'full-home-deep-cleaning-5bhk-gurgaon.html' },
     ],
+  },
+  {
+    label: 'Single Services & Add-Ons',
+    items: SERVICE_LINKS
+      .filter((l) => !['deep', 'house', 'fullhome', 'kitchen', 'bathroom', 'sofa', 'carpet', 'office', 'move', 'residential', 'partners', 'landing'].includes(l.key))
+      .map((l) => ({ icon: '🧰', title: l.label, text: 'Published price, fixed on the call.', href: l.href })),
   },
   {
     label: 'Blog & Guides',

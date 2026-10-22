@@ -115,6 +115,8 @@ echo "gh-pages:$(git rev-parse --short origin/gh-pages)"
 | `src/lib/site.js` | Phone, WhatsApp, social links, URLs |
 | `src/lib/schema.jsx` | JSON-LD builders + the entity graph (WebSite / LocalBusiness / Organization / Person / WebPage / BlogPosting / Service / HowTo / FAQPage / BreadcrumbList / CollectionPage / ItemList / AggregateOffer) |
 | `src/lib/money-page-qa.js` | The AEO money blocks for every service page: price table, 7–8 question-form answers with a direct answer, and the "what changes the price" list |
+| `src/generated/service-links.js` | The service cross-link mesh, generated from `pages.config.mjs` — a service page can never be an orphan |
+| `scripts/rank-track.mjs` | The money query set with its GSC baseline, plus a GSC CSV import that reports position movement between runs |
 | `src/lib/claims.js` | Public claims register — every checkable claim with its proof and verification state |
 | `scripts/submit-indexing.cjs` | Google Indexing API submitter (sitemap → skip submitted → publish; `--test`, `--limit N`, `--reset`, `--url <u>`) |
 | `indexing-progress.json` | Submitted/failed URL state for the submitter (commit after each run) |
@@ -147,10 +149,12 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 
 ## 📊 Site State (2026-10-22)
 
-- **129 entry shells** (`npm run gen`) → **128 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
-- **Sitemap:** 125 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
+- **131 entry shells** (`npm run gen`) → **130 prerendered pages** in `dist/` (1 merge stub + the GSC verification file are not pages)
+- **Sitemap:** 126 URLs (excludes `thank-you`, `404`, `all-pages`) · **Indexing API: 56/56 submitted, 0 failed**
 - **Blog:** 85 articles + booking landing page + society page · every page ≥1,500 words, unique titles/descs/H1s
 - **Service pages:** 29 services (33 URLs with the BHK variants) — every one with a price table, 7–8 question-form answers and a HowTo node
+- **Titles:** every service page carries its published price (33/33); no title over 62 chars, no description under 120
+- **Internal links:** all 85 guides have a service-page link; every service page is linked from 129 pages
 - **Schema:** LocalBusiness on 38 pages · WebPage 119 · FAQPage 123 · HowTo 33 · Service 39 · BreadcrumbList 122 · CollectionPage + ItemList on `blog.html` · AggregateOffer on 35 · SpeakableSpecification on 119
 - **Performance:** per-article chunks (a guide page ships ~12 KB of copy, not the whole 85-guide library) · `modulepreload` on every page · largest single chunk is the 170 KB entry
 - **Content gate:** `content-lint` passes with **0 warnings**, including `--strict`
@@ -167,6 +171,7 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 - **Content bars (enforced):** titles <60 chars, descriptions 120–160, exactly 1 H1, every page ≥1,500 prerendered words, primary keyword in title/H1/lead + body multiples, Hinglish FAQ on local-intent pages, CTA → money page, `since 2015` business history (never 2024), prices from the live rate card only.
 - **Comparison pages** (Mr/UC/NoBroker/Safaiwale/Best-office): verifiable public facts only, “Not publicly listed” where unknown, affiliation disclosed in lead + tip, figures dated (Sep 2026).
 - **Internal linking:** `RelatedGuides.jsx` (serviceKey → guides), `RelatedServices.jsx` (service mesh), blog CTA footer (3 money links), footer keyword links, `llms.txt` mirror for AI discovery.
+- **`/services.html`** is the services hub: every service with its published price, in a table and as a direct answer. It targets the broad queries ("cleaning services gurgaon") that no single service page can win, and it is the crawl hub for every service URL.
 - **`/facts.html`** is the citable page: the verifiable facts as machine-quotable statements (price card, inclusions, exclusions, service area, hours, address, phone, rating + as-of, Maps link, social profiles, process, payment terms). `llms.txt` carries the same facts block and points at `llms-full.txt`.
 
 ## 🔍 SEO Operations
@@ -175,7 +180,7 @@ npm run gen        # regenerate HTML entry shells + article modules after editin
 - **Audit log:** `SEO-AUDIT.md` (dated sections per change).
 - **Backlinks:** `BACKLINKS.md` (NAP block, copy kit, tiered targets). Rule: never buy/automate links.
 - **Indexing discipline:** `scripts/submit-indexing.cjs` ONLY for newly written or materially changed URLs (`--url …`); never mass `--reset` except after site-wide rebuilds (200/day project quota, shared with old-domain cron).
-- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — 19 checks. Same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, every FAQPage question visible on the page, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts, no second brand name or retired phone/plus code, one identical business identity site-wide, no leftover fake-urgency or unbacked-claim strings, every service page has the price table + 6+ question-form answers whose commercial answers lead with a figure, and the GEO surfaces (`facts.html`, `blog.html` CollectionPage/ItemList, the llms.txt facts block) are all wired.
+- **Pre-flight before every deploy:** `node scripts/preflight.mjs` — 20 checks. Same-origin assets exist, internal links resolve, JSON-LD parses, no `@id` claimed by two types, canonical present, exactly one `<h1>`, every FAQPage question visible on the page, HowTo on every service page, noindex only on the allowlist, sitemap + llms.txt URLs all exist, zero third-party fetch hosts, no second brand name or retired phone/plus code, one identical business identity site-wide, no leftover fake-urgency or unbacked-claim strings, every service page has the price table + 6+ question-form answers whose commercial answers lead with a figure, the GEO surfaces (`facts.html`, `services.html`, `blog.html` CollectionPage/ItemList, the llms.txt facts block) are all wired, and no page is an orphan.
 - **Docs policy:** `.md` files are local-only (`*.md` gitignored) except `README.md`, which stays on GitHub. Secrets safety net in `.gitignore` (`*key.json`, `.env*`); the Indexing API key lives outside any git repo and is referenced by path only.
 
 ## 📞 Business Details

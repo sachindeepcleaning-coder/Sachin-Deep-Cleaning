@@ -148,3 +148,54 @@ const written = readdirSync(articlesDir).filter((f) => f.endsWith('.js')).length
 console.log(
   `gen-article-modules: ${written} article modules + article-index.js (${ARTICLES.length} articles)`
 );
+
+// ─── The service link mesh ───────────────────────────────────────────────────
+//
+// Generated from pages.config.mjs + the service data, so the cross-link mesh
+// can never fall behind the page list. A service page with no inbound link
+// is an orphan — Google will not crawl it, so a new service that is not in
+// this file never ranks. Deriving it makes that structurally impossible.
+{
+  const { pages: pageCfg } = await import('../pages.config.mjs');
+  const { getService } = await import('../src/lib/services.js');
+
+  const links = [];
+  for (const pg of pageCfg) {
+    if (pg.page === 'service') {
+      let label = null;
+      try {
+        const svc = getService(pg.serviceKey, pg.bhk);
+        label = svc && svc.name ? svc.name : null;
+      } catch {}
+      links.push({
+        key: pg.serviceKey,
+        label: label || pg.title,
+        href: `${pg.file}.html`,
+        group: pg.serviceKey === 'fullhome' ? 'Full Home Deep Cleaning' : null,
+      });
+    } else if (pg.page === 'residential') {
+      links.push({ key: 'residential', label: 'Residential Cleaners Near Me', href: `${pg.file}.html`, group: null });
+    } else if (pg.page === 'partners') {
+      links.push({ key: 'partners', label: 'Society & Bulk Cleaning', href: `${pg.file}.html`, group: null });
+    } else if (pg.page === 'landing') {
+      links.push({ key: 'landing', label: 'Book Cleaning Online', href: `${pg.file}.html`, group: null });
+    }
+  }
+
+  const file =
+    '// AUTO-GENERATED from pages.config.mjs — do not edit.\n' +
+    '// Regenerate with `npm run gen`.\n' +
+    '//\n' +
+    '// The service cross-link mesh. Every service page appears here, so a new\n' +
+    '// service page can never be an orphan (no inbound link = never crawled).\n' +
+    `export const SERVICE_LINKS = ${JSON.stringify(links, null, 2)};\n` +
+    '\n' +
+    'export const SERVICE_LINKS_BY_KEY = SERVICE_LINKS.reduce((acc, l) => {\n' +
+    '  if (!acc[l.key]) acc[l.key] = [];\n' +
+    '  acc[l.key].push(l);\n' +
+    '  return acc;\n' +
+    '}, {});\n';
+
+  writeFileSync(resolve(outDir, 'service-links.js'), file);
+  console.log(`gen-article-modules: service-links.js (${links.length} links)`);
+}

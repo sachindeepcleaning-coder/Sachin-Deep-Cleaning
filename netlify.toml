@@ -205,6 +205,11 @@
   status = 301
 
 [[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
   from = "/facts"
   to = "/facts.html"
   status = 301
