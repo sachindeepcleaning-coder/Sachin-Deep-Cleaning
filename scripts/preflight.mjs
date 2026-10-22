@@ -326,7 +326,7 @@ console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD block
 // Outstanding [VERIFY] items — reported, but they do not fail the build.
 {
   const { ADDRESS_FULL } = await import('../src/lib/site.js');
-  warn(`[VERIFY] Confirm the single address against the live GBP listing: "${ADDRESS_FULL}"`);
+  warn(`[VERIFY] Re-check the single address against the live GBP listing each deploy: "${ADDRESS_FULL}"`);
 }
 
 if (warnings.length) {

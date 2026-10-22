@@ -53,23 +53,25 @@ export const ADDRESS = 'Serving all areas of Gurgaon, Haryana';
 // splits the Knowledge Graph into two entities and halves the local signal
 // for both.
 //
-// [VERIFY] The address below is the one address used everywhere on the site
-// (footer, contact, About, JSON-LD, llms.txt, sitemap captions). The earlier
+// The address below is the ONE address used everywhere on the site (footer,
+// contact, About, JSON-LD, llms.txt, sitemap captions, Maps links). The earlier
 // "Sector 27, Sector 43" double was removed because a single shop cannot be in
-// two sectors. Confirm the surviving sector against the live GBP listing and
-// change it here only — every other file reads from here.
+// two sectors, and the block letter is Block B (confirmed 2026-10-22).
+// Change it here only — every other file reads from here.
 export const BRAND_NAME = 'Sachin Deep Cleaning';
 
 // Address exactly as shown on the Google Business Profile.
 export const ADDRESS_PARTS = {
-  streetAddress: 'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 43',
+  streetAddress: 'Shop No-B, 747B, Sushant Lok Rd, Block B, Sector 43',
   addressLocality: 'Gurugram',
   addressRegion: 'Haryana',
   postalCode: '122009',
   addressCountry: 'IN',
 };
+// Derived from ADDRESS_PARTS — one address, one place, no drift.
 export const ADDRESS_FULL =
-  'Shop No-B, 747B, Sushant Lok Rd, Block D, Sector 43, Gurugram, Haryana 122009';
+  `${ADDRESS_PARTS.streetAddress}, ${ADDRESS_PARTS.addressLocality}, ` +
+  `${ADDRESS_PARTS.addressRegion} ${ADDRESS_PARTS.postalCode}`;
 
 // Coordinates — one place, used by the meta geo tags and the JSON-LD.
 export const GEO = { latitude: 28.4538, longitude: 77.0782 };
