@@ -104,7 +104,7 @@ const FAQS = [
   },
   {
     q: 'How long does a deep clean take?',
-    a: 'A 1 BHK takes about 5–6 hours with a 2-person crew, a 2 BHK 7–8 hours with 3 cleaners, a 3 BHK 9–10 hours with 3–4 cleaners, a 4 BHK 8–10 hours with 4–5 cleaners and a 5 BHK 10–12 hours with 5 cleaners. The timing for your home is confirmed on the call.',
+    a: 'A 1 BHK takes about 4–5 hours with a 2-person crew, a 2 BHK 5–6 hours with 2–3 cleaners, a 3 BHK 6–7 hours with 3–4 cleaners, a 4 BHK 7–8 hours with 4–5 cleaners and a 5 BHK 8–9 hours with 5 cleaners. The timing for your home is confirmed on the call.',
   },
   {
     q: 'Which areas of Gurgaon do you serve?',
@@ -116,7 +116,7 @@ const FAQS = [
   },
   {
     q: 'What happens if the clean is not right?',
-    a: 'Our 3-Day Service Promise covers every booking: if an area falls short we re-clean it free within 3 days, and if it is still not right you get a full refund. Flag it during the walkthrough.',
+    a: 'Our 3-Day Service Promise covers every booking: if an area falls short we re-clean it free within 3 days. Flag it during the walkthrough.',
   },
   {
     q: 'Where is the business, and when is it open?',
@@ -403,7 +403,7 @@ export default function FactsPage({ url }) {
             </li>
             <li>
               <strong>3-Day Service Promise.</strong> Every booking carries the guarantee: a
-              free re-clean first, and a full refund if the area is still not right.
+              a free re-clean of the area, within 3 days.
             </li>
             <li>
               <strong>GST invoice on office work.</strong> Office and commercial jobs are
