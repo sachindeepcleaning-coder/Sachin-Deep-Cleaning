@@ -1,7 +1,8 @@
 import QuoteForm from '../components/QuoteForm.jsx';
 import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, breadcrumbSchema, organizationSchema, personSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, breadcrumbSchema, organizationSchema, personSchema, webpageSchema } from '../lib/schema.jsx';
 import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, ADDRESS_PARTS, RATING } from '../lib/site.js';
 import { ratingAsOf } from '../lib/claims.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
@@ -36,6 +37,14 @@ export default function AboutPage({ url }) {
   return (
     <>
       <JsonLd data={organizationSchema()} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'About Sachin Deep Cleaning | Trusted Team in Gurgaon',
+          description: 'Meet the police-verified deep cleaning team in Gurgaon since 2015. Eco-friendly, pay after satisfaction, same-day across DLF & Sohna Road.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd data={personSchema()} />
       <JsonLd
         data={breadcrumbSchema([

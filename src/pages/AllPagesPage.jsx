@@ -1,7 +1,8 @@
 import FinalCta from '../components/FinalCta.jsx';
 import QuoteForm from '../components/QuoteForm.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
-import { JsonLd, breadcrumbSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
 import { pageUrl, WA_BOOK, waMsg } from '../lib/site.js';
 import { whatsappClick } from '../lib/landing.js';
 import { ARTICLE_INDEX } from '../generated/article-index.js';
@@ -70,6 +71,14 @@ export default function AllPagesPage({ url }) {
         { name: 'Home', url: pageUrl('index') },
         { name: 'All Pages', url },
       ])} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'All Services — Sachin Deep Cleaning Gurgaon',
+          description: 'Browse all deep cleaning services in Gurgaon: full home, kitchen, bathroom, sofa, carpet, office and move-in/out cleaning by Sachin Deep Cleaning.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
 
       <section className="hero">
         <div className="hero-grid"></div>

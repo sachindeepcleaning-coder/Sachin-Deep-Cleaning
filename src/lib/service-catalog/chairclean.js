@@ -35,10 +35,8 @@ export default {
     { q: 'Office chair ki cleaning ka kharcha kya hai?', a: 'Chair cleaning ₹199 per chair hoti hai aur har chair pe 45–60 minutes lagte hain. Chaar chairs ek saath karwane me lagbhag teen ghante lagte hain. Recliners aur leather chairs bhi isi rate me clean ho jaate hain.' },
     { q: 'Is it worth cleaning a chair or should I replace it?', a: 'Clean it first. A structurally sound chair with faded fabric almost always looks markedly better after extraction, because the darkness you see is embedded soil rather than worn material. If the foam has collapsed, the tilt mechanism has failed or the cover is torn, cleaning will not help, and we will say so honestly on the inspection.' },
   ],
-  reviews: [
-    ['PS', 'Prakash Sharma', 'DLF Phase 2', 'My five-year-old office chair came back looking new. The smell coming out of the foam is completely gone.'],
-    ['RJ', 'Ritu Jain', 'Cyber City', 'They cleaned all twenty desk chairs over one Sunday evening without disturbing the team on Monday.'],
-    ['HV', 'Harpreet Verma', 'Sushant Lok 1', 'Booked recliner cleaning along with sofa shampoo. Both dried by evening and the difference is visible.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.chairclean,
 };

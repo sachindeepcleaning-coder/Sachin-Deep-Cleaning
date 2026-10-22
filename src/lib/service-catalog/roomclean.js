@@ -35,10 +35,8 @@ export default {
     { q: 'Ek room ki cleaning ka kharcha kya hai?', a: 'Single room cleaning ₹299 hai, chahe bedroom ho, kitchenette ho ya bathroom. Time 60–90 minutes lagta hai. Do ya zyada rooms ek saath book karne se per-room cost kam ho jaati hai.' },
     { q: 'Do you clean PG and hostel rooms?', a: 'Yes, in the PG clusters around Sector 43, 45 and 57 and near MG Road, we do recurring room cleaning for per-floor plans. The room checklist is the same, and the rooms are done one after another on a fixed weekly or monthly schedule. Move-out rooms get the empty-room version of the same job.' },
   ],
-  reviews: [
-    ['NP', 'Nisha Prabhu', 'Palam Vihar', 'Booked one room a month for the bedroom and the bathroom. Same cleaner each time and the flat stays manageable.'],
-    ['SK', 'Sahil Khan', 'Sector 57', 'They cleaned a PG room to move-out standard between two tenants in ninety minutes, and the deposit was released without a deduction.'],
-    ['RJ', 'Ritu Jindal', 'MG Road', 'The bathroom had hard-water marks and limescale that I had given up on. Descaled properly and it looks new again.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.roomclean,
 };

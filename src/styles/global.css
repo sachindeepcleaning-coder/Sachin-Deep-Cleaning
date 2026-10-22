@@ -1796,3 +1796,13 @@ img { max-width: 100%; display: block; }
 .money-qa-a { color: var(--text); line-height: 1.7; max-width: 78ch; margin: 0; }
 .money-factors { margin-top: 8px; }
 .money-factors .section-title { margin-bottom: 12px; }
+/* The question heading on a money page. Left-aligned and quieter than a
+   section title — these are answer headings, not banner headings. */
+.money-qa-h {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 800; color: var(--ink);
+  line-height: 1.3; letter-spacing: -0.1px;
+  margin: 0 0 10px;
+}
+.money-qa-item .money-qa-h { scroll-margin-top: 90px; }

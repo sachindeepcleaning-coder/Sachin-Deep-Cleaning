@@ -4,7 +4,8 @@ import ReviewsSection from '../components/ReviewsSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, webpageSchema } from '../lib/schema.jsx';
 
 const WHO = [
   ['🏢', 'RWAs & Facility Desks', 'Cluster-day bookings for whole towers: one roster, one supervisor, one GST invoice. Pre-festival season slots for Diwali and Holi rushes.'],
@@ -34,6 +35,14 @@ export default function PartnersPage({ url }) {
   return (
     <>
       <JsonLd data={localBusinessSchema()} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'Society Cleaning Services in Gurgaon | RWA & Bulk',
+          description: 'Society and bulk cleaning in Gurgaon for RWAs and towers — cluster days, gate-pass handling, GST invoice, per-zone tick sheet. Covering every Gurgaon sector since 2015.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd data={serviceSchema({ name: 'Society & Apartment Cleaning Services in Gurgaon', description: 'Bulk RWA cluster-day bookings, villa and PG turnover cleaning across Gurgaon societies. Fixed quotes, GST invoice, pay after walkthrough.', url })} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 

@@ -36,10 +36,8 @@ export default {
     { q: 'How do you handle a pane that is already cracked?', a: 'We do not work a pane we cannot make safe, and we tell you on the survey instead of at the lift. Cracked or bonded panes are logged with photographs so you can have them replaced by your facade contractor before the next scheduled cycle.' },
     { q: 'Gurgaon me facade cleaning ka rate kya hai?', a: 'Facade aur external glass ki cleaning ₹3 per sq ft hoti hai. Zameen se upar wale kaam ke liye cradle ya boom lift lagta hai, isliye height ke hisaab se price badh jaati hai. Pehle site survey karke glass area nikalte hain, phir likhit quote milta hai.' },
   ],
-  reviews: [
-    ['AT', 'Ankit Thakur', 'DLF Phase 3', 'Our 11th-floor office frontage was grey with construction dust; the crew worked from the cradle and every pane came back spotless.'],
-    ['MB', 'Manish Bhatt', 'Golf Course Road', 'They measured the glass, showed me the written scope and finished the podium and the two upper bays on schedule.'],
-    ['SY', 'Shalini Rathore', 'Nirvana Country', 'The rain streaks on my tower’s balcony glass are gone, and they wiped the frames as well, which nobody else did.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.facade,
 };

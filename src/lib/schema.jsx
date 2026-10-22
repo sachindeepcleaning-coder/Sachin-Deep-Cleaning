@@ -502,7 +502,7 @@ export function webpageSchema({ title, description, url, dateModified }) {
     isPartOf: { '@id': IDS.website, '@type': 'WebSite', name: 'Sachin Deep Cleaning' },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.hero-sub', '.blog-lead', '.key-takeaways', 'h1'],
+      cssSelector: ['.hero-sub', '.blog-lead', '.key-takeaways', '.money-qa-a', '.money-qa-h', 'h1'],
     },
   };
 }

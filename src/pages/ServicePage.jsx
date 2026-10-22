@@ -57,6 +57,22 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
   // direct answers, and what changes the price. Guarded so a service without
   // an entry still renders.
   const money = MONEY_QA[serviceKey] || null;
+  // The FAQPage schema must cover every question the page actually shows.
+  // The money-page answers (7-8 direct-answer blocks) are the most quotable
+  // passages on the page, so they belong in the schema alongside the
+  // accordion FAQs — de-duplicated by question text.
+  const faqItems = [];
+  {
+    const seen = new Set();
+    const push = (q, a) => {
+      const k = String(q).toLowerCase().trim();
+      if (!k || seen.has(k)) return;
+      seen.add(k);
+      faqItems.push({ q, a });
+    };
+    if (money && money.qa) for (const it of money.qa) push(it.q, it.a);
+    for (const f of s.faqs) push(f.q, f.a);
+  }
   // 2026-09-20 audit: vary the shared trust blocks per service group so the
   // 13 service pages don't render byte-identical WhyUs/Guarantee/TrustBar.
   const trustVariant = trustVariantFor(serviceKey);
@@ -72,7 +88,7 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema({ name: s.name, description: plain(s.intro), url, price: s.price, image: s.image, priceRange: PRICE_RANGES[serviceKey] })} />
       <JsonLd data={webpageSchema({ title: s.name, description: plain(s.intro), url, dateModified: CONTENT_UPDATED })} />
-      <JsonLd data={faqSchema(s.faqs, url)} />
+      <JsonLd data={faqSchema(faqItems, url)} />
       {/* HowTo: the visible "How It Works" steps are the machine-readable
           process. Every service page has the step list, so it ships the
           matching HowTo node (step, tool, duration, estimated cost). */}
@@ -429,13 +445,13 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           <div className="section-inner">
             {money.qa.map((item) => (
               <div key={item.q} className="money-qa-item">
-                <h2 className="section-title" id={slugId(item.q)}>{item.q}</h2>
+                <h2 className="money-qa-h" id={slugId(item.q)}>{item.q}</h2>
                 <p className="money-qa-a">{item.a}</p>
               </div>
             ))}
             {money.factors && (
               <div className="money-factors">
-                <h2 className="section-title">{money.factors.title}</h2>
+                <h2 className="money-qa-h">{money.factors.title}</h2>
                 <ul className="blog-ul">
                   {money.factors.items.map((it) => <li key={it}>{it}</li>)}
                 </ul>

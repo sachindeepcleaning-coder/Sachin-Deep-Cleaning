@@ -36,10 +36,8 @@ export default {
     { q: 'Balcony cleaning ka kharcha kya hai?', a: 'Balcony cleaning ₹399 per balcony hai aur 45–60 minutes lagte hain. Floor pressure wash hota hai, drainage clear hoti hai aur railing, grill aur glass bhi saaf hote hain. Do balcony ek hi visit me ho jaati hain.' },
     { q: 'Do you clean the service balcony and the society common balconies?', a: 'Yes, service balconies are charged the same as a private balcony. Society common balconies, podium gardens and terrace areas are quoted per area after a site visit, because the number of columns, planters and access points changes the time a lot. A terrace in a high-rise also needs a safety harness, which we arrange as part of the booking.' },
   ],
-  reviews: [
-    ['RM', 'Rakesh Meena', 'Sector 57', 'Balcony had three years of dust and pigeon droppings. After the wash the tiles were grey again and the drain ran properly.'],
-    ['SB', 'Sunita Bhardwaj', 'DLF Phase 3', 'They cleaned the balcony and the kitchen window along with it. Both look like they were fitted last week.'],
-    ['AJ', 'Amit Jain', 'Sohna Road', 'A blocked drain was the cause of the leak into the bedroom. They cleared it and showed me what was inside the pipe.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.balconyclean,
 };

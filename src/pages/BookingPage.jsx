@@ -3,7 +3,8 @@ import TrustBar from '../components/TrustBar.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
-import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, breadcrumbSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, breadcrumbSchema, webpageSchema } from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
 
 // App-less online booking landing page: the no-app answer to
@@ -53,6 +54,14 @@ export default function BookingPage({ url }) {
   return (
     <>
       <JsonLd data={localBusinessSchema()} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'Book Cleaning Online in Gurgaon | No App Needed',
+          description: 'Book cleaning online in Gurgaon without an app — WhatsApp your BHK and society, get a fixed price and a same-day slot in 30 seconds. No advance, pay after the walkthrough.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd data={serviceSchema({ name: 'Book Cleaning Online in Gurgaon — No App Needed', description: 'Book house and deep cleaning online in Gurgaon without any app: WhatsApp booking in 30 seconds, same-day slots, fixed price, pay after walkthrough.', url, price: { label: 'Starting from', amount: '₹2,500' } })} />
       <JsonLd data={breadcrumbSchema([{ name: 'Home', url: pageUrl('index') }, { name: 'Book Cleaning Online in Gurgaon', url }])} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />

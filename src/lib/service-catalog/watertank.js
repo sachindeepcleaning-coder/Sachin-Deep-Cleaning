@@ -35,10 +35,8 @@ export default {
     { q: 'Do you clean the pipes and the motor as well?', a: 'The inlet line is flushed and the outlet screen is checked as part of the job. Motor servicing, float replacement and leak repair are separate items — we show you what we found and quote it on its own rather than bundling it into the tank clean.' },
     { q: 'Gurgaon me water tank cleaning ka kharcha kya hai?', a: 'Overhead tank ki cleaning ₹399 se aur underground tank ki ₹999 se hoti hai. Ek overhead tank ka kaam lagbhag 60–90 minute me ho jata hai. Chhote tank me dust zyada jama hota hai, isliye har 3–6 mahine me ek baar karwana behtar hai.' },
   ],
-  reviews: [
-    ['AK', 'Amit Kumar', 'Sector 45', 'Our overhead tank water had been cloudy for two years; after their clean the water ran clear and the terrace area finally stopped mosquitoes.'],
-    ['PS', 'Preeti Sharma', 'DLF Phase 3', 'They cleaned both our overhead and underground tanks in one visit and showed us the silt they pulled out — nobody had touched it since we moved in.'],
-    ['RM', 'Rakesh Malik', 'Sohna Road', 'Booked them for a whole tower before Diwali and every family had clear water again within a single morning.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.watertank,
 };

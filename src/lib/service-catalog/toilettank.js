@@ -35,10 +35,8 @@ export default {
     { q: 'Can you clean the tanks in a commercial building?', a: 'Yes. The same ₹499 per tank rate applies to staff washrooms in offices, clinics and shops, and we work after hours or early mornings so the building is never out of service. For a building with many floors, we schedule the blocks tower by tower.' },
     { q: 'Toilet tank ki cleaning ka kharcha kya hai?', a: 'Toilet tank ki cleaning ₹499 per tank hoti hai, jisme seat, flush lever, hinges aur interior ki safai aur disinfection shamil hai. Ek tank ka kaam 45–60 minute me ho jata hai. Tank band hone par paani bhi dheere bharta hai, toh flushing theek ho jati hai.' },
   ],
-  reviews: [
-    ['NP', 'Neha Pandey', 'Sector 50', 'My flush had stopped filling properly for months; after the tank clean it fills in seconds and the bowl stains are gone.'],
-    ['IJ', 'Imran Javed', 'DLF Phase 2', 'They took the tank off, cleaned underneath as well and showed me the scale they pulled out. Forty-five minutes, done properly.'],
-    ['SK', 'Sunita Kulkarni', 'Palam Vihar', 'Booked both bathrooms in my flat and my clinic’s staff washroom — same rate and the same careful work both times.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.toilettank,
 };

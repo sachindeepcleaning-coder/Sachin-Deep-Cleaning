@@ -4,7 +4,8 @@ import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
 import MapEmbed from '../components/MapEmbed.jsx';
-import { JsonLd, localBusinessSchema, faqSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, localBusinessSchema, faqSchema, webpageSchema } from '../lib/schema.jsx';
 import { waMsg, BRAND_NAME, ADDRESS_FULL } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
@@ -26,6 +27,14 @@ export default function ContactPage({ url }) {
   return (
     <>
       <JsonLd data={localBusinessSchema()} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'Book a Deep Clean in Gurgaon | Sachin Deep Cleaning',
+          description: 'Get a free quote for home deep cleaning in Gurgaon. Call or WhatsApp +91 95607 39281. All sectors served. Same-day slots available.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 
       <section className="hero">

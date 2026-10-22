@@ -35,10 +35,8 @@ export default {
     { q: 'Do you clean the parking area as well?', a: 'The parking apron is included where it forms part of the measured internal road area. Loose soil, oil spots and leaf litter are cleared, and the surface is dampened and swept. Oil marks that need degreasing are quoted as a separate add-on rather than folded into the sweep rate.' },
     { q: 'Road sweeping ka kharcha kya hai Gurgaon me?', a: 'Road aur street sweeping ₹6 per sq ft hoti hai, jisme safai, dhool hatana aur garbage bahar dump karna shamil hai. 5,000 sq ft ke internal road me 3–4 ghante lagte hain. Baarish ke baad September me ek sweep karwana sabse zyada faayda deta hai.' },
   ],
-  reviews: [
-    ['BK', 'Bhupender Kumar', 'Sector 57', 'The internal road in our complex had grey silt for months. After their sweep it looks like a fresh road surface again.'],
-    ['AG', 'Anita Gaur', 'DLF Phase 2', 'They swept before Diwali and cleared the leaves from every corner of the road, not just the middle.'],
-    ['RM', 'Rakesh Mehta', 'Cyber City', 'Our service lane takes truck dust every day. A monthly sweep with them has kept the dust off our office entry steps.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.road,
 };

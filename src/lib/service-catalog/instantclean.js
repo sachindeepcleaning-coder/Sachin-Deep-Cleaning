@@ -36,10 +36,8 @@ export default {
     { q: 'Same-day cleaning ka kharcha kya hai?', a: 'Same-day cleaning ₹999 hai aur chaar ghante ke andar team pahunch jaati hai. Bathroom, kitchen, phir kamre aur floor — sab usi visit me. Doosri baar booking karne par charge wahi rehta hai, extra nahi lagta.' },
     { q: 'Do you take instant cleaning bookings for offices?', a: 'Yes. A meeting room, a client floor or a showroom can be reset between bookings on the same day, and Cyber City and Udyog Vihar offices usually schedule it in the afternoon before an evening client. The same ₹999 slot applies, with the crew size adjusted to the number of cabins and washrooms involved.' },
   ],
-  reviews: [
-    ['NP', 'Nisha Poddar', 'Sector 43', 'Called at ten in the morning for a tenant showing at four. The flat was ready in time and the agent had nothing to complain about.'],
-    ['VB', 'Vivek Bhatia', 'DLF Phase 2', 'After a birthday party at night we booked same-day cleaning. Two people arrived at nine and the whole flat was reset by one.'],
-    ['RJ', 'Rohit Jain', 'Cyber City', 'We use them to reset the meeting floor before client calls. They work around our team without anyone having to shift desks.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.instantclean,
 };

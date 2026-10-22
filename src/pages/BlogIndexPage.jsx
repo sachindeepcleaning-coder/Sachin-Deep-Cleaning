@@ -1,8 +1,6 @@
 import { ARTICLE_INDEX } from '../generated/article-index.js';
-import {
-  JsonLd, breadcrumbSchema, collectionPageSchema, itemListSchema, serviceSchema,
-  DEEP_PRICE_RANGE,
-} from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, breadcrumbSchema, collectionPageSchema, itemListSchema, serviceSchema, DEEP_PRICE_RANGE, webpageSchema } from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
 import { SERVICE_PRICES } from '../lib/service-prices.js';
 import TrustBar from '../components/TrustBar.jsx';
@@ -43,6 +41,14 @@ export default function BlogIndexPage({ url }) {
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumb)} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'Blog — Cleaning Guides & Tips | Sachin Deep Cleaning',
+          description: 'Deep cleaning guides for Gurgaon homes: costs by BHK, cleaning frequency, kitchen chimney care, hard water removal and sofa maintenance. Expert tips.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd
         data={collectionPageSchema({
           url,
@@ -107,7 +113,7 @@ export default function BlogIndexPage({ url }) {
               return (
                 <a key={a.slug} className="blog-card" href={`${a.file}.html`}>
                   <div className="blog-card-body">
-                    <h2>{a.title}</h2>
+                    <h3>{a.title}</h3>
                     <p>{a.description}</p>
                     <span className="blog-card-link">Read guide →</span>
                   </div>
@@ -120,7 +126,11 @@ export default function BlogIndexPage({ url }) {
 
       <section className="section">
         <div className="section-inner">
-          <div className="blog-grid">
+          <div style={{ textAlign: 'center' }}>
+            <div className="section-tag">Every guide</div>
+            <h2 className="section-title">All {ARTICLE_INDEX.length} Cleaning Guides</h2>
+          </div>
+          <div className="blog-grid" style={{ marginTop: '28px' }}>
             {ARTICLE_INDEX.map((a) => (
               <a key={a.slug} className="blog-card" href={`${a.file}.html`}>
                 <img
@@ -136,7 +146,7 @@ export default function BlogIndexPage({ url }) {
                     <span>·</span>
                     <span>Guide</span>
                   </div>
-                  <h2>{a.title}</h2>
+                  <h3>{a.title}</h3>
                   <p>{a.description}</p>
                   <span className="blog-card-link">Read guide →</span>
                 </div>

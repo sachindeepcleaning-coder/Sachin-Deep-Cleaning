@@ -7,7 +7,8 @@ import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import ReelEmbed from '../components/ReelEmbed.jsx';
 import YtShortsSection from '../components/YtShortsSection.jsx';
-import { JsonLd, localBusinessSchema, faqSchema, serviceSchema } from '../lib/schema.jsx';
+import { CONTENT_UPDATED } from '../lib/site.js';
+import { JsonLd, localBusinessSchema, faqSchema, serviceSchema, webpageSchema } from '../lib/schema.jsx';
 import { RATING } from '../lib/site.js';
 import { ratingLabel } from '../lib/claims.js';
 
@@ -52,6 +53,14 @@ export default function ResidentialPage({ url }) {
   return (
     <>
       <JsonLd data={localBusinessSchema()} />
+      <JsonLd
+        data={webpageSchema({
+          title: 'Residential Cleaners Near Me Gurgaon | From ₹499',
+          description: 'Residential cleaners near you in Gurgaon from ₹499 a visit. Police-verified, same team each visit, nearest-crew dispatch to your sector, pay after the job is done.',
+          url,
+          dateModified: CONTENT_UPDATED,
+        })}
+      />
       <JsonLd data={serviceSchema({ name: 'Residential Cleaners Near Me in Gurgaon', description: 'Local, police-verified residential cleaners dispatched from the team nearest to your Gurgaon area. Pay only after cleaning.', url })} />
       <JsonLd data={faqSchema(FAQS.map(([q, a]) => ({ q, a })), url)} />
 

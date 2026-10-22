@@ -36,10 +36,8 @@ export default {
     { q: 'Kitchen platform cleaning ka kharcha kya hai?', a: 'Kitchen platform deep cleaning ₹999 hai aur 2–3 ghante lagte hain. Platform ka edge, cabinets ka front, backsplash ki tiles aur sink base — sab ek hi visit me saaf hote hain. Chimney aur hob alag se add karwa sakte hain.' },
     { q: 'Do you clean modular and wooden kitchens the same way?', a: 'The method is the same, but the products differ. Veneer and laminate panels are cleaned with a mild degreaser and wiped dry, because water sitting on a seam can lift the edge. A tiled or mosaic platform takes a stronger alkaline treatment. We check the material on the call, which is also how we tell you whether the ₹999 rate holds or needs adjusting.' },
   ],
-  reviews: [
-    ['SG', 'Sunita Grewal', 'Sector 57', 'The black layer behind the platform was worse than I expected. It is gone and the kitchen finally smells clean after cooking.'],
-    ['MK', 'Manish Kumar', 'DLF Phase 3', 'They pulled the sink base out and cleaned underneath it. I had never had that done in eight years. Worth it.'],
-    ['NA', 'Neha Arora', 'Golf Course Road', 'Granite platform cleaned without a single scratch and the cabinets look like new. They also reconnected the gas and checked it.'],
-  ],
+  // No invented testimonials. This page carries the real Google rating
+  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  reviews: [],
   price: SERVICE_PRICES.kitchenplatform,
 };

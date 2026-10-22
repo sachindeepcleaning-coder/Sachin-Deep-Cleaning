@@ -490,6 +490,65 @@ for (const file of htmlFiles) {
   }
 }
 
+// 21 — the speakable selectors must resolve.
+//
+// A speakable selector that matches nothing is a dead reference: a voice
+// engine is pointed at a block that does not exist.
+//
+// The selector list is site-wide, so a page only needs AT LEAST ONE selector
+// to match. A selector that matches on NO page in the site is dead and fails.
+//
+// The check must look for the selector as a real class or element — not as
+// text, because the selector strings are themselves present in the JSON-LD.
+{
+  const usedSomewhere = new Set();
+  for (const file of htmlFiles) {
+    const name = rel(file);
+    const html = readFileSync(file, 'utf8');
+    const m = html.match(/"speakable"\s*:\s*\{[\s\S]*?"cssSelector"\s*:\s*\[([^\]]*)\]/);
+    if (!m) continue;
+    const selectors = m[1]
+      .split(',')
+      .map((x) => x.trim().replace(/^["']|["']$/g, ''))
+      .filter(Boolean);
+
+    let matchedHere = 0;
+    for (const sel of selectors) {
+      const parts = sel.split(' ');
+      const tag = parts[parts.length - 1];
+      const cls = parts[0].startsWith('.') ? parts[0].slice(1) : null;
+      const esc = (x) => x.replace(/[-/\^$*+?.()|[\]{}]/g, '\\$&');
+      let re;
+      if (cls && parts.length > 1) {
+        // e.g. ".money-qa-item h2"
+        re = new RegExp(`<${tag}\\b[^>]*class="[^"]*\\b${esc(cls)}\\b`);
+      } else if (cls) {
+        re = new RegExp(`class="[^"]*\\b${esc(cls)}\\b`);
+      } else {
+        re = new RegExp(`<${tag}\\b`);
+      }
+      if (re.test(html)) {
+        matchedHere++;
+        usedSomewhere.add(sel);
+      }
+    }
+    if (matchedHere === 0) {
+      fail(`${name}: no speakable selector matches anything on this page`);
+    }
+  }
+  // A selector that never matches anywhere is dead weight in the schema.
+  const allSelectors = new Set();
+  for (const file of htmlFiles) {
+    const html = readFileSync(file, 'utf8');
+    const m = html.match(/"speakable"\s*:\s*\{[\s\S]*?"cssSelector"\s*:\s*\[([^\]]*)\]/);
+    if (!m) continue;
+    m[1].split(',').map((x) => x.trim().replace(/^["']|["']$/g, '')).filter(Boolean).forEach((x) => allSelectors.add(x));
+  }
+  for (const sel of allSelectors) {
+    if (!usedSomewhere.has(sel)) fail(`speakable selector "${sel}" matches nothing anywhere on the site`);
+  }
+}
+
 // ─── report ─────────────────────────────────────────────────────────────────
 console.log(`preflight: ${htmlFiles.length} pages, ${jsonLdBlocks} JSON-LD blocks, ${idTypes.size} entity ids`);
 
