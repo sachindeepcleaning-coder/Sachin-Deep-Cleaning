@@ -60,7 +60,7 @@ export const POLICE_VERIFIED_VARIANTS = {
 
 // "Oct 2026" — the short form used next to a rating on the page.
 export function ratingAsOf() {
-  const [, m, y] = RATING.asOf.split('-').map(Number);
+  const [y, m] = RATING.asOf.split('-').map(Number);
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return `${MONTHS[m - 1]} ${y}`;
 }
