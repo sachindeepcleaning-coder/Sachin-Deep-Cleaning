@@ -7338,7 +7338,7 @@ export const ARTICLES = [
       { q: 'Gurgaon me 5BHK ya villa cleaning ka kharcha kitna hai?', a: 'Gurgaon me 5BHK ya villa deep cleaning ₹9,000 fixed hai — 5 bedroom, 4-plus bath, terrace aur kitchen degrease ke saath. Photos par final quote turant milta hai.' },
     ],
     blocks: [
-      { t: 'p', x: 'Shopping for **5BHK deep cleaning price in Gurgaon** should end with one fixed figure and the villa-scale room list it buys. Five-bedroom homes carry four or more bathrooms, a terrace or multiple balconies, and living areas that smaller-BHK crews cannot finish in a day — here is the full-day-plus plan from the Gurgaon team behind [5BHK and villa deep cleaning](/full-home-deep-cleaning-5bhk-gurgaon.html), pay-after-satisfaction.' },
+      { t: 'p', x: 'Shopping for **5BHK deep cleaning price in Gurgaon** should end with one fixed figure and the villa-scale room list it buys. Five-bedroom homes carry four or more bathrooms, a terrace or multiple balconies, and living areas that smaller-BHK crews cannot finish in a day — here is the 10–12 hour plan from the Gurgaon team behind [5BHK and villa deep cleaning](/full-home-deep-cleaning-5bhk-gurgaon.html), pay-after-satisfaction.' },
       { t: 'h2', x: '5BHK Deep Cleaning Price in Gurgaon — Fixed Figure (Sep 2026)' },
       { t: 'table', head: ['Home', 'Included Rooms', 'Fixed Price', 'Time', 'Crew'], rows: [
         ['5BHK deep cleaning price in Gurgaon', '5 beds + large living/dining + kitchen + 4–5 baths + terrace/balconies', '₹9,000', '10–12 hrs', '5 cleaners'],

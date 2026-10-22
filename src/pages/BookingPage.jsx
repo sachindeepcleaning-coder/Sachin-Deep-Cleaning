@@ -205,7 +205,7 @@ export default function BookingPage({ url }) {
                     ['2 BHK deep clean', 'From \u20b94,500', '7\u20138 hrs'],
                     ['3 BHK deep clean', 'From \u20b95,500', '9\u201310 hrs'],
                     ['4 BHK deep clean', 'From \u20b96,500', 'Full day'],
-                    ['5 BHK / Villa deep clean', 'From \u20b99,000', 'Full day+'],
+                    ['5 BHK / Villa deep clean', 'From \u20b99,000', '10–12 hours'],
                     ['Kitchen / Bathroom', '\u20b91,500+ / \u20b9800+', '3\u20134 / 1.5\u20132 hrs'],
                     ['Sofa / Carpet shampoo', '\u20b9499/seat / \u20b915 sq ft', '2\u20134 hrs'],
                     ['Move-in / move-out', 'From \u20b91,999', 'Based on flat size'],
