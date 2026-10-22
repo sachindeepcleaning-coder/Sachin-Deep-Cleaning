@@ -1,20 +1,16 @@
 import QuoteForm from './QuoteForm.jsx';
-import { RATING } from '../lib/site.js';
-import { ratingLabel } from '../lib/claims.js';
 
 const PILLS = [
   'Same-Day Service',
   'Police-Verified Team',
   'Pay After Cleaning',
-  '100% Satisfaction',
   'Eco-Friendly Products',
 ];
 
 const STATS = [
-  ['5,000', '+', 'Homes Cleaned'],
-  [RATING.value, '★', 'Google Rating'],
-  ['98', '%', 'Happy Customers'],
+  ['Since 2015', '', 'Cleaning Gurgaon'],
   ['₹2,000', '+', 'Starting Price'],
+  ['Pay After', '', 'Walkthrough'],
 ];
 
 export default function Hero() {
@@ -25,7 +21,7 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <svg width="8" height="8" fill="#4ade80" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
-            Gurgaon's Trusted Deep Cleaning Service · {ratingLabel()}
+            Gurgaon's Trusted Deep Cleaning Service · Since 2015
           </div>
           <h1>
             <span className="hl">Full Home Deep Cleaning in Gurgaon</span> — <span className="hl2">Pay Only After We Finish</span>

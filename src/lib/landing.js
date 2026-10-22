@@ -71,7 +71,7 @@ export const CHECKLIST = [
   ['Bathrooms', 'Tiles, grout cleaning, toilet sanitization, mirror polish, exhaust fan, anti-bacterial treatment'],
   ['Living Areas', 'Sofa cleaning, carpet shampooing, window washing, wall wiping, floor polishing'],
   ['Hallways & Passages', 'Thorough sweeping, mopping, wall cleaning, corner dust removal'],
-  ['Final Inspection', "100% satisfaction check. Pay only when you're completely happy with the work"],
+  ['Final Inspection', "Final walkthrough before you pay. Pay only when you're completely happy with the work"],
 ];
 
 export const HOW_IT_WORKS = [
@@ -126,7 +126,7 @@ export const FAQS = [
   ['Do I really pay only after the cleaning?', 'Absolutely. We confirm the booking on call, arrive at your scheduled time, complete the cleaning, and you pay only after inspecting the results to your satisfaction. Zero advance payment — ever.'],
   ['Can I book same-day service?', 'Yes! We offer same-day service based on slot availability. Call or fill the form now and we\u2019ll confirm a same-day slot if available. Book before noon for best availability.'],
   ['Is the cleaning team background-verified?', 'Yes. Every member of our team is police-verified, identity-checked, and professionally trained. We take your home\u2019s security as seriously as the quality of cleaning.'],
-  ["What if I'm not happy with the cleaning?", "You're protected by our 100% satisfaction guarantee. If any area isn't up to your expectation, inform us within 24 hours — we'll send the team back to re-clean it for free. Simple as that."],
+  ["What if I'm not happy with the cleaning?", "If any area isn't up to your expectation, inform us within 24 hours — we'll send the team back to re-clean it for free. Simple as that."],
 ];
 
 export const AREAS_SERVED = AREAS;

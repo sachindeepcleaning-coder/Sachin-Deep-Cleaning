@@ -3,8 +3,7 @@ import TrustBar from '../components/TrustBar.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import { CONTENT_UPDATED } from '../lib/site.js';
 import { JsonLd, breadcrumbSchema, organizationSchema, personSchema, webpageSchema } from '../lib/schema.jsx';
-import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, ADDRESS_PARTS, RATING } from '../lib/site.js';
-import { ratingAsOf } from '../lib/claims.js';
+import { SITE_URL, PHONE, WHATSAPP, SOCIAL, pageUrl, waMsg, AREAS, BRAND_NAME, ADDRESS_PARTS } from '../lib/site.js';
 import { phoneCallClick, whatsappClick } from '../lib/landing.js';
 
 const TEAM = [
@@ -92,7 +91,7 @@ export default function AboutPage({ url }) {
               ['2015 — One team, one rule', 'Started in Gurgaon with a single crew: pay only after you approve the work. The rule has survived every festive season since.'],
               ['2018 — Machines over mops', 'Added hot-water extraction, scrubbers and trade descalers as hard-water and construction-dust jobs demanded real equipment.'],
               ['2021 — Society routes', 'Zone rosters across DLF, Sohna Road and Golf Course Road — nearest-team dispatch replacing cross-city travel.'],
-              ['2024 — Reviews from your sector', 'Sector-tagged Google reviews from Gurgaon customers; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
+              ['2024 — Jobs across the sector', 'Sector-tagged job references from Gurgaon customers; festive rosters (Diwali, Navratri, Dussehra) became annual fixtures.'],
               ['2026 — published BHK prices', 'Studios to villas plus offices and clinics, with published BHK prices and owner-supervised 3 BHK+ jobs.'],
             ].map(([title, desc], i) => (
               <div key={title} className="hiw-step fade-up">
@@ -222,14 +221,14 @@ export default function AboutPage({ url }) {
               <div className="hiw-desc">Serving the same sectors since 2015 — festive seasons, move-ins, renovations and all.</div>
             </div>
             <div className="hiw-step fade-up">
-              <div className="hiw-num">5k+</div>
-              <div className="hiw-title">Homes Deep Cleaned</div>
-              <div className="hiw-desc">Studios to villas, plus offices and shops across Gurugram.</div>
+              <div className="hiw-num">2015</div>
+              <div className="hiw-title">Founded in Gurgaon</div>
+              <div className="hiw-desc">One team, one scrubber and a pay-after rule that has never changed.</div>
             </div>
             <div className="hiw-step fade-up">
-              <div className="hiw-num">{RATING.value}★</div>
-              <div className="hiw-title">{RATING.count} Google Reviews</div>
-              <div className="hiw-desc">Sector-tagged, verifiable — DLF, Sohna Road, Golf Course Road and beyond.</div>
+              <div className="hiw-num">₹2,500</div>
+              <div className="hiw-title">1 BHK Fixed Price</div>
+              <div className="hiw-desc">Published rate card — 1 BHK ₹2,500, 2 BHK ₹4,500, 3 BHK ₹5,500, up to 5 BHK ₹9,000.</div>
             </div>
           </div>
         </div>
@@ -257,7 +256,7 @@ export default function AboutPage({ url }) {
             <img src="/images/cleaning-1.webp" alt="Sachin Deep Cleaning team in Gurgaon — police-verified lead specialists" width="180" height="180" style={{ borderRadius: '50%', width: 140, height: 140, objectFit: 'cover', border: '3px solid var(--primary)' }} loading="lazy" />
             <div style={{ flex: 1, minWidth: 260 }}>
               <h3 style={{ fontFamily: 'Syne', fontWeight: 800, marginBottom: 8 }}>Sachin Deep Cleaning — Founder & Lead Specialist</h3>
-              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, {RATING.value}★ from {RATING.count} Google reviews (checked {ratingAsOf()}). Trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
+              <p style={{ color: 'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>10+ years cleaning Gurgaon homes from DLF Phase 5 to Sector 92. Police-verified, owner-present on every 3 BHK+ job, trained in descaling, extraction and food-safe degreasing. <a href="/blog/best-deep-cleaning-services-gurgaon.html" style={{ color: 'var(--primary)', fontWeight: 700 }}>See how we compare →</a></p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Facebook →</a>
                 <a href={SOCIAL.instagram} target="_blank" rel="noopener" style={{ color: 'var(--primary)', fontWeight: 700 }}>Instagram →</a>

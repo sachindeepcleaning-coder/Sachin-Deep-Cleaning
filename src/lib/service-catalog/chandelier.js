@@ -35,8 +35,7 @@ export default {
     { q: 'Do you clean the ceiling fans and light fittings as well?', a: 'Yes, high-reach light fittings are handled in the same visit, and ceiling fans can be added so the blades and the canopy are wiped with the same crew and the same setup. A [deep clean](/deep-cleaning-services-in-gurgaon.html) covers the fan blades and the switchboards at the same level.' },
     { q: 'Chandelier cleaning ka kharcha kya hai?', a: 'Chandelier aur high-reach cleaning ₹1,499 per unit hoti hai, jisme crystal, glass aur high-reach access shamil hai. Ek fixture 60–90 minute me saaf hota hai. Agar fixture 12th floor par hai aur rope access chahiye, toh uska price alag quote hota hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.chandelier,
 };

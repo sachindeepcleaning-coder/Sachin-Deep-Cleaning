@@ -36,8 +36,7 @@ export default {
     { q: 'Sq ft ke hisaab se cleaning ka rate kya hai?', a: 'Full home deep cleaning ₹3 per sq ft hai. 1 BHK lagbhag 450 sq ft, 2 BHK 850 sq ft aur 3 BHK 1,250 sq ft hota hai. Measurement walkthrough ke time hoti hai aur total pehle se confirm kar diya jata hai.' },
     { q: 'Do you charge extra for difficult access?', a: 'The rate covers a home in normal condition. It changes if the property has not been cleaned for a long time and needs heavy scrubbing, if there are more than two floors without a working lift, or if you add areas that were not in the original scope, such as a terrace. Each addition is quoted as a line before we start, never on the invoice.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.sqftrate,
 };

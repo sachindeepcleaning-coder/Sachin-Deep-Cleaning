@@ -37,8 +37,7 @@ export default {
     { q: 'Do you move the machine out of the alcove?', a: 'We pull the machine forward, clean the floor and wall behind it where it sits, and put it back exactly where it was. If it is stacked under a counter, the counter has to be lifted and the hoses disconnected first, and that extra effort is quoted before the job starts. Corner installs with very tight clearance take a little longer.' },
     { q: 'Do you clean the dryer or the AC filter too?', a: 'The washing machine only. Dryer duct cleaning and AC filter cleaning are separate services because they involve different equipment and different risk. If you want all three in one visit, ask for them as add-ons on the booking call and we send one crew with the right kit.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.washingmachine,
 };

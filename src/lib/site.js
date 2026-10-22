@@ -76,21 +76,7 @@ export const ADDRESS_FULL =
 // Coordinates — one place, used by the meta geo tags and the JSON-LD.
 export const GEO = { latitude: 28.4538, longitude: 77.0782 };
 
-// Google rating — copy from the live GBP, never estimate. Every on-page claim,
-// the JSON-LD and llms.txt read from here; scripts/content-lint.mjs fails the
-// build if copy states a different review count.
-//
-// [VERIFY] Re-check this against the live GBP before each deploy. If the live
-// count has moved, update `count` here and nothing else — do NOT edit the
-// number anywhere else, and never invent a count.
-export const RATING = {
-  value: '4.4',
-  count: 80,
-  asOf: '2026-10-09',
-  source: 'Google Business Profile',
-};
-
-// Date the money-page content (prices, rating, address) was last reviewed.
+// Date the money-page content (prices, address) was last reviewed.
 // Bump this ONLY when that content really changes. It drives the visible
 // "Updated" line, WebPage.dateModified and sitemap lastmod for non-article pages.
 export const CONTENT_UPDATED = '2026-10-09';

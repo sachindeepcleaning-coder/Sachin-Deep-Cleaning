@@ -36,8 +36,7 @@ export default {
     { q: 'Construction ke baad cleaning ka kharcha kya hai?', a: 'Post-construction cleaning ₹2,499 se hoti hai, 1 BHK ke liye jo 600 sq ft tak ho. Time lagta hai 1–2 din, kyunki kaam teen phase me hota hai — debris, high surfaces aur final HEPA dust. Payment walkthrough ke baad hota hai.' },
     { q: 'Can you clean a flat that is already occupied?', a: 'Yes, and most of our renovation work is inside occupied homes. We run the three phases room by room, one room at a time, so the family can keep using the rest of the flat, and we sheet the furniture that cannot be moved. Full-home deep cleaning can be combined with it if you want the whole property reset at the same time.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.postconstruction,
 };

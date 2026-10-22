@@ -287,6 +287,35 @@ for (const file of htmlFiles) {
   }
 }
 
+// 13b — no Google rating, star score or review count is published.
+//
+// The Google listing cannot be renamed, so the site does not cite it: there is
+// no rating value, no review count and no aggregateRating anywhere in the
+// built output — not in the visible copy, not in the JSON-LD and not in the
+// llms.txt files an answer engine reads.
+{
+  const RATING_CLAIMS = [
+    { re: /aggregateRating/i, why: 'aggregateRating in the JSON-LD' },
+    { re: /ratingValue/i, why: 'ratingValue in the JSON-LD' },
+    { re: /reviewCount/i, why: 'reviewCount in the JSON-LD' },
+    { re: /\b4\.4\b/, why: 'Google rating value' },
+    { re: /\b80 reviews\b/i, why: 'Google review count' },
+    { re: /google review/i, why: 'Google review claim' },
+    { re: /google rating/i, why: 'Google rating claim' },
+  ];
+  const scan = [...htmlFiles.map((f) => [rel(f), readFileSync(f, 'utf8')])];
+  for (const llms of ['llms.txt', 'llms-full.txt']) {
+    const p = resolve(distDir, llms);
+    if (existsSync(p)) scan.push([llms, readFileSync(p, 'utf8')]);
+  }
+  for (const [name, html] of scan) {
+    for (const { re, why } of RATING_CLAIMS) {
+      const m = html.match(re);
+      if (m) fail(`${name}: ${why} ("${m[0].slice(0, 60)}")`);
+    }
+  }
+}
+
 // 14 — the brand identity is identical on every page
 {
   const identity = new Map();
@@ -428,7 +457,7 @@ for (const file of htmlFiles) {
   const llms = readFileSync(resolve(distDir, 'llms.txt'), 'utf8');
   if (!llms.includes('/facts.html')) fail('llms.txt: facts.html is not listed');
   if (!llms.includes('llms-full.txt')) fail('llms.txt: no pointer to llms-full.txt');
-  if (!/Google rating:/.test(llms)) fail('llms.txt: no facts block');
+  if (!/## Facts/.test(llms)) fail('llms.txt: no facts block');
 
   // Every service in the money-page registry must have a real page. The
   // mapping comes from pages.config.mjs, because the original 9 services

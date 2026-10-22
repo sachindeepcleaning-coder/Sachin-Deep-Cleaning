@@ -226,7 +226,7 @@ export const pages = [
   {
     file: 'facts', page: 'facts',
     title: 'Facts & Price List — Sachin Deep Cleaning Gurgaon',
-    description: 'The verifiable facts about Sachin Deep Cleaning in Gurgaon: price card by BHK, what is and is not included, service area, hours, address and Google rating.',
+    description: 'The verifiable facts about Sachin Deep Cleaning in Gurgaon: price card by BHK, what is and is not included, service area, hours and the shop address.',
   },
   {
     file: 'all-pages', page: 'allpages',

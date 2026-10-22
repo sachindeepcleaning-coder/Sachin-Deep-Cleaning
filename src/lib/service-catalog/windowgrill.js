@@ -35,8 +35,7 @@ export default {
     { q: 'How often should window grills be cleaned?', a: 'Every 3–6 months for most Gurgaon flats, and twice a year for homes facing a dusty road. The build-up you can see from inside the room is usually a third of what is packed into the mesh, so cleaning it before the mesh starts holding damp and rusting the joints is worth it.' },
     { q: 'Window grill cleaning ka kharcha kya hai?', a: 'Window grill cleaning ₹399 per window hoti hai, jisme grill, mesh aur sill teeno shamil hain. Ek window ka kaam 30–45 minute me ho jata hai. Fourth floor se upar wale grill me balcony access chahiye hota hai, isliye pehle site visit ke baad price confirm hoti hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.windowgrill,
 };

@@ -36,8 +36,7 @@ export default {
     { q: 'Can you handle a one-time deep clean of the common area?', a: 'Yes. A one-time reset of the lobby, stairs and clubhouse is quoted separately from the recurring visit, and it is the right booking before a festival, a handover or a new tenant move-in. After that, a weekly visit keeps the build-up from returning.' },
     { q: 'Society ke common area ki cleaning ka kharcha kya hai?', a: 'Common area cleaning ₹499 per visit hoti hai — lobby, seedhiyan, lift lobby, parking aur clubhouse sab shamil hai. Daily ya weekly plan area aur shift hours ke hisaab se quote hota hai. Har visit ke liye same team aati hai, isliye residents ko routine ki aadat ho jaati hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.commonarea,
 };

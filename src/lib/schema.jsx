@@ -23,7 +23,7 @@
 
 import {
   PHONE, SITE_URL, BRAND_NAME, MAPS_URL, SAME_AS,
-  ADDRESS_PARTS, GEO, RATING,
+  ADDRESS_PARTS, GEO,
 } from './site.js';
 import { SERVICE_PRICES, PRICE_BY_BHK } from './service-prices.js';
 import { imageDims } from './image-dims.js';
@@ -163,13 +163,6 @@ export function localBusinessSchema() {
       '@type': 'GeoCoordinates',
       latitude: GEO.latitude,
       longitude: GEO.longitude,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: RATING.value,
-      reviewCount: String(RATING.count),
-      bestRating: '5',
-      worstRating: '1',
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -540,7 +533,7 @@ export function personSchema() {
     sameAs: [...id.sameAs],
     worksFor: { '@id': IDS.organization, '@type': 'Organization', name: id.name },
     knowsAbout: ['Deep Cleaning', 'House Cleaning', 'Bathroom Descaling', 'Kitchen Degreasing', 'Gurgaon'],
-    description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, rated ${RATING.value} on Google from ${RATING.count} reviews, police-verified team lead.`,
+    description: `Founder of Sachin Deep Cleaning, 10+ years hands-on deep cleaning in Gurgaon — DLF to Sohna Road, police-verified team lead, published fixed BHK prices and pay after the walkthrough.`,
   };
 }
 

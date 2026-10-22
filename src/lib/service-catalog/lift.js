@@ -36,8 +36,7 @@ export default {
     { q: 'Do you clean service lifts and goods lifts?', a: 'Yes. Service and goods lifts get the same cabin, landing and shaft scope, with the added wear of trolleys and loads. The rate is the same ₹1,499 per lift, and floors with heavy industrial use are quoted with a longer service window.' },
     { q: 'Lift cleaning ka kharcha kya hai Gurgaon me?', a: 'Lift aur elevator cleaning ₹1,499 per lift hoti hai — cabin, landing floors aur shaft teeno shamil hain. 8–10 floors wale lift me kaam lagbhag 2–3 ghante me ho jata hai. Machine room aur motor cleaning lift maintenance company karti hai, hum use touch nahi karte.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.lift,
 };

@@ -36,8 +36,7 @@ export default {
     { q: 'Do you take the waste out?', a: 'Yes. Daily waste is segregated into wet and dry, bagged and taken out at the end of the visit, and the bins are washed with fresh liners. Bulk or construction debris is not part of a sweeper visit and is quoted separately.' },
     { q: 'Sweeper aur mop cleaning ka kharcha kya hai?', a: 'Ek sweeper visit ₹499 ka hota hai, jisme daily sweeping, mopping, dust aur bin change sab shamil hai. Daily ya weekly plan area aur shift hours ke hisaab se quote hota hai, aur us plan me per-visit cost kam ho jati hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.sweeper,
 };

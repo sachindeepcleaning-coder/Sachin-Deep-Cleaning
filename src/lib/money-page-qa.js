@@ -544,7 +544,7 @@ export const MONEY_QA = {
       },
       {
         q: 'How do you calculate deep cleaning cost per square foot?',
-        a: 'The published rate is ₹3–₹6 per square foot depending on size and finish, and the BHK packages are the fixed equivalents. A 1 BHK of roughly 450 sq ft at ₹2,500 works out near ₹5 per sq ft, while a 3 BHK of about 1,250 sq ft at ₹5,500 lands near ₹4.4. We quote the package, not the arithmetic.',
+        a: 'The published rate is ₹3–₹6 per square foot depending on size and finish, and the BHK packages are the fixed equivalents. A 1 BHK of roughly 450 sq ft at ₹2,500 works out near ₹5 per sq ft, while a 3 BHK of about 1,250 sq ft at ₹5,500 lands a little over ₹4 per sq ft. We quote the package, not the arithmetic.',
       },
     ],
     factors: {

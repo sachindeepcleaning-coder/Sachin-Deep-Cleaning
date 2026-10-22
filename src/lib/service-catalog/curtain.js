@@ -35,8 +35,7 @@ export default {
     { q: 'Curtain cleaning ka kharcha aur time kya hai?', a: 'Curtain cleaning ₹499 per set hai, jisme chaar panels tak cover ho jaate hain. Ek set me 30–40 minutes lagte hain aur poore ghar me 3–4 ghante. Panels hum khud utaar ke wapas lagate hain.' },
     { q: 'Can you clean blinds and drapes in the same visit?', a: 'Yes, vertical blinds and roller blinds are wiped and sanitised in the same visit, and they are priced separately from fabric curtains because they are cleaned in place. Drapes, which are heavier than curtains, follow the same extraction method at a slightly higher per-panel rate.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.curtain,
 };

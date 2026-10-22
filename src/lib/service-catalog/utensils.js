@@ -35,8 +35,7 @@ export default {
     { q: 'Can you clean utensils for a commercial kitchen?', a: 'Yes. Restaurant and cloud-kitchen vessels in MG Road, Sohna Road and Cyber City are quoted on the count and the volume of the carbon, and the work is scheduled outside the cooking hours. Continuous-kitchen vessels need a weekly arrangement rather than an occasional reset.' },
     { q: 'Kitchen utensils ki safai ka kharcha kya hai?', a: 'Utensils cleaning ₹409 se shuru hoti hai, jisme kadhai, tawa, bartan, cooker aur cutlery shamil hai. 20–25 pieces ka kaam lagbhag 90 minute me ho jata hai. Jo bartan bahut purana ho aur usme jaldi jal ke pakka hua ho, uski cleaning me thoda zyada time lagta hai.' },
   ],
-  // No invented testimonials. This page carries the real Google rating
-  // (4.4 from 80, checked 2026-10-09) and a sourced price card instead.
+  // No invented testimonials. This page carries a sourced price card instead.
   reviews: [],
   price: SERVICE_PRICES.utensils,
 };

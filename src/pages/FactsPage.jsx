@@ -5,11 +5,10 @@
 // a fact with a source, and every number is imported — never typed in.
 //
 // Sources:
-//   src/lib/site.js         → phone, address, coordinates, rating, areas
+//   src/lib/site.js         → phone, address, coordinates, areas
 //   src/lib/service-prices.js → every price on the page
 //   src/lib/services.js     → the deep-clean scope and the 4-step method
 //   src/lib/schema.jsx      → entity facts the schema publishes
-//   src/lib/claims.js       → the canonical rating label
 //
 // If a fact is not in one of those files, it is not printed. Where a figure
 // exists in two places on the site but has no single source yet, the page
@@ -17,12 +16,11 @@
 
 import {
   BRAND_NAME, PHONE, PHONE_TEL, WHATSAPP, WHATSAPP_NUMBER, ADDRESS_FULL,
-  GEO, RATING, CONTENT_UPDATED, AREAS, MAPS_URL, SAME_AS,
+  GEO, CONTENT_UPDATED, AREAS, MAPS_URL, SAME_AS,
   formatDate, pageUrl,
 } from '../lib/site.js';
 import { SERVICE_PRICES, PRICE_BY_BHK, SQFT_BY_BHK } from '../lib/service-prices.js';
 import { getService } from '../lib/services.js';
-import { ratingLabel } from '../lib/claims.js';
 import {
   JsonLd, faqSchema, webpageSchema, serviceSchema,
   FOUNDING_YEAR, FOUNDER_NAME, OPENING_HOURS, PAYMENT_ACCEPTED, DEEP_PRICE_RANGE,
@@ -121,8 +119,8 @@ const FAQS = [
     a: 'Our 3-Day Service Promise covers every booking: if an area falls short we re-clean it free within 24 hours, and if it is still not right you get a full refund. Flag it during the walkthrough.',
   },
   {
-    q: 'What is the Google rating, and where is the business?',
-    a: `${BRAND_NAME} is rated ${RATING.value} ★ on Google (${RATING.count} reviews · checked ${formatDate(RATING.asOf)}, ${RATING.source}). The address is ${ADDRESS_FULL}, and the business has operated in Gurgaon since ${FOUNDING_YEAR}.`,
+    q: 'Where is the business, and when is it open?',
+    a: `The address is ${ADDRESS_FULL}. The shop is open ${HOURS_TEXT}, and crews are dispatched from there to every sector of Gurgaon. The business has operated in Gurgaon since ${FOUNDING_YEAR}.`,
   },
   {
     q: 'How do I book, and what are the opening hours?',
@@ -298,7 +296,7 @@ export default function FactsPage({ url }) {
           <div className="section-tag">Business record</div>
           <h2 className="section-title">Business facts</h2>
           <p className="section-sub" style={{ maxWidth: '780px' }}>
-            The name, address, number, coordinates and rating a customer or an answer engine
+            The name, address, number, coordinates and hours a customer or an answer engine
             needs to identify this business.
           </p>
 
@@ -335,9 +333,6 @@ export default function FactsPage({ url }) {
 
             <dt>Opening hours</dt>
             <dd>{HOURS_TEXT}</dd>
-
-            <dt>Google rating</dt>
-            <dd>{ratingLabel()}</dd>
 
             <dt>Google Maps</dt>
             <dd>
