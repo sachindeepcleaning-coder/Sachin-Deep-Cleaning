@@ -506,7 +506,18 @@ for (const file of htmlFiles) {
     }
   }
   // Pages that are allowed to have no inbound link.
-  const orphansAllowed = new Set(['404.html', 'google4bc4a68e1ff9b7f5.html']);
+  // Redirect stubs are deliberately link-less: they exist so stale external
+  // URLs and bookmarks still land on the right page (noindex + meta refresh).
+  // Their inbound links were intentionally rewritten to the redirect target.
+  const { pages: pagesForOrphans } = await import('../pages.config.mjs');
+  const REDIRECT_PAGES = new Set(
+    pagesForOrphans.filter((p) => p.redirectTo).map((p) => `${p.file}.html`)
+  );
+  const orphansAllowed = new Set([
+    '404.html',
+    'google4bc4a68e1ff9b7f5.html',
+    ...REDIRECT_PAGES,
+  ]);
   const orphans = [];
   for (const file of htmlFiles) {
     const name = rel(file);

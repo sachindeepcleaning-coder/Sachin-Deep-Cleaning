@@ -136,7 +136,7 @@ const GUIDES = [
   { serviceKey: 'carpet', title: 'Carpet Shampoo Cleaning Udyog Vihar — ₹18/Sq Ft', href: '/blog/carpet-shampoo-cleaning-udyog-vihar.html' },
   { serviceKey: 'chairclean', title: 'Office Chair Cleaning Udyog Vihar — ₹199/Chair', href: '/blog/chair-cleaning-udyog-vihar.html' },
   { serviceKey: 'office', title: 'Office Bathroom Cleaning Udyog Vihar — ₹800/Bath', href: '/blog/office-bathroom-cleaning-udyog-vihar.html' },
-  { serviceKey: 'office', title: 'Sector 44 Office Deep Cleaning — Full Guide', href: '/blog/sector-44-office-deep-cleaning-gurgaon.html' },
+  { serviceKey: 'office', title: 'Office Deep Cleaning in Sector 44 & Corporate Hubs', href: '/blog/office-deep-cleaning-sector-44-gurgaon.html' },
 ];
 
 export default function RelatedGuides({ serviceKey }) {
