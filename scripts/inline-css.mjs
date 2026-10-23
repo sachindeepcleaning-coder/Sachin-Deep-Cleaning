@@ -20,6 +20,31 @@ const root = resolve(__dirname, '..');
 const distDir = resolve(root, 'dist');
 const assetsDir = resolve(distDir, 'assets');
 
+// The two above-the-fold fonts are embedded as base64 data URLs inside the
+// inlined stylesheet. The webfont swap was the single biggest CLS source on
+// desktop (the H1 re-wrapped when Syne arrived ~1s after first paint, CLS
+// 0.16) and it also delayed the LCP text on mobile. With the fonts inside the
+// render-blocking CSS the real typeface is available at the very first paint:
+// no swap, no reflow, no late LCP candidate. The italic face (below-the-fold
+// reviews only) stays a normal file so it is never paid for above the fold.
+const INLINE_FONTS = ['/fonts/dm-sans-400.woff2', '/fonts/syne-800.woff2'];
+
+function inlineFontUrls(css) {
+  for (const fontPath of INLINE_FONTS) {
+    const file = resolve(distDir, '.' + fontPath);
+    let data;
+    try {
+      data = readFileSync(file);
+    } catch {
+      console.warn(`inline-css: font ${fontPath} not found, left as URL`);
+      continue;
+    }
+    const dataUrl = `data:font/woff2;base64,${data.toString('base64')}`;
+    css = css.split(`url(${fontPath})`).join(`url(${dataUrl})`);
+  }
+  return css;
+}
+
 function collectHtmlFiles(dir, acc = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const full = join(dir, entry.name);

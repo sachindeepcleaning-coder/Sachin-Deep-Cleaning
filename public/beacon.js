@@ -325,14 +325,18 @@
 
   // Document height is cached and refreshed at most every 2s. Reading
   // scrollHeight on every scroll event forced a synchronous layout on each
-  // scroll (Lighthouse "forced reflow", ~100ms+ on mobile).
+  // scroll (Lighthouse "forced reflow", ~100ms+ on mobile). Even the *first*
+  // read used to run while the document was still parsing — one more forced
+  // layout on the critical path. All geometry reads now wait for the page to
+  // be idle/loaded; the scroll handler itself only reads scroll offsets
+  // (which never trigger layout).
   var docHeight = 0;
   var viewportHeight = 0;
   var lastMeasure = 0;
 
-  function measure(force) {
+  function measure() {
     var now = Date.now();
-    if (!force && now - lastMeasure < 2000) return;
+    if (now - lastMeasure < 2000) return;
     lastMeasure = now;
     try {
       docHeight = Math.max(
@@ -346,7 +350,6 @@
 
   function onScroll() {
     try {
-      measure(false);
       var h = docHeight;
       var vh = viewportHeight;
       var top = window.pageYOffset || document.documentElement.scrollTop || 0;
@@ -354,16 +357,32 @@
       if (pct > maxScroll) maxScroll = Math.min(100, Math.max(0, pct));
     } catch (e) {}
   }
+
+  function arm() {
+    if (document.readyState === "complete") {
+      measure();
+      onScroll();
+    } else {
+      window.addEventListener(
+        "load",
+        function () {
+          measure();
+          onScroll();
+        },
+        { once: true }
+      );
+    }
+  }
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", function () {
-    measure(true);
+    measure();
     onScroll();
   }, { passive: true });
-  window.addEventListener("load", function () {
-    measure(true);
-  }, { once: true });
-  if (document.readyState === "complete") measure(true);
-  else onScroll();
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(arm, { timeout: 3000 });
+  } else {
+    setTimeout(arm, 0);
+  }
 
   function trackField(t) {
     try {

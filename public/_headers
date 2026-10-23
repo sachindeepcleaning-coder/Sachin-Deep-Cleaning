@@ -40,5 +40,22 @@
 /*.html
   Cache-Control: public, max-age=600, must-revalidate
 
+# If the site stays on GitHub Pages and you add Cloudflare in front instead of
+# moving hosts, reproduce these rules as Cloudflare "Cache Rules":
+#
+#   Cache Rule 1 (hashed build assets):
+#     When:  Hostname equals sachindeepcleaning.shop  AND  URI path starts with /assets/  OR  URI path starts with /fonts/
+#     Then:  Cache Eligibility = Eligible  ·  Browser TTL = 1 year  ·  Edge TTL = 1 year  ·  Cache Key = ignore query string
+#   Cache Rule 2 (images — content can change on redeploy):
+#     When:  Hostname equals sachindeepcleaning.shop  AND  URI path starts with /images/
+#     Then:  Cache Eligibility = Eligible  ·  Browser TTL = 30 days  ·  Edge TTL = 30 days
+#   Cache Rule 3 (HTML — keep the 10-minute proxy TTL so a deploy goes live fast):
+#     When:  Hostname equals sachindeepcleaning.shop  AND  URI path ends with .html  OR  URI path equals /
+#     Then:  Browser TTL = 10 minutes  ·  Edge TTL = 10 minutes
+#
+# Cloudflare then serves the hashed /assets and /fonts with
+# `cache-control: max-age=31536000, immutable` to the browser, and /images with
+# 30 days — matching this file.
+
 /.well-known/*
   Cache-Control: public, max-age=3600

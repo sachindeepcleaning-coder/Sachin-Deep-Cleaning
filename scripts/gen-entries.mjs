@@ -237,8 +237,8 @@ ${preload}  <link rel="preconnect" href="https://www.googletagmanager.com" cross
   <link rel="dns-prefetch" href="https://www.clarity.ms" />
   ${p.file === 'thank-you' ? tyGuard + '\n  ' + gtmStd : gtm}
   ${clarity}
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/dm-sans-400.woff2" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/syne-800.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin fetchpriority="high" href="/fonts/dm-sans-400.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin fetchpriority="high" href="/fonts/syne-800.woff2" />
   <link rel="stylesheet" href="/src/styles/global.css" />
   <script src="/tracking.js" defer></script>
 <script src="/beacon.js" defer></script>
