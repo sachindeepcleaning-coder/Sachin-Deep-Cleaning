@@ -283,6 +283,7 @@ export const pages = [
   },
   {
     file: 'blog/full-home-deep-cleaning-gurgaon-guide', page: 'article',
+    redirectTo: 'blog/full-home-deep-cleaning-packages-gurgaon',
     title: "Full Home Deep Cleaning in Gurgaon: Cost & Checklist",
     description: "Full home deep cleaning in Gurgaon from ₹2,500 (1BHK) to ₹9,000 (villa): the room-by-room checklist, how long it takes and the walkthrough before you pay.",
   },
@@ -308,6 +309,7 @@ export const pages = [
   },
   {
     file: 'blog/bathroom-deep-cleaning-services-gurgaon-guide', page: 'article',
+    redirectTo: 'blog/bathroom-deep-cleaning-gurgaon-best',
     title: "Bathroom Deep Cleaning in Gurgaon from ₹800/Bath",
     description: "Bathroom deep cleaning in Gurgaon at ₹800 per bathroom: acid descaling, grout scrubbing, commode sanitisation and glass polish — 45–60 minutes per bath.",
   },
@@ -343,26 +345,31 @@ export const pages = [
   },
   {
     file: 'blog/best-home-cleaning-services-gurgaon', page: 'article',
+    redirectTo: 'blog/home-deep-cleaning-services-gurgaon',
     title: "Best Home Cleaning Services in Gurgaon: 5 Compared",
     description: "Five home cleaning services in Gurgaon compared on visit pricing, staff checks, deep-clean depth and rescheduling terms — with the honest differences.",
   },
   {
     file: 'blog/full-house-cleaning-checklist-gurgaon', page: 'article',
+    redirectTo: 'blog/full-home-deep-cleaning-packages-gurgaon',
     title: "Full House Cleaning Checklist for Gurgaon Homes",
     description: "The 40-point checklist our crews tick room by room in Gurgaon homes — use it to audit any cleaning service before you pay the final instalment.",
   },
   {
     file: 'blog/deep-cleaners-near-me-gurgaon', page: 'article',
+    redirectTo: 'blog/deep-cleaning-near-me-gurgaon',
     title: "Hiring Deep Cleaners Near You in Gurgaon: a Vetting Guide",
     description: "How to vet deep cleaners in Gurgaon: police verification, equipment, written scope and pay-after terms — plus the red flags that predict a bad job.",
   },
   {
     file: 'blog/residential-cleaning-services-near-me-gurgaon', page: 'article',
+    redirectTo: 'blog/deep-cleaning-near-me-gurgaon',
     title: "Residential Cleaning Services in Gurgaon: Your Options",
     description: "Every type of residential cleaning in Gurgaon — one-time deep, weekly upkeep, move-out, festive — with prices and the right choice for each situation.",
   },
   {
     file: 'blog/home-cleaning-services-near-me-gurgaon', page: 'article',
+    redirectTo: 'blog/deep-cleaning-near-me-gurgaon',
     title: "What Home Cleaning Near You in Gurgaon Should Cost",
     description: "What home cleaning near you in Gurgaon should cost — ₹499 visits, ₹2,500+ deep cleans — and the three questions that separate pros from hourly gig workers.",
   },
@@ -408,6 +415,7 @@ export const pages = [
   },
   {
     file: 'blog/best-office-deep-cleaning-services-gurgaon', page: 'article',
+    redirectTo: 'blog/office-deep-cleaning-gurgaon-guide',
     title: "Best Office Deep Cleaning Gurgaon | Top 5, From ₹5,000",
     description: "Five office deep cleaning providers in Gurgaon compared on per-sq-ft rates, after-hours crews, AMC terms and washroom work — and who wins what.",
   },
@@ -466,6 +474,7 @@ export const pages = [
   },
   {
     file: 'blog/kitchen-cleaning-price-gurgaon-chimney', page: 'article',
+    redirectTo: 'blog/kitchen-deep-cleaning-cost-gurgaon',
     title: "Kitchen Cleaning Price in Gurgaon | ₹1,500, Chimney In",
     description: "Kitchen cleaning in Gurgaon from ₹1,500 with the chimney included — the size brackets, what pushes it to ₹2,500, and the 2-hour process behind the price.",
   },
@@ -554,11 +563,13 @@ export const pages = [
   // ── guide to answers better than Urban/a marketplace listing/a national aggregator for bare "full home deep cleaning" (search results #4) & a company site #6 ──
   {
     file: 'blog/full-home-deep-cleaning', page: 'article',
+    redirectTo: 'blog/full-home-deep-cleaning-packages-gurgaon',
     title: "Full Home Deep Cleaning in Gurgaon (2026) | ₹2,500–₹9,000",
     description: "Full home deep cleaning in Gurgaon from ₹2,500 (1 BHK) to ₹9,000 (villa) — the room-by-room checklist, how long it takes and the walkthrough before you pay",
   },
   {
     file: 'blog/home-deep-cleaning-service-gurgaon', page: 'article',
+    redirectTo: 'blog/home-deep-cleaning-services-gurgaon',
     title: "Home Deep Cleaning Service in Gurgaon: Book in 5 Minutes",
     description: "WhatsApp three photos and get a fixed 1–5BHK deep cleaning price in five minutes — checklist, timing and pay-after-approval terms in writing.",
   },
@@ -575,6 +586,7 @@ export const pages = [
   },
   {
     file: 'blog/home-cleaning-services-gurgaon', page: 'article',
+    redirectTo: 'blog/home-deep-cleaning-services-gurgaon',
     title: "Home Cleaning Services in Gurgaon | From ₹499 a Visit",
     description: "Home cleaning services in Gurgaon from ₹499 a visit — studio ₹499, 1 BHK ₹799, 2 BHK ₹1,199, 3 BHK ₹1,699. Weekly, bi-weekly and monthly plans.",
   },
@@ -616,11 +628,13 @@ export const pages = [
   },
   {
     file: 'blog/office-bathroom-cleaning-udyog-vihar', page: 'article',
+    redirectTo: 'blog/office-deep-cleaning-udyog-vihar',
     title: "Office Bathroom Cleaning in Udyog Vihar — ₹800/Bath",
     description: "Office bathroom cleaning in Udyog Vihar at ₹800 a bath: urinal descaling, drain and trap treatment, high-touch disinfection — 1–2 hours per bath.",
   },
   {
     file: 'blog/commercial-office-cleaning-udyog-vihar', page: 'article',
+    redirectTo: 'blog/office-deep-cleaning-udyog-vihar',
     title: "Commercial Office Cleaning in Udyog Vihar: AMC & Deep",
     description: "Commercial office cleaning in Udyog Vihar: daily housekeeping AMCs priced per sq ft plus quarterly deep cleans from ₹3,999 — after-hours, survey-quoted.",
   },
@@ -652,6 +666,7 @@ export const pages = [
   },
   {
     file: 'blog/home-cleaning-service-guide', page: 'article',
+    redirectTo: 'blog/home-deep-cleaning-services-gurgaon',
     title: "Home Cleaning Service: What It Includes & Costs",
     description: "What a home cleaning service includes, the four booking types, India-typical costs per visit, and how to choose between a service, a maid and a deep clean.",
   },

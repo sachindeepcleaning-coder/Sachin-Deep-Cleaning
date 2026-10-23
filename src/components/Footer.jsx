@@ -31,7 +31,7 @@ export default function Footer() {
         <a href="/blog/diwali-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Diwali Cleaning Gurgaon</a>
         <a href="/blog/full-home-deep-cleaning-packages-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Full Home Packages</a>
         <a href="/blog/bathroom-deep-cleaning-gurgaon-best.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Bathroom Best ₹800</a>
-        <a href="/blog/kitchen-cleaning-price-gurgaon-chimney.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Kitchen Price Chimney</a>
+        <a href="/blog/kitchen-deep-cleaning-cost-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>Kitchen Price Chimney</a>
         <a href="/blog/2bhk-deep-cleaning-price-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>2BHK Price</a>
         <a href="/blog/3bhk-deep-cleaning-price-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>3BHK Price</a>
         <a href="/blog/dlf-phase-3-deep-cleaning-gurgaon.html" style={{ color: '#8FA4BE', textDecoration: 'none', marginRight: '16px' }}>DLF Phase 3</a>

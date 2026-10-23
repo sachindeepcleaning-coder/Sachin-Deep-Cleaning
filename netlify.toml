@@ -265,11 +265,6 @@
   status = 301
 
 [[redirects]]
-  from = "/blog/full-home-deep-cleaning-gurgaon-guide"
-  to = "/blog/full-home-deep-cleaning-gurgaon-guide.html"
-  status = 301
-
-[[redirects]]
   from = "/blog/house-cleaning-services-gurgaon-guide"
   to = "/blog/house-cleaning-services-gurgaon-guide.html"
   status = 301
@@ -287,11 +282,6 @@
 [[redirects]]
   from = "/blog/office-deep-cleaning-gurgaon-guide"
   to = "/blog/office-deep-cleaning-gurgaon-guide.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/bathroom-deep-cleaning-services-gurgaon-guide"
-  to = "/blog/bathroom-deep-cleaning-services-gurgaon-guide.html"
   status = 301
 
 [[redirects]]
@@ -322,31 +312,6 @@
 [[redirects]]
   from = "/blog/commercial-cleaning-services-gurgaon"
   to = "/blog/commercial-cleaning-services-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/best-home-cleaning-services-gurgaon"
-  to = "/blog/best-home-cleaning-services-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/full-house-cleaning-checklist-gurgaon"
-  to = "/blog/full-house-cleaning-checklist-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/deep-cleaners-near-me-gurgaon"
-  to = "/blog/deep-cleaners-near-me-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/residential-cleaning-services-near-me-gurgaon"
-  to = "/blog/residential-cleaning-services-near-me-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/home-cleaning-services-near-me-gurgaon"
-  to = "/blog/home-cleaning-services-near-me-gurgaon.html"
   status = 301
 
 [[redirects]]
@@ -387,11 +352,6 @@
 [[redirects]]
   from = "/blog/mr-deep-cleaning-vs-sachin-deep-cleaning"
   to = "/blog/mr-deep-cleaning-vs-sachin-deep-cleaning.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/best-office-deep-cleaning-services-gurgaon"
-  to = "/blog/best-office-deep-cleaning-services-gurgaon.html"
   status = 301
 
 [[redirects]]
@@ -442,11 +402,6 @@
 [[redirects]]
   from = "/blog/bathroom-cleaning-price-gurgaon-per-bathroom"
   to = "/blog/bathroom-cleaning-price-gurgaon-per-bathroom.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/kitchen-cleaning-price-gurgaon-chimney"
-  to = "/blog/kitchen-cleaning-price-gurgaon-chimney.html"
   status = 301
 
 [[redirects]]
@@ -530,16 +485,6 @@
   status = 301
 
 [[redirects]]
-  from = "/blog/full-home-deep-cleaning"
-  to = "/blog/full-home-deep-cleaning.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/home-deep-cleaning-service-gurgaon"
-  to = "/blog/home-deep-cleaning-service-gurgaon.html"
-  status = 301
-
-[[redirects]]
   from = "/blog/bathroom-deep-cleaning-gurgaon-best"
   to = "/blog/bathroom-deep-cleaning-gurgaon-best.html"
   status = 301
@@ -547,11 +492,6 @@
 [[redirects]]
   from = "/blog/deep-cleaning-services"
   to = "/blog/deep-cleaning-services.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/home-cleaning-services-gurgaon"
-  to = "/blog/home-cleaning-services-gurgaon.html"
   status = 301
 
 [[redirects]]
@@ -590,16 +530,6 @@
   status = 301
 
 [[redirects]]
-  from = "/blog/office-bathroom-cleaning-udyog-vihar"
-  to = "/blog/office-bathroom-cleaning-udyog-vihar.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/commercial-office-cleaning-udyog-vihar"
-  to = "/blog/commercial-office-cleaning-udyog-vihar.html"
-  status = 301
-
-[[redirects]]
   from = "/blog/office-deep-cleaning-sector-44-gurgaon"
   to = "/blog/office-deep-cleaning-sector-44-gurgaon.html"
   status = 301
@@ -617,11 +547,6 @@
 [[redirects]]
   from = "/blog/office-deep-cleaning-sector-32-gurgaon"
   to = "/blog/office-deep-cleaning-sector-32-gurgaon.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/home-cleaning-service-guide"
-  to = "/blog/home-cleaning-service-guide.html"
   status = 301
 
 [[redirects]]
