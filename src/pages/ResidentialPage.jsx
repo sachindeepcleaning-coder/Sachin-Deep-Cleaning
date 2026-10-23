@@ -1,7 +1,6 @@
 import QuoteForm from '../components/QuoteForm.jsx';
 import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
-import ReviewsSection from '../components/ReviewsSection.jsx';
 import PricingSection from '../components/PricingSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
@@ -173,7 +172,6 @@ export default function ResidentialPage({ url }) {
         </div>
       </section>
 
-      <ReviewsSection reviews={[]} />
 
       <section className="section section-alt">
         <div className="section-inner" style={{ textAlign: 'center' }}>

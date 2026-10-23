@@ -78,11 +78,6 @@ const base = {
       { q: 'What protects me if something is damaged?', a: 'Three layers: a trained crew (police-verified team: ID and background check shown on request) with a supervisor on every job; careful protection (corner guards, electronics-safe methods near devices); and our re-clean-or-make-right promise — any miss flagged at walkthrough is fixed on the spot before you pay a rupee.' },
       { q: 'How much is a 1 hour clean in Gurgaon?', a: 'We do not sell 1-hour cleans — an hour covers a surface wipe, not deep cleaning, and hourly billing rewards slow work. Honest equivalents: single-room details (₹800–₹1,500), mini-tasks absorbed into any visit, or a house-cleaning visit from ₹499. Fixed scope beats open-ended hours every time.' },
     ],
-    reviews: [
-      ['SR', 'Sunita Rao', 'DLF Phase 2', "Booked a full home deep clean before Diwali. The team scrubbed grout I'd given up on and the kitchen looked brand new. Worth every rupee."],
-      ['AD', 'Arjun Desai', 'Sector 57', 'They found and cleaned things I never even noticed — behind the fridge, under the beds, inside the wardrobes. Genuinely top-to-bottom.'],
-      ['MK', 'Meera Kapoor', 'Golf Course Road', 'Pay-after-cleaning gave me full confidence. The house smelled fresh and the team was respectful and on time. Highly recommend.'],
-    ],
     price: SERVICE_PRICES.deep,
     priceCheck: {
       title: 'Gurgaon 2 BHK Price Check — Us vs Public Listings',
@@ -145,11 +140,6 @@ const base = {
       { q: 'How do I pause or reschedule a weekly plan?', a: 'One WhatsApp message before noon reschedules or pauses your slot — travel, guests or festivals included, with no pause fee. The same team resumes on your return, and the checklist picks up exactly where it left off.' },
       { q: 'Can I book a one-time house cleaning service in Gurgaon for a move-out?', a: 'Yes — one-time visits use the same checklist in an empty-flat edition: inside cabinets and wardrobes, balcony and utility detailing, and photo documentation for landlord handover. Tell us it is a move-out on booking so the crew allocates the extra hour.' },
     ],
-    reviews: [
-      ['NV', 'Nisha Verma', 'Sector 56', 'Weekly house cleaning plan — the same two cleaners every time, and the flat is always spotless when I come home.'],
-      ['RK', 'Rahul Khanna', 'Palam Vihar', 'Booked a one-time deep clean then switched to the monthly plan. Great value and very consistent quality.'],
-      ['TM', 'Tanya Malhotra', 'Sushant Lok 1', 'They clean around my schedule and my dog loves them. Eco-friendly products, no strong smells.'],
-    ],
     price: SERVICE_PRICES.house,
   },
   kitchen: {
@@ -180,11 +170,6 @@ const base = {
       { q: 'Is kitchen deep cleaning the same as chimney servicing?', a: 'No. Kitchen deep cleaning includes a thorough chimney filter clean and body wipe-down, but does not include motor servicing or warranty-covered repair work. For motor or electrical issues, contact your chimney brand\'s service center.' },
       { q: 'Gurgaon me kitchen deep cleaning kitne ka hai?', a: 'Standard kitchen deep cleaning ₹1,500–₹2,500 ke beech me hoti hai. Chimney filter cleaning isme shamil hai. WhatsApp par fixed quote milta hai.' },
       { q: 'Chimney filter kitni baar saaf karna chahiye?', a: 'Roz cooking hone par har 1–2 mahine me filter saaf karna chahiye. Pura chimney deep clean har 6–12 mahine me karwaye.' },
-    ],
-    reviews: [
-      ['PK', 'Pooja Khurana', 'Sohna Road', 'The chimney filter looked like new after they were done. My kitchen finally smells clean, not of old cooking oil.'],
-      ['SM', 'Shalini Mehra', 'DLF Phase 4', 'They took apart the exhaust fan and hob and degreased everything. Grease I thought was permanent is completely gone.'],
-      ['RJ', 'Ritika Jain', 'Sector 49', 'Very thorough — even the cabinet interiors and the top of the chimney were cleaned. Worth booking every quarter.'],
     ],
     price: SERVICE_PRICES.kitchen,
   },
@@ -217,11 +202,6 @@ const base = {
       { q: 'Gurgaon me ek bathroom deep cleaning ka kharcha kya hai?', a: 'Ek bathroom ki deep cleaning ₹800 se ₹1,200 tak hoti hai. Full home package me ye price shamil ho jati hai.' },
       { q: 'Hard water ke daag kaise hatate hain?', a: 'Hum professional descaler use karte hain jo Gurgaon ke hard water ke lime scale ko tap, shower aur glass se hata deta hai.' },
     ],
-    reviews: [
-      ['AS', 'Anita Sharma', 'Sector 45', 'Hard water stains on our shower glass were driving me crazy. They came off completely. Bathroom looks brand new.'],
-      ['DP', 'Deepak Puri', 'MG Road', 'Very impressed with the commode sanitization and tile scrubbing. Thorough and hygienic, no shortcuts.'],
-      ['SG', 'Sneha Gupta', 'Golf Course Extension', 'They even cleaned the exhaust fan and ceiling corners. The bathroom smells fresh days later. Great service.'],
-    ],
     price: SERVICE_PRICES.bathroom,
   },
   sofa: {
@@ -252,11 +232,6 @@ const base = {
       { q: 'How often should I get my sofa professionally cleaned in Gurgaon?', a: 'Once a year for households without pets or children. Every 6 months for families with children or pets. Every 3–4 months for high-allergy households or homes with multiple pets.' },
       { q: 'Gurgaon me sofa cleaning ka kharcha kya hai?', a: 'Sofa cleaning ₹499 per seat (dry) aur ₹599 per seat (shampoo extraction) se shuru hoti hai. 3-seater sofa ke liye ₹1,500–₹1,800 lagta hai.' },
       { q: 'Sofa cleaning ke baad kitni der tak use nahi karna?', a: '4–6 ghante — hum low-moisture extraction use karte hain, isliye sofa usi shaam tak sukh jata hai aur ready ho jata hai.' },
-    ],
-    reviews: [
-      ['VK', 'Vikas Khandelwal', 'Sushant Lok 1', 'Three-year-old sofas came back looking new. The water after extraction was black — clearly years of dust. Great value.'],
-      ['MR', 'Meghna Rao', 'Sector 66', 'My cream fabric sofa had a stubborn coffee stain that other services said was permanent. They got most of it out. Impressed.'],
-      ['NA', 'Nikhil Arora', 'Palam Vihar', 'Pet odor is gone completely. They were careful with the fabric and it dried the same evening.'],
     ],
     price: SERVICE_PRICES.sofa,
   },
@@ -291,11 +266,6 @@ const base = {
       { q: 'Dry cleaning vs shampoo extraction — which carpet method do I need?', a: 'Dry cleaning (₹15/sq ft) suits lightly soiled carpets, delicate fibres and fastest turnaround — usable almost immediately. Shampoo hot-water extraction (₹18/sq ft) is the real deep clean for embedded dirt, pet stains, odours and allergens. Most Gurgaon homes with construction-dust exposure need extraction at least once a year.' },
       { q: 'Can vacuum cleaning replace professional carpet shampoo?', a: 'No — vacuuming (even twice-weekly) removes only loose surface soil, roughly the top third of what sits in pile. Oils, mite waste, bonded dust and old stains need hot-water extraction. Think of vacuuming as brushing teeth and extraction as the dentist visit.' },
       { q: 'Do you move furniture for wall-to-wall carpet cleaning?', a: 'Light furniture (coffee tables, chairs, floor lamps) is shifted and replaced as part of the job. Heavy items like beds and wardrobes are cleaned around unless you arrange shifting — tell us on the booking call and we plan crew size accordingly.' },
-    ],
-    reviews: [
-      ['KB', 'Kavita Bhatia', 'Sector 15', 'Our living room carpet was dull and musty. After the shampoo extraction it looks brighter and the room smells clean.'],
-      ['SA', 'Sanjay Arora', 'DLF Phase 3', 'Fair per-sq-ft pricing and they measured honestly. Deep stains from the kids came out nicely.'],
-      ['PR', 'Priyanka Reddy', 'Sohna Road', 'They cleaned our wall-to-wall carpet after renovation dust settled in. The amount of dirt extracted was shocking.'],
     ],
     price: SERVICE_PRICES.carpet,
   },
@@ -345,11 +315,6 @@ const base = {
       { q: 'Do you clean clinics, shops and restaurants too?', a: 'Yes — clinics get disinfection-grade washroom and waiting-area protocols; shops/showrooms get glass, floors and trial-area detailing; restaurants get exhaust degreasing and drain care. Each vertical follows its own checklist, priced per sq ft after a free survey.' },
       { q: 'Do you provide GST invoices and documentation for facility audits?', a: 'Yes — GST invoice with scope lines, staff ID and verification records, chemical MSDS sheets on request, and photo-logged walkthrough reports. NDAs signed where your policy requires. Facility desks in Cyber City and Udyog Vihar clear them routinely.' },
     ],
-    reviews: [
-      ['HG', 'Hitesh Gupta', 'Corporate Office, Cyber City', 'They cleaned our 2-floor office on a Sunday with zero disruption. Carpets and washrooms were spotless by Monday morning.'],
-      ['LS', 'Lata Srivastava', 'Startup Office, Udyog Vihar', 'NDA signed, team professional, and the pantry grease was finally gone. Booked them again for the quarterly clean.'],
-      ['AC', 'Anuj Chawla', 'Clinic, Sector 44', 'For a medical setup hygiene is everything. Their sanitization of our waiting area and washrooms was thorough and documented.'],
-    ],
     price: SERVICE_PRICES.office,
   },
   move: {
@@ -378,11 +343,6 @@ const base = {
       { q: 'Do you offer same-day move-in cleaning in Gurgaon?', a: 'Yes — same-day slots are available subject to team availability. For move-in cleaning where timing is tight, WhatsApp +91 95607 39281 first thing in the morning for the best chance of a same-day slot.' },
       { q: 'Gurgaon me move-in move-out cleaning ka kharcha kya hai?', a: 'Move-in/out cleaning ₹1,999 se shuru hoti hai. 2 BHK empty flat ke liye ₹4,000–₹5,500 lagta hai. Flat size ke hisaab se price fix ho jati hai.' },
       { q: 'Move-out cleaning se security deposit wapas milega kya?', a: 'Haan — professional move-out clean se full deposit wapas milne ke chances badh jaate hain. Landlord kitchen, bathroom, floor aur walls check karte hain, jo hum thoroughly saaf karte hain.' },
-    ],
-    reviews: [
-      ['RV', 'Rohan Vashist', 'Rented out 2 BHK, Sector 70', 'Got my full security deposit back thanks to their checklist-driven clean. Landlord even complimented the handover.'],
-      ['PD', 'Pallavi Dua', 'Moved into 3 BHK, Golf Course Rd', 'Moved into a home that smelled of previous owners. Their move-in clean made it feel brand new.'],
-      ['AS', 'Arvind Singh', 'Sector 82', 'Booked on the day of handover — they finished before the landlord arrived. Efficient and thorough.'],
     ],
     price: SERVICE_PRICES.move,
   },

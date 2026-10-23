@@ -1,7 +1,6 @@
 import QuoteForm from '../components/QuoteForm.jsx';
 import PoliceProofNote from '../components/PoliceProofNote.jsx';
 import TrustBar from '../components/TrustBar.jsx';
-import ReviewsSection from '../components/ReviewsSection.jsx';
 import AreasSection from '../components/AreasSection.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
@@ -127,7 +126,6 @@ export default function PartnersPage({ url }) {
         </div>
       </section>
 
-      <ReviewsSection reviews={[]} />
 
       <AreasSection />
 

@@ -81,14 +81,6 @@ export const HOW_IT_WORKS = [
   ['4', "Pay after service", 'UPI, cards or wallets — pay only after the job is complete to your satisfaction.'],
 ];
 
-export const REVIEWS = [
-  ['PM', 'Priya Mehta', 'DLF Phase 3, Gurgaon', "Called them at 9 AM for same-day service. They arrived by 1 PM sharp and the house looked brand new. Kitchen deep clean was absolutely incredible — grease I thought was permanent is completely gone!"],
-  ['AK', 'Amit Kumar', 'Sector 45, Gurgaon', "Outstanding service! The team was professional, punctual and thorough. They cleaned every corner I didn't even know existed. The 'pay after cleaning' policy gave me complete peace of mind."],
-  ['SG', 'Shivani Gupta', 'Golf Course Road, Gurgaon', 'Booked for post-renovation cleaning. The amount of dust and debris they removed was mind-blowing. House was move-in ready in 4 hours. Highly recommend for anyone who wants genuine deep cleaning.'],
-  ['RG', 'Rohit Gupta', 'Sohna Road, Gurgaon', "Best value for money I've found in Gurgaon. Transparent pricing, no hidden charges. The sofa shampoo service made my 3-year-old sofas look new. Will definitely book again every quarter."],
-  ['NT', 'Neha Trivedi', 'Palam Vihar, Gurgaon', "5-star experience from start to finish. The team called before arriving, worked efficiently, and asked for feedback after each room. Customer service is genuinely the best I've seen in this category."],
-  ['VS', 'Vikram Sharma', 'MG Road, Gurgaon', "We've tried 3 other cleaning services before. None come close to Sachin Deep Cleaning. Professional, uses quality products, and the bathroom tiles look like they did when we first moved in. Just brilliant."],
-];
 
 export const WHY_US = [
   [POLICE_VERIFIED_BADGE.icon, POLICE_VERIFIED_BADGE.title, POLICE_VERIFIED_BADGE.sub],

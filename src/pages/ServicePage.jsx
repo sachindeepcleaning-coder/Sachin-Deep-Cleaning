@@ -6,7 +6,6 @@ import PricingTable from '../components/PricingTable.jsx';
 import WhyUsSection from '../components/WhyUsSection.jsx';
 import BeforeAfter from '../components/BeforeAfter.jsx';
 import GuaranteeSection from '../components/GuaranteeSection.jsx';
-import ReviewsSection from '../components/ReviewsSection.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
 import FaqSection from '../components/FaqSection.jsx';
 import ReelSection from '../components/ReelSection.jsx';
@@ -92,11 +91,6 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
   // 13 service pages don't render byte-identical WhyUs/Guarantee/TrustBar.
   const trustVariant = trustVariantFor(serviceKey);
   const guaranteeVariant = guaranteeVariantFor(serviceKey);
-  // Per-BHK review rotation: the 5 BHK pages share one review pool, so each
-  // size leads with a different real review instead of the identical order.
-  const reviews = serviceKey === 'fullhome' && bhk
-    ? [...s.reviews.slice(bhk % s.reviews.length), ...s.reviews.slice(0, bhk % s.reviews.length)]
-    : s.reviews;
 
   return (
     <>
@@ -425,8 +419,6 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           </div>
         </section>
       )}
-
-      <ReviewsSection reviews={reviews} />
 
       {serviceKey === 'office' ? <OfficeReelSection /> : <ReelSection />}
 

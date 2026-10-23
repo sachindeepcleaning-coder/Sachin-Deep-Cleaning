@@ -4,7 +4,6 @@ import ReelSection from '../components/ReelSection.jsx';
 import ServiceSection from '../components/ServiceSection.jsx';
 import ChecklistSection from '../components/ChecklistSection.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
-import ReviewsSection from '../components/ReviewsSection.jsx';
 import WhyUsSection from '../components/WhyUsSection.jsx';
 import PricingSection from '../components/PricingSection.jsx';
 import GuaranteeSection from '../components/GuaranteeSection.jsx';
@@ -13,7 +12,7 @@ import FaqSection from '../components/FaqSection.jsx';
 import FinalCta from '../components/FinalCta.jsx';
 import UpdatedNote from '../components/UpdatedNote.jsx';
 import { JsonLd, websiteSchema, localBusinessSchema, faqSchema, webpageSchema } from '../lib/schema.jsx';
-import { FAQS, REVIEWS } from '../lib/landing.js';
+import { FAQS } from '../lib/landing.js';
 import { CONTENT_UPDATED } from '../lib/site.js';
 
 export default function IndexPage({ url }) {
@@ -36,7 +35,6 @@ export default function IndexPage({ url }) {
       <ServiceSection />
       <ChecklistSection />
       <HowItWorks />
-      <ReviewsSection reviews={REVIEWS} />
       <WhyUsSection />
       <PricingSection />
       <GuaranteeSection />
