@@ -1,8 +1,17 @@
-// Generates public/sitemap.xml from pages.config.mjs with a fresh lastmod.
-// Runs before `vite build` so the updated file is copied into dist/.
+// Generates public/sitemap.xml + public/sitemap-videos.xml.
+// Runs before `vite build` so the updated files are copied into dist/.
 // thank-you.html is intentionally excluded (robots.txt disallows it, noindex).
+//
+// lastmod policy (seo-sitemap): never the build date.
+//   - articles: the article's own dateModified, maintained in src/lib/blog.js
+//     (per-article real content date).
+//   - every other page: the last git commit date of the source file(s) that
+//     define the page's content (`git log -1 --format=%cs -- <file>`), so a
+//     page that did not change keeps its old lastmod instead of being bumped
+//     by every deploy.
 
 import { writeFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL } from '../pages.config.mjs';
@@ -14,6 +23,51 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
 const today = new Date().toISOString().slice(0, 10);
+
+// Source files whose last-commit date defines each page type's lastmod.
+// Arrays are combined with max() — a content change in the data lib (e.g.
+// services.js) is as much a page change as a change in the page component.
+const PAGE_SOURCES = {
+  index: ['src/pages/IndexPage.jsx', 'src/lib/landing.js'],
+  service: ['src/pages/ServicePage.jsx', 'src/lib/services.js'],
+  contact: ['src/pages/ContactPage.jsx'],
+  about: ['src/pages/AboutPage.jsx'],
+  residential: ['src/pages/ResidentialPage.jsx'],
+  partners: ['src/pages/PartnersPage.jsx'],
+  landing: ['src/pages/BookingPage.jsx'],
+  allpages: ['src/pages/AllPagesPage.jsx'],
+  blog: ['src/pages/BlogIndexPage.jsx'],
+  facts: ['src/pages/FactsPage.jsx'],
+};
+
+const gitDateCache = new Map();
+function gitDate(file) {
+  if (gitDateCache.has(file)) return gitDateCache.get(file);
+  let date = null;
+  try {
+    date =
+      execSync(`git log -1 --format=%cs -- ${JSON.stringify(file)}`, {
+        cwd: root,
+        encoding: 'utf8',
+      }).trim() || null;
+  } catch {
+    date = null;
+  }
+  gitDateCache.set(file, date);
+  return date;
+}
+
+function lastmodFor(p) {
+  if (p.lastmod) return p.lastmod;
+  if (p.page === 'article') {
+    const art = ARTICLES.find((a) => a.file === p.file);
+    return (art && art.dateModified) || CONTENT_UPDATED;
+  }
+  const sources = PAGE_SOURCES[p.page];
+  if (!sources) return CONTENT_UPDATED;
+  const dates = sources.map(gitDate).filter(Boolean);
+  return dates.length ? dates.sort().at(-1) : CONTENT_UPDATED;
+}
 
 // Pages excluded from the sitemap (noindex / utility pages + merge stubs).
 const excluded = new Set(['thank-you', '404']);
@@ -43,11 +97,7 @@ const entries = pages
     // queries the site already ranks 1-8 for, so they carry a service-level
     // priority rather than the default.
     const priority = p.page === 'service' ? (p.serviceKey === 'deep' ? '0.9' : '0.8') : PRIORITY[p.page] || '0.5';
-    // seo-sitemap: lastmod must reflect the real content change, not the build
-    // date — articles carry their dateModified; service/utility pages use
-    // CONTENT_UPDATED (src/lib/site.js), bumped only when prices/rating/address change.
-    const art = p.page === 'article' ? ARTICLES.find((a) => a.file === p.file) : null;
-    const lastmod = p.lastmod || (art && art.dateModified) || CONTENT_UPDATED;
+    const lastmod = lastmodFor(p);
     return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>
