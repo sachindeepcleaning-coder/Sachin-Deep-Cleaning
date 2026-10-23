@@ -62,7 +62,10 @@ if (cssFiles.length === 0) {
 
 const cssByName = new Map();
 for (const f of cssFiles) {
-  cssByName.set(`/assets/${f}`, readFileSync(resolve(assetsDir, f), 'utf8'));
+  cssByName.set(
+    `/assets/${f}`,
+    inlineFontUrls(readFileSync(resolve(assetsDir, f), 'utf8'))
+  );
 }
 
 const linkRe = /<link\s+rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>\s*/g;
