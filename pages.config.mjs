@@ -303,8 +303,8 @@ export const pages = [
   },
   {
     file: 'blog/office-deep-cleaning-gurgaon-guide', page: 'article',
-    title: "Office Deep Cleaning Gurgaon | Small Office ₹5,000",
-    description: "Office deep cleaning in Gurgaon from ₹3 per sq ft (small office ₹5,000) — 9-area scope, after-hours crews, GST invoice, photo logs, pay after sign-off.",
+    title: "Office Deep Cleaning in Gurgaon: ₹3/Sq Ft Guide & Scope",
+    description: "How office deep cleaning in Gurgaon is scoped and priced at ₹3–₹11 per sq ft: the 9-area checklist, after-hours scheduling and what a small office costs.",
   },
   {
     file: 'blog/bathroom-deep-cleaning-services-gurgaon-guide', page: 'article',

@@ -20,7 +20,7 @@ import { imageDims, srcSetFor } from '../lib/image-dims.js';
 import { getService } from '../lib/services.js';
 import { MONEY_QA, BHK_QA } from '../lib/money-page-qa.js';
 import { PRICE_RANGES } from '../lib/service-prices.js';
-import { pageUrl, CONTENT_UPDATED, SITE_URL } from '../lib/site.js';
+import { pageUrl, CONTENT_UPDATED } from '../lib/site.js';
 
 // Renders inline **bold** markdown and [anchor](/path.html) links in service copy.
 // Same authoring convention as BlogArticlePage.jsx, so editors write internal
@@ -131,27 +131,6 @@ export default function ServicePage({ serviceKey, bhk, url = '' }) {
           { name: s.name, url },
         ], url)}
       />
-      {serviceKey === 'deep' && (
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'VideoObject',
-          name: `${s.name} — Real Cleaning Video Gurgaon`,
-          description: `Watch real ${s.name.toLowerCase()} work by the Sachin Deep Cleaning team in Gurgaon.`,
-          thumbnailUrl: `${SITE_URL}/images/cleaning-1.webp`,
-          uploadDate: '2026-08-28',
-          isFamilyFriendly: true,
-          author: { '@type': 'Person', name: 'Sachin Kumar', url: 'https://sachindeepcleaning.shop/about.html#sachin-kumar' },
-          publisher: {
-            '@type': 'Organization',
-            '@id': 'https://sachindeepcleaning.shop/#business',
-            name: 'Sachin Deep Cleaning',
-          },
-          contentUrl: `${SITE_URL}/videos/cleaning-1.mp4`,
-        }}
-      />
-      )}
-
       <section className="hero">
         <div className="hero-grid"></div>
         <div className="hero-inner">

@@ -201,6 +201,8 @@ export default function ResidentialPage({ url }) {
                     <img
                       src="/images/full-home-deep-cleaning.webp"
                       alt="Residential deep-cleaning job in Gurgaon — watch on Instagram"
+                      width="800"
+                      height="531"
                       loading="lazy"
                       decoding="async"
                     />

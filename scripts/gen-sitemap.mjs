@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { pages, SITE_URL } from '../pages.config.mjs';
 import { ARTICLES } from '../src/lib/blog.js';
 import { CONTENT_UPDATED } from '../src/lib/site.js';
+import { VIDEOS, VIDEO_POSTER, VIDEO_UPLOAD_DATE } from '../src/lib/videos.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -65,3 +66,36 @@ ${urls}
 
 writeFileSync(resolve(root, 'public/sitemap.xml'), xml);
 console.log(`Generated public/sitemap.xml with ${entries.length} URLs (lastmod ${today}).`);
+
+// ─── sitemap-videos.xml ─────────────────────────────────────────────────────
+// The four reels are hosted MP4s whose URL is only assigned by JS after the
+// carousel scrolls into view, so a crawler cannot discover them from the HTML.
+// The video sitemap is the supported discovery path; each entry points at the
+// homepage, where the carousel (and its VideoObject graph) is rendered.
+const esc = (s) =>
+  String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const videoEntries = VIDEOS.map((v) => `  <url>
+    <loc>${SITE_URL}/</loc>
+    <video:video>
+      <video:thumbnail_loc>${SITE_URL}${VIDEO_POSTER}</video:thumbnail_loc>
+      <video:title>${esc(v.name)}</video:title>
+      <video:description>${esc(`${v.name} — real job footage from the Sachin Deep Cleaning team in Gurgaon.`)}</video:description>
+      <video:content_loc>${SITE_URL}/videos/${v.file}</video:content_loc>
+      <video:duration>${v.seconds}</video:duration>
+      <video:publication_date>${VIDEO_UPLOAD_DATE}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live_stream>no</video:live_stream>
+    </video:video>
+  </url>`).join('\n');
+
+const videoXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+${videoEntries}
+</urlset>
+`;
+
+writeFileSync(resolve(root, 'public/sitemap-videos.xml'), videoXml);
+console.log(`Generated public/sitemap-videos.xml with ${VIDEOS.length} videos.`);

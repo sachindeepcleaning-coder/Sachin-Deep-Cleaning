@@ -3,6 +3,7 @@
 // real iframe only loads when tapped. This avoids YouTube's "Video unavailable"
 // overlay on embeds and removes 3 iframes from every page load (big speed win).
 import { useState } from 'react';
+import { imageDims, srcSetFor } from '../lib/image-dims.js';
 
 const SHORTS = [
   {
@@ -57,6 +58,10 @@ function ShortCard({ id, label, caption, poster, onTrack }) {
               <img
                 src={poster}
                 alt={`${caption} — watch on YouTube`}
+                width={imageDims(poster)[0]}
+                height={imageDims(poster)[1]}
+                srcSet={srcSetFor(poster)}
+                sizes="(max-width: 600px) 92vw, 360px"
                 loading="lazy"
                 decoding="async"
               />

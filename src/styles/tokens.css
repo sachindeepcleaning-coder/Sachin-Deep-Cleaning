@@ -7,21 +7,21 @@
 /* ---------- Light theme (default) ---------- */
 :root,
 [data-theme='light'] {
-  --primary: #10b981;          /* emerald-500 (brand, kept) */
-  --primary-dark: #059669;     /* emerald-600 */
-  --primary-darker: #047857;   /* emerald-700 */
+  --primary: #047857;          /* emerald-700 — AA on white (5.48:1) and on --bg-alt */
+  --primary-dark: #065f46;     /* emerald-800 (hover) */
+  --primary-darker: #064e3b;   /* emerald-900 */
   --primary-soft: #d1fae5;     /* emerald-100 */
   --accent: #34d399;           /* emerald-400 */
   --on-primary: #ffffff;
 
   /* Semantic palette */
-  --success: #16a34a;  --success-soft: #dcfce7;
-  --warning: #f59e0b;  --warning-soft: #fef3c7;
-  --error:   #dc2626;  --error-soft:   #fee2e2;
-  --info:    #0891b2;  --info-soft:    #cffafe;
+  --success: #15803d;  --success-soft: #dcfce7;
+  --warning: #b45309;  --warning-soft: #fef3c7;
+  --error:   #b91c1c;  --error-soft:   #fee2e2;
+  --info:    #0e7490;  --info-soft:    #cffafe;
 
   /* Conversion accent (coral) */
-  --secondary: #f97316;      --secondary-dark: #ea580c;
+  --secondary: #c2410c;      --secondary-dark: #9a3412;
   --secondary-soft: #ffedd5; --on-secondary: #ffffff;
 
   --bg: #ffffff;

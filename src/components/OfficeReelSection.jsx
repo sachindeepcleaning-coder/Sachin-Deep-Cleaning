@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import YtShortsSection from './YtShortsSection.jsx';
+import { imageDims, srcSetFor } from '../lib/image-dims.js';
 
 // Portrait 9:16 Instagram reels as click-to-play facades (local poster, real
 // iframe only on tap). Direct IG iframes pulled ~15 scontent/cdninstagram
@@ -55,6 +56,10 @@ function IgCard({ id, label, caption, poster, onTrack }) {
               <img
                 src={poster}
                 alt={`${caption} — watch on Instagram`}
+                width={imageDims(poster)[0]}
+                height={imageDims(poster)[1]}
+                srcSet={srcSetFor(poster)}
+                sizes="(max-width: 600px) 92vw, 360px"
                 loading="lazy"
                 decoding="async"
               />

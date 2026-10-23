@@ -1,9 +1,32 @@
 import { useEffect, useRef, useState } from 'react';
+import { SITE_URL } from '../lib/site.js';
+import { VIDEOS, VIDEO_POSTER as POSTER, VIDEO_UPLOAD_DATE } from '../lib/videos.js';
 
 const REEL_URL = 'https://www.instagram.com/reel/DbtA_gdz5zA/';
 const HANDLE = '@cleaning_service_in_gurgaon';
-const VIDEOS = ['cleaning-1.mp4', 'cleaning-2.mp4', 'cleaning-3.mp4', 'cleaning-4.mp4'];
-const POSTER = '/images/cleaning-1.webp';
+
+// One VideoObject per hosted reel, matching the four videos the carousel
+// actually plays. Video sitemap entries in sitemap-videos.xml point here.
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@graph': VIDEOS.map((video) => ({
+    '@type': 'VideoObject',
+    '@id': `${SITE_URL}/videos/${video.file}#video`,
+    name: video.name,
+    description: `${video.name} — real job footage from the Sachin Deep Cleaning team, Gurgaon.`,
+    thumbnailUrl: `${SITE_URL}${POSTER}`,
+    uploadDate: VIDEO_UPLOAD_DATE,
+    duration: video.duration,
+    contentUrl: `${SITE_URL}/videos/${video.file}`,
+    isFamilyFriendly: true,
+    publisher: {
+      '@id': `${SITE_URL}/#business`,
+      '@type': 'LocalBusiness',
+      name: 'Sachin Deep Cleaning',
+      url: `${SITE_URL}/`,
+    },
+  })),
+};
 
 export default function ReelEmbed() {
   const wrapRef = useRef(null);
@@ -40,7 +63,7 @@ export default function ReelEmbed() {
     }
   }, [visible, idx]);
 
-  const src = `videos/${VIDEOS[idx]}`;
+  const src = `videos/${VIDEOS[idx].file}`;
 
   const go = (i) => {
     setIdx((i + VIDEOS.length) % VIDEOS.length);
@@ -60,13 +83,14 @@ export default function ReelEmbed() {
   };
 
   return (
-    <aside ref={wrapRef} className="reel-embed" onClick={toggle} role="button" aria-label="Deep cleaning reel preview — tap to pause">
+    <aside ref={wrapRef} className="reel-embed">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <video
         key={src}
         ref={videoRef}
         className="reel-video"
         src={visible ? src : undefined}
-        poster={POSTER}
+        poster={visible ? POSTER : undefined}
         muted
         loop
         playsInline
@@ -87,7 +111,7 @@ export default function ReelEmbed() {
         Real deep-cleaning job in a Gurgaon home 🧼✨
       </div>
 
-      <div className="reel-play" onClick={(e) => { e.stopPropagation(); toggle(); }}>
+      <div className="reel-play" onClick={toggle}>
         {playing ? '❚❚' : '▶'}
       </div>
 

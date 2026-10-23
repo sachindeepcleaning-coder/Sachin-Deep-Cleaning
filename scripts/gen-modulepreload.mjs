@@ -105,9 +105,22 @@ for (const file of walkFs(distDir)) {
   const wanted = new Set();
   for (const key of chunksFor(pageMatch[1], fileMatch[1])) collect(key, wanted);
 
+  // The page's own chunk is needed first (it kicks off hydration), so it keeps
+  // the default priority. Its static imports are only needed once that chunk
+  // runs — preloading them at High priority made them compete with the
+  // preloaded webfonts for bandwidth on Slow-4G connections, which delayed
+  // the font swap and therefore the LCP text paint. Low priority keeps them
+  // early in the queue without slowing the fonts down.
+  const pageChunk = wanted.values().next().value;
+
   const links = [...wanted]
     .filter((f) => !alreadyLoaded.has(f))
-    .map((f) => `  <link rel="modulepreload" href="/${f}" crossorigin />`)
+    .map(
+      (f) =>
+        `  <link rel="modulepreload" href="/${f}" crossorigin${
+          f === pageChunk ? '' : ' fetchpriority="low"'
+        } />`
+    )
     .join('\n');
 
   if (!links) {

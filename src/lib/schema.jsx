@@ -170,6 +170,20 @@ export function localBusinessSchema() {
       closes: '20:00',
     },
     foundingDate: '2015',
+    slogan: 'Deep cleaning in Gurgaon — pay after satisfaction',
+    priceRange: '₹199–₹9,000',
+    knowsAbout: [
+      'Deep cleaning',
+      'Home deep cleaning',
+      'Kitchen deep cleaning',
+      'Bathroom deep cleaning',
+      'Sofa shampoo cleaning',
+      'Carpet shampoo cleaning',
+      'Office deep cleaning',
+      'Move-in and move-out cleaning',
+      'Water tank cleaning',
+      'Post-construction cleaning',
+    ],
     // Where the business is. A brand + address Maps search, which resolves to
     // this listing without depending on a second brand name.
     hasMap: MAPS_URL,

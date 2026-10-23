@@ -102,6 +102,7 @@ for (const p of pages) {
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="${target}" />
   <meta http-equiv="refresh" content="0; url=/${p.redirectTo}.html" />
+  <meta name="description" content="${p.description || `This page has moved to ${target}.`}" />
   <title>${p.title}</title>
 </head>
 <body>
@@ -202,8 +203,9 @@ for (const p of pages) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0a1628" />
-  <link rel="icon" type="image/png" href="${SITE_URL}/images/app_icon.png" />
-  <link rel="apple-touch-icon" href="${SITE_URL}/images/app_icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="${SITE_URL}/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="${SITE_URL}/apple-touch-icon.png" />
+  <link rel="llms" type="text/plain" href="${SITE_URL}/llms.txt" />
   <title>${p.title}</title>
   <meta name="description" content="${p.description}" />
 ${noindex}  <meta name="geo.region" content="IN-HR" />

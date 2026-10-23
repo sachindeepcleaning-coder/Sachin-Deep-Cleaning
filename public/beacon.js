@@ -323,20 +323,47 @@
   var pageSent = false;
   var ctaSent = {};
 
-  function onScroll() {
+  // Document height is cached and refreshed at most every 2s. Reading
+  // scrollHeight on every scroll event forced a synchronous layout on each
+  // scroll (Lighthouse "forced reflow", ~100ms+ on mobile).
+  var docHeight = 0;
+  var viewportHeight = 0;
+  var lastMeasure = 0;
+
+  function measure(force) {
+    var now = Date.now();
+    if (!force && now - lastMeasure < 2000) return;
+    lastMeasure = now;
     try {
-      var h = Math.max(
-        document.body.scrollHeight,
+      docHeight = Math.max(
+        document.body ? document.body.scrollHeight : 0,
         document.documentElement.scrollHeight
       );
-      var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+      viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight || 0;
+    } catch (e) {}
+  }
+
+  function onScroll() {
+    try {
+      measure(false);
+      var h = docHeight;
+      var vh = viewportHeight;
       var top = window.pageYOffset || document.documentElement.scrollTop || 0;
       var pct = h > vh ? Math.round(((top + vh) / h) * 100) : 100;
       if (pct > maxScroll) maxScroll = Math.min(100, Math.max(0, pct));
     } catch (e) {}
   }
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  window.addEventListener("resize", function () {
+    measure(true);
+    onScroll();
+  }, { passive: true });
+  window.addEventListener("load", function () {
+    measure(true);
+  }, { once: true });
+  if (document.readyState === "complete") measure(true);
+  else onScroll();
 
   function trackField(t) {
     try {

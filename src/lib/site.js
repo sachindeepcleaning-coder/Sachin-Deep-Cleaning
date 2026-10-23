@@ -79,7 +79,7 @@ export const GEO = { latitude: 28.4538, longitude: 77.0782 };
 // Date the money-page content (prices, address) was last reviewed.
 // Bump this ONLY when that content really changes. It drives the visible
 // "Updated" line, WebPage.dateModified and sitemap lastmod for non-article pages.
-export const CONTENT_UPDATED = '2026-10-09';
+export const CONTENT_UPDATED = '2026-10-23';
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);

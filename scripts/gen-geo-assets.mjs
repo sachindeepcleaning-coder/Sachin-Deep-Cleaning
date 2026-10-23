@@ -24,6 +24,7 @@ import {
 import { SERVICE_PRICES, PRICE_BY_BHK } from '../src/lib/service-prices.js';
 import { getService } from '../src/lib/services.js';
 import { imageDims } from '../src/lib/image-dims.js';
+import { VIDEOS, VIDEO_POSTER, VIDEO_UPLOAD_DATE } from '../src/lib/videos.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -97,6 +98,16 @@ const factsBlock = [
   '',
 ].join('\n');
 
+// Videos are hosted MP4s, not pages: list the direct files so an answer engine
+// can cite footage without executing the carousel's JavaScript.
+const videosBlock = [
+  '## Videos',
+  '',
+  ...VIDEOS.map((v) => `- [${v.name}](${SITE_URL}/videos/${v.file}): ${v.seconds}s, published ${VIDEO_UPLOAD_DATE}, poster ${SITE_URL}${VIDEO_POSTER}`),
+  '',
+  '',
+].join('\n');
+
 const llmsLines = indexable.map((p) => {
   const art = p.page === 'article' ? ARTICLES.find((a) => a.file === p.file) : null;
   // Label for humans: the first clause of the title, before the pipe.
@@ -107,7 +118,7 @@ const llmsLines = indexable.map((p) => {
 
 writeFileSync(
   resolve(root, 'public/llms.txt'),
-  `${header}${factsBlock}## Pages\n\n${llmsLines.join('\n')}\n`
+  `${header}${factsBlock}${videosBlock}## Pages\n\n${llmsLines.join('\n')}\n`
 );
 
 // ─── llms-full.txt ──────────────────────────────────────────────────────────
@@ -155,7 +166,7 @@ for (const p of indexable) {
 
 writeFileSync(
   resolve(root, 'public/llms-full.txt'),
-  `${header}${factsBlock}# Full text map — every page's answer, price and FAQ questions\n\n${fullBlocks.join('\n')}`
+  `${header}${factsBlock}${videosBlock}# Full text map — every page's answer, price and FAQ questions\n\n${fullBlocks.join('\n')}`
 );
 
 // ─── sitemap-images.xml ─────────────────────────────────────────────────────

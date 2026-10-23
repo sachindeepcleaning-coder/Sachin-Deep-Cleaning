@@ -3,6 +3,7 @@ import { CONTENT_UPDATED } from '../lib/site.js';
 import { JsonLd, breadcrumbSchema, collectionPageSchema, itemListSchema, serviceSchema, DEEP_PRICE_RANGE, webpageSchema } from '../lib/schema.jsx';
 import { pageUrl } from '../lib/site.js';
 import { SERVICE_PRICES } from '../lib/service-prices.js';
+import { imageDims } from '../lib/image-dims.js';
 import TrustBar from '../components/TrustBar.jsx';
 
 const FEATURED_FILES = [
@@ -137,8 +138,9 @@ export default function BlogIndexPage({ url }) {
                   src={a.image}
                   alt={a.imageAlt}
                   loading="lazy"
-                  width="1200"
-                  height="675"
+                  decoding="async"
+                  width={imageDims(a.image)[0]}
+                  height={imageDims(a.image)[1]}
                 />
                 <div className="blog-card-body">
                   <div className="blog-meta">
