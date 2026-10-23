@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://sachindeepcleaning.shop/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://sachindeepcleaning.shop/images/cleaning-1.webp</video:thumbnail_loc>
+      <video:title>Full home deep cleaning in a Gurgaon apartment</video:title>
+      <video:description>Full home deep cleaning in a Gurgaon apartment — real job footage from the Sachin Deep Cleaning team in Gurgaon.</video:description>
+      <video:content_loc>https://sachindeepcleaning.shop/videos/cleaning-1.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-08-28</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live_stream>no</video:live_stream>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://sachindeepcleaning.shop/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://sachindeepcleaning.shop/images/cleaning-1.webp</video:thumbnail_loc>
+      <video:title>Kitchen degreasing and chimney cleaning in Gurgaon</video:title>
+      <video:description>Kitchen degreasing and chimney cleaning in Gurgaon — real job footage from the Sachin Deep Cleaning team in Gurgaon.</video:description>
+      <video:content_loc>https://sachindeepcleaning.shop/videos/cleaning-2.mp4</video:content_loc>
+      <video:duration>14</video:duration>
+      <video:publication_date>2026-08-28</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live_stream>no</video:live_stream>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://sachindeepcleaning.shop/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://sachindeepcleaning.shop/images/cleaning-1.webp</video:thumbnail_loc>
+      <video:title>Bathroom descaling and deep cleaning in Gurgaon</video:title>
+      <video:description>Bathroom descaling and deep cleaning in Gurgaon — real job footage from the Sachin Deep Cleaning team in Gurgaon.</video:description>
+      <video:content_loc>https://sachindeepcleaning.shop/videos/cleaning-3.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-08-28</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live_stream>no</video:live_stream>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://sachindeepcleaning.shop/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://sachindeepcleaning.shop/images/cleaning-1.webp</video:thumbnail_loc>
+      <video:title>Sofa and carpet shampoo extraction in Gurgaon</video:title>
+      <video:description>Sofa and carpet shampoo extraction in Gurgaon — real job footage from the Sachin Deep Cleaning team in Gurgaon.</video:description>
+      <video:content_loc>https://sachindeepcleaning.shop/videos/cleaning-4.mp4</video:content_loc>
+      <video:duration>39</video:duration>
+      <video:publication_date>2026-08-28</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live_stream>no</video:live_stream>
+    </video:video>
+  </url>
+</urlset>
